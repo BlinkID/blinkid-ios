@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jurica Cerovec on 5/28/13.
-//  Copyright (c) 2013 Racuni.hr. All rights reserved.
+//  Copyright (c) 2013 MicroBlink Ltd. All rights reserved.
 //
 
 #import <AVFoundation/AVFoundation.h>
@@ -142,23 +142,32 @@
 @property (nonatomic, assign) CGRect scanningRegion;
 
 /**
+ * Scanning library requested authorization for Camera access from the user, but the user declined it.
+ * This case means scanning cannot be performed, because accessing camera images is now allowed.
+ *
+ * In this callback you have the chance to handle this case and present some kind of a message to the user on top
+ * of cameraViewController.
+ */
+- (void)cameraViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController>*)cameraViewController;
+
+/**
  Camera view appears and the scanning resumes. This happens when the camera view
  is opened, or when the app enters foreground with camera view displayed.
  */
-- (void)cameraViewControllerDidResumeScanning:(id<PPScanningViewController>)cameraViewController;
+- (void)cameraViewControllerDidResumeScanning:(UIViewController<PPScanningViewController>*)cameraViewController;
 
 /** 
  Camera view disappears and the scanning pauses. This happens when the camera view 
  is closed, or when the app enters background with camera view displayed.
  */
-- (void)cameraViewControllerDidStopScanning:(id<PPScanningViewController>)cameraViewController;
+- (void)cameraViewControllerDidStopScanning:(UIViewController<PPScanningViewController>*)cameraViewController;
 
 /** 
  Camera view reports the progress of the current OCR/barcode scanning recognition cycle. 
  Note: this is not the actual progress from the moment camera appears. 
  This might not be meaningful for the user in all cases. 
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
           didPublishProgress:(float)progress;
 
 /**
@@ -170,7 +179,7 @@
  Coordinate system of points returned corresponds to overlay view (meaning, [0,0] is the 
  origin of the overlay view, [width, height] is the size of overlay view)
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
              didFindLocation:(NSArray*)cornerPoints
                   withStatus:(PPDetectionStatus)status;
 
@@ -180,7 +189,7 @@
  Besides the OCR result itself, we get the ID of the result so we can
  distinguish consecutive results of the same area on the image
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
           didObtainOcrResult:(PPOcrResult*)ocrResult
               withResultName:(NSString*)resultName;
 
@@ -188,7 +197,7 @@
  Camera view controller started the new recognition cycle. Since recognition is done
  on video frames, there might be multiple recognition cycles before the scanning completes
  */
-- (void)cameraViewControllerDidStartRecognition:(id<PPScanningViewController>)cameraViewController;
+- (void)cameraViewControllerDidStartRecognition:(UIViewController<PPScanningViewController>*)cameraViewController;
 
 /** 
  Camera view controller ended the recognition cycle with a certain Scanning result.
@@ -199,7 +208,7 @@
  
  If you're interested in valid data, use cameraViewController:didOutputResult: method
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
 didFinishRecognitionWithResult:(id)result;
 
 /**
@@ -208,13 +217,13 @@ didFinishRecognitionWithResult:(id)result;
  Use this method only if you need UI update on this event (although this is unnecessary in many cases).
  The actual result will be passed to your PPPhotoPayDelegate object.
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
             didOutputResults:(NSArray*)results;
 
 /**
  Called when a manual focus (user tapped the screen for example) will be performed at specified point.
  */
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
           willFocusAtPoint:(CGPoint)point;
 
 /**
@@ -262,8 +271,10 @@ didFinishRecognitionWithResult:(id)result;
 
 /** 
  Overlay View Controller must notify it's delegete to set the torch mode to On or Off
+ 
+ Returns YES if torch mode was set successfully, otherwise NO.
  */
-- (void)overlayViewController:(PPOverlayViewController*)overlayViewController
+- (BOOL)overlayViewController:(PPOverlayViewController*)overlayViewController
                  willSetTorch:(BOOL)isTorchOn;
 
 /**

@@ -19,6 +19,12 @@
 /** Resumes scanning instantaneously */
 - (void)resumeScanning;
 
+/** 
+ * Resumes scanning instantaneously, but doesn't reset internal scate.
+ * Use it if you continue to scan the same object. E.g IBAN, or price, and want to achieve more accurate result
+ */
+- (void)resumeScanningWithoutStateReset;
+
 /** Retrieve the current state of scanning */
 - (BOOL)isScanningPaused;
 

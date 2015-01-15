@@ -40,9 +40,6 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey object:nil userInfo:dict]; \
     }
 
-@class PPScanningStats;
-@class PPRecognitionResult;
-
 @interface PPApp : NSObject
 
 @property (nonatomic, copy, setter=setLanguage:) NSString* language;
@@ -67,26 +64,10 @@
 /** Returns the status bar style to the last saved value */
 - (void)popStatusBarStyle;
 
-/** Sets the key that the help was shown to true */
-- (void)setHelpShown:(BOOL)value;
-
-/** Returns true if the help was already shown */
-- (BOOL)isHelpShown;
-
 /** Push the status bar hidden value */
 - (void)pushStatusBarHidden:(BOOL)hidden;
 
 /** pops the status bar hidden value */
 - (void)popStatusBarHidden;
-
-/** Retrieves the usage statistics */
-- (id)getStats;
-
-/** Update the stats with scanned and updated results */
-- (void)updateStatsWithScannedResult:(PPRecognitionResult*)scannedResult
-                       updatedResult:(PPRecognitionResult*)updatedResult;
-
-/** Clears the stats, erases all data collected so far. There is no way to retrieve the data after this operation */
-- (void)clearStats;
 
 @end

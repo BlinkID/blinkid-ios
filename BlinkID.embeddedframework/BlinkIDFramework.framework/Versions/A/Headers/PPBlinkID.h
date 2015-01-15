@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jura on 14/10/14.
-//  Copyright (c) 2014 Racuni.hr. All rights reserved.
+//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
 //
 
 #ifndef PhotoPayFramework_PPIdScan_h
@@ -26,7 +26,16 @@
 @required
 
 /**
- * PhotoPay returned with error. The error object is returned and contains
+ * Scanning library requested authorization for Camera access from the user, but the user declined it. 
+ * This case means scanning cannot be performed, because accessing camera images is now allowed.
+ *
+ * In this callback you have the chance to handle this case and present some kind of a message to the user on top 
+ * of cameraViewController.
+ */
+- (void)cameraViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController>*)cameraViewController;
+
+/**
+ * Scanning library returned with error. The error object is returned and contains
  * description of the error, in a specified language. Do your error handling here.
  *
  * This is where the PhotoPay's UIViewController should be dismissed
@@ -36,7 +45,7 @@
           didFinishWithError:(NSError*)error;
 
 /**
- * PhotoPay did output scanning results Do your next steps here.
+ * Scanning library did output scanning results Do your next steps here.
  *
  * Depending on how you want to treat the result, you might want to
  * dismiss the PhotoPay library's UIViewController here.
@@ -57,7 +66,7 @@
 @optional
 
 /**
- * Called when PhotoPay wants to display help screens. This can happen when the user press
+ * Called when Scanning library wants to display help screens. This can happen when the user press
  * help button on PhotoPay UI, or on first run of the application
  */
 - (void)cameraViewControllerShouldPresentHelp:(UIViewController<PPScanningViewController>*)cameraViewController;
@@ -71,7 +80,7 @@
 /**
  Called when coordinator obtaines intermediate images
 
- Intended for private PhotoPay use.
+ Intended for private Scanning library use.
  */
 - (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
                obtainedImage:(UIImage *)image
@@ -81,7 +90,7 @@
 /**
  Called when coordinator obtaines intermediate texts
 
- Intended for private PhotoPay use.
+ Intended for private Scanning library use.
  */
 - (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
                 obtainedText:(NSString*)text

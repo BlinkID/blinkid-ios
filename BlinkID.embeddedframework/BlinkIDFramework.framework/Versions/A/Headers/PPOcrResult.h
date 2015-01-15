@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jura on 01/02/14.
-//  Copyright (c) 2014 Racuni.hr. All rights reserved.
+//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

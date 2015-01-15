@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jurica Cerovec on 5/12/13.
-//  Copyright (c) 2013 Racuni.hr. All rights reserved.
+//  Copyright (c) 2013 MicroBlink Ltd. All rights reserved.
 //
 
 #ifndef PhotoPayFramework_DetectionStatus_h

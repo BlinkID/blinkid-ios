@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jurica Cerovec on 6/5/12.
-//  Copyright (c) 2012 Racuni.hr. All rights reserved.
+//  Copyright (c) 2012 MicroBlink Ltd. All rights reserved.
 //
 
 #ifndef PhotoPayFramework_SettingsKeys_h
@@ -42,6 +42,8 @@ extern NSString* const kPPRecognizeDutchSlipsKey;
 extern NSString* const kPPRecognizeDutchOcrLineKey;
 /** If YES, recognition of UK giro slips is performed */
 extern NSString* const kPPRecognizeUKGiroSlipsKey;
+/** If YES, recognition of Swiss payment slips is performed */
+extern NSString* const kPPRecognizeSwissSlipsKey;
 /** If YES, recognition of UK barcodes is performed */
 extern NSString* const kPPRecognizeUKBarcodes;
 /** If YES, recognition of Kosovar slips is performed */
@@ -212,8 +214,6 @@ extern NSString* const kPPPresentToastMessages;
 extern NSString* const kPPOverlayShouldAutorotate;
 /** Under this key the Color of the PhotoPay skin is stored */
 extern NSString* const kPPSkinColor;
-/** Under this key the is stored information whether viewfinder is moveable */
-extern NSString* const kPPViewfinderMoveable;
 /** Under this key the is stored information whether ocr results should be shown */
 extern NSString* const kPPShowOcrResults;
 
@@ -246,17 +246,7 @@ extern NSString* const kPPPartialRecognitionTimeoutInterval;
 extern NSString* const kPPRecognizeImage;
 
 /** Setting for segment scanner */
-extern NSString* const kPPSegmentScannerType;
-
-/** Segment scanner type enum */
-typedef NS_ENUM(NSUInteger, PPSegmentScannerType) {
-    PPSegmentScannerTypeNone,
-    PPSegmentScannerTypeIban,
-    PPSegmentScannerTypeAmount,
-    PPSegmentScannerTypeUrl,
-    PPSegmentScannerTypeEmailAddress,
-    PPSegmentScannerTypeCroatianPaymentReference,
-};
+extern NSString* const kPPOcrRecognizerSettings;
 
 /**
  Abstract class reprezenting general settings objects

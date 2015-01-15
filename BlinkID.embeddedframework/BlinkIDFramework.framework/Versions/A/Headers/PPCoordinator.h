@@ -93,7 +93,7 @@
 - (BOOL)stop;
 
 /** Torch mode is set to on or off */
-- (void)setTorchEnabled:(BOOL)isEnabled;
+- (BOOL)setTorchEnabled:(BOOL)isEnabled;
 
 /** Returns the size of video frames in pixels (eg 640, 480) */
 - (CGSize)getApertureSize;
@@ -118,6 +118,9 @@
 
 /** Clears the paused recognition flag that stops recognition after a result is produced */
 - (void)resumeRecognition;
+
+/** Resets the internal state */
+- (void)resetRecognizerState;
 
 /**
  * This method is called when PhotoPay is unsupported on a specific device.

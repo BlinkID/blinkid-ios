@@ -18,7 +18,6 @@ typedef NS_ENUM(NSInteger, PPBaseResultType) {
     PPBaseResultTypeUSDL,
     PPBaseResultTypePhotoPay,
     PPBaseResultTypeOCR,
-    PPBaseResultTypeSegment,
     PPBaseResultTypePhotoMath,
     PPBaseResultTypeIDCard
 };
