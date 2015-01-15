@@ -77,16 +77,45 @@
     NSString* soundPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"mp3"];
     [coordinatorSettings setValue:soundPath forKey:kPPSoundFile];
 
+    NSLog(@"Version is %@", [PPCoordinator getBuildVersionString]);
+
     return coordinatorSettings;
 }
 
-#pragma mark - PPBarcodeDelegate
+#pragma mark - PPPhotoPayDelegate
 
-- (void)cameraViewControllerWasClosed:(id<PPScanningViewController>)cameraViewController {
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didFinishWithError:(NSError *)error {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)cameraViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController> *)cameraViewController {
+
+    CGFloat W = cameraViewController.view.frame.size.width;
+    CGFloat H = cameraViewController.view.frame.size.height;
+    CGFloat w = 300;
+    CGFloat h = 70;
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cameraViewController.view.frame.origin.x + W/2 - w/2, cameraViewController.view.frame.origin.y + H/2 - h/2, w, h)];
+    label.text = @"Camera not authorized.\nPlease authorize it in:\nSettings->Privacy->Camera.";
+    label.textColor = [UIColor lightGrayColor];
+    label.font = [UIFont systemFontOfSize:15.f];
+    label.numberOfLines = 3;
+
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
+        label.textAlignment = NSTextAlignmentCenter;
+    }
+
+    label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+
+    [[cameraViewController view] addSubview:label];
+}
+
 - (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didOutputResults:(NSArray *)results {
+
+    if (results == nil) {
+        // close camera view controller
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 
     for (PPBaseResult* result in results) {
         if ([result resultType] == PPBaseResultTypeIDCard && [result isKindOfClass:[PPIdCardResult class]]) {
