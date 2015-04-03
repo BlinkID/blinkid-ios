@@ -2,15 +2,15 @@
 //  ViewController.m
 //  BlinkID-sample
 //
-//  Created by Jura on 18/10/14.
-//  Copyright (c) 2014 MicroBlink. All rights reserved.
+//  Created by Jura on 03/04/15.
+//  Copyright (c) 2015 MicroBlink. All rights reserved.
 //
 
 #import "ViewController.h"
 
-#import <BlinkIDFramework/PPBlinkID.h>
+#import <MicroBlink/MicroBlink.h>
 
-@interface ViewController () <PPPhotoPayDelegate, UIAlertViewDelegate>
+@interface ViewController () <PPScanDelegate>
 
 @property (nonatomic, strong) UIViewController<PPScanningViewController>* cameraViewController;
 
@@ -28,11 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)scanPressed:(id)sender {
+- (IBAction)startScanning:(id)sender {
 
     // Check if scanning is supported
     NSError *error;
-    if ([PPCoordinator isPhotoPayUnsupported:&error]) {
+    if ([PPCoordinator isScanningUnsupported:&error]) {
         NSString *messageString = [error localizedDescription];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                         message:messageString
@@ -42,9 +42,17 @@
         [alert show];
         return;
     }
-    
+
+    PPSettings *settings = [[PPSettings alloc] init];
+    settings.cameraSettings.cameraPreset = PPCameraPresetMax;
+    settings.cameraSettings.cameraAutofocusRestriction = PPCameraAutofocusRestrictionNone;
+    settings.licenseSettings.licenseKey = @"UN2A-BHCE-VARH-A6PJ-FPPY-V3CJ-BI35-F4U6";
+
+    [settings.scanSettings addRecognizerSettings:[[PPMrtdRecognizerSettings alloc] init]];
+    [settings.scanSettings addRecognizerSettings:[[PPUsdlRecognizerSettings alloc] init]];
+
     // get coordinator
-    PPCoordinator *rec = [[PPCoordinator alloc] initWithSettings:[self coordinatorSettings]];
+    PPCoordinator *rec = [[PPCoordinator alloc] initWithSettings:settings];
 
     // get camera view controller
     self.cameraViewController = [rec cameraViewControllerWithDelegate:self];
@@ -53,85 +61,37 @@
     [self presentViewController:self.cameraViewController animated:YES completion:nil];
 }
 
-#pragma mark - BlinkID
+#pragma mark - PPScanDelegate
 
-- (NSMutableDictionary*)coordinatorSettings {
-    NSMutableDictionary* coordinatorSettings = [[NSMutableDictionary alloc] init];
-
-    [coordinatorSettings setValue:@(YES) forKey:kPPUseVideoPresetHigh];
-    [coordinatorSettings setValue:@(YES) forKey:kPPPresentModal];
-    [coordinatorSettings setValue:@(1000) forKey:kPPPartialRecognitionTimeoutInterval];
-
-    [coordinatorSettings setValue:@(YES) forKey:kPPRecognizeUSDLKey];
-    [coordinatorSettings setValue:@(YES) forKey:kPPRecognizeIdCardMrtd];
-
-    [coordinatorSettings setValue:@(YES) forKey:kPPAutofocusFull];
-
-    [coordinatorSettings setValue:@(YES) forKey:kPPOverlayShouldAutorotate];
-
-    [coordinatorSettings setValue:@(YES) forKey:kPPShowOcrResults];
-
-    [coordinatorSettings setValue:@"UN2A-BHCE-VARH-A6PJ-FPPY-V3CJ-BI35-F4U6" forKey:kPPLicenseKey];
-
-    // Define the sound filename played on successful recognition
-    NSString* soundPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"mp3"];
-    [coordinatorSettings setValue:soundPath forKey:kPPSoundFile];
-
-    NSLog(@"Version is %@", [PPCoordinator getBuildVersionString]);
-
-    return coordinatorSettings;
-}
-
-#pragma mark - PPPhotoPayDelegate
-
-- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didFinishWithError:(NSError *)error {
+- (void)scanningViewControllerDidClose:(UIViewController<PPScanningViewController> *)scanningViewController {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)cameraViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController> *)cameraViewController {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
 
-    CGFloat W = cameraViewController.view.frame.size.width;
-    CGFloat H = cameraViewController.view.frame.size.height;
-    CGFloat w = 300;
-    CGFloat h = 70;
-
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cameraViewController.view.frame.origin.x + W/2 - w/2, cameraViewController.view.frame.origin.y + H/2 - h/2, w, h)];
-    label.text = @"Camera not authorized.\nPlease authorize it in:\nSettings->Privacy->Camera.";
-    label.textColor = [UIColor lightGrayColor];
-    label.font = [UIFont systemFontOfSize:15.f];
-    label.numberOfLines = 3;
-
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
-        label.textAlignment = NSTextAlignmentCenter;
-    }
-
-    label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-
-    [[cameraViewController view] addSubview:label];
 }
 
-- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didOutputResults:(NSArray *)results {
+- (void)scanningViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController> *)scanningViewController {
+    // TODO: handle unauthorized cameras
+}
 
-    if (results == nil) {
-        // close camera view controller
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
 
-    for (PPBaseResult* result in results) {
-        if ([result resultType] == PPBaseResultTypeIDCard && [result isKindOfClass:[PPIdCardResult class]]) {
-            PPIdCardResult* idCardResult = (PPIdCardResult*)result;
-            [self processIdResult:idCardResult cameraViewController:cameraViewController];
-        } else if ([result resultType] == PPBaseResultTypeUSDL && [result isKindOfClass:[PPUSDLResult class]]) {
-            PPUSDLResult* usdlResult = (PPUSDLResult*)result;
-            [self processUSDLResult:usdlResult cameraViewController:cameraViewController];
+    for (PPRecognizerResult *result in results) {
+        if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
+            PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
+            [self processMrtdResult:mrtdResult scanningViewController:scanningViewController];
+        } else if ([result isKindOfClass:[PPUsdlRecognizerResult class]]) {
+            PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
+            [self processUSDLResult:usdlResult scanningViewController:scanningViewController];
         }
     }
 }
 
-- (void)processUSDLResult:(PPUSDLResult*)result
-     cameraViewController:(id<PPScanningViewController>)cameraViewController {
+- (void)processUSDLResult:(PPUsdlRecognizerResult*)result
+   scanningViewController:(id<PPScanningViewController>)scanningViewController {
 
-    [cameraViewController pauseScanning];
+    [scanningViewController pauseScanning];
 
     NSString *title = @"USDL";
     NSString* message = [result description];
@@ -145,12 +105,12 @@
     [alertView show];
 }
 
-- (void)processIdResult:(PPIdCardResult*)result
-   cameraViewController:(id<PPScanningViewController>)cameraViewController {
+- (void)processMrtdResult:(PPMrtdRecognizerResult*)result
+   scanningViewController:(id<PPScanningViewController>)scanningViewController {
 
-    [cameraViewController pauseScanning];
+    [scanningViewController pauseScanning];
 
-    NSString *title = @"ID card";
+    NSString *title = @"MRTD result";
     NSString* message = [result description];
 
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
@@ -166,7 +126,7 @@
 #pragma mark - Alert view
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self.cameraViewController resumeScanning];
+    [self.cameraViewController resumeScanningAndResetState:YES];
 }
 
 @end
