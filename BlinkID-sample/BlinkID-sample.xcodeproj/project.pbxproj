@@ -36,6 +36,7 @@
 		1842A2131ACED3FA00DE6CAB /* torchon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1FD1ACED3FA00DE6CAB /* torchon_pressed.png */; };
 		1842A2141ACED3FA00DE6CAB /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1FE1ACED3FA00DE6CAB /* torchon_pressed@2x.png */; };
 		1842A2161ACED86F00DE6CAB /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842A2151ACED86F00DE6CAB /* libc++.dylib */; };
+		18E89D3C1AD518E400BFB292 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E89D3B1AD518E400BFB292 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		1842A1FD1ACED3FA00DE6CAB /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
 		1842A1FE1ACED3FA00DE6CAB /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
 		1842A2151ACED86F00DE6CAB /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		18E89D3B1AD518E400BFB292 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E89D3C1AD518E400BFB292 /* libiconv.dylib in Frameworks */,
 				1842A2161ACED86F00DE6CAB /* libc++.dylib in Frameworks */,
 				1842A1FF1ACED3FA00DE6CAB /* MicroBlink.framework in Frameworks */,
 			);
@@ -131,6 +134,7 @@
 		1842A1E61ACED3EF00DE6CAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E89D3B1AD518E400BFB292 /* libiconv.dylib */,
 				1842A2151ACED86F00DE6CAB /* libc++.dylib */,
 				1842A1E71ACED3FA00DE6CAB /* MicroBlink.embeddedframework */,
 			);
