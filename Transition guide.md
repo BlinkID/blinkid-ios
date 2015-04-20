@@ -1,3 +1,22 @@
+### Transition to 0.9.3
+
+- This version uses a new license key format. If you had a license key generated prior to v0.9.3, contact us so we can regenerate the lincense key for you.
+
+- UK Driver's license support added. To scan them, add PPUkdlRecognizerSettings to `settings.scanSettings`
+
+        [settings.scanSettings addRecognizerSettings:[[PPUkdlRecognizerSettings alloc] init]];
+        
+- To collect UKDL results, look for `PPUkdlRecognizerResult` object in `scanningViewController:didOutputResults:` callback
+
+        for (PPRecognizerResult *result in results) {
+                if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+                        PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
+                        [self processUkdlResult:ukdlResult scanningViewController:scanningViewController];
+                }
+        }
+
+- `PPCoordinator` class now exposes fewer public methods and properties.
+
 ### Transition to 0.9.2
 
 - Classes representing scanning results were renamed. Renaming was performed to match naming convention of `PPRecognizerSettings` hierarcy: now each `PPRecognizerSettings` class has it's matching `PPRecognizerResult`. Replace all existing references to old class names with the new ones:
