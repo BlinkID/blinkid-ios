@@ -102,4 +102,10 @@
  */
 - (NSString *)opt2;
 
+/**
+ * Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing
+ * other elements.
+ */
+- (NSString *)mrzText;
+
 @end

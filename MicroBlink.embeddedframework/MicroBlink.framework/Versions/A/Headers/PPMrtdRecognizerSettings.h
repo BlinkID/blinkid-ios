@@ -10,4 +10,6 @@
 
 @interface PPMrtdRecognizerSettings : PPRecognizerSettings
 
+- (instancetype)init;
+
 @end

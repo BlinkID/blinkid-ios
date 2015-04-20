@@ -11,6 +11,21 @@
 #import "PPRecognizerSettings.h"
 
 /**
+ * Denotes the mode in which Recognizers performs recognition
+ */
+typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
+
+    /** Classic, production mode. Results are returned after first valid scanning */
+    PPRecognitionModeDefault,
+
+    /** Recognition Test. Results are never returned, recognition is performed repeatedly */
+    PPRecognitionModeTest,
+
+    /** Recognition Test. Results are never returned, only detection is performed repeatedly */
+    PPRecognitionModeDetectionTest
+};
+
+/**
  * Settings class containing settings related to scanner behaviour
  */
 @interface PPScanSettings : NSObject <NSCopying>
@@ -30,6 +45,13 @@
  * Default: 7.0 seconds
  */
 @property (nonatomic, assign) NSTimeInterval partialRecognitionTimeout;
+
+/**
+ * Recognition mode.
+ *
+ * Default: PPRecognitionModeDefault
+ */
+@property (nonatomic, assign) PPRecognitionMode recognitionMode;
 
 /**
  * Designated initializer. Initializes the object with default settings (see above for defaults)

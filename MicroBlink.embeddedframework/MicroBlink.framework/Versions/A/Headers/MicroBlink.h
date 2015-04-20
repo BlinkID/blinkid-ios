@@ -24,6 +24,10 @@
 #import "PPUsdlRecognizerSettings.h"
 #import "PPUsdlRecognizerResult.h"
 
+// UKDL
+#import "PPUkdlRecognizerSettings.h"
+#import "PPUkdlRecognizerResult.h"
+
 // Helpers
 #import "PPApp.h"
 

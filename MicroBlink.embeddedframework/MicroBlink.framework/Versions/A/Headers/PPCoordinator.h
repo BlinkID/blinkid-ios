@@ -19,22 +19,6 @@
 @class PPAccelerometerManager;
 
 /**
- * Denotes the mode in which Recognizers performs recognition
- */
-typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
-
-    /** Classic, production mode. Results are returned after first valid scanning */
-    PPRecognitionModeDefault,
-
-    /** Recognition Test. Results are never returned, recognition is performed repeatedly */
-    PPRecognitionModeTest,
-
-    /** Recognition Test. Results are never returned, only detection is performed repeatedly */
-    PPRecognitionModeDetectionTest
-};
-
-
-/**
  * This object is the mastermind of the recognition process.
  * It coordinates hardware control with the recognition algorithms.
  * Also, while it provides default implementation of UIViewController which is used,
@@ -60,13 +44,6 @@ typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
 
 /** Current orientation of overlay */
 @property (nonatomic, assign) UIInterfaceOrientation overlayOrientation;
-
-/**
- * Recognition mode.
- *
- * Default: PPRecognitionModeDefault
- */
-@property (nonatomic, assign) PPRecognitionMode recognitionMode;
 
 /**
  * Initializes the object in proper state
@@ -98,17 +75,6 @@ typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
 - (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanDelegate>)delegate
                                                           overlayViewController:(PPOverlayViewController *)overlayViewController;
 
-/** 
- * Starts the camera session, flash, torch and frame saving process. Also makes the camera do the autofocus
- * IMPORTANT: must be called only after initWithSettings...
- */
-- (BOOL)start;
-
-/**
- * Pauses the frame saving process and stops the camera session.
- */
-- (BOOL)stop;
-
 /**
  * Method which is used to apply new settings in the scanning process.
  *
@@ -116,33 +82,6 @@ typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
  * Usual use case is to update ScanSettings in the fly, to perform some complex scanning functionality.
  */
 - (void)applySettings;
-
-/** Torch mode is set to on or off */
-- (BOOL)setTorchOn:(BOOL)isOn;
-
-/** Returns the size of video frames in pixels (eg 640, 480) */
-- (CGSize)getApertureSize;
-
-/** Starts the frame retreiving process */
-- (void)startReceivingFrames;
-
-/** Stops the frame retreiving process */
-- (void)stopReceivingFrames;
-
-/** Retrieve the current state of frame processing */
-- (BOOL)isReceivingFrames;
-
-/** Updates the aperture size to current camera view size */
-- (void)updateApertureSize;
-
-/** Sets the scanning region. CGRect is given in coordinate system of the camera */
-- (void)setScanningRegion:(CGRect)scanningRegion;
-
-/** Clears the paused recognition flag that stops recognition after a result is produced */
-- (void)resumeRecognition;
-
-/** Resets the internal state */
-- (void)resetRecognizerState;
 
 /**
  * This method returns true when scanning is unsupported on a specific device.
