@@ -46,10 +46,11 @@
     PPSettings *settings = [[PPSettings alloc] init];
     settings.cameraSettings.cameraPreset = PPCameraPresetMax;
     settings.cameraSettings.cameraAutofocusRestriction = PPCameraAutofocusRestrictionNone;
-    settings.licenseSettings.licenseKey = @"UN2A-BHCE-VARH-A6PJ-FPPY-V3CJ-BI35-F4U6";
+    settings.licenseSettings.licenseKey = @"6EZH3JXN-CYKHWVII-4EOV34IK-AJMPUV3I-VJKQRYI4-MKDM4QXI-SNQ3V527-VARHA7EY";
 
     [settings.scanSettings addRecognizerSettings:[[PPMrtdRecognizerSettings alloc] init]];
     [settings.scanSettings addRecognizerSettings:[[PPUsdlRecognizerSettings alloc] init]];
+    [settings.scanSettings addRecognizerSettings:[[PPUkdlRecognizerSettings alloc] init]];
 
     // get coordinator
     PPCoordinator *rec = [[PPCoordinator alloc] initWithSettings:settings];
@@ -67,7 +68,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
+              didFindError:(NSError *)error {
 
 }
 
@@ -84,6 +86,9 @@
         } else if ([result isKindOfClass:[PPUsdlRecognizerResult class]]) {
             PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
             [self processUSDLResult:usdlResult scanningViewController:scanningViewController];
+        } else if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
+            [self processUkdlResult:ukdlResult scanningViewController:scanningViewController];
         }
     }
 }
@@ -121,6 +126,24 @@
 
     [alertView show];
 
+}
+
+- (void)processUkdlResult:(PPUkdlRecognizerResult*)result
+   scanningViewController:(id<PPScanningViewController>)scanningViewController {
+
+    [scanningViewController pauseScanning];
+
+    NSString *title = @"UKDL";
+    NSString* message = [result description];
+
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
+                                                       delegate:self
+                                              cancelButtonTitle:@"Close"
+                                              otherButtonTitles: nil];
+
+    [alertView show];
+    
 }
 
 #pragma mark - Alert view
