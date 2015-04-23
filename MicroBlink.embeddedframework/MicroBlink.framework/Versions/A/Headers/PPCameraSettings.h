@@ -44,7 +44,7 @@ typedef NS_ENUM(NSUInteger, PPCameraType) {
  */
 typedef NS_ENUM(NSUInteger, PPCameraAutofocusRestriction) {
 
-    /** Indicates that the autofocus system should not restrict the focus range. */
+    /** Default. Indicates that the autofocus system should not restrict the focus range. */
     PPCameraAutofocusRestrictionNone,
 
     /** Indicates that the autofocus system should restrict the focus range for subject matter that is near to the camera. */
@@ -52,9 +52,6 @@ typedef NS_ENUM(NSUInteger, PPCameraAutofocusRestriction) {
 
     /** Indicates that the autofocus system should restrict the focus range for subject matter that is far from the camera. */
     PPCameraAutofocusRestrictionFar,
-
-    /** Default behaviour: Near on iPhone 5, 5C, 5S, 6 Plus and newer, Far on other devices */
-    PPCameraAutofocusRestrictionDefault
 };
 
 /**
@@ -87,7 +84,7 @@ typedef NS_ENUM(NSUInteger, PPCameraAutofocusRestriction) {
 /**
  * Range restriction for camera autofocus.
  *
- * Default: PPCameraAutofocusRestrictionDefault
+ * Default: PPCameraAutofocusRestrictionNone
  */
 @property (nonatomic, assign) PPCameraAutofocusRestriction cameraAutofocusRestriction;
 

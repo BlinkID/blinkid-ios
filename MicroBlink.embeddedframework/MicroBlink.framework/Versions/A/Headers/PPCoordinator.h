@@ -33,18 +33,6 @@
 /** delegate object for notifying the caller on recognition results */
 @property (nonatomic, weak) id<PPScanDelegate> scanDelegate;
 
-/** delegate object which will be control camera view related events */
-@property (nonatomic, weak) id<PPCoordinatorDelegate> coordinatorDelegate;
-
-/** Object which will take care of the camera */
-@property (nonatomic, strong) PPCameraManager *cameraManager;
-
-/** We need an acceleration manager object because we're interested in events regarding device movement */
-@property (nonatomic, strong) PPAccelerometerManager *accelerometerManager;
-
-/** Current orientation of overlay */
-@property (nonatomic, assign) UIInterfaceOrientation overlayOrientation;
-
 /**
  * Initializes the object in proper state
  * Sets the settigns for scanning, camera control, licensing and UI.
@@ -54,6 +42,16 @@
  *  @return initialized coordinator object capable to perform scanning
  */
 - (instancetype)initWithSettings:(PPSettings *)settings;
+
+/**
+ * Method which is used to apply new settings after initial setup.
+ *
+ * All settings in PPSettings object can be updated in runtime.
+ * Usual use case is to update ScanSettings in the fly, to perform some complex scanning functionality.
+ */
+- (void)applySettings;
+
+#pragma mark - Use the following methods for starting the View Controller with live camera feed
 
 /**
  * Method creates a camera view controller which is responsible for displaying the 
@@ -75,13 +73,7 @@
 - (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanDelegate>)delegate
                                                           overlayViewController:(PPOverlayViewController *)overlayViewController;
 
-/**
- * Method which is used to apply new settings in the scanning process.
- *
- * All settings in PPSettings object can be updated in runtime.
- * Usual use case is to update ScanSettings in the fly, to perform some complex scanning functionality.
- */
-- (void)applySettings;
+#pragma mark - Obtain information about the recognition
 
 /**
  * This method returns true when scanning is unsupported on a specific device.
