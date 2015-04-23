@@ -1,3 +1,16 @@
+## 0.9.4
+
+- Added support for defining region for scaninng in `PPMrtdRecognizerSettings`
+
+- For example, with this code you can specify bottom 25% of the image will be used for MRZ scanning.
+
+        PPMrtdRecognizerSettings *mrtdSettings = [[PPMrtdRecognizerSettings alloc] init];
+        mrtdSettings.mrtdRoi = CGRectMake(0.0, 0.75, 1.0, 0.25);
+
+        settings.scanSettings.partialRecognitionTimeout = 10.0;
+        [settings.scanSettings addRecognizerSettings:mrtdSettings];
+        
+        
 ## 0.9.3
 
 - Added support for scanning UK Driver's license. To scan them, add PPUkdlRecognizerSettings to `settings.scanSettings`
