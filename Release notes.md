@@ -6,8 +6,6 @@
 
         PPMrtdRecognizerSettings *mrtdSettings = [[PPMrtdRecognizerSettings alloc] init];
         mrtdSettings.mrtdRoi = CGRectMake(0.0, 0.75, 1.0, 0.25);
-
-        settings.scanSettings.partialRecognitionTimeout = 10.0;
         [settings.scanSettings addRecognizerSettings:mrtdSettings];
         
         
