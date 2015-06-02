@@ -45,7 +45,6 @@
 
     PPSettings *settings = [[PPSettings alloc] init];
     settings.cameraSettings.cameraPreset = PPCameraPresetMax;
-    settings.cameraSettings.cameraAutofocusRestriction = PPCameraAutofocusRestrictionNone;
     settings.licenseSettings.licenseKey = @"6EZH3JXN-CYKHWVII-4EOV34IK-AJMPUV3I-VJKQRYI4-MKDM4QXI-SNQ3V527-VARHA7EY";
 
     [settings.scanSettings addRecognizerSettings:[[PPMrtdRecognizerSettings alloc] init]];
