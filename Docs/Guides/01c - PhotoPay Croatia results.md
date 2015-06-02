@@ -27,7 +27,7 @@ To initialize the scanning of Croatian slips, use the following intialization co
     PPPhotoPayUiSettings* photopayUiSettings = [[PPPhotoPayUiSettings alloc] init];
     settings.uiSettings = photopayUiSettings;
 
-    // Use german language
+    // Use croatian language
     photopayUiSettings.language = @"hr";
 
     // Help is available so present it just in the first app run
@@ -59,6 +59,14 @@ To initialize the scanning of Croatian slips, use the following intialization co
 
     // Sanitize PDF417 output to be by the HUB standard
     croPdf417Recognizer.useSanitization = YES;
+    
+
+    // Add QR code recognizer for Croatian payslips
+    PPCroQrRecognizerSettings *croQrRecognizer = [[PPCroQrRecognizerSettings alloc] init];
+    [settings.scanSettings addRecognizerSettings:croQrRecognizer];
+
+    // Sanitize QR output to be by the HUB standard
+    croQrRecognizer.useSanitization = YES;
 
 
     // 4. ************* Setup License Settings **************/
@@ -102,15 +110,18 @@ Scanning results for Austrian payslips are obtained as instances of two possible
         if ([result isKindOfClass:[PPCroSlipRecognizerResult class]]) {
             [self processCroSlipRecognizerResult:(PPCroSlipRecognizerResult*)result];
         }
-        if ([result isKindOfClass:[PPCroPdf417RecognizerResult class]]) {
-            [self processCroPdf417RecognizerResult:(PPCroPdf417RecognizerResult*)result];
+        
+        // this handles both QR code and PDF417 results as they both inherit from PPCroBarcodeRecognizerResult
+        
+        if ([result isKindOfClass:[PPCroBarcodeRecognizerResult class]]) {
+            [self processCroBarcodeRecognizerResult:(PPCroBarcodeRecognizerResult*)result];
         }
     };
 }
 
 - (void)processCroSlipRecognizerResult:(PPCroSlipRecognizerResult*)croSlipResult {
 
-    // Here we log all field in PPCroSlipRecognizerResult object
+    // Here we log all fields in PPCroSlipRecognizerResult object
 
     NSLog(@"Croatian payment slip results\n");
 
@@ -130,26 +141,29 @@ Scanning results for Austrian payslips are obtained as instances of two possible
     NSLog(@"Payer name is %@", [croSlipResult payerName]);
 }
 
-- (void)processCroPdf417RecognizerResult:(PPCroPdf417RecognizerResult*)croPdf417Result {
+- (void)processCroBarcodeRecognizerResult:(PPCroBarcodeRecognizerResult*)croBarcodeResult {
 
-    // Here we log all field in PPCroPdf417RecognizerResult object
+    // Here we log all fields in PPCroBarcodeRecognizerResult object
 
-    NSLog(@"Croatian PDF417 results\n");
+    NSLog(@"Croatian Barcode (PDF417 and QR code) results\n");
 
-    NSLog(@"Amount is %@", [croPdf417Result amount]);
-    NSLog(@"Currency is %@", [croPdf417Result currency]);
+    NSLog(@"Amount is %@", [croBarcodeResult amount]);
+    NSLog(@"Currency is %@", [croBarcodeResult currency]);
 
-    NSLog(@"Recipient name is %@", [croPdf417Result recipientName]);
-    NSLog(@"IBAN is %@", [croPdf417Result iban]);
-    NSLog(@"Bank code is %@", [croPdf417Result bankCode]);
-    NSLog(@"Account number is %@", [croPdf417Result accountNumber]);
-    NSLog(@"Reference number is %@", [croPdf417Result referenceNumber]);
-    NSLog(@"Reference model is %@", [croPdf417Result referenceModel]);
-    NSLog(@"Payment description is %@", [croPdf417Result paymentDescription]);
-    NSLog(@"Payment description code is %@", [croPdf417Result paymentDescriptionCode]);
+    NSLog(@"Recipient name is %@", [croBarcodeResult recipientName]);
+    NSLog(@"IBAN is %@", [croBarcodeResult iban]);
+    NSLog(@"Bank code is %@", [croBarcodeResult bankCode]);
+    NSLog(@"Account number is %@", [croBarcodeResult accountNumber]);
+    NSLog(@"Reference number is %@", [croBarcodeResult referenceNumber]);
+    NSLog(@"Reference model is %@", [croBarcodeResult referenceModel]);
+    NSLog(@"Payment description is %@", [croBarcodeResult paymentDescription]);
+    NSLog(@"Payment description code is %@", [croBarcodeResult paymentDescriptionCode]);
 
-    NSLog(@"Due date is %@", [croPdf417Result dueDate]);
-    NSLog(@"Recipient address is %@", [croPdf417Result recipientAddress]);
-    NSLog(@"Detailed address is %@", [croPdf417Result recipientDetailedAddress]);
+    NSLog(@"Due date is %@", [croBarcodeResult dueDate]);
+    NSLog(@"Recipient address is %@", [croBarcodeResult recipientAddress]);
+    NSLog(@"Detailed address is %@", [croBarcodeResult recipientDetailedAddress]);
+
+    NSLog(@"Optional data is %@", [croBarcodeResult optionalData]);
 }
+
 ```
