@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1807C12C1AEF789700469E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807C12B1AEF789700469E61 /* main.m */; };
+		1807C12F1AEF789700469E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807C12E1AEF789700469E61 /* AppDelegate.m */; };
+		1807C1321AEF789700469E61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807C1311AEF789700469E61 /* ViewController.m */; };
+		1807C1371AEF789700469E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1361AEF789700469E61 /* Images.xcassets */; };
+		1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1807C1511AEF792600469E61 /* MicroBlink.framework */; };
+		1807C15F1AEF792600469E61 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1531AEF792600469E61 /* en.strings */; };
+		1807C1601AEF792600469E61 /* ocr_model.zzip in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1541AEF792600469E61 /* ocr_model.zzip */; };
+		1807C1611AEF792600469E61 /* PPbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1551AEF792600469E61 /* PPbeep.wav */; };
+		1807C1621AEF792600469E61 /* torchoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1561AEF792600469E61 /* torchoff.png */; };
+		1807C1631AEF792600469E61 /* torchoff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1571AEF792600469E61 /* torchoff@2x.png */; };
+		1807C1641AEF792600469E61 /* torchoff_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1581AEF792600469E61 /* torchoff_pressed.png */; };
+		1807C1651AEF792600469E61 /* torchoff_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */; };
+		1807C1661AEF792600469E61 /* torchon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15A1AEF792600469E61 /* torchon.png */; };
+		1807C1671AEF792600469E61 /* torchon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15B1AEF792600469E61 /* torchon@2x.png */; };
+		1807C1681AEF792600469E61 /* torchon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15C1AEF792600469E61 /* torchon_pressed.png */; };
+		1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */; };
+		1807C16B1AEF79A000469E61 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1807C16A1AEF79A000469E61 /* libc++.dylib */; };
+		1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1331AEF789700469E61 /* Main.storyboard */; };
+		1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1381AEF789700469E61 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1807C1261AEF789700469E61 /* NoCamera-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoCamera-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1807C12A1AEF789700469E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1807C12B1AEF789700469E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1807C12D1AEF789700469E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1807C12E1AEF789700469E61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1807C1301AEF789700469E61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1807C1311AEF789700469E61 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1807C1341AEF789700469E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1807C1361AEF789700469E61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1807C1391AEF789700469E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1807C1511AEF792600469E61 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
+		1807C1531AEF792600469E61 /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
+		1807C1541AEF792600469E61 /* ocr_model.zzip */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocr_model.zzip; sourceTree = "<group>"; };
+		1807C1551AEF792600469E61 /* PPbeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PPbeep.wav; sourceTree = "<group>"; };
+		1807C1561AEF792600469E61 /* torchoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchoff.png; sourceTree = "<group>"; };
+		1807C1571AEF792600469E61 /* torchoff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchoff@2x.png"; sourceTree = "<group>"; };
+		1807C1581AEF792600469E61 /* torchoff_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchoff_pressed.png; sourceTree = "<group>"; };
+		1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchoff_pressed@2x.png"; sourceTree = "<group>"; };
+		1807C15A1AEF792600469E61 /* torchon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon.png; sourceTree = "<group>"; };
+		1807C15B1AEF792600469E61 /* torchon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon@2x.png"; sourceTree = "<group>"; };
+		1807C15C1AEF792600469E61 /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
+		1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
+		1807C16A1AEF79A000469E61 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1807C1231AEF789700469E61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1807C16B1AEF79A000469E61 /* libc++.dylib in Frameworks */,
+				1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1807C11D1AEF789700469E61 = {
+			isa = PBXGroup;
+			children = (
+				1807C1281AEF789700469E61 /* NoCamera-sample */,
+				1807C14F1AEF791900469E61 /* Frameworks */,
+				1807C1271AEF789700469E61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1807C1271AEF789700469E61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1807C1261AEF789700469E61 /* NoCamera-sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1807C1281AEF789700469E61 /* NoCamera-sample */ = {
+			isa = PBXGroup;
+			children = (
+				1807C12D1AEF789700469E61 /* AppDelegate.h */,
+				1807C12E1AEF789700469E61 /* AppDelegate.m */,
+				1807C1301AEF789700469E61 /* ViewController.h */,
+				1807C1311AEF789700469E61 /* ViewController.m */,
+				1807C1331AEF789700469E61 /* Main.storyboard */,
+				1807C1361AEF789700469E61 /* Images.xcassets */,
+				1807C1381AEF789700469E61 /* LaunchScreen.xib */,
+				1807C1291AEF789700469E61 /* Supporting Files */,
+			);
+			path = "NoCamera-sample";
+			sourceTree = "<group>";
+		};
+		1807C1291AEF789700469E61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1807C12A1AEF789700469E61 /* Info.plist */,
+				1807C12B1AEF789700469E61 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1807C14F1AEF791900469E61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1807C16A1AEF79A000469E61 /* libc++.dylib */,
+				1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */,
+			);
+			name = Frameworks;
+			path = "NoCamera-sample";
+			sourceTree = "<group>";
+		};
+		1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1807C1511AEF792600469E61 /* MicroBlink.framework */,
+				1807C1521AEF792600469E61 /* Resources */,
+			);
+			name = MicroBlink.embeddedframework;
+			path = "../../../../blinkocr/blinkocr-ios/MicroBlink.embeddedframework";
+			sourceTree = "<group>";
+		};
+		1807C1521AEF792600469E61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1807C1531AEF792600469E61 /* en.strings */,
+				1807C1541AEF792600469E61 /* ocr_model.zzip */,
+				1807C1551AEF792600469E61 /* PPbeep.wav */,
+				1807C1561AEF792600469E61 /* torchoff.png */,
+				1807C1571AEF792600469E61 /* torchoff@2x.png */,
+				1807C1581AEF792600469E61 /* torchoff_pressed.png */,
+				1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */,
+				1807C15A1AEF792600469E61 /* torchon.png */,
+				1807C15B1AEF792600469E61 /* torchon@2x.png */,
+				1807C15C1AEF792600469E61 /* torchon_pressed.png */,
+				1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1807C1251AEF789700469E61 /* NoCamera-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1807C1491AEF789700469E61 /* Build configuration list for PBXNativeTarget "NoCamera-sample" */;
+			buildPhases = (
+				1807C1221AEF789700469E61 /* Sources */,
+				1807C1231AEF789700469E61 /* Frameworks */,
+				1807C1241AEF789700469E61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NoCamera-sample";
+			productName = "NoCamera-sample";
+			productReference = 1807C1261AEF789700469E61 /* NoCamera-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1807C11E1AEF789700469E61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					1807C1251AEF789700469E61 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = 1807C1211AEF789700469E61 /* Build configuration list for PBXProject "NoCamera-sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1807C11D1AEF789700469E61;
+			productRefGroup = 1807C1271AEF789700469E61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1807C1251AEF789700469E61 /* NoCamera-sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1807C1241AEF789700469E61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1807C1681AEF792600469E61 /* torchon_pressed.png in Resources */,
+				1807C1671AEF792600469E61 /* torchon@2x.png in Resources */,
+				1807C1601AEF792600469E61 /* ocr_model.zzip in Resources */,
+				1807C1621AEF792600469E61 /* torchoff.png in Resources */,
+				1807C15F1AEF792600469E61 /* en.strings in Resources */,
+				1807C1611AEF792600469E61 /* PPbeep.wav in Resources */,
+				1807C1651AEF792600469E61 /* torchoff_pressed@2x.png in Resources */,
+				1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */,
+				1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */,
+				1807C1371AEF789700469E61 /* Images.xcassets in Resources */,
+				1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */,
+				1807C1631AEF792600469E61 /* torchoff@2x.png in Resources */,
+				1807C1661AEF792600469E61 /* torchon.png in Resources */,
+				1807C1641AEF792600469E61 /* torchoff_pressed.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1807C1221AEF789700469E61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1807C1321AEF789700469E61 /* ViewController.m in Sources */,
+				1807C12F1AEF789700469E61 /* AppDelegate.m in Sources */,
+				1807C12C1AEF789700469E61 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1807C1331AEF789700469E61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1807C1341AEF789700469E61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1807C1381AEF789700469E61 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1807C1391AEF789700469E61 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1807C1471AEF789700469E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1807C1481AEF789700469E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1807C14A1AEF789700469E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../MicroBlink.embeddedframework,
+				);
+				INFOPLIST_FILE = "NoCamera-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1807C14B1AEF789700469E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../MicroBlink.embeddedframework,
+				);
+				INFOPLIST_FILE = "NoCamera-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1807C1211AEF789700469E61 /* Build configuration list for PBXProject "NoCamera-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807C1471AEF789700469E61 /* Debug */,
+				1807C1481AEF789700469E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1807C1491AEF789700469E61 /* Build configuration list for PBXNativeTarget "NoCamera-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807C14A1AEF789700469E61 /* Debug */,
+				1807C14B1AEF789700469E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1807C11E1AEF789700469E61 /* Project object */;
+}
