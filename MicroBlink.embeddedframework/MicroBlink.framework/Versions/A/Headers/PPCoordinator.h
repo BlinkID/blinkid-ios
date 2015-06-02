@@ -73,6 +73,29 @@
 - (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanDelegate>)delegate
                                                           overlayViewController:(PPOverlayViewController *)overlayViewController;
 
+#pragma mark - Use the following methods for direct processing on UIImage objects
+
+/**
+ * When using direct processing, you must first initialize recognizers used in the processing part.
+ * After all processing, call to terminateRecognizers will clear all taken resource.
+ */
+- (void)initializeRecognizers;
+
+/**
+ * Processes an UIImage object
+ *
+ *  @param image    image for processing
+ *  @param delegate deletgate which is notified on processing events
+ */
+- (void)processImage:(UIImage *)image
+      scanningRegion:(CGRect)scanningRegion
+            delegate:(id<PPScanDelegate>)delegate;
+
+/**
+ * Clears all taken resources after initialize recognizers call.
+ */
+- (void)terminateRecognizers;
+
 #pragma mark - Obtain information about the recognition
 
 /**
