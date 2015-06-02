@@ -1,3 +1,7 @@
+## 0.9.5
+
+- Added Direct processing API
+
 ## 0.9.4
 
 - Added support for defining region for scaninng in `PPMrtdRecognizerSettings`
