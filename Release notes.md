@@ -1,3 +1,9 @@
+## 0.9.6
+
+- US passport scanning now has less confusions between characters 0 and O
+- Fixes for French passport format
+- Fixed timeout bug which manifested between consecutive scans
+
 ## 0.9.5
 
 - Added Direct processing API
