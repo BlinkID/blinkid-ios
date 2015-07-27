@@ -1,0 +1,5 @@
+language: objective-c
+
+install: true
+before_install: ./travis/before_script.sh
+script: ./travis/script.sh
