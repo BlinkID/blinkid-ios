@@ -60,7 +60,7 @@ typedef NS_ENUM(NSUInteger, PPHelpDisplayMode) {
 /**
  * Full path to the sound file which is played when the valid result is scanned.
  *
- * Default: [[NSBundle mainBundle] pathForResource:@"PPbeep" ofType:@"wav"];
+ * Default: `[[NSBundle mainBundle] pathForResource:@"PPbeep" ofType:@"wav"];`
  */
 @property (nonatomic, strong) NSString* soundFilePath;
 

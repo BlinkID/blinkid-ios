@@ -50,9 +50,10 @@
 /**
  * Scanning library was closed, usually by the user pressing close button and cancelling the scan
  *
- *  @param scanningViewController Scanning view controller which was responsible for scanning
+ *  @param scanningViewController Scanning view controller responsible for scanning
  */
 - (void)scanningViewControllerDidClose:(UIViewController<PPScanningViewController>*)scanningViewController;
+
 
 /**
  * Scanning library did output scanning results (array of PPRecognizerResult objects). Do your next steps here.
@@ -67,6 +68,9 @@
  * - each scanning result belongs to a common PPRecognizerResult type
  * - handle different types differently
  *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
+ *  @param results                Array of results returned by the scanner
+ *
  * @see PPRecognizerResult
  */
 - (void)scanningViewController:(UIViewController<PPScanningViewController>*)scanningViewController
@@ -77,16 +81,23 @@
 /**
  * Called when Scanning library wants to display help screens. This can happen when the user press
  * help button on scanning UI, or on first run of the application
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
  */
 - (void)scanningViewControllerShouldPresentHelp:(UIViewController<PPScanningViewController>*)scanningViewController;
 
 /**
  * Called when Scanning library requires the display of more info view
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
  */
 - (void)scanningViewControllerDidRequestMoreInfo:(UIViewController<PPScanningViewController>*)scanningViewController;
 
 /**
- Called when coordinator obtaines intermediate metadata
+ * Called when coordinator obtaines metadata information
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
+ *  @param metadata               obtained metadata
  */
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
              didOutputMetadata:(PPMetadata *)metadata;

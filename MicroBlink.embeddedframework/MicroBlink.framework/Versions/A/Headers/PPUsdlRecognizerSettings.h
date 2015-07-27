@@ -8,8 +8,31 @@
 
 #import "PPRecognizerSettings.h"
 
+/**
+ * Settings class for configuring Usdl Recognizer
+ *
+ * Usdl Recognizer recognizer is used for scanning and parsing of PDF417
+ * on the back sides of the US drivers license
+ */
 @interface PPUsdlRecognizerSettings : PPRecognizerSettings
 
-- (instancetype)init;
+/**
+ * Set this to YES to scan even barcode not compliant with standards
+ * For example, malformed PDF417 barcodes which were incorrectly encoded
+ *
+ * Use only if necessary because it slows down the recognition process
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL scanUncertain;
+
+/**
+ * Set this to YES to scan barcodes which don't have quiet zone (white area) around it
+ *
+ * Use only if necessary because it slows down the recognition process
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL allowNullQuietZone;
 
 @end

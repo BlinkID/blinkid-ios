@@ -11,16 +11,31 @@
 struct RecognizerSettingsImpl;
 typedef struct RecognizerSettingsImpl RecognizerSettingsImpl;
 
+/**
+ * MicroBlink scanning libraries run several Recognizers on each video frame.
+ *
+ * Each recognizer is configured with the appropriate settings object.
+ *
+ * This class is common superclass for each of the Recognizer settings,
+ */
 @interface PPRecognizerSettings : NSObject <NSCopying>
 
 @property (nonatomic, readonly, assign) RecognizerSettingsImpl* settings;
 
 - (instancetype)initWithSettings:(RecognizerSettingsImpl*)settings;
 
+/**
+ * Property which determines if the recognizer is enabled
+ *
+ *  @param enabled If YES, recognizer is enabled, and it peroforms recognition on each video frame.
+ */
 - (void)setEnabled:(BOOL)enabled;
 
+/**
+ * Determines if recognizer is enabled
+ *
+ *  @return YES if recognizer is enabled
+ */
 - (BOOL)isEnabled;
-
-+ (NSData*)dataFromFileWithName:(NSString*)name;
 
 @end

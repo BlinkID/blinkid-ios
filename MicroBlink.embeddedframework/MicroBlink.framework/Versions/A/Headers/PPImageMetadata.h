@@ -11,10 +11,11 @@
 
 @interface PPImageMetadata : PPMetadata
 
-@property (nonatomic, assign) UIImageOrientation orientation;
+@property (nonatomic, assign, readonly) UIImageOrientation orientation;
+
+- (instancetype)initWithName:(NSString *)name
+                 orientation:(UIImageOrientation)orientation;
 
 - (UIImage*)image;
-
-- (UIImage*)rotatedImage;
 
 @end

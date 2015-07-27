@@ -34,30 +34,6 @@
 @property (nonatomic, assign) BOOL successfulScanFrame;
 
 /**
- * If YES, current video frame, together with frame quality estimation value will be saved
- * TODO: tell which type exactly
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL frameQuality;
-
-/**
- * If YES, grayscale version of the currently processed frame will be captured
- * TODO: tell which type exactly
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL grayscaleFrame;
-
-/**
- * If YES, color dropped version of the currently processed frame will be captured
- * TODO: tell which type exactly
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL colorDroppedFrame;
-
-/**
  * If YES, dewarped images in the recognition process will be saved
  * TODO: tell which type exactly
  *
@@ -72,6 +48,13 @@
  * Default: NO
  */
 @property (nonatomic, assign) BOOL detectionImage;
+
+/**
+ * If YES, image which is used as an input for the OCR will be saved
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL ocrInputImage;
 
 /**
  * If YES, OCR data in xml form will be saved

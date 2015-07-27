@@ -13,6 +13,7 @@
 
 @protocol PPOverlayContainerViewController;
 @class PPOcrLayout;
+@class PPMetadata;
 
 
 /**
@@ -219,6 +220,9 @@ didFinishRecognitionWithResult:(id)result;
  */
 - (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
             didOutputResults:(NSArray*)results;
+
+- (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
+           didOutputMetadata:(PPMetadata*)metadata;
 
 /**
  Called when a manual focus (user tapped the screen for example) will be performed at specified point.

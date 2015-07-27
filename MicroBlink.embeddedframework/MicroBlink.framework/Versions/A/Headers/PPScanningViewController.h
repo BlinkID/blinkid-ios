@@ -27,6 +27,22 @@
 @property (nonatomic, assign) CGRect scanningRegion;
 
 /**
+ * ScanningViewController's shouldAutorotate will return this value.
+ *
+ * Default: NO.
+ *
+ * Set it to YES if you want scanning view controller to autorotate.
+ */
+@property (nonatomic, assign) BOOL autorotate;
+
+/**
+ * ScanningViewController's supportedInterfaceOrientations will return this value.
+ *
+ * Default: UIInterfaceOrientationMaskPortrait.
+ */
+@property (nonatomic, assign) NSUInteger supportedOrientations;
+
+/**
  * Pause scanning without dismissing the camera view
  */
 - (void)pauseScanning;

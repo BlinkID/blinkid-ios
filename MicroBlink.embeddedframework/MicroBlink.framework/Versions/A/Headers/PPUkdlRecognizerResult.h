@@ -8,6 +8,9 @@
 
 #import "PPRecognizerResult.h"
 
+/**
+ * Class representing result of scanning of UK Driver's licenses
+ */
 @interface PPUkdlRecognizerResult : PPRecognizerResult
 
 /**

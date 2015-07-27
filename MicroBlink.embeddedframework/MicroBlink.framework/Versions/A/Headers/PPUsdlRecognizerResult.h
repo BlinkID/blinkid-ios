@@ -949,6 +949,6 @@ extern const NSString* kPPCode39;
  *
  *  @return value for a given key
  */
-- (NSString *)getField:(NSString *)key;
+- (NSString *)getField:(const NSString *)key;
 
 @end

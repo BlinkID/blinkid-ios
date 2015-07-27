@@ -28,7 +28,4 @@
 #import "PPUkdlRecognizerSettings.h"
 #import "PPUkdlRecognizerResult.h"
 
-// Helpers
-#import "PPApp.h"
-
 #endif

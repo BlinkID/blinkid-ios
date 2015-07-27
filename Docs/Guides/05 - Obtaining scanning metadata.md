@@ -1,3 +1,0 @@
-## Obtaining scanning metadata
-
-TBD

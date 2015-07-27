@@ -46,6 +46,11 @@
 @property (nonatomic, assign) CGAffineTransform transform;
 
 /**
+ * OCR layout was recognized from flipped image
+ */
+@property (nonatomic, assign) BOOL flipped;
+
+/**
  * Initializer from blocks and transformation
  *
  *  @param ocrBlocks ocr blocks
@@ -176,7 +181,7 @@
 /**
  * Initializer for a char
  *
- *  @param value    unicide value
+ *  @param value    unicode value
  *  @param position position on the image
  *  @param height   height of the char
  *
@@ -232,7 +237,8 @@
 /**
  * Creates a position with offset to a current position. Offset is added.
  *
- *  @param offset
+ *  @param offset Offset by which new position is displaced from the current one. 
+ *      It's specified with CGPoint, where x value defines x offset, and y value defines y offset
  *
  *  @return position with offset
  */
@@ -241,21 +247,21 @@
 /**
  * Helper method converting Position to CGRect
  *
- *  @return CGRect
+ *  @return Position converted to CGRect
  */
 - (CGRect)rect;
 
 /**
  * Helper method calculating the center of the Position
  *
- *  @return center
+ *  @return center of the position.
  */
 - (CGPoint)center;
 
 /**
- * Helper method calcualting the height of the position
+ * Helper method calculating the height of the position
  *
- *  @return height
+ *  @return height of the position
  */
 - (CGFloat)height;
 

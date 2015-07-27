@@ -8,8 +8,13 @@
 
 #import "PPRecognizerSettings.h"
 
+/**
+ * Settings class for configuring UKDL Recognizer
+ *
+ * UKDL Recognizer recognizer is used for scanning and parsing the front side of UK Driving licenses
+ *
+ * @see https://en.wikipedia.org/wiki/Driving_licence_in_the_United_Kingdom
+ */
 @interface PPUkdlRecognizerSettings : PPRecognizerSettings
-
-- (instancetype)init;
 
 @end

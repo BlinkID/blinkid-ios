@@ -1,3 +1,0 @@
-## Scanner initialization settings
-
-TBD
