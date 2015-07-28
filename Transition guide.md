@@ -1,19 +1,45 @@
+### Transition to 1.0.0
+
+- If you're using direct API, just delete all calls to `PPCoordinator initializeRecognizers` and `PPCoordinator terminateRecognizers`. These calls are now performed internally
+
+- `rotatedImage` property of `PPImageMetadata` no longer exists. Use `image` property instead, it correctly handles rotation.
+
+- `PPApp` class is no longer a part of the API. 
+
+- `PPMetadataSettings` was cleaned up - use the alternative names provided listed in the header file. 
+
+## 0.9.6
+
+- No changes
+
+## 0.9.5
+
+- No changes
+
+## 0.9.4
+
+- No changes
+
 ### Transition to 0.9.3
 
 - This version uses a new license key format. If you had a license key generated prior to v0.9.3, contact us so we can regenerate the lincense key for you.
 
 - UK Driver's license support added. To scan them, add PPUkdlRecognizerSettings to `settings.scanSettings`
 
-        [settings.scanSettings addRecognizerSettings:[[PPUkdlRecognizerSettings alloc] init]];
-        
+```objective-c
+[settings.scanSettings addRecognizerSettings:[[PPUkdlRecognizerSettings alloc] init]];
+```
+  
 - To collect UKDL results, look for `PPUkdlRecognizerResult` object in `scanningViewController:didOutputResults:` callback
 
-        for (PPRecognizerResult *result in results) {
-                if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
-                        PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
-                        [self processUkdlResult:ukdlResult scanningViewController:scanningViewController];
-                }
+```objective-c
+for (PPRecognizerResult *result in results) {
+        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+                PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
+                [self processUkdlResult:ukdlResult scanningViewController:scanningViewController];
         }
+}
+```
 
 - `PPCoordinator` class now exposes fewer public methods and properties.
 
@@ -22,16 +48,6 @@
 - Classes representing scanning results were renamed. Renaming was performed to match naming convention of `PPRecognizerSettings` hierarcy: now each `PPRecognizerSettings` class has it's matching `PPRecognizerResult`. Replace all existing references to old class names with the new ones:
 
 	- `PPBaseResult` was renamed to `PPRecognizerResult`. 
-
-	- `PPOcrScanResult` was renamed to `PPOcrRecognizerResult`, this is the result of a recognizer whose settings are given with `PPOcrRecognizerSettings.`
-
-	- `PPCroResult` renamed to `PPCroRecognizerResult`. This is a common superclass to `PPCroSlipRecognizerResult`, `PPCroPdf417RecognizerResult` and `PPCroQrRecognizerResult`.
-
-	- `PPCroSlipResult` renamed to `PPCroSlipRecognizerResult`, this is the result of a recognizer whose settings are given with `PPCroSlipRecognizerSettings.`
-
-	- `PPCroBarcodeResult` renamed to `PPCroPdf417RecognizerResult`, this is the result of a recognizer whose settings are given with `PPCroPdf417RecognizerSettings.`
-
-	- Introduced `PPCroQrRecognizerResult`, this is the result of a recognizer whose settings are given with `PPCroQrRecognizerSettings.`
 	
 - `PPOcrResult` (class representing a result of the OCR process, with individual characters, lines and blocks), was renamed to `PPOcrLayout`. Name change was introduced to further distinguish the class from `PPRecognizerResult` classes.
 

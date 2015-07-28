@@ -19,10 +19,28 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 - [Generate](https://microblink.com/login?url=/customer/generatedemolicence) a **free demo license key** to start using the SDK in your app (registration required)
 - [Contact us](http://www.microblink.com) to get pricing info
 - Check out the [comprehensive documentation](http://cocoadocs.org/docsets/PPBlinkID/) of all APIs available in PDF417.mobi SDK
+- If you're using CocoaPods, you can easily try our sample apps by running the following command in your terminal window:
+
+```shell
+pod try PPBlinkID
+```
+
+### Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BlinkID in your projects. See the ["Getting Started" guide for more information](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started).
+
+#### Podfile
+
+```ruby
+platform :ios, '6.0'
+pod 'PPBlinkID', '~> 1.0.0'
+```
 
 ## Requirements
 
 SDK package contains MicroBlink framework and one or more sample apps which demonstrate framework integration. Framework can be deployed on iOS 6.0 or later, iPhone 3GS or newer and iPad 2 or newer. 
+
+SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower perfomance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536).
 
 ## Important documents:
 
