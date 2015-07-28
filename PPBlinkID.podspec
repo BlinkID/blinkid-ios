@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
         'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PPBlinkID/MicroBlink.embeddedframework"'
   }
 
-  s.ios.frameworks = 'MicroBlink'
-  s.ios.libraries = 'c++'
+  s.ios.frameworks = 'MicroBlink', 'AVFoundation', 'AudioToolbox', 'CoreMedia'
+  s.ios.libraries = 'c++', 'iconv'
 
 end
