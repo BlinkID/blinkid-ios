@@ -85,13 +85,13 @@
 
 - (IBAction)takePhoto:(id)sender {
 
-
     /** Instantiate the scanning coordinator */
     NSError *error;
-    PPCoordinator *coordinator = [self coordinatorWithError:&error];
+
+    self.coordinator = [self coordinatorWithError:&error];
 
     /** If scanning isn't supported, present an error */
-    if (coordinator == nil) {
+    if (self.coordinator == nil) {
         NSString *messageString = [error localizedDescription];
         [[[UIAlertView alloc] initWithTitle:@"Warning"
                                     message:messageString
@@ -101,9 +101,6 @@
 
         return;
     }
-
-    // set coordinator ivar
-    self.coordinator = coordinator;
 
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
 
@@ -135,7 +132,6 @@
     // Handle a still image capture
     if (CFStringCompare((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
         UIImage *originalImage = (UIImage *)[info objectForKey: UIImagePickerControllerOriginalImage];
-
 
         [self.coordinator processImage:originalImage
                         scanningRegion:CGRectMake(0.0, 0.0, 1.0, 1.0)
