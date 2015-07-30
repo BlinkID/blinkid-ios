@@ -28,39 +28,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)startScanning:(id)sender {
-
-    // Check if scanning is supported
-    NSError *error;
-    if ([PPCoordinator isScanningUnsupported:&error]) {
-        NSString *messageString = [error localizedDescription];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
-                                                        message:messageString
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-
-    PPSettings *settings = [[PPSettings alloc] init];
-    settings.cameraSettings.cameraPreset = PPCameraPresetMax;
-    settings.licenseSettings.licenseKey = @"6EZH3JXN-CYKHWVII-4EOV34IK-AJMPUV3I-VJKQRYI4-MKDM4QXI-SNQ3V527-VARHA7EY";
-
-    [settings.scanSettings addRecognizerSettings:[[PPMrtdRecognizerSettings alloc] init]];
-    [settings.scanSettings addRecognizerSettings:[[PPUsdlRecognizerSettings alloc] init]];
-    [settings.scanSettings addRecognizerSettings:[[PPUkdlRecognizerSettings alloc] init]];
-
-    // get coordinator
-    PPCoordinator *rec = [[PPCoordinator alloc] initWithSettings:settings];
-
-    // get camera view controller
-    self.cameraViewController = [rec cameraViewControllerWithDelegate:self];
-
-    // present it modally
-    [self presentViewController:self.cameraViewController animated:YES completion:nil];
-}
-
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
