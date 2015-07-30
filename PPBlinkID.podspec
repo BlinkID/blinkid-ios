@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "1.0.0"
+  s.version     = "1.0.1"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.source      = { 
         :git => 'https://github.com/BlinkID/blinkid-ios.git', 
-        :tag => 'v1.0.0'
+        :tag => 'v1.0.1'
   }
   
   s.preserve_paths = 'MicroBlink.embeddedframework/*'
