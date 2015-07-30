@@ -1,6 +1,11 @@
-# BlinkID SDK for ID scanning
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="MicroBlink" title="MicroBlink">
+</p>
 
 [![Build Status](https://travis-ci.org/BlinkID/blinkid-ios.png)](https://travis-ci.org/BlinkID/blinkid-ios.png)
+[![Pod Version](http://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](http://cocoadocs.org/docsets/PPBlinkID/)
+
+# BlinkID SDK for ID scanning
 
 BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with [MicroBlink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
 
@@ -55,6 +60,10 @@ See what's new in each new SDK version.
 ### [Transition guide](https://github.com/BlinkID/blinkid-ios/blob/master/Transition%20guide.md)
 
 See detailed description for transition from older version of the SDK.
+
+## References
+
+Partial list of companies using BlinkID SDK can be found [here](https://microblink.com/#references).
 
 ## Contact
 

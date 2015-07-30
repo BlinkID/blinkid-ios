@@ -1,3 +1,11 @@
+## 1.0.1
+
+- Added support for several new special cases of US Driver Licenses in USDL recognizer. 
+
+- Disabled Bitcode in Sample apps so that they are buildable with XCode 7 (Bitcode support in the framework coming soon!)
+
+- Added library dependencies in podspec without which the app after integration couldn't be built 
+
 ## 1.0.0
 
 - Changes in Direct processing API
