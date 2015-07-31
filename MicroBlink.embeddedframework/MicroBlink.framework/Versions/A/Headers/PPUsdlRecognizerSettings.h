@@ -29,9 +29,9 @@
 /**
  * Set this to YES to scan barcodes which don't have quiet zone (white area) around it
  *
- * Use only if necessary because it slows down the recognition process
+ * Disable if you need a slight speed boost
  *
- * Default: NO
+ * Default: YES
  */
 @property (nonatomic) BOOL allowNullQuietZone;
 
