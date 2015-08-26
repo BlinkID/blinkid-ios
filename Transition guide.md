@@ -1,6 +1,10 @@
+## 1.1.0
+
+- No backwards incompatible changes. See Release notes for new features.
+
 ## 1.0.1
 
-- No changes
+- No backwards incompatible changes
 
 ### Transition to 1.0.0
 
@@ -14,15 +18,15 @@
 
 ## 0.9.6
 
-- No changes
+- No backwards incompatible changes
 
 ## 0.9.5
 
-- No changes
+- No backwards incompatible changes
 
 ## 0.9.4
 
-- No changes
+- No backwards incompatible changes
 
 ### Transition to 0.9.3
 
