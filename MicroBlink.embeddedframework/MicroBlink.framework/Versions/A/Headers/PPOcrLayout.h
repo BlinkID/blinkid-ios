@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "PPOcrFont.h"
+
 @class PPOcrBlock;
 @class PPOcrLine;
 @class PPOcrChar;
@@ -177,6 +179,23 @@
  * Integer value representing OCR quality of the char
  */
 @property (nonatomic, assign) NSInteger quality;
+
+/**
+ * Font of the character
+ */
+@property (nonatomic, assign) PPOcrFont font;
+
+/**
+ * Alternative characters which are possible instead of this character.
+ *
+ * In the list of characters, each char (unicode value), can appear multiple times, each time with different font.
+ * This means variant is uniquely defined with a combination of value and font properties.
+ *
+ * Each variant has quality property set, so you can use it to verify other options.
+ *
+ * @Warning If you use variants, please note you need to take font into account.
+ */
+@property (nonatomic, strong) NSSet *variants;
 
 /**
  * Initializer for a char

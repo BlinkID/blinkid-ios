@@ -11,6 +11,7 @@
 @class PPResultDataSourceAdapter;
 @class PPOcrLayout;
 @class PPBarcodeDetailedData;
+@class PPQuadrangle;
 
 struct RecognitionResultImpl;
 typedef struct RecognitionResultImpl RecognitionResultImpl;
@@ -131,6 +132,18 @@ typedef struct RecognitionResultImpl RecognitionResultImpl;
 - (PPBarcodeDetailedData *)getBarcodeDetailedDataElement:(NSString *)key;
 
 /**
+ * Returns a PPQuadrangle* element from allElements dictionary.
+ *
+ * If element exists and it's a PPQuadrangle, the method will return specified PPQuadrangle* object
+ * If element doesn't exist, the method will return nil.
+ *
+ *  @param key element key
+ *
+ *  @return PPQuadrangle quadrangle value.
+ */
+- (PPQuadrangle *)getQuadrangleElement:(NSString *)key;
+
+/**
  * Returns the xml representation of this result
  *
  *  @return xml representation of this result
@@ -159,5 +172,49 @@ typedef struct RecognitionResultImpl RecognitionResultImpl;
  *  @return string representation of NSData object
  */
 + (NSString *)urlStringFromData:(NSData *)data;
+
+@end
+
+/**
+ * Class represents the quadrangle (arbitrary geometric object with 4 different corner points
+ */
+@interface PPQuadrangle : NSString
+
+/** Upper left point */
+@property (nonatomic, assign) CGPoint upperLeft;
+
+/** Upper right point */
+@property (nonatomic, assign) CGPoint upperRight;
+
+/** Lower left point */
+@property (nonatomic, assign) CGPoint lowerLeft;
+
+/** Lower right point */
+@property (nonatomic, assign) CGPoint lowerRight;
+
+/**
+ * Designated initializer which initializes all four corners of the quadrangle
+ *
+ *  @param upperLeft  upper left corner of the quadrangle
+ *  @param upperRight upper right corner of the quadrangle
+ *  @param lowerLeft  lower left corner of the quadrangle
+ *  @param lowerRight lower right corner of the quadrangle
+ *
+ *  @return initialized quadrangle with four corners
+ */
+- (instancetype)initWithUpperLeft:(CGPoint)upperLeft
+                       upperRight:(CGPoint)upperRight
+                        lowerLeft:(CGPoint)lowerLeft
+                       lowerRight:(CGPoint)lowerRight;
+
+/**
+ * Returns points of the quadrangle in array in the following order:
+ * - upperLeft, upperRight, lowerLeft, lowerRight.
+ *
+ * The array contains object obtained by, e.g: [NSValue valueWithCGPoint:CGPointMake(0.0, 1.0)]
+ *
+ *  @return points of the quadrangle in an array
+ */
+- (NSArray *)toPointsArray;
 
 @end

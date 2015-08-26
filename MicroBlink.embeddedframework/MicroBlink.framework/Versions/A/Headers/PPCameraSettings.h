@@ -25,6 +25,9 @@ typedef NS_ENUM(NSUInteger, PPCameraPreset) {
 
     /** Device's maximal video resolution will be used. */
     PPCameraPresetMax,
+
+    /** Device's photo preview resolution will be used */
+    PPCameraPresetPhoto,
 };
 
 /**

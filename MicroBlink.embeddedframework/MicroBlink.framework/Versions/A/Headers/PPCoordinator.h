@@ -102,7 +102,7 @@
 
 /**
  * Processes an UIImage object using current settings.
- * Results are passed to a fiven delegate object.
+ * Results are passed to a given delegate object.
  *
  *  @param image            image for processing
  *  @param scanningRegion   region of the image used for scanning, where the whole image is specified with CGRectMake(0.0, 0.0, 1.0, 1.0)

@@ -7,11 +7,26 @@
 //
 
 #import "PPRecognizerResult.h"
+#import "PPOcrLayout.h"
 
 /**
  * Class representing common values obtained when scanning machine readable travel documents (MRTDs)
  */
 @interface PPMrtdRecognizerResult : PPRecognizerResult
+
+/**
+ * Boolean value which denotes that MRTD result is successfully parsed. When the result is parsed, all 
+ * properties below are present.
+ *
+ * If in the PPMrtdRecognizerSettings you specified allowUnparsedResults = YES, then it can happen that 
+ * MRTDRecognizerResult is not parsed. When this happens, this property will be equal to YES.
+ *
+ * In that case, you can use rawOcrResult property to obtain the raw result of the OCR process, so you can 
+ * implement MRTD parsing in your application.
+ *
+ *  @return YES if MRTD Recognizer result was successfully parsed and all the fields are extracted. NO otherwise.
+ */
+- (BOOL)isParsed;
 
 /**
  * Returns three-letter code which indicate the issuing State.
@@ -107,5 +122,15 @@
  * other elements.
  */
 - (NSString *)mrzText;
+
+/**
+ * Raw OCR layout from which the MRTD data was parsed.
+ * 
+ * If PPMRTDRecognizerSettings allowUnparsedResults is used, you can use this property to implement
+ * your custom MRTD parsing algorithm
+ *
+ *  @return OCR layout from which the MRTD data was parsed
+ */
+- (PPOcrLayout *)rawOcrLayout;
 
 @end
