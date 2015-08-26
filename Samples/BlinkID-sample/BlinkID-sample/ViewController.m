@@ -103,6 +103,10 @@
     /** Allocate and present the scanning view controller */
     UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self];
 
+    // allow rotation if VC is displayed as a modal view controller
+    scanningViewController.autorotate = YES;
+    scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAll;
+
     /** You can use other presentation methods as well */
     [self presentViewController:scanningViewController animated:YES completion:nil];
 }
