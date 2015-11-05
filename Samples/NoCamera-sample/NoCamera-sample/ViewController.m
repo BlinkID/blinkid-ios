@@ -88,7 +88,9 @@
     /** Instantiate the scanning coordinator */
     NSError *error;
 
-    self.coordinator = [self coordinatorWithError:&error];
+    if (self.coordinator == nil) {
+        self.coordinator = [self coordinatorWithError:&error];
+    }
 
     /** If scanning isn't supported, present an error */
     if (self.coordinator == nil) {
@@ -116,6 +118,45 @@
 
     // Shows default camera control overlay over camera preview.
     cameraUI.showsCameraControls = YES;
+
+    // set delegate
+    cameraUI.delegate = self;
+
+    // Show view
+    [self presentViewController:cameraUI animated:YES completion:nil];
+}
+
+- (IBAction)openGallery:(id)sender {
+
+    /** Instantiate the scanning coordinator */
+    NSError *error;
+
+    if (self.coordinator == nil) {
+        self.coordinator = [self coordinatorWithError:&error];
+    }
+
+    /** If scanning isn't supported, present an error */
+    if (self.coordinator == nil) {
+        NSString *messageString = [error localizedDescription];
+        [[[UIAlertView alloc] initWithTitle:@"Warning"
+                                    message:messageString
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+
+        return;
+    }
+
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+
+    // Use photo library
+    cameraUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+    // Displays a control that allows the user to choose only photos
+    cameraUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *)kUTTypeImage, nil];
+
+    // Hides the controls for moving & scaling pictures, or for trimming movies.
+    cameraUI.allowsEditing = NO;
 
     // set delegate
     cameraUI.delegate = self;
