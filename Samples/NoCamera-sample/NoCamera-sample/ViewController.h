@@ -12,5 +12,7 @@
 
 - (IBAction)takePhoto:(id)sender;
 
+- (IBAction)openGallery:(id)sender;
+
 @end
 

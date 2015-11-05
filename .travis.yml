@@ -1,4 +1,5 @@
 language: objective-c
+osx_image: xcode7
 
 install: true
 before_install: ./travis/before_script.sh

@@ -23,9 +23,9 @@
 		1807C1671AEF792600469E61 /* torchon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15B1AEF792600469E61 /* torchon@2x.png */; };
 		1807C1681AEF792600469E61 /* torchon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15C1AEF792600469E61 /* torchon_pressed.png */; };
 		1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */; };
-		1807C16B1AEF79A000469E61 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1807C16A1AEF79A000469E61 /* libc++.dylib */; };
 		1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1331AEF789700469E61 /* Main.storyboard */; };
 		1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1381AEF789700469E61 /* LaunchScreen.xib */; };
+		18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ADB7F71BEB396F00AB0624 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		1807C15B1AEF792600469E61 /* torchon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon@2x.png"; sourceTree = "<group>"; };
 		1807C15C1AEF792600469E61 /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
 		1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
-		1807C16A1AEF79A000469E61 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		18ADB7F71BEB396F00AB0624 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1807C16B1AEF79A000469E61 /* libc++.dylib in Frameworks */,
+				18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */,
 				1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +72,7 @@
 			children = (
 				1807C1281AEF789700469E61 /* NoCamera-sample */,
 				1807C14F1AEF791900469E61 /* Frameworks */,
+				18ADB7F71BEB396F00AB0624 /* libc++.tbd */,
 				1807C1271AEF789700469E61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 		1807C14F1AEF791900469E61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1807C16A1AEF79A000469E61 /* libc++.dylib */,
 				1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */,
 			);
 			name = Frameworks;
