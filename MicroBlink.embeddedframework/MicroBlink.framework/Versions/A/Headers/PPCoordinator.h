@@ -126,7 +126,7 @@
  *
  *  @return YES if scanning is not supported, NO otherwise.
  */
-+ (BOOL)isScanningUnsupported:(NSError **)error;
++ (BOOL)isScanningUnsupported:(NSError **)error NS_SWIFT_NOTHROW;
 
 /**
  * Returns the string that contains the library build version

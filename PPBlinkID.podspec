@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "1.1.0"
+  s.version     = "1.2.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.source      = { 
         :git => 'https://github.com/BlinkID/blinkid-ios.git', 
-        :tag => 'v1.1.0'
+        :tag => 'v1.2.0'
   }
   
   s.preserve_paths = 'MicroBlink.embeddedframework/*'
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
         'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PPBlinkID/MicroBlink.embeddedframework"'
   }
 
-  s.ios.frameworks = 'MicroBlink', 'AVFoundation', 'AudioToolbox', 'CoreMedia'
+  s.ios.frameworks = 'MicroBlink', 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia'
   s.ios.libraries = 'c++', 'iconv'
 
 end

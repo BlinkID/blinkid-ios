@@ -80,7 +80,11 @@ typedef NS_ENUM(NSUInteger, PPCameraAutofocusRestriction) {
  * Interval between forcing two camera focuses. If <= 0, forced focuses arent performed
  * and only continuous autofocus mode will be used.
  * 
- * Default: 3.2 seconds
+ * Default
+ *  - 10.0f for BlinkID and BlinkOCR product
+ *  - 3.2f for PhotoPay product
+ *  - 5.0f for Pdf417 product
+ *  - 0.0f for PhotoMath product
  */
 @property (nonatomic, assign) NSTimeInterval autofocusInterval;
 

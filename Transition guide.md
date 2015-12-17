@@ -1,3 +1,13 @@
+## 1.2.0
+
+- You can now enable Bitcode support in your project.
+
+- If you used `mrtdRoi` and `detectMachineReadbleZonePosition`, just delete the lines of code where you used them. MRTD is now automatically detected
+
+- Renamed `PPUkdlRecognizerResult`'s property `ownerAdress` to `ownerAddress` (fixed typo)
+
+- You now need to link your app with `Accelerate.framework` system library. This is due to new optimizations in character recognition.
+
 ## 1.1.0
 
 - No backwards incompatible changes. See Release notes for new features.

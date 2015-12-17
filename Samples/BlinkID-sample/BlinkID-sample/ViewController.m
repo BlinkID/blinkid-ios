@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) UIViewController<PPScanningViewController>* cameraViewController;
 
+@property (nonatomic, strong) PPUsdlRecognizerResult *usdlRecognizerResult;
+
 @end
 
 @implementation ViewController
@@ -54,25 +56,46 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"6EZH3JXN-CYKHWVII-4EOV34IK-AJMPUV3I-VJKQRYI4-MKDM4QXI-SNQ3V527-VARHA7EY";
+    settings.licenseSettings.licenseKey = @"NO3GLCN2-65O6NDWH-KFJ7IEAD-747A4K4K-XVTN2CYR-IXRWTKNZ-7JLWRKSV-BDQWXFQG"; // Valid temporarily
 
 
-    /**
-     * 3. Set up what is being scanned. See detailed guides for specific use cases.
-     * Here's an example for initializing MRTD and USDL scanning
-     */
+    /** 3. Set up what is being scanned. See detailed guides for specific use cases. */
 
-    // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-    PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
+    { // Remove this if you're not using MRTD recognition
 
-    // Add MRTD Recognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
+        // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
+        PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
 
-    // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
-    PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
+        // Add MRTD Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
+    }
 
-    // Add USDL Recognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
+    { // Remove this if you're not using USDL recognition
+
+        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
+        PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
+
+        // Add USDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
+    }
+
+    { // Remove this if you're not using UKDL recognition
+
+        // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
+        PPUkdlRecognizerSettings *ukdlRecognizerSettings = [[PPUkdlRecognizerSettings alloc] init];
+
+        // Add UKDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:ukdlRecognizerSettings];
+    }
+
+    { // Remove this if you're not using MyKad recognition
+
+        // To specify we want to perform MyKad (Malysian ID document) recognition, initialize the MyKad recognizer settings
+        PPMyKadRecognizerSettings *mykadRecognizerSettings = [[PPMyKadRecognizerSettings alloc] init];
+
+        // Add UKDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:mykadRecognizerSettings];
+    }
 
 
     /** 4. Initialize the Scanning Coordinator object */
@@ -151,6 +174,16 @@
             PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
             title = @"USDL";
             message = [usdlResult description];
+        }
+        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
+            title = @"UKDL";
+            message = [ukdlResult description];
+        }
+        if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
+            PPMyKadRecognizerResult *myKadResult = (PPMyKadRecognizerResult *)result;
+            title = @"MyKad";
+            message = [myKadResult description];
         }
     };
 

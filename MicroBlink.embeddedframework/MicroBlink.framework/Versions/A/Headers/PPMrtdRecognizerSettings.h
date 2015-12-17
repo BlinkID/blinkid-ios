@@ -20,34 +20,6 @@
 @interface PPMrtdRecognizerSettings : PPRecognizerSettings
 
 /**
- * Region of the image which will be OCR-ed.
- *
- * If detectMachineReadableZonePosition is set to YES, then the OCR area will be determined automatically, and this property
- * does not have any effect.
- *
- * Default:
- *  When device is in portrait: (0.0f, 0.52f, 1.0f, 0.18f);
- *  When device is in landscape: (0.15f, 0.535f, 0.7f, 0.315f);
- *
- * If you want to change this, keep in mind:
- *  - it might be a good idea to have different values for portrait and landscape
- *  - larger area means easier positioning of the device above the ID card or passport
- *  - larger area also means slower OCR process (time consumption depends roughly linearly to image size)
- */
-@property (nonatomic, assign) CGRect mrtdRoi;
-
-/**
- * If YES, MRTD recognizer will try to detect the position of Machine readable zone,
- * instead of using mrtdRoi as position. Effectively, if YES is used, value in mrtdRoi isn't used.
- * 
- * Default is YES.
- *
- * In general, if your UI is designed so that the user needs to place the camera
- * correctly above the ID document, then NO is OK. Otherwise use YES.
- */
-@property (nonatomic, assign) BOOL detectMachineReadableZonePosition;
-
-/**
  * If YES, MrtdRecognizer will return MRTD results even if they are not parsed.
  *
  * Default NO.

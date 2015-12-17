@@ -56,6 +56,12 @@ typedef NS_ENUM(NSUInteger, PPOcrFont) {
     /** Courier bold font */
     PP_OCR_FONT_COURIER_BOLD,
 
+    /** Courier medium bold */
+    PP_OCR_FONT_COURIER_MEDIUM_BOLD,
+
+    /** Courier new bold */
+    PP_OCR_FONT_COURIER_NEW_BOLD,
+
     /** Courier new ce font */
     PP_OCR_FONT_COURIER_NEW_CE,
 
@@ -103,6 +109,9 @@ typedef NS_ENUM(NSUInteger, PPOcrFont) {
 
     /** Helvetica bold font */
     PP_OCR_FONT_HELVETICA_BOLD,
+
+    /** Helvetica condensed light font */
+    PP_OCR_FONT_HELVETICA_CONDENSED_LIGHT,
 
     /** Hypermarket font */
     PP_OCR_FONT_HYPERMARKET,

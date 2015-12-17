@@ -1,3 +1,23 @@
+## 1.2.0
+
+- Added recognition of Malysian ID cards (MyKads). To use MyKad recognition initialize the scanning library using `PPMyKadRecognizerSettings`
+
+- Improvements in UK drivers license recognition. BlinkID is now tested on many more UKDL samples and yields much higher recognition rate.
+
+- Improvements in MRTD recognition. Errors such as '0' and 'O' confusions should no longer happen. Improved MRTD document detection algorithm, which now makes old "fixed" recognition redundant. Because of that, the feature to define `mrtdRoi` is now removed.
+
+- Added feature to obtain cropped and trimmed image of the whole MRTD document.
+
+- Fixed several issues in USDL parsing
+        - implemented special cases for barcodes which don't have keys according to the AAMVA version written in the barcode
+        - implemented heuristics for extraction of firstName, middleName, lastName, address, and other fields, if they can be determined based on the other fields.
+
+- Bugfixes and tweaks in camera management code
+        - fixed potential deadlock when multiple instances of `PPCoordinator` objects are instantiated.
+        - exiting from the scanning when user presses "cancel" button is now faster
+
+- Renamed `PPUkdlRecognizerResult`'s property `ownerAdress` to `ownerAddress` (fixed typo)
+
 ## 1.1.0
 
 - `PPMrtdRecognizerSettings` now sets `detectMachineReadableZonePosition` to YES by default. This means MRZ detection will work by default, meaning you no longer need to position the ID card precisely inside the frame shown in the UI.

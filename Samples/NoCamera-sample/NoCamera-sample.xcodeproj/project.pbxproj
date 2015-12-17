@@ -25,6 +25,11 @@
 		1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */; };
 		1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1331AEF789700469E61 /* Main.storyboard */; };
 		1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1381AEF789700469E61 /* LaunchScreen.xib */; };
+		1809F2301C2312FA00DEE72E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F22F1C2312FA00DEE72E /* Accelerate.framework */; };
+		1809F2321C2312FD00DEE72E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2311C2312FD00DEE72E /* AVFoundation.framework */; };
+		1809F2341C23130000DEE72E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2331C23130000DEE72E /* AssetsLibrary.framework */; };
+		1809F2361C23130400DEE72E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2351C23130400DEE72E /* CoreMedia.framework */; };
+		1809F2381C23130700DEE72E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2371C23130700DEE72E /* AudioToolbox.framework */; };
 		18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ADB7F71BEB396F00AB0624 /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +56,11 @@
 		1807C15B1AEF792600469E61 /* torchon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon@2x.png"; sourceTree = "<group>"; };
 		1807C15C1AEF792600469E61 /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
 		1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
+		1809F22F1C2312FA00DEE72E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1809F2311C2312FD00DEE72E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1809F2331C23130000DEE72E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		1809F2351C23130400DEE72E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1809F2371C23130700DEE72E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		18ADB7F71BEB396F00AB0624 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -59,8 +69,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */,
 				1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */,
+				1809F2301C2312FA00DEE72E /* Accelerate.framework in Frameworks */,
+				1809F2381C23130700DEE72E /* AudioToolbox.framework in Frameworks */,
+				1809F2341C23130000DEE72E /* AssetsLibrary.framework in Frameworks */,
+				1809F2321C2312FD00DEE72E /* AVFoundation.framework in Frameworks */,
+				1809F2361C23130400DEE72E /* CoreMedia.framework in Frameworks */,
+				18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */,
+				1809F22F1C2312FA00DEE72E /* Accelerate.framework */,
+				1809F2371C23130700DEE72E /* AudioToolbox.framework */,
+				1809F2331C23130000DEE72E /* AssetsLibrary.framework */,
+				1809F2311C2312FD00DEE72E /* AVFoundation.framework */,
+				1809F2351C23130400DEE72E /* CoreMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,7 +191,7 @@
 		1807C11E1AEF789700469E61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MicroBlink;
 				TargetAttributes = {
 					1807C1251AEF789700469E61 = {
@@ -275,6 +295,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = ../../MicroBlink.embeddedframework;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -342,9 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "NoCamera-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,9 +374,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "NoCamera-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
