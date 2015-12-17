@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "PPRecognizerSettings.h"
+#import "PPDetectorSettings.h"
 
 /**
  * Denotes the mode in which Recognizers performs recognition
@@ -28,7 +29,7 @@ typedef NS_ENUM(NSUInteger, PPRecognitionMode) {
 /**
  *  Denotes the mode in which FrameQuality estimation works
  */
-typedef NS_ENUM(NSUInteger, PPFrameQualityEstimationMode){
+typedef NS_ENUM(NSUInteger, PPFrameQualityEstimationMode) {
 
     /** Default. Frame quality estimation is ON if enabled recognizers require it by default.*/
     PPFrameQualityEstimationModeDefault,

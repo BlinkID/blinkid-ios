@@ -28,4 +28,8 @@
 #import "PPUkdlRecognizerSettings.h"
 #import "PPUkdlRecognizerResult.h"
 
+// Malaysian IDs (MyKad)
+#import "PPMyKadRecognizerSettings.h"
+#import "PPMyKadRecognizerResult.h"
+
 #endif

@@ -32,7 +32,7 @@
  *
  *  @return address
  */
-- (NSString *)ownerAdress;
+- (NSString *)ownerAddress;
 
 /**
  * Birth data of the owner

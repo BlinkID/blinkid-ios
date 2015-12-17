@@ -78,4 +78,14 @@
  */
 - (void)resumeScanningAndResetState:(BOOL)resetState;
 
+/**
+ * Resumes camera session. This method is automatically called in viewWillAppear when ScanningViewController enters screen.
+ */
+- (void)resumeCamera;
+
+/**
+ * Pauses camera session. This method is automatically called in viewDidDissapear when ScanningViewController exits screen.
+ */
+- (void)pauseCamera;
+
 @end
