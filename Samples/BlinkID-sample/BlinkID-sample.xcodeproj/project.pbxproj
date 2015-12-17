@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1809F2281C23061300DEE72E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2271C23061300DEE72E /* Accelerate.framework */; };
+		1809F22A1C23061B00DEE72E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2291C23061B00DEE72E /* AVFoundation.framework */; };
+		1809F22C1C23062300DEE72E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F22B1C23062300DEE72E /* CoreMedia.framework */; };
+		1809F22E1C23062C00DEE72E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F22D1C23062C00DEE72E /* libc++.tbd */; };
 		1809F38E1B6415F200783745 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F37F1B6415F200783745 /* MicroBlink.framework */; };
 		1809F38F1B6415F200783745 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1809F3811B6415F200783745 /* en.strings */; };
 		1809F3901B6415F200783745 /* IDCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F3821B6415F200783745 /* IDCard.png */; };
@@ -21,7 +25,6 @@
 		1809F3991B6415F200783745 /* torchon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F38B1B6415F200783745 /* torchon@2x.png */; };
 		1809F39A1B6415F200783745 /* torchon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F38C1B6415F200783745 /* torchon_pressed.png */; };
 		1809F39B1B6415F200783745 /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F38D1B6415F200783745 /* torchon_pressed@2x.png */; };
-		1809F39D1B64161F00783745 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F39C1B64161F00783745 /* libc++.dylib */; };
 		1842A1C31ACED3AA00DE6CAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842A1C21ACED3AA00DE6CAB /* main.m */; };
 		1842A1C61ACED3AA00DE6CAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842A1C51ACED3AA00DE6CAB /* AppDelegate.m */; };
 		1842A1C91ACED3AA00DE6CAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842A1C81ACED3AA00DE6CAB /* ViewController.m */; };
@@ -31,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1809F2271C23061300DEE72E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1809F2291C23061B00DEE72E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1809F22B1C23062300DEE72E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1809F22D1C23062C00DEE72E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		1809F37F1B6415F200783745 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
 		1809F3811B6415F200783745 /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
 		1809F3821B6415F200783745 /* IDCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IDCard.png; sourceTree = "<group>"; };
@@ -45,7 +52,6 @@
 		1809F38B1B6415F200783745 /* torchon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon@2x.png"; sourceTree = "<group>"; };
 		1809F38C1B6415F200783745 /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
 		1809F38D1B6415F200783745 /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
-		1809F39C1B64161F00783745 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		1842A1BD1ACED3AA00DE6CAB /* BlinkID-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1842A1C11ACED3AA00DE6CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1842A1C21ACED3AA00DE6CAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,7 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1809F39D1B64161F00783745 /* libc++.dylib in Frameworks */,
+				1809F22E1C23062C00DEE72E /* libc++.tbd in Frameworks */,
+				1809F22C1C23062300DEE72E /* CoreMedia.framework in Frameworks */,
+				1809F22A1C23061B00DEE72E /* AVFoundation.framework in Frameworks */,
+				1809F2281C23061300DEE72E /* Accelerate.framework in Frameworks */,
 				1809F38E1B6415F200783745 /* MicroBlink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,8 +154,11 @@
 		1842A1E61ACED3EF00DE6CAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1809F39C1B64161F00783745 /* libc++.dylib */,
 				1809F37E1B6415F200783745 /* MicroBlink.embeddedframework */,
+				1809F2271C23061300DEE72E /* Accelerate.framework */,
+				1809F2291C23061B00DEE72E /* AVFoundation.framework */,
+				1809F22B1C23062300DEE72E /* CoreMedia.framework */,
+				1809F22D1C23062C00DEE72E /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,7 +189,7 @@
 		1842A1B51ACED3AA00DE6CAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MicroBlink;
 				TargetAttributes = {
 					1842A1BC1ACED3AA00DE6CAB = {
@@ -282,6 +294,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = ../../MicroBlink.embeddedframework;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -346,9 +359,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "BlinkID-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,9 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "BlinkID-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
