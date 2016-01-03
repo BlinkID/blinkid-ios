@@ -39,13 +39,6 @@
  */
 - (PPCoordinator *)coordinatorWithError:(NSError**)error {
 
-    /** 0. Check if scanning is supported */
-
-    if ([PPCoordinator isScanningUnsupported:error]) {
-        return nil;
-    }
-
-
     /** 1. Initialize the Scanning settings */
 
     // Initialize the scanner settings object. This initialize settings with all default values.
