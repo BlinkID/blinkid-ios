@@ -49,9 +49,7 @@ SDK performs significantly better when the images obtained from the camera are f
 
 ## Important documents:
 
-### ["Getting started" guide](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started)
-
-## For Swift version of the guide see ["Getting started in Swift"](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started-in-Swift)
+### ["Getting started" guide](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started) or ["Getting started" in Swift](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started-in-Swift)
 
 See the steps for integrating the SDK in your apps. 
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "1.2.0"
+  s.version     = "1.3.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.source      = { 
         :git => 'https://github.com/BlinkID/blinkid-ios.git', 
-        :tag => 'v1.2.0'
+        :tag => 'v1.3.0'
   }
   
   s.preserve_paths = 'MicroBlink.embeddedframework/*'
@@ -41,17 +41,10 @@ Pod::Spec.new do |s|
   # ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.ios.deployment_target = '6.0.0'
-  s.ios.source_files = 'MicroBlink.embeddedframework/MicroBlink.framework/Versions/A/Headers/*.{h}'
-  s.ios.header_dir = 'MicroBlink'
-  s.ios.public_header_files = "MicroBlink.embeddedframework/MicroBlink.framework/Versions/A/Headers/*.h"
-  s.ios.resources = "MicroBlink.embeddedframework/MicroBlink.framework/Versions/A/Resources/*.{strings,wav,png,zzip}"
+  s.ios.resources = "MicroBlink.bundle"
   s.ios.requires_arc = false
-  
-  s.ios.xcconfig = { 
-        'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/PPBlinkID/MicroBlink.embeddedframework"'
-  }
-
-  s.ios.frameworks = 'MicroBlink', 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia'
+  s.ios.vendored_frameworks = 'MicroBlink.framework'
+  s.ios.frameworks = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia'
   s.ios.libraries = 'c++', 'iconv'
 
 end
