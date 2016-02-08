@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E2C9B9CA47913BA0A05143EA18652CD16F98D438" : 0,
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D090BABB-C6AE-426E-A741-32A3F44D65CB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E2C9B9CA47913BA0A05143EA18652CD16F98D438" : "..\/PhotoPay\/photopay-ios",
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : "blinkid-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BlinkID-sample-Swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Samples\/BlinkID-sample-Swift\/BlinkID-sample-Swift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:BlinkID\/blinkid-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:microblink\/photopay-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2C9B9CA47913BA0A05143EA18652CD16F98D438"
+    }
+  ]
+}

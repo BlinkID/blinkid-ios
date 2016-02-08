@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPCameraOverlayViewController" customModule="pdf417_sample_Swift" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="iGR-CJ-QQM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6N-Z7-bYj">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-CZ-Vho">
+                    <rect key="frame" x="0.0" y="240" width="90" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUp-B1-RSq">
+                    <rect key="frame" x="510" y="240" width="90" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6y-Sx-iEG">
+                    <rect key="frame" x="0.0" y="360" width="600" height="240"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-xg-YAM">
+                    <rect key="frame" x="522" y="12" width="66" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    <state key="normal" title="Torch"/>
+                    <connections>
+                        <action selector="didTapTorch:" destination="-1" eventType="touchUpInside" id="YNt-8v-uEG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-UH-sc4">
+                    <rect key="frame" x="12" y="12" width="67" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="didTapClose:" destination="-1" eventType="touchUpInside" id="tCj-Y1-K3h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="f6N-Z7-bYj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2K9-xd-NY4"/>
+                <constraint firstAttribute="bottom" secondItem="q6y-Sx-iEG" secondAttribute="bottom" id="5kT-Pf-5P0"/>
+                <constraint firstItem="8tY-CZ-Vho" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="Bxr-Up-wvO"/>
+                <constraint firstAttribute="trailing" secondItem="m4u-xg-YAM" secondAttribute="trailing" constant="12" id="E0v-em-XFU"/>
+                <constraint firstItem="8tY-CZ-Vho" firstAttribute="top" secondItem="f6N-Z7-bYj" secondAttribute="bottom" id="Edl-gh-qbH"/>
+                <constraint firstItem="eaN-UH-sc4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="El3-uV-iAW"/>
+                <constraint firstItem="f6N-Z7-bYj" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.4" id="LAM-g1-Hbt"/>
+                <constraint firstItem="8tY-CZ-Vho" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lwk-LI-to5"/>
+                <constraint firstItem="YUp-B1-RSq" firstAttribute="top" secondItem="f6N-Z7-bYj" secondAttribute="bottom" id="Oni-82-DSp"/>
+                <constraint firstItem="YUp-B1-RSq" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="S1h-H6-Myz"/>
+                <constraint firstItem="f6N-Z7-bYj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sdp-W1-tw5"/>
+                <constraint firstItem="q6y-Sx-iEG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XZH-4Z-rBA"/>
+                <constraint firstItem="q6y-Sx-iEG" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.4" id="Xlv-Zp-AcW"/>
+                <constraint firstAttribute="trailing" secondItem="f6N-Z7-bYj" secondAttribute="trailing" id="Y8g-Y5-uUt"/>
+                <constraint firstAttribute="trailing" secondItem="YUp-B1-RSq" secondAttribute="trailing" id="ayH-No-HBo"/>
+                <constraint firstItem="m4u-xg-YAM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="d0s-TX-KpI"/>
+                <constraint firstItem="YUp-B1-RSq" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="gYp-bL-OLO"/>
+                <constraint firstItem="8tY-CZ-Vho" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="ou3-B7-mNA"/>
+                <constraint firstAttribute="trailing" secondItem="q6y-Sx-iEG" secondAttribute="trailing" id="tfu-H5-ASC"/>
+                <constraint firstItem="eaN-UH-sc4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="xgX-WQ-jhL"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

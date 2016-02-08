@@ -1,3 +1,38 @@
+## 1.3.0
+
+- Added better integration for Swift
+
+    - Added Nullability Attributes
+    - Added modulemap file
+    - Added sample app in Swift
+        
+- Added recognizers for scanning barcodes
+
+    - for scanning PDF417 barcodes, use PPPdf417Recognizer
+    - for scanning Code128 and Code39 barcodes, use PPBarDecoderRecognizer
+    - for scanning QR codes, and other barcode types, use PPZxingRecognizer
+        
+- Refactored `PPMetadataSettings` 
+
+    - Added debug metadata settings for debugging payslip detection and image processing
+    - `successfulScanFrame` renamed to `successfulFrame`
+    - `currentVideoFrame` renamed to `currentFrame`
+    
+- Exposed `PPModernViewfinderOverlaySubview` overlay subview class in public headers. This enables you to more easily recreate default overlay UI in your custom Overlay view controllers.
+
+- Added *Detector API*, a completely new feature which enables you to detect various document types on images. Detector API allows two types of document detections
+
+    - MRTD detection (based on OCR line detection, for MRTD documents like passports, visas, ...)
+    - Document Detection (based on edge detection, for ID cards, plastic cards, credit cards, ...)
+    
+- in `PPCoordinator`, renamed method `isScanningUnsupported:` to `isScanningUnsupportedForCameraType:error:`. This was introduced to provide more granularity in checking if scanning is supported.
+
+- Fixed issues in obtaining images in scanning, most notably in MyKad scanning.
+
+- Fixed issues with Direct API processing of UIImages in some orientations
+
+- Fixed issues with scanning MRZ lines on arm7 devices.
+
 ## 1.2.0
 
 - Added recognition of Malysian ID cards (MyKads). To use MyKad recognition initialize the scanning library using `PPMyKadRecognizerSettings`

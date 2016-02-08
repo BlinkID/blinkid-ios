@@ -1,3 +1,15 @@
+## 1.3.0
+
+- Remove the old .embeddedframework package completely from your project
+
+- Add new .framework and .bundle package to your project. Verify that Framework search path really contains a path to the .framework folder.
+
+- replace all occurrences of `PPCoordinator`'s method `isScanningUnsupported:` to `isScanningUnsupportedForCameraType:error:`. If you use Back facing camera, use `PPCameraTypeBack`, otherwise `PPCameraTypeBack`.
+
+- Rename `PPMetadataSettings` properties 
+    - `successfulScanFrame` rename to `successfulFrame`
+    - `currentVideoFrame` rename to `currentFrame`
+
 ## 1.2.0
 
 - You can now enable Bitcode support in your project.

@@ -42,7 +42,7 @@
 
     /** 0. Check if scanning is supported */
 
-    if ([PPCoordinator isScanningUnsupported:error]) {
+    if ([PPCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
         return nil;
     }
 
@@ -51,6 +51,9 @@
 
     // Initialize the scanner settings object. This initialize settings with all default values.
     PPSettings *settings = [[PPSettings alloc] init];
+
+    // tell which metadata you want to receive. Metadata collection takes CPU time - so use it only if necessary!
+    settings.metadataSettings.dewarpedImage = YES; // get dewarped image of ID documents
 
 
     /** 2. Setup the license key */
@@ -65,6 +68,10 @@
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
         PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
+
+        // tell the library to get full image of the document. Setting this to YES makes sense just if
+        // settings.metadataSettings.dewarpedImage = YES, otherwise it wastes CPU time.
+        mrtdRecognizerSettings.dewarpFullDocument = NO;
 
         // Add MRTD Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
@@ -84,19 +91,12 @@
         // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
         PPUkdlRecognizerSettings *ukdlRecognizerSettings = [[PPUkdlRecognizerSettings alloc] init];
 
+        // If you want to save the image of the UKDL, set this to YES
+        ukdlRecognizerSettings.showFullDocument = YES;
+
         // Add UKDL Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:ukdlRecognizerSettings];
     }
-
-    { // Remove this if you're not using MyKad recognition
-
-        // To specify we want to perform MyKad (Malysian ID document) recognition, initialize the MyKad recognizer settings
-        PPMyKadRecognizerSettings *mykadRecognizerSettings = [[PPMyKadRecognizerSettings alloc] init];
-
-        // Add UKDL Recognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:mykadRecognizerSettings];
-    }
-
 
     /** 4. Initialize the Scanning Coordinator object */
 
@@ -174,6 +174,9 @@
             PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
             title = @"USDL";
             message = [usdlResult description];
+
+
+            NSLog(@"%@", [usdlResult getField:kPPCustomerFamilyName]);
         }
         if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
             PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
@@ -190,6 +193,29 @@
     // present the alert view with scanned results
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+}
+
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputMetadata:(PPMetadata *)metadata {
+
+    // Check if metadata obtained is image
+    if ([metadata isKindOfClass:[PPImageMetadata class]]) {
+
+        PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
+
+        if ([imageMetadata.name isEqualToString:@"UKDL"]) {
+            UIImage *ukdlImage = [imageMetadata image];
+            NSLog(@"We have dewarped and trimmed image of the UKDL, with size (%@, %@)", @(ukdlImage.size.width), @(ukdlImage.size.height));
+        } else if ([imageMetadata.name isEqualToString:@"MRTD"]) {
+            UIImage *mrtdImage = [imageMetadata image];
+            NSLog(@"We have dewarped and trimmed image of the Machine readable travel document, with size (%@, %@)", @(mrtdImage.size.width), @(mrtdImage.size.height));
+        } else if ([imageMetadata.name isEqualToString:@"MyKad"]) {
+            UIImage *myKadImage = [imageMetadata image];
+            NSLog(@"We have dewarped and trimmed image of the MyKad, with size (%@, %@)", @(myKadImage.size.width), @(myKadImage.size.height));
+        } else {
+            UIImage *image = [imageMetadata image];
+            NSLog(@"We have image %@ with size (%@, %@)", metadata.name, @(image.size.width), @(image.size.height));
+        }
+    }
 }
 
 // dismiss the scanning view controller when user presses OK.

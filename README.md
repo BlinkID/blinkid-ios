@@ -37,8 +37,8 @@ pod try PPBlinkID
 #### Podfile
 
 ```ruby
-platform :ios, '6.0'
-pod 'PPBlinkID', '~> 1.2.0'
+platform :ios, '7.0'
+pod 'PPBlinkID', '~> 1.3.0'
 ```
 
 ## Requirements
@@ -50,6 +50,8 @@ SDK performs significantly better when the images obtained from the camera are f
 ## Important documents:
 
 ### ["Getting started" guide](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started)
+
+## For Swift version of the guide see ["Getting started in Swift"](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started-in-Swift)
 
 See the steps for integrating the SDK in your apps. 
 

@@ -11,18 +11,6 @@
 		1807C12F1AEF789700469E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807C12E1AEF789700469E61 /* AppDelegate.m */; };
 		1807C1321AEF789700469E61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807C1311AEF789700469E61 /* ViewController.m */; };
 		1807C1371AEF789700469E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1361AEF789700469E61 /* Images.xcassets */; };
-		1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1807C1511AEF792600469E61 /* MicroBlink.framework */; };
-		1807C15F1AEF792600469E61 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1531AEF792600469E61 /* en.strings */; };
-		1807C1601AEF792600469E61 /* ocr_model.zzip in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1541AEF792600469E61 /* ocr_model.zzip */; };
-		1807C1611AEF792600469E61 /* PPbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1551AEF792600469E61 /* PPbeep.wav */; };
-		1807C1621AEF792600469E61 /* torchoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1561AEF792600469E61 /* torchoff.png */; };
-		1807C1631AEF792600469E61 /* torchoff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1571AEF792600469E61 /* torchoff@2x.png */; };
-		1807C1641AEF792600469E61 /* torchoff_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1581AEF792600469E61 /* torchoff_pressed.png */; };
-		1807C1651AEF792600469E61 /* torchoff_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */; };
-		1807C1661AEF792600469E61 /* torchon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15A1AEF792600469E61 /* torchon.png */; };
-		1807C1671AEF792600469E61 /* torchon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15B1AEF792600469E61 /* torchon@2x.png */; };
-		1807C1681AEF792600469E61 /* torchon_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15C1AEF792600469E61 /* torchon_pressed.png */; };
-		1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */; };
 		1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1331AEF789700469E61 /* Main.storyboard */; };
 		1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1807C1381AEF789700469E61 /* LaunchScreen.xib */; };
 		1809F2301C2312FA00DEE72E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F22F1C2312FA00DEE72E /* Accelerate.framework */; };
@@ -30,7 +18,10 @@
 		1809F2341C23130000DEE72E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2331C23130000DEE72E /* AssetsLibrary.framework */; };
 		1809F2361C23130400DEE72E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2351C23130400DEE72E /* CoreMedia.framework */; };
 		1809F2381C23130700DEE72E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809F2371C23130700DEE72E /* AudioToolbox.framework */; };
+		18A968E81C44E622003A408A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A968E71C44E622003A408A /* MicroBlink.bundle */; };
 		18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ADB7F71BEB396F00AB0624 /* libc++.tbd */; };
+		18D0E8541C39A0DA00E47EF5 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8521C39A0DA00E47EF5 /* MicroBlink.framework */; };
+		18D0E8571C39A0E800E47EF5 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8561C39A0E800E47EF5 /* libiconv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,24 +35,15 @@
 		1807C1341AEF789700469E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1807C1361AEF789700469E61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1807C1391AEF789700469E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1807C1511AEF792600469E61 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
-		1807C1531AEF792600469E61 /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
-		1807C1541AEF792600469E61 /* ocr_model.zzip */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocr_model.zzip; sourceTree = "<group>"; };
-		1807C1551AEF792600469E61 /* PPbeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PPbeep.wav; sourceTree = "<group>"; };
-		1807C1561AEF792600469E61 /* torchoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchoff.png; sourceTree = "<group>"; };
-		1807C1571AEF792600469E61 /* torchoff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchoff@2x.png"; sourceTree = "<group>"; };
-		1807C1581AEF792600469E61 /* torchoff_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchoff_pressed.png; sourceTree = "<group>"; };
-		1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchoff_pressed@2x.png"; sourceTree = "<group>"; };
-		1807C15A1AEF792600469E61 /* torchon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon.png; sourceTree = "<group>"; };
-		1807C15B1AEF792600469E61 /* torchon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon@2x.png"; sourceTree = "<group>"; };
-		1807C15C1AEF792600469E61 /* torchon_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torchon_pressed.png; sourceTree = "<group>"; };
-		1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "torchon_pressed@2x.png"; sourceTree = "<group>"; };
 		1809F22F1C2312FA00DEE72E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1809F2311C2312FD00DEE72E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1809F2331C23130000DEE72E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1809F2351C23130400DEE72E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1809F2371C23130700DEE72E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		18A968E71C44E622003A408A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		18ADB7F71BEB396F00AB0624 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18D0E8521C39A0DA00E47EF5 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		18D0E8561C39A0E800E47EF5 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +51,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1807C15E1AEF792600469E61 /* MicroBlink.framework in Frameworks */,
+				18D0E8541C39A0DA00E47EF5 /* MicroBlink.framework in Frameworks */,
 				1809F2301C2312FA00DEE72E /* Accelerate.framework in Frameworks */,
 				1809F2381C23130700DEE72E /* AudioToolbox.framework in Frameworks */,
 				1809F2341C23130000DEE72E /* AssetsLibrary.framework in Frameworks */,
 				1809F2321C2312FD00DEE72E /* AVFoundation.framework in Frameworks */,
 				1809F2361C23130400DEE72E /* CoreMedia.framework in Frameworks */,
 				18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */,
+				18D0E8571C39A0E800E47EF5 /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +70,6 @@
 			children = (
 				1807C1281AEF789700469E61 /* NoCamera-sample */,
 				1807C14F1AEF791900469E61 /* Frameworks */,
-				18ADB7F71BEB396F00AB0624 /* libc++.tbd */,
 				1807C1271AEF789700469E61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,42 +109,17 @@
 		1807C14F1AEF791900469E61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */,
+				18D0E8521C39A0DA00E47EF5 /* MicroBlink.framework */,
+				18A968E71C44E622003A408A /* MicroBlink.bundle */,
 				1809F22F1C2312FA00DEE72E /* Accelerate.framework */,
 				1809F2371C23130700DEE72E /* AudioToolbox.framework */,
 				1809F2331C23130000DEE72E /* AssetsLibrary.framework */,
 				1809F2311C2312FD00DEE72E /* AVFoundation.framework */,
 				1809F2351C23130400DEE72E /* CoreMedia.framework */,
+				18ADB7F71BEB396F00AB0624 /* libc++.tbd */,
+				18D0E8561C39A0E800E47EF5 /* libiconv.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1807C1501AEF792600469E61 /* MicroBlink.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				1807C1511AEF792600469E61 /* MicroBlink.framework */,
-				1807C1521AEF792600469E61 /* Resources */,
-			);
-			name = MicroBlink.embeddedframework;
-			path = ../../MicroBlink.embeddedframework;
-			sourceTree = "<group>";
-		};
-		1807C1521AEF792600469E61 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1807C1531AEF792600469E61 /* en.strings */,
-				1807C1541AEF792600469E61 /* ocr_model.zzip */,
-				1807C1551AEF792600469E61 /* PPbeep.wav */,
-				1807C1561AEF792600469E61 /* torchoff.png */,
-				1807C1571AEF792600469E61 /* torchoff@2x.png */,
-				1807C1581AEF792600469E61 /* torchoff_pressed.png */,
-				1807C1591AEF792600469E61 /* torchoff_pressed@2x.png */,
-				1807C15A1AEF792600469E61 /* torchon.png */,
-				1807C15B1AEF792600469E61 /* torchon@2x.png */,
-				1807C15C1AEF792600469E61 /* torchon_pressed.png */,
-				1807C15D1AEF792600469E61 /* torchon_pressed@2x.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,20 +179,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1807C1681AEF792600469E61 /* torchon_pressed.png in Resources */,
-				1807C1671AEF792600469E61 /* torchon@2x.png in Resources */,
-				1807C1601AEF792600469E61 /* ocr_model.zzip in Resources */,
-				1807C1621AEF792600469E61 /* torchoff.png in Resources */,
-				1807C15F1AEF792600469E61 /* en.strings in Resources */,
-				1807C1611AEF792600469E61 /* PPbeep.wav in Resources */,
-				1807C1651AEF792600469E61 /* torchoff_pressed@2x.png in Resources */,
 				1807C16C1AEF79BA00469E61 /* Main.storyboard in Resources */,
-				1807C1691AEF792600469E61 /* torchon_pressed@2x.png in Resources */,
 				1807C1371AEF789700469E61 /* Images.xcassets in Resources */,
 				1807C16D1AEF79BE00469E61 /* LaunchScreen.xib in Resources */,
-				1807C1631AEF792600469E61 /* torchoff@2x.png in Resources */,
-				1807C1661AEF792600469E61 /* torchon.png in Resources */,
-				1807C1641AEF792600469E61 /* torchoff_pressed.png in Resources */,
+				18A968E81C44E622003A408A /* MicroBlink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +243,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = ../../MicroBlink.embeddedframework;
+				FRAMEWORK_SEARCH_PATHS = ../../;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -342,7 +289,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = ../../MicroBlink.embeddedframework;
+				FRAMEWORK_SEARCH_PATHS = ../../;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
