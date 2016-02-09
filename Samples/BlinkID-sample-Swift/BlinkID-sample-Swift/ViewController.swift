@@ -11,9 +11,6 @@ import MicroBlink
 
 class ViewController: UIViewController, PPScanDelegate {
 
-    var rawOcrParserId : String = "Raw ocr"
-    var priceParserId : String = "Price"
-
     func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
 
         /** 0. Check if scanning is supported */

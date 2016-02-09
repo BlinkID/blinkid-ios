@@ -21,7 +21,7 @@
 		3139C87E1C245950005AC32C /* PPCameraOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C87D1C245950005AC32C /* PPCameraOverlayViewController.swift */; };
 		3139C8801C2838B3005AC32C /* PPCameraOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3139C87F1C2838B3005AC32C /* PPCameraOverlayViewController.xib */; };
 		315881721C3C16D50083850C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315881701C3C16D50083850C /* MicroBlink.framework */; };
-		315881731C3C16D50083850C /* MicroBlinkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 315881711C3C16D50083850C /* MicroBlinkResources.bundle */; };
+		31F013641C69EDFC00F6DBCD /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		3139C87F1C2838B3005AC32C /* PPCameraOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPCameraOverlayViewController.xib; sourceTree = "<group>"; };
 		3139CA9B1C3555B2005AC32C /* pdf417-sample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pdf417-sample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		315881701C3C16D50083850C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
-		315881711C3C16D50083850C /* MicroBlinkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlinkResources.bundle; path = ../../MicroBlinkResources.bundle; sourceTree = "<group>"; };
+		31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 		3139C82C1C22B30C005AC32C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */,
 				315881701C3C16D50083850C /* MicroBlink.framework */,
-				315881711C3C16D50083850C /* MicroBlinkResources.bundle */,
 				3139C8371C22B33E005AC32C /* libiconv.tbd */,
 				3139C8351C22B338005AC32C /* libc++.tbd */,
 				3139C8331C22B333005AC32C /* AudioToolbox.framework */,
@@ -185,8 +185,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F013641C69EDFC00F6DBCD /* MicroBlink.bundle in Resources */,
 				3139C8251C22B2AC005AC32C /* LaunchScreen.storyboard in Resources */,
-				315881731C3C16D50083850C /* MicroBlinkResources.bundle in Resources */,
 				3139C8221C22B2AC005AC32C /* Assets.xcassets in Resources */,
 				3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */,
 				3139C8801C2838B3005AC32C /* PPCameraOverlayViewController.xib in Resources */,

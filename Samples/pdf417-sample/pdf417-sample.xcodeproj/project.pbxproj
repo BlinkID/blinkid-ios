@@ -22,7 +22,7 @@
 		3158810F1C3C0C750083850C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158810E1C3C0C750083850C /* AudioToolbox.framework */; };
 		315881111C3C0C7C0083850C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315881101C3C0C7C0083850C /* AVFoundation.framework */; };
 		315881501C3C150D0083850C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158814E1C3C150D0083850C /* MicroBlink.framework */; };
-		315881511C3C150D0083850C /* MicroBlinkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3158814F1C3C150D0083850C /* MicroBlinkResources.bundle */; };
+		31F013661C69EED800F6DBCD /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31F013651C69EED800F6DBCD /* MicroBlink.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,7 @@
 		3158810E1C3C0C750083850C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		315881101C3C0C7C0083850C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3158814E1C3C150D0083850C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
-		3158814F1C3C150D0083850C /* MicroBlinkResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlinkResources.bundle; path = ../../MicroBlinkResources.bundle; sourceTree = "<group>"; };
+		31F013651C69EED800F6DBCD /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 		315881051C3C0C400083850C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31F013651C69EED800F6DBCD /* MicroBlink.bundle */,
 				3158814E1C3C150D0083850C /* MicroBlink.framework */,
-				3158814F1C3C150D0083850C /* MicroBlinkResources.bundle */,
 				315881101C3C0C7C0083850C /* AVFoundation.framework */,
 				3158810E1C3C0C750083850C /* AudioToolbox.framework */,
 				3158810C1C3C0C6C0083850C /* CoreMedia.framework */,
@@ -199,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F013661C69EED800F6DBCD /* MicroBlink.bundle in Resources */,
 				315881041C3C0C1E0083850C /* PPCameraOverlayViewController.xib in Resources */,
-				315881511C3C150D0083850C /* MicroBlinkResources.bundle in Resources */,
 				315880F71C3C0B990083850C /* LaunchScreen.storyboard in Resources */,
 				315880F41C3C0B990083850C /* Assets.xcassets in Resources */,
 				315880F21C3C0B990083850C /* Main.storyboard in Resources */,
