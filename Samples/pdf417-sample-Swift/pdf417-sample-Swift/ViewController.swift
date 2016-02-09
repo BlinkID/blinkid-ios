@@ -21,7 +21,7 @@ class ViewController: UIViewController, PPScanDelegate {
 
         /** 0. Check if scanning is supported */
 
-        if (PPCoordinator.isScanningUnsupported(error)) {
+        if PPCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error) {
             return nil;
         }
 

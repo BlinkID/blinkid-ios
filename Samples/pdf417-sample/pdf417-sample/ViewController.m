@@ -40,7 +40,7 @@
 
     /** 0. Check if scanning is supported */
 
-    if ([PPCoordinator isScanningUnsupported:error]) {
+    if ([PPCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:nil]) {
         return nil;
     }
 
