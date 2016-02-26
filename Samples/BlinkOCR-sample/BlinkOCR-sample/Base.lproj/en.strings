@@ -1,0 +1,11 @@
+/* 
+  en.strings
+  BlinkOCR-sample
+
+  Created by Jura on 12/03/15.
+  Copyright (c) 2015 MicroBlink. All rights reserved.
+*/
+
+"photopay_close" = "Cancel";
+"photopay_light_on" = "Light";
+"photopay_light_off" = "Light";
