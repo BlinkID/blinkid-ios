@@ -12,10 +12,6 @@
 
 @interface ViewController () <PPScanDelegate>
 
-@property (nonatomic, strong) UIViewController<PPScanningViewController>* cameraViewController;
-
-@property (nonatomic, strong) PPUsdlRecognizerResult *usdlRecognizerResult;
-
 @end
 
 @implementation ViewController
@@ -33,6 +29,7 @@
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
+ * Modify this method to include only those recognizer settings you need. This will give you optimal performance
  *
  *  @param error Error object, if scanning isn't supported
  *
@@ -62,12 +59,17 @@
     settings.licenseSettings.licenseKey = @"NO3GLCN2-65O6NDWH-KFJ7IEAD-747A4K4K-XVTN2CYR-IXRWTKNZ-7JLWRKSV-BDQWXFQG"; // Valid temporarily
 
 
-    /** 3. Set up what is being scanned. See detailed guides for specific use cases. */
+    /**
+     * 3. Set up what is being scanned. See detailed guides for specific use cases.
+     * Remove undesired recognizers (added below) for optimal performance.
+     */
 
     { // Remove this if you're not using MRTD recognition
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
         PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
+
+        /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
         // tell the library to get full image of the document. Setting this to YES makes sense just if
         // settings.metadataSettings.dewarpedImage = YES, otherwise it wastes CPU time.
@@ -82,6 +84,8 @@
         // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
         PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
 
+        /** You can modify the properties of usdlRecognizerSettings to suit your use-case */
+
         // Add USDL Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
     }
@@ -91,11 +95,24 @@
         // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
         PPUkdlRecognizerSettings *ukdlRecognizerSettings = [[PPUkdlRecognizerSettings alloc] init];
 
+        /** You can modify the properties of ukdlRecognizerSettings to suit your use-case */
+
         // If you want to save the image of the UKDL, set this to YES
         ukdlRecognizerSettings.showFullDocument = YES;
 
         // Add UKDL Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:ukdlRecognizerSettings];
+    }
+
+    { // Remove this if you're not using MyKad recognition
+
+        // To specify we want to perform MyKad recognition, initialize the MyKad recognizer settings
+        PPMyKadRecognizerSettings *myKadRecognizerSettings = [[PPMyKadRecognizerSettings alloc] init];
+
+        /** You can modify the properties of myKadRecognizerSettings to suit your use-case */
+
+        // Add UKDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:myKadRecognizerSettings];
     }
 
     /** 4. Initialize the Scanning Coordinator object */
@@ -123,14 +140,14 @@
         return;
     }
 
-    /** Allocate and present the scanning view controller */
+    /** Create new scanning view controller */
     UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self];
 
     // allow rotation if VC is displayed as a modal view controller
     scanningViewController.autorotate = YES;
     scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAll;
 
-    /** You can use other presentation methods as well */
+    /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
     [self presentViewController:scanningViewController animated:YES completion:nil];
 }
 
@@ -154,7 +171,11 @@
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
               didOutputResults:(NSArray *)results {
 
-    // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+    /**
+     * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+     * Each member of results array will represent one result for a single processed image
+     * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+     */
 
     // first, pause scanning until we process all the results
     [scanningViewController pauseScanning];
@@ -166,24 +187,25 @@
     for (PPRecognizerResult* result in results) {
 
         if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
+            /** MRTD was detected */
             PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
             title = @"MRTD";
             message = [mrtdResult description];
         }
         if ([result isKindOfClass:[PPUsdlRecognizerResult class]]) {
+            /** US drivers license was detected */
             PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
             title = @"USDL";
             message = [usdlResult description];
-
-
-            NSLog(@"%@", [usdlResult getField:kPPCustomerFamilyName]);
         }
         if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+            /** UK drivers license was detected */
             PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
             title = @"UKDL";
             message = [ukdlResult description];
         }
         if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
+            /** MyKad was detected */
             PPMyKadRecognizerResult *myKadResult = (PPMyKadRecognizerResult *)result;
             title = @"MyKad";
             message = [myKadResult description];
@@ -197,7 +219,7 @@
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputMetadata:(PPMetadata *)metadata {
 
-    // Check if metadata obtained is image
+    // Check if metadata obtained is image. You can set what type of image is outputed by setting different properties of PPMetadataSettings (currently, dewarpedImage is set at line 57)
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
 
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
