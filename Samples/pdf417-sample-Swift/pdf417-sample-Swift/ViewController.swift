@@ -10,13 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, PPScanDelegate {
 
-    var rawOcrParserId: String = "Raw ocr"
-    var priceParserId: String = "Price"
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    /**
+     * Method allocates and initializes the Scanning coordinator object.
+     * Coordinator is initialized with settings for scanning
+     * Modify this method to include only those recognizer settings you need. This will give you optimal performance
+     *
+     *  @param error Error object, if scanning isn't supported
+     *
+     *  @return initialized coordinator
+     */
     private func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
 
         /** 0. Check if scanning is supported */
@@ -40,21 +46,32 @@ class ViewController: UIViewController, PPScanDelegate {
 
         /**
          * 3. Set up what is being scanned. See detailed guides for specific use cases.
-         * Here's an example for initializing PDF417 scanning
+         * Remove undesired recognizers (added below) for optimal performance.
          */
 
-        // To specify we want to perform PDF417 recognition, initialize the PDF417 recognizer settings
-        let ocrRecognizerSettings: PPPdf417RecognizerSettings = PPPdf417RecognizerSettings()
+        // Remove this code if you don't need to scan Pdf417
+        do {
+            // To specify we want to perform PDF417 recognition, initialize the PDF417 recognizer settings
+            let ocrRecognizerSettings: PPPdf417RecognizerSettings = PPPdf417RecognizerSettings()
 
-        // Add PDF417 Recognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(ocrRecognizerSettings)
+            /** You can modify the properties of pdf417RecognizerSettings to suit your use-case */
 
-        // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
-        let zxingRecognizerSettings: PPZXingRecognizerSettings = PPZXingRecognizerSettings()
-        zxingRecognizerSettings.scanQR=true // we use just QR code
+            // Add PDF417 Recognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(ocrRecognizerSettings)
+        }
 
-        // Add ZXingRecognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(zxingRecognizerSettings)
+        // Remove this code if you don't need to scan QR codes
+        do {
+            // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
+            let zxingRecognizerSettings: PPZXingRecognizerSettings = PPZXingRecognizerSettings()
+
+
+            /** You can modify the properties of zxingRecognizerSettings to suit your use-case (i.e. add other types of barcodes like QR, Aztec or EAN)*/
+            zxingRecognizerSettings.scanQR=true // we use just QR code
+
+            // Add ZXingRecognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(zxingRecognizerSettings)
+        }
 
 
         /** 4. Initialize the Scanning Coordinator object */
@@ -77,10 +94,10 @@ class ViewController: UIViewController, PPScanDelegate {
             return
         }
 
-        /** Allocate and present the scanning view controller */
+        /** Create new scanning view controller */
         let scanningViewController: UIViewController = coordinator!.cameraViewControllerWithDelegate(self)
 
-        /** You can use other presentation methods as well */
+        /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
         self.presentViewController(scanningViewController, animated: true, completion: nil)
     }
 
@@ -94,11 +111,12 @@ class ViewController: UIViewController, PPScanDelegate {
             return
         }
 
-        /** Present the scanning view controller */
+        /** Init scanning view controller custom overlay */
         let overlay: PPCameraOverlayViewController = PPCameraOverlayViewController(nibName: "PPCameraOverlayViewController",bundle: nil)
+        /** Create new scanning view controller with desired custom overlay */
         let scanningViewController: UIViewController = coordinator!.cameraViewControllerWithDelegate(self,overlayViewController: overlay)
 
-        /** You can use other presentation methods as well */
+        /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
         self.presentViewController(scanningViewController, animated: true, completion: nil)
 
     }
@@ -121,7 +139,11 @@ class ViewController: UIViewController, PPScanDelegate {
 
         let scanConroller: PPScanningViewController = scanningViewController as! PPScanningViewController
 
-        // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+        /**
+         * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+         * Each member of results array will represent one result for a single processed image
+         * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+         */
 
         // first, pause scanning until we process all the results
         scanConroller.pauseScanning()
@@ -132,15 +154,25 @@ class ViewController: UIViewController, PPScanDelegate {
 
         // Collect data from the result
         for result in results {
-            if(result.isKindOfClass(PPPdf417RecognizerResult)) {
-                let pdf417Result: PPPdf417RecognizerResult = result as! PPPdf417RecognizerResult
-                title = "PDF417"
-                message = pdf417Result.stringUsingGuessedEncoding()
-            }
-            if(result.isKindOfClass(PPZXingRecognizerSettings)) {
-                let zxingResult: PPZXingRecognizerResult = result as! PPZXingRecognizerResult
+            if(result.isKindOfClass(PPZXingRecognizerResult)) {
+                /** One of QR code was detected */
+
+                let zxingResult = result as! PPZXingRecognizerResult
+
                 title = "QR code"
-                message=zxingResult.stringUsingGuessedEncoding()
+
+                // Save the string representation of the code
+                message = zxingResult.stringUsingGuessedEncoding()
+            }
+            if(result.isKindOfClass(PPPdf417RecognizerResult)) {
+                /** Pdf417 code was detected */
+
+                let pdf417Result = result as! PPPdf417RecognizerResult
+
+                title = "PDF417"
+
+                // Save the string representation of the code
+                message = pdf417Result.stringUsingGuessedEncoding()
             }
         }
         // present the alert view with scanned results
