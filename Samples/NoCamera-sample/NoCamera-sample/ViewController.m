@@ -32,6 +32,7 @@
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
+ * Modify this method to include only those recognizer settings you need. This will give you optimal performance
  *
  *  @param error Error object, if scanning isn't supported
  *
@@ -53,21 +54,31 @@
 
     /**
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
-     * Here's an example for initializing MRTD and USDL scanning
+     * Remove undesired recognizers (added below) for optimal performance.
      */
 
-    // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-    PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
 
-    // Add MRTD Recognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
+    { // Remove this if you're not using MRTD recognition
 
-    // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
-    PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
+        // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
+        PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
 
-    // Add USDL Recognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
+        /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
+        // Add MRTD Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
+    }
+
+    { // Remove this if you're not using USDL recognition
+
+        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
+        PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
+
+        /** You can modify the properties of usdlRecognizerSettings to suit your use-case */
+
+        // Add USDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
+    }
 
     /** 4. Initialize the Scanning Coordinator object */
 
@@ -167,6 +178,7 @@
     if (CFStringCompare((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
         UIImage *originalImage = (UIImage *)[info objectForKey: UIImagePickerControllerOriginalImage];
 
+        // Process the selected image
         [self.coordinator processImage:originalImage
                         scanningRegion:CGRectMake(0.0, 0.0, 1.0, 1.0)
                               delegate:self];
@@ -193,7 +205,11 @@
 - (void)scanningViewController:(UIViewController<PPScanningViewController>*)scanningViewController
               didOutputResults:(NSArray*)results {
 
-    // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+    /**
+     * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+     * Each member of results array will represent one result for a single processed image
+     * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+     */
 
     // first, pause scanning until we process all the results
     [scanningViewController pauseScanning];
@@ -205,16 +221,30 @@
     for (PPRecognizerResult* result in results) {
 
         if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
+            /** MRTD was detected */
             PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
             title = @"MRTD";
             message = [mrtdResult description];
         }
         if ([result isKindOfClass:[PPUsdlRecognizerResult class]]) {
+            /** USDL was detected */
             PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
             title = @"USDL";
             message = [usdlResult description];
         }
-    };
+        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
+            /** UKDL was detected */
+            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
+            title = @"UKDL";
+            message = [ukdlResult description];
+        }
+        if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
+            /** MyKad was detected */
+            PPMyKadRecognizerResult* myKadResult = (PPMyKadRecognizerResult*)result;
+            title = @"MyKad";
+            message = [myKadResult description];
+        }
+    }
 
     // present the alert view with scanned results
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
