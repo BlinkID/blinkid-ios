@@ -31,6 +31,7 @@
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
+ * Modify this method to include only those recognizer settings you need. This will give you optimal performance
  *
  *  @param error Error object, if scanning isn't supported
  *
@@ -59,23 +60,33 @@
 
     /**
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
-     * Here's an example for initializing PDF417 scanning
+     * Remove undesired recognizers (added below) for optimal performance.
      */
 
-    // To specify we want to perform PDF417 recognition, initialize the PDF417 recognizer settings
-    PPPdf417RecognizerSettings *pdf417RecognizerSettings = [[PPPdf417RecognizerSettings alloc] init];
 
-    // Add PDF417 Recognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:pdf417RecognizerSettings];
+    // Remove this code if you don't need to scan Pdf417
+    {
+        // To specify we want to perform PDF417 recognition, initialize the PDF417 recognizer settings
+        PPPdf417RecognizerSettings *pdf417RecognizerSettings = [[PPPdf417RecognizerSettings alloc] init];
 
-    // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
-    PPZXingRecognizerSettings *zxingRecognizerSettings = [[PPZXingRecognizerSettings alloc] init];
-    zxingRecognizerSettings.scanQR = YES; // we use just QR code
+        /** You can modify the properties of pdf417RecognizerSettings to suit your use-case */
 
-    // Add ZXingRecognizer setting to a list of used recognizer settings
-    [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
+        // Add PDF417 Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:pdf417RecognizerSettings];
+    }
 
-    /** 4. Initialize the Scanning Coordinator object */
+    // Remove this code if you don't need to scan QR codes
+    {
+        // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
+        PPZXingRecognizerSettings *zxingRecognizerSettings = [[PPZXingRecognizerSettings alloc] init];
+
+        /** You can modify the properties of zxingRecognizerSettings to suit your use-case (i.e. add other types of barcodes like QR, Aztec or EAN)*/
+        zxingRecognizerSettings.scanQR = YES; // we use just QR code
+
+
+        // Add ZXingRecognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
+    }
 
     PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings];
 
@@ -100,10 +111,14 @@
         return;
     }
 
-    /** Allocate and present the scanning view controller */
+    /** Create new scanning view controller */
     UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self];
 
-    /** You can use other presentation methods as well */
+    // Allow scanning view controller to autorotate
+    scanningViewController.autorotate = YES;
+    scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAllButUpsideDown;
+
+    /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
     [self presentViewController:scanningViewController animated:YES completion:nil];
 }
 
@@ -127,8 +142,10 @@
 
     /** Present the scanning view controller */
 
+    /** Init scanning view controller custom overlay */
     PPCameraOverlayViewController *overlayVC = [[PPCameraOverlayViewController alloc] init];
 
+    /** Create new scanning view controller with desired custom overlay */
     UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self
                                                                                                  overlayViewController:overlayVC];
 
@@ -154,6 +171,12 @@
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
               didOutputResults:(NSArray *)results {
 
+    /**
+     * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+     * Each member of results array will represent one result for a single processed image
+     * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+     */
+
     // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
 
     // first, pause scanning until we process all the results
@@ -164,19 +187,27 @@
 
     // Collect data from the result
     for (PPRecognizerResult* result in results) {
-
-        if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
-            PPPdf417RecognizerResult *pdf417Result = (PPPdf417RecognizerResult *)result;
-            title = @"PDF417";
-            message = [pdf417Result stringUsingGuessedEncoding];
-        }
         if ([result isKindOfClass:[PPZXingRecognizerResult class]]) {
+            /** One of ZXing codes was detected */
+
             PPZXingRecognizerResult *zxingResult = (PPZXingRecognizerResult *)result;
+
             title = @"QR code";
+
+            // Save the string representation of the code
             message = [zxingResult stringUsingGuessedEncoding];
         }
+        if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
+            /** Pdf417 code was detected */
 
-    };
+            PPPdf417RecognizerResult *pdf417Result = (PPPdf417RecognizerResult *)result;
+
+            title = @"PDF417";
+
+            // Save the string representation of the code
+            message = [pdf417Result stringUsingGuessedEncoding];
+        }
+    }
 
     // present the alert view with scanned results
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
