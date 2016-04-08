@@ -232,11 +232,11 @@
             title = @"USDL";
             message = [usdlResult description];
         }
-        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
-            /** UKDL was detected */
-            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
-            title = @"UKDL";
-            message = [ukdlResult description];
+        if ([result isKindOfClass:[PPEudlRecognizerResult class]]) {
+            /** EUDL was detected */
+            PPEudlRecognizerResult* eudlResult = (PPEudlRecognizerResult*)result;
+            title = @"EUDL";
+            message = [eudlResult description];
         }
         if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
             /** MyKad was detected */

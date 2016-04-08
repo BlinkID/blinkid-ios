@@ -76,15 +76,15 @@ class ViewController: UIViewController, PPScanDelegate {
         do { // Remove this if you're not using UKDL recognition
 
             // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
-            let ukdlRecognizerSettings = PPUkdlRecognizerSettings()
+            let eudlRecognizerSettings = PPEudlRecognizerSettings()
 
             /** You can modify the properties of ukdlRecognizerSettings to suit your use-case */
 
             // If you want to save the image of the UKDL, set this to YES
-            ukdlRecognizerSettings.showFullDocument = true;
+            eudlRecognizerSettings.showFullDocument = true;
 
             // Add UKDL Recognizer setting to a list of used recognizer settings
-            settings.scanSettings.addRecognizerSettings(ukdlRecognizerSettings)
+            settings.scanSettings.addRecognizerSettings(eudlRecognizerSettings)
         }
 
         do { // Remove this if you're not using MyKad recognition
@@ -157,25 +157,25 @@ class ViewController: UIViewController, PPScanDelegate {
 
         // Collect data from the result
         for result in results {
-            if(result.isKindOfClass(PPMrtdRecognizerResult)) {
+            if (result.isKindOfClass(PPMrtdRecognizerResult)) {
                 /** MRTD was detected */
                 let mrtdResult = result as! PPMrtdRecognizerResult
                 title = "MRTD"
                 message = mrtdResult.description
             }
-            if(result.isKindOfClass(PPUsdlRecognizerResult)) {
+            if (result.isKindOfClass(PPUsdlRecognizerResult)) {
                 /** US drivers license was detected */
                 let usdlResult = result as! PPUsdlRecognizerResult
                 title = "USDL"
                 message = usdlResult.description
             }
-            if(result.isKindOfClass(PPUkdlRecognizerResult)) {
-                /** UK drivers license was detected */
-                let ukdlResult = result as! PPUkdlRecognizerResult
-                title = "UKDL"
-                message = ukdlResult.description
+            if (result.isKindOfClass(PPEudlRecognizerResult)) {
+                /** EU drivers license was detected */
+                let eudlResult = result as! PPEudlRecognizerResult
+                title = "EUDL"
+                message = eudlResult.description
             }
-            if(result.isKindOfClass(PPMyKadRecognizerResult)) {
+            if (result.isKindOfClass(PPMyKadRecognizerResult)) {
                 /** MyKad was detected */
                 let myKadResult = result as! PPMyKadRecognizerResult
                 title = "MyKad"

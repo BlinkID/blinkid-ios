@@ -76,7 +76,7 @@
     PPDocumentSpecification *specification = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
 
     PPDocumentDecodingInfo *documentInfo = [[PPDocumentDecodingInfo alloc] init];
-    [documentInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700]];
+    [documentInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
     [specification setDecodingInfo:documentInfo];
 
     [documentDetectorSettings setDocumentSpecifications:@[specification]];
@@ -85,7 +85,7 @@
     // MRTD detector
 
     PPDocumentDecodingInfo *mrtdInfo = [[PPDocumentDecodingInfo alloc] init];
-    [mrtdInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700]];
+    [mrtdInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"MRTD"]];
 
     PPMrtdDetectorSettings *mrtdDetectorSettings = [[PPMrtdDetectorSettings alloc] initWithDocumentDecodingInfo:mrtdInfo];
 

@@ -90,29 +90,18 @@
         [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
     }
 
-    { // Remove this if you're not using UKDL recognition
+    { // Remove this if you're not using EUDL recognition
 
-        // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
-        PPUkdlRecognizerSettings *ukdlRecognizerSettings = [[PPUkdlRecognizerSettings alloc] init];
+        // To specify we want to perform EUDL (EU Driver's license) recognition, initialize the EUDL recognizer settings
+        PPEudlRecognizerSettings *eudlRecognizerSettings = [[PPEudlRecognizerSettings alloc] initWithEudlCountry:PPEudlCountryUnitedKingdom];
 
-        /** You can modify the properties of ukdlRecognizerSettings to suit your use-case */
+        /** You can modify the properties of eudlRecognizerSettings to suit your use-case */
 
-        // If you want to save the image of the UKDL, set this to YES
-        ukdlRecognizerSettings.showFullDocument = YES;
+        // If you want to save the image of the EUDL, set this to YES
+        eudlRecognizerSettings.showFullDocument = YES;
 
-        // Add UKDL Recognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:ukdlRecognizerSettings];
-    }
-
-    { // Remove this if you're not using MyKad recognition
-
-        // To specify we want to perform MyKad recognition, initialize the MyKad recognizer settings
-        PPMyKadRecognizerSettings *myKadRecognizerSettings = [[PPMyKadRecognizerSettings alloc] init];
-
-        /** You can modify the properties of myKadRecognizerSettings to suit your use-case */
-
-        // Add UKDL Recognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:myKadRecognizerSettings];
+        // Add EUDL Recognizer setting to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:eudlRecognizerSettings];
     }
 
     /** 4. Initialize the Scanning Coordinator object */
@@ -198,11 +187,11 @@
             title = @"USDL";
             message = [usdlResult description];
         }
-        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
-            /** UK drivers license was detected */
-            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
-            title = @"UKDL";
-            message = [ukdlResult description];
+        if ([result isKindOfClass:[PPEudlRecognizerResult class]]) {
+            /** EU drivers license was detected */
+            PPEudlRecognizerResult* eudlResult = (PPEudlRecognizerResult*)result;
+            title = @"EUDL";
+            message = [eudlResult description];
         }
         if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
             /** MyKad was detected */
@@ -224,9 +213,9 @@
 
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
 
-        if ([imageMetadata.name isEqualToString:@"UKDL"]) {
-            UIImage *ukdlImage = [imageMetadata image];
-            NSLog(@"We have dewarped and trimmed image of the UKDL, with size (%@, %@)", @(ukdlImage.size.width), @(ukdlImage.size.height));
+        if ([imageMetadata.name isEqualToString:@"EUDL"]) {
+            UIImage *eudlImage = [imageMetadata image];
+            NSLog(@"We have dewarped and trimmed image of the EUDL, with size (%@, %@)", @(eudlImage.size.width), @(eudlImage.size.height));
         } else if ([imageMetadata.name isEqualToString:@"MRTD"]) {
             UIImage *mrtdImage = [imageMetadata image];
             NSLog(@"We have dewarped and trimmed image of the Machine readable travel document, with size (%@, %@)", @(mrtdImage.size.width), @(mrtdImage.size.height));
