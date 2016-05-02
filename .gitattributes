@@ -1,0 +1,2 @@
+MicroBlink.framework/**/* filter=lfs diff=lfs merge=lfs -text
+MicroBlink.bundle/**/* filter=lfs diff=lfs merge=lfs -text

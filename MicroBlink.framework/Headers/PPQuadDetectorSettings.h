@@ -1,27 +1,3 @@
-//
-//  PPQuadDetectorSettings.h
-//  BlinkIdFramework
-//
-//  Created by Jura on 04/02/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
-//
-
-#import "PPDetectorSettings.h"
-
-#import "PPDocumentDecodingInfo.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/**
- * Settings for Quad detectors
- */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadDetectorSettings : PPDetectorSettings
-
-/**
- * Each quad detector has decoding information which defines the regios of the image which will be decoded
- */
-@property (nonatomic) PPDocumentDecodingInfo *info;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:978275afd647b9b4eb8734f43944f90449a0d18b477fd32b6a0872533b62a75d
+size 564

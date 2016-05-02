@@ -1,3 +1,33 @@
+## 1.4.0
+
+- iOS bugfixes:
+
+    - Fixed possible deadlock in some cases when MRTD documents are scanned.
+    - Fixed issue with OCR speed on arm7 devices when Accelerate framework was used.
+    - Fixed incorrect returning of Address and License number in UKDL scanning.
+    
+- iOS updates:
+    
+    - PPOverlayViewController changed the way Overlay Subviews are added to the view hierarchy. Instead of calling `addOverlaySubview:` (which automatically added a view to view hierarachy), you now need to call `registerOverlaySubview:` (which registers subview for scanning events), and manually add subview to view hierarchy using `addSubview:` method. This change gives you more flexibility for adding views and managing autolayout and autoresizing masks.
+
+    - Localization Macros MB_LOCALIZED and MB_LOCALIZED_FORMAT can now be overriden in your app to provide completely custom localization mechanisms.
+    
+    - Dramatically increased OCR engine initialization speed
+
+    - Increased speed of scanning cancellation when Cancel button is pressed.
+    
+- ID scanning improvements
+
+    - Added EUDL recognizer (replaced UKDL recognizer). EUDL is capable of automatically detecting various EU Drivers licenses. Currently it works only on German and UK DLs.
+    - Fixed issue with 0 and O misclassifications in MRTD recognition
+    - Added support for Austrian MRTD ID documents
+
+- Internal changes:
+
+    - Implementeded Templating API for easier implementation of new document types
+    - Implemented Face detection
+    - Implemented support for Eastern Arabic numeral characters
+
 ## 1.3.0
 
 - Added better integration for Swift

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "05A39CB3291FA4B3ED668EC68184196B24068E81" : 0,
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A86AD168-95D9-48CE-9F5B-99104CD75E14",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "05A39CB3291FA4B3ED668EC68184196B24068E81" : "blinkocr-ios",
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : "blinkid-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BlinkOCR-sample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Samples\/BlinkOCR-sample\/BlinkOCR-sample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:BlinkOCR\/blinkocr-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05A39CB3291FA4B3ED668EC68184196B24068E81"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:BlinkID\/blinkid-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026"
+    }
+  ]
+}

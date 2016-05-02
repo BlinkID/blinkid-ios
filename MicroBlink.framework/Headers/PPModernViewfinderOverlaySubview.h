@@ -1,15 +1,3 @@
-//
-//  PPModernViewfinderOverlaySubview.h
-//  PhotoPayFramework
-//
-//  Created by Marko Mihovilić on 02/09/14.
-//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
-//
-
-#import "PPOverlaySubview.h"
-
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPModernViewfinderOverlaySubview : PPOverlaySubview
-
-@property (nonatomic, assign) BOOL moveable;
-
-@end
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf5516c28547f3e5798e2acb51bd6331b35ea351c10bb1db98956b178ce5183e
+size 456

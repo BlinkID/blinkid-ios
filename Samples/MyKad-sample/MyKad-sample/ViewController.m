@@ -140,22 +140,6 @@
 
     // Collect data from the result
     for (PPRecognizerResult* result in results) {
-
-        if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
-            PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
-            title = @"MRTD";
-            message = [mrtdResult description];
-        }
-        if ([result isKindOfClass:[PPUsdlRecognizerResult class]]) {
-            PPUsdlRecognizerResult* usdlResult = (PPUsdlRecognizerResult*)result;
-            title = @"USDL";
-            message = [usdlResult description];
-        }
-        if ([result isKindOfClass:[PPUkdlRecognizerResult class]]) {
-            PPUkdlRecognizerResult* ukdlResult = (PPUkdlRecognizerResult*)result;
-            title = @"UKDL";
-            message = [ukdlResult description];
-        }
         if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
             PPMyKadRecognizerResult *myKadResult = (PPMyKadRecognizerResult *)result;
             title = @"MyKad";

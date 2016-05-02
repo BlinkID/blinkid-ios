@@ -1,20 +1,3 @@
-//
-//  PPOcrResultView.h
-//  PhotoPayFramework
-//
-//  Created by Jura on 01/02/14.
-//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-#import "PPOverlaySubview.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@class PPOcrLayout;
-
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrResultOverlaySubview : PPOverlaySubview
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:652d6965966fe5df4f68764fc3dbb2f83a6a9efe70f53873afa5c09cf672fd85
+size 360

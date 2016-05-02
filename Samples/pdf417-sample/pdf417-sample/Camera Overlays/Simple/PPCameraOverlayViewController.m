@@ -90,7 +90,7 @@
 #pragma mark -
 #pragma mark autorotation
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
@@ -119,15 +119,13 @@
     NSLog(@"Barcode scanning process did output results %@", results);
 }
 
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController
-             didFindLocation:(NSArray *)cornerPoints
-                  withStatus:(PPDetectionStatus)status {
-    
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didFinishDetectionWithResult:(PPDetectorResult *)result {
+
     CGRect size = [[self view] bounds];
-    
+
     BOOL detectionSuccess = NO;
-    
-    switch (status) {
+
+    switch (result.status) {
         case PPDetectionStatusSuccess: {
             NSLog(@"Detection was success");
             detectionSuccess = YES;
@@ -164,11 +162,12 @@
         default:
             break;
     }
-            
-    if (detectionSuccess) {
+
+    if (detectionSuccess && [result isKindOfClass:[PPQuadDetectorResult class]]) {
         CGMutablePathRef drawingPath = CGPathCreateMutable();
+        PPQuadDetectorResult *quadResult = (PPQuadDetectorResult *)result;
         [PPCameraOverlayViewController createPath:drawingPath
-                                         withDots:cornerPoints
+                                         withDots:[quadResult.detectionLocation toPointsArray]
                                           forSize:size];
         drawingLayer.path = drawingPath;
         [self startDotAnimation:[[UIColor greenColor] CGColor]];

@@ -11,6 +11,16 @@ import MicroBlink
 
 class ViewController: UIViewController, PPScanDelegate {
 
+
+    /**
+     * Method allocates and initializes the Scanning coordinator object.
+     * Coordinator is initialized with settings for scanning
+     * Modify this method to include only those recognizer settings you need. This will give you optimal performance
+     *
+     *  @param error Error object, if scanning isn't supported
+     *
+     *  @return initialized coordinator
+     */
     func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
 
         /** 0. Check if scanning is supported */
@@ -34,20 +44,59 @@ class ViewController: UIViewController, PPScanDelegate {
 
         /**
         * 3. Set up what is being scanned. See detailed guides for specific use cases.
-        * Here's an example for initializing MRTD and USDL scanning
+        * Remove undesired recognizers (added below) for optimal performance.
         */
 
-        // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-        let mrtdRecognizerSettings = PPMrtdRecognizerSettings()
+        do { // Remove this if you're not using MRTD recognition
 
-        // Add MRTD Recognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(mrtdRecognizerSettings)
+            // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
+            let mrtdRecognizerSettings = PPMrtdRecognizerSettings()
 
-        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
-        let usdlRecognizerSettings = PPUsdlRecognizerSettings()
+            /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
-        // Add USDL Recognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(usdlRecognizerSettings)
+            // tell the library to get full image of the document. Setting this to YES makes sense just if
+            // settings.metadataSettings.dewarpedImage = YES, otherwise it wastes CPU time.
+            mrtdRecognizerSettings.dewarpFullDocument = false;
+
+            // Add MRTD Recognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(mrtdRecognizerSettings)
+        }
+
+        do { // Remove this if you're not using USDL recognition
+
+            // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
+            let usdlRecognizerSettings = PPUsdlRecognizerSettings()
+
+            /** You can modify the properties of usdlRecognizerSettings to suit your use-case */
+
+            // Add USDL Recognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(usdlRecognizerSettings)
+        }
+
+        do { // Remove this if you're not using UKDL recognition
+
+            // To specify we want to perform UKDL (UK Driver's license) recognition, initialize the UKDL recognizer settings
+            let eudlRecognizerSettings = PPEudlRecognizerSettings()
+
+            /** You can modify the properties of ukdlRecognizerSettings to suit your use-case */
+
+            // If you want to save the image of the UKDL, set this to YES
+            eudlRecognizerSettings.showFullDocument = true;
+
+            // Add UKDL Recognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(eudlRecognizerSettings)
+        }
+
+        do { // Remove this if you're not using MyKad recognition
+
+            // To specify we want to perform MyKad recognition, initialize the MyKad recognizer settings
+            let myKadRecognizerSettings = PPMyKadRecognizerSettings()
+            
+            /** You can modify the properties of myKadRecognizerSettings to suit your use-case */
+            
+            // Add UKDL Recognizer setting to a list of used recognizer settings
+            settings.scanSettings.addRecognizerSettings(myKadRecognizerSettings)
+        }
 
 
         /** 4. Initialize the Scanning Coordinator object */
@@ -78,14 +127,15 @@ class ViewController: UIViewController, PPScanDelegate {
     }
 
     func scanningViewControllerUnauthorizedCamera(scanningViewController: UIViewController) {
-
+        // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
     }
 
     func scanningViewController(scanningViewController: UIViewController, didFindError error: NSError) {
-
+        // Can be ignored. See description of the method
     }
 
     func scanningViewControllerDidClose(scanningViewController: UIViewController) {
+        // As scanning view controller is presented full screen and modally, dismiss it
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -93,7 +143,11 @@ class ViewController: UIViewController, PPScanDelegate {
 
         let scanConroller = scanningViewController as! PPScanningViewController
 
-        // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+        /**
+         * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+         * Each member of results array will represent one result for a single processed image
+         * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+         */
 
         // first, pause scanning until we process all the results
         scanConroller.pauseScanning()
@@ -103,15 +157,29 @@ class ViewController: UIViewController, PPScanDelegate {
 
         // Collect data from the result
         for result in results {
-            if(result.isKindOfClass(PPMrtdRecognizerResult)) {
+            if (result.isKindOfClass(PPMrtdRecognizerResult)) {
+                /** MRTD was detected */
                 let mrtdResult = result as! PPMrtdRecognizerResult
                 title = "MRTD"
                 message = mrtdResult.description
             }
-            if(result.isKindOfClass(PPUsdlRecognizerResult)) {
+            if (result.isKindOfClass(PPUsdlRecognizerResult)) {
+                /** US drivers license was detected */
                 let usdlResult = result as! PPUsdlRecognizerResult
                 title = "USDL"
                 message = usdlResult.description
+            }
+            if (result.isKindOfClass(PPEudlRecognizerResult)) {
+                /** EU drivers license was detected */
+                let eudlResult = result as! PPEudlRecognizerResult
+                title = "EUDL"
+                message = eudlResult.description
+            }
+            if (result.isKindOfClass(PPMyKadRecognizerResult)) {
+                /** MyKad was detected */
+                let myKadResult = result as! PPMyKadRecognizerResult
+                title = "MyKad"
+                message = myKadResult.description
             }
         }
 

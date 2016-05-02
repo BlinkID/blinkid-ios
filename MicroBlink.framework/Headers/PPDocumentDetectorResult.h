@@ -1,32 +1,3 @@
-//
-//  PPDocumentDetectorResult.h
-//  BlinkIdFramework
-//
-//  Created by Jura on 11/01/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
-//
-
-#import "PPQuadDetectorResult.h"
-
-#import "PPDocumentSpecification.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-/**
- * Result of the documente detector
- */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentDetectorResult : PPQuadDetectorResult
-
-/**
- * Aspect ratio of detected document
- */
-@property (nonatomic) CGFloat aspectRatio;
-
-/**
- * screen orientation used when detecting the document
- */
-@property (nonatomic) UIInterfaceOrientation screenOrientation;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:b731f3ef50178efbb91dbea1b19b241c8466ae7deb1d83b14c6f30d916a075e0
+size 627

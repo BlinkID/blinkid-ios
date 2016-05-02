@@ -1,25 +1,3 @@
-//
-//  PPModernOcrResultOverlaySubview.h
-//  PhotoPayFramework
-//
-//  Created by Marko Mihovilić on 05/09/14.
-//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
-//
-
-#import "PPOverlaySubview.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPModernOcrResultOverlaySubview : PPOverlaySubview
-
-@property (strong, nonatomic) UIColor *foregroundColor;
-
-@property (strong, nonatomic) UIColor *tintColor;
-
-@property (assign, nonatomic) BOOL shouldIgnoreFastResults;
-
-@property (assign, nonatomic) CGFloat charFadeInDuration;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:a94762f312d311017daee238ab8fb02e95160e0ad1b0a05f63627907f063e18d
+size 577

@@ -1,22 +1,3 @@
-//
-//  PPMetadata.h
-//  PhotoPayFramework
-//
-//  Created by Jura on 02/03/15.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-#import "PPMicroBlinkDefines.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadata : NSObject
-
-@property (nonatomic, strong, readonly) NSString *name;
-
-- (instancetype)initWithName:(NSString *)name;
-
-@end
-
-NS_ASSUME_NONNULL_END
+version https://git-lfs.github.com/spec/v1
+oid sha256:0165c9717c68c9f1eeba32e451ecbdbea8d80d046f4f42984250d1e67738d1f0
+size 429
