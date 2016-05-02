@@ -23,7 +23,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 - Read the ["Getting Started" guide](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started) to integrate the SDK in your app(s)
 - [Generate](https://microblink.com/login?url=/customer/generatedemolicence) a **free demo license key** to start using the SDK in your app (registration required)
 - [Contact us](http://www.microblink.com) to get pricing info
-- Check out the [comprehensive documentation](http://cocoadocs.org/docsets/PPBlinkID/) of all APIs available in PDF417.mobi SDK
+- Check out the [comprehensive documentation](http://cocoadocs.org/docsets/PPBlinkID/) of all APIs available in BlinkID SDK
 - If you're using CocoaPods, you can easily try our sample apps by running the following command in your terminal window:
 
 ```shell
