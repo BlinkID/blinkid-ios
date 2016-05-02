@@ -38,7 +38,7 @@ pod try PPBlinkID
 
 ```ruby
 platform :ios, '7.0'
-pod 'PPBlinkID', '~> 1.3.0'
+pod 'PPBlinkID', '~> 1.4.0'
 ```
 
 ## Requirements
