@@ -9,7 +9,7 @@
 import UIKit
 import MicroBlink
 
-class ViewController: UIViewController, PPScanDelegate {
+class ViewController: UIViewController, PPScanningDelegate {
 
 
     /**
@@ -21,11 +21,11 @@ class ViewController: UIViewController, PPScanDelegate {
      *
      *  @return initialized coordinator
      */
-    func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
+    func coordinatorWithError(error: NSErrorPointer) -> PPCameraCoordinator? {
 
         /** 0. Check if scanning is supported */
 
-        if (PPCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error)) {
+        if (PPCameraCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error)) {
             return nil;
         }
 
@@ -101,7 +101,7 @@ class ViewController: UIViewController, PPScanDelegate {
 
         /** 4. Initialize the Scanning Coordinator object */
 
-        let coordinator: PPCoordinator = PPCoordinator(settings: settings)
+        let coordinator: PPCameraCoordinator = PPCameraCoordinator(settings: settings, delegate: nil)
 
         return coordinator
     }
@@ -110,7 +110,7 @@ class ViewController: UIViewController, PPScanDelegate {
 
         /** Instantiate the scanning coordinator */
         let error: NSErrorPointer = nil
-        let coordinator:PPCoordinator?=self.coordinatorWithError(error)
+        let coordinator = self.coordinatorWithError(error)
 
         /** If scanning isn't supported, present an error */
         if coordinator == nil {
@@ -120,7 +120,7 @@ class ViewController: UIViewController, PPScanDelegate {
         }
 
         /** Allocate and present the scanning view controller */
-        let scanningViewController: UIViewController = coordinator!.cameraViewControllerWithDelegate(self)
+        let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewControllerWithDelegate(self, coordinator: coordinator!, error: nil)
 
         /** You can use other presentation methods as well */
         self.presentViewController(scanningViewController, animated: true, completion: nil)

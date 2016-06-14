@@ -6,6 +6,8 @@
 //  Copyright © 2015 Dino. All rights reserved.
 //
 
+import MicroBlink
+
 class PPCameraOverlayViewController : PPOverlayViewController {
 
     var torchOn: Bool = false;

@@ -24,21 +24,24 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 - [Generate](https://microblink.com/login?url=/customer/generatedemolicence) a **free demo license key** to start using the SDK in your app (registration required)
 - [Contact us](http://www.microblink.com) to get pricing info
 - Check out the [comprehensive documentation](http://cocoadocs.org/docsets/PPBlinkID/) of all APIs available in BlinkID SDK
+
+### Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BlinkID in your projects. See the ["Getting Started" guide for more information](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started).
+
+- If you wish to use version v2.0.0 or above, you need to install Git Large File storage as described here: https://git-lfs.github.com
+
 - If you're using CocoaPods, you can easily try our sample apps by running the following command in your terminal window:
 
 ```shell
 pod try PPBlinkID
 ```
 
-### Installation with CocoaPods
-
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BlinkID in your projects. See the ["Getting Started" guide for more information](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started).
-
 #### Podfile
 
 ```ruby
 platform :ios, '7.0'
-pod 'PPBlinkID', '~> 1.4.0'
+pod 'PPBlinkID', '~> 2.0.0'
 ```
 
 ## Requirements

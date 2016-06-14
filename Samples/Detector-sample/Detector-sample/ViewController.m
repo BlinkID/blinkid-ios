@@ -12,7 +12,7 @@
 
 #import "PPScannedViewController.h"
 
-@interface ViewController () <PPScanDelegate, PPScannedViewControllerDelegate>
+@interface ViewController () <PPScanningDelegate, PPScannedViewControllerDelegate>
 
 @property (nonatomic, strong) UIViewController<PPScanningViewController>* cameraViewController;
 
@@ -42,11 +42,11 @@
  *
  *  @return initialized coordinator
  */
-- (PPCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
 
     /** 0. Check if scanning is supported */
 
-    if ([PPCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
+    if ([PPCameraCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
         return nil;
     }
 
@@ -71,23 +71,23 @@
 
     // Document Detector
 
-    PPDocumentDetectorSettings *documentDetectorSettings = [[PPDocumentDetectorSettings alloc] initWithNumStableDetectionsThreshold:1];
+    PPDocumentDetectorSettings *documentDetectorSettings = [[PPDocumentDetectorSettings alloc] initWithNumStableDetectionsThreshold:5];
 
     PPDocumentSpecification *specification = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
 
-    PPDocumentDecodingInfo *documentInfo = [[PPDocumentDecodingInfo alloc] init];
-    [documentInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
-    [specification setDecodingInfo:documentInfo];
+    NSMutableArray<PPDecodingInfo*> *documentDecoding = [NSMutableArray<PPDecodingInfo*> array];
+    [documentDecoding addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
+    [specification setDecodingInfo:documentDecoding];
 
     [documentDetectorSettings setDocumentSpecifications:@[specification]];
 
 
     // MRTD detector
 
-    PPDocumentDecodingInfo *mrtdInfo = [[PPDocumentDecodingInfo alloc] init];
-    [mrtdInfo addEntry:[[PPDocumentDecodingInfoEntry alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"MRTD"]];
+    NSMutableArray<PPDecodingInfo*> *mrtdDecoding = [NSMutableArray<PPDecodingInfo*> array];
+    [mrtdDecoding addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"MRTD"]];
 
-    PPMrtdDetectorSettings *mrtdDetectorSettings = [[PPMrtdDetectorSettings alloc] initWithDocumentDecodingInfo:mrtdInfo];
+    PPMrtdDetectorSettings *mrtdDetectorSettings = [[PPMrtdDetectorSettings alloc] initWithDecodingInfoArray:mrtdDecoding];
 
 
     // MULTI detector
@@ -103,7 +103,7 @@
 
     /** 4. Initialize the Scanning Coordinator object */
 
-    PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings];
+    PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
 
     return coordinator;
 }
@@ -112,7 +112,7 @@
 
     /** Instantiate the scanning coordinator */
     NSError *error;
-    PPCoordinator *coordinator = [self coordinatorWithError:&error];
+    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error];
 
     /** If scanning isn't supported, present an error */
     if (coordinator == nil) {
@@ -127,7 +127,7 @@
     }
 
     /** Allocate and present the scanning view controller */
-    self.cameraViewController = [coordinator cameraViewControllerWithDelegate:self];
+    self.cameraViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
 
     // allow rotation if VC is displayed as a modal view controller
     self.cameraViewController.autorotate = YES;

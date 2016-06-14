@@ -13,7 +13,7 @@
 #import <MicroBlink/PPOcrResultOverlaySubview.h>
 #import <MicroBlink/PPModernOcrResultOverlaySubview.h>
 
-@interface ViewController () <PPScanDelegate>
+@interface ViewController () <PPScanningDelegate>
 
 @property (nonatomic, strong) NSString* rawOcrParserId;
 
@@ -38,11 +38,11 @@
  *
  *  @return initialized coordinator
  */
-- (PPCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
 
     /** 0. Check if scanning is supported */
 
-    if ([PPCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
+    if ([PPCameraCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
         return nil;
     }
 
@@ -56,7 +56,7 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"HUZDFW2E-CIGKB4ZX-TSYPBTQH-LAVROHH2-PAJA2DXQ-ZYDVQKYX-DT5HQEQN-B3EAHQYA";
+    settings.licenseSettings.licenseKey = @"E5GAM3PR-QUAAZNCG-4OZNNF5A-6M3ZZNAG-EO4V2VWM-ZOWXP23P-AJB2Q76G-CJYXH7NE";
 
 
     /** 
@@ -65,20 +65,26 @@
      */
 
     // To specify we want to perform OCR recognition, initialize the OCR recognizer settings
-    PPOcrRecognizerSettings *ocrRecognizerSettings = [[PPOcrRecognizerSettings alloc] init];
+    PPBlinkOcrRecognizerSettings *ocrRecognizerSettings = [[PPBlinkOcrRecognizerSettings alloc] init];
+    
 
     // We want raw OCR parsing
     [ocrRecognizerSettings addOcrParser:[[PPRawOcrParserFactory alloc] init] name:self.rawOcrParserId];
 
+    PPPriceOcrParserFactory *priceParser = [[PPPriceOcrParserFactory alloc] init];
+    
+    // Price doesn't need to be present for output to be valid
+    priceParser.isRequired = NO;
+    
     // We want to parse prices from raw OCR result as well
-    [ocrRecognizerSettings addOcrParser:[[PPPriceOcrParserFactory alloc] init] name:self.priceParserId];
+    [ocrRecognizerSettings addOcrParser:priceParser name:self.priceParserId];
 
     // Add the recognizer setting to a list of used recognizer
     [settings.scanSettings addRecognizerSettings:ocrRecognizerSettings];
 
 
     /** 4. Initialize the Scanning Coordinator object */
-    PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings];
+    PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
 
     return coordinator;
 }
@@ -87,7 +93,7 @@
 
     /** Instantiate the scanning coordinator */
     NSError *error;
-    PPCoordinator *coordinator = [self coordinatorWithError:&error];
+    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error];
 
     /** If scanning isn't supported, present an error */
     if (coordinator == nil) {
@@ -102,7 +108,7 @@
     }
 
     /** Allocate and present the scanning view controller */
-    UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self];
+    UIViewController<PPScanningViewController>* scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
 
     /** You can use other presentation methods as well */
     [self presentViewController:scanningViewController animated:YES completion:nil];
@@ -136,8 +142,8 @@
     // Collect data from the result
     for (PPRecognizerResult* result in results) {
 
-        if ([result isKindOfClass:[PPOcrRecognizerResult class]]) {
-            PPOcrRecognizerResult* ocrRecognizerResult = (PPOcrRecognizerResult*)result;
+        if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
+            PPBlinkOcrRecognizerResult* ocrRecognizerResult = (PPBlinkOcrRecognizerResult*)result;
 
             NSLog(@"OCR results are:");
             NSLog(@"Raw ocr: %@", [ocrRecognizerResult parsedResultForName:self.rawOcrParserId]);
