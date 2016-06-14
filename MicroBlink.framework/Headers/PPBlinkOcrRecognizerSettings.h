@@ -1,3 +1,60 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b6ccd5ec6654e951fb6e065545509ba6a968a90e1ede8025c912e71e2bcbae90
-size 1245
+//
+//  PPOcrRecognizerSettings.h
+//  PhotoPayFramework
+//
+//  Created by Jura on 03/11/14.
+//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPTemplatingRecognizerSettings.h"
+
+#import "PPOcrParserFactory.h"
+
+// Parser for raw text
+#import "PPRawOcrParserFactory.h"
+
+// Regex parser
+#import "PPRegexOcrParserFactory.h"
+
+// Generic Parsers
+#import "PPDateOcrParserFactory.h"
+#import "PPEmailOcrParserFactory.h"
+#import "PPIbanOcrParserFactory.h"
+#import "PPPriceOcrParserFactory.h"
+
+#import "PPDetectorSettings.h"
+#import "PPDocumentClassifier.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ * Class used for OCR or Templating API
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBlinkOcrRecognizerSettings : PPTemplatingRecognizerSettings
+
+- (instancetype)init;
+
+/**
+ * Detector settings used in Templating API
+ *
+ * Default: nil
+ */
+@property (nonatomic) PPDetectorSettings *detectorSettings;
+
+/**
+ * Templating API documents will be processed twice: once regulary and second time flipped upside down.
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL allowFlippedRecognition;
+
+/**
+ * Delegate for document classification.
+ *
+ * Default: nil
+ */
+@property (nonatomic) id<PPDocumentClassifier> documentClassifier;
+
+@end
+
+NS_ASSUME_NONNULL_END

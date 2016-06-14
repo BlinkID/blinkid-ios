@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8f736f78ab024a392d4a5f0404fd0ed5fa40f6d7567778874d2b617d1b8da32
-size 495
+//
+//  PPOcrResultView.h
+//  PhotoPayFramework
+//
+//  Created by Jura on 01/02/14.
+//  Copyright (c) 2014 MicroBlink Ltd. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#import "PPOverlaySubview.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class PPOcrLayout;
+
+/**
+ * Overlay subview presenting status of OCR detection. OCR results are displayed as green characters over detected locations.
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrResultOverlaySubview : PPOverlaySubview
+
+@end
+
+NS_ASSUME_NONNULL_END

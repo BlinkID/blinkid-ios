@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7fae3bc96f581d046b8b92a465403d6807fef8d1ad0bbd4134210051a38bbab
-size 822
+//
+//  PPIbanOcrParserFactory.h
+//  PhotoPayFramework
+//
+//  Created by Jura on 27/02/15.
+//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPOcrParserFactory.h"
+
+/**
+ *  Parses IBANs (International Bank Account Numbers) 
+ *  @see https://en.wikipedia.org/wiki/International_Bank_Account_Number
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPIbanOcrParserFactory : PPOcrParserFactory
+
+/**
+ * Creating IBAN OCR parser with this initializer enables country code whitelist.
+ * By default no country code whitelist is present and all IBANs are being scanned.
+ * Adding a country code to whitelist will configure IBAN OCR parser to scan only those IBANS which begin with country codes present in whitelist.
+ */
+- (instancetype)initWithCountryCodeWhitelist:(NSArray<NSString*> *)countryCodeWhitelist;
+
+@end

@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6a227a8a27db354093e1d094e0f52309d81cd92d51ee2600002701449415903
-size 759
+//
+//  PPMultiDetectorSettings.h
+//  BlinkIdFramework
+//
+//  Created by Jura on 06/10/15.
+//  Copyright © 2015 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPDetectorSettings.h"
+
+/**
+ * Settings for detector which combines multiple detectors inside
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMultiDetectorSettings : PPDetectorSettings
+
+- (instancetype)initWithSettingsArray:(NSArray<__kindof PPDetectorSettings *> *)settingsArray;
+
+/**
+ * Array of contained detector settings
+ */
+@property (nonatomic, readonly) NSArray<__kindof PPDetectorSettings *> * settingsArray;
+
+/**
+ * If YES, detector will try to find all detection results based on a given set of detector settings
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL allowMultipleResults;
+
+@end

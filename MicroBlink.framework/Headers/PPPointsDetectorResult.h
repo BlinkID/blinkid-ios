@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ab8b8fa2088f48be419e6413b4f1f923df60c68621b9a464542f653882fc9168
-size 520
+//
+//  PPPointsDetectorResult.h
+//  BlinkIdFramework
+//
+//  Created by Dino on 21/03/16.
+//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPDetectorResult.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ * Result of the detection of a point detector. Point Detectors are used for QR and similar barcodes
+ */
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPPointsDetectorResult : PPDetectorResult
+
+/**
+ * Coordinates of points of a detected object
+ */
+@property (nonatomic) NSArray *points;
+
+@end
+
+NS_ASSUME_NONNULL_END

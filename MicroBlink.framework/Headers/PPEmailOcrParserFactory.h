@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:79fd567496cb389075d02d6b6e8e5dc701ca2c61514b56d2775d3daa5e603910
-size 307
+//
+//  PPEmailParserFactory.h
+//  PhotoPayFramework
+//
+//  Created by Dino on 14/12/15.
+//  Copyright © 2015 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPOcrParserFactory.h"
+
+/**
+ *  Parses email addresses
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEmailOcrParserFactory : PPOcrParserFactory
+
+@end

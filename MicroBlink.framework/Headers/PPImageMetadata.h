@@ -1,3 +1,79 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e8da891eb36c95d8f6a9a8ce0ee60c5cd38804250d1ff2a6019d79e6a132817
-size 2362
+//
+//  PPImageMetadata.h
+//  PhotoPayFramework
+//
+//  Created by Jura on 02/03/15.
+//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPMetadata.h"
+#import <UIKit/UIKit.h>
+
+/**
+ * Type of returned image
+ * By default no images are outputted and you can configure which ones will be outputted in PPMetadataSettings
+ * You can get PPMetadataSettings object accessing metadataSettings property of PPSettings (when creating a coordinator for example)
+ */
+typedef NS_ENUM(NSUInteger, PPImageMetadataType) {
+    
+    /**
+     * Outputs all images with successful detection. PPMetadataSettings property successfulFrame needs to be set to YES.
+     */
+    PPImageMetadataTypeSuccessfulFrame,
+    
+    /**
+     * Outputs all dewarped images with successful detection. PPMetadataSettings property dewarpedImage needs to be set to YES.
+     */
+    PPImageMetadataTypeDewarpedImage,
+    
+    /**
+     * Outputs all input images. PPMetadataSettings property currentFrame needs to be set to YES.
+     */
+    PPImageMetadataTypeCurrentFrame,
+    
+    
+    
+    /**
+     * Debug images (and PPDebugMetadata) are only needed if you need to figure out what is not working as expected
+     */
+    
+    /**
+     * Outputs all OCR input images. PPDebugMetadata property ocrInputFrame needs to be set to YES.
+     */
+    PPImageMetadataTypeDebugOcrInputFrame,
+    
+    /**
+     * Outputs all detection input images. PPDebugMetadata property detectionFrame needs to be set to YES.
+     */
+    PPImageMetadataTypeDebugDetectionFrame,
+    
+    /**
+     * Outputs all dewarped elements images. PPDebugMetadata property dewarpedElements needs to be set to YES.
+     */
+    PPImageMetadataTypeDebugDewrapedElements,
+};
+
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ * Class containing UIImage of detected, dewraped or input frame.
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPImageMetadata : PPMetadata
+
+@property (nonatomic, assign, readonly) UIImageOrientation orientation;
+
+@property (nonatomic, readonly) PPImageMetadataType imageType;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+- (instancetype)initWithName:(NSString *)name NS_UNAVAILABLE;
+
+- (instancetype)initWithName:(NSString *)name
+                 orientation:(UIImageOrientation)orientation
+                   imageType:(PPImageMetadataType)imageType NS_DESIGNATED_INITIALIZER;
+
+- (UIImage*)image;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dc7180334d12ec595c84c2500b401a60e11e06919f59243a74b83f24af60a77
-size 327
+//
+//  PPPriceOcrParserFactory.h
+//  PhotoPayFramework
+//
+//  Created by Jura on 27/02/15.
+//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//
+
+#import "PPOcrParserFactory.h"
+
+/**
+ *  Parses transaction amount on invoices
+ */
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPriceOcrParserFactory : PPOcrParserFactory
+
+@end
