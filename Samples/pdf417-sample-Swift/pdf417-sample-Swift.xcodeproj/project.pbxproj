@@ -40,7 +40,6 @@
 		3139C8371C22B33E005AC32C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		3139C87D1C245950005AC32C /* PPCameraOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPCameraOverlayViewController.swift; sourceTree = "<group>"; };
 		3139C87F1C2838B3005AC32C /* PPCameraOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPCameraOverlayViewController.xib; sourceTree = "<group>"; };
-		3139CA9B1C3555B2005AC32C /* pdf417-sample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pdf417-sample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		315881701C3C16D50083850C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +89,6 @@
 				3139C8211C22B2AC005AC32C /* Assets.xcassets */,
 				3139C8231C22B2AC005AC32C /* LaunchScreen.storyboard */,
 				3139C8261C22B2AC005AC32C /* Info.plist */,
-				3139CA9B1C3555B2005AC32C /* pdf417-sample-Swift-Bridging-Header.h */,
 			);
 			path = "pdf417-sample-Swift";
 			sourceTree = "<group>";
@@ -322,7 +320,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.pdf417-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./pdf417-sample-Swift/pdf417-sample-Swift-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -337,7 +334,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.pdf417-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./pdf417-sample-Swift/pdf417-sample-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -10,7 +10,7 @@
 
 #import <MicroBlink/MicroBlink.h>
 
-@interface ViewController () <PPScanDelegate>
+@interface ViewController () <PPScanningDelegate>
 
 @end
 
@@ -35,11 +35,11 @@
  *
  *  @return initialized coordinator
  */
-- (PPCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
 
     /** 0. Check if scanning is supported */
 
-    if ([PPCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
+    if ([PPCameraCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
         return nil;
     }
 
@@ -50,7 +50,7 @@
     PPSettings *settings = [[PPSettings alloc] init];
 
     // tell which metadata you want to receive. Metadata collection takes CPU time - so use it only if necessary!
-    settings.metadataSettings.dewarpedImage = YES; // get dewarped image of ID documents
+    //settings.metadataSettings.dewarpedImage = YES; // get dewarped image of ID documents
 
 
     /** 2. Setup the license key */
@@ -106,7 +106,7 @@
 
     /** 4. Initialize the Scanning Coordinator object */
 
-    PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings];
+    PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings];
 
     return coordinator;
 }
@@ -115,7 +115,7 @@
 
     /** Instantiate the scanning coordinator */
     NSError *error;
-    PPCoordinator *coordinator = [self coordinatorWithError:&error];
+    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error];
 
     /** If scanning isn't supported, present an error */
     if (coordinator == nil) {
@@ -130,7 +130,7 @@
     }
 
     /** Create new scanning view controller */
-    UIViewController<PPScanningViewController>* scanningViewController = [coordinator cameraViewControllerWithDelegate:self];
+    UIViewController<PPScanningViewController>* scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
 
     // allow rotation if VC is displayed as a modal view controller
     scanningViewController.autorotate = YES;
@@ -158,7 +158,7 @@
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-              didOutputResults:(NSArray *)results {
+              didOutputResults:(NSArray<PPRecognizerResult*> *)results {
 
     /**
      * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
@@ -204,6 +204,10 @@
     // present the alert view with scanned results
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+}
+
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController didFinishDetectionWithResult:(PPDetectorResult *)result {
+    
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputMetadata:(PPMetadata *)metadata {

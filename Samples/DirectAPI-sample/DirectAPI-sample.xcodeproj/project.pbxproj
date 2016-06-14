@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1819B6F51B7745150002325E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819B6F41B7745150002325E /* main.m */; };
+		1819B6F81B7745150002325E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819B6F71B7745150002325E /* AppDelegate.m */; };
+		1819B6FB1B7745150002325E /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819B6FA1B7745150002325E /* CameraViewController.m */; };
+		1819B6FE1B7745150002325E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1819B6FC1B7745150002325E /* Main.storyboard */; };
+		1819B7001B7745150002325E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1819B6FF1B7745150002325E /* Assets.xcassets */; };
+		1819B7031B7745150002325E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1819B7011B7745150002325E /* LaunchScreen.storyboard */; };
+		1819B7281B7755C80002325E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1819B7271B7755C80002325E /* RootViewController.m */; };
+		18A36CE61B780298004374DA /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A36CE51B780298004374DA /* CameraView.m */; };
+		3170E9FE1CC0EEE60017ABF0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170E9FA1CC0EEE60017ABF0 /* Accelerate.framework */; };
+		3170E9FF1CC0EEE60017ABF0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170E9FB1CC0EEE60017ABF0 /* AudioToolbox.framework */; };
+		3170EA001CC0EEE60017ABF0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170E9FC1CC0EEE60017ABF0 /* AVFoundation.framework */; };
+		3170EA011CC0EEE60017ABF0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170E9FD1CC0EEE60017ABF0 /* CoreMedia.framework */; };
+		3170EA031CC0EF680017ABF0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170EA021CC0EF680017ABF0 /* libc++.tbd */; };
+		3170EA051CC0EF6F0017ABF0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170EA041CC0EF6F0017ABF0 /* libiconv.tbd */; };
+		319649BD1D0AE282000561C5 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 319649BB1D0AE282000561C5 /* MicroBlink.bundle */; };
+		319649BE1D0AE282000561C5 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319649BC1D0AE282000561C5 /* MicroBlink.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1819B6F01B7745150002325E /* DirectAPI-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirectAPI-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1819B6F41B7745150002325E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1819B6F61B7745150002325E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1819B6F71B7745150002325E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1819B6F91B7745150002325E /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		1819B6FA1B7745150002325E /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		1819B6FD1B7745150002325E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1819B6FF1B7745150002325E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1819B7021B7745150002325E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1819B7041B7745150002325E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1819B7261B7755C80002325E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1819B7271B7755C80002325E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		18A36CE41B780298004374DA /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
+		18A36CE51B780298004374DA /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
+		3170E9FA1CC0EEE60017ABF0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3170E9FB1CC0EEE60017ABF0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3170E9FC1CC0EEE60017ABF0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3170E9FD1CC0EEE60017ABF0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3170EA021CC0EF680017ABF0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3170EA041CC0EF6F0017ABF0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		319649BB1D0AE282000561C5 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		319649BC1D0AE282000561C5 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1819B6ED1B7745150002325E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3170EA051CC0EF6F0017ABF0 /* libiconv.tbd in Frameworks */,
+				3170EA031CC0EF680017ABF0 /* libc++.tbd in Frameworks */,
+				3170E9FE1CC0EEE60017ABF0 /* Accelerate.framework in Frameworks */,
+				319649BE1D0AE282000561C5 /* MicroBlink.framework in Frameworks */,
+				3170E9FF1CC0EEE60017ABF0 /* AudioToolbox.framework in Frameworks */,
+				3170EA001CC0EEE60017ABF0 /* AVFoundation.framework in Frameworks */,
+				3170EA011CC0EEE60017ABF0 /* CoreMedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1819B6E71B7745150002325E = {
+			isa = PBXGroup;
+			children = (
+				3170E9F91CC0EECF0017ABF0 /* Frameworks */,
+				1819B6F21B7745150002325E /* DirectAPI-Sample */,
+				1819B6F11B7745150002325E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1819B6F11B7745150002325E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1819B6F01B7745150002325E /* DirectAPI-Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1819B6F21B7745150002325E /* DirectAPI-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				1819B6F61B7745150002325E /* AppDelegate.h */,
+				1819B6F71B7745150002325E /* AppDelegate.m */,
+				1819B6F91B7745150002325E /* CameraViewController.h */,
+				1819B6FA1B7745150002325E /* CameraViewController.m */,
+				18A36CE41B780298004374DA /* CameraView.h */,
+				18A36CE51B780298004374DA /* CameraView.m */,
+				1819B7261B7755C80002325E /* RootViewController.h */,
+				1819B7271B7755C80002325E /* RootViewController.m */,
+				1819B6FC1B7745150002325E /* Main.storyboard */,
+				1819B6FF1B7745150002325E /* Assets.xcassets */,
+				1819B7011B7745150002325E /* LaunchScreen.storyboard */,
+				1819B7041B7745150002325E /* Info.plist */,
+				1819B6F31B7745150002325E /* Supporting Files */,
+			);
+			path = "DirectAPI-Sample";
+			sourceTree = "<group>";
+		};
+		1819B6F31B7745150002325E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1819B6F41B7745150002325E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3170E9F91CC0EECF0017ABF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				319649BB1D0AE282000561C5 /* MicroBlink.bundle */,
+				319649BC1D0AE282000561C5 /* MicroBlink.framework */,
+				3170EA041CC0EF6F0017ABF0 /* libiconv.tbd */,
+				3170EA021CC0EF680017ABF0 /* libc++.tbd */,
+				3170E9FA1CC0EEE60017ABF0 /* Accelerate.framework */,
+				3170E9FB1CC0EEE60017ABF0 /* AudioToolbox.framework */,
+				3170E9FC1CC0EEE60017ABF0 /* AVFoundation.framework */,
+				3170E9FD1CC0EEE60017ABF0 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1819B6EF1B7745150002325E /* DirectAPI-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1819B71D1B7745150002325E /* Build configuration list for PBXNativeTarget "DirectAPI-Sample" */;
+			buildPhases = (
+				1819B6EC1B7745150002325E /* Sources */,
+				1819B6ED1B7745150002325E /* Frameworks */,
+				1819B6EE1B7745150002325E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DirectAPI-Sample";
+			productName = "Camera-Sample";
+			productReference = 1819B6F01B7745150002325E /* DirectAPI-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1819B6E81B7745150002325E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					1819B6EF1B7745150002325E = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 1819B6EB1B7745150002325E /* Build configuration list for PBXProject "DirectAPI-Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1819B6E71B7745150002325E;
+			productRefGroup = 1819B6F11B7745150002325E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1819B6EF1B7745150002325E /* DirectAPI-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1819B6EE1B7745150002325E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1819B7031B7745150002325E /* LaunchScreen.storyboard in Resources */,
+				1819B7001B7745150002325E /* Assets.xcassets in Resources */,
+				1819B6FE1B7745150002325E /* Main.storyboard in Resources */,
+				319649BD1D0AE282000561C5 /* MicroBlink.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1819B6EC1B7745150002325E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A36CE61B780298004374DA /* CameraView.m in Sources */,
+				1819B6FB1B7745150002325E /* CameraViewController.m in Sources */,
+				1819B7281B7755C80002325E /* RootViewController.m in Sources */,
+				1819B6F81B7745150002325E /* AppDelegate.m in Sources */,
+				1819B6F51B7745150002325E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1819B6FC1B7745150002325E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1819B6FD1B7745150002325E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1819B7011B7745150002325E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1819B7021B7745150002325E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1819B71B1B7745150002325E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1819B71C1B7745150002325E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1819B71E1B7745150002325E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SCROOT)DirectAPI-Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.DirectAPI-Sample";
+				PRODUCT_NAME = "DirectAPI-Sample";
+			};
+			name = Debug;
+		};
+		1819B71F1B7745150002325E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SCROOT)DirectAPI-Sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.DirectAPI-Sample";
+				PRODUCT_NAME = "DirectAPI-Sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1819B6EB1B7745150002325E /* Build configuration list for PBXProject "DirectAPI-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1819B71B1B7745150002325E /* Debug */,
+				1819B71C1B7745150002325E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1819B71D1B7745150002325E /* Build configuration list for PBXNativeTarget "DirectAPI-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1819B71E1B7745150002325E /* Debug */,
+				1819B71F1B7745150002325E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1819B6E81B7745150002325E /* Project object */;
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "832DF24D9E119F11F82FC43987778BDCA40C2B52",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : 0,
+    "832DF24D9E119F11F82FC43987778BDCA40C2B52" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A2CCA1C3-CF2F-4C91-B06C-26EDEE7540E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026" : "..",
+    "832DF24D9E119F11F82FC43987778BDCA40C2B52" : "JCCamera\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JCCamera",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JCCamera.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Cerovec\/JCCamera.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "832DF24D9E119F11F82FC43987778BDCA40C2B52"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BlinkID\/blinkid-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA63F2D457B6DC44AF7B5D7453CDE1A971CBB026"
+    }
+  ]
+}

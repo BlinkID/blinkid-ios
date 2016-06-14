@@ -147,7 +147,7 @@
 		187391FB1AA4B1060031D6C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = MicroBlink;
 				TargetAttributes = {
 					187392021AA4B1060031D6C9 = {
