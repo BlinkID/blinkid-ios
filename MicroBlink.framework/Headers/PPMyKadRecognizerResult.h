@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * Result of scanning MyKad (Malaysian ID document).
+ */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMyKadRecognizerResult : PPRecognizerResult
 
 /**

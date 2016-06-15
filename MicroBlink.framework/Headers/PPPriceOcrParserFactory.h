@@ -9,7 +9,7 @@
 #import "PPOcrParserFactory.h"
 
 /**
- *  Parses transaction amount on invoices
+ *  Parses various transaction amount formats on invoices.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPriceOcrParserFactory : PPOcrParserFactory
 

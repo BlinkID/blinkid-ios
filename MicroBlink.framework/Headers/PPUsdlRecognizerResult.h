@@ -950,8 +950,18 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUsdlRecognizerResult : PPRecognizerResu
  */
 - (NSString *)getField:(const NSString *)key;
 
+/**
+ * Returns all possible USDL keys with their descriptions.
+ *
+ *  @return NSDictionary with USDL key - description pairs
+ */
 + (NSDictionary*)descriptionKeys;
 
+/**
+ * Returns all possible USDL keys ordered as in this header.
+ *
+ *  @return Array of all USDL keys ordered as in this header
+ */
 + (NSArray<NSString *> *)orderedKeys;
 
 @end

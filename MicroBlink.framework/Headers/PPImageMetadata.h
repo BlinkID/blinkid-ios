@@ -34,7 +34,7 @@ typedef NS_ENUM(NSUInteger, PPImageMetadataType) {
     
     
     /**
-     * Debug images (and PPDebugMetadata) are only needed if you need to figure out what is not working as expected
+     * Debug images (and PPDebugMetadata) are only needed if you need to figure out what is not working as expected.
      */
     
     /**
@@ -60,19 +60,38 @@ NS_ASSUME_NONNULL_BEGIN
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPImageMetadata : PPMetadata
 
+/**
+ * Orientation with which contained UIImage was processed
+ */
 @property (nonatomic, assign, readonly) UIImageOrientation orientation;
 
+/**
+ * Type of image returned.
+ */
 @property (nonatomic, readonly) PPImageMetadataType imageType;
 
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)initWithName:(NSString *)name NS_UNAVAILABLE;
 
+/**
+ * Creates new PPImageMetadata with desired parameters.
+ */
 - (instancetype)initWithName:(NSString *)name
                  orientation:(UIImageOrientation)orientation
                    imageType:(PPImageMetadataType)imageType NS_DESIGNATED_INITIALIZER;
 
-- (UIImage*)image;
+/**
+ * UIImage of returned PPImageMetadata.
+ * This image is lazy loaded.
+ */
+- (UIImage *)image;
 
 @end
 

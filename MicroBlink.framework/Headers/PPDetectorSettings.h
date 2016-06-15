@@ -16,11 +16,9 @@ struct DetectorSettingsImpl;
 typedef struct DetectorSettingsImpl DetectorSettingsImpl;
 
 /**
- * MicroBlink scanning libraries run detector objects to find objects on image
- *
- * Each detector is configured with PPDetectorSettings object
- *
- * This class is common superclass for each of the Detector settings,
+ * MicroBlink scanning libraries run detector objects to find objects on image.
+ * Each detector is configured with PPDetectorSettings object.
+ * This class is common superclass for each of the Detector settings.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDetectorSettings : NSObject <NSCopying>
 
@@ -35,6 +33,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDetectorSettings : NSObject <NSCopying>
  */
 - (instancetype)initWithSettings:(DetectorSettingsImpl*)settings NS_DESIGNATED_INITIALIZER;
 
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

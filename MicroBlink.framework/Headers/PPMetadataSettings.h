@@ -63,6 +63,10 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadataSettings : NSObject <NSCopying>
 
 @end
 
+/**
+ * Settings for debuging various data. 
+ * These settings can help you understand why something isn't working as expected.
+ */
 @interface PPDebugMetadata : NSObject <NSCopying>
 
 /**

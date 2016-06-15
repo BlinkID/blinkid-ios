@@ -54,6 +54,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadrangle : NSObject
  */
 - (NSArray *)toPointsArray;
 
+/**
+ * Creates new quadrangle from this quadrangle, transformed by specified affine transformation.
+ */
 - (instancetype)quadrangleWithTransformation:(CGAffineTransform)transform;
 
 @end

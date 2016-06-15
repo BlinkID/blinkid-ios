@@ -12,6 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * Enum which describes text orientation on an image.
+ */
 typedef NS_ENUM(NSUInteger, PPProcessingOrientation){
     /** Text oriented same as picture */
     PPProcessingOrientationUp,

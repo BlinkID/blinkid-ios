@@ -10,9 +10,23 @@
 #import "PPDetectionStatus.h"
 #import "PPMicroBlinkDefines.h"
 
+/**
+ * Enum for type of detection status.
+ */
 typedef NS_ENUM(NSUInteger, PPDetectionCode) {
+    /**
+     * Object detection has failed.
+     */
     PPDetectionCodeFail = 0,
+    
+    /**
+     * Object was detected partially. Only some PhotoPay detectors support this.
+     */
     PPDetectionCodeFallback,
+    
+    /**
+     * Object detection has succeded.
+     */
     PPDetectionCodeSuccess,
 };
 
@@ -47,6 +61,9 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 - (instancetype)initWithCode:(PPDetectionCode)code status:(PPDetectionStatus)status NS_DESIGNATED_INITIALIZER;
 
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

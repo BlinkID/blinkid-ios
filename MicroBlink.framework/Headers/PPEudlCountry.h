@@ -33,6 +33,9 @@ typedef NS_ENUM(NSUInteger, PPEudlCountry) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wall"
 
+/**
+ * Gets the string representation of PPEudlCountry enum.
+ */
 static NSString* eudlCountryToString(PPEudlCountry country) {
     switch (country) {
         case PPEudlCountryUnitedKingdom:

@@ -17,7 +17,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPPointsDetectorResult : PPDetectorResult
 
 /**
- * Coordinates of points of a detected object
+ * Coordinates of points (CGPoint) of a detected object.
  */
 @property (nonatomic) NSArray *points;
 

@@ -21,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @class PPMetadata;
 @class PPRecognizerResult;
 
-//@protocol PPOverlayContainerViewController;
-
 
 /**
  Overlay View Controller is an abstract class for all overlay views placed on top PhotoPay's Camera View Controller.
@@ -180,6 +178,9 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (void)cameraViewController:(UIViewController<PPScanningViewController>*)cameraViewController
           didPublishProgress:(CGFloat)progress;
 
+/**
+ * Camera view reports the start of detection cycle.
+ */
 - (void)cameraViewControllerDidStartDetection:(UIViewController<PPScanningViewController> *)cameraViewController;
 
 /**

@@ -37,8 +37,14 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTextMetadata : PPMetadata
  */
 @property (nonatomic, assign) PPTextMetadataType type;
 
+/**
+ * Please use one available initializers
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
+/**
+ * Please use one available initializers
+ */
 - (instancetype)initWithName:(NSString *)name NS_UNAVAILABLE;
 
 /**

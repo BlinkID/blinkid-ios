@@ -23,6 +23,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
  * Adds OCR parser. Parser results will be fetched by parser name.
  *
  * Parsers added this way are added to default group.
+ *
+ *  @param factory Parser to be added
+ *  @param name    ID of the parser to be added. Output of this parser can be fetched by this name
  */
 - (void)addOcrParser:(PPOcrParserFactory *)factory name:(NSString *)name;
 
@@ -35,6 +38,10 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
  * and parsers with different character sets in different groups (i.e. amount parser and email parser).
  *
  * If using Templating API, parser groups also denote which parsers will be used for specific PPDecodingInfo (group name and uniqueId have to be same).
+ *
+ *  @param factory Parser to be added
+ *  @param name    Name/ID of the parser to be added. Output of this parser can be fetched by this name
+ *  @param group   Group name/ID of the parser to be added
  */
 - (void)addOcrParser:(PPOcrParserFactory *)factory
                 name:(NSString *)name
@@ -42,16 +49,23 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
 
 /**
  * Removes parser with given name.
+ *
+ *  @param name Name/ID of the parser to be removed
  */
 - (void)removeOcrParserWithName:(NSString *)name;
 
 /**
  * Removes parser with given name from group.
+ *
+ *  @param name  Name/ID of the parser to be removed
+ *  @param group Group name/ID of the parser to be removed
  */
 - (void)removeOcrParserWithName:(NSString *)parser fromGroup:(NSString *)group;
 
 /**
  * Removes all parsers from a given group.
+ *
+ *  @param Group name/ID in which all parsers will be removed
  */
 - (void)clearParsersInGroup:(NSString *)group;
 
@@ -62,11 +76,18 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
 
 /**
  * Sets array of PPDecodingInfo to be used when PPDocumentClassifer outputs a selected result.
+ *
+ *  @see PPDocumentClassifier
+ *
+ *  @param decodingInfos    Decoding infos to be used when PPDocumentClassifier outputs selected result
+ *  @param classifierResult Output from PPDocumentClassifer
  */
 - (void)setDecodingInfoSet:(NSArray<PPDecodingInfo*> *)decodingInfos forClassifierResult:(NSString *)classifierResult;
 
 /**
  * Removes all decoding infos for a given classifier result.
+ *
+ * @param classifierResult Removes all decoding infos linked to specified classifier result
  */
 - (void)removeDecodingInfoSetForClassifierResult:(NSString *)classifierResult;
 

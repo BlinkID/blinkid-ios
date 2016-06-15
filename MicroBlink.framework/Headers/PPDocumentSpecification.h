@@ -84,6 +84,7 @@ typedef NS_ENUM(NSUInteger, PPDocumentPreset) {
 
 /**
  * Document class describes a document which is being detected by DocumentDetector.
+ * We encurage users to create specifications with one of our presets, if possible.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopying>
 

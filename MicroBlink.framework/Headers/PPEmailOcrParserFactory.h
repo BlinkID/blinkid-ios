@@ -9,7 +9,7 @@
 #import "PPOcrParserFactory.h"
 
 /**
- *  Parses email addresses
+ *  Parses email addresses.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEmailOcrParserFactory : PPOcrParserFactory
 

@@ -138,6 +138,9 @@ NS_ASSUME_NONNULL_BEGIN
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPOverlaySubview : UIView<PPOverlaySubview>
 
+/**
+ * Sorts an array of CGPoint objects
+ */
 - (NSArray*)sortedPoints:(NSArray*)points;
 
 @end

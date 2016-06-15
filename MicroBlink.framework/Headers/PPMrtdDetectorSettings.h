@@ -41,7 +41,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdDetectorSettings : PPQuadDetectorSe
  */
 - (instancetype)init;
 
-// Unavailable initializer from superclass
+/**
+ * Unavailable initializer from superclass
+ */
 - (instancetype)initWithSettings:(DetectorSettingsImpl*)settings NS_UNAVAILABLE;
 
 /**

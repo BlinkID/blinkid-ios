@@ -53,6 +53,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDecodingInfo : NSObject
                   dewarpedHeight:(CGFloat)dewarpedHeight
                         uniqueId:(NSString *)uniqueId NS_DESIGNATED_INITIALIZER;
 
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

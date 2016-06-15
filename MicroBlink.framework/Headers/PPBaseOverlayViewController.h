@@ -18,11 +18,18 @@ NS_ASSUME_NONNULL_BEGIN
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBaseOverlayViewController : PPOverlayViewController
 
 /**
- Array with overlay subviews (UIView subclasses implementing the PPOverlaySubview protocol)
+ * Registers a subview for overlay events.
  */
 - (void)registerOverlaySubview:(UIView<PPOverlaySubview>*)subview;
+
+/**
+ * Unregisters a subview for overlay events.
+ */
 - (void)unregisterOverlaySubview:(UIView<PPOverlaySubview>*)subview;
 
+/**
+ * Delegate for subview animation events.
+ */
 @property (nonatomic, weak) id<PPOverlaySubviewDelegate> overlaySubviewsDelegate;
 
 @end
