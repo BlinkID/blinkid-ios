@@ -62,17 +62,15 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrCharKey : NSObject
 
 @end
 
-typedef struct OcrEngineOptionsImpl OcrEngineOptionsImpl;
-
 /**
  * Options used for OCR process
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrEngineOptions : NSObject <NSCopying>
 
-/**
- * Internal implementation
- */
-@property (nonatomic, readonly, assign) OcrEngineOptionsImpl* options;
+///**
+// * Internal implementation
+// */
+//@property (nonatomic, readonly, assign) OcrEngineOptionsImpl* options;
 
 /**
  * Minimal height of the line of text given in pixels. All chars smaller than this value will be ignored.

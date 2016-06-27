@@ -11,23 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-struct OcrParserFactoryImpl;
-typedef struct OcrParserFactoryImpl OcrParserFactoryImpl;
-
 /**
  * Base class of all OCR parsers.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrParserFactory : NSObject
-
-/**
- * Internal parser factory.
- */
-@property (nonatomic, readonly, assign) OcrParserFactoryImpl *factory;
-
-/**
- * Internal initializer. Please use default initializer.
- */
-- (instancetype)initWithFactory:(struct OcrParserFactoryImpl *)factory;
 
 /**
  * Denotes if this parser is required to output results.

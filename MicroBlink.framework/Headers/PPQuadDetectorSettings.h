@@ -22,6 +22,11 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadDetectorSettings : PPDetectorSettin
  */
 @property (nonatomic) NSArray<PPDecodingInfo*> *decodingInfoArray;
 
+/**
+ * This is an abstract class. Please use one of concrete classes.
+ */
+- (instancetype)init NS_UNAVAILABLE;
+
 @end
 
 NS_ASSUME_NONNULL_END

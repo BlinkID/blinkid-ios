@@ -42,11 +42,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdDetectorSettings : PPQuadDetectorSe
 - (instancetype)init;
 
 /**
- * Unavailable initializer from superclass
- */
-- (instancetype)initWithSettings:(DetectorSettingsImpl*)settings NS_UNAVAILABLE;
-
-/**
  * If YES, the whole document is detected, as opposed to just MRZ zone on the bottom of the document
  
  * Default: YES.

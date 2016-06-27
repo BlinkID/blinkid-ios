@@ -11,9 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-struct RecognizerSettingsImpl;
-typedef struct RecognizerSettingsImpl RecognizerSettingsImpl;
-
 /**
  * MicroBlink scanning libraries run several Recognizers on each video frame.
  *
@@ -22,10 +19,6 @@ typedef struct RecognizerSettingsImpl RecognizerSettingsImpl;
  * This class is common superclass for each of the Recognizer settings,
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRecognizerSettings : NSObject <NSCopying>
-
-@property (nonatomic, readonly, assign) RecognizerSettingsImpl *settings;
-
-- (instancetype)initWithSettings:(RecognizerSettingsImpl *)settings;
 
 /**
  * Property which determines if the recognizer is enabled

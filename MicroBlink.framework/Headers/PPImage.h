@@ -51,6 +51,20 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic) PPProcessingOrientation orientation;
 
 /**
+ * Tells whether camera input images should be mirrored horizontally before processing
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL mirroredHorizontally;
+
+/**
+ * Tells whether camera input images should be mirrored vertically before processing
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL mirroredVertically;
+
+/**
  *  Property which tells if this frame is a camera or a single photo frame.
  *  This is important for image processing.
  *
