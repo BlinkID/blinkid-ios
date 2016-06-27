@@ -34,9 +34,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentDetectorSettings : PPDetectorSe
  */
 - (instancetype)initWithNumStableDetectionsThreshold:(NSUInteger)threshold NS_DESIGNATED_INITIALIZER;
 
-// Unavailable initializer
-- (instancetype)initWithSettings:(DetectorSettingsImpl*)settings NS_UNAVAILABLE;
-
 /**
  * Sets the document specifications. Document specifications describe the images that should be returned by
  * the detectior.

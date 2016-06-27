@@ -113,11 +113,18 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) CGPoint focusPoint;
 
 /**
- * Tells whether camera input images should be flipped upside down before processing
+ * Tells whether camera input images should be mirrored horizontally before processing
  *
  * Default: NO
  */
-@property (nonatomic) BOOL cameraFlipped;
+@property (nonatomic) BOOL cameraMirroredHorizontally;
+
+/**
+ * Tells whether camera input images should be mirrored vertically before processing
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL cameraMirroredVertically;
 
 /**
  * Designated initializer. Initializes the object with default settings (see above for defaults)

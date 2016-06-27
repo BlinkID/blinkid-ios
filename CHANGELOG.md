@@ -1,3 +1,13 @@
+## 2.1.0
+
+- iOS updates:
+
+	- Added option to mirror camera frames in 'PPCameraSettings'
+	- Added VIN parser
+	
+- iOS bugfixes
+	- Fixed deadlock when 'processImage:' is called from main thread
+
 ## 2.0.0
 
 - BlinkID now includes BlinkOCR and all it's features
