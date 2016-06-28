@@ -1,3 +1,7 @@
+## 2.1.0
+
+- No backwards incompatible changes. See Release notes for new features.
+
 ## 2.0.0
 
 - `PPCameraCoordinator` now assumes the role of `PPCoordinator`. If you do not use your own camera management or Direct API you can rename all instances of `PPCoordinator` to `PPCameraCoordinator`
