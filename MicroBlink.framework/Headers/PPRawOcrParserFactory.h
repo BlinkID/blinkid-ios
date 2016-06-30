@@ -16,11 +16,11 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRawOcrParserFactory : PPOcrParserFactory
 
 /**
- * Ocr Engine options used in Raw ocr parsing
+ * Sets desired options for a parser. Options enable various customizations of a parsers such as: allowed characters, character heigh, etc.
  *
  * Default: [[PPOcrEngineOptions alloc] init]
  */
-@property (nonatomic, strong) PPOcrEngineOptions *options;
+-(void)setOptions:(PPOcrEngineOptions *) options;
 
 /**
  * Use algorithm for combining consecutive OCR results between video frames

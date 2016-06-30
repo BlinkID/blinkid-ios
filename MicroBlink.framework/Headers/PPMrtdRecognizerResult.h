@@ -8,6 +8,7 @@
 
 #import "PPTemplatingRecognizerResult.h"
 #import "PPOcrLayout.h"
+#import "PPMrtdDocumentType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,6 +32,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
 - (BOOL)isParsed;
 
 /**
+ *  Returns MRTD document type of recognized document.
+ *
+ *  return PPMrtdDocumentType
+ */
+- (PPMrtdDocumentType)documentType;
+
+/**
  * Returns three-letter code which indicate the issuing State.
  * Three-letter codes are based on Alpha-3 codes for entities specified in 
  * ISO 3166-1, with extensions for certain States.
@@ -41,6 +49,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
 
 /**
  * Unique number of the document. Document number contains up to 9 characters.
+ * Element does not exist on US Green Card. To see which document was scanned use documentType property.
  *
  *  @return documentNumber
  */
@@ -104,20 +113,44 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
 - (NSString *)sex;
 
 /**
- * Returns first optional data. 
- * Returns nil or empty string if not available.
+ * Returns first optional data. Returns nil or empty string if not available.
+ * Element does not exist on US Green Card. To see which document was scanned use documentType property.
  *
  *  @return optional data 1
  */
 - (NSString *)opt1;
 
 /**
- * Returns first optional data.
- * Returns nil or empty string if not available.
+ * Returns first optional data. Returns nil or empty string if not available.
+ * Element does not exist on Passports and Visas. To see which document was scanned use documentType property.
  *
  *  @return optional data 2
  */
 - (NSString *)opt2;
+
+/** 
+ * Returns alien number. Returns nil or empty string if not available.
+ * Exists only on US Green Cards. To see which document was scanned use documentType property.
+ *
+ *  @return alien number
+ */
+- (NSString *)alienNumber;
+
+/**
+ * Returns application receipt number. Returns nil or empty string if not available.
+ * Exists only on US Green Cards. To see which document was scanned use documentType property.
+ *
+ *  @return application receipt number
+ */
+- (NSString *)applicationReceiptNumber;
+
+/**
+ * Returns immigrant case number. Returns nil or empty string if not available.
+ * Exists only on US Green Cards. To see which document was scanned use documentType property.
+ *
+ *  @return immigrant case number
+ */
+- (NSString *)immigrantCaseNumber;
 
 /**
  * Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing

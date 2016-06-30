@@ -72,8 +72,10 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 #pragma mark - Direct processing of images
 
 /**
- * Processes a PPImage object using current settings.
- * Results are passed to a given delegate object.
+ * Processes a PPImage object synchronously using current settings.
+ * Since this method is synchronous, calling it from a main thread will switch the call to alternate thread internally and output a warning.
+ *
+ * Results are passed a delegate object given upon a creation of PPCoordinator.
  *
  *  @param image            image for processing
  */

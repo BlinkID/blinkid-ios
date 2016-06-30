@@ -63,14 +63,15 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrCharKey : NSObject
 @end
 
 /**
- * Options used for OCR process
+ * Options used for OCR process. These options enable you to customize how some OCR parsers work.
+ * For example, you can set character whitelists, character height, supported fonts etc.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrEngineOptions : NSObject <NSCopying>
 
-///**
-// * Internal implementation
-// */
-//@property (nonatomic, readonly, assign) OcrEngineOptionsImpl* options;
+/**
+ * Creates PPOcrEngineOptions with default settings.
+ */
+- (instancetype)init;
 
 /**
  * Minimal height of the line of text given in pixels. All chars smaller than this value will be ignored.
@@ -137,7 +138,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrEngineOptions : NSObject <NSCopying>
  *
  * Default: all chars with all fonts.
  */
-@property (nonatomic, strong) NSSet* charWhitelist;
+@property (nonatomic, strong) NSSet<PPOcrCharKey*> *charWhitelist;
 
 
 @end
