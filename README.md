@@ -29,7 +29,13 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like BlinkID in your projects. See the ["Getting Started" guide for more information](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started).
 
-- If you wish to use version v2.0.0 or above, you need to install Git Large File storage as described here: https://git-lfs.github.com
+- If you wish to use version v1.4.0 or above, you need to install [Git Large File Storage](https://git-lfs.github.com) by running these comamnds:
+```shell
+brew install git-lfs
+git lfs install
+```
+
+- **Be sure to restart your console after installing Git LFS**
 
 - If you're using CocoaPods, you can easily try our sample apps by running the following command in your terminal window:
 
@@ -41,7 +47,7 @@ pod try PPBlinkID
 
 ```ruby
 platform :ios, '7.0'
-pod 'PPBlinkID', '~> 2.1.0'
+pod 'PPBlinkID', '~> 2.2.0'
 ```
 
 ## Requirements

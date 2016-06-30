@@ -41,7 +41,7 @@ static NSString *rawOcrParserId = @"Raw ocr";
 }
 
 - (IBAction)closeCamera:(id)sender {
-    [((AVCaptureVideoDataOutput *)_captureSession.outputs[0]) setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animate {
@@ -188,13 +188,8 @@ static NSString *rawOcrParserId = @"Raw ocr";
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    OSType pixelFormat = CVPixelBufferGetPixelFormatType(CMSampleBufferGetImageBuffer(sampleBuffer));
     
-    if(pixelFormat == kCVPixelFormatType_420YpCbCr8BiPlanarFullRange) {
-        NSLog(@"YUV");
-    } else {
-                NSLog(@"BGRA");
-    }
+    [self.coordinator processImage:[PPImage imageWithCmSampleBuffer:sampleBuffer]];
     
 }
 
@@ -211,7 +206,7 @@ static NSString *rawOcrParserId = @"Raw ocr";
     /** 2. Setup the license key */
     
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"UJ4FY6F5-BWLRGC6Y-3DKUK6NN-YVJURO7R-4WPK5D6C-FP5ITGVQ-6SW4LU2D-PAG6EA5V";
+    settings.licenseSettings.licenseKey = @"7J7EBQVU-I5OSBF2E-QT7LBDCU-4RSDE72H-L4TSFPDR-XRY3Y4N4-OG6HCPAR-STLYN6KU";
     
     
     /**

@@ -1,3 +1,13 @@
+## 2.2.0
+
+- iOS updates:
+	- Added recognizer for Singapore ID
+	- Added recognizer for Austrian ID
+	- Added recognizer for Czech ID
+	
+- iOS bugfixes:
+	- PPOcrEngineOptions are now applyed correctly when set
+
 ## 2.1.0
 
 - iOS updates:

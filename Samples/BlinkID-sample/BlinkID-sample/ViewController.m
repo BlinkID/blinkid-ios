@@ -56,7 +56,7 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"NO3GLCN2-65O6NDWH-KFJ7IEAD-747A4K4K-XVTN2CYR-IXRWTKNZ-7JLWRKSV-BDQWXFQG"; // Valid temporarily
+    settings.licenseSettings.licenseKey = @"J4F26WEE-32XOS35V-S7OKJBGY-JS6NQTF4-3BGLZWCM-XTMEZPGY-JS6NRTHC-TBLJKUKQ"; // Valid temporarily
 
 
     /**
@@ -67,41 +67,12 @@
     { // Remove this if you're not using MRTD recognition
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-        PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
+        PPSingaporeIDRecognizerSettings *mrtdRecognizerSettings = [[PPSingaporeIDRecognizerSettings alloc] init];
 
         /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
-        // tell the library to get full image of the document. Setting this to YES makes sense just if
-        // settings.metadataSettings.dewarpedImage = YES, otherwise it wastes CPU time.
-        mrtdRecognizerSettings.dewarpFullDocument = NO;
-
         // Add MRTD Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:mrtdRecognizerSettings];
-    }
-
-    { // Remove this if you're not using USDL recognition
-
-        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
-        PPUsdlRecognizerSettings *usdlRecognizerSettings = [[PPUsdlRecognizerSettings alloc] init];
-
-        /** You can modify the properties of usdlRecognizerSettings to suit your use-case */
-
-        // Add USDL Recognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:usdlRecognizerSettings];
-    }
-
-    { // Remove this if you're not using EUDL recognition
-
-        // To specify we want to perform EUDL (EU Driver's license) recognition, initialize the EUDL recognizer settings
-        PPEudlRecognizerSettings *eudlRecognizerSettings = [[PPEudlRecognizerSettings alloc] initWithEudlCountry:PPEudlCountryUnitedKingdom];
-
-        /** You can modify the properties of eudlRecognizerSettings to suit your use-case */
-
-        // If you want to save the image of the EUDL, set this to YES
-        eudlRecognizerSettings.showFullDocument = YES;
-
-        // Add EUDL Recognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:eudlRecognizerSettings];
     }
 
     /** 4. Initialize the Scanning Coordinator object */
@@ -175,9 +146,9 @@
     // Collect data from the result
     for (PPRecognizerResult* result in results) {
 
-        if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPSingaporeIDRecognizerResult class]]) {
             /** MRTD was detected */
-            PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
+            PPSingaporeIDRecognizerResult* mrtdResult = (PPSingaporeIDRecognizerResult*)result;
             title = @"MRTD";
             message = [mrtdResult description];
         }

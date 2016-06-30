@@ -37,6 +37,22 @@
 #import "PPCroIDBackRecognizerSettings.h"
 #import "PPCroIDBackRecognizerResult.h"
 
+// Czech
+#import "PPCzIDFrontRecognizerSettings.h"
+#import "PPCzIDFrontRecognizerResult.h"
+#import "PPCzIDBackRecognizerSettings.h"
+#import "PPCzIDBackRecognizerResult.h"
+
+// Austria
+#import "PPAusIDFrontRecognizerSettings.h"
+#import "PPAusIDFrontRecognizerResult.h"
+#import "PPAusIDBackRecognizerSettings.h"
+#import "PPAusIDBackRecognizerResult.h"
+
+// Singapore
+#import "PPSingaporeIDRecognizerSettings.h"
+#import "PPSingaporeIDRecognizerResult.h"
+
 // Use all recognizers from BlinkBarcode
 #import "PPBlinkBarcodeRecognizers.h"
 

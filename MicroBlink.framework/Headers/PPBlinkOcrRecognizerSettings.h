@@ -43,7 +43,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBlinkOcrRecognizerSettings : PPTemplati
 @property (nonatomic) PPDetectorSettings *detectorSettings;
 
 /**
- * Templating API documents will be processed twice: once regulary and second time flipped upside down.
+ * With this enabled, Templating API documents will be processed twice: once regulary and second time flipped upside down.
  *
  * Default: NO
  */
