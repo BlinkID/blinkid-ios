@@ -68,7 +68,7 @@ static NSString *CLASS_NEW_ID = @"newCroId";
     /** 2. Setup the license key */
     
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"PXDINEKM-NYNWDIZO-MOG7DWJD-2MVL5I3O-DE3YGZK4-Z5SVZT3F-LTHWLXBO-NMHHINUI"; // Valid temporarily
+    settings.licenseSettings.licenseKey = @"VOEZDAU5-OY4L6N6D-IML6XBV6-UNXBSN4D-MVOM6ZK4-Z5SVZT3F-LTHWLXBO-NMHHINJ6"; // Valid temporarily
     
 
 
@@ -106,14 +106,16 @@ static NSString *CLASS_NEW_ID = @"newCroId";
             /**
              * tweak OCR engine options - allow only recognition of uppercase letters used in Croatia
              */
-            nameParser.options.charWhitelist = [self uppercaseCharsWhitelist];
-
+            PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
+            options.charWhitelist = [self uppercaseCharsWhitelist];
+            [nameParser setOptions:options];
+            
             /**
              * Add parser to recognizer settings
              */
             [ocrSettings addOcrParser:nameParser name:ID_FIRST_NAME group:ID_FIRST_NAME];
-
-            /** 
+            
+            /**
              * Locations of first name string on borth old and new ID cards
              */
             CGRect oldIdNameLocation = CGRectMake(0.282, 0.333, 0.306, 0.167);
@@ -131,7 +133,10 @@ static NSString *CLASS_NEW_ID = @"newCroId";
         {
             int dewarpHeight = 150;
             PPRegexOcrParserFactory *nameParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"([A-ZŠĐŽČĆ]+ ?)+"];
-            nameParser.options.charWhitelist = [self uppercaseCharsWhitelist];
+            
+            PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
+            options.charWhitelist = [self uppercaseCharsWhitelist];
+            [nameParser setOptions:options];
             
             [ocrSettings addOcrParser:nameParser name:ID_LAST_NAME group:ID_LAST_NAME];
             
@@ -155,13 +160,17 @@ static NSString *CLASS_NEW_ID = @"newCroId";
             [charWhitelist addObject:[PPOcrCharKey keyWithCode:'F' font:PP_OCR_FONT_ANY]];
             [charWhitelist addObject:[PPOcrCharKey keyWithCode:'/' font:PP_OCR_FONT_ANY]];
             [charWhitelist addObject:[PPOcrCharKey keyWithCode:0xC5 font:PP_OCR_FONT_ANY]];
-            sexParser.options.charWhitelist = charWhitelist;
+            PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
+            options.charWhitelist = charWhitelist;
+            [sexParser setOptions:options];
             
             [ocrSettings addOcrParser:sexParser name:ID_SEX group:ID_SEX_CITIZENSHIP_DOB];
             
             /** Setup citizenship parser */
             PPRegexOcrParserFactory *citizenshipParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"[A-Z]{3}"];
-            citizenshipParser.options.charWhitelist = [self uppercaseCharsWhitelist];
+            options = [[PPOcrEngineOptions alloc] init];
+            options.charWhitelist = [self uppercaseCharsWhitelist];
+            [citizenshipParser setOptions:options];
             
             [ocrSettings addOcrParser:citizenshipParser name:ID_CITIZENSHIP group:ID_SEX_CITIZENSHIP_DOB];
             
@@ -195,8 +204,10 @@ static NSString *CLASS_NEW_ID = @"newCroId";
             for (int c = '0'; c <= '9'; c++) {
                 [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
             }
-            documentNumberParser.options.charWhitelist = charWhitelist;
-            documentNumberParser.options.minimalLineHeight = 35;
+            PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
+            options.charWhitelist = charWhitelist;
+            options.minimalLineHeight = 35;
+            [documentNumberParser setOptions:options];
             
             [ocrSettings addOcrParser:documentNumberParser name:ID_DOCUMENT_NUMBER group:ID_DOCUMENT_NUMBER_NEW];
             [ocrSettings addOcrParser:documentNumberParser name:ID_DOCUMENT_NUMBER group:ID_DOCUMENT_NUMBER_OLD];
