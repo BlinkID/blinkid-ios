@@ -67,7 +67,7 @@
     { // Remove this if you're not using MRTD recognition
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-        PPSingaporeIDRecognizerSettings *mrtdRecognizerSettings = [[PPSingaporeIDRecognizerSettings alloc] init];
+        PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
 
         /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
@@ -146,9 +146,9 @@
     // Collect data from the result
     for (PPRecognizerResult* result in results) {
 
-        if ([result isKindOfClass:[PPSingaporeIDRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPMrtdRecognizerResult class]]) {
             /** MRTD was detected */
-            PPSingaporeIDRecognizerResult* mrtdResult = (PPSingaporeIDRecognizerResult*)result;
+            PPMrtdRecognizerResult* mrtdResult = (PPMrtdRecognizerResult*)result;
             title = @"MRTD";
             message = [mrtdResult description];
         }
