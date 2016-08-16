@@ -68,7 +68,7 @@
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
         PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
-
+        
         /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
         // Add MRTD Recognizer setting to a list of used recognizer settings
