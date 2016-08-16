@@ -108,7 +108,7 @@
     NSLog(@"Barcode scanning process terminated");
 }
 
-- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController didPublishProgress:(float)progress {
+- (void)cameraViewController:(id<PPScanningViewController>)cameraViewController didPublishProgress:(CGFloat)progress {
     NSLog(@"Barcode scanning don't have progress reporting implemented yet");
 }
 
