@@ -101,19 +101,19 @@ static NSString *CLASS_NEW_ID = @"newCroId";
              * For extracting first and last names, we will use regex parser with regular expression which
              * attempts to extract as many uppercase words as possible from single line.
              */
-            PPRegexOcrParserFactory *nameParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"([A-ZŠĐŽČĆ]+ ?)+"];
+            PPRegexOcrParserFactory *firstNameParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"([A-ZŠĐŽČĆ]+ ?)+"];
             
             /**
              * tweak OCR engine options - allow only recognition of uppercase letters used in Croatia
              */
             PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
             options.charWhitelist = [self uppercaseCharsWhitelist];
-            [nameParser setOptions:options];
+            [firstNameParser setOptions:options];
             
             /**
              * Add parser to recognizer settings
              */
-            [ocrSettings addOcrParser:nameParser name:ID_FIRST_NAME group:ID_FIRST_NAME];
+            [ocrSettings addOcrParser:firstNameParser name:ID_FIRST_NAME group:ID_FIRST_NAME];
             
             /**
              * Locations of first name string on borth old and new ID cards
@@ -132,13 +132,13 @@ static NSString *CLASS_NEW_ID = @"newCroId";
         /** Setup last name decoding */
         {
             int dewarpHeight = 150;
-            PPRegexOcrParserFactory *nameParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"([A-ZŠĐŽČĆ]+ ?)+"];
+            PPRegexOcrParserFactory *lastNameParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"([A-ZŠĐŽČĆ]+ ?)+"];
             
             PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
             options.charWhitelist = [self uppercaseCharsWhitelist];
-            [nameParser setOptions:options];
+            [lastNameParser setOptions:options];
             
-            [ocrSettings addOcrParser:nameParser name:ID_LAST_NAME group:ID_LAST_NAME];
+            [ocrSettings addOcrParser:lastNameParser name:ID_LAST_NAME group:ID_LAST_NAME];
             
             CGRect oldIdNameLocation = CGRectMake(0.271, 0.204, 0.318, 0.111);
             CGRect newIdNameLocation = CGRectMake(0.282, 0.204, 0.353, 0.167);
@@ -200,7 +200,7 @@ static NSString *CLASS_NEW_ID = @"newCroId";
             PPRegexOcrParserFactory *documentNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"\\d{9}"];
             
             NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
-            // Add chars 'A'-'Z'
+            // Add chars '0'-'9'
             for (int c = '0'; c <= '9'; c++) {
                 [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
             }
