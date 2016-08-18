@@ -19,7 +19,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 
 ## How to get started
 
-- [Download BlinkID SDK](https://github.com/BlinkID/blinkid-ios/archive/master.zip) and try out the included iOS sample apps
+- [Download BlinkID SDK](https://github.com/BlinkID/blinkid-ios/releases) and try out the included iOS sample apps (Download .zip or .tar.gz file starting with BlinkID. DO NOT download Source Code as GitHub does not fully support Git Large File Storage)
 - Read the ["Getting Started" guide](https://github.com/BlinkID/blinkid-ios/wiki/Getting-started) to integrate the SDK in your app(s)
 - [Generate](https://microblink.com/login?url=/customer/generatedemolicence) a **free demo license key** to start using the SDK in your app (registration required)
 - [Contact us](http://www.microblink.com) to get pricing info
