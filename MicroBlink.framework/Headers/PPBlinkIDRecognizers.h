@@ -21,10 +21,6 @@
 #import "PPMyKadRecognizerSettings.h"
 #import "PPMyKadRecognizerResult.h"
 
-// Detector recognizer
-#import "PPDetectorRecognizerSettings.h"
-#import "PPDetectorRecognizerResult.h"
-
 // OCR recognizer
 #import "PPBlinkOcrRecognizerSettings.h"
 #import "PPBlinkOcrRecognizerResult.h"
@@ -52,6 +48,17 @@
 // Singapore
 #import "PPSingaporeIDRecognizerSettings.h"
 #import "PPSingaporeIDRecognizerResult.h"
+
+// Detectors
+#import "PPDocumentDetectorResult.h"
+#import "PPDocumentDetectorSettings.h"
+#import "PPPointsDetectorResult.h"
+#import "PPMrtdDetectorResult.h"
+#import "PPMrtdDetectorSettings.h"
+#import "PPMultiDetectorSettings.h"
+#import "PPMultiDetectorResult.h"
+#import "PPDetectorRecognizerSettings.h"
+#import "PPDetectorRecognizerResult.h"
 
 // Use all recognizers from BlinkBarcode
 #import "PPBlinkBarcodeRecognizers.h"

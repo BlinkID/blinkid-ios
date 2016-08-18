@@ -1,3 +1,15 @@
+##2.2.1
+
+- iOS fixes:
+	- CFBundleSUpportedPlatforms removed from Info.plist files
+	- Applying affine transformation to `PPQuadrangle` now correctly assigns points.
+	- When using both Direct API and `PPCameraCoordinator`, scanning results will now be correctly outputted to `PPCoordinatorDelegate` and `PPScanningDelegate` respectively
+	- Fixed crashes related to camera permissions and added dummy view when camera permission is disabled
+	- Fixed issues related to topLayoutGuide on iOS6
+	- Improved performance of CroID recognizers
+	- USDL elements can now be separated by \r
+	- Improved performance of Date parser
+
 ## 2.2.0
 
 - iOS updates:

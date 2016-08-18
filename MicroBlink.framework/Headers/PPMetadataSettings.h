@@ -25,7 +25,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadataSettings : NSObject <NSCopying>
 
 /**
  * If YES, currently processed video frame will be captured.
- * TODO: tell which type exactly
  *
  * Default: NO
  */
@@ -33,7 +32,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadataSettings : NSObject <NSCopying>
 
 /**
  * If YES, image on which scan gave valid scaning result will be saved
- * TODO: tell which type exactly
  *
  * Default: NO
  */
@@ -41,7 +39,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadataSettings : NSObject <NSCopying>
 
 /**
  * If YES, dewarped images in the recognition process will be saved
- * TODO: tell which type exactly
  *
  * Default: NO
  */
