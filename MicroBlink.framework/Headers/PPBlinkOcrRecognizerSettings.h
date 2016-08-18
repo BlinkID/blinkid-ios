@@ -21,6 +21,7 @@
 #import "PPEmailOcrParserFactory.h"
 #import "PPIbanOcrParserFactory.h"
 #import "PPPriceOcrParserFactory.h"
+#import "PPLicensePlatesParserFactory.h"
 #import "PPVinOcrParserFactory.h"
 
 #import "PPDetectorSettings.h"

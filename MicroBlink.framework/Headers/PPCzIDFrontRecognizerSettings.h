@@ -9,10 +9,10 @@
 #import "PPRecognizerSettings.h"
 
 /**
-* Settings class for configuring Czech Front ID Recognizer
-*
-* Czech Front ID recognizer is used for scanning front side of Czech ID.
-*/
+ * Settings class for configuring Czech Front ID Recognizer
+ *
+ * Czech Front ID recognizer is used for scanning front side of Czech ID.
+ */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**

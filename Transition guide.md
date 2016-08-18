@@ -1,3 +1,7 @@
+## 2.2.1
+
+- No backwards incompatible changes. See Release notes for new features.
+
 ## 2.2.0
 
 - Removed PPOcrEngineOptions property from PPRegexOcrParserFactory and PPRawOcrParserFactory. Replaced property with setter method.

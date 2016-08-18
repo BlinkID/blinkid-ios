@@ -114,11 +114,33 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)scanningViewControllerDidRequestMoreInfo:(UIViewController<PPScanningViewController> *)scanningViewController;
 
-- (void)scanningViewControllerDidStartDetection:(UIViewController<PPScanningViewController> *)scanninvViewController;
+/**
+ * Called when Scanning library starts detection of objects.
+ * Detection cycle happens before recognition cycle and it attempts to find the location of specific object on an image. 
+ * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not vice versa).
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
+ */
+- (void)scanningViewControllerDidStartDetection:(UIViewController<PPScanningViewController> *)scanningViewController;
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController
+/**
+ * Called when Scanning library finishes detection of objects.
+ * Detection cycle happens before recognition cycle and it attempts to find the location of specific object on an image.
+ * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not vice versa).
+ *
+ * Returned PPDetectorResult object is an abstract class. Concrete classes (such as PPQuadDetectorResult) contain information about detected object (i.e. location on the screen).
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
+ *  @param result result of object detection containing information of detection (i.e. location)
+ */
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
   didFinishDetectionWithResult:(PPDetectorResult *)result;
 
+/**
+ * Called when Scanning library starts recognition cycle. Recognition cycle happens after successful detection cycle.
+ *
+ *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
+ */
 - (void)scanningViewControllerDidStartRecognition:(UIViewController<PPScanningViewController> *)scanningViewController;
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController

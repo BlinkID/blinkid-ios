@@ -23,7 +23,13 @@
 #import "PPBlinkIDRecognizers.h"
 
 // Include Overlay view controller headers
-#import "PPBaseOverlayViewController.h"
+#import "PPIDCardOverlayViewController.h"
+#import "PPModernBaseOverlayViewController.h"
+#import "PPModernOverlayViewController.h"
+#import "PPSegmentScanOverlayViewController.h"
+#import "PPTemplatingOverlayViewController.h"
+#import "PPBaseBarcodeOverlayViewController.h"
+#import "PPBarcodeOverlayViewController.h"
 
 // Include Overlay subview headers
 #import "PPModernOcrResultOverlaySubview.h"

@@ -11,6 +11,7 @@
 #import "PPCoordinator.h"
 #import "PPMicroBlinkDefines.h"
 #import "PPScanningViewController.h"
+#import "PPScanningDelegate.h"
 #import "PPCameraSettings.h"
 
 @class PPCameraManager;
@@ -70,6 +71,22 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *  @return YES if scanning is not supported, NO otherwise.
  */
 + (BOOL)isScanningUnsupportedForCameraType:(PPCameraType)type error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NOTHROW;
+
+/**
+ * Creates the scanning view controller with this coordinator and given delegate object.
+ * Calling this method is equivalend of calling [PPViewControllerFactory cameraViewControllerWithDelegate:self error:nil]
+ *
+ * @see PPViewControllerFactory
+ */
+- (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanningDelegate>)delegate;
+
+/**
+ * Creates the scanning view controller with this coordinator and given delegate object and given custom overlay.
+ * Calling this method is equivalend of calling [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlayViewController error:nil]
+ *
+ * @see PPViewControllerFactory
+ */
+- (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanningDelegate>)delegate overlayViewController:(PPOverlayViewController *)overlayViewController;
 
 /** 
  * Sets the scanning region. CGRect is given in coordinate system of the camera

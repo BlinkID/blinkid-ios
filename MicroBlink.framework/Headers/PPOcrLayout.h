@@ -44,13 +44,18 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Ocr blocks of the layout
  */
-@property (nonatomic) NSArray *blocks;
+@property (nonatomic) NSArray<PPOcrBlock*> *blocks;
 
 /**
  * Tranformation matrix which transforms the coordinate system in which the OCR layout is given 
  * (i.e. coordinate system of the image) to the coordinate system of the device screen.
  */
 @property (nonatomic) CGAffineTransform transform;
+
+/**
+ * Position of layout on the image, in the coordinate system of the image
+ */
+@property (nonatomic) PPPosition *position;
 
 /**
  * OCR layout was recognized from flipped image
@@ -67,7 +72,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return initialized ocr layout
  */
-- (instancetype)initWithOcrBlocks:(NSArray *)ocrBlocks transform:(CGAffineTransform)transform box:(CGRect)box flipped:(BOOL)flipped NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithOcrBlocks:(NSArray<PPOcrBlock*> *)ocrBlocks transform:(CGAffineTransform)transform box:(CGRect)box flipped:(BOOL)flipped NS_DESIGNATED_INITIALIZER;
 
 /**
  * Initializer from blocks
@@ -98,18 +103,27 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Ocr lines of the block
  */
-@property (nonatomic) NSArray *lines;
+@property (nonatomic) NSArray<PPOcrLine*> *lines;
 
+/**
+ * Position of the block on the image, in the coordinate system of the image
+ */
+@property (nonatomic) PPPosition *position;
+
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializer from lines
  *
  *  @param ocrLines ocr lines
+ *  @param position position of the block on image
  *
  *  @return initialized ocr block
  */
-- (instancetype)initWithOcrLines:(NSArray *)ocrLines NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithOcrLines:(NSArray<PPOcrLine*> *)ocrLines position:(PPPosition *)position NS_DESIGNATED_INITIALIZER;
 
 /**
  * Helper method which returna a simple string representation of the ocr block
@@ -131,18 +145,27 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Ocr chars of the line
  */
-@property (nonatomic) NSArray *chars;
+@property (nonatomic) NSArray<PPOcrChar*> *chars;
 
+/**
+ * Position of the line on the image, in the coordinate system of the image
+ */
+@property (nonatomic) PPPosition *position;
+
+/**
+ * Please use designated initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializer from chars
  *
  *  @param ocrChars ocr chars
+ *  @param position position of the line on image
  *
  *  @return initialized ocr line
  */
-- (instancetype)initWithOcrChars:(NSArray *)ocrChars NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithOcrChars:(NSArray<PPOcrChar*> *)ocrChars position:(PPPosition *)position NS_DESIGNATED_INITIALIZER;
 
 /**
  * Helper method which returna a simple string representation of the ocr line

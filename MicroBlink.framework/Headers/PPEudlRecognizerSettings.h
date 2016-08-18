@@ -61,6 +61,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEudlRecognizerSettings : PPRecognizerSe
  */
 @property (nonatomic, assign) BOOL showFullDocument;
 
+/**
+ * Country of scanning Eudl. The default value of PPEudlCountryAny will scan all supported driver's licenses.
+ *
+ * Default: PPEudlCountryAny
+ */
+@property (nonatomic, assign) PPEudlCountry country;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -159,6 +159,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (void)cameraViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController>*)cameraViewController;
 
 /**
+ * Scanning library requested authorization for Camera access from the user and the user accepted it.
+ */
+- (void)cameraViewControllerUserAuthorizedCamera:(UIViewController<PPScanningViewController>*)cameraViewController;
+
+/**
  Camera view appears and the scanning resumes. This happens when the camera view
  is opened, or when the app enters foreground with camera view displayed.
  */

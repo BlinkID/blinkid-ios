@@ -39,7 +39,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         /** 2. Setup the license key */
 
         // Visit www.microblink.com to get the license key for your app
-        settings.licenseSettings.licenseKey = "DQJ6ICMF-YSQFSXVG-YMCULUIW-RGFDKJGE-UL4FWYU7-RI2SJRFC-7BNWEHZK-QERKXNQU"
+        settings.licenseSettings.licenseKey = "BBETM7DP-53IOOHGE-7NJPFJ7J-6LPYVQUM-HY5BZBAN-TCGWO4QU-6DE4PFZD-UD22APRY"
 
 
         /**
