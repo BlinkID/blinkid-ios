@@ -1,3 +1,15 @@
+##2.3.0
+
+- iOS updates:
+	- Added German ID recognizer
+	- Added Slovakian ID recognizer
+	- Improved performance of Croatian ID recognizer
+
+##2.2.1
+
+- iOS fixes:
+	- Fixed problems with string localizations
+	
 ##2.2.1
 
 - iOS fixes:

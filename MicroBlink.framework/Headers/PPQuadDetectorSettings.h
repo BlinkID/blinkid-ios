@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Settings for Quad detector, used for rectangular objects.
+ * This class is an abstract class.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadDetectorSettings : PPDetectorSettings
 

@@ -25,11 +25,9 @@
 #import "PPBlinkOcrRecognizerSettings.h"
 #import "PPBlinkOcrRecognizerResult.h"
 
-// CroID Front
+// Croatia
 #import "PPCroIDFrontRecognizerSettings.h"
 #import "PPCroIDFrontRecognizerResult.h"
-
-// CroID Back
 #import "PPCroIDBackRecognizerSettings.h"
 #import "PPCroIDBackRecognizerResult.h"
 
@@ -45,9 +43,21 @@
 #import "PPAusIDBackRecognizerSettings.h"
 #import "PPAusIDBackRecognizerResult.h"
 
+// Germany
+#import "PPGermanIdFrontRecognizerSettings.h"
+#import "PPGermanIdFrontRecognizerResult.h"
+#import "PPGermanIdMrzRecognizerSettings.h"
+#import "PPGermanIdMrzRecognizerResult.h"
+
 // Singapore
 #import "PPSingaporeIDRecognizerSettings.h"
 #import "PPSingaporeIDRecognizerResult.h"
+
+// Slovakia
+#import "PPSlovakIdFrontRecognizerSettings.h"
+#import "PPSlovakIdFrontRecognizerResult.h"
+#import "PPSlovakIdBackRecognizerSettings.h"
+#import "PPSlovakIdBackRecognizerResult.h"
 
 // Detectors
 #import "PPDocumentDetectorResult.h"
