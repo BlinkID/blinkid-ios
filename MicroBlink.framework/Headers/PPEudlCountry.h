@@ -24,6 +24,11 @@ typedef NS_ENUM(NSUInteger, PPEudlCountry) {
     PPEudlCountryGermany,
 
     /**
+     * Austrian driver's licenses
+     */
+    PPEudlCountryAustria,
+
+    /**
      * Any EU DL
      */
     PPEudlCountryAny,

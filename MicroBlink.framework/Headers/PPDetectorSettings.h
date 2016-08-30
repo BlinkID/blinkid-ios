@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * MicroBlink scanning libraries run detector objects to find objects on image.
- * Each detector is configured with PPDetectorSettings object.
  * This class is common superclass for each of the Detector settings.
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDetectorSettings : NSObject <NSCopying>

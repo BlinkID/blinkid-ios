@@ -46,7 +46,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDBackRecognizerSettings : PPRecogni
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displayFullDOcumentImage;
+@property (nonatomic, assign) BOOL displayFullDocumentImage;
 
 @end
 
