@@ -68,7 +68,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *  Property which tells if this frame is a camera or a single photo frame.
  *  This is important for image processing.
  *
- *  Default: YES
+ *  Default: YES if created with CMSampleBuffer, NO if created with UIImage
  */
 @property (nonatomic) BOOL cameraFrame;
 

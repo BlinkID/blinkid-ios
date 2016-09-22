@@ -112,6 +112,11 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  */
 - (void)removeRecognizerSettings:(PPRecognizerSettings*)setting;
 
+/**
+ * Removes all recognizer settings from the list.
+ */
+- (void)removeAllRecognizerSettings;
+
 @end
 
 NS_ASSUME_NONNULL_END

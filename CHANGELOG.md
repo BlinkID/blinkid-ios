@@ -1,3 +1,12 @@
+##2.4.0
+
+- iOS updates:
+	- Aded Slovenian ID recognizer
+	- Added parser for mobile coupons
+	- Added frame quality property to PPImageMetadata
+- iOS bugfixes:
+	- Fixed issue where Templating API wasn't working as expected on some devices.
+
 ##2.3.0
 
 - iOS updates:

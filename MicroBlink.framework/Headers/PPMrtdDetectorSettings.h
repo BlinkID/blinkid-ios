@@ -18,7 +18,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdDetectorSettings : PPQuadDetectorSe
 /**
  * Initializes MRTD Detector settings with decoding information array
  *
- *  @param info information about parts of the image which will be decoded, each array object represents 1 decoded part of image
+ *  @param decodingInfoArray information about parts of the image which will be decoded, each array object represents 1 decoded part of image
  *
  *  @return initialized object
  */

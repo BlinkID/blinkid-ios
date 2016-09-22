@@ -45,7 +45,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDecodingInfo : NSObject
  *
  *  @param location       location of the decoding info entry on the detected document.
  *  @param dewarpedHeight height of the dewarped image
- *  @param identifier     identifier of the entry
+ *  @param uniqueId     identifier of the entry
  *
  *  @return initialized object.
  */

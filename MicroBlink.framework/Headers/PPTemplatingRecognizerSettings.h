@@ -57,7 +57,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
 /**
  * Removes parser with given name from group.
  *
- *  @param name  Name/ID of the parser to be removed
+ *  @param parser  Name/ID of the parser to be removed
  *  @param group Group name/ID of the parser to be removed
  */
 - (void)removeOcrParserWithName:(NSString *)parser fromGroup:(NSString *)group;
@@ -65,7 +65,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerSettings : PPRecogn
 /**
  * Removes all parsers from a given group.
  *
- *  @param Group name/ID in which all parsers will be removed
+ *  @param group name/ID in which all parsers will be removed
  */
 - (void)clearParsersInGroup:(NSString *)group;
 

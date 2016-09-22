@@ -93,6 +93,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPImageMetadata : PPMetadata
  */
 - (UIImage *)image;
 
+/**
+ * Frame quality of contained image.
+ * Frame quality is lazy loaded.
+ */
+- (double)frameQuality;
+
 @end
 
 NS_ASSUME_NONNULL_END

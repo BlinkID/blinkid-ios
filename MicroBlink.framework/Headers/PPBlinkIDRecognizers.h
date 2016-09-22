@@ -59,6 +59,12 @@
 #import "PPSlovakIdBackRecognizerSettings.h"
 #import "PPSlovakIdBackRecognizerResult.h"
 
+// Slovenia
+#import "PPSlovenianIdFrontRecognizerSettings.h"
+#import "PPSlovenianIdFrontRecognizerResult.h"
+#import "PPSlovenianIdBackRecognizerSettings.h"
+#import "PPSlovenianIdBackRecognizerResult.h"
+
 // Detectors
 #import "PPDocumentDetectorResult.h"
 #import "PPDocumentDetectorSettings.h"

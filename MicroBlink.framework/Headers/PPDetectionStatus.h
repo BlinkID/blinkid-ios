@@ -12,7 +12,7 @@
 /**
  * Status of the object detection in MicroBlink SDK
  */
-typedef NS_ENUM(NSInteger, PPDetectionStatus) {
+typedef NS_OPTIONS(NSInteger, PPDetectionStatus) {
 
     /** Object was successfuly detected. */
     PPDetectionStatusSuccess            = 1<<0,

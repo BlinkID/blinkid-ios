@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3139C81B1C22B2AC005AC32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C81A1C22B2AC005AC32C /* AppDelegate.swift */; };
-		3139C81D1C22B2AC005AC32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C81C1C22B2AC005AC32C /* ViewController.swift */; };
 		3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C81E1C22B2AC005AC32C /* Main.storyboard */; };
 		3139C8221C22B2AC005AC32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3139C8211C22B2AC005AC32C /* Assets.xcassets */; };
 		3139C8251C22B2AC005AC32C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C8231C22B2AC005AC32C /* LaunchScreen.storyboard */; };
@@ -20,14 +19,14 @@
 		3139C8381C22B33E005AC32C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8371C22B33E005AC32C /* libiconv.tbd */; };
 		3139C87E1C245950005AC32C /* PPCameraOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C87D1C245950005AC32C /* PPCameraOverlayViewController.swift */; };
 		3139C8801C2838B3005AC32C /* PPCameraOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3139C87F1C2838B3005AC32C /* PPCameraOverlayViewController.xib */; };
+		315532201D94207A001B9440 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3155321F1D94207A001B9440 /* MicroBlink.bundle */; };
+		315532221D94220F001B9440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315532211D94220F001B9440 /* ViewController.swift */; };
 		315881721C3C16D50083850C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315881701C3C16D50083850C /* MicroBlink.framework */; };
-		31F013641C69EDFC00F6DBCD /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3139C8171C22B2AC005AC32C /* pdf417-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pdf417-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3139C81A1C22B2AC005AC32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3139C81C1C22B2AC005AC32C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3139C81F1C22B2AC005AC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3139C8211C22B2AC005AC32C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3139C8241C22B2AC005AC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,8 +39,9 @@
 		3139C8371C22B33E005AC32C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		3139C87D1C245950005AC32C /* PPCameraOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPCameraOverlayViewController.swift; sourceTree = "<group>"; };
 		3139C87F1C2838B3005AC32C /* PPCameraOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPCameraOverlayViewController.xib; sourceTree = "<group>"; };
+		3155321F1D94207A001B9440 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		315532211D94220F001B9440 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		315881701C3C16D50083850C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
-		31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +84,8 @@
 			children = (
 				3139C83E1C22B6AD005AC32C /* Camera Overlays */,
 				3139C81A1C22B2AC005AC32C /* AppDelegate.swift */,
-				3139C81C1C22B2AC005AC32C /* ViewController.swift */,
 				3139C81E1C22B2AC005AC32C /* Main.storyboard */,
+				315532211D94220F001B9440 /* ViewController.swift */,
 				3139C8211C22B2AC005AC32C /* Assets.xcassets */,
 				3139C8231C22B2AC005AC32C /* LaunchScreen.storyboard */,
 				3139C8261C22B2AC005AC32C /* Info.plist */,
@@ -96,7 +96,7 @@
 		3139C82C1C22B30C005AC32C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				31F013631C69EDFC00F6DBCD /* MicroBlink.bundle */,
+				3155321F1D94207A001B9440 /* MicroBlink.bundle */,
 				315881701C3C16D50083850C /* MicroBlink.framework */,
 				3139C8371C22B33E005AC32C /* libiconv.tbd */,
 				3139C8351C22B338005AC32C /* libc++.tbd */,
@@ -152,11 +152,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Dino;
 				TargetAttributes = {
 					3139C8161C22B2AC005AC32C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CQTJWP89J7;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -183,7 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F013641C69EDFC00F6DBCD /* MicroBlink.bundle in Resources */,
+				315532201D94207A001B9440 /* MicroBlink.bundle in Resources */,
 				3139C8251C22B2AC005AC32C /* LaunchScreen.storyboard in Resources */,
 				3139C8221C22B2AC005AC32C /* Assets.xcassets in Resources */,
 				3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */,
@@ -198,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3139C81D1C22B2AC005AC32C /* ViewController.swift in Sources */,
+				315532221D94220F001B9440 /* ViewController.swift in Sources */,
 				3139C81B1C22B2AC005AC32C /* AppDelegate.swift in Sources */,
 				3139C87E1C245950005AC32C /* PPCameraOverlayViewController.swift in Sources */,
 			);
@@ -239,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -284,8 +288,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -304,6 +310,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -313,13 +320,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = " ../../";
 				INFOPLIST_FILE = "pdf417-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.pdf417-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -327,13 +336,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = " ../../";
 				INFOPLIST_FILE = "pdf417-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.pdf417-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
