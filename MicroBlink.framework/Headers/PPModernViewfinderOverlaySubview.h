@@ -7,6 +7,9 @@
 //
 
 #import "PPOverlaySubview.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Overlay subview presenting the status of detection.
  * The subview is presented as green corners located on edges of detection points.
@@ -31,3 +34,5 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPModernViewfinderOverlaySubview : PPOver
 @property (nonatomic) UIEdgeInsets landscapeMargins;
 
 @end
+
+NS_ASSUME_NONNULL_END

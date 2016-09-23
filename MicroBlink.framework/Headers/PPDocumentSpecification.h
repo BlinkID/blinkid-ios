@@ -89,7 +89,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopy
  * Use this initializer for specifiying a document format.
  *
  *  @param aspectRatio  Aspect ratio of the document. Calculated as width / height
- *  @param decodingInfo Decoding info for the document
+ *  @param decodingInfoArray Decoding info for the document
  *
  *  @return initialized object
  */
@@ -117,7 +117,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopy
 /**
  * Sets the decoding information
  *
- *  @param decodingInfo decoding information
+ *  @param decodingInfoArray decoding information
  */
 - (void)setDecodingInfo:(NSArray<PPDecodingInfo*> *)decodingInfoArray;
 

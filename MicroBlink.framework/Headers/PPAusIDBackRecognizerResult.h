@@ -6,12 +6,12 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPMrtdRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning back side of Austrian ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * Returns the issuing authority of the Austrian ID.

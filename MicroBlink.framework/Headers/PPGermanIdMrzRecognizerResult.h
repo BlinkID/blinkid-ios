@@ -6,14 +6,14 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPMrtdRecognizerResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Class representing values obtained when scanning MRZ of German ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdMrzRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdMrzRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * Returns the eye color of the German ID owner.

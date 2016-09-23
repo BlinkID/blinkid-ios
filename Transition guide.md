@@ -1,3 +1,7 @@
+## 2.4.0
+
+- No backwards incompatible changes. See Release notes for new features.
+
 ## 2.3.0
 
 - No backwards incompatible changes. See Release notes for new features.

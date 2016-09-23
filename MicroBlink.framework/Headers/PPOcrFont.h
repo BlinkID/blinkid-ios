@@ -181,6 +181,9 @@ typedef NS_ENUM(NSUInteger, PPOcrFont) {
 
     /** Tahoma font */
     PP_OCR_FONT_TAHOMA,
+    
+    /** Tahoma bold font */
+    PP_OCR_FONT_TAHOMA_BOLD,
 
     /** Tex gyre termes font */
     PP_OCR_FONT_TEX_GYRE_TERMES,

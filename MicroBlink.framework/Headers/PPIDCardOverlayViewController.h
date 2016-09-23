@@ -7,6 +7,7 @@
 //
 
 #import "PPModernBaseOverlayViewController.h"
+
 /**
  * Default overlay when using ID card recognizers.
  * This overlay contains PPModernOcrResultOverlaySubview and PPModernViewFinderOverlaySubview.

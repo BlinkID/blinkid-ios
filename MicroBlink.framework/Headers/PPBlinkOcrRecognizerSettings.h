@@ -23,6 +23,7 @@
 #import "PPPriceOcrParserFactory.h"
 #import "PPLicensePlatesParserFactory.h"
 #import "PPVinOcrParserFactory.h"
+#import "PPMobileCouponsOcrParserFactory.h"
 
 #import "PPDetectorSettings.h"
 #import "PPDocumentClassifier.h"

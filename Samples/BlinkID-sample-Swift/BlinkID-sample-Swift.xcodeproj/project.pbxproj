@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18757D681C3A591C002E2E6E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18757D671C3A591C002E2E6E /* AssetsLibrary.framework */; };
-		18757D741C3A5F58002E2E6E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18757D731C3A5F58002E2E6E /* MicroBlink.framework */; };
-		18A968D11C44E2BE003A408A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A968D01C44E2BE003A408A /* MicroBlink.bundle */; };
 		3139C8951C294F2C005AC32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C8941C294F2C005AC32C /* AppDelegate.swift */; };
-		3139C8971C294F2C005AC32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C8961C294F2C005AC32C /* ViewController.swift */; };
 		3139C89A1C294F2C005AC32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C8981C294F2C005AC32C /* Main.storyboard */; };
 		3139C89C1C294F2C005AC32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3139C89B1C294F2C005AC32C /* Assets.xcassets */; };
 		3139C89F1C294F2C005AC32C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C89D1C294F2C005AC32C /* LaunchScreen.storyboard */; };
@@ -21,15 +18,15 @@
 		3139C8AE1C294FC7005AC32C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8AD1C294FC7005AC32C /* AudioToolbox.framework */; };
 		3139C8B01C294FCE005AC32C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8AF1C294FCE005AC32C /* libc++.tbd */; };
 		3139C8B21C294FDB005AC32C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8B11C294FDB005AC32C /* libiconv.tbd */; };
+		3155321E1D9418DA001B9440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155321D1D9418DA001B9440 /* ViewController.swift */; };
+		315532251D94241C001B9440 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 315532231D94241C001B9440 /* MicroBlink.bundle */; };
+		315532261D94241C001B9440 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18757D671C3A591C002E2E6E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		18757D731C3A5F58002E2E6E /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
-		18A968D01C44E2BE003A408A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		3139C8911C294F2C005AC32C /* BlinkID-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3139C8941C294F2C005AC32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3139C8961C294F2C005AC32C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3139C8991C294F2C005AC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3139C89B1C294F2C005AC32C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3139C89E1C294F2C005AC32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +37,9 @@
 		3139C8AD1C294FC7005AC32C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3139C8AF1C294FCE005AC32C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3139C8B11C294FDB005AC32C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		3155321D1D9418DA001B9440 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		315532231D94241C001B9440 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		315532241D94241C001B9440 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			files = (
 				3139C8A81C294FB4005AC32C /* Accelerate.framework in Frameworks */,
 				3139C8AE1C294FC7005AC32C /* AudioToolbox.framework in Frameworks */,
-				18757D741C3A5F58002E2E6E /* MicroBlink.framework in Frameworks */,
+				315532261D94241C001B9440 /* MicroBlink.framework in Frameworks */,
 				18757D681C3A591C002E2E6E /* AssetsLibrary.framework in Frameworks */,
 				3139C8AC1C294FC1005AC32C /* CoreMedia.framework in Frameworks */,
 				3139C8AA1C294FB9005AC32C /* AVFoundation.framework in Frameworks */,
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3139C8941C294F2C005AC32C /* AppDelegate.swift */,
-				3139C8961C294F2C005AC32C /* ViewController.swift */,
+				3155321D1D9418DA001B9440 /* ViewController.swift */,
 				3139C8981C294F2C005AC32C /* Main.storyboard */,
 				3139C89B1C294F2C005AC32C /* Assets.xcassets */,
 				3139C89D1C294F2C005AC32C /* LaunchScreen.storyboard */,
@@ -94,8 +94,8 @@
 		3139C8A61C294FAA005AC32C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18757D731C3A5F58002E2E6E /* MicroBlink.framework */,
-				18A968D01C44E2BE003A408A /* MicroBlink.bundle */,
+				315532231D94241C001B9440 /* MicroBlink.bundle */,
+				315532241D94241C001B9440 /* MicroBlink.framework */,
 				3139C8A71C294FB4005AC32C /* Accelerate.framework */,
 				3139C8AD1C294FC7005AC32C /* AudioToolbox.framework */,
 				18757D671C3A591C002E2E6E /* AssetsLibrary.framework */,
@@ -134,11 +134,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Dino;
 				TargetAttributes = {
 					3139C8901C294F2C005AC32C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CQTJWP89J7;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -168,7 +171,7 @@
 				3139C89F1C294F2C005AC32C /* LaunchScreen.storyboard in Resources */,
 				3139C89C1C294F2C005AC32C /* Assets.xcassets in Resources */,
 				3139C89A1C294F2C005AC32C /* Main.storyboard in Resources */,
-				18A968D11C44E2BE003A408A /* MicroBlink.bundle in Resources */,
+				315532251D94241C001B9440 /* MicroBlink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3139C8971C294F2C005AC32C /* ViewController.swift in Sources */,
+				3155321E1D9418DA001B9440 /* ViewController.swift in Sources */,
 				3139C8951C294F2C005AC32C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +222,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -265,8 +270,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -286,6 +293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -295,12 +303,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "BlinkID-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkID-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -308,12 +319,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "BlinkID-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkID-sample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

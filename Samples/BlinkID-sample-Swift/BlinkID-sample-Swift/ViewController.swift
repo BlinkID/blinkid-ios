@@ -11,7 +11,6 @@ import MicroBlink
 
 class ViewController: UIViewController, PPScanningDelegate {
 
-
     /**
      * Method allocates and initializes the Scanning coordinator object.
      * Coordinator is initialized with settings for scanning
@@ -25,7 +24,7 @@ class ViewController: UIViewController, PPScanningDelegate {
 
         /** 0. Check if scanning is supported */
 
-        if (PPCameraCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error)) {
+        if (PPCameraCoordinator.isScanningUnsupported(for: PPCameraType.back, error: error)) {
             return nil;
         }
 
@@ -59,7 +58,7 @@ class ViewController: UIViewController, PPScanningDelegate {
             mrtdRecognizerSettings.dewarpFullDocument = false;
 
             // Add MRTD Recognizer setting to a list of used recognizer settings
-            settings.scanSettings.addRecognizerSettings(mrtdRecognizerSettings)
+            settings.scanSettings.add(mrtdRecognizerSettings)
         }
 
         do { // Remove this if you're not using USDL recognition
@@ -70,7 +69,7 @@ class ViewController: UIViewController, PPScanningDelegate {
             /** You can modify the properties of usdlRecognizerSettings to suit your use-case */
 
             // Add USDL Recognizer setting to a list of used recognizer settings
-            settings.scanSettings.addRecognizerSettings(usdlRecognizerSettings)
+            settings.scanSettings.add(usdlRecognizerSettings)
         }
 
         do { // Remove this if you're not using UKDL recognition
@@ -84,7 +83,7 @@ class ViewController: UIViewController, PPScanningDelegate {
             eudlRecognizerSettings.showFullDocument = true;
 
             // Add UKDL Recognizer setting to a list of used recognizer settings
-            settings.scanSettings.addRecognizerSettings(eudlRecognizerSettings)
+            settings.scanSettings.add(eudlRecognizerSettings)
         }
 
         do { // Remove this if you're not using MyKad recognition
@@ -95,7 +94,7 @@ class ViewController: UIViewController, PPScanningDelegate {
             /** You can modify the properties of myKadRecognizerSettings to suit your use-case */
             
             // Add UKDL Recognizer setting to a list of used recognizer settings
-            settings.scanSettings.addRecognizerSettings(myKadRecognizerSettings)
+            settings.scanSettings.add(myKadRecognizerSettings)
         }
 
 
@@ -106,40 +105,45 @@ class ViewController: UIViewController, PPScanningDelegate {
         return coordinator
     }
 
-    @IBAction func didTapScan(sender: AnyObject) {
+    @IBAction func didTapScan(_ sender: AnyObject) {
 
         /** Instantiate the scanning coordinator */
         let error: NSErrorPointer = nil
-        let coordinator = self.coordinatorWithError(error)
+        let coordinator = self.coordinatorWithError(error: error)
 
         /** If scanning isn't supported, present an error */
         if coordinator == nil {
-            let messageString: String = (error.memory?.localizedDescription) ?? ""
+            let messageString: String = (error!.pointee?.localizedDescription) ?? ""
             UIAlertView(title: "Warning", message: messageString, delegate: nil, cancelButtonTitle: "Ok").show()
             return
         }
 
         /** Allocate and present the scanning view controller */
-        let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewControllerWithDelegate(self, coordinator: coordinator!, error: nil)
+        let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator!, error: nil)
 
         /** You can use other presentation methods as well */
-        self.presentViewController(scanningViewController, animated: true, completion: nil)
+        self.present(scanningViewController, animated: true, completion: nil)
     }
 
-    func scanningViewControllerUnauthorizedCamera(scanningViewController: UIViewController) {
+    func scanningViewControllerUnauthorizedCamera(_ scanningViewController: UIViewController) {
         // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
     }
 
     func scanningViewController(scanningViewController: UIViewController, didFindError error: NSError) {
         // Can be ignored. See description of the method
     }
-
-    func scanningViewControllerDidClose(scanningViewController: UIViewController) {
-        // As scanning view controller is presented full screen and modally, dismiss it
-        self.dismissViewControllerAnimated(true, completion: nil)
+    
+    public func scanningViewController(_ scanningViewController: UIViewController, didFindError error: Error) {
+        // Can be ignored
     }
 
-    func scanningViewController(scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
+    func scanningViewControllerDidClose(_ scanningViewController: UIViewController) {
+        // As scanning view controller is presented full screen and modally, dismiss it
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+
+    func scanningViewController(_ scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
 
         let scanConroller = scanningViewController as! PPScanningViewController
 
@@ -157,25 +161,25 @@ class ViewController: UIViewController, PPScanningDelegate {
 
         // Collect data from the result
         for result in results {
-            if (result.isKindOfClass(PPMrtdRecognizerResult)) {
+            if (result is PPMrtdRecognizerResult) {
                 /** MRTD was detected */
                 let mrtdResult = result as! PPMrtdRecognizerResult
                 title = "MRTD"
                 message = mrtdResult.description
             }
-            if (result.isKindOfClass(PPUsdlRecognizerResult)) {
+            if (result is PPUsdlRecognizerResult) {
                 /** US drivers license was detected */
                 let usdlResult = result as! PPUsdlRecognizerResult
                 title = "USDL"
                 message = usdlResult.description
             }
-            if (result.isKindOfClass(PPEudlRecognizerResult)) {
+            if (result is PPEudlRecognizerResult) {
                 /** EU drivers license was detected */
                 let eudlResult = result as! PPEudlRecognizerResult
                 title = "EUDL"
                 message = eudlResult.description
             }
-            if (result.isKindOfClass(PPMyKadRecognizerResult)) {
+            if (result is PPMyKadRecognizerResult) {
                 /** MyKad was detected */
                 let myKadResult = result as! PPMyKadRecognizerResult
                 title = "MyKad"
@@ -191,7 +195,7 @@ class ViewController: UIViewController, PPScanningDelegate {
     // dismiss the scanning view controller when user presses OK.
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

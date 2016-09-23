@@ -6,12 +6,12 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPMrtdRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning back side of Czech ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDBackRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * Returns the issuing authority of the Czech ID.
