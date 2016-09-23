@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
 
   # ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.ios.deployment_target = '6.0.0'
+  s.ios.deployment_target = '8.0.0'
   s.ios.resources = "MicroBlink.bundle"
   s.ios.requires_arc = false
   s.ios.vendored_frameworks = 'MicroBlink.framework'
