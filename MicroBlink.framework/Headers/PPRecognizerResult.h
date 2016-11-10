@@ -16,7 +16,6 @@
 @class PPBarcodeDetailedData;
 @class PPDetectorResult;
 
-NS_ASSUME_NONNULL_BEGIN
 /**
  Common superclass for all result classes of MicroBlink scanning library
  */
@@ -26,7 +25,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * These objects are always privately constructed
  */
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull)init NS_UNAVAILABLE;
 
 /**
  * All data obtained in the recotnition phase is contained in this Dictionay as Key-Value pairs.
@@ -37,7 +36,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * @return NSDictionary with all key-value pairs obtained in the recongition phase.
  */
-- (NSDictionary *)getAllElements;
+- (NSDictionary * _Nonnull)getAllElements;
 
 /**
  * Method returns a dictionary with all string elements found as a recognizer results. Dictionary contains NSString objects.
@@ -46,7 +45,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return eturns a dictionary with all string elements found as a recognizer results
  */
-- (NSDictionary *)getAllStringElements;
+- (NSDictionary * _Nonnull)getAllStringElements;
 
 /**
  * Returns NSData* element from allElements dictionary.
@@ -58,7 +57,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSData value.
  */
-- (NSData *)getDataElement:(NSString *)key;
+- (NSData * _Nullable)getDataElement:(NSString * _Nonnull)key;
 
 /**
  * Returns a NSString* element from allElements dictionary using guessed encoding.
@@ -70,7 +69,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSString value.
  */
-- (NSString *)getStringElementUsingGuessedEncoding:(NSString *)key;
+- (NSString * _Nullable)getStringElementUsingGuessedEncoding:(NSString * _Nonnull)key;
 
 /**
  * Returns a NSString* element from allElements dictionary, using a given encoding.
@@ -83,7 +82,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString *)getStringElement:(NSString *)key
+- (NSString * _Nullable)getStringElement:(NSString * _Nonnull)key
                       encoding:(NSStringEncoding)encoding;
 
 /**
@@ -96,7 +95,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSNumber with bool
  */
-- (NSNumber *)getBoolElement:(NSString *)key;
+- (NSNumber * _Nullable)getBoolElement:(NSString * _Nonnull)key;
 
 /**
  * Returns a NSNumber containing a int element from allElements dictionary.
@@ -108,7 +107,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSNumber with int
  */
-- (NSNumber *)getIntElement:(NSString *)key;
+- (NSNumber * _Nullable)getIntElement:(NSString * _Nonnull)key;
 
 /**
  * Returns a PPOcrLayout* element from allElements dictionary.
@@ -120,7 +119,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPOcrLayout value.
  */
-- (PPOcrLayout *)getOcrLayoutElement:(NSString *)key;
+- (PPOcrLayout * _Nullable)getOcrLayoutElement:(NSString * _Nonnull)key;
 
 /**
  * Returns PPBarcodeDetailedData* element from allElements dictionary..
@@ -132,7 +131,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPBarcodeDetailedData value
  */
-- (PPBarcodeDetailedData *)getBarcodeDetailedDataElement:(NSString *)key;
+- (PPBarcodeDetailedData * _Nullable)getBarcodeDetailedDataElement:(NSString * _Nonnull)key;
 
 /**
  * Returns a PPQuadrangle* element from allElements dictionary.
@@ -144,7 +143,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPQuadrangle quadrangle value.
  */
-- (PPQuadrangle *)getQuadrangleElement:(NSString *)key;
+- (PPQuadrangle * _Nullable)getQuadrangleElement:(NSString * _Nonnull)key;
 
 /**
  * Returns a PPDetectorResult element from allElements dictionary
@@ -156,28 +155,28 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPDetectorResult detector result value
  */
-- (PPDetectorResult *)getDetectorResultElement:(NSString *)key;
+- (PPDetectorResult * _Nullable)getDetectorResultElement:(NSString * _Nonnull)key;
 
 /**
  * Returns the xml representation of this result
  *
  *  @return xml representation of this result
  */
-- (NSString*)xml;
+- (NSString* _Nonnull)xml;
 
 /**
  * Returns the attributed version of description string
  *
  *  @return the attributed version of description string
  */
-- (NSAttributedString*)attributedDescription;
+- (NSAttributedString* _Nonnull)attributedDescription;
 
 /**
  * Convenience method for simple display of result inside UITableView
  *
  *  @return PPResultDataSourceAdapter object
  */
-- (PPResultDataSourceAdapter*)getAdapter;
+- (PPResultDataSourceAdapter* _Nonnull)getAdapter;
 
 /**
  * Returns string representation of NSData object for passing over URLs
@@ -186,8 +185,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return string representation of NSData object
  */
-+ (NSString *)urlStringFromData:(NSData *)data;
++ (NSString * _Nonnull)urlStringFromData:(NSData * _Nonnull)data;
 
 @end
-
-NS_ASSUME_NONNULL_END

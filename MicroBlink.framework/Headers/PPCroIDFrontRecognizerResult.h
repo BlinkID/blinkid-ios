@@ -8,8 +8,6 @@
 
 #import "PPBlinkOcrRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing values obtained when scanning front side of Croatian ID
  */
@@ -19,44 +17,42 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDFrontRecognizerResult : PPBlinkOcr
  * Returns the first name of the Croatian ID owner.
  * @return the first name of the Croatian ID owner.
  */
-- (NSString *)firstName;
+- (NSString * _Nullable)firstName;
 
 /**
  * Returns the last name of the Croatian ID owner.
  * @return the last name of the Croatian ID owner.
  */
-- (NSString *)lastName;
+- (NSString * _Nullable)lastName;
 
 /**
  * Returns the identity card number of Croatian ID.
  * @return the identity card number of Croatian ID.
  */
-- (NSString *)identityCardNumber;
+- (NSString * _Nullable)identityCardNumber;
 
 /**
  * Returns sex of the Croatian ID owner.
  * @return sex of the Croatian ID owner
  */
-- (NSString *)sex;
+- (NSString * _Nullable)sex;
 
 /**
  * Returns nationality of the Croatian ID owner.
  * @return nationality of the Croatian ID owner
  */
-- (NSString *)nationality;
+- (NSString * _Nullable)nationality;
 
 /**
  * Returns the date of birth of Croatian ID owner
  * @return the date of birth of Croatian ID owner
  */
-- (NSString *)dateOfBirth;
+- (NSString * _Nullable)dateOfBirth;
 
 /**
  * Returns the document date of expiry of the Croatian ID
  * @return the document date of expiry of the Croatian ID
  */
-- (NSString *)documentDateOfExpiry;
+- (NSString * _Nullable)documentDateOfExpiry;
 
 @end
-
-NS_ASSUME_NONNULL_END

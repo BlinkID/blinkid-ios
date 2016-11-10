@@ -9,32 +9,24 @@
 #ifndef PhotoPayFramework_MicroBlink_h
 #define PhotoPayFramework_MicroBlink_h
 
-// Basic class Attributes
-#import "PPMicroBlinkDefines.h"
-
-// Include basic API
-#import "PPSettings.h"
-#import "PPScanningDelegate.h"
-#import "PPCoordinator.h"
-#import "PPCameraCoordinator.h"
+// Common API
 #import "PPViewControllerFactory.h"
 
-// Include Recognizers in BlinkID
-#import "PPBlinkIDRecognizers.h"
-
 // Include Overlay view controller headers
-#import "PPIDCardOverlayViewController.h"
 #import "PPModernBaseOverlayViewController.h"
-#import "PPModernOverlayViewController.h"
 #import "PPSegmentScanOverlayViewController.h"
 #import "PPTemplatingOverlayViewController.h"
-#import "PPBaseBarcodeOverlayViewController.h"
 #import "PPBarcodeOverlayViewController.h"
+#import "PPIDCardOverlayViewController.h"
 
 // Include Overlay subview headers
 #import "PPModernOcrResultOverlaySubview.h"
 #import "PPOcrResultOverlaySubview.h"
 #import "PPModernViewfinderOverlaySubview.h"
+#import "PPDotsOverlaySubview.h"
 #import "PPOverlaySubview.h"
+
+// Recognizers
+#import "PPBlinkIDRecognizers.h"
 
 #endif

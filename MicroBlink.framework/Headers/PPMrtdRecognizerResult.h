@@ -10,8 +10,6 @@
 #import "PPOcrLayout.h"
 #import "PPMrtdDocumentType.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing common values obtained when scanning machine readable travel documents (MRTDs)
  */
@@ -45,7 +43,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return issuer code
  */
-- (NSString *)issuer;
+- (NSString * _Nullable)issuer;
 
 /**
  * Unique number of the document. Document number contains up to 9 characters.
@@ -53,7 +51,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return documentNumber
  */
-- (NSString *)documentNumber;
+- (NSString * _Nullable)documentNumber;
 
 /**
  * Returns document code. Document code contains two characters. For MRTD the first character 
@@ -66,35 +64,49 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return documentCode
  */
-- (NSString *)documentCode;
+- (NSString * _Nullable)documentCode;
 
 /**
  * Returns date of expiry of the document in format YYMMDD.
  *
  *  @return date of expiry
  */
-- (NSString *)dateOfExpiry;
+- (NSString* _Nullable)rawDateOfExpiry;
+
+/**
+ * Returns date of expiry of the document.
+ *
+ *  @return date of expiry
+ */
+- (NSDate * _Nullable)dateOfExpiry;
 
 /**
  * Returns the primary indentifier. If there is more than one component, they are separated with space.
  *
  *  @return primary id of a card holder.
  */
-- (NSString *)primaryId;
+- (NSString * _Nullable)primaryId;
 
 /**
  * Returns the secondary identifier. If there is more than one component, they are separated with space.
  *
  *  @return secondary id of a card holder
  */
-- (NSString *)secondaryId;
+- (NSString * _Nullable)secondaryId;
 
 /**
  * Returns holder's date of birth in format YYMMDD.
  *
  *  @return date of birth
  */
-- (NSString *)dateOfBirth;
+- (NSString* _Nullable)rawDateOfBirth;
+
+/**
+ * Returns holder's date of birth.
+ *
+ *  @return date of birth
+ */
+- (NSDate * _Nullable)dateOfBirth;
 
 /**
  * Returns nationality of the holder represented by a three-letter code. Three-letter codes are based 
@@ -102,7 +114,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return nationality
  */
-- (NSString *)nationality;
+- (NSString * _Nullable)nationality;
 
 /**
  * Returns sex of the card holder. Sex is specified by use of the single initial, capital 
@@ -110,7 +122,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return sex of the card holder
  */
-- (NSString *)sex;
+- (NSString * _Nullable)sex;
 
 /**
  * Returns first optional data. Returns nil or empty string if not available.
@@ -118,7 +130,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return optional data 1
  */
-- (NSString *)opt1;
+- (NSString * _Nullable)opt1;
 
 /**
  * Returns first optional data. Returns nil or empty string if not available.
@@ -126,7 +138,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return optional data 2
  */
-- (NSString *)opt2;
+- (NSString * _Nullable)opt2;
 
 /** 
  * Returns alien number. Returns nil or empty string if not available.
@@ -134,7 +146,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return alien number
  */
-- (NSString *)alienNumber;
+- (NSString * _Nullable)alienNumber;
 
 /**
  * Returns application receipt number. Returns nil or empty string if not available.
@@ -142,7 +154,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return application receipt number
  */
-- (NSString *)applicationReceiptNumber;
+- (NSString * _Nullable)applicationReceiptNumber;
 
 /**
  * Returns immigrant case number. Returns nil or empty string if not available.
@@ -150,13 +162,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return immigrant case number
  */
-- (NSString *)immigrantCaseNumber;
+- (NSString * _Nullable)immigrantCaseNumber;
 
 /**
  * Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing
  * other elements.
  */
-- (NSString *)mrzText;
+- (NSString * _Nullable)mrzText;
 
 /**
  * Raw OCR layout from which the MRTD data was parsed.
@@ -166,8 +178,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return OCR layout from which the MRTD data was parsed
  */
-- (PPOcrLayout *)rawOcrLayout;
+- (PPOcrLayout * _Nullable)rawOcrLayout;
 
 @end
-
-NS_ASSUME_NONNULL_END

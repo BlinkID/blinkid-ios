@@ -8,8 +8,6 @@
 
 #import "PPMrtdRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing values obtained when scanning MRZ of German ID
  */
@@ -19,32 +17,30 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdMrzRecognizerResult : PPMrtdRec
  * Returns the eye color of the German ID owner.
  * @return the eye color of the German ID owner.
  */
-- (NSString *)eyeColor;
+- (NSString * _Nullable)eyeColor;
 
 /**
  * Returns the height of the German ID owner.
  * @return the height of the German ID owner.
  */
-- (NSString *)height;
+- (NSString * _Nullable)height;
 
 /**
  * Returns the date of issue of the ID.
  * @return the date of issue of the ID.
  */
-- (NSString *)dateOfIssue;
+- (NSString * _Nullable)dateOfIssue;
 
 /**
  * Returns the issuing authority of the German ID.
  * @return the issuing authority of the German ID.
  */
-- (NSString *)authority;
+- (NSString * _Nullable)authority;
 
 /**
  * Returns the address of the German ID owner.
  * @return the address of the German ID owner.
  */
-- (NSString *)address;
+- (NSString * _Nullable)address;
 
 @end
-
-NS_ASSUME_NONNULL_END

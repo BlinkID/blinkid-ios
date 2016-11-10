@@ -8,8 +8,6 @@
 
 #import "PPBlinkOcrRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing values obtained when scanning Singapore ID.
  * Both front and back side can be scanned but the results will be different for each side
@@ -20,56 +18,54 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSingaporeIDRecognizerResult : PPBlinkOc
  * Returns the identity card number of the Singapore ID.
  * @return identity card number of the Singapore ID.
  */
-- (NSString *)identityCardNumber;
+- (NSString * _Nullable)identityCardNumber;
 
 /**
  * Returns the name of the Singapore ID owner.
  * @return name of the Singapore ID owner.
  */
-- (NSString *)name;
+- (NSString * _Nullable)name;
 
 /**
  * Returns the race of the Singapore ID owner.
  * @return race of the Singapore ID owner.
  */
-- (NSString *)race;
+- (NSString * _Nullable)race;
 
 /**
  * Returns the sex of the Singapore ID owner.
  * @return sex of the Singapore ID owner.
  */
-- (NSString *)sex;
+- (NSString * _Nullable)sex;
 
 /**
  * Returns the date of birth of the Singapore ID owner.
  * @return date of birth of the Singapore ID owner.
  */
-- (NSString *)dateOfBirth;
+- (NSString * _Nullable)dateOfBirth;
 
 /**
  * Returns the country of birth of the Singapore ID owner.
  * @return country of birth of the Singapore ID owner.
  */
-- (NSString *)countryOfBirth;
+- (NSString * _Nullable)countryOfBirth;
 
 /**
  * Returns the blood group of the Singapore ID owner.
  * @return blood group of the Singapore ID owner.
  */
-- (NSString *)bloodGroup;
+- (NSString * _Nullable)bloodGroup;
 
 /**
  * Returns the date of issue of the Singapore ID.
  * @return date of issue of the Singapore ID.
  */
-- (NSString *)dateOfIssue;
+- (NSString * _Nullable)dateOfIssue;
 
 /**
  * Returns the address of the Singapore ID owner.
  * @return address of the Singapore ID owner.
  */
-- (NSString *)address;
+- (NSString * _Nullable)address;
 
 @end
-
-NS_ASSUME_NONNULL_END

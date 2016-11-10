@@ -8,8 +8,6 @@
 
 #import "PPMrtdRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing values obtained when scanning back side of Slovenian ID
  */
@@ -19,20 +17,18 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdBackRecognizerResult : PPMrt
  * Returns the address of the Slovenian ID owner.
  * @return the address of the Slovenian ID owner.
  */
-- (NSString *)address;
+- (NSString * _Nullable)address;
 
 /**
  * Returns the authority of the Slovenian ID.
  * @return the authority of the Slovenian ID.
  */
-- (NSString *)authority;
+- (NSString * _Nullable)authority;
 
 /**
  * Returns date of issue of the Slovenian ID.
  * @return date of issue of the Slovenian ID.
  */
-- (NSString *)dateOfIssue;
+- (NSString * _Nullable)dateOfIssue;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -21,9 +21,9 @@
 #import "PPMyKadRecognizerSettings.h"
 #import "PPMyKadRecognizerResult.h"
 
-// OCR recognizer
-#import "PPBlinkOcrRecognizerSettings.h"
-#import "PPBlinkOcrRecognizerResult.h"
+// Malaysian immigration IDs (iKad)
+#import "PPiKadRecognizerSettings.h"
+#import "PPiKadRecognizerResult.h"
 
 // Croatia
 #import "PPCroIDFrontRecognizerSettings.h"
@@ -59,24 +59,22 @@
 #import "PPSlovakIdBackRecognizerSettings.h"
 #import "PPSlovakIdBackRecognizerResult.h"
 
+// Serbia
+#import "PPSerbianIdFrontRecognizerSettings.h"
+#import "PPSerbianIdFrontRecognizerResult.h"
+#import "PPSerbianIdBackRecognizerSettings.h"
+#import "PPSerbianIdBackRecognizerResult.h"
+
 // Slovenia
 #import "PPSlovenianIdFrontRecognizerSettings.h"
 #import "PPSlovenianIdFrontRecognizerResult.h"
 #import "PPSlovenianIdBackRecognizerSettings.h"
 #import "PPSlovenianIdBackRecognizerResult.h"
 
-// Detectors
-#import "PPDocumentDetectorResult.h"
-#import "PPDocumentDetectorSettings.h"
-#import "PPPointsDetectorResult.h"
-#import "PPMrtdDetectorResult.h"
-#import "PPMrtdDetectorSettings.h"
-#import "PPMultiDetectorSettings.h"
-#import "PPMultiDetectorResult.h"
-#import "PPDetectorRecognizerSettings.h"
-#import "PPDetectorRecognizerResult.h"
-
 // Use all recognizers from BlinkBarcode
 #import "PPBlinkBarcodeRecognizers.h"
+
+// Use all recognizers from BlinkInput
+#import "PPBlinkInputRecognizers.h"
 
 #endif /* PPBlinkIDRecognizers_h */

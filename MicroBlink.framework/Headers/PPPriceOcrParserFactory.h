@@ -27,4 +27,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPriceOcrParserFactory : PPOcrParserFact
 
 @property (nonatomic) int idealNumberOfDigits;
 
+@property (nonatomic) BOOL disableDecimals;
+
 @end

@@ -60,4 +60,9 @@
  */
 - (BOOL)isTorchOn;
 
+/**
+ * Overlay View Controller can ask it's owner whether camera was authorized 
+ */
+- (BOOL)isCameraAuthorized;
+
 @end

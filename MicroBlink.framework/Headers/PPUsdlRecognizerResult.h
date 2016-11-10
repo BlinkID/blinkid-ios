@@ -12,8 +12,6 @@
 
 #pragma mark - Keys for obtaining data on driver's licenses
 
-NS_ASSUME_NONNULL_BEGIN
-
 //==============================================================/
 //============== 1. DETERMINING BARCODE VERSION ================/
 //==============================================================/
@@ -27,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  Administrators (AAMVA) Card Design Standard from AAMVA DL/ID-2000 standard to DL/ID-2013
  shall be designated as "AAMVA".
  */
-PP_EXTERN NSString* const kPPDocumentType;
+PP_EXTERN NSString* _Nonnull const kPPDocumentType;
 
 /**
  Mandatory on all driver's licenses.
@@ -53,7 +51,7 @@ PP_EXTERN NSString* const kPPDocumentType;
  If document type is not "AAMVA", this field defines version number of the
  given document type's standard.
  */
-PP_EXTERN NSString* const kPPStandardVersionNumber;
+PP_EXTERN NSString* _Nonnull const kPPStandardVersionNumber;
 
 //==============================================================/
 //==========          2. PERSONAL DATA KEYS          ===========/
@@ -66,7 +64,7 @@ PP_EXTERN NSString* const kPPStandardVersionNumber;
  Collect full name for record, print as many characters as possible on portrait side of DL/ID.
  */
 // internal note: Form AAMVA 01 filled by DataExpander from kFullName
-PP_EXTERN NSString* const kPPCustomerFamilyName;
+PP_EXTERN NSString* _Nonnull const kPPCustomerFamilyName;
 
 /**
  Mandatory on all AAMVA, Magnetic and Compact barcodes.
@@ -74,7 +72,7 @@ PP_EXTERN NSString* const kPPCustomerFamilyName;
  First name of the cardholder.
  */
 // internal note: Form AAMVA 01 filled by DataExpander from kFullName
-PP_EXTERN NSString* const kPPCustomerFirstName;
+PP_EXTERN NSString* _Nonnull const kPPCustomerFirstName;
 
 /**
  Mandatory on all AAMVA, Magnetic and Compact barcodes.
@@ -94,14 +92,14 @@ PP_EXTERN NSString* const kPPCustomerFirstName;
  If indvidual has more than one middle name they are separated with space.
  */
 // internal node: Filled by DataExpander
-PP_EXTERN NSString* const kPPCustomerFullName;
+PP_EXTERN NSString* _Nonnull const kPPCustomerFullName;
 
 /**
  Mandatory on all AAMVA, Magentic and Compact barcodes.
 
  Date on which the cardholder was born. (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPDateOfBirth;
+PP_EXTERN NSString* _Nonnull const kPPDateOfBirth;
 
 /**
  Mandatory on all AAMVA, Magentic barcodes.
@@ -109,7 +107,7 @@ PP_EXTERN NSString* const kPPDateOfBirth;
 
  Gender of the cardholder. 1 = male, 2 = female.
  */
-PP_EXTERN NSString* const kPPSex;
+PP_EXTERN NSString* _Nonnull const kPPSex;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 barcodes.
@@ -129,7 +127,7 @@ PP_EXTERN NSString* const kPPSex;
  DIC    Dichromatic
  UNK    Unknown
  */
-PP_EXTERN NSString* const kPPEyeColor;
+PP_EXTERN NSString* _Nonnull const kPPEyeColor;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -140,7 +138,7 @@ PP_EXTERN NSString* const kPPEyeColor;
  The place where the registered driver of a vehicle (individual or corporation)
  may be contacted such as a house number, street address etc.
  */
-PP_EXTERN NSString* const kPPAddressStreet;
+PP_EXTERN NSString* _Nonnull const kPPAddressStreet;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -149,7 +147,7 @@ PP_EXTERN NSString* const kPPAddressStreet;
 
  City portion of the cardholder address.
  */
-PP_EXTERN NSString* const kPPAddressCity;
+PP_EXTERN NSString* _Nonnull const kPPAddressCity;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -158,7 +156,7 @@ PP_EXTERN NSString* const kPPAddressCity;
 
  State portion of the cardholder address.
  */
-PP_EXTERN NSString* const kPPAddressJurisdictionCode;
+PP_EXTERN NSString* _Nonnull const kPPAddressJurisdictionCode;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -169,7 +167,7 @@ PP_EXTERN NSString* const kPPAddressJurisdictionCode;
  trailing portion of the postal code in the U.S. is not known, zeros can be used
  to fill the trailing set of numbers up to nine (9) digits.
  */
-PP_EXTERN NSString* const kPPAddressPostalCode;
+PP_EXTERN NSString* _Nonnull const kPPAddressPostalCode;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -188,7 +186,7 @@ PP_EXTERN NSString* const kPPAddressPostalCode;
 
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPFullAddress;
+PP_EXTERN NSString* _Nonnull const kPPFullAddress;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.
@@ -203,7 +201,7 @@ PP_EXTERN NSString* const kPPFullAddress;
  example: 181 centimeters = "181 cm"
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPHeight;
+PP_EXTERN NSString* _Nonnull const kPPHeight;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.
@@ -213,7 +211,7 @@ PP_EXTERN NSString* const kPPHeight;
  Example: 5'9'' = "69".
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPHeightIn;
+PP_EXTERN NSString* _Nonnull const kPPHeightIn;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 Compact barcodes.
@@ -223,7 +221,7 @@ PP_EXTERN NSString* const kPPHeightIn;
  Example: 180 Centimeters = "180".
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPHeightCm;
+PP_EXTERN NSString* _Nonnull const kPPHeightCm;
 
 /**
  Mandatory on AAMVA 04, 05, 06, 07, 08.
@@ -233,7 +231,7 @@ PP_EXTERN NSString* const kPPHeightCm;
  shall be separated by space " ".
  */
 // internal node: AAMVA 02 and 03 filled from kFirstName wich can contain Middle name
-PP_EXTERN NSString* const kPPCustomerMiddleName;
+PP_EXTERN NSString* _Nonnull const kPPCustomerMiddleName;
 
 /**
  Optional on all AAMVA, Magnetic and Compact barcodes.
@@ -253,7 +251,7 @@ PP_EXTERN NSString* const kPPCustomerMiddleName;
  WHI    White
  UNK    Unknown
  */
-PP_EXTERN NSString* const kPPHairColor;
+PP_EXTERN NSString* _Nonnull const kPPHairColor;
 
 /**
  Mandatory on AAMVA 02 barcodes.
@@ -273,7 +271,7 @@ PP_EXTERN NSString* const kPPHairColor;
  - 8TH or VIII (Eighth)
  - 9TH or IX (Ninth)
  */
-PP_EXTERN NSString* const kPPNameSuffix;
+PP_EXTERN NSString* _Nonnull const kPPNameSuffix;
 
 /**
  Optional on all AAMVA and Compact barcodes.
@@ -294,7 +292,7 @@ PP_EXTERN NSString* const kPPNameSuffix;
  If indvidual has more than one AKA middle name they are separated with space.
  */
 // internal node: Filled by DataExpander
-PP_EXTERN NSString* const kPPAKAFullName;
+PP_EXTERN NSString* _Nonnull const kPPAKAFullName;
 
 /**
  Optional on all AAMVA and Compact barcodes.
@@ -302,7 +300,7 @@ PP_EXTERN NSString* const kPPAKAFullName;
  Other family name by which cardholder is known.
  */
 // internal node: Filled by DataExpander
-PP_EXTERN NSString* const kPPAKAFamilyName;
+PP_EXTERN NSString* _Nonnull const kPPAKAFamilyName;
 
 /**
  Optional on all AAMVA and Compact barcodes.
@@ -310,7 +308,7 @@ PP_EXTERN NSString* const kPPAKAFamilyName;
  Other given name by which cardholder is known
  */
 // internal node: Filled by DataExpander
-PP_EXTERN NSString* const kPPAKAGivenName;
+PP_EXTERN NSString* _Nonnull const kPPAKAGivenName;
 
 /**
  Optional on all AAMVA and Compact barcodes.
@@ -332,7 +330,7 @@ PP_EXTERN NSString* const kPPAKAGivenName;
  9TH        Ninth
  */
 // internal node: Filled by DataExpander
-PP_EXTERN NSString* const kPPAKASuffixName;
+PP_EXTERN NSString* _Nonnull const kPPAKASuffixName;
 
 /**
  Mandatory on AAMVA 02 barcodes.
@@ -351,7 +349,7 @@ PP_EXTERN NSString* const kPPAKASuffixName;
  9 = 146+ kg (321+ lbs)
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPWeightRange;
+PP_EXTERN NSString* _Nonnull const kPPWeightRange;
 
 /**
  Mandatory on AAMVA 02 barcodes.
@@ -360,7 +358,7 @@ PP_EXTERN NSString* const kPPWeightRange;
  Cardholder weight in pounds Example: 185 lb = "185"
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPWeightPounds;
+PP_EXTERN NSString* _Nonnull const kPPWeightPounds;
 
 /**
  Mandatory on AAMVA 02 barcodes.
@@ -369,14 +367,14 @@ PP_EXTERN NSString* const kPPWeightPounds;
  Cardholder weight in kilograms Example: 84 kg = "084"
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPWeightKilograms;
+PP_EXTERN NSString* _Nonnull const kPPWeightKilograms;
 
 /**
  Mandatory on all AAMVA and Compact barcodes
 
  The number assigned or calculated by the issuing authority.
  */
-PP_EXTERN NSString* const kPPCustomerIdNumber;
+PP_EXTERN NSString* _Nonnull const kPPCustomerIdNumber;
 
 /**
  Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes.
@@ -385,7 +383,7 @@ PP_EXTERN NSString* const kPPCustomerIdNumber;
  A code that indicates whether a field has been truncated (T), has not been
  truncated (N), or – unknown whether truncated (U).
  */
-PP_EXTERN NSString* const kPPFamilyNameTruncation;
+PP_EXTERN NSString* _Nonnull const kPPFamilyNameTruncation;
 
 /**
  Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes.
@@ -394,7 +392,7 @@ PP_EXTERN NSString* const kPPFamilyNameTruncation;
  A code that indicates whether a field has been truncated (T), has not been
  truncated (N), or – unknown whether truncated (U).
  */
-PP_EXTERN NSString* const kPPFirstNameTruncation;
+PP_EXTERN NSString* _Nonnull const kPPFirstNameTruncation;
 
 /**
  Mandatory on AAMVA 04, 05, 06, 07, 08
@@ -402,14 +400,14 @@ PP_EXTERN NSString* const kPPFirstNameTruncation;
  A code that indicates whether a field has been truncated (T), has not been
  truncated (N), or – unknown whether truncated (U).
  */
-PP_EXTERN NSString* const kPPMiddleNameTruncation;
+PP_EXTERN NSString* _Nonnull const kPPMiddleNameTruncation;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
 
  Country and municipality and/or state/province
  */
-PP_EXTERN NSString* const kPPPlaceOfBirth;
+PP_EXTERN NSString* _Nonnull const kPPPlaceOfBirth;
 
 /**
  Optional on all AAMVA barcodes
@@ -418,7 +416,7 @@ PP_EXTERN NSString* const kPPPlaceOfBirth;
 
  Second line of street portion of the cardholder address.
  */
-PP_EXTERN NSString* const kPPAddressStreet2;
+PP_EXTERN NSString* _Nonnull const kPPAddressStreet2;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
@@ -445,56 +443,56 @@ PP_EXTERN NSString* const kPPAddressStreet2;
  U      Unknown
 
  */
-PP_EXTERN NSString* const kPPRaceEthnicity;
+PP_EXTERN NSString* _Nonnull const kPPRaceEthnicity;
 
 /**
  Optional on AAMVA 01
 
  PREFIX to Driver Name. Freeform as defined by issuing jurisdiction.
  */
-PP_EXTERN NSString* const kPPNamePrefix;
+PP_EXTERN NSString* _Nonnull const kPPNamePrefix;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.
 
  Country in which DL/ID is issued. U.S. = USA, Canada = CAN.
  */
-PP_EXTERN NSString* const kPPCountryIdentification;
+PP_EXTERN NSString* _Nonnull const kPPCountryIdentification;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Residence Street Address 1.
  */
-PP_EXTERN NSString* const kPPResidenceStreetAddress;
+PP_EXTERN NSString* _Nonnull const kPPResidenceStreetAddress;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Residence Street Address 2.
  */
-PP_EXTERN NSString* const kPPResidenceStreetAddress2;
+PP_EXTERN NSString* _Nonnull const kPPResidenceStreetAddress2;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Residence City
  */
-PP_EXTERN NSString* const kPPResidenceCity;
+PP_EXTERN NSString* _Nonnull const kPPResidenceCity;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Residence Jurisdiction Code.
  */
-PP_EXTERN NSString* const kPPResidenceJurisdictionCode;
+PP_EXTERN NSString* _Nonnull const kPPResidenceJurisdictionCode;
 
 /**
  Optional on AAMVA 01 barcodes.
 
  Driver Residence Postal Code.
  */
-PP_EXTERN NSString* const kPPResidencePostalCode;
+PP_EXTERN NSString* _Nonnull const kPPResidencePostalCode;
 
 /**
  Optional on AAMVA 01 barcodes.
@@ -510,42 +508,42 @@ PP_EXTERN NSString* const kPPResidencePostalCode;
  , (required if other address portions follow, otherwise optional)
  Residence ZIP - Residence Postal Code (optional)
  */
-PP_EXTERN NSString* const kPPResidenceFullAddress;
+PP_EXTERN NSString* _Nonnull const kPPResidenceFullAddress;
 
 /**
  Optional on AAMVA 05, 06, 07, 08
 
  Date on which the cardholder turns 18 years old. (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPUnder18; // nakon verzije 05
+PP_EXTERN NSString* _Nonnull const kPPUnder18; // nakon verzije 05
 
 /**
  Optional on AAMVA 05, 06, 07, 08
 
  Date on which the cardholder turns 19 years old. (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPUnder19; // nakon verzije 05
+PP_EXTERN NSString* _Nonnull const kPPUnder19; // nakon verzije 05
 
 /**
  Optional on AAMVA 05, 06, 07, 08
 
  Date on which the cardholder turns 21 years old. (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPUnder21; // nakon verzije 05
+PP_EXTERN NSString* _Nonnull const kPPUnder21; // nakon verzije 05
 
 /**
  Optional on AAMVA version 01.
 
  The number assigned to an individual by the Social Security Administration.
  */
-PP_EXTERN NSString* const kPPSocialSecurityNumber;
+PP_EXTERN NSString* _Nonnull const kPPSocialSecurityNumber;
 
 /**
  Optional on AAMVA version 01.
 
  Driver "AKA" Social Security Number. FORMAT SAME AS DRIVER SOC SEC NUM. ALTERNATIVE NUMBERS(S) used as SS NUM.
  */
-PP_EXTERN NSString* const kPPAKASocialSecurityNumber;
+PP_EXTERN NSString* _Nonnull const kPPAKASocialSecurityNumber;
 
 /**
  Optional on AAMVA 01
@@ -554,35 +552,35 @@ PP_EXTERN NSString* const kPPAKASocialSecurityNumber;
  Hyphenated names acceptable, spaces between names acceptable, but no other
  use of special symbols
  */
-PP_EXTERN NSString* const kPPAKAMiddleName; // samo 01
+PP_EXTERN NSString* _Nonnull const kPPAKAMiddleName; // samo 01
 
 /**
  Optional on AAMVA 01
 
  ALTERNATIVE PREFIX to Driver Name. Freeform as defined by issuing jurisdiction.
  */
-PP_EXTERN NSString* const kPPAKAPrefixName; // samo 01
+PP_EXTERN NSString* _Nonnull const kPPAKAPrefixName; // samo 01
 
 /**
  Optional on AAMVA 01, 06, 07, 08
 
  Field that indicates that the cardholder is an organ donor = "1".
  */
-PP_EXTERN NSString* const kPPOrganDonor;
+PP_EXTERN NSString* _Nonnull const kPPOrganDonor;
 
 /**
  Optional on AAMVA 07, 08
 
  Field that indicates that the cardholder is a veteran = "1"
  */
-PP_EXTERN NSString* const kPPVeteran;
+PP_EXTERN NSString* _Nonnull const kPPVeteran;
 
 /**
  Optional on AAMVA 01. (MMDDCCYY format)
 
  ALTERNATIVE DATES(S) given as date of birth.
  */
-PP_EXTERN NSString* const kPPAKADateOfBirth; // samo za 01
+PP_EXTERN NSString* _Nonnull const kPPAKADateOfBirth; // samo za 01
 
 //==============================================================/
 //==========          3. LICENSE DATA KEYS          ============/
@@ -594,7 +592,7 @@ PP_EXTERN NSString* const kPPAKADateOfBirth; // samo za 01
  This number uniquely identifies the issuing jurisdiction and can
  be obtained by contacting the ISO Issuing Authority (AAMVA)
  */
-PP_EXTERN NSString* const kPPIssuerIdentificationNumber;
+PP_EXTERN NSString* _Nonnull const kPPIssuerIdentificationNumber;
 
 /**
  Mandatory on all AAMVA, Magnetic and Compact barcodes.
@@ -605,7 +603,7 @@ PP_EXTERN NSString* const kPPIssuerIdentificationNumber;
  no longer valid. (MMDDCCYY format)
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPDocumentExpirationDate;
+PP_EXTERN NSString* _Nonnull const kPPDocumentExpirationDate;
 
 /**
  Mandatory on all AAMVA and Compact barcodes.
@@ -620,7 +618,7 @@ PP_EXTERN NSString* const kPPDocumentExpirationDate;
  within each AAMVA version (above) must be noted, beginning with Jurisdiction
  Version 00.
  */
-PP_EXTERN NSString* const kPPJurisdictionVersionNumber;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionVersionNumber;
 
 /**
  Mandatory on all AAMVA and Magnetic barcodes.
@@ -628,7 +626,7 @@ PP_EXTERN NSString* const kPPJurisdictionVersionNumber;
  Jurisdiction-specific vehicle class / group code, designating the type
  of vehicle the cardholder has privilege to drive.
  */
-PP_EXTERN NSString* const kPPJurisdictionVehicleClass;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionVehicleClass;
 
 /**
  Mandatory on all AAMVA barcodes.
@@ -637,7 +635,7 @@ PP_EXTERN NSString* const kPPJurisdictionVehicleClass;
  Jurisdiction-specific codes that represent restrictions to driving
  privileges (such as airbrakes, automatic transmission, daylight only, etc.).
  */
-PP_EXTERN NSString* const kPPJurisdictionRestrictionCodes;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionRestrictionCodes;
 
 /**
  Mandatory on all AAMVA barcodes.
@@ -647,7 +645,7 @@ PP_EXTERN NSString* const kPPJurisdictionRestrictionCodes;
  granted to the cardholder beyond the vehicle class (such as transportation of
  passengers, hazardous materials, operation of motorcycles, etc.).
  */
-PP_EXTERN NSString* const kPPJurisdictionEndorsementCodes;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionEndorsementCodes;
 
 /**
  Mandatory on all AAMVA and Compact barcodes.
@@ -655,7 +653,7 @@ PP_EXTERN NSString* const kPPJurisdictionEndorsementCodes;
  Date on which the document was issued. (MMDDCCYY format)
  */
 // internal note: Filled by DataExpander
-PP_EXTERN NSString* const kPPDocumentIssueDate;
+PP_EXTERN NSString* _Nonnull const kPPDocumentIssueDate;
 
 /**
  Mandatory on AAMVA versions 02 and 03.
@@ -664,7 +662,7 @@ PP_EXTERN NSString* const kPPDocumentIssueDate;
  that are generally applicable to commercial motor vehicles. If the vehicle is not a
  commercial vehicle, "NONE" is to be entered.
  */
-FOUNDATION_EXPORT NSString* const kPPFederalCommercialVehicleCodes;
+FOUNDATION_EXPORT NSString* _Nonnull const kPPFederalCommercialVehicleCodes;
 
 /**
  Optional on all AAMVA barcodes.
@@ -679,7 +677,7 @@ FOUNDATION_EXPORT NSString* const kPPFederalCommercialVehicleCodes;
  one jurisdiction (e.g. California, Colorado, Connecticut) then other data, like
  the IIN or address, must be examined to determine the jurisdiction.
  */
-PP_EXTERN NSString* const kPPIssuingJurisdiction;
+PP_EXTERN NSString* _Nonnull const kPPIssuingJurisdiction;
 
 /**
  Optional on all AAMVA barcodes.
@@ -688,7 +686,7 @@ PP_EXTERN NSString* const kPPIssuingJurisdiction;
  Standard vehicle classification code(s) for cardholder. This data element is a
  placeholder for future efforts to standardize vehicle classifications.
  */
-PP_EXTERN NSString* const kPPStandardVehicleClassification;
+PP_EXTERN NSString* _Nonnull const kPPStandardVehicleClassification;
 
 
 /**
@@ -717,7 +715,7 @@ PP_EXTERN NSString* const kPPStandardVehicleClassification;
  X      Combined Tank/HAZ-MAT - This endorsement may be issued to any driver who qualifies for
  both the N and H endorsements.
  */
-PP_EXTERN NSString* const kPPStandardEndorsementCode;
+PP_EXTERN NSString* _Nonnull const kPPStandardEndorsementCode;
 
 /**
  Optional on all AAMVA barcodes
@@ -743,7 +741,7 @@ PP_EXTERN NSString* const kPPStandardEndorsementCode;
  V      Medical Variance Documentation Required
  W      Farm Waiver
  */
-PP_EXTERN NSString* const kPPStandardRestrictionCode;
+PP_EXTERN NSString* _Nonnull const kPPStandardRestrictionCode;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
@@ -751,7 +749,7 @@ PP_EXTERN NSString* const kPPStandardRestrictionCode;
  Text that explains the jurisdiction-specific code(s) for classifications
  of vehicles cardholder is authorized to drive.
  */
-PP_EXTERN NSString* const kPPJurisdictionVehicleClassificationDescription;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionVehicleClassificationDescription;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
@@ -759,14 +757,14 @@ PP_EXTERN NSString* const kPPJurisdictionVehicleClassificationDescription;
  Text that explains the jurisdiction-specific code(s) that indicates additional
  driving privileges granted to the cardholder beyond the vehicle class.
  */
-PP_EXTERN NSString* const kPPJurisdictionEndorsmentCodeDescription;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionEndorsmentCodeDescription;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
 
  Text describing the jurisdiction-specific restriction code(s) that curtail driving privileges.
  */
-PP_EXTERN NSString* const kPPJurisdictionRestrictionCodeDescription;
+PP_EXTERN NSString* _Nonnull const kPPJurisdictionRestrictionCodeDescription;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08
@@ -774,7 +772,7 @@ PP_EXTERN NSString* const kPPJurisdictionRestrictionCodeDescription;
  A string of letters and/or numbers that is affixed to the raw materials (card stock,
  laminate, etc.) used in producing driver licenses and ID cards. (DHS recommended field)
  */
-PP_EXTERN NSString* const kPPInventoryControlNumber;
+PP_EXTERN NSString* _Nonnull const kPPInventoryControlNumber;
 
 /**
  Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes
@@ -782,7 +780,7 @@ PP_EXTERN NSString* const kPPInventoryControlNumber;
  DHS required field that indicates date of the most recent version change or
  modification to the visible format of the DL/ID (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPCardRevisionDate;
+PP_EXTERN NSString* _Nonnull const kPPCardRevisionDate;
 
 /**
  Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Magnetic barcodes.
@@ -792,14 +790,14 @@ PP_EXTERN NSString* const kPPCardRevisionDate;
  from others that may have been issued in the past. This number may serve multiple
  purposes of document discrimination, audit information number, and/or inventory control.
  */
-PP_EXTERN NSString* const kPPDocumentDiscriminator;
+PP_EXTERN NSString* _Nonnull const kPPDocumentDiscriminator;
 
 /**
  Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes
 
  DHS required field that indicates that the cardholder has temporary lawful status = "1".
  */
-PP_EXTERN NSString* const kPPLimitedDurationDocument;
+PP_EXTERN NSString* _Nonnull const kPPLimitedDurationDocument;
 
 /**
  Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes
@@ -808,7 +806,7 @@ PP_EXTERN NSString* const kPPLimitedDurationDocument;
  license/ID card was made. If audit information is not used on the card or the MRT, it
  must be included in the driver record.
  */
-PP_EXTERN NSString* const kPPAuditInformation;
+PP_EXTERN NSString* _Nonnull const kPPAuditInformation;
 
 /**
  Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes
@@ -816,42 +814,42 @@ PP_EXTERN NSString* const kPPAuditInformation;
  DHS required field that indicates compliance: "M" = materially compliant;
  "F" = fully compliant; and, "N" = non-compliant.
  */
-PP_EXTERN NSString* const kPPComplianceType;
+PP_EXTERN NSString* _Nonnull const kPPComplianceType;
 
 /**
  Optional on AAMVA version 01.
 
  Issue Timestamp. A string used by some jurisdictions to validate the document against their data base.
  */
-PP_EXTERN NSString* const kPPIssueTimestamp;
+PP_EXTERN NSString* _Nonnull const kPPIssueTimestamp;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Permit Expiration Date. MMDDCCYY format. Date permit expires.
  */
-PP_EXTERN NSString* const kPPPermitExpirationDate;
+PP_EXTERN NSString* _Nonnull const kPPPermitExpirationDate;
 
 /**
  Optional on AAMVA version 01.
 
  Type of permit.
  */
-PP_EXTERN NSString* const kPPPermitIdentifier;
+PP_EXTERN NSString* _Nonnull const kPPPermitIdentifier;
 
 /**
  Optional on AAMVA version 01.
 
  Driver Permit Issue Date. MMDDCCYY format. Date permit was issued.
  */
-PP_EXTERN NSString* const kPPPermitIssueDate;
+PP_EXTERN NSString* _Nonnull const kPPPermitIssueDate;
 
 /**
  Optional on AAMVA version 01.
 
  Number of duplicate cards issued for a license or ID if any.
  */
-PP_EXTERN NSString* const kPPNumberOfDuplicates;
+PP_EXTERN NSString* _Nonnull const kPPNumberOfDuplicates;
 
 /**
  Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes
@@ -859,7 +857,7 @@ PP_EXTERN NSString* const kPPNumberOfDuplicates;
  Date on which the hazardous material endorsement granted by the document is
  no longer valid. (MMDDCCYY format)
  */
-PP_EXTERN NSString* const kPPHAZMATExpirationDate;
+PP_EXTERN NSString* _Nonnull const kPPHAZMATExpirationDate;
 
 /**
  Optional on AAMVA version 01.
@@ -867,28 +865,28 @@ PP_EXTERN NSString* const kPPHAZMATExpirationDate;
  Medical Indicator/Codes.
  STATE SPECIFIC. Freeform; Standard "TBD"
  */
-PP_EXTERN NSString* const kPPMedicalIndicator;
+PP_EXTERN NSString* _Nonnull const kPPMedicalIndicator;
 
 /**
  Optional on AAMVA version 01.
 
  Non-Resident Indicator. "Y". Used by some jurisdictions to indicate holder of the document is a non-resident.
  */
-PP_EXTERN NSString* const kPPNonResident;
+PP_EXTERN NSString* _Nonnull const kPPNonResident;
 
 /**
  Optional on AAMVA version 01.
 
  A number or alphanumeric string used by some jurisdictions to identify a "customer" across multiple data bases.
  */
-PP_EXTERN NSString* const kPPUniqueCustomerId;
+PP_EXTERN NSString* _Nonnull const kPPUniqueCustomerId;
 
 /**
  Optional on compact barcodes.
 
  Document discriminator.
  */
-PP_EXTERN NSString* const kPPDataDiscriminator;
+PP_EXTERN NSString* _Nonnull const kPPDataDiscriminator;
 
 /**
  Optional on Magnetic barcodes.
@@ -896,7 +894,7 @@ PP_EXTERN NSString* const kPPDataDiscriminator;
  Month on which the driving and identification privileges granted by the document are
  no longer valid. (MMYY format)
  */
-PP_EXTERN NSString* const kPPDocumentExpirationMonth;
+PP_EXTERN NSString* _Nonnull const kPPDocumentExpirationMonth;
 
 /**
  Optional on Magnetic barcodes.
@@ -904,14 +902,14 @@ PP_EXTERN NSString* const kPPDocumentExpirationMonth;
  Field that indicates that the driving and identification privileges granted by the
  document are nonexpiring = "1".
  */
-PP_EXTERN NSString* const kPPDocumentNonexpiring;
+PP_EXTERN NSString* _Nonnull const kPPDocumentNonexpiring;
 
 /**
  Optional on Magnetic barcodes.
 
  Security version beeing used.
  */
-PP_EXTERN NSString* const kPPSecurityVersion;
+PP_EXTERN NSString* _Nonnull const kPPSecurityVersion;
 
 #pragma mark - Keys for accessing raw barcode results
 
@@ -922,17 +920,17 @@ PP_EXTERN NSString* const kPPSecurityVersion;
 /**
  Raw pdf417 result
  */
-PP_EXTERN NSString* const kPPPdf417;
+PP_EXTERN NSString* _Nonnull const kPPPdf417;
 
 /**
  Raw code128 result
  */
-PP_EXTERN NSString* const kPPCode128;
+PP_EXTERN NSString* _Nonnull const kPPCode128;
 
 /**
  Raw code39 result
  */
-PP_EXTERN NSString* const kPPCode39;
+PP_EXTERN NSString* _Nonnull const kPPCode39;
 
 #pragma mark - PPUsdlRecognizerResult implementation
 
@@ -948,22 +946,20 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUsdlRecognizerResult : PPRecognizerResu
  *
  *  @return value for a given key
  */
-- (NSString *)getField:(const NSString *)key;
+- (NSString * _Nullable)getField:(const NSString * _Nonnull)key;
 
 /**
  * Returns all possible USDL keys with their descriptions.
  *
  *  @return NSDictionary with USDL key - description pairs
  */
-+ (NSDictionary*)descriptionKeys;
++ (NSDictionary* _Nonnull)descriptionKeys;
 
 /**
  * Returns all possible USDL keys ordered as in this header.
  *
  *  @return Array of all USDL keys ordered as in this header
  */
-+ (NSArray<NSString *> *)orderedKeys;
++ (NSArray<NSString *> * _Nonnull)orderedKeys;
 
 @end
-
-NS_ASSUME_NONNULL_END

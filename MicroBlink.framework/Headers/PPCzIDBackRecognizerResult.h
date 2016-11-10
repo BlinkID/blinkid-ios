@@ -17,18 +17,18 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDBackRecognizerResult : PPMrtdRecogn
  * Returns the issuing authority of the Czech ID.
  * @return issuing authority of the Czech ID.
  */
-- (NSString *)authority;
+- (NSString * _Nullable)authority;
 
 /**
  * Returns the address of the Czech ID owner.
  * @return address of the Czech ID owner.
  */
-- (NSString *)address;
+- (NSString * _Nullable)address;
 
 /**
  * Returns the personal number of the Czech ID owner.
  * @return personal number of the Czech ID owner.
  */
-- (NSString *)personalNumber;
+- (NSString * _Nullable)personalNumber;
 
 @end

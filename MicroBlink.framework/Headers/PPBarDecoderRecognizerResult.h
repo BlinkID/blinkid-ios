@@ -19,8 +19,6 @@ typedef NS_ENUM(NSUInteger, PPBarDecoderBarcodeType){
     PPBarDecoderBarcodeTypeCode39
 };
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Result of scanning with BarDecoder Recognizer
  *
@@ -44,7 +42,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
 /**
  * Byte array with result of the scan
  */
-- (NSData *)data;
+- (NSData * _Nullable)data;
 
 /**
  * Retrieves string content of the scanned data using guessed encoding.
@@ -57,7 +55,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
  *
  *  @return created string, or nil if encoding couldn't be found.
  */
-- (NSString *)stringUsingGuessedEncoding;
+- (NSString * _Nullable)stringUsingGuessedEncoding;
 
 /**
  * Retrieves string content of the scanned data using given encoding.
@@ -66,18 +64,18 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString *)stringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString * _Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  * Raw barcode detailed result
  */
-- (PPBarcodeDetailedData *)rawData;
+- (PPBarcodeDetailedData * _Nullable)rawData;
 
 
 /**
  * Byte array with extended result of the scan, if available.
  */
-- (NSData *)extendedData;
+- (NSData * _Nullable)extendedData;
 
 /**
  * Retrieves string content of the extended scanned data using guessed encoding.
@@ -90,7 +88,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
  *
  *  @return created string, or nil if encoding couldn't be found.
  */
-- (NSString *)extendedStringUsingGuessedEncoding;
+- (NSString * _Nullable)extendedStringUsingGuessedEncoding;
 
 /**
  * Retrieves string content of the extended scanned data using given encoding.
@@ -99,12 +97,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
  *
  *  @return String created from extendedData property, using given encoding
  */
-- (NSString *)extendedStringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString * _Nullable)extendedStringUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  * Extended Raw barcode detailed result
  */
-- (PPBarcodeDetailedData *)extendedRawData;
+- (PPBarcodeDetailedData * _Nullable)extendedRawData;
 
 /**
  * Method which gives string representation for a given PPBarDecoderBarcodeType enum value.
@@ -113,8 +111,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerResult : PPRecogniz
  *
  *  @return String representation of a given PPBarDecoderBarcodeType enum value.
  */
-+ (NSString *)toTypeName:(PPBarDecoderBarcodeType)type;
++ (NSString * _Nonnull)toTypeName:(PPBarDecoderBarcodeType)type;
 
 @end
-
-NS_ASSUME_NONNULL_END

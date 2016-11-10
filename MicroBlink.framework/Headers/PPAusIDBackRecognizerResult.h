@@ -17,42 +17,42 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerResult : PPMrtdRecog
  * Returns the issuing authority of the Austrian ID.
  * @return issuing authority of the Austrian ID.
  */
-- (NSString *)issuingAuthority;
+- (NSString * _Nullable)issuingAuthority;
 
 /**
  * Returns the place of birth of the Austrian ID owner.
  * @return place of birth of the Austrian ID owner.
  */
-- (NSString *)placeOfBirth;
+- (NSString * _Nullable)placeOfBirth;
 
 /**
  * Returns the principal residence of the Austrian ID owner.
  * @return principal residence of the Austrian ID owner.
  */
-- (NSString *)principalResidence;
+- (NSString * _Nullable)principalResidence;
 
 /**
  * Returns the height of the Austrian ID owner.
  * @return height of the Austrian ID owner.
  */
-- (NSString *)height;
+- (NSString * _Nullable)height;
 
 /**
  * Returns the date of issue of the Austrian ID.
  * @return date of issue of the Austrian ID.
  */
-- (NSString *)dateOfIssue;
+- (NSString * _Nullable)dateOfIssue;
 
 /**
  * Returns the eye color of the Austrian ID owner.
  * @return eye color of the Austrian ID owner.
  */
-- (NSString *)eyeColor;
+- (NSString * _Nullable)eyeColor;
 
 /**
  * Returns the document number of the Austrian ID.
  * @return document number of the Austrian ID.
  */
-- (NSString *)documentNumber;
+- (NSString * _Nullable)documentNumber;
 
 @end
