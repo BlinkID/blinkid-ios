@@ -42,7 +42,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         /** 2. Setup the license key */
 
         // Visit www.microblink.com to get the license key for your app
-        settings.licenseSettings.licenseKey = "JLSRALR2-6REKNWGY-TB4SGMER-ZEYJDSJQ-SHETBEOJ-GCI4SMER-ZEYJCSPC-E7GBIH2C"
+        settings.licenseSettings.licenseKey = "3R66F4P2-OMIURML5-VZTO6STD-ETVQPPGI-EXNJDSJQ-SHETBEOJ-GCI4TED3-EB7GYKCO"
 
 
         /**
@@ -163,7 +163,7 @@ class ViewController: UIViewController, PPScanningDelegate {
                 title = "QR code"
 
                 // Save the string representation of the code
-                message = zxingResult.stringUsingGuessedEncoding()
+                message = zxingResult.stringUsingGuessedEncoding()!
             }
             if(result is PPPdf417RecognizerResult) {
                 /** Pdf417 code was detected */
@@ -173,12 +173,19 @@ class ViewController: UIViewController, PPScanningDelegate {
                 title = "PDF417"
 
                 // Save the string representation of the code
-                message = pdf417Result.stringUsingGuessedEncoding()
+                message = pdf417Result.stringUsingGuessedEncoding()!
             }
         }
         // present the alert view with scanned results
-        let alertView: UIAlertView = UIAlertView.init(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
-        alertView.show()
+        
+        let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default,
+                                                         handler: { (action) -> Void in
+                                                            self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(okAction)
+        scanningViewController?.present(alertController, animated: true, completion: nil)
     }
 
     // dismiss the scanning view controller when user presses OK.

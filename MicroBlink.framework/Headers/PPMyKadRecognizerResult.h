@@ -8,8 +8,6 @@
 
 #import "PPRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Result of scanning MyKad (Malaysian ID document).
  */
@@ -22,43 +20,41 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMyKadRecognizerResult : PPRecognizerRes
  *
  *  @return NRIC number
  */
-- (NSString *)nricNumber;
+- (NSString * _Nullable)nricNumber;
 
 /**
  * Returns owner address
  *
  *  @return owner address
  */
-- (NSString *)ownerAddress;
+- (NSString * _Nullable)ownerAddress;
 
 /**
  * Returns owner birth date (YYMMDD format)
  *
  *  @return ownedr birth date
  */
-- (NSString *)ownerBirthDate;
+- (NSString * _Nullable)ownerBirthDate;
 
 /**
  * Returns owner full name
  *
  *  @return owner full name
  */
-- (NSString *)ownerFullName;
+- (NSString * _Nullable)ownerFullName;
 
 /**
  * Returns owner religion if written on MyKad
  *
  *  @return owner religion
  */
-- (NSString *)ownerReligion;
+- (NSString * _Nullable)ownerReligion;
 
 /**
  * Returns owner sex (M for male, F for female)
  *
  *  @return owner sex
  */
-- (NSString *)ownerSex;
+- (NSString * _Nullable)ownerSex;
 
 @end
-
-NS_ASSUME_NONNULL_END

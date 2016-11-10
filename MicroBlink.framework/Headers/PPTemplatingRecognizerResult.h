@@ -9,8 +9,6 @@
 #import "PPRecognizerResult.h"
 #import "PPOcrLayout.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Result of scanning with OCR Recognizer
  *
@@ -23,16 +21,28 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerResult : PPRecogniz
  *
  *  @return OCR layout for default parser group
  */
-- (PPOcrLayout *)ocrLayout;
+- (PPOcrLayout * _Nullable)ocrLayout;
 
 /**
- * If only default parser group is used, this method returns parsed string from the defaul parser group
+ * If only default parser group is used, this method returns parsed string from the default parser group
  *
  *  @param name name of the parser responsible for parsing the wanted string
  *
  *  @return parsed string
  */
-- (NSString *)parsedResultForName:(NSString*)name;
+- (NSString * _Nullable)parsedResultForName:(NSString* _Nonnull)name;
+
+/**
+ * If only default parser group is used, this method returns parsed object from the default parser group
+ * For example, date parser represented with PPDateOcrParserFactory can return parsed date here as
+ * NSDate object. It is always possible to obtain parsed result as raw string by using {@link parsedResultForName:}
+ * method.
+ *
+ *  @param name name of the parser responsible for parsing the wanted string
+ *
+ *  @return parsed object
+ */
+- (NSObject* _Nullable)specificParsedResultForName:(NSString* _Nonnull)name;
 
 /**
  * Retrieves OCR layout from arbitrary parser groups
@@ -41,7 +51,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerResult : PPRecogniz
  *
  *  @return OCR layout for given parser group
  */
-- (PPOcrLayout *)ocrLayoutForParserGroup:(NSString*)parserGroup;
+- (PPOcrLayout * _Nullable)ocrLayoutForParserGroup:(NSString* _Nonnull)parserGroup;
 
 /**
  *  Retrieves parsed string from given parser group
@@ -51,8 +61,21 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingRecognizerResult : PPRecogniz
  *
  *  @return parsed string
  */
-- (NSString *)parsedResultForName:(NSString*)name parserGroup:(NSString*)parserGroup;
+- (NSString * _Nullable)parsedResultForName:(NSString* _Nonnull)name parserGroup:(NSString* _Nonnull)parserGroup;
 
+/**
+ *  Retrieves parsed object from given parser group
+ *
+ *  @param name        name of the parser responsible for parsing the wanted string
+ *  @param parserGroup parser group name
+ *
+ *  @return parsed object
+ */
+- (NSObject* _Nullable)specificParsedResultForName:(NSString* _Nonnull)name parserGroup:(NSString* _Nonnull)parserGroup;
+
+/**
+ * Returns result of document classification, if any.
+ * @return result of document classification, if any.
+ */
+- (NSString * _Nullable)documentClassification;
 @end
-
-NS_ASSUME_NONNULL_END

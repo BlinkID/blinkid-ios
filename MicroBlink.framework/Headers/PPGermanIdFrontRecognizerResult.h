@@ -8,8 +8,6 @@
 
 #import "PPBlinkOcrRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Class representing values obtained when scanning front side of German ID
  */
@@ -19,44 +17,42 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdFrontRecognizerResult : PPBlink
  * Returns the first name of the German ID owner.
  * @return the first name of the German ID owner.
  */
-- (NSString *)firstName;
+- (NSString * _Nullable)firstName;
 
 /**
  * Returns the last name of the German ID owner.
  * @return the last name of the German ID owner.
  */
-- (NSString *)lastName;
+- (NSString * _Nullable)lastName;
 
 /**
  * Returns nationality of the German ID owner.
  * @return nationality of the German ID owner
  */
-- (NSString *)nationality;
+- (NSString * _Nullable)nationality;
 
 /**
  * Returns the date of birth of German ID owner
  * @return the date of birth of German ID owner
  */
-- (NSString *)dateOfBirth;
+- (NSString * _Nullable)dateOfBirth;
 
 /**
  * Returns the place of birth of the German ID
  * @return the place of birth of the German ID
  */
-- (NSString *)placeOfBirth;
+- (NSString * _Nullable)placeOfBirth;
 
 /**
  * Returns the document date of expiry of the German ID
  * @return the document date of expiry of the German ID
  */
-- (NSString *)dateOfExpiry;
+- (NSString * _Nullable)dateOfExpiry;
 
 /**
  * Returns the document number of the German ID
  * @return the document number of the German ID
  */
-- (NSString *)documentNumber;
+- (NSString * _Nullable)documentNumber;
 
 @end
-
-NS_ASSUME_NONNULL_END

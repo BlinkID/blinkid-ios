@@ -9,8 +9,6 @@
 #import "PPRecognizerResult.h"
 #import "PPBarcodeDetailedData.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Result of scanning with PDF417 Recognizer
  *
@@ -21,7 +19,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
 /**
  * Byte array with result of the scan
  */
-- (NSData *)data;
+- (NSData * _Nullable)data;
 
 /**
  * Retrieves string content of the scanned data using guessed encoding.
@@ -34,7 +32,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  *
  *  @return created string, or nil if encoding couldn't be found.
  */
-- (NSString *)stringUsingGuessedEncoding;
+- (NSString * _Nullable)stringUsingGuessedEncoding;
 
 /**
  * Retrieves string content of the scanned data using given encoding.
@@ -43,12 +41,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString *)stringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString * _Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  * Raw barcode detailed result
  */
-- (PPBarcodeDetailedData *)rawData;
+- (PPBarcodeDetailedData * _Nullable)rawData;
 
 /**
  * Flag indicating uncertain scanning data
@@ -68,8 +66,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  *
  *  @note - to get the points in NSArray use PPQuadrangle's toPointsArray method.
  */
-- (PPQuadrangle *)locationOnImage;
+- (PPQuadrangle * _Nullable)locationOnImage;
 
 @end
-
-NS_ASSUME_NONNULL_END

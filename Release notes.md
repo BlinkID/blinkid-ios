@@ -1,3 +1,19 @@
+##2.5.0
+- US Driver's Licence:
+    - fixed parsing of Virgin Islands DL
+    - added support for Arkansas DL
+    - added support for new South Carolina DL
+- Malaysian ID:
+    - added support for returning face image
+    - fixed wrong parsing of birth date
+    - added support for scanning Malaysian iKad documents
+- `PPDateOcrParser` returns result as `NSDate` object and as original date `NSString`
+- added methods `specificParsedResultForName:` and `specificParsedResultForName:parserGroup:` to `PPTemplatingRecognizerResult` (`PPBlinkOcrRecognizerResult `) which returns specific parser results, e.g. `NSDate` for `PPDateOcrParser`
+- added support for scanning front and back side of Serbian ID cards
+- improved IBAN parser
+- `PPMrtdRecognizerResult` now returns date of expiry and date of birth as `NSDate` instead of `NSString`
+- all recognizer results (classes that derive `PPRecognizerResult`) now have annotated nullability for their getters. Some of them used to assume non-null, while still returning `nil` sometimes. This has now been corrected and all getters are `_Nullable`
+
 ##2.4.0
 
 - iOS updates:

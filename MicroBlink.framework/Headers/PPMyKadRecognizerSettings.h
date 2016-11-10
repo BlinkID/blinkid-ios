@@ -21,11 +21,20 @@ NS_ASSUME_NONNULL_BEGIN
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMyKadRecognizerSettings : PPRecognizerSettings
 
 /**
- * If YES, full image of the document will be dewarped and returned via the API.
+ * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
+ * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *
- * Default: NO.
+ * Default: NO
  */
 @property (nonatomic, assign) BOOL showFullDocument;
+
+/**
+ * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
+ * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
+ *
+ * Default: NO
+ */
+@property ( nonatomic, assign ) BOOL showFaceImage;
 
 @end
 

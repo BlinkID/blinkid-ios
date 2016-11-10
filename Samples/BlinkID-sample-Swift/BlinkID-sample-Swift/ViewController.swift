@@ -38,7 +38,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         /** 2. Setup the license key */
 
         // Visit www.microblink.com to get the license key for your app
-        settings.licenseSettings.licenseKey = "BBETM7DP-53IOOHGE-7NJPFJ7J-6LPYVQUM-HY5BZBAN-TCGWO4QU-6DE4PFZD-UD22APRY"
+        settings.licenseSettings.licenseKey = "T3SVWZSH-4FNAOED6-6HPLPSFT-D6ZR7MY7-WMP3GH5T-D6ZR7MY7-WMP3HP6L-PL22BO5S"
 
 
         /**
@@ -187,9 +187,16 @@ class ViewController: UIViewController, PPScanningDelegate {
             }
         }
 
-        //present the alert view with scanned results
-        let alertView = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
-        alertView.show()
+        // present the alert view with scanned results
+        
+        let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default,
+                                                         handler: { (action) -> Void in
+                                                            self.dismiss(animated: true, completion: nil)
+        })
+        alertController.addAction(okAction)
+        scanningViewController?.present(alertController, animated: true, completion: nil)
     }
 
     // dismiss the scanning view controller when user presses OK.

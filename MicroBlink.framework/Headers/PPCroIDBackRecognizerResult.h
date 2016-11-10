@@ -8,8 +8,6 @@
 
 #import "PPMrtdRecognizerResult.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Result of scanning with Croatian ID Back side recognizer
  *
@@ -21,22 +19,20 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDBackRecognizerResult : PPMrtdRecog
  *
  * @return the address of the Croatian ID owner.
  */
-- (NSString *)address;
+- (NSString * _Nullable)address;
 
 /**
  * Returns the issuing authority of Croatian ID.
  *
  * @return the issuing authority of Croatian ID.
  */
-- (NSString *)issuingAuthority;
+- (NSString * _Nullable)issuingAuthority;
 
 /**
  * Returns the document date of issue of the Croatian ID.
  *
  * @return the document date of issue of the Croatian ID.
  */
-- (NSString *)documentDateOfIssue;
+- (NSString * _Nullable)documentDateOfIssue;
 
 @end
-
-NS_ASSUME_NONNULL_END

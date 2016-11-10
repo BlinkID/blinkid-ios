@@ -6,14 +6,8 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "PPMicroBlinkDefines.h"
-
-@class PPOverlayViewController;
-@class PPCameraCoordinator;
-
-@protocol PPScanningDelegate;
-@protocol PPScanningViewController;
+#import "PPCameraCoordinator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
