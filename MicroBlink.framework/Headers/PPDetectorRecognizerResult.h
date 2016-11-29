@@ -21,11 +21,10 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDetectorRecognizerResult : PPRecognizerResult
 
 /**
- * Obtians the detector result. The type of the detector result depends on the DetectorSettings used when initializing
+ * The detector result. The type of the detector result depends on the DetectorSettings used when initializing
  * PPDetectorRecognizer
- *
- *  @return detectorResult
  */
-- (PPDetectorResult * _Nullable)detectorResult;
+@property (nonatomic, readonly, nullable) PPDetectorResult* detectorResult;
+
 
 @end

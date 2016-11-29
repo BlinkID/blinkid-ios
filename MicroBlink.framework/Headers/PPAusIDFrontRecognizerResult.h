@@ -14,33 +14,28 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the first name of the Austrian ID owner.
- * @return first name of the Austrian ID owner.
+ * The first name of the Austrian ID owner.
  */
-- (NSString * _Nullable)firstName;
+@property (nonatomic, readonly, nullable) NSString* firstName;
 
 /**
- * Returns the last name of the Austrian ID owner.
- * @return last name of the Austrian ID owner.
+ * The last name of the Austrian ID owner.
  */
-- (NSString * _Nullable)lastName;
+@property (nonatomic, readonly, nullable) NSString* lastName;
 
 /**
- * Returns the document number of the Austrian ID.
- * @return document number of the Austrian ID.
+ * The document number of the Austrian ID.
  */
-- (NSString * _Nullable)documentNumber;
+@property (nonatomic, readonly, nullable) NSString* documentNumber;
 
 /**
- * Returns the date of birth of the Austrian ID owner.
- * @return date of birth of the Austrian ID owner.
+ * The date of birth of the Austrian ID owner.
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the sex of the Austrian ID owner.
- * @return sex of the Austrian ID owner.
+ * The sex of the Austrian ID owner.
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 @end

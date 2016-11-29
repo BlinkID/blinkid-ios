@@ -14,27 +14,23 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovakIdBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
- * Returns the address of the Slovakian ID owner.
- * @return the address of the Slovakian ID owner.
+ * The address of the Slovakian ID owner.
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 /**
- * Returns the surname at birth of the Slovakian ID owner.
- * @return the surname at birth of the Slovakian ID owner.
+ * The surname at birth of the Slovakian ID owner.
  */
-- (NSString * _Nullable)surnameAtBirth;
+@property (nonatomic, readonly, nullable) NSString* surnameAtBirth;
 
 /**
- * Returns the place of birth of the Slovakian ID owner.
- * @return the place of birth of the Slovakian ID owner.
+ * The place of birth of the Slovakian ID owner.
  */
-- (NSString * _Nullable)placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
 
 /**
- * Returns the special remarks of the Slovakian ID owner.
- * @return the special remarks of the Slovakian ID owner.
+ * The special remarks of the Slovakian ID owner.
  */
-- (NSString * _Nullable)specialRemarks;
+@property (nonatomic, readonly, nullable) NSString* specialRemarks;
 
 @end

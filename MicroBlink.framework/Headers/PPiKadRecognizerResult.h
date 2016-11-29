@@ -14,57 +14,48 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPiKadRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the name of the iKad owner.
- * @return the name of the iKad owner.
+ * The name of the iKad owner.
  */
-- (NSString * _Nullable)name;
+@property (nonatomic, readonly, nullable) NSString* name;
 
 /**
- * Returns the passport number of the iKad owner.
- * @return the passport number of the iKad owner.
+ * The passport number of the iKad owner.
  */
-- (NSString * _Nullable)passportNumber;
+@property (nonatomic, readonly, nullable) NSString* passportNumber;
 
 /**
- * Returns nationality of the iKad owner.
- * @return nationality of the iKad owner
+ * The nationality of the iKad owner.
  */
-- (NSString * _Nullable)nationality;
+@property (nonatomic, readonly, nullable) NSString* nationality;
 
 /**
- * Returns the date of birth of iKad owner
- * @return the date of birth of iKad owner
+ * The date of birth of iKad owner
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the sex of the iKad owner
- * @return the sex of the iKad owner
+ * The sex of the iKad owner
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns the sector of the iKad owner
- * @return the sector of the iKad owner
+ * The sector of the iKad owner
  */
-- (NSString * _Nullable)sector;
+@property (nonatomic, readonly, nullable) NSString* sector;
 
 /**
- * Returns the employer of the iKad owner
- * @return the employer of the iKad owner
+ * The employer of the iKad owner
  */
-- (NSString * _Nullable)employer;
+@property (nonatomic, readonly, nullable) NSString* employer;
 
 /**
- * Returns the address of the iKad owner
- * @return the address of the iKad owner
+ * The address of the iKad owner
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 /**
- * Returns the expiry date of the iKad
- * @return the expiry date of the iKad
+ * The expiry date of the iKad
  */
-- (NSString * _Nullable)expiryDate;
+@property (nonatomic, readonly, nullable) NSString* expiryDate;
 
 @end

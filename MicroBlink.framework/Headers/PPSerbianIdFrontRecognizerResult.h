@@ -14,15 +14,13 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSerbianIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the issuing date of the Serbian ID.
- * @return the issuing date of the Serbian ID.
+ * The issuing date of the Serbian ID.
  */
-- (NSDate* _Nullable) issuingDate;
+@property (nonatomic, readonly, nullable) NSDate* issuingDate;
 
 /**
- * Returns the valid until date of the Serbian ID.
- * @return the valid until date of the Serbian ID.
+ * The valid until date of the Serbian ID.
  */
-- (NSDate* _Nullable) validUntil;
+@property (nonatomic, readonly, nullable) NSDate* validUntil;
 
 @end

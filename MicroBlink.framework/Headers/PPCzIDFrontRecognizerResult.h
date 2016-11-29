@@ -14,51 +14,43 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the ID card number of the Czech ID.
- * @return ID card number of the Czech ID.
+ * The ID card number of the Czech ID.
  */
-- (NSString * _Nullable)identityCardNumber;
+@property (nonatomic, readonly, nullable) NSString* identityCardNumber;
 
 /**
- * Returns the first name of the Czech ID owner.
- * @return first name of the Czech ID owner.
+ * The first name of the Czech ID owner.
  */
-- (NSString * _Nullable)firstName;
+@property (nonatomic, readonly, nullable) NSString* firstName;
 
 /**
- * Returns the last name of the Czech ID owner.
- * @return last name of the Czech ID owner.
+ * The last name of the Czech ID owner.
  */
-- (NSString * _Nullable)lastName;
+@property (nonatomic, readonly, nullable) NSString* lastName;
 
 /**
- * Returns the date of birth of the Czech ID owner.
- * @return date of birth of the Czech ID owner.
+ * The date of birth of the Czech ID owner.
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the date of issue of the Czech ID owner.
- * @return date of issue of the Czech ID owner.
+ * The date of issue of the Czech ID owner.
  */
-- (NSString * _Nullable)dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
 
 /**
- * Returns the date of expiry of the Czech ID owner.
- * @return date of expiry of the Czech ID owner.
+ * The date of expiry of the Czech ID owner.
  */
-- (NSString * _Nullable)dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString* dateOfExpiry;
 
 /**
- * Returns the sex of the Czech ID owner.
- * @return sex of the Czech ID owner.
+ * The sex of the Czech ID owner.
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns the place of birth of the Czech ID owner.
- * @return place of birth of the Czech ID owner.
+ * The place of birth of the Czech ID owner.
  */
-- (NSString * _Nullable)placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
 
 @end

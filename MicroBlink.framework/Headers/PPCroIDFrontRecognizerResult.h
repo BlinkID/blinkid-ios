@@ -14,45 +14,38 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the first name of the Croatian ID owner.
- * @return the first name of the Croatian ID owner.
+ * The first name of the Croatian ID owner.
  */
-- (NSString * _Nullable)firstName;
+@property (nonatomic, readonly, nullable) NSString* firstName;
 
 /**
- * Returns the last name of the Croatian ID owner.
- * @return the last name of the Croatian ID owner.
+ * The last name of the Croatian ID owner.
  */
-- (NSString * _Nullable)lastName;
+@property (nonatomic, readonly, nullable) NSString* lastName;
 
 /**
- * Returns the identity card number of Croatian ID.
- * @return the identity card number of Croatian ID.
+ * The identity card number of Croatian ID.
  */
-- (NSString * _Nullable)identityCardNumber;
+@property (nonatomic, readonly, nullable) NSString* identityCardNumber;
 
 /**
- * Returns sex of the Croatian ID owner.
- * @return sex of the Croatian ID owner
+ * The sex of the Croatian ID owner.
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns nationality of the Croatian ID owner.
- * @return nationality of the Croatian ID owner
+ * The nationality of the Croatian ID owner.
  */
-- (NSString * _Nullable)nationality;
+@property (nonatomic, readonly, nullable) NSString* nationality;
 
 /**
- * Returns the date of birth of Croatian ID owner
- * @return the date of birth of Croatian ID owner
+ * The date of birth of Croatian ID owner
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the document date of expiry of the Croatian ID
- * @return the document date of expiry of the Croatian ID
+ * The document date of expiry of the Croatian ID
  */
-- (NSString * _Nullable)documentDateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString* documentDateOfExpiry;
 
 @end

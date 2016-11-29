@@ -15,24 +15,18 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
- * Returns the address of the Croatian ID owner.
- *
- * @return the address of the Croatian ID owner.
+ * The address of the Croatian ID owner.
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 /**
- * Returns the issuing authority of Croatian ID.
- *
- * @return the issuing authority of Croatian ID.
+ * The issuing authority of Croatian ID.
  */
-- (NSString * _Nullable)issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString* issuingAuthority;
 
 /**
- * Returns the document date of issue of the Croatian ID.
- *
- * @return the document date of issue of the Croatian ID.
+ * The document date of issue of the Croatian ID.
  */
-- (NSString * _Nullable)documentDateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* documentDateOfIssue;
 
 @end
