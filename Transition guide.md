@@ -1,3 +1,9 @@
+## 2.5.1
+
+- Default `PPIDCardOverlayViewController` implementation changed. Now it no longer uses viewfinder overlay subview, instead it places an UIImageView in the center of the view, which shows the frame inside which the user should place the document. This improves positioning, and in turn - increases the success rate of the scanning
+
+- Nullability attributes have been fixed. Basically, properties in the result classes are no longer consider nonnull (this was wrong!). You should always consider an option that the result property is nil, which means it doesn't exist at all on the scanned document.
+
 ## 2.5.0
 - `PPMrtdRecognizerResult` now returns `NSDate` in methods `dateOfBirth` and `dateOfExpiry`. Previously `NSString` was returned and user had to parse the string to get the date. If you want old behaviour, use methods `rawDateOfBirth` and `rawDateOfExpiry` which will return strings in same format as in previous versions.
 - this also applies for all recognizer results that inherit `PPMrtdRecognizerResult`

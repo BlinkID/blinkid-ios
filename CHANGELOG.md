@@ -1,4 +1,11 @@
-##2.5.0
+## 2.5.1
+
+- Updated default overlay UI for ID scanning
+- Fixed nullability annotations in result classes. Now, wherever the `nil`value is allowed, it means no data exists on the scanned document. If an empty string `@""` is returned, this means the field exist, but it's empty. 
+- Croatian ID scanning now uses dictionary for issuing authority for higher accuracy
+- Improved generic Amount and IBAN parsers
+
+## 2.5.0
 - US Driver's Licence:
     - fixed parsing of Virgin Islands DL
     - added support for Arkansas DL
@@ -14,7 +21,7 @@
 - `PPMrtdRecognizerResult` now returns date of expiry and date of birth as `NSDate` instead of `NSString`
 - all recognizer results (classes that derive `PPRecognizerResult`) now have annotated nullability for their getters. Some of them used to assume non-null, while still returning `nil` sometimes. This has now been corrected and all getters are `_Nullable`
 
-##2.4.0
+## 2.4.0
 
 - iOS updates:
 	- Aded Slovenian ID recognizer
@@ -23,19 +30,19 @@
 - iOS bugfixes:
 	- Fixed issue where Templating API wasn't working as expected on some devices.
 
-##2.3.0
+## 2.3.0
 
 - iOS updates:
 	- Added German ID recognizer
 	- Added Slovakian ID recognizer
 	- Improved performance of Croatian ID recognizer
 
-##2.2.1
+## 2.2.1
 
 - iOS fixes:
 	- Fixed problems with string localizations
 	
-##2.2.1
+## 2.2.1
 
 - iOS fixes:
 	- CFBundleSUpportedPlatforms removed from Info.plist files
