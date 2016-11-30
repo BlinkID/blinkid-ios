@@ -14,39 +14,33 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the first name of the Slovenian ID owner.
- * @return the first name of the Slovenian ID owner.
+ * The first name of the Slovenian ID owner.
  */
-- (NSString * _Nullable)firstName;
+@property (nonatomic, readonly, nullable) NSString* firstName;
 
 /**
- * Returns the last name of the Slovenian ID owner.
- * @return the last name of the Slovenian ID owner.
+ * The last name of the Slovenian ID owner.
  */
-- (NSString * _Nullable)lastName;
+@property (nonatomic, readonly, nullable) NSString* lastName;
 
 /**
- * Returns the sex of the Slovenian ID owner.
- * @return the sex of the Slovenian ID owner.
+ * The sex of the Slovenian ID owner.
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns the nationality of the Slovenian ID owner.
- * @return the nationality of the Slovenian ID owner.
+ * The nationality of the Slovenian ID owner.
  */
-- (NSString * _Nullable)nationality;
+@property (nonatomic, readonly, nullable) NSString* nationality;
 
 /**
- * Returns the date of birth of the Slovenian ID owner.
- * @return the date of birth of the Slovenian ID owner.
+ * The date of birth of the Slovenian ID owner.
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the date of expiry of the Slovenian ID owner.
- * @return the date of expiry of the Slovenian ID owner.
+ * The date of expiry of the Slovenian ID owner.
  */
-- (NSString * _Nullable)dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString* dateOfExpiry;
 
 @end

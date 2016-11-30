@@ -170,6 +170,18 @@
             title = @"MyKad";
             message = [myKadResult description];
         }
+        if ([result isKindOfClass:[PPCroIDFrontRecognizerResult class]]) {
+            /** MyKad was detected */
+            PPCroIDFrontRecognizerResult *croIdFrontResult = (PPCroIDFrontRecognizerResult *)result;
+            title = @"Cro ID Front";
+            message = [croIdFrontResult description];
+        }
+        if ([result isKindOfClass:[PPCroIDBackRecognizerResult class]]) {
+            /** MyKad was detected */
+            PPCroIDBackRecognizerResult *croIdBackResult = (PPCroIDBackRecognizerResult *)result;
+            title = @"Cro ID Back";
+            message = [croIdBackResult description];
+        }
     };
 
     // present the alert view with scanned results

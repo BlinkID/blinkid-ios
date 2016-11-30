@@ -14,21 +14,18 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
- * Returns the address of the Slovenian ID owner.
- * @return the address of the Slovenian ID owner.
+ * The address of the Slovenian ID owner.
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 /**
- * Returns the authority of the Slovenian ID.
- * @return the authority of the Slovenian ID.
+ * The authority of the Slovenian ID.
  */
-- (NSString * _Nullable)authority;
+@property (nonatomic, readonly, nullable) NSString* authority;
 
 /**
- * Returns date of issue of the Slovenian ID.
- * @return date of issue of the Slovenian ID.
+ * Date of issue of the Slovenian ID.
  */
-- (NSString * _Nullable)dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
 
 @end

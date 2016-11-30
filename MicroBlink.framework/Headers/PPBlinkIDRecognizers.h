@@ -9,7 +9,7 @@
 #ifndef PPBlinkIDRecognizers_h
 #define PPBlinkIDRecognizers_h
 
-// MRZ
+// MRTD
 #import "PPMrtdRecognizerSettings.h"
 #import "PPMrtdRecognizerResult.h"
 
@@ -17,9 +17,11 @@
 #import "PPEudlRecognizerSettings.h"
 #import "PPEudlRecognizerResult.h"
 
-// Malaysian IDs (MyKad)
+// Malaysian IDs
 #import "PPMyKadRecognizerSettings.h"
 #import "PPMyKadRecognizerResult.h"
+#import "PPIKadRecognizerSettings.h"
+#import "PPIKadRecognizerResult.h"
 
 // Malaysian immigration IDs (iKad)
 #import "PPiKadRecognizerSettings.h"

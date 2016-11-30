@@ -14,45 +14,38 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
- * Returns the issuing authority of the Austrian ID.
- * @return issuing authority of the Austrian ID.
+ * The issuing authority of the Austrian ID.
  */
-- (NSString * _Nullable)issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString* issuingAuthority;
 
 /**
- * Returns the place of birth of the Austrian ID owner.
- * @return place of birth of the Austrian ID owner.
+ * The place of birth of the Austrian ID owner.
  */
-- (NSString * _Nullable)placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
 
 /**
- * Returns the principal residence of the Austrian ID owner.
- * @return principal residence of the Austrian ID owner.
+ * The principal residence of the Austrian ID owner.
  */
-- (NSString * _Nullable)principalResidence;
+@property (nonatomic, readonly, nullable) NSString* principalResidence;
 
 /**
- * Returns the height of the Austrian ID owner.
- * @return height of the Austrian ID owner.
+ * The height of the Austrian ID owner.
  */
-- (NSString * _Nullable)height;
+@property (nonatomic, readonly, nullable) NSString* height;
 
 /**
- * Returns the date of issue of the Austrian ID.
- * @return date of issue of the Austrian ID.
+ * The date of issue of the Austrian ID.
  */
-- (NSString * _Nullable)dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
 
 /**
- * Returns the eye color of the Austrian ID owner.
- * @return eye color of the Austrian ID owner.
+ * The eye color of the Austrian ID owner.
  */
-- (NSString * _Nullable)eyeColor;
+@property (nonatomic, readonly, nullable) NSString* eyeColor;
 
 /**
- * Returns the document number of the Austrian ID.
- * @return document number of the Austrian ID.
+ * The document number of the Austrian ID.
  */
-- (NSString * _Nullable)documentNumber;
+@property (nonatomic, readonly, nullable) NSString* documentNumber;
 
 @end

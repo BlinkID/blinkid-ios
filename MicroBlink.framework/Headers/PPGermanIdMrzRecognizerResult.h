@@ -14,33 +14,28 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdMrzRecognizerResult : PPMrtdRecognizerResult
 
 /**
- * Returns the eye color of the German ID owner.
- * @return the eye color of the German ID owner.
+ * The eye color of the German ID owner.
  */
-- (NSString * _Nullable)eyeColor;
+@property (nonatomic, readonly, nullable) NSString* eyeColor;
 
 /**
- * Returns the height of the German ID owner.
- * @return the height of the German ID owner.
+ * The height of the German ID owner.
  */
-- (NSString * _Nullable)height;
+@property (nonatomic, readonly, nullable) NSString* height;
 
 /**
- * Returns the date of issue of the ID.
- * @return the date of issue of the ID.
+ * The date of issue of the ID.
  */
-- (NSString * _Nullable)dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
 
 /**
- * Returns the issuing authority of the German ID.
- * @return the issuing authority of the German ID.
+ * The issuing authority of the German ID.
  */
-- (NSString * _Nullable)authority;
+@property (nonatomic, readonly, nullable) NSString* authority;
 
 /**
- * Returns the address of the German ID owner.
- * @return the address of the German ID owner.
+ * The address of the German ID owner.
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 @end

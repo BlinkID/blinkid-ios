@@ -15,57 +15,48 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSingaporeIDRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
- * Returns the identity card number of the Singapore ID.
- * @return identity card number of the Singapore ID.
+ * The identity card number of the Singapore ID.
  */
-- (NSString * _Nullable)identityCardNumber;
+@property (nonatomic, readonly, nullable) NSString* identityCardNumber;
 
 /**
- * Returns the name of the Singapore ID owner.
- * @return name of the Singapore ID owner.
+ * The name of the Singapore ID owner.
  */
-- (NSString * _Nullable)name;
+@property (nonatomic, readonly, nullable) NSString* name;
 
 /**
- * Returns the race of the Singapore ID owner.
- * @return race of the Singapore ID owner.
+ * The race of the Singapore ID owner.
  */
-- (NSString * _Nullable)race;
+@property (nonatomic, readonly, nullable) NSString* race;
 
 /**
- * Returns the sex of the Singapore ID owner.
- * @return sex of the Singapore ID owner.
+ * The sex of the Singapore ID owner.
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns the date of birth of the Singapore ID owner.
- * @return date of birth of the Singapore ID owner.
+ * The date of birth of the Singapore ID owner.
  */
-- (NSString * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
 
 /**
- * Returns the country of birth of the Singapore ID owner.
- * @return country of birth of the Singapore ID owner.
+ * The country of birth of the Singapore ID owner.
  */
-- (NSString * _Nullable)countryOfBirth;
+@property (nonatomic, readonly, nullable) NSString* countryOfBirth;
 
 /**
- * Returns the blood group of the Singapore ID owner.
- * @return blood group of the Singapore ID owner.
+ * The blood group of the Singapore ID owner.
  */
-- (NSString * _Nullable)bloodGroup;
+@property (nonatomic, readonly, nullable) NSString* bloodGroup;
 
 /**
- * Returns the date of issue of the Singapore ID.
- * @return date of issue of the Singapore ID.
+ * The date of issue of the Singapore ID.
  */
-- (NSString * _Nullable)dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
 
 /**
- * Returns the address of the Singapore ID owner.
- * @return address of the Singapore ID owner.
+ * The address of the Singapore ID owner.
  */
-- (NSString * _Nullable)address;
+@property (nonatomic, readonly, nullable) NSString* address;
 
 @end

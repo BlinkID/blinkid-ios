@@ -17,4 +17,8 @@
  */
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPIDCardOverlayViewController : PPModernBaseOverlayViewController
 
+@property (nonatomic) UIImageView *viewfinderImageView;
+
+@property (nonatomic) UILabel *tooltipLabel;
+
 @end

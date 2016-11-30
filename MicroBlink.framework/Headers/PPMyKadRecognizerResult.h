@@ -14,47 +14,35 @@
 PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMyKadRecognizerResult : PPRecognizerResult
 
 /**
- * Returns NRIC number (National Registration Identity Card Number)
+ * NRIC number (National Registration Identity Card Number)
  *
  *  @see https://en.wikipedia.org/wiki/Malaysian_identity_card#Structure_of_the_National_Registration_Identity_Card_Number_.28NRIC.29
- *
- *  @return NRIC number
  */
-- (NSString * _Nullable)nricNumber;
+@property (nonatomic, readonly, nullable) NSString* nricNumber;
 
 /**
- * Returns owner address
- *
- *  @return owner address
+ * Owner address
  */
-- (NSString * _Nullable)ownerAddress;
+@property (nonatomic, readonly, nullable) NSString* ownerAddress;
 
 /**
- * Returns owner birth date (YYMMDD format)
- *
- *  @return ownedr birth date
+ * Owner birth date (YYMMDD format)
  */
-- (NSString * _Nullable)ownerBirthDate;
+@property (nonatomic, readonly, nullable) NSString* ownerBirthDate;
 
 /**
- * Returns owner full name
- *
- *  @return owner full name
+ * Owner full name
  */
-- (NSString * _Nullable)ownerFullName;
+@property (nonatomic, readonly, nullable) NSString* ownerFullName;
 
 /**
- * Returns owner religion if written on MyKad
- *
- *  @return owner religion
+ * Owner religion if written on MyKad
  */
-- (NSString * _Nullable)ownerReligion;
+@property (nonatomic, readonly, nullable) NSString* ownerReligion;
 
 /**
- * Returns owner sex (M for male, F for female)
- *
- *  @return owner sex
+ * Owner sex (M for male, F for female)
  */
-- (NSString * _Nullable)ownerSex;
+@property (nonatomic, readonly, nullable) NSString* ownerSex;
 
 @end

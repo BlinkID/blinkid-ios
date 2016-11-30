@@ -24,7 +24,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUsdlRecognizerSettings : PPRecognizerSe
  *
  * Use only if necessary because it slows down the recognition process
  *
- * Default: NO
+ * Default: YES
  */
 @property (nonatomic) BOOL scanUncertain;
 

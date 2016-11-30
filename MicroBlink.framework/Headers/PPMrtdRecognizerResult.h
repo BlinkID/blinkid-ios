@@ -27,157 +27,125 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerResult : PPTemplatingReco
  *
  *  @return YES if MRTD Recognizer result was successfully parsed and all the fields are extracted. NO otherwise.
  */
-- (BOOL)isParsed;
+@property (nonatomic, readonly) BOOL isParsed;
 
 /**
- *  Returns MRTD document type of recognized document.
- *
- *  return PPMrtdDocumentType
+ *  MRTD document type of recognized document.
  */
-- (PPMrtdDocumentType)documentType;
+@property (nonatomic, readonly) PPMrtdDocumentType documentType;
 
 /**
- * Returns three-letter code which indicate the issuing State.
+ * Three-letter code which indicate the issuing State.
  * Three-letter codes are based on Alpha-3 codes for entities specified in 
  * ISO 3166-1, with extensions for certain States.
- *
- *  @return issuer code
  */
-- (NSString * _Nullable)issuer;
+@property (nonatomic, readonly, nullable) NSString* issuer;
 
 /**
  * Unique number of the document. Document number contains up to 9 characters.
  * Element does not exist on US Green Card. To see which document was scanned use documentType property.
- *
- *  @return documentNumber
  */
-- (NSString * _Nullable)documentNumber;
+@property (nonatomic, readonly, nullable) NSString* documentNumber;
 
 /**
- * Returns document code. Document code contains two characters. For MRTD the first character 
+ * The document code. Document code contains two characters. For MRTD the first character
  * shall be A, C or I. The second character shall be discretion of the issuing State or organization
  * except that V shall not be used, and C shall not be used after A except in the crew member
  * certificate. On machine-readable passports (MRP) first character shall be P to designate an MRP.
  * One additional letter may be used, at the discretion of the issuing State or organization,
  * to designate a particular MRP. If the second character position is not used for this purpose, it
  * shall be filled by the filter character <.
- *
- *  @return documentCode
  */
-- (NSString * _Nullable)documentCode;
+@property (nonatomic, readonly, nullable) NSString* documentCode;
 
 /**
- * Returns date of expiry of the document in format YYMMDD.
- *
- *  @return date of expiry
+ * Date of expiry of the document in format YYMMDD.
  */
-- (NSString* _Nullable)rawDateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString* rawDateOfExpiry;
 
 /**
- * Returns date of expiry of the document.
- *
- *  @return date of expiry
+ * Date of expiry of the document.
  */
-- (NSDate * _Nullable)dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSDate* dateOfExpiry;
 
 /**
  * Returns the primary indentifier. If there is more than one component, they are separated with space.
  *
  *  @return primary id of a card holder.
  */
-- (NSString * _Nullable)primaryId;
+@property (nonatomic, readonly, nullable) NSString* primaryId;
 
 /**
  * Returns the secondary identifier. If there is more than one component, they are separated with space.
  *
  *  @return secondary id of a card holder
  */
-- (NSString * _Nullable)secondaryId;
+@property (nonatomic, readonly, nullable) NSString* secondaryId;
 
 /**
- * Returns holder's date of birth in format YYMMDD.
- *
- *  @return date of birth
+ * Holder's date of birth in format YYMMDD.
  */
-- (NSString* _Nullable)rawDateOfBirth;
+@property (nonatomic, readonly, nullable) NSString* rawDateOfBirth;
 
 /**
- * Returns holder's date of birth.
- *
- *  @return date of birth
+ * Holder's date of birth.
  */
-- (NSDate * _Nullable)dateOfBirth;
+@property (nonatomic, readonly, nullable) NSDate * dateOfBirth;
 
 /**
- * Returns nationality of the holder represented by a three-letter code. Three-letter codes are based 
+ * Nationality of the holder represented by a three-letter code. Three-letter codes are based
  * on Alpha-3 codes for entities specified in ISO 3166-1, with extensions for certain States.
- *
- *  @return nationality
  */
-- (NSString * _Nullable)nationality;
+@property (nonatomic, readonly, nullable) NSString* nationality;
 
 /**
- * Returns sex of the card holder. Sex is specified by use of the single initial, capital 
+ * Sex of the card holder. Sex is specified by use of the single initial, capital
  * letter F for female, M for male or < for unspecified.
- *
- *  @return sex of the card holder
  */
-- (NSString * _Nullable)sex;
+@property (nonatomic, readonly, nullable) NSString* sex;
 
 /**
- * Returns first optional data. Returns nil or empty string if not available.
+ * First optional data. Returns nil or empty string if not available.
  * Element does not exist on US Green Card. To see which document was scanned use documentType property.
- *
- *  @return optional data 1
  */
-- (NSString * _Nullable)opt1;
+@property (nonatomic, readonly, nullable) NSString* opt1;
 
 /**
- * Returns first optional data. Returns nil or empty string if not available.
+ * Second optional data. Returns nil or empty string if not available.
  * Element does not exist on Passports and Visas. To see which document was scanned use documentType property.
- *
- *  @return optional data 2
  */
-- (NSString * _Nullable)opt2;
+@property (nonatomic, readonly, nullable) NSString* opt2;
 
 /** 
- * Returns alien number. Returns nil or empty string if not available.
+ * Alien number. Returns nil or empty string if not available.
  * Exists only on US Green Cards. To see which document was scanned use documentType property.
- *
- *  @return alien number
  */
-- (NSString * _Nullable)alienNumber;
+@property (nonatomic, readonly, nullable) NSString* alienNumber;
 
 /**
- * Returns application receipt number. Returns nil or empty string if not available.
+ * Application receipt number. Returns nil or empty string if not available.
  * Exists only on US Green Cards. To see which document was scanned use documentType property.
- *
- *  @return application receipt number
  */
-- (NSString * _Nullable)applicationReceiptNumber;
+@property (nonatomic, readonly, nullable) NSString* applicationReceiptNumber;
 
 /**
- * Returns immigrant case number. Returns nil or empty string if not available.
+ * Immigrant case number. Returns nil or empty string if not available.
  * Exists only on US Green Cards. To see which document was scanned use documentType property.
- *
- *  @return immigrant case number
  */
-- (NSString * _Nullable)immigrantCaseNumber;
+@property (nonatomic, readonly, nullable) NSString* immigrantCaseNumber;
 
 /**
- * Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing
+ * The entire Machine Readable Zone text from ID. This text is usually used for parsing
  * other elements.
  */
-- (NSString * _Nullable)mrzText;
+@property (nonatomic, readonly, nullable) NSString* mrzText;
 
 /**
  * Raw OCR layout from which the MRTD data was parsed.
  * 
  * If PPMRTDRecognizerSettings allowUnparsedResults is used, you can use this property to implement
  * your custom MRTD parsing algorithm
- *
- *  @return OCR layout from which the MRTD data was parsed
  */
-- (PPOcrLayout * _Nullable)rawOcrLayout;
+@property (nonatomic, readonly, nullable) PPOcrLayout* rawOcrLayout;
 
 @end
