@@ -15,9 +15,11 @@
 
 @interface ViewController () <PPScanningDelegate>
 
-@property (nonatomic, strong) NSString* rawOcrParserId;
+@property (nonatomic, strong) NSString *rawOcrParserId;
 
-@property (nonatomic, strong) NSString* priceParserId;
+@property (nonatomic, strong) NSString *priceParserId;
+
+@property (nonatomic, strong) NSString *parsedPrice;
 
 @end
 
@@ -30,6 +32,16 @@
     self.priceParserId = @"Price";
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    if (self.parsedPrice != nil) {
+        self.labelResult.text = [NSString stringWithFormat:@"Price parsed out of the OCR result is: %@", self.parsedPrice];
+    } else {
+        self.labelResult.text = nil;
+    }
+}
+
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
@@ -38,7 +50,7 @@
  *
  *  @return initialized coordinator
  */
-- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
 
     /** 0. Check if scanning is supported */
 
@@ -56,26 +68,27 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"WEASTPOG-DI2UQQP4-QRZQUOQ4-7J4BEDIO-6DHAOWBL-C4OPU6AS-BUHPA3XM-NDR4QRWW";
+    settings.licenseSettings.licenseKey = @"VFH34P42-MZHAAG77-W4IFZWQC-IOUP7NYN-B3YM4B2Y-FMLRZ6TY-CIGQ4UF2-AOG6EDFX";
+    // this license key is valid temporarily until 2017-05-01
 
 
-    /** 
+    /**
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
-     * Here's an example for initializing raw OCR scanning. 
+     * Here's an example for initializing raw OCR scanning.
      */
 
     // To specify we want to perform OCR recognition, initialize the OCR recognizer settings
     PPBlinkOcrRecognizerSettings *ocrRecognizerSettings = [[PPBlinkOcrRecognizerSettings alloc] init];
-    
+
 
     // We want raw OCR parsing
     [ocrRecognizerSettings addOcrParser:[[PPRawOcrParserFactory alloc] init] name:self.rawOcrParserId];
 
     PPPriceOcrParserFactory *priceParser = [[PPPriceOcrParserFactory alloc] init];
-    
+
     // Price doesn't need to be present for output to be valid
     priceParser.isRequired = NO;
-    
+
     // We want to parse prices from raw OCR result as well
     [ocrRecognizerSettings addOcrParser:priceParser name:self.priceParserId];
 
@@ -108,7 +121,8 @@
     }
 
     /** Allocate and present the scanning view controller */
-    UIViewController<PPScanningViewController>* scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
+    UIViewController<PPScanningViewController> *scanningViewController =
+        [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
 
     /** You can use other presentation methods as well */
     [self presentViewController:scanningViewController animated:YES completion:nil];
@@ -120,8 +134,7 @@
     // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-                  didFindError:(NSError *)error {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
     // Can be ignored. See description of the method
 }
 
@@ -131,8 +144,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-              didOutputResults:(NSArray *)results {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
 
     // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
 
@@ -140,16 +152,21 @@
     [scanningViewController pauseScanning];
 
     // Collect data from the result
-    for (PPRecognizerResult* result in results) {
+    for (PPRecognizerResult *result in results) {
 
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
-            PPBlinkOcrRecognizerResult* ocrRecognizerResult = (PPBlinkOcrRecognizerResult*)result;
+            PPBlinkOcrRecognizerResult *ocrRecognizerResult = (PPBlinkOcrRecognizerResult *)result;
 
             NSLog(@"OCR results are:");
             NSLog(@"Raw ocr: %@", [ocrRecognizerResult parsedResultForName:self.rawOcrParserId]);
-            NSLog(@"Price: %@", [ocrRecognizerResult parsedResultForName:self.priceParserId]);
 
-            PPOcrLayout* ocrLayout = [ocrRecognizerResult ocrLayout];
+            NSString *price = [ocrRecognizerResult parsedResultForName:self.priceParserId];
+            NSLog(@"Price: %@", price);
+            if (price != nil && price.length > 0) {
+                self.parsedPrice = price;
+            }
+
+            PPOcrLayout *ocrLayout = [ocrRecognizerResult ocrLayout];
             NSLog(@"Dimensions of ocrLayout are %@", NSStringFromCGRect([ocrLayout box]));
         }
     };
