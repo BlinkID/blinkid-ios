@@ -38,7 +38,8 @@ class ViewController: UIViewController, PPScanningDelegate {
         /** 2. Setup the license key */
 
         // Visit www.microblink.com to get the license key for your app
-        settings.licenseSettings.licenseKey = "T3SVWZSH-4FNAOED6-6HPLPSFT-D6ZR7MY7-WMP3GH5T-D6ZR7MY7-WMP3HP6L-PL22BO5S"
+        settings.licenseSettings.licenseKey = "Q3MUZMW7-RLAQ3GGN-RV5POQX7-K6QZMUGK-QGSWZUHQ-ZHDRPRQQ-HY5BYJCP-G5A7LMI4"
+        // License key is valid temporarily until 2017-05-01
 
 
         /**
@@ -121,6 +122,11 @@ class ViewController: UIViewController, PPScanningDelegate {
         /** Allocate and present the scanning view controller */
         let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator!, error: nil)
 
+        /** Allow autorotation - if it makes sense for your use case */
+        let scanController = scanningViewController as! PPScanningViewController
+        scanController.autorotate = true
+        scanController.supportedOrientations = UIInterfaceOrientationMask.all
+
         /** You can use other presentation methods as well */
         self.present(scanningViewController, animated: true, completion: nil)
     }
@@ -145,7 +151,12 @@ class ViewController: UIViewController, PPScanningDelegate {
 
     func scanningViewController(_ scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
 
-        let scanConroller = scanningViewController as! PPScanningViewController
+        // return if we don't have any results
+        if (results.count == 0) {
+            return
+        }
+
+        let scanController = scanningViewController as! PPScanningViewController
 
         /**
          * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
@@ -154,13 +165,17 @@ class ViewController: UIViewController, PPScanningDelegate {
          */
 
         // first, pause scanning until we process all the results
-        scanConroller.pauseScanning()
+        scanController.pauseScanning()
 
         var message = ""
         var title = ""
 
         // Collect data from the result
         for result in results {
+
+            title = "Scan result"
+            message = result.description
+
             if (result is PPMrtdRecognizerResult) {
                 /** MRTD was detected */
                 let mrtdResult = result as! PPMrtdRecognizerResult
@@ -195,6 +210,7 @@ class ViewController: UIViewController, PPScanningDelegate {
                                                          handler: { (action) -> Void in
                                                             self.dismiss(animated: true, completion: nil)
         })
+
         alertController.addAction(okAction)
         scanningViewController?.present(alertController, animated: true, completion: nil)
     }
