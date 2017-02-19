@@ -37,7 +37,7 @@
  *
  *  @return initialized coordinator
  */
-- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
 
     /** 0. Check if scanning is supported */
 
@@ -55,7 +55,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"BBETXEUW-H3XES5YU-R2PMVSHY-7KABXVK2-3HM5TWOZ-3HM5TWOZ-3HM5S6PR-GP5PPK4N";
+    settings.licenseSettings.licenseKey = @"CA37S23J-JWEQTP73-EUL75I7D-MOXMLYSR-INMSBSHX-TFEXOVAI-IRQEAVAJ-W6ZYA7PN";
+    // license key is valid temporarily - until 2017-05-01
 
 
     /**
@@ -80,7 +81,8 @@
         // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
         PPZXingRecognizerSettings *zxingRecognizerSettings = [[PPZXingRecognizerSettings alloc] init];
 
-        /** You can modify the properties of zxingRecognizerSettings to suit your use-case (i.e. add other types of barcodes like QR, Aztec or EAN)*/
+        /** You can modify the properties of zxingRecognizerSettings to suit your use-case (i.e. add other types of barcodes like QR, Aztec
+         * or EAN)*/
         zxingRecognizerSettings.scanQR = YES; // we use just QR code
 
 
@@ -112,7 +114,8 @@
     }
 
     /** Create new scanning view controller */
-    UIViewController<PPScanningViewController>* scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
+    UIViewController<PPScanningViewController> *scanningViewController =
+        [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
 
     // Allow scanning view controller to autorotate
     scanningViewController.autorotate = YES;
@@ -146,7 +149,8 @@
     PPCameraOverlayViewController *overlayVC = [[PPCameraOverlayViewController alloc] init];
 
     /** Create new scanning view controller with desired custom overlay */
-    UIViewController<PPScanningViewController>* scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlayVC coordinator:coordinator error:nil];
+    UIViewController<PPScanningViewController> *scanningViewController =
+        [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlayVC coordinator:coordinator error:nil];
 
     // You can use other presentation methods as well
     [self presentViewController:scanningViewController animated:YES completion:nil];
@@ -156,8 +160,7 @@
     // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-                  didFindError:(NSError *)error {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
     // Can be ignored. See description of the method
 }
 
@@ -167,13 +170,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-              didOutputResults:(NSArray *)results {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
 
     /**
      * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
      * Each member of results array will represent one result for a single processed image
-     * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image (i.e. pdf417 and QR code side by side)
+     * Usually there will be only one result. Multiple results are possible when there are 2 or more detected objects on a single image
+     * (i.e. pdf417 and QR code side by side)
      */
 
     // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
@@ -181,11 +184,11 @@
     // first, pause scanning until we process all the results
     [scanningViewController pauseScanning];
 
-    NSString* message;
-    NSString* title;
+    NSString *message;
+    NSString *title;
 
     // Collect data from the result
-    for (PPRecognizerResult* result in results) {
+    for (PPRecognizerResult *result in results) {
         if ([result isKindOfClass:[PPZXingRecognizerResult class]]) {
             /** One of ZXing codes was detected */
 
@@ -209,7 +212,8 @@
     }
 
     // present the alert view with scanned results
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 

@@ -1,3 +1,6 @@
+
+
+
 //
 //  PPCameraOverlayViewController.m
 //  pdf417-sample
@@ -12,7 +15,7 @@
 @interface PPCameraOverlayViewController ()
 
 /* Animation layer for barcode location drawing */
-@property (nonatomic, retain) CAShapeLayer* drawingLayer;
+@property (nonatomic, retain) CAShapeLayer *drawingLayer;
 
 @end
 
@@ -28,8 +31,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -47,24 +49,23 @@
     [self setDrawingLayer:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
     [self setScanningRegion:CGRectMake(0.15, 0.4, 0.7, 0.2)];
-    
+
     // add drawing layer to view
     [self initDrawingLayerWithBounds:[self view].bounds];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     // on devices which don't support torch, torch button should be disabled
     if (![[self containerViewController] overlayViewControllerShouldDisplayTorch:self]) {
         [[self torchButton] setHidden:YES];
@@ -86,8 +87,7 @@
     torchOn = [[self containerViewController] isTorchOn];
     torchOn = !torchOn;
     if ([[self containerViewController] overlayViewControllerShouldDisplayTorch:self]) {
-        [[self containerViewController] overlayViewController:self
-                                  willSetTorch:torchOn];
+        [[self containerViewController] overlayViewController:self willSetTorch:torchOn];
     }
 }
 
@@ -123,7 +123,8 @@
     NSLog(@"Barcode scanning process did output results %@", results);
 }
 
-- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didFinishDetectionWithResult:(PPDetectorResult *)result {
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
+    didFinishDetectionWithResult:(PPDetectorResult *)result {
 
     CGRect size = [[self view] bounds];
 
@@ -134,11 +135,13 @@
             NSLog(@"Detection was success");
             detectionSuccess = YES;
             break;
-        } case PPDetectionStatusPdf417Success: {
+        }
+        case PPDetectionStatusPdf417Success: {
             NSLog(@"PDF417 Barcode detection was success");
             detectionSuccess = YES;
             break;
-        } case PPDetectionStatusQRSuccess: {
+        }
+        case PPDetectionStatusQRSuccess: {
             detectionSuccess = YES;
             NSLog(@"QR code detection was success");
             break;
@@ -170,21 +173,17 @@
     if (detectionSuccess && [result isKindOfClass:[PPQuadDetectorResult class]]) {
         CGMutablePathRef drawingPath = CGPathCreateMutable();
         PPQuadDetectorResult *quadResult = (PPQuadDetectorResult *)result;
-        [PPCameraOverlayViewController createPath:drawingPath
-                                         withDots:[quadResult.detectionLocation toPointsArray]
-                                          forSize:size];
+        [PPCameraOverlayViewController createPath:drawingPath withDots:[quadResult.detectionLocation toPointsArray] forSize:size];
         drawingLayer.path = drawingPath;
         [self startDotAnimation:[[UIColor greenColor] CGColor]];
     }
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                duration:(NSTimeInterval)duration {
-
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    NSString* orientationString = @"Portrait";
+    NSString *orientationString = @"Portrait";
     if (fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
         orientationString = @"Upside Down";
     } else if (fromInterfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
@@ -195,33 +194,30 @@
     NSLog(@"Orientation was changed from %@", orientationString);
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                         duration:(NSTimeInterval)duration {
-
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 }
 
 #pragma mark - Location drawing
 
 - (void)initDrawingLayerWithBounds:(CGRect)bounds {
     [[self drawingLayer] removeFromSuperlayer];
-    
+
     CAShapeLayer *newDrawingLayer = [[CAShapeLayer alloc] init];
-    UIColor* color = [UIColor greenColor];
+    UIColor *color = [UIColor greenColor];
     [self setDrawingLayer:newDrawingLayer];
-    
+
     drawingLayer.frame = bounds;
     drawingLayer.contentsGravity = kCAGravityResize;
     drawingLayer.strokeColor = [color CGColor];
     drawingLayer.fillColor = [[UIColor clearColor] CGColor];
     drawingLayer.opacity = 0.9f;
-    drawingLayer.delegate = self;
     drawingLayer.lineWidth = 4.0f;
     drawingLayer.masksToBounds = YES;
-    
+
     CGMutablePathRef newPath = CGPathCreateMutable();
     drawingLayer.path = newPath;
     CGPathRelease(newPath);
-    
+
     // we have to do this trick to make it work in all orientations
     // we add drawing layer to view's superview, which isn't rotatable
     CALayer *viewLayer = [[self view] layer];
@@ -230,40 +226,38 @@
 }
 
 - (void)startDotAnimation:(CGColorRef)toColor {
-	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeColor"];
-    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeColor"];
+
     animation.duration = 0.4f;
-	animation.repeatCount = 1;
+    animation.repeatCount = 1;
     animation.autoreverses = YES;
-	animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    
-    CAShapeLayer *layer = (CAShapeLayer*)[drawingLayer presentationLayer];
-	animation.fromValue = (id)layer.strokeColor;
-	animation.toValue = (__bridge id)toColor;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+
+    CAShapeLayer *layer = (CAShapeLayer *)[drawingLayer presentationLayer];
+    animation.fromValue = (id)layer.strokeColor;
+    animation.toValue = (__bridge id)toColor;
     animation.removedOnCompletion = YES;
-    
+
     drawingLayer.strokeColor = toColor;
-    
-	[drawingLayer addAnimation:animation forKey:@"strokeColor"];
+
+    [drawingLayer addAnimation:animation forKey:@"strokeColor"];
 }
 
-+ (void)createPath:(CGMutablePathRef)path
-          withDots:(NSArray*)dots
-           forSize:(CGRect)size {
-    
++ (void)createPath:(CGMutablePathRef)path withDots:(NSArray *)dots forSize:(CGRect)size {
+
     const int radius = 4;
     if (dots != nil) {
         for (int i = 0; i < [dots count]; i++) {
             CGPoint point = [[dots objectAtIndex:i] CGPointValue];
             CGPathMoveToPoint(path, nil, point.x + radius, point.y);
-            CGPathAddArc(path, nil, point.x, point.y, radius, 0, 2*M_PI, YES);
+            CGPathAddArc(path, nil, point.x, point.y, radius, 0, 2 * M_PI, YES);
         }
         if ([dots count] > 1) {
             CGPoint point = [[dots objectAtIndex:0] CGPointValue];
             CGPathMoveToPoint(path, nil, point.x, point.y);
         }
     }
-    
+
     CGPathCloseSubpath(path);
 }
 
