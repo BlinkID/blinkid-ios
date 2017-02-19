@@ -66,11 +66,12 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Error object contains description of the reason for that.
  *
  *  @param type The camera type you want to check for.
- *  @param error If scanning is not supported, when method this method returns, this parameter contains an NSError object that describes the problem. If you are not interested in possible errors, pass in NULL.
+ *  @param error If scanning is not supported, when method this method returns, this parameter contains an NSError object that describes the
+ * problem. If you are not interested in possible errors, pass in NULL.
  *
  *  @return YES if scanning is not supported, NO otherwise.
  */
-+ (BOOL)isScanningUnsupportedForCameraType:(PPCameraType)type error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NOTHROW;
++ (BOOL)isScanningUnsupportedForCameraType:(PPCameraType)type error:(NSError *_Nullable *_Nullable)error NS_SWIFT_NOTHROW;
 
 /**
  * Creates the scanning view controller with this coordinator and given delegate object.
@@ -82,23 +83,26 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 
 /**
  * Creates the scanning view controller with this coordinator and given delegate object and given custom overlay.
- * Calling this method is equivalend of calling [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlayViewController error:nil]
+ * Calling this method is equivalend of calling [PPViewControllerFactory cameraViewControllerWithDelegate:self
+ * overlayViewController:overlayViewController
+ * error:nil]
  *
  * @see PPViewControllerFactory
  */
-- (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanningDelegate>)delegate overlayViewController:(PPOverlayViewController *)overlayViewController;
+- (UIViewController<PPScanningViewController> *)cameraViewControllerWithDelegate:(id<PPScanningDelegate>)delegate
+                                                           overlayViewController:(PPOverlayViewController *)overlayViewController;
 
-/** 
+/**
  * Sets the scanning region. CGRect is given in coordinate system of the camera
  */
 - (void)setScanningRegion:(CGRect)scanningRegion;
 
-/** 
+/**
  * Tell coordinator that scanning has started
  */
 - (void)start;
 
-/** 
+/**
  * Tell coordinator scanning has stopped
  */
 - (void)stop;

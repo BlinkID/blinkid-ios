@@ -31,7 +31,8 @@ typedef NS_ENUM(NSUInteger, PPHelpDisplayMode) {
 /**
  * Settings class containing UI information
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUiSettings : NSObject <NSCopying>
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPUiSettings : NSObject <NSCopying>
 
 /**
  * If YES, default camera overlay will display Cancel button.
@@ -50,7 +51,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUiSettings : NSObject <NSCopying>
 
 /**
  * If YES, OCR results will be passed to the UI callbacks. For you, this means OCR effects will be shown on screen.
- * 
+ *
  * Default: YES. Use NO if you care about scanning speed.
  */
 @property (nonatomic, assign) BOOL showOcrResults;
@@ -60,14 +61,14 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPUiSettings : NSObject <NSCopying>
  *
  * Default: nil, because it uses default language of the device
  */
-@property (nonatomic, strong, nullable) NSString* language;
+@property (nonatomic, strong, nullable) NSString *language;
 
 /**
  * Full path to the sound file which is played when the valid result is scanned.
  *
  * Default: `[[NSBundle mainBundle] pathForResource:@"PPbeep" ofType:@"wav"];`
  */
-@property (nonatomic, strong, nullable) NSString* soundFilePath;
+@property (nonatomic, strong, nullable) NSString *soundFilePath;
 
 /**
  * Label which is displayed on screen when camera is paused, but still exists on the screen.

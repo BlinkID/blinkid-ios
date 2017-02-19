@@ -9,18 +9,19 @@
 #import "PPRecognizerSettings.h"
 
 /**
- * Settings class for configuring Slovakian Back ID Recognizer
+ * Settings class for configuring Slovakian Back ID Recognizer.
  *
  * Slovakian Back ID recognizer is used for scanning back side of Slovakian ID.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovakIdBackRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSlovakIdBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  * Defines if owner's address should be extracted from Slovakian ID
@@ -59,3 +60,4 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovakIdBackRecognizerSettings : PPReco
 @property (nonatomic) BOOL displayFullDocumentImage;
 
 @end
+

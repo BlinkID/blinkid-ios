@@ -14,10 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
  * Overlay subview presenting the status of detection.
  * The subview is presented as green corners located on edges of detection points.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPModernViewfinderOverlaySubview : PPOverlaySubview
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPModernViewfinderOverlaySubview : PPOverlaySubview
 
 /**
- * Denotes if view finder is moveable. Viewfinder will move whenever something is detected and will return to default position if no object is detected for some time.
+ * Denotes if view finder is moveable. Viewfinder will move whenever something is detected and will return to default position if no object
+ * is detected for some time.
  *
  * Default: YES
  */

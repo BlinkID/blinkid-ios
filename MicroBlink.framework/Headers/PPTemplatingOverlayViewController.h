@@ -15,6 +15,7 @@
  * @see PPOcrResultOverlaySubview
  * @see PPModernViewFinderOverlaySubview
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTemplatingOverlayViewController : PPModernBaseOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPTemplatingOverlayViewController : PPModernBaseOverlayViewController
 
 @end

@@ -45,7 +45,8 @@ typedef NS_ENUM(NSUInteger, PPFrameQualityEstimationMode) {
 /**
  * Settings class containing settings related to scanner behaviour
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPScanSettings : NSObject <NSCopying>
 
 /**
  * Contains PPRecognizerSettings objects - settings for each individual recognizer.
@@ -54,15 +55,22 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  *
  * @see PPRecognizerSettings.
  */
-@property (nonatomic, strong, readonly) NSArray<PPRecognizerSettings *> *recognizerSettingsList;
+@property (nonatomic, readonly) NSArray<PPRecognizerSettings *> *recognizerSettingsList;
 
 /**
  * If NO, recognizer chain will stop when finds first valid scan results and will return just it.
- * If YES, recognizer chain can sometimes return more than one scanning result. 
+ * If YES, recognizer chain can sometimes return more than one scanning result.
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL allowMultipleResults;
+@property (nonatomic) BOOL allowMultipleResults;
+
+/**
+ * If YES, recognizers will call delegate's didOutputResults method for every image.
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL allowResultForEveryImage;
 
 /**
  * Timeout interval in which the partial scanning results in PhotoPay will be returned to the user.
@@ -70,14 +78,14 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  *
  * Default: 7.0 seconds
  */
-@property (nonatomic, assign) NSTimeInterval partialRecognitionTimeout;
+@property (nonatomic) NSTimeInterval partialRecognitionTimeout;
 
 /**
  * Recognition mode.
  *
  * Default: PPRecognitionModeDefault
  */
-@property (nonatomic, assign) PPRecognitionMode recognitionMode;
+@property (nonatomic) PPRecognitionMode recognitionMode;
 
 /**
  * Frame quality estimation mode. If frame quality estimation is on, some video frames will be skipped, if
@@ -87,7 +95,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  *
  * Default PPFrameQualityEstimationModeDefault
  */
-@property (nonatomic, assign) PPFrameQualityEstimationMode frameQualityEstimationMode;
+@property (nonatomic) PPFrameQualityEstimationMode frameQualityEstimationMode;
 
 /**
  * Designated initializer. Initializes the object with default settings (see above for defaults)
@@ -102,7 +110,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  *
  * @param setting Concerete recognizer setting.
  */
-- (void)addRecognizerSettings:(PPRecognizerSettings*)setting;
+- (void)addRecognizerSettings:(PPRecognizerSettings *)setting;
 
 /**
  * Removes recognizer setting to the list of all recognizer.
@@ -110,7 +118,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPScanSettings : NSObject <NSCopying>
  *
  * @param setting Concerete recognizer setting.
  */
-- (void)removeRecognizerSettings:(PPRecognizerSettings*)setting;
+- (void)removeRecognizerSettings:(PPRecognizerSettings *)setting;
 
 /**
  * Removes all recognizer settings from the list.

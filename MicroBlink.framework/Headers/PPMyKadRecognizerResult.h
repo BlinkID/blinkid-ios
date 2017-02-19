@@ -11,38 +11,44 @@
 /**
  * Result of scanning MyKad (Malaysian ID document).
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMyKadRecognizerResult : PPRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPMyKadRecognizerResult : PPRecognizerResult
 
 /**
  * NRIC number (National Registration Identity Card Number)
  *
  *  @see https://en.wikipedia.org/wiki/Malaysian_identity_card#Structure_of_the_National_Registration_Identity_Card_Number_.28NRIC.29
  */
-@property (nonatomic, readonly, nullable) NSString* nricNumber;
+@property (nonatomic, readonly, nullable) NSString *nricNumber;
 
 /**
  * Owner address
  */
-@property (nonatomic, readonly, nullable) NSString* ownerAddress;
+@property (nonatomic, readonly, nullable) NSString *ownerAddress;
 
 /**
- * Owner birth date (YYMMDD format)
+ * Owner birth date string, as written on the document (YYMMDD format)
  */
-@property (nonatomic, readonly, nullable) NSString* ownerBirthDate;
+@property (nonatomic, readonly, nullable) NSString *rawOwnerBirthDate;
+
+/**
+ * Owner birth date converted in NSDate object
+ */
+@property (nonatomic, readonly, nullable) NSDate *ownerBirthDate;
 
 /**
  * Owner full name
  */
-@property (nonatomic, readonly, nullable) NSString* ownerFullName;
+@property (nonatomic, readonly, nullable) NSString *ownerFullName;
 
 /**
  * Owner religion if written on MyKad
  */
-@property (nonatomic, readonly, nullable) NSString* ownerReligion;
+@property (nonatomic, readonly, nullable) NSString *ownerReligion;
 
 /**
  * Owner sex (M for male, F for female)
  */
-@property (nonatomic, readonly, nullable) NSString* ownerSex;
+@property (nonatomic, readonly, nullable) NSString *ownerSex;
 
 @end

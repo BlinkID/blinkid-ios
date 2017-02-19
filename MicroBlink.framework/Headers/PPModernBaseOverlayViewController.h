@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Base class of all default overlays included in SDK. This class is an abstract class and should be subclassed.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPModernBaseOverlayViewController : PPBaseOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPModernBaseOverlayViewController : PPBaseOverlayViewController
 
 /**
  * Button to cancel scanning/dismiss view.

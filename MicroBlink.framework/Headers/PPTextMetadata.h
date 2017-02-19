@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Type of the text metadata
  */
-typedef NS_ENUM(NSUInteger, PPTextMetadataType){
+typedef NS_ENUM(NSUInteger, PPTextMetadataType) {
     /** Regular text metadata */
     PPTextMetadataTypeTxt,
     /** XML formatter metadata */
@@ -25,12 +25,13 @@ typedef NS_ENUM(NSUInteger, PPTextMetadataType){
 /**
  * Textual type of Metadata returned by MicroBlink scanner.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTextMetadata : PPMetadata
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPTextMetadata : PPMetadata
 
 /**
  * Actual text in the metadata.
  */
-@property (nonatomic, strong) NSString* text;
+@property (nonatomic, strong) NSString *text;
 
 /**
  * Type of the text metadata
@@ -57,8 +58,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTextMetadata : PPMetadata
  *
  *  @return Initialized PPTextMetadata object with given name and text value, with default type PPTextMetadataTypeTxt
  */
-- (instancetype)initWithName:(NSString *)name
-                        text:(NSString*)text;
+- (instancetype)initWithName:(NSString *)name text:(NSString *)text;
 
 /**
  * Retuns an initialized PPTextMetadata object with given name, text value and type
@@ -69,9 +69,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPTextMetadata : PPMetadata
  *
  *  @return Initialized PPTextMetadata object with given name, text value and type
  */
-- (instancetype)initWithName:(NSString *)name
-                        text:(NSString*)text
-                        type:(PPTextMetadataType)type NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithName:(NSString *)name text:(NSString *)text type:(PPTextMetadataType)type NS_DESIGNATED_INITIALIZER;
 
 @end
 

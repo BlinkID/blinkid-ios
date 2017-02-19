@@ -15,7 +15,8 @@
  * and any character symbols '.' are not supported but strictly defined subsets such as digits '\d'
  * and alphanumerc characters '\w' and others are supported).
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRegexOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPRegexOcrParserFactory : PPOcrParserFactory
 
 /**
  * Initializes the parser factory with
@@ -24,7 +25,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRegexOcrParserFactory : PPOcrParserFact
  *
  *  @return initialized parser factory
  */
-- (instancetype)initWithRegex:(NSString*) regex;
+- (instancetype)initWithRegex:(NSString *)regex;
 
 /**
  * Regex pattern for OCR extraction
@@ -67,6 +68,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRegexOcrParserFactory : PPOcrParserFact
  *
  * Default: [[PPOcrEngineOptions alloc] init]
  */
-- (void)setOptions:(PPOcrEngineOptions *) options;
+- (void)setOptions:(PPOcrEngineOptions *)options;
 
 @end

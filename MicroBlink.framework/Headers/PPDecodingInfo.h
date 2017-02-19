@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
  * stage, this part of the image is being dewarped to a standardized resolution, and the height of the dewarped image
  * is also defined in this object (dewarpedHeight)
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDecodingInfo : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPDecodingInfo : NSObject
 
 /**
  * Location of the decoded element on the detected document.

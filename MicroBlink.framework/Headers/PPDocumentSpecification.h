@@ -83,7 +83,8 @@ typedef NS_ENUM(NSUInteger, PPDocumentPreset) {
  * Document class describes a document which is being detected by DocumentDetector.
  * We encurage users to create specifications with one of our presets, if possible.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopying>
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPDocumentSpecification : NSObject <NSCopying>
 
 /**
  * Use this initializer for specifiying a document format.
@@ -93,8 +94,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopy
  *
  *  @return initialized object
  */
-- (instancetype)initWithAspectRatio:(CGFloat)aspectRatio
-                       decodingInfo:(NSArray<PPDecodingInfo*> *)decodingInfoArray;
+- (instancetype)initWithAspectRatio:(CGFloat)aspectRatio decodingInfo:(NSArray<PPDecodingInfo *> *)decodingInfoArray;
 
 
 // unavailable initializer
@@ -119,7 +119,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDocumentSpecification : NSObject<NSCopy
  *
  *  @param decodingInfoArray decoding information
  */
-- (void)setDecodingInfo:(NSArray<PPDecodingInfo*> *)decodingInfoArray;
+- (void)setDecodingInfo:(NSArray<PPDecodingInfo *> *)decodingInfoArray;
 
 /**
  * Maximum angle for document detection

@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * This class is common superclass for each of the Recognizer settings,
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPRecognizerSettings : NSObject <NSCopying>
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPRecognizerSettings : NSObject <NSCopying>
 
 /**
  * Property which determines if the recognizer is enabled

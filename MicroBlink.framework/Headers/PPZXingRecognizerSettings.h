@@ -13,10 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Settings class for configuring ZXing Recognizer
  *
- * ZXIngRecognizer recognizer is used for scanning most of 1D barcode formats, and 2D format 
+ * ZXIngRecognizer recognizer is used for scanning most of 1D barcode formats, and 2D format
  * such as Aztec, DataMatrix and QR code
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPZXingRecognizerSettings : PPRecognizerSettings
 
 /**
  * Set this to YES to scan Aztec 2D barcodes
@@ -97,6 +98,11 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerSettings : PPRecognizerS
  * @Warning: this option doubles frame processing time
  */
 @property (nonatomic) BOOL scanInverse;
+
+/**
+ * Set this to YES to allow slower, but better image processing.
+ */
+@property (nonatomic, assign) BOOL useSlowerThoroughScan;
 
 @end
 

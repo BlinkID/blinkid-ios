@@ -14,7 +14,8 @@
  * As only one PPDetectorSettings can be used at a time, PPMultiDetectorSettings wraps multiple settings so they can be used simultaneously.
  * In other words, it is necessary to use PPMultiDetectorSettings when more than 1 detectors are needed.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMultiDetectorSettings : PPDetectorSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPMultiDetectorSettings : PPDetectorSettings
 
 /**
  * Creates detector with array of concrete detectors.
@@ -24,7 +25,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMultiDetectorSettings : PPDetectorSetti
 /**
  * Array of contained detector settings
  */
-@property (nonatomic, readonly) NSArray<__kindof PPDetectorSettings *> * settingsArray;
+@property (nonatomic, readonly) NSArray<__kindof PPDetectorSettings *> *settingsArray;
 
 /**
  * If YES, detector will try to find all detection results based on a given set of detector settings

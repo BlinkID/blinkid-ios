@@ -15,17 +15,18 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Common base class for default overlay view controllers
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBaseOverlayViewController : PPOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBaseOverlayViewController : PPOverlayViewController
 
 /**
  * Registers a subview for PPOverlaySubview protocol events.
  */
-- (void)registerOverlaySubview:(UIView<PPOverlaySubview>*)subview;
+- (void)registerOverlaySubview:(UIView<PPOverlaySubview> *)subview;
 
 /**
  * Unregisters a subview for PPOverlaySubview protocol events.
  */
-- (void)unregisterOverlaySubview:(UIView<PPOverlaySubview>*)subview;
+- (void)unregisterOverlaySubview:(UIView<PPOverlaySubview> *)subview;
 
 /**
  * Delegate for subview animation events.

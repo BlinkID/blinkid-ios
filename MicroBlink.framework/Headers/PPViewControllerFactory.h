@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
  * Factory class containing static methods for creating camera view controllers.
  * Camera view controllers created this way will be managed internally by the SDK, and input frames will be processed.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPViewControllerFactory : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPViewControllerFactory : NSObject
 
 /**------------------------------------------*/
 /** @name Creating Scanning view controllers */

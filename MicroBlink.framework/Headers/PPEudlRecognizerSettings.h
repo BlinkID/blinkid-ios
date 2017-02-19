@@ -12,13 +12,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring EUDL Recognizer
+ * Settings class for configuring EUDL Recognizer.
  *
- * EUDL Recognizer recognizer is used for scanning and parsing the front side of EU Driving licenses
- *
+ * EUDL Recognizer is used for scanning and parsing the front side of EU Driving licenses:
  * @see https://en.wikipedia.org/wiki/Driving_licence_in_the_United_Kingdom
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEudlRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPEudlRecognizerSettings : PPRecognizerSettings
 
 /**
  * Initializes the recognizer with PPEudlCountryAny
@@ -29,6 +29,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEudlRecognizerSettings : PPRecognizerSe
  * Initializes the recognizer for desired country.
  */
 - (instancetype)initWithEudlCountry:(PPEudlCountry)country NS_DESIGNATED_INITIALIZER;
+
+/**
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
+ * This image will be sent to scan delegate during recognition process if displaying of full document image
+ * is enabled via showFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
+ */
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  * If YES, document issue date will be extracted

@@ -12,33 +12,34 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring CroIDFront Recognizer
+ * Settings class for configuring Croatian Front ID Recognizer.
  *
- * CroIDFront recognizer is used for scanning front side of Croatian ID. It always extracts
+ * Croatian Front ID recognizer is used for scanning front side of Croatian ID. It always extracts
  * identity card number, first and last name of ID holder while extracting other elements is optional.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDFrontRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPCroIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
- * This image will be sent to scan delegate during recognition process if displaying of face image 
+ * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displayFaceImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_FACE;
+@property (nonatomic, readonly) NSString *ID_FACE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains signature.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displaySignatureImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_SIGNATURE;
+@property (nonatomic, readonly) NSString *ID_SIGNATURE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  *  Defines if sex of Croatian ID owner should be extracted

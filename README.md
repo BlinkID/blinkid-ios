@@ -46,8 +46,11 @@ pod try PPBlinkID
 #### Podfile
 
 ```ruby
-platform :ios, '7.0'
-pod 'PPBlinkID', '~> 2.5.1'
+platform :ios, '8.0'
+
+target 'TargetName' do
+  pod 'PPBlinkID', '~> 2.6.0'
+end
 ```
 
 ## Requirements

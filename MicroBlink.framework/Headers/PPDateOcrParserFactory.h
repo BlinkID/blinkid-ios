@@ -9,8 +9,9 @@
 #import "PPOcrParserFactory.h"
 
 /**
- *  Parses dates in various formats
+ * Parses dates in various formats
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDateOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPDateOcrParserFactory : PPOcrParserFactory
 
 @end

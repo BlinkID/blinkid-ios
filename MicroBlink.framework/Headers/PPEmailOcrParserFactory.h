@@ -11,6 +11,7 @@
 /**
  *  Parses email addresses.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEmailOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPEmailOcrParserFactory : PPOcrParserFactory
 
 @end

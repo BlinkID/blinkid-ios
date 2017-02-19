@@ -11,21 +11,22 @@
 /**
  * Class representing values obtained when scanning back side of Czech ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDBackRecognizerResult : PPMrtdRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPCzIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * The issuing authority of the Czech ID.
  */
-@property (nonatomic, readonly, nullable) NSString* authority;
+@property (nonatomic, readonly, nullable) NSString *authority;
 
 /**
  * The address of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* address;
+@property (nonatomic, readonly, nullable) NSString *address;
 
 /**
  * The personal number of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* personalNumber;
+@property (nonatomic, readonly, nullable) NSString *personalNumber;
 
 @end
