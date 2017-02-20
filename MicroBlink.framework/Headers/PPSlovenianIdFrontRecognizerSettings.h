@@ -9,34 +9,33 @@
 #import "PPRecognizerSettings.h"
 
 /**
- * Settings class for configuring Slovenian Front ID Recognizer
+ * Settings class for configuring Slovenian Front ID Recognizer.
  *
  * Slovenian Front ID recognizer is used for scanning front side of Slovenian ID.
- * This recognizer can scan both front and back side of the ID but the results of scanning will be different as
- * some fields are not present on both sides
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdFrontRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSlovenianIdFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displayFaceImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_FACE;
+@property (nonatomic, readonly) NSString *ID_FACE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains signature.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displaySignatureImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_SIGNATURE;
+@property (nonatomic, readonly) NSString *ID_SIGNATURE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  *  Defines if sex of Slovenian ID owner should be extracted
@@ -91,4 +90,3 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdFrontRecognizerSettings : PP
 @property (nonatomic, assign) BOOL displayFullDocumentImage;
 
 @end
-

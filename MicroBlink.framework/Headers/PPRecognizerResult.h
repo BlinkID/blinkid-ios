@@ -3,13 +3,14 @@
 //  MicroBlinkFramework
 //
 //  Created by Jura on 04/04/14.
-//  Copyright (c) 2015 MicroBlink ČLtd.. All rights reserved.
+//  Copyright (c) 2015 MicroBlink Ltd.. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 #import "PPMicroBlinkDefines.h"
 #import "PPQuadrangle.h"
+#import "PPDateResult.h"
 
 @class PPResultDataSourceAdapter;
 @class PPOcrLayout;
@@ -31,21 +32,22 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * All data obtained in the recotnition phase is contained in this Dictionay as Key-Value pairs.
  *
  * Values can have different types: NSStrings, NSInteger, PPOcrLayouts...
- * 
+ *
  * @Warning it's abetter idea to use designated getters getStringElement, getOcrLayoutElement, etc.
  *
  * @return NSDictionary with all key-value pairs obtained in the recongition phase.
  */
-- (NSDictionary * _Nonnull)getAllElements;
+- (NSDictionary *_Nonnull)getAllElements;
 
 /**
  * Method returns a dictionary with all string elements found as a recognizer results. Dictionary contains NSString objects.
  *
- * Basically, this method performs filtering of  all elements returned by getAllElements method. Just string elements are left in the dictionary.
+ * Basically, this method performs filtering of  all elements returned by getAllElements method. Just string elements are left in the
+ * dictionary.
  *
  *  @return eturns a dictionary with all string elements found as a recognizer results
  */
-- (NSDictionary * _Nonnull)getAllStringElements;
+- (NSDictionary *_Nonnull)getAllStringElements;
 
 /**
  * Returns NSData* element from allElements dictionary.
@@ -57,7 +59,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSData value.
  */
-- (NSData * _Nullable)getDataElement:(NSString * _Nonnull)key;
+- (NSData *_Nullable)getDataElement:(NSString *_Nonnull)key;
 
 /**
  * Returns a NSString* element from allElements dictionary using guessed encoding.
@@ -69,7 +71,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSString value.
  */
-- (NSString * _Nullable)getStringElementUsingGuessedEncoding:(NSString * _Nonnull)key;
+- (NSString *_Nullable)getStringElementUsingGuessedEncoding:(NSString *_Nonnull)key;
 
 /**
  * Returns a NSString* element from allElements dictionary, using a given encoding.
@@ -82,8 +84,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString * _Nullable)getStringElement:(NSString * _Nonnull)key
-                      encoding:(NSStringEncoding)encoding;
+- (NSString *_Nullable)getStringElement:(NSString *_Nonnull)key encoding:(NSStringEncoding)encoding;
 
 /**
  * Returns a NSNumber containing a BOOL element from allElements dictionary.
@@ -95,7 +96,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSNumber with bool
  */
-- (NSNumber * _Nullable)getBoolElement:(NSString * _Nonnull)key;
+- (NSNumber *_Nullable)getBoolElement:(NSString *_Nonnull)key;
 
 /**
  * Returns a NSNumber containing a int element from allElements dictionary.
@@ -107,7 +108,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return NSNumber with int
  */
-- (NSNumber * _Nullable)getIntElement:(NSString * _Nonnull)key;
+- (NSNumber *_Nullable)getIntElement:(NSString *_Nonnull)key;
 
 /**
  * Returns a PPOcrLayout* element from allElements dictionary.
@@ -119,7 +120,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPOcrLayout value.
  */
-- (PPOcrLayout * _Nullable)getOcrLayoutElement:(NSString * _Nonnull)key;
+- (PPOcrLayout *_Nullable)getOcrLayoutElement:(NSString *_Nonnull)key;
 
 /**
  * Returns PPBarcodeDetailedData* element from allElements dictionary..
@@ -131,7 +132,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPBarcodeDetailedData value
  */
-- (PPBarcodeDetailedData * _Nullable)getBarcodeDetailedDataElement:(NSString * _Nonnull)key;
+- (PPBarcodeDetailedData *_Nullable)getBarcodeDetailedDataElement:(NSString *_Nonnull)key;
 
 /**
  * Returns a PPQuadrangle* element from allElements dictionary.
@@ -143,7 +144,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPQuadrangle quadrangle value.
  */
-- (PPQuadrangle * _Nullable)getQuadrangleElement:(NSString * _Nonnull)key;
+- (PPQuadrangle *_Nullable)getQuadrangleElement:(NSString *_Nonnull)key;
 
 /**
  * Returns a PPDetectorResult element from allElements dictionary
@@ -155,28 +156,41 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return PPDetectorResult detector result value
  */
-- (PPDetectorResult * _Nullable)getDetectorResultElement:(NSString * _Nonnull)key;
+- (PPDetectorResult *_Nullable)getDetectorResultElement:(NSString *_Nonnull)key;
+
+
+/**
+ * Returns a PPDateResult element from allElements dictionary.
+ *
+ * If element exists and it's a PPDateResult, the method will return specified NSDate object
+ * If element doesn't exist, the method will return nil.
+ *
+ *  @param key element key
+ *
+ *  @return date result value
+ */
+- (PPDateResult *_Nullable)getDateResultElement:(NSString *_Nonnull)key;
 
 /**
  * Returns the xml representation of this result
  *
  *  @return xml representation of this result
  */
-- (NSString* _Nonnull)xml;
+- (NSString *_Nonnull)xml;
 
 /**
  * Returns the attributed version of description string
  *
  *  @return the attributed version of description string
  */
-- (NSAttributedString* _Nonnull)attributedDescription;
+- (NSAttributedString *_Nonnull)attributedDescription;
 
 /**
  * Convenience method for simple display of result inside UITableView
  *
  *  @return PPResultDataSourceAdapter object
  */
-- (PPResultDataSourceAdapter* _Nonnull)getAdapter;
+- (PPResultDataSourceAdapter *_Nonnull)getAdapter;
 
 /**
  * Returns string representation of NSData object for passing over URLs
@@ -185,6 +199,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return string representation of NSData object
  */
-+ (NSString * _Nonnull)urlStringFromData:(NSData * _Nonnull)data;
++ (NSString *_Nonnull)urlStringFromData:(NSData *_Nonnull)data;
 
 @end

@@ -11,7 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MicroBlink/MicroBlink.h>
 
-@interface CameraViewController () <AVCaptureAudioDataOutputSampleBufferDelegate, AVCaptureVideoDataOutputSampleBufferDelegate, PPCoordinatorDelegate>
+@interface CameraViewController () <AVCaptureAudioDataOutputSampleBufferDelegate, AVCaptureVideoDataOutputSampleBufferDelegate,
+                                    PPCoordinatorDelegate>
 
 @property (weak, nonatomic) IBOutlet CameraView *cameraView;
 
@@ -50,25 +51,6 @@ static NSString *rawOcrParserId = @"Raw ocr";
 };
 
 - (void)addNotificationObserver {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(appplicationWillResignActive:)
-                                                 name:UIApplicationWillResignActiveNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(appplicationWillEnterForeground:)
-                                                 name:UIApplicationWillEnterForegroundNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidEnterBackgroundNotification:)
-                                                 name:UIApplicationDidEnterBackgroundNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationWillTerminateNotification:)
-                                                 name:UIApplicationWillTerminateNotification
-                                               object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(captureSessionDidStartRunningNotification:)
@@ -78,11 +60,6 @@ static NSString *rawOcrParserId = @"Raw ocr";
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(captureSessionDidStopRunningNotification:)
                                                  name:AVCaptureSessionDidStopRunningNotification
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(captureSessionRuntimeErrorNotification:)
-                                                 name:AVCaptureSessionRuntimeErrorNotification
                                                object:nil];
 }
 
@@ -105,44 +82,19 @@ static NSString *rawOcrParserId = @"Raw ocr";
     [self removeNotificationObserver];
 }
 
-- (void)appplicationWillResignActive:(NSNotification*)note {
-    NSLog(@"Will resign active!");
+- (void)captureSessionDidStartRunningNotification:(NSNotification *)note {
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.cameraPausedLabel.alpha = 0.0;
+                     }];
 }
 
-- (void)appplicationWillEnterForeground:(NSNotification*)note {
-    NSLog(@"appplicationWillEnterForeground!");
-    [self startCaptureSession];
+- (void)captureSessionDidStopRunningNotification:(NSNotification *)note {
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         self.cameraPausedLabel.alpha = 1.0;
+                     }];
 }
-
-- (void)applicationDidEnterBackgroundNotification:(NSNotification*)note {
-    NSLog(@"applicationDidEnterBackgroundNotification!");
-    [self stopCaptureSession];
-}
-
-- (void)applicationWillTerminateNotification:(NSNotification*)note {
-    NSLog(@"applicationWillTerminateNotification!");
-}
-
-- (void)captureSessionDidStartRunningNotification:(NSNotification*)note {
-    NSLog(@"captureSessionDidStartRunningNotification!");
-
-    [UIView animateWithDuration:0.3 animations:^{
-        self.cameraPausedLabel.alpha = 0.0;
-    }];
-}
-
-- (void)captureSessionDidStopRunningNotification:(NSNotification*)note {
-    NSLog(@"captureSessionDidStopRunningNotification!");
-
-    [UIView animateWithDuration:0.3 animations:^{
-        self.cameraPausedLabel.alpha = 1.0;
-    }];
-}
-
-- (void)captureSessionRuntimeErrorNotification:(NSNotification*)note {
-    NSLog(@"captureSessionRuntimeErrorNotification!");
-}
-
 
 - (void)startCaptureSession {
 
@@ -151,21 +103,22 @@ static NSString *rawOcrParserId = @"Raw ocr";
     self.captureSession.sessionPreset = AVCaptureSessionPresetHigh;
 
     // Init the device inputs
-    AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:[self cameraWithPosition:AVCaptureDevicePositionBack]
-                                                                              error:nil];
+    AVCaptureDeviceInput *videoInput =
+        [[AVCaptureDeviceInput alloc] initWithDevice:[self cameraWithPosition:AVCaptureDevicePositionBack] error:nil];
     [self.captureSession addInput:videoInput];
 
     // setup video data output
     AVCaptureVideoDataOutput *videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
-    [videoDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
+    [videoDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA]
+                                                                  forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
     [self.captureSession addOutput:videoDataOutput];
-    
+
     dispatch_queue_t queue = dispatch_queue_create("myQueue", NULL);
     [videoDataOutput setSampleBufferDelegate:self queue:queue];
 
     // Setup the preview view.
     self.cameraView.session = self.captureSession;
-    
+
     [self createCoordinator];
 
     [self.captureSession startRunning];
@@ -177,7 +130,7 @@ static NSString *rawOcrParserId = @"Raw ocr";
 }
 
 // Find a camera with the specificed AVCaptureDevicePosition, returning nil if one is not found
-- (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition) position {
+- (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position {
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     for (AVCaptureDevice *device in devices) {
         if ([device position] == position) {
@@ -187,67 +140,66 @@ static NSString *rawOcrParserId = @"Raw ocr";
     return nil;
 }
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
+    didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+           fromConnection:(AVCaptureConnection *)connection {
+
     [self.coordinator processImage:[PPImage imageWithCmSampleBuffer:sampleBuffer]];
-    
 }
 
 - (void)createCoordinator {
-    
-    
-    
+
+
     /** 1. Initialize the Scanning settings */
-    
+
     // Initialize the scanner settings object. This initialize settings with all default values.
     PPSettings *settings = [[PPSettings alloc] init];
-    
-    
+
+
     /** 2. Setup the license key */
-    
+
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"BWMPYIXZ-K3H7MGBP-3W6A7QCF-QFUDAGP4-7T6PZ7H4-7T6PZ7H4-7T6PYXGY-2BY4WGUT";
-    
-    
+    settings.licenseSettings.licenseKey = @"CXIHMIAT-BONQURGE-73JTZ2AE-3WQ4NKX7-JWH4EK72-RGNLB5FN-YVJUQG2A-7L24O4N7";
+    // license key valid temporarily until 2017-05-01
+
     /**
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
      * Here's an example for initializing raw OCR scanning.
      */
-    
+
     // To specify we want to perform OCR recognition, initialize the OCR recognizer settings
     PPBlinkOcrRecognizerSettings *ocrRecognizerSettings = [[PPBlinkOcrRecognizerSettings alloc] init];
-    
+
     // We want raw OCR parsing
     [ocrRecognizerSettings addOcrParser:[[PPRawOcrParserFactory alloc] init] name:rawOcrParserId];
-    
+
     // Add the recognizer setting to a list of used recognizer
     [settings.scanSettings addRecognizerSettings:ocrRecognizerSettings];
-    
+
     /** 4. Initialize the Scanning Coordinator object */
-    
+
     PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings delegate:self];
-    
+
     self.coordinator = coordinator;
 }
 
 - (void)coordinator:(PPCoordinator *)coordinator didOutputResults:(NSArray<PPRecognizerResult *> *)results {
     // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
-    
-    
+
+
     // Collect data from the result
-    for (PPRecognizerResult* result in results) {
-        
+    for (PPRecognizerResult *result in results) {
+
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
-            PPBlinkOcrRecognizerResult* ocrRecognizerResult = (PPBlinkOcrRecognizerResult*)result;
-            
+            PPBlinkOcrRecognizerResult *ocrRecognizerResult = (PPBlinkOcrRecognizerResult *)result;
+
             NSLog(@"OCR results are:");
             NSLog(@"Raw ocr: %@", [ocrRecognizerResult parsedResultForName:rawOcrParserId]);
-            
-            PPOcrLayout* ocrLayout = [ocrRecognizerResult ocrLayout];
+
+            PPOcrLayout *ocrLayout = [ocrRecognizerResult ocrLayout];
             NSLog(@"Dimensions of ocrLayout are %@", NSStringFromCGRect([ocrLayout box]));
         }
     };
-    
 }
 
 @end

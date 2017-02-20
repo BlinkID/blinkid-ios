@@ -14,7 +14,7 @@
 
 @interface ViewController () <PPScanningDelegate, PPScannedViewControllerDelegate>
 
-@property (nonatomic, strong) UIViewController<PPScanningViewController>* cameraViewController;
+@property (nonatomic, strong) UIViewController<PPScanningViewController> *cameraViewController;
 
 @property (nonatomic, strong) PPUsdlRecognizerResult *usdlRecognizerResult;
 
@@ -24,16 +24,6 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
@@ -42,7 +32,7 @@
  *
  *  @return initialized coordinator
  */
-- (PPCameraCoordinator *)coordinatorWithError:(NSError**)error {
+- (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
 
     /** 0. Check if scanning is supported */
 
@@ -63,7 +53,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"2IECVOCI-ZWR6LE6I-K4JAAAHX-JDG2A2OV-K4HRKHXU-6AOROZWI-K4HRLPRK-NZNK2GUW"; // Valid temporarily
+    settings.licenseSettings.licenseKey = @"ZJYY4UFT-5QDAH3LY-DP7PPMAT-U33LF3AF-ATLVMINT-5QCQJV2W-EGZ6ZJL3-MXI5JTZ4";
+    // License key is valid temporarily until 2017-05-01
 
 
     /** 3. Set up what is being scanned. See detailed guides for specific use cases. */
@@ -75,16 +66,17 @@
 
     PPDocumentSpecification *specification = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
 
-    NSMutableArray<PPDecodingInfo*> *documentDecoding = [NSMutableArray<PPDecodingInfo*> array];
-    [documentDecoding addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
+    NSMutableArray<PPDecodingInfo *> *documentDecoding = [NSMutableArray<PPDecodingInfo *> array];
+    [documentDecoding
+        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
     [specification setDecodingInfo:documentDecoding];
 
-    [documentDetectorSettings setDocumentSpecifications:@[specification]];
+    [documentDetectorSettings setDocumentSpecifications:@[ specification ]];
 
 
     // MRTD detector
 
-    NSMutableArray<PPDecodingInfo*> *mrtdDecoding = [NSMutableArray<PPDecodingInfo*> array];
+    NSMutableArray<PPDecodingInfo *> *mrtdDecoding = [NSMutableArray<PPDecodingInfo *> array];
     [mrtdDecoding addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"MRTD"]];
 
     PPMrtdDetectorSettings *mrtdDetectorSettings = [[PPMrtdDetectorSettings alloc] initWithDecodingInfoArray:mrtdDecoding];
@@ -92,13 +84,15 @@
 
     // MULTI detector
 
-    PPMultiDetectorSettings *multiDetectorSettings = [[PPMultiDetectorSettings alloc] initWithSettingsArray:@[documentDetectorSettings, mrtdDetectorSettings]];
+    PPMultiDetectorSettings *multiDetectorSettings =
+        [[PPMultiDetectorSettings alloc] initWithSettingsArray:@[ documentDetectorSettings, mrtdDetectorSettings ]];
     multiDetectorSettings.allowMultipleResults = YES;
 
 
     // Detector recognizer
 
-    PPDetectorRecognizerSettings *detectorRecognizerSettings = [[PPDetectorRecognizerSettings alloc] initWithDetectorSettings:multiDetectorSettings];
+    PPDetectorRecognizerSettings *detectorRecognizerSettings =
+        [[PPDetectorRecognizerSettings alloc] initWithDetectorSettings:multiDetectorSettings];
     [settings.scanSettings addRecognizerSettings:detectorRecognizerSettings];
 
     /** 4. Initialize the Scanning Coordinator object */
@@ -146,8 +140,7 @@
     // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-                  didFindError:(NSError *)error {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
     // Can be ignored. See description of the method
 }
 
@@ -158,7 +151,8 @@
     [scanningViewController removeFromParentViewController];
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputMetadata:(PPMetadata *)metadata {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
+             didOutputMetadata:(PPMetadata *)metadata {
 
     // Check if metadata obtained is image
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
@@ -167,13 +161,12 @@
     }
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-              didOutputResults:(NSArray *)results {
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
 
     // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
 
     // Collect data from the result
-    for (PPRecognizerResult* result in results) {
+    for (PPRecognizerResult *result in results) {
 
         if ([result isKindOfClass:[PPDetectorRecognizerResult class]]) {
             PPDetectorRecognizerResult *detectorRecognizerResult = (PPDetectorRecognizerResult *)result;
@@ -196,7 +189,8 @@
     // pause scanning to avoid obtaining new detector results
     [scanningViewController pauseScanning];
 
-    PPScannedViewController *scannedVc = [PPScannedViewController viewControllerFromStoryboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    PPScannedViewController *scannedVc =
+        [PPScannedViewController viewControllerFromStoryboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     scannedVc.imageMetadata = self.imageMetadata;
     scannedVc.delegate = self;
 
@@ -210,16 +204,16 @@
 
 - (void)scannedViewControllerWillClose:(PPScannedViewController *)scannedViewController {
     [UIView animateWithDuration:0.4f
-                     animations:^{
-                         scannedViewController.view.alpha = 0.0f;
-                     }
-                     completion:^(BOOL finished) {
-                         [scannedViewController willMoveToParentViewController:nil];
-                         [scannedViewController.view removeFromSuperview];
-                         [scannedViewController removeFromParentViewController];
+        animations:^{
+            scannedViewController.view.alpha = 0.0f;
+        }
+        completion:^(BOOL finished) {
+            [scannedViewController willMoveToParentViewController:nil];
+            [scannedViewController.view removeFromSuperview];
+            [scannedViewController removeFromParentViewController];
 
-                         [self.cameraViewController resumeScanningAndResetState:YES];
-                     }];
+            [self.cameraViewController resumeScanningAndResetState:YES];
+        }];
 }
 
 @end

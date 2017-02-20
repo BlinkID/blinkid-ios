@@ -11,7 +11,8 @@
 /**
  *  Parses various transaction amount formats on invoices.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPriceOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPPriceOcrParserFactory : PPOcrParserFactory
 
 @property (nonatomic) BOOL arabicIndicModeEnabled;
 

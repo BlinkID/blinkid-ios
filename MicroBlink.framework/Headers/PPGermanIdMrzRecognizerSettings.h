@@ -11,39 +11,40 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring German ID MRZ Recognizer
+ * Settings class for configuring German ID MRZ Recognizer.
  *
- * GermanIdMrz recognizer is used for scanning back side of German ID.
+ * German ID MRZ recognizer is used for scanning back side of German ID.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdMrzRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPGermanIdMrzRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displayFaceImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_FACE;
+@property (nonatomic, readonly) NSString *ID_FACE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains signature.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displaySignatureImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* ID_SIGNATURE;
+@property (nonatomic, readonly) NSString *ID_SIGNATURE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains MRZ.
  * This image will be sent to scan delegate during recognition process if displaying of MRZ image
  * is enabled via displayMrzImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* MRZ_IMAGE;
+@property (nonatomic, readonly) NSString *MRZ_IMAGE;
 
 /**
  * Defines if owner's eye color should be extracted from German ID

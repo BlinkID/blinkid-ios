@@ -22,21 +22,20 @@
  Notification sent when Overlay View Controller wants to close camera, for example,
  by pressing Cancel button.
  */
-- (void)overlayViewControllerWillCloseCamera:(PPOverlayViewController*)overlayViewController;
+- (void)overlayViewControllerWillCloseCamera:(PPOverlayViewController *)overlayViewController;
 
 /**
  Overlay View Controller should ask it's delegete if it's necessary to display Torch (Light) button.
  Torch button is not necessary if the device doesn't support torch mode (e.g. iPad devices).
  */
-- (BOOL)overlayViewControllerShouldDisplayTorch:(PPOverlayViewController*)overlayViewController;
+- (BOOL)overlayViewControllerShouldDisplayTorch:(PPOverlayViewController *)overlayViewController;
 
 /**
  Overlay View Controller must notify it's delegete to set the torch mode to On or Off
 
  Returns YES if torch mode was set successfully, otherwise NO.
  */
-- (BOOL)overlayViewController:(PPOverlayViewController*)overlayViewController
-                 willSetTorch:(BOOL)isTorchOn;
+- (BOOL)overlayViewController:(PPOverlayViewController *)overlayViewController willSetTorch:(BOOL)isTorchOn;
 
 /**
  * If help mechanism is implemented using PPScanDelegate's scanningViewControllerWillPresentHelp method,
@@ -49,7 +48,8 @@
 /**
  Overlay View Controller should know if it's presented modally or on navigation view controller.
 
- Use this method to ask if it's necessary to display Cancel button. (when on navigation view controller, button back is presented by default)
+ Use this method to ask if it's necessary to display Cancel button. (when on navigation view controller, button back is presented by
+ default)
 
  This method replaced old method overlayViewControllerShouldDisplayCancel.
  */
@@ -61,7 +61,7 @@
 - (BOOL)isTorchOn;
 
 /**
- * Overlay View Controller can ask it's owner whether camera was authorized 
+ * Overlay View Controller can ask it's owner whether camera was authorized
  */
 - (BOOL)isCameraAuthorized;
 

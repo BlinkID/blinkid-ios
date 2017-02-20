@@ -24,7 +24,8 @@ typedef NS_ENUM(NSInteger, PPBarcodeElementType) {
 /**
  * represents one raw element in barcode
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarcodeElement : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBarcodeElement : NSObject
 
 /** byte array contained in this barcode element */
 @property (nonatomic, retain, readonly) NSData *elementBytes;
@@ -35,15 +36,15 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarcodeElement : NSObject
 /**
  Designated initializer shich sets byte array for specific barcode element type
  */
-- (instancetype)initWithBytes:(NSData *)bytes
-                         type:(PPBarcodeElementType)type;
+- (instancetype)initWithBytes:(NSData *)bytes type:(PPBarcodeElementType)type;
 
 @end
 
 /**
  * represents the collection of barcode raw elements
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarcodeDetailedData : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBarcodeDetailedData : NSObject
 
 /** array of barcode elements (PPBarcodeElement *) contained in barcode */
 @property (nonatomic, retain, readonly) NSArray *barcodeElements;

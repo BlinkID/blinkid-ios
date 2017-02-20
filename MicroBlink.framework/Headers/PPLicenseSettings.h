@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Settings class containing License information
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPLicenseSettings : NSObject <NSCopying>
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPLicenseSettings : NSObject <NSCopying>
 
 /**
  * License key for unlocking the scanning library
@@ -22,10 +23,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPLicenseSettings : NSObject <NSCopying>
 @property (nonatomic, strong, nullable) NSString *licenseKey;
 
 /**
- * If the license is Enterprise (for more than one app!), you will also need to set the licensee para,
+ * If the license is Enterprise (for more than one app!), you will also need to set the licensee parameter,
  * Otherwise keep this value nil!
  */
 @property (nonatomic, strong, nullable) NSString *licensee;
+
+// Unavailable initializer
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  * Designated initializer for regular licenses
@@ -44,8 +48,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPLicenseSettings : NSObject <NSCopying>
  *
  *  @return license settings instance
  */
-- (instancetype)initWithLicenseKey:(nullable NSString *)licenseKey
-                          licensee:(nullable NSString *)licensee;
+- (instancetype)initWithLicenseKey:(nullable NSString *)licenseKey licensee:(nullable NSString *)licensee NS_DESIGNATED_INITIALIZER;
 
 @end
 

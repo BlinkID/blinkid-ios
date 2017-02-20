@@ -23,7 +23,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Exact location of detected object on image.
  * Contains 4 points of detected object's corners.
  */
-@property (nonatomic) PPQuadrangle* detectionLocation;
+@property (nonatomic) PPQuadrangle *detectionLocation;
 
 @end
 

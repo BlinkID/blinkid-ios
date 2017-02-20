@@ -11,7 +11,8 @@
 
 /**
  * Protocol used for document classification in Templating API.
- * Classification is used when there are multiple types of document being detected (i.e. old and new version of ID, with differen location of elements) *
+ * Classification is used when there are multiple types of document being detected (i.e. old and new version of ID, with differen location
+ * of elements) *
  */
 @protocol PPDocumentClassifier <NSObject>
 

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * This object is the mastermind of the recognition process.
  *
- * PPCoordinator coordinates hardware control with the recognition algorithms, 
+ * PPCoordinator coordinates hardware control with the recognition algorithms,
  * and provides facotry method for creating ViewController with UI for the camera.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)

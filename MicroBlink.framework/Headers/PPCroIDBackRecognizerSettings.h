@@ -12,19 +12,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring CroIDBack Recognizer
+ * Settings class for configuring Croatian Back ID Recognizer.
  *
- * CroIDBack recognizer is used for scanning back side of Croatian ID. It always extracts
+ * Croatian Back ID recognizer is used for scanning back side of Croatian ID. It always extracts
  * MRZ zone and address of ID holder while extracting other elements is optional.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCroIDBackRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPCroIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  * Defines if issuing authority of Croatian ID should be extracted

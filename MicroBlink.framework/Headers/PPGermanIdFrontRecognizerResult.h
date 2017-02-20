@@ -11,41 +11,42 @@
 /**
  * Class representing values obtained when scanning front side of German ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPGermanIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPGermanIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
  * The first name of the German ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* firstName;
+@property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
  * The last name of the German ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* lastName;
+@property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
  * The nationality of the German ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* nationality;
+@property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
  * The date of birth of German ID owner
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
 
 /**
  * The place of birth of the German ID
  */
-@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
 
 /**
  * The document date of expiry of the German ID
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString *dateOfExpiry;
 
 /**
  * The document number of the German ID
  */
-@property (nonatomic, readonly, nullable) NSString* documentNumber;
+@property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 @end

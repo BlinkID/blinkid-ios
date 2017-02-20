@@ -11,46 +11,47 @@
 /**
  * Class representing values obtained when scanning front side of Czech ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPCzIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPCzIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
  * The ID card number of the Czech ID.
  */
-@property (nonatomic, readonly, nullable) NSString* identityCardNumber;
+@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
 
 /**
  * The first name of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* firstName;
+@property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
  * The last name of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* lastName;
+@property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
  * The date of birth of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
 
 /**
  * The date of issue of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
 
 /**
  * The date of expiry of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString *dateOfExpiry;
 
 /**
  * The sex of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* sex;
+@property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
  * The place of birth of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
 
 @end

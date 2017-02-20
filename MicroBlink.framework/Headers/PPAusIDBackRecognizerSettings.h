@@ -9,18 +9,19 @@
 #import "PPRecognizerSettings.h"
 
 /**
- * Settings class for configuring Austrian Back ID Recognizer
+ * Settings class for configuring Austrian Back ID Recognizer.
  *
  * Austrian Back ID recognizer is used for scanning back side of Austrian ID.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPAusIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  * Sets whether full image of ID card should be sent to didOutputMetadata method of scanDelegate object.

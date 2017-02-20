@@ -46,8 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param scanningViewController Scanning view controller which was responsible for scanning
  *  @param error                  Error object describing the error
  */
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-                  didFindError:(NSError*)error;
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error;
 
 /**
  * Scanning library was closed, usually by the user pressing close button and cancelling the scan
@@ -90,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * This is intended for you to easily spot the issue as soon as possible.
  *
- * If you implement this method, you have a chance to handle the situation. However, scanning won't work 
+ * If you implement this method, you have a chance to handle the situation. However, scanning won't work
  * without a valid license key!
  *
  *  @param scanningViewController Scanning view controller which was responsible for scanning
@@ -116,8 +115,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Called when Scanning library starts detection of objects.
- * Detection cycle happens before recognition cycle and it attempts to find the location of specific object on an image. 
- * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not vice versa).
+ * Detection cycle happens before recognition cycle and it attempts to find the location of specific object on an image.
+ * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not
+ * vice versa).
  *
  *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
  */
@@ -126,15 +126,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Called when Scanning library finishes detection of objects.
  * Detection cycle happens before recognition cycle and it attempts to find the location of specific object on an image.
- * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not vice versa).
+ * Since detection and recognition are two separate events, it is possible for detection to be successful while recognition can fail (not
+ * vice versa).
  *
- * Returned PPDetectorResult object is an abstract class. Concrete classes (such as PPQuadDetectorResult) contain information about detected object (i.e. location on the screen).
+ * Returned PPDetectorResult object is an abstract class. Concrete classes (such as PPQuadDetectorResult) contain information about detected
+ * object (i.e. location on the screen).
  *
  *  @param scanningViewController scanningViewController Scanning view controller responsible for scanning
  *  @param result result of object detection containing information of detection (i.e. location)
  */
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
-  didFinishDetectionWithResult:(PPDetectorResult *)result;
+    didFinishDetectionWithResult:(PPDetectorResult *)result;
 
 /**
  * Called when Scanning library starts recognition cycle. Recognition cycle happens after successful detection cycle.
@@ -144,7 +146,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)scanningViewControllerDidStartRecognition:(UIViewController<PPScanningViewController> *)scanningViewController;
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController
-            didObtainOcrResult:(PPOcrLayout*)ocrResult withResultName:(NSString*)resultName;
+            didObtainOcrResult:(PPOcrLayout *)ocrResult
+                withResultName:(NSString *)resultName;
 
 /**
  * Called when coordinator obtaines metadata information

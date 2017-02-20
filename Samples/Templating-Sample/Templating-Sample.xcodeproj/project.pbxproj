@@ -67,8 +67,8 @@
 		3153E6661D08758900797C93 = {
 			isa = PBXGroup;
 			children = (
-				3153E6891D097A0C00797C93 /* Frameworks */,
 				3153E6711D08758900797C93 /* Templating-Sample */,
+				3153E6891D097A0C00797C93 /* Frameworks */,
 				3153E6701D08758900797C93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,12 +111,12 @@
 			children = (
 				3153E6961D097A5900797C93 /* MicroBlink.bundle */,
 				3153E6971D097A5900797C93 /* MicroBlink.framework */,
-				3153E6941D097A4800797C93 /* libiconv.tbd */,
-				3153E6921D097A4200797C93 /* libc++.tbd */,
 				3153E68A1D097A3C00797C93 /* Accelerate.framework */,
 				3153E68B1D097A3C00797C93 /* AudioToolbox.framework */,
 				3153E68C1D097A3C00797C93 /* AVFoundation.framework */,
 				3153E68D1D097A3C00797C93 /* CoreMedia.framework */,
+				3153E6941D097A4800797C93 /* libiconv.tbd */,
+				3153E6921D097A4200797C93 /* libc++.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

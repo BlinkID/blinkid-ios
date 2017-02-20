@@ -12,27 +12,27 @@
  * Enumeration of supported MRTD document types
  */
 typedef NS_ENUM(NSUInteger, PPMrtdDocumentType) {
-   
+
     /**
-     *  Unknown documen type
+     *  Unknown document type
      */
     PPMrtdTypeUnknown,
-    
+
     /**
      *  Identity card
      */
     PPMrtdTypeIdentityCard,
-    
+
     /**
      *  Passport
      */
     PPMrtdTypePassport,
-    
+
     /**
      *  Visa
      */
     PPMrtdTypeVisa,
-    
+
     /**
      *  US Green Card
      */
@@ -43,24 +43,24 @@ typedef NS_ENUM(NSUInteger, PPMrtdDocumentType) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wall"
 
-static NSString* mrtdDocumentTypeToString(PPMrtdDocumentType documentType){
+static NSString *mrtdDocumentTypeToString(PPMrtdDocumentType documentType) {
     switch (documentType) {
         case PPMrtdTypeIdentityCard:
             return @"Identity Card";
             break;
-            
+
         case PPMrtdTypePassport:
             return @"Passport";
             break;
-            
+
         case PPMrtdTypeVisa:
             return @"Visa";
             break;
-            
+
         case PPMrtdTypeGreenCard:
             return @"Green Card";
             break;
-            
+
         default:
             return @"";
             break;

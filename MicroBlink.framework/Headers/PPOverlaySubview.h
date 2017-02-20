@@ -13,18 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- * Protocol which all objects interested in receiving information about overlay subviews need to implement
- */
-@protocol PPOverlaySubviewDelegate <NSObject>
-
-/** Delegate method called when animation starts */
-- (void)overlaySubviewAnimationDidStart:(id)overlaySubview;
-
-/** Delegate method called when animation finishes */
-- (void)overlaySubviewAnimationDidFinish:(id)overlaySubview;
-
-@end
+@protocol PPOverlaySubviewDelegate;
 
 @class PPOcrLayout;
 @class PPOverlayViewController;
@@ -39,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<PPOverlaySubviewDelegate> delegate;
 
 /** The overlay view controller containing this overlay subview (if any) */
-@property (nonatomic, weak) PPOverlayViewController* overlay;
+@property (nonatomic, weak) PPOverlayViewController *overlay;
 
 @optional
 
@@ -56,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)overlayDidStopScanning;
 
 /**
- Overlay started the new recognition cycle. Since recognition is done on video frames, 
+ Overlay started the new recognition cycle. Since recognition is done on video frames,
  there might be multiple recognition cycles before the scanning completes
  */
 - (void)overlayDidStartRecognition;
@@ -91,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  the object, whether the angles was too high, or the object isn't seen on the camera in
  it's entirety. If the object was found, the corner points of the object are returned.
  */
--(void)overlayDidFinishDetectionWithResult:(PPDetectorResult *)result;
+- (void)overlayDidFinishDetectionWithResult:(PPDetectorResult *)result;
 
 /**
  Overlay reports obtained ocr layout
@@ -99,8 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  Besides the ocr layout itself, we get the ID of the layout so we can
  distinguish consecutive layouts of the same area on the image
  */
-- (void)overlayDidObtainOcrLayout:(PPOcrLayout*)ocrLayout
-                   withIdentifier:(NSString*)identifier;
+- (void)overlayDidObtainOcrLayout:(PPOcrLayout *)ocrLayout withIdentifier:(NSString *)identifier;
 
 /**
  Overlay ended the recognition cycle with a certain Scanning result.
@@ -108,14 +96,13 @@ NS_ASSUME_NONNULL_BEGIN
  Use this method only if you need UI update on this event (although this is unnecessary in many cases).
  The actual result will be passed to your PPPhotoPayDelegate object.
  */
-- (void)overlayDidOutputResults:(NSArray<PPRecognizerResult*>*)results;
+- (void)overlayDidOutputResults:(nullable NSArray<PPRecognizerResult *> *)results;
 
 /**
  Method called when a rotation to a given
  interface orientation is about to happen
  */
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                duration:(NSTimeInterval)duration;
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
 /**
  Method called immediately after the rotation from a given
@@ -127,8 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
  Method called inside an animation block. Any changes you make
  to your UIView's inside this method will be animated
  */
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                         duration:(NSTimeInterval)duration;
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
 @end
 
@@ -136,7 +122,20 @@ NS_ASSUME_NONNULL_BEGIN
  Base class for all overlay subviews
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPOverlaySubview : UIView<PPOverlaySubview>
+@interface PPOverlaySubview : UIView <PPOverlaySubview>
+
+@end
+
+/**
+ * Protocol which all objects interested in receiving information about overlay subviews need to implement
+ */
+@protocol PPOverlaySubviewDelegate <NSObject>
+
+/** Delegate method called when animation starts */
+- (void)overlaySubviewAnimationDidStart:(PPOverlaySubview *)overlaySubview;
+
+/** Delegate method called when animation finishes */
+- (void)overlaySubviewAnimationDidFinish:(PPOverlaySubview *)overlaySubview;
 
 @end
 

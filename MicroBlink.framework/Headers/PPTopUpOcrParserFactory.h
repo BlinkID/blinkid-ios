@@ -12,28 +12,26 @@
  * Top up prefix of a coupon
  */
 typedef NS_ENUM(NSUInteger, PPTopUpPrefix) {
-    
+
     /** Simpa, BonBon, Multiplus */
     PPTopUpPrefix123 = 0,
-    
+
     /** vip, tomato */
     PPTopUpPrefix103,
-    
+
     /** tele2 */
     PPTopUpPrefix131,
-    
-    /** All prefixes but do not allow codes without prefix */
-    PPTopUpPrefixAll,
 };
 
 /**
- *  Parses mobile coupons
+ *  Parses for mobile top up numbers
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMobileCouponsOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPTopUpOcrParserFactory : PPOcrParserFactory
 
 /**
  * Initializes parser with desired top up prefix.
  */
-- (instancetype)initWithTopUpPrefix:(PPTopUpPrefix)topUpPrefix;
+- (instancetype)initWithTopUpPrefix:(PPTopUpPrefix)topUpPrefix NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -15,34 +15,34 @@
 typedef NS_OPTIONS(NSInteger, PPDetectionStatus) {
 
     /** Object was successfuly detected. */
-    PPDetectionStatusSuccess            = 1<<0,
+    PPDetectionStatusSuccess = 1 << 0,
 
     /** Object was not detected */
-    PPDetectionStatusFail               = 1<<1,
+    PPDetectionStatusFail = 1 << 1,
 
     /** Object was successfully detected, but the camera was too far above the object for processing */
-    PPDetectionStatusCameraTooHigh      = 1<<2,
+    PPDetectionStatusCameraTooHigh = 1 << 2,
 
     /** Object was successfully detected, but the perspective angle of camera is too high */
-    PPDetectionStatusCameraAtAngle      = 1<<3,
+    PPDetectionStatusCameraAtAngle = 1 << 3,
 
     /** Object was successfully detected, but the object is rotated and not aligned to the camera edges */
-    PPDetectionStatusCameraRotated      = 1<<4,
+    PPDetectionStatusCameraRotated = 1 << 4,
 
     /** QR code was successfully detected */
-    PPDetectionStatusQRSuccess          = 1<<6,
+    PPDetectionStatusQRSuccess = 1 << 6,
 
     /** PDF417 barcode was successfully detected */
-    PPDetectionStatusPdf417Success      = 1<<7,
+    PPDetectionStatusPdf417Success = 1 << 7,
 
     /** Object was successfully detected using a fallback algorithm */
-    PPDetectionStatusFallbackSuccess    = 1<<8,
+    PPDetectionStatusFallbackSuccess = 1 << 8,
 
     /** Object was detected, but is only partially visible on screen */
-    PPDetectionStatusPartialForm        = 1<<9,
+    PPDetectionStatusPartialForm = 1 << 9,
 
     /** Object was successfully detected, but the camera is too near to the object for processing */
-    PPDetectionStatusCameraTooNear      = 1<<10,
+    PPDetectionStatusCameraTooNear = 1 << 10,
 };
 
 // Ignore unused method warning
@@ -56,10 +56,10 @@ typedef NS_OPTIONS(NSInteger, PPDetectionStatus) {
  *
  *  @return NSString value for PPDetectionStatus value
  */
-static NSString* stringFromDetectionStatus(PPDetectionStatus status) {
+static NSString *stringFromDetectionStatus(PPDetectionStatus status) {
 
-    NSString* defaultString =  @"Detection status: ";
-    NSString* res = [NSString stringWithString:defaultString];
+    NSString *defaultString = @"Detection status: ";
+    NSString *res = [NSString stringWithString:defaultString];
 
     if (status & PPDetectionStatusSuccess) {
         res = [res stringByAppendingString:@"Success\n"];
@@ -91,7 +91,7 @@ static NSString* stringFromDetectionStatus(PPDetectionStatus status) {
     if ([res length] == [defaultString length]) {
         res = @"No value!";
     }
-    
+
     return res;
 }
 

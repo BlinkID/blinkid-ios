@@ -12,7 +12,7 @@
 /**
  * Type of the barcode which BarDecoderRecognizer returnes
  */
-typedef NS_ENUM(NSUInteger, PPZXingBarcodeType){
+typedef NS_ENUM(NSUInteger, PPZXingBarcodeType) {
     /** Code 39 */
     PPZXingBarcodeTypeAztec,
     /** Code 128 */
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, PPZXingBarcodeType){
     PPZXingBarcodeTypeUPCA,
     /** UPCE */
     PPZXingBarcodeTypeUPCE,
-    
+
 };
 
 /**
@@ -41,7 +41,8 @@ typedef NS_ENUM(NSUInteger, PPZXingBarcodeType){
  *
  * Contains raw Barcode detailed data, barcode type, and methods for getting string representation of results.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerResult : PPRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPZXingRecognizerResult : PPRecognizerResult
 
 /**
  * Type of the barcode scanned
@@ -53,7 +54,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerResult : PPRecognizerRes
 /**
  * Byte array with result of the scan
  */
-- (NSData * _Nullable)data;
+- (NSData *_Nullable)data;
 
 /**
  * Retrieves string content of the scanned data using guessed encoding.
@@ -66,7 +67,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerResult : PPRecognizerRes
  *
  *  @return created string, or nil if encoding couldn't be found.
  */
-- (NSString * _Nullable)stringUsingGuessedEncoding;
+- (NSString *_Nullable)stringUsingGuessedEncoding;
 
 /**
  * Retrieves string content of the scanned data using given encoding.
@@ -75,12 +76,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerResult : PPRecognizerRes
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString * _Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString *_Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  * Raw barcode detailed result
  */
-- (PPBarcodeDetailedData * _Nullable)rawData;
+- (PPBarcodeDetailedData *_Nullable)rawData;
 
 /**
  * Method which gives string representation for a given PPZXingBarcodeType enum value.
@@ -89,6 +90,6 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPZXingRecognizerResult : PPRecognizerRes
  *
  *  @return String representation of a given PPZXingBarcodeType enum value.
  */
-+ (NSString * _Nonnull)toTypeName:(PPZXingBarcodeType)type;
++ (NSString *_Nonnull)toTypeName:(PPZXingBarcodeType)type;
 
 @end

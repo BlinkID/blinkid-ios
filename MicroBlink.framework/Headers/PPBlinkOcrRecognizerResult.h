@@ -14,6 +14,7 @@
  *
  * For each parser group, the result contains one Ocr Layout, and one or more parsed results.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBlinkOcrRecognizerResult : PPTemplatingRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBlinkOcrRecognizerResult : PPTemplatingRecognizerResult
 
 @end

@@ -18,12 +18,12 @@ typedef NS_ENUM(NSUInteger, PPDetectionCode) {
      * Object detection has failed.
      */
     PPDetectionCodeFail = 0,
-    
+
     /**
      * Object was detected partially. Only some PhotoPay detectors support this.
      */
     PPDetectionCodeFallback,
-    
+
     /**
      * Object detection has succeded.
      */

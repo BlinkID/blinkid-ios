@@ -8,7 +8,8 @@
 
 #import "PPBaseOverlayViewController.h"
 
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBaseBarcodeOverlayViewController : PPBaseOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBaseBarcodeOverlayViewController : PPBaseOverlayViewController
 
 /**
  Margin for the buttons in heads up display

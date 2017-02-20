@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Base class for outputting various data via 'didOutputMetadata:' method
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMetadata : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPMetadata : NSObject
 
 /**
  * Unique metadata name/Id

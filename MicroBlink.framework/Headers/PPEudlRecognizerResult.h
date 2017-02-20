@@ -12,52 +12,53 @@
 /**
  * Class representing result of scanning of UK Driver's licenses
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPEudlRecognizerResult : PPRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPEudlRecognizerResult : PPRecognizerResult
 
 /**
  * First name of the owner of the DL card
  */
-@property (nonatomic, readonly, nullable) NSString* ownerFirstName;
+@property (nonatomic, readonly, nullable) NSString *ownerFirstName;
 
 /**
  * Last name of the owner of the DL card
  */
-@property (nonatomic, readonly, nullable) NSString* ownerLastName;
+@property (nonatomic, readonly, nullable) NSString *ownerLastName;
 
 /**
  * Birth data of the owner
  */
-@property (nonatomic, readonly, nullable) NSString* ownerBirthData;
+@property (nonatomic, readonly, nullable) NSString *ownerBirthData;
 
 /**
  * Issue date of the DL card
  */
-@property (nonatomic, readonly, nullable) NSString* documentIssueDate;
+@property (nonatomic, readonly, nullable) NSString *documentIssueDate;
 
 /**
  * Expiry date of the DL card
  */
-@property (nonatomic, readonly, nullable) NSString* documentExpiryDate;
+@property (nonatomic, readonly, nullable) NSString *documentExpiryDate;
 
 /**
  * Issuing authority of the document
  */
-@property (nonatomic, readonly, nullable) NSString* documentIssuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *documentIssuingAuthority;
 
 /**
  * Personal number
  */
-@property (nonatomic, readonly, nullable) NSString* personalNumber;
+@property (nonatomic, readonly, nullable) NSString *personalNumber;
 
 /**
  * Driver number
  */
-@property (nonatomic, readonly, nullable) NSString* driverNumber;
+@property (nonatomic, readonly, nullable) NSString *driverNumber;
 
 /**
  * Addres the owner of the DL card
  */
-@property (nonatomic, readonly, nullable) NSString* ownerAddress;
+@property (nonatomic, readonly, nullable) NSString *ownerAddress;
 
 /**
  * Country of detected DL card

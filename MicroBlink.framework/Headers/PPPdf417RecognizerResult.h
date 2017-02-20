@@ -14,12 +14,13 @@
  *
  * Contains raw Barcode detailed data, and methods for getting string representation of results.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPPdf417RecognizerResult : PPRecognizerResult
 
 /**
  * Byte array with result of the scan
  */
-- (NSData * _Nullable)data;
+- (NSData *_Nullable)data;
 
 /**
  * Retrieves string content of the scanned data using guessed encoding.
@@ -27,12 +28,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  * If you're 100% sure you know the exact encoding in the barcode, use stringUsingEncoding: method.
  * Otherwise stringUsingDefaultEncoding.
  *
- * This method uses NSString stringEncodingForData:encodingOptions:convertedString:usedLossyConversion: method for 
+ * This method uses NSString stringEncodingForData:encodingOptions:convertedString:usedLossyConversion: method for
  * guessing the encoding.
  *
  *  @return created string, or nil if encoding couldn't be found.
  */
-- (NSString * _Nullable)stringUsingGuessedEncoding;
+- (NSString *_Nullable)stringUsingGuessedEncoding;
 
 /**
  * Retrieves string content of the scanned data using given encoding.
@@ -41,12 +42,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  *
  *  @return String created from data property, using given encoding
  */
-- (NSString * _Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
+- (NSString *_Nullable)stringUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  * Raw barcode detailed result
  */
-- (PPBarcodeDetailedData * _Nullable)rawData;
+- (PPBarcodeDetailedData *_Nullable)rawData;
 
 /**
  * Flag indicating uncertain scanning data
@@ -59,13 +60,13 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerResult : PPRecognizerRe
  * with upper left, upper right, lower left and lower right corner.
  *
  * Points are given in image coordinate system
- * (0, 0) - top left point on the image, (width, height) 
+ * (0, 0) - top left point on the image, (width, height)
  * bottom right point on the image
  *
  *  @return location of the barcode on the original image.
  *
  *  @note - to get the points in NSArray use PPQuadrangle's toPointsArray method.
  */
-- (PPQuadrangle * _Nullable)locationOnImage;
+- (PPQuadrangle *_Nullable)locationOnImage;
 
 @end
