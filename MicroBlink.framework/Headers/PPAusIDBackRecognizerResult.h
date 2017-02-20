@@ -11,41 +11,42 @@
 /**
  * Class representing values obtained when scanning back side of Austrian ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPAusIDBackRecognizerResult : PPMrtdRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPAusIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * The issuing authority of the Austrian ID.
  */
-@property (nonatomic, readonly, nullable) NSString* issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
 
 /**
  * The place of birth of the Austrian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* placeOfBirth;
+@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
 
 /**
  * The principal residence of the Austrian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* principalResidence;
+@property (nonatomic, readonly, nullable) NSString *principalResidence;
 
 /**
  * The height of the Austrian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* height;
+@property (nonatomic, readonly, nullable) NSString *height;
 
 /**
  * The date of issue of the Austrian ID.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfIssue;
+@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
 
 /**
  * The eye color of the Austrian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* eyeColor;
+@property (nonatomic, readonly, nullable) NSString *eyeColor;
 
 /**
  * The document number of the Austrian ID.
  */
-@property (nonatomic, readonly, nullable) NSString* documentNumber;
+@property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 @end

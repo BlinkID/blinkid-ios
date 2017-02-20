@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Enum which describes text orientation on an image.
  */
-typedef NS_ENUM(NSUInteger, PPProcessingOrientation){
+typedef NS_ENUM(NSUInteger, PPProcessingOrientation) {
     /** Text oriented same as picture */
     PPProcessingOrientationUp,
     /** Text is rotated 90 degrees clockwise */
@@ -38,7 +38,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, readonly) UIImage *image;
 
-/** 
+/**
  * Region of the image used for scanning, where the whole image is specified with CGRectMake(0.0, 0.0, 1.0, 1.0).
  */
 @property (nonatomic) CGRect roi;
@@ -63,6 +63,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO
  */
 @property (nonatomic) BOOL mirroredVertically;
+
+
+/**
+ * If YES, the image will prior to processing go through frame quality estimation phase, which might discard the frame
+ *
+ * Default: NO.
+ */
+@property (nonatomic) BOOL estimateFrameQuality;
 
 /**
  *  Property which tells if this frame is a camera or a single photo frame.

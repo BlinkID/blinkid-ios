@@ -1,3 +1,33 @@
+## 2.6.0
+
+- Added CroIDCombined recognizer which can scan both sides consecutively
+- Added DocumentFace recognizer which can be used to get the image of the ID document which contains a face
+- Added FaceDetector feature which can now be used in DetectorRecognizer.
+- Added support for extracting place of birth on old German IDs
+- Added property allowResultForEveryFrame in PPScanSettings which can be used when using Direct API to force calling didOutputResults: callback for every frame
+- Added feature to enable frame quality estimation when using Direct API (by exposing property estimateFrameQuality)
+- Added support for scanning IBAN from Georgia in IbanParser
+- Added logging of the SDK name when the license key is invalid for easier troubleshooting
+- Added Belgian account number check to IBAN parser
+- Added scaling of the default viewfinder in ID scanning overlay view
+- Added a property which you can use to set a custom location for resources. For example, if you would like to avoid using Microblink.bundle as resources bundle, you can set a different one in PPSettings object.
+- Improved quality of German ID address recognition
+- Updated - Singapore ID recognizer has now split in two recognizers - one for front and one for back side
+- Fixed Date of Birth scanning issue in MyKad Recognizer
+- Fixed MRTD returning payment data with verified = false when mrtdSettings.allowUnverified(false)
+- Fixed bug in MRTD recognizer where mrtd image were not returned although scanning was successful
+- Fixed crash when Single dispatch queue was used for processing
+- Fixed frame quality issue in PPimageMetadata. Previously it was always nan if used after image getter.
+- Fixed Torch button on default camera overlays. Previously it never changed state after it was turned on.
+- Fixed help display mode "First run", which previously didn't work
+- Fixed crash when the user tapped anywhere on the view controller presented when camera permission wasn't allowed
+- Fixed warning message when language is set to something other than @en, @de and @fr and @cro
+- Fixed crash on start in swift if custom UI was used to handle detector results
+- Fixed a problem which caused internal recognizer state not to be reset when using the scanner for the second time with the same PPCoordinator instance
+- Fixed ocrLayout getter in PPBlinkOcrRecognizer which previously returned nil
+- Fixed an issue which caused camera settings to be reset each time PPCoordinator's applySettings method was called. This issue manifested, for example, by automatically turning off torch after successful scan in SegmentScan.
+- Fixed redundant log warnings in setting language ("Trying to set language to nil, returning") and Camera manager ("Should not have been observing autofocus")
+
 ## 2.5.1
 
 - Updated default overlay UI for ID scanning

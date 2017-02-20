@@ -9,20 +9,19 @@
 #import "PPRecognizerSettings.h"
 
 /**
- * Settings class for configuring Slovenian Back ID Recognizer
+ * Settings class for configuring Slovenian Back ID Recognizer.
  *
  * Slovenian Back ID recognizer is used for scanning back side of Slovenian ID.
- * This recognizer can scan both front and back side of the ID but the results of scanning will be different as
- * some fields are not present on both sides
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdBackRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSlovenianIdBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString* FULL_DOCUMENT_IMAGE;
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
 
 /**
  *  Defines if issuing authority of Slovenian ID should be extracted

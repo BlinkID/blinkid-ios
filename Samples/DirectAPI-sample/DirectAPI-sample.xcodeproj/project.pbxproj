@@ -71,8 +71,8 @@
 		1819B6E71B7745150002325E = {
 			isa = PBXGroup;
 			children = (
-				3170E9F91CC0EECF0017ABF0 /* Frameworks */,
 				1819B6F21B7745150002325E /* DirectAPI-Sample */,
+				3170E9F91CC0EECF0017ABF0 /* Frameworks */,
 				1819B6F11B7745150002325E /* Products */,
 			);
 			sourceTree = "<group>";

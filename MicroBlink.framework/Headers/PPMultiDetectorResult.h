@@ -19,7 +19,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Array of detector results
  */
-@property (nonatomic) NSArray<__kindof PPDetectorResult*>* detectorResults;
+@property (nonatomic) NSArray<__kindof PPDetectorResult *> *detectorResults;
 
 /**
  * Obtains result at index

@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Overlay subview presenting status of OCR detection. OCR results are displayed as green characters over detected locations.
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPOcrResultOverlaySubview : PPOverlaySubview
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPOcrResultOverlaySubview : PPOverlaySubview
 
 @end
 

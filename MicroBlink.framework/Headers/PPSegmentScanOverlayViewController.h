@@ -14,6 +14,7 @@
  *
  * @see PPOcrResultOverlaySubview
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSegmentScanOverlayViewController : PPModernBaseOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSegmentScanOverlayViewController : PPModernBaseOverlayViewController
 
 @end

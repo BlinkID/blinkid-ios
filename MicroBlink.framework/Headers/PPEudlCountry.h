@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, PPEudlCountry) {
     PPEudlCountryUnitedKingdom,
 
     /**
-     * German driver's licenses 
+     * German driver's licenses
      */
     PPEudlCountryGermany,
 
@@ -33,28 +33,3 @@ typedef NS_ENUM(NSUInteger, PPEudlCountry) {
      */
     PPEudlCountryAny,
 };
-
-// Ignore unused method warning
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wall"
-
-/**
- * Gets the string representation of PPEudlCountry enum.
- */
-static NSString* eudlCountryToString(PPEudlCountry country) {
-    switch (country) {
-        case PPEudlCountryUnitedKingdom:
-            return @"United Kingdom";
-            break;
-            
-        case PPEudlCountryGermany:
-            return @"Germany";
-            break;
-            
-        default:
-            return @"";
-            break;
-    }
-}
-
-#pragma clang diagnostic pop

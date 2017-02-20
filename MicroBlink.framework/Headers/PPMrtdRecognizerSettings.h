@@ -11,15 +11,30 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring MRTD Recognizer
+ * Settings class for configuring MRTD Recognizer.
  *
  * MRTD Recognizer recognizer is used for scanning and parsing Machine readable travel documents.
- * Typical MRTDs are passports, visas, ID cards. 
- * They can be recognized by two or three lines of monospace text, which contains all personal information.
+ * Typical MRTDs are passports, visas, ID cards. They can be recognized by two or three lines of monospace text, which contains all personal
+ * information.
  *
  * @see https://en.wikipedia.org/wiki/Machine-readable_passport
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerSettings : PPTemplatingRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPMrtdRecognizerSettings : PPTemplatingRecognizerSettings
+
+/**
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
+ * This image will be sent to scan delegate during recognition process if displaying of full document image
+ * is enabled via dewarpFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
+ */
+@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
+
+/**
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains machine readable zone.
+ * This image will be sent to scan delegate during recognition process if displaying of full document image
+ * is disabled via dewarpFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
+ */
+@property (nonatomic, readonly) NSString *MRZ_IMAGE;
 
 /**
  * If YES, MrtdRecognizer will return MRTD results even if they are not parsed.
@@ -48,16 +63,16 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPMrtdRecognizerSettings : PPTemplatingRe
 @property (nonatomic, assign) BOOL allowUnparsedResults;
 
 /**
- * If YES, and detectMachineReadableZonePosition is YES, MRTD recognizer will determine the position of the whole
- * MRTD document, based on the position of the machine readable zone. 
+ * If YES, MRTD recognizer will determine the position of the whole
+ * MRTD document, based on the position of the machine readable zone.
  *
  * Also, MRTD recognizer will dewarp and crop the image around the MRTD.
  *
  * This is useful if you're at the same time obtaining Dewarped image metadata, since it allows you to obtain dewarped and cropped
- * images of MRTD documents. Dewarped images are returned to scanningViewController:didOutputMetadata: callback, 
+ * images of MRTD documents. Dewarped images are returned to scanningViewController:didOutputMetadata: callback,
  * as PPImageMetadata objects with name @"MRTD"
  *
- * If NO, or if detectMachineReadableZonePosition is NO, this logic is not performed.
+ * If NO, this logic is not performed.
  *
  * Default: NO.
  */

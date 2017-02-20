@@ -14,7 +14,8 @@
  * BarDecoder recognizer is used for scanning Code 39 and Code 128 barcodes and is superior in performance
  * to ZXIngRecognizer
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBarDecoderRecognizerSettings : PPRecognizerSettings
 
 /**
  * Set this to YES to scan Code 39 barcodes
@@ -42,8 +43,8 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerSettings : PPRecogn
 
 /**
  * Use automatic scale detection feature. This normally should not be used.
- * The only situation where this helps in getting better scanning results is 
- * when using kPPUseVideoPresetPhoto on iPad devices. 
+ * The only situation where this helps in getting better scanning results is
+ * when using kPPUseVideoPresetPhoto on iPad devices.
  * Video preview resoution of 2045x1536 in that case is very large and autoscale helps.
  *
  * Default: NO
@@ -51,7 +52,7 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBarDecoderRecognizerSettings : PPRecogn
 @property (nonatomic) BOOL autoDetectScale;
 
 /**
- * Set this to YES to enable scanning of lower resolution barcodes 
+ * Set this to YES to enable scanning of lower resolution barcodes
  * at cost of additional processing time.
  *
  * Default: NO

@@ -11,51 +11,63 @@
 /**
  * Class representing values obtained when scanning front side of iKad
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPiKadRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPiKadRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
  * The name of the iKad owner.
  */
-@property (nonatomic, readonly, nullable) NSString* name;
+@property (nonatomic, readonly, nullable) NSString *name;
 
 /**
  * The passport number of the iKad owner.
  */
-@property (nonatomic, readonly, nullable) NSString* passportNumber;
+@property (nonatomic, readonly, nullable) NSString *passportNumber;
 
 /**
  * The nationality of the iKad owner.
  */
-@property (nonatomic, readonly, nullable) NSString* nationality;
+@property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
- * The date of birth of iKad owner
+ * The date of birth of iKad owner, as written on the iKad (DD/MM/YYYY)
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+
+/**
+ * The date of birth of iKad owner, parsed in NSDate object
+ */
+@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
 
 /**
  * The sex of the iKad owner
  */
-@property (nonatomic, readonly, nullable) NSString* sex;
+@property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
  * The sector of the iKad owner
  */
-@property (nonatomic, readonly, nullable) NSString* sector;
+@property (nonatomic, readonly, nullable) NSString *sector;
 
 /**
  * The employer of the iKad owner
  */
-@property (nonatomic, readonly, nullable) NSString* employer;
+@property (nonatomic, readonly, nullable) NSString *employer;
 
 /**
  * The address of the iKad owner
  */
-@property (nonatomic, readonly, nullable) NSString* address;
+@property (nonatomic, readonly, nullable) NSString *address;
 
 /**
- * The expiry date of the iKad
+ * The expiry date of the iKad, as written on the iKad (DD/MM/YYYY)
  */
-@property (nonatomic, readonly, nullable) NSString* expiryDate;
+@property (nonatomic, readonly, nullable) NSString *rawExpiryDate;
+
+/**
+ * The expiry date of the iKad, parsed in NSDate object
+ */
+@property (nonatomic, readonly, nullable) NSDate *expiryDate;
+
 
 @end

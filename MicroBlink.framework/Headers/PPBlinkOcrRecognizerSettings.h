@@ -23,7 +23,7 @@
 #import "PPPriceOcrParserFactory.h"
 #import "PPLicensePlatesParserFactory.h"
 #import "PPVinOcrParserFactory.h"
-#import "PPMobileCouponsOcrParserFactory.h"
+#import "PPTopUpOcrParserFactory.h"
 
 #import "PPDetectorSettings.h"
 #import "PPDocumentClassifier.h"
@@ -33,7 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class used for OCR or Templating API
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPBlinkOcrRecognizerSettings : PPTemplatingRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBlinkOcrRecognizerSettings : PPTemplatingRecognizerSettings
 
 - (instancetype)init;
 

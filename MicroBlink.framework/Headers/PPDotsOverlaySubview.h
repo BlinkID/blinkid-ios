@@ -17,13 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  The layer is used to draw dots representing barcodes
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPDotsOverlaySubview : PPOverlaySubview
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPDotsOverlaySubview : PPOverlaySubview
 
 /* Animation layer for barcode tracking */
-@property (nonatomic, strong) CAShapeLayer* dotsLayer;
+@property (nonatomic, strong) CAShapeLayer *dotsLayer;
 
 /** Color of the dots */
-@property (nonatomic, strong) UIColor* dotsColor;
+@property (nonatomic, strong) UIColor *dotsColor;
 
 /** Width of the dots */
 @property (nonatomic, assign) CGFloat dotsStrokeWidth;

@@ -1,3 +1,8 @@
+## 2.6.0
+
+- If you're using PPSingaporeIdRecognizer, you should now decide which side of the ID you want to use, and use either PPSingaporeIDBackRecognizer, or PPSingaporeIDFrontRecognizer
+- `PPMobileCouponsOcrParserFactory` changed name to `PPTopUpOcrParserFactory`
+
 ## 2.5.1
 
 - Default `PPIDCardOverlayViewController` implementation changed. Now it no longer uses viewfinder overlay subview, instead it places an UIImageView in the center of the view, which shows the frame inside which the user should place the document. This improves positioning, and in turn - increases the success rate of the scanning
@@ -5,6 +10,7 @@
 - Nullability attributes have been fixed. Basically, properties in the result classes are no longer consider nonnull (this was wrong!). You should always consider an option that the result property is nil, which means it doesn't exist at all on the scanned document.
 
 ## 2.5.0
+
 - `PPMrtdRecognizerResult` now returns `NSDate` in methods `dateOfBirth` and `dateOfExpiry`. Previously `NSString` was returned and user had to parse the string to get the date. If you want old behaviour, use methods `rawDateOfBirth` and `rawDateOfExpiry` which will return strings in same format as in previous versions.
 - this also applies for all recognizer results that inherit `PPMrtdRecognizerResult`
 - although `PPDateOcrParser` now returns `PPDateResult` object (which contains both `NSDate` and original `NSString` from which date was parsed), when obtaining parser result via `parserResultForName:` or `parserResultForName:parserGroup:` methods, you will be provided with string just like in previous versions. If you want `NSDate`, you should use methods `specificParsedResultForName:` or `specificParsedResultForName:parserGroup:` and cast `NSObject` they return into `NSDate`.

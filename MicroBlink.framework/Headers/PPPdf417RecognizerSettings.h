@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Settings class for configuring PDF417 Barcode recognizer
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPPdf417RecognizerSettings : PPRecognizerSettings
 
 /**
  * Set this to YES to scan even barcode not compliant with standards
@@ -35,9 +36,9 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPPdf417RecognizerSettings : PPRecognizer
 @property (nonatomic) BOOL allowNullQuietZone;
 
 /**
- * Set this to YES to allow scanning barcodes with inverted intensities 
+ * Set this to YES to allow scanning barcodes with inverted intensities
  * (i.e. white barcodes on black background)
- * 
+ *
  * NOTE: this options doubles the frame processing time
  *
  * Default: NO

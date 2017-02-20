@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class represents the quadrangle (arbitrary geometric object with 4 different corner points
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadrangle : NSObject
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPQuadrangle : NSObject
 
 /** Upper left point */
 @property (nonatomic, assign) CGPoint upperLeft;
@@ -58,6 +59,12 @@ PP_CLASS_AVAILABLE_IOS(6.0) @interface PPQuadrangle : NSObject
  * Creates new quadrangle from this quadrangle, transformed by specified affine transformation.
  */
 - (instancetype)quadrangleWithTransformation:(CGAffineTransform)transform;
+
+/**
+ * Returns the center point of the Quadrangle
+ * @return center point
+ */
+- (CGPoint)center;
 
 @end
 

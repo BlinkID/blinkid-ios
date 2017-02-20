@@ -11,6 +11,7 @@
 /**
  * Class representing values obtained when scanning back side of Serbian ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSerbianIdBackRecognizerResult : PPMrtdRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSerbianIdBackRecognizerResult : PPMrtdRecognizerResult
 
 @end

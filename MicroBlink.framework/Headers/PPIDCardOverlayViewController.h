@@ -8,17 +8,21 @@
 
 #import "PPModernBaseOverlayViewController.h"
 
+#import "PPIdCardOverlaySubview.h"
+
 /**
  * Default overlay when using ID card recognizers.
- * This overlay contains PPModernOcrResultOverlaySubview and PPModernViewFinderOverlaySubview.
+ * This overlay contains PPModernOcrResultOverlaySubview and PPIdCardOverlaySubview.
  *
  * @see PPModernOcrResultOverlaySubview
- * @see PPModernViewFinderOverlaySubview
+ * @see PPIdCardOverlaySubview
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPIDCardOverlayViewController : PPModernBaseOverlayViewController
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPIDCardOverlayViewController : PPModernBaseOverlayViewController
 
-@property (nonatomic) UIImageView *viewfinderImageView;
-
-@property (nonatomic) UILabel *tooltipLabel;
+/**
+ * Subview which shows the viewfinder - the rectangle area in which the user needs to position the ID document
+ */
+@property (nonatomic) PPIdCardOverlaySubview *idCardSubview;
 
 @end

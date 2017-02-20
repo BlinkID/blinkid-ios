@@ -23,15 +23,15 @@
 
 @optional
 
-/** 
- *Called when the recognition of a current image is initiated 
+/**
+ *Called when the recognition of a current image is initiated
  */
 - (void)coordinatorDidStartDetection:(PPCoordinator *)coordinator;
 
 /**
  * Called when coordinator obtaines metadata
  */
-- (void)coordinator:(PPCoordinator *)coordinator didOutputMetadata:(PPMetadata*)metadata;
+- (void)coordinator:(PPCoordinator *)coordinator didOutputMetadata:(PPMetadata *)metadata;
 
 /**
  * Called when the recognition manager finds the element on the image and returns
@@ -62,17 +62,17 @@
 /**
  * Called when the recognition obtains the result of the ocr process
  */
-- (void)coordinator:(PPCoordinator *)coordinator didObtainOcrResult:(PPOcrLayout*)ocrResult withResultName:(NSString*)resultName;
+- (void)coordinator:(PPCoordinator *)coordinator didObtainOcrResult:(PPOcrLayout *)ocrResult withResultName:(NSString *)resultName;
 
 /**
  * Called when the we have an error in the recognition process and have to quit camera view
  */
-- (void)coordinator:(PPCoordinator *)coordinator didFindError:(NSError*)error;
+- (void)coordinator:(PPCoordinator *)coordinator didFindError:(NSError *)error;
 
 /**
  * Called when the we have an error with the license key
  */
-- (void)coordinator:(PPCoordinator *)coordinator invalidLicenseKeyWithError:(NSError*)error;
+- (void)coordinator:(PPCoordinator *)coordinator invalidLicenseKeyWithError:(NSError *)error;
 
 /**
  * TODO Ugly way of passing UI-related transformation information that should not be here

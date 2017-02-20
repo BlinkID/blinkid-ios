@@ -8,6 +8,7 @@
 
 #import "PPOcrParserFactory.h"
 
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPVinOcrParserFactory : PPOcrParserFactory
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPVinOcrParserFactory : PPOcrParserFactory
 
 @end

@@ -11,36 +11,37 @@
 /**
  * Class representing values obtained when scanning front side side of Slovenian ID
  */
-PP_CLASS_AVAILABLE_IOS(6.0) @interface PPSlovenianIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPSlovenianIdFrontRecognizerResult : PPBlinkOcrRecognizerResult
 
 /**
  * The first name of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* firstName;
+@property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
  * The last name of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* lastName;
+@property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
  * The sex of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* sex;
+@property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
  * The nationality of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* nationality;
+@property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
  * The date of birth of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
 
 /**
  * The date of expiry of the Slovenian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString* dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSString *dateOfExpiry;
 
 @end
