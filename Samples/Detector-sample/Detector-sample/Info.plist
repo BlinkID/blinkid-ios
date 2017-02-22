@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera access is required for scanning</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo library access is required to save photos</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
