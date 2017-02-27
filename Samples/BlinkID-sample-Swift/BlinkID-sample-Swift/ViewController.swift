@@ -98,6 +98,8 @@ class ViewController: UIViewController, PPScanningDelegate {
             settings.scanSettings.add(myKadRecognizerSettings)
         }
 
+        // DISABLE this if you don't need to store images to improve performance!
+        settings.metadataSettings.dewarpedImage = true
 
         /** 4. Initialize the Scanning Coordinator object */
 
@@ -213,6 +215,18 @@ class ViewController: UIViewController, PPScanningDelegate {
 
         alertController.addAction(okAction)
         scanningViewController?.present(alertController, animated: true, completion: nil)
+    }
+
+    func scanningViewController(_ scanningViewController: UIViewController?, didOutputMetadata metadata: PPMetadata) {
+        
+        if (metadata is PPImageMetadata) {
+
+            let result: PPImageMetadata = metadata as! PPImageMetadata
+
+            let image: UIImage = result.image()
+            
+            print("result \(image)")
+        }
     }
 
     // dismiss the scanning view controller when user presses OK.
