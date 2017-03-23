@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18D64AE81E83DE2E009AE8EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AE71E83DE2E009AE8EA /* main.m */; };
+		18D64AEB1E83DE2E009AE8EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AEA1E83DE2E009AE8EA /* AppDelegate.m */; };
+		18D64AEE1E83DE2E009AE8EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AED1E83DE2E009AE8EA /* ViewController.m */; };
+		18D64AF11E83DE2E009AE8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AEF1E83DE2E009AE8EA /* Main.storyboard */; };
+		18D64AF31E83DE2E009AE8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AF21E83DE2E009AE8EA /* Assets.xcassets */; };
+		18D64AF61E83DE2E009AE8EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AF41E83DE2E009AE8EA /* LaunchScreen.storyboard */; };
+		18D64B001E83DEA3009AE8EA /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AFE1E83DEA3009AE8EA /* MicroBlink.bundle */; };
+		18D64B011E83DEA3009AE8EA /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */; };
+		18D64B031E83DEC2009AE8EA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B021E83DEC2009AE8EA /* libc++.tbd */; };
+		18D64B051E83DEC6009AE8EA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B041E83DEC6009AE8EA /* libiconv.tbd */; };
+		18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B061E83DECA009AE8EA /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18D64AE31E83DE2E009AE8EA /* AutodetectID-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutodetectID-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D64AE71E83DE2E009AE8EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18D64AE91E83DE2E009AE8EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18D64AEA1E83DE2E009AE8EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18D64AEC1E83DE2E009AE8EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18D64AED1E83DE2E009AE8EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18D64AF01E83DE2E009AE8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18D64AF21E83DE2E009AE8EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18D64AF51E83DE2E009AE8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18D64AF71E83DE2E009AE8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D64AFE1E83DEA3009AE8EA /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		18D64B021E83DEC2009AE8EA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18D64B041E83DEC6009AE8EA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		18D64B061E83DECA009AE8EA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18D64AE01E83DE2E009AE8EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */,
+				18D64B051E83DEC6009AE8EA /* libiconv.tbd in Frameworks */,
+				18D64B031E83DEC2009AE8EA /* libc++.tbd in Frameworks */,
+				18D64B011E83DEA3009AE8EA /* MicroBlink.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D64ADA1E83DE2E009AE8EA = {
+			isa = PBXGroup;
+			children = (
+				18D64AE51E83DE2E009AE8EA /* AutodetectID-sample */,
+				18D64AE41E83DE2E009AE8EA /* Products */,
+				18D64AFD1E83DE96009AE8EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18D64AE41E83DE2E009AE8EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D64AE31E83DE2E009AE8EA /* AutodetectID-sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18D64AE51E83DE2E009AE8EA /* AutodetectID-sample */ = {
+			isa = PBXGroup;
+			children = (
+				18D64AE91E83DE2E009AE8EA /* AppDelegate.h */,
+				18D64AEA1E83DE2E009AE8EA /* AppDelegate.m */,
+				18D64AEC1E83DE2E009AE8EA /* ViewController.h */,
+				18D64AED1E83DE2E009AE8EA /* ViewController.m */,
+				18D64AEF1E83DE2E009AE8EA /* Main.storyboard */,
+				18D64AF21E83DE2E009AE8EA /* Assets.xcassets */,
+				18D64AF41E83DE2E009AE8EA /* LaunchScreen.storyboard */,
+				18D64AF71E83DE2E009AE8EA /* Info.plist */,
+				18D64AE61E83DE2E009AE8EA /* Supporting Files */,
+			);
+			path = "AutodetectID-sample";
+			sourceTree = "<group>";
+		};
+		18D64AE61E83DE2E009AE8EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18D64AE71E83DE2E009AE8EA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18D64AFD1E83DE96009AE8EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */,
+				18D64AFE1E83DEA3009AE8EA /* MicroBlink.bundle */,
+				18D64B061E83DECA009AE8EA /* Accelerate.framework */,
+				18D64B041E83DEC6009AE8EA /* libiconv.tbd */,
+				18D64B021E83DEC2009AE8EA /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18D64AE21E83DE2E009AE8EA /* AutodetectID-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D64AFA1E83DE2E009AE8EA /* Build configuration list for PBXNativeTarget "AutodetectID-sample" */;
+			buildPhases = (
+				18D64ADF1E83DE2E009AE8EA /* Sources */,
+				18D64AE01E83DE2E009AE8EA /* Frameworks */,
+				18D64AE11E83DE2E009AE8EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AutodetectID-sample";
+			productName = "AutodetectID-sample";
+			productReference = 18D64AE31E83DE2E009AE8EA /* AutodetectID-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18D64ADB1E83DE2E009AE8EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					18D64AE21E83DE2E009AE8EA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18D64ADE1E83DE2E009AE8EA /* Build configuration list for PBXProject "AutodetectID-sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18D64ADA1E83DE2E009AE8EA;
+			productRefGroup = 18D64AE41E83DE2E009AE8EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18D64AE21E83DE2E009AE8EA /* AutodetectID-sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18D64AE11E83DE2E009AE8EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D64AF61E83DE2E009AE8EA /* LaunchScreen.storyboard in Resources */,
+				18D64AF31E83DE2E009AE8EA /* Assets.xcassets in Resources */,
+				18D64AF11E83DE2E009AE8EA /* Main.storyboard in Resources */,
+				18D64B001E83DEA3009AE8EA /* MicroBlink.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18D64ADF1E83DE2E009AE8EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D64AEE1E83DE2E009AE8EA /* ViewController.m in Sources */,
+				18D64AEB1E83DE2E009AE8EA /* AppDelegate.m in Sources */,
+				18D64AE81E83DE2E009AE8EA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18D64AEF1E83DE2E009AE8EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D64AF01E83DE2E009AE8EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18D64AF41E83DE2E009AE8EA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D64AF51E83DE2E009AE8EA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18D64AF81E83DE2E009AE8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18D64AF91E83DE2E009AE8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18D64AFB1E83DE2E009AE8EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				INFOPLIST_FILE = "AutodetectID-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.AutodetectID-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18D64AFC1E83DE2E009AE8EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				INFOPLIST_FILE = "AutodetectID-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.AutodetectID-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18D64ADE1E83DE2E009AE8EA /* Build configuration list for PBXProject "AutodetectID-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D64AF81E83DE2E009AE8EA /* Debug */,
+				18D64AF91E83DE2E009AE8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D64AFA1E83DE2E009AE8EA /* Build configuration list for PBXNativeTarget "AutodetectID-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D64AFB1E83DE2E009AE8EA /* Debug */,
+				18D64AFC1E83DE2E009AE8EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18D64ADB1E83DE2E009AE8EA /* Project object */;
+}
