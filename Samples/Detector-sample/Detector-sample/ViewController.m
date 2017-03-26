@@ -70,14 +70,25 @@
 
     PPDocumentDetectorSettings *documentDetectorSettings = [[PPDocumentDetectorSettings alloc] initWithNumStableDetectionsThreshold:5];
 
-    PPDocumentSpecification *specification = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
+    // ID1 specification
 
-    NSMutableArray<PPDecodingInfo *> *documentDecoding = [NSMutableArray<PPDecodingInfo *> array];
-    [documentDecoding
-        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
-    [specification setDecodingInfo:documentDecoding];
+    PPDocumentSpecification *specificationId1 = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
 
-    [documentDetectorSettings setDocumentSpecifications:@[ specification ]];
+    NSMutableArray<PPDecodingInfo *> *documentDecodingId1 = [NSMutableArray<PPDecodingInfo *> array];
+    [documentDecodingId1
+        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"ID1"]];
+    [specificationId1 setDecodingInfo:documentDecodingId1];
+
+    // ID2 specification
+
+    PPDocumentSpecification *specificationId2 = [PPDocumentSpecification newFromPreset:PPDocumentPresetId2Card];
+
+    NSMutableArray<PPDecodingInfo *> *documentDecodingId2 = [NSMutableArray<PPDecodingInfo *> array];
+    [documentDecodingId2
+        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:800 uniqueId:@"ID2"]];
+    [specificationId2 setDecodingInfo:documentDecodingId2];
+
+    [documentDetectorSettings setDocumentSpecifications:@[ specificationId1, specificationId2 ]];
 
 
     // MRTD detector
