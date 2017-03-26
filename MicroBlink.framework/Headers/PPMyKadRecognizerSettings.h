@@ -26,14 +26,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via showFaceImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString *ID_FACE;
++ (NSString *)ID_FACE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via showFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
++ (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.

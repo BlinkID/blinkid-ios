@@ -25,7 +25,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * This image will be sent to scan delegate during recognition process if displaying of face image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
++ (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
  * Defines if issuing authority of Croatian ID should be extracted

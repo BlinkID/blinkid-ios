@@ -186,13 +186,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (NSAttributedString *_Nonnull)attributedDescription;
 
 /**
- * Convenience method for simple display of result inside UITableView
- *
- *  @return PPResultDataSourceAdapter object
- */
-- (PPResultDataSourceAdapter *_Nonnull)getAdapter;
-
-/**
  * Returns string representation of NSData object for passing over URLs
  *
  *  @param data input NSData object

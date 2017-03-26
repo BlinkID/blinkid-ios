@@ -9,11 +9,16 @@
 #import "PPOcrParserFactory.h"
 
 /**
- *  Parses IBANs (International Bank Account Numbers)
- *  @see https://en.wikipedia.org/wiki/International_Bank_Account_Number
+ * Parses IBANs (International Bank Account Numbers)
+ * @see https://en.wikipedia.org/wiki/International_Bank_Account_Number
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPIbanOcrParserFactory : PPOcrParserFactory
+
+/**
+ * Creates parser instance with default parametars.
+ */
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /**
  * Creating IBAN OCR parser with this initializer enables country code whitelist.

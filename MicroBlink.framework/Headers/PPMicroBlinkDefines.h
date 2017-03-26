@@ -43,4 +43,6 @@
 #define PP_CLASS_AVAILABLE_IOS(_ios) NS_CLASS_AVAILABLE_IOS(_ios)
 #define PP_CLASS_DEPRECATED_IOS(_iosIntro, _iosDep, ...) NS_CLASS_DEPRECATED(NA, NA, _iosIntro, _iosDep, __VA_ARGS__)
 
+#define PP_INIT_UNAVAILABLE - (instancetype)init NS_UNAVAILABLE;
+
 #endif /* PPMicroBlinkDefines_h */

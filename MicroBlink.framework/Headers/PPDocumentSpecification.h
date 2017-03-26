@@ -66,8 +66,11 @@ typedef NS_ENUM(NSUInteger, PPScanningMode) {
 /** Presets which can be used to instantiate document specification for a specific document format */
 typedef NS_ENUM(NSUInteger, PPDocumentPreset) {
 
-    /** Preset for detecting ID cards */
+    /** Preset for detecting ID1 cards */
     PPDocumentPresetId1Card,
+
+    /** Preset for detecting ID2 cards */
+    PPDocumentPresetId2Card,
 
     /** Preset for detecting cheques */
     PPDocumentPresetCheque,

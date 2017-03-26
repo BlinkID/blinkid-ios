@@ -25,7 +25,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return initialized parser factory
  */
-- (instancetype)initWithRegex:(NSString *)regex;
+- (instancetype)initWithRegex:(NSString *)regex NS_DESIGNATED_INITIALIZER;
 
 /**
  * Regex pattern for OCR extraction

@@ -102,6 +102,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)isCameraPaused;
 
+/**
+ * Play scan sound.
+ *
+ * It uses default scan sound, you can change it by setting your own soundFilePath in PPUiSettings.
+ */
+- (void)playScanSuccesSound;
+
 @end
 
 NS_ASSUME_NONNULL_END

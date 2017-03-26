@@ -17,6 +17,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPRawOcrParserFactory : PPOcrParserFactory
 
 /**
+ * Creates parser instance with default parametars.
+ */
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
+
+/**
  * Sets desired options for a parser. Options enable various customizations of a parsers such as: allowed characters, character heigh, etc.
  *
  * Default: [[PPOcrEngineOptions alloc] init]

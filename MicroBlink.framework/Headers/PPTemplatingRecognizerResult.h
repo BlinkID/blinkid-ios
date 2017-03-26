@@ -75,6 +75,16 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (NSObject *_Nullable)specificParsedResultForName:(NSString *_Nonnull)name parserGroup:(NSString *_Nonnull)parserGroup;
 
 /**
+ *  Retrieves raw parsed object from given parser group
+ *
+ *  @param name        name of the parser responsible for parsing the wanted string
+ *  @param parserGroup parser group name
+ *
+ *  @return raw parsed object
+ */
+- (NSString *_Nullable)rawParsedResultForName:(NSString *_Nonnull)name parserGroup:(NSString *_Nonnull)parserGroup;
+
+/**
  * Returns result of document classification, if any.
  * @return result of document classification, if any.
  */
