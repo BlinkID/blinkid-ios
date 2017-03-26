@@ -20,6 +20,12 @@
 
 @property (nonatomic, strong) PPImageMetadata *imageMetadata;
 
+@property (nonatomic) CGFloat bestImageFrameQuality;
+
+@property (nonatomic) NSUInteger numUpdates;
+
+@property (nonatomic) BOOL frameQualityRising;
+
 @end
 
 @implementation ViewController
@@ -102,7 +108,16 @@
     return coordinator;
 }
 
+- (void)resetMetadata {
+    self.imageMetadata = nil;
+    self.bestImageFrameQuality = -INFINITY;
+    self.numUpdates = 0;
+    self.frameQualityRising = YES;
+}
+
 - (IBAction)didTapScan:(id)sender {
+
+    [self resetMetadata];
 
     /** Instantiate the scanning coordinator */
     NSError *error;
@@ -157,7 +172,16 @@
     // Check if metadata obtained is image
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
-        self.imageMetadata = imageMetadata;
+
+        CGFloat currentFrameQuality = imageMetadata.frameQuality;
+
+        if (currentFrameQuality < 0.9 * self.bestImageFrameQuality) {
+            self.frameQualityRising = NO;
+        } else if (currentFrameQuality > self.bestImageFrameQuality) {
+            self.imageMetadata = imageMetadata;
+            self.bestImageFrameQuality = imageMetadata.frameQuality;
+            self.numUpdates++;
+        }
     }
 }
 
@@ -168,11 +192,9 @@
     // Collect data from the result
     for (PPRecognizerResult *result in results) {
 
-        if ([result isKindOfClass:[PPDetectorRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPDetectorRecognizerResult class]] && self.numUpdates > 2 && !self.frameQualityRising) {
             PPDetectorRecognizerResult *detectorRecognizerResult = (PPDetectorRecognizerResult *)result;
-
             [self showDetectorResult:detectorRecognizerResult scanningViewController:scanningViewController];
-
             return;
         }
     };
@@ -213,6 +235,8 @@
             [scannedViewController removeFromParentViewController];
 
             [self.cameraViewController resumeScanningAndResetState:YES];
+
+            [self resetMetadata];
         }];
 }
 
