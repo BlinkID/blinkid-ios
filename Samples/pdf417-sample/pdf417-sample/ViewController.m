@@ -55,8 +55,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"CA37S23J-JWEQTP73-EUL75I7D-MOXMLYSR-INMSBSHX-TFEXOVAI-IRQEAVAJ-W6ZYA7PN";
-    // license key is valid temporarily - until 2017-05-01
+    settings.licenseSettings.licenseKey = @"3OUAORDH-JWEQTP73-EUL75IZD-KKYNCCCE-MBAPJB5V-FGNPPGKJ-O5KARZHJ-FR4YOPHD";
+    // license key is valid temporarily - until 2017-06-24
 
 
     /**
@@ -88,6 +88,16 @@
 
         // Add ZXingRecognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
+    }
+
+    // Remove this code if you don't need Aztec scanning
+    {
+        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
+        // You can obta
+        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yz/G8hFJN10Ys2HB0vrNviw="];
+
+        // Add AztecRecognizerSettings to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
     }
 
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
@@ -209,6 +219,17 @@
             // Save the string representation of the code
             message = [pdf417Result stringUsingGuessedEncoding];
         }
+        if ([result isKindOfClass:[PPAztecRecognizerResult class]]) {
+            /** Aztec barcode was detected */
+
+            PPAztecRecognizerResult *aztecResult = (PPAztecRecognizerResult *)result;
+
+            title = @"Aztec";
+
+            // Save the string representation of the code
+            message = [aztecResult barcodeStringWithGuessedEncoding];
+        }
+
     }
 
     // present the alert view with scanned results
