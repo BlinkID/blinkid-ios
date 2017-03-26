@@ -66,7 +66,7 @@
 
         // To specify we want to detect ID documents with face images, instantiate PPDocumentFaceRecognizerSettings object
         PPDocumentFaceRecognizerSettings *documentFaceRecognizerSettings = [[PPDocumentFaceRecognizerSettings alloc] init];
-        documentFaceRecognizerSettings.showFullDocument = YES;
+        documentFaceRecognizerSettings.returnFullDocument = YES;
 
         // Add Document Face Recognizer setting to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:documentFaceRecognizerSettings];
