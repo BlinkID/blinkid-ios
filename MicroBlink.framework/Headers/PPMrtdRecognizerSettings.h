@@ -27,14 +27,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via dewarpFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString *FULL_DOCUMENT_IMAGE;
++ (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains machine readable zone.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is disabled via dewarpFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-@property (nonatomic, readonly) NSString *MRZ_IMAGE;
++ (NSString *)MRZ_IMAGE;
 
 /**
  * If YES, MrtdRecognizer will return MRTD results even if they are not parsed.

@@ -1,3 +1,28 @@
+## 2.7.0
+
+- Added Romanian ID Front recognizer for scanning Romanian IDs.
+- Added SimCardRecognizer for scanning barcodes on Sim Cards
+- Added AztecRecognizer with state of the art Aztec barcode reading. This can be used for scanning digital boarding passes, train tickets, and many more use cases.
+- Added play success sound method to `PPScanningViewController` protocol
+- Added designated initializers to all `PPOcrParserFactory` objects
+- Added ID2 preset for creating DocumentSpecifications
+- Improved getters for image names which are used to get Images of the ID documents
+    - they are now static methods instead of instance properties
+- Improved `MRTDRecognizer` with better support for Arab MRZ
+- Improved TopUpParser
+    - Added Generic parsing in TopUpOcrParser
+- Updated `CroatianIDFrontSideRecognizer`: returning sex as written on front side of a document
+- Fixed issue with Direct API which disabled processing
+- Fixed issue with blurred camera display when `PPCoordinator` instance was reused between consecutive scanning sessions
+- Fixed crashed which happened when multiple instances of `PPCoordinator` were used simultaneously (one being terminated and one starting recognition). This most commonly happened when after scanning session, a new view controller was pushed to a Navigation View Controller, when the user repeated the procedure a number of times (five or more).
+- Updated sample apps:
+    - Updated Detector-sample to use frame quality so that dewarped images are the sharpest
+    - Updated BlinkID-sample and BlinkID-Swift-sample with easier obtaining of dewarped images
+    - Updated DirectAPI-sample with support for OCR in all device orientations
+    - Updated pdf417-sample with support for Aztec scanning
+    - Added AutodetectID-sample which uses DocumentFace recognizer
+- Internal switch to new build system using cmake. This allows faster deployments and easier updates in the future. 
+
 ## 2.6.0
 
 - Added CroIDCombined recognizer which can scan both sides consecutively

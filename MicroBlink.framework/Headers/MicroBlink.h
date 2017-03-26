@@ -11,20 +11,31 @@
 
 // Common API
 #import "PPViewControllerFactory.h"
+#import "PPApp.h"
 
-// Include Overlay view controller headers
+/*  UI  */
+// Overlays
 #import "PPModernBaseOverlayViewController.h"
+#import "PPBarcodeOverlayViewController.h"
+#import "PPBaseBarcodeOverlayViewController.h"
+#import "PPFieldOfViewOverlayViewController.h"
+#import "PPIDCardOverlayViewController.h"
+#import "PPModernOverlayViewController.h"
+#import "PPOcrLineOverlayViewController.h"
 #import "PPSegmentScanOverlayViewController.h"
 #import "PPTemplatingOverlayViewController.h"
-#import "PPBarcodeOverlayViewController.h"
-#import "PPIDCardOverlayViewController.h"
 
-// Include Overlay subview headers
+// Overlay subviews
 #import "PPModernOcrResultOverlaySubview.h"
-#import "PPOcrResultOverlaySubview.h"
 #import "PPModernViewfinderOverlaySubview.h"
+#import "PPOcrResultOverlaySubview.h"
+#import "PPBlurredFieldOfViewOverlaySubview.h"
 #import "PPDotsOverlaySubview.h"
-#import "PPOverlaySubview.h"
+#import "PPFieldOfViewOverlaySubview.h"
+#import "PPModernToastOverlaySubview.h"
+#import "PPOcrLineOverlaySubview.h"
+#import "PPToastOverlaySubview.h"
+#import "PPViewfinderOverlaySubview.h"
 
 // Recognizers
 #import "PPBlinkIDRecognizers.h"

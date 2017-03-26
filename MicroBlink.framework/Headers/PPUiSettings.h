@@ -66,7 +66,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Full path to the sound file which is played when the valid result is scanned.
  *
- * Default: `[[NSBundle mainBundle] pathForResource:@"PPbeep" ofType:@"wav"];`
+ * Default: `[bundle pathForResource:@"PPbeep" ofType:@"wav"];`, where bundle is NSBundle instance passed to the initializer
  */
 @property (nonatomic, strong, nullable) NSString *soundFilePath;
 
@@ -107,12 +107,22 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) PPHelpDisplayMode helpDisplayMode;
 
+
 /**
- * Designated initializer. Initializes the object with default settings (see above for defaults)
+ * Initializes the object with default settings (see above for defaults).
  *
  *  @return object initialized with default values.
  */
 - (instancetype)init;
+
+/**
+ * Designated initializer. Initializes the object with default settings (see above for defaults).
+ *
+ * Also receives bundle where UI specific resources can be found for default values (such as sound file).
+ *
+ *  @return object initialized with default values.
+ */
+- (instancetype)initWithResourceBundle:(NSBundle *)bundle NS_DESIGNATED_INITIALIZER;
 
 @end
 

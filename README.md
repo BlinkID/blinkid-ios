@@ -49,7 +49,7 @@ pod try PPBlinkID
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'PPBlinkID', '~> 2.6.0'
+  pod 'PPBlinkID', '~> 2.7.0'
 end
 ```
 

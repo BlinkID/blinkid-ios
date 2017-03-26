@@ -25,4 +25,8 @@
 #import "PPBarDecoderRecognizerSettings.h"
 #import "PPBarDecoderRecognizerResult.h"
 
+// SimNumber
+#import "PPSimNumberRecognizerSettings.h"
+#import "PPSimNumberRecognizerResult.h"
+
 #endif /* PPBlinkBarcodeRecognizers_h */

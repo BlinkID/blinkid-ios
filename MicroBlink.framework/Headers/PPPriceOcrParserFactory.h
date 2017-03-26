@@ -14,6 +14,11 @@
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPPriceOcrParserFactory : PPOcrParserFactory
 
+/**
+ * Creates parser instance with default parametars.
+ */
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
+
 @property (nonatomic) BOOL arabicIndicModeEnabled;
 
 @property (nonatomic) BOOL allowMissingDecimals;

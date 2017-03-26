@@ -21,6 +21,9 @@ typedef NS_ENUM(NSUInteger, PPTopUpPrefix) {
 
     /** tele2 */
     PPTopUpPrefix131,
+
+    /** any prefix */
+    PPTopUpPrefixGeneric,
 };
 
 /**
@@ -28,6 +31,11 @@ typedef NS_ENUM(NSUInteger, PPTopUpPrefix) {
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPTopUpOcrParserFactory : PPOcrParserFactory
+
+/**
+ * Set to YES if you want to allow
+ */
+@property (nonatomic) BOOL allowNoPrefix;
 
 /**
  * Initializes parser with desired top up prefix.

@@ -9,9 +9,6 @@
 #ifndef PPBlinkInputRecognizers_h
 #define PPBlinkInputRecognizers_h
 
-
-#import "PPBlinkBarcodeRecognizers.h"
-
 /** OCR */
 #import "PPBlinkOcrRecognizerSettings.h"
 #import "PPBlinkOcrRecognizerResult.h"
@@ -19,5 +16,8 @@
 /** Detector */
 #import "PPDetectorRecognizerSettings.h"
 #import "PPDetectorRecognizerResult.h"
+
+// Use all recognizers from BlinkBarcode
+#import "PPBlinkBarcodeRecognizers.h"
 
 #endif /* PPBlinkInputRecognizers_h */

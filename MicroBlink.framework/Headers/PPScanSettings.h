@@ -76,7 +76,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Timeout interval in which the partial scanning results in PhotoPay will be returned to the user.
  * If <= 0.0, no timeout event will be reported.
  *
- * Default: 7.0 seconds
+ * Default: 12 seconds in BlinkID and PhotoPay, 7.0 for PDF417, 0 for others.
  */
 @property (nonatomic) NSTimeInterval partialRecognitionTimeout;
 

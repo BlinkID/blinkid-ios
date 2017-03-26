@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PPOverlayViewController.h"
 #import "PPOverlaySubview.h"
+#import "PPGeometry.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

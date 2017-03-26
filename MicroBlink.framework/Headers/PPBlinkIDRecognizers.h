@@ -55,6 +55,10 @@
 #import "PPMrtdRecognizerSettings.h"
 #import "PPMrtdRecognizerResult.h"
 
+// Romania
+#import "PPRomanianIdFrontRecognizerSettings.h"
+#import "PPRomanianIdFrontRecognizerResult.h"
+
 // Serbia
 #import "PPSerbianIdBackRecognizerSettings.h"
 #import "PPSerbianIdBackRecognizerResult.h"
@@ -79,8 +83,9 @@
 #import "PPSlovenianIdFrontRecognizerSettings.h"
 #import "PPSlovenianIdFrontRecognizerResult.h"
 
-// Use all recognizers from BlinkBarcode
-#import "PPBlinkBarcodeRecognizers.h"
+// Aztec barcodes
+#import "PPAztecRecognizerSettings.h"
+#import "PPAztecRecognizerResult.h"
 
 // Use all recognizers from BlinkInput
 #import "PPBlinkInputRecognizers.h"

@@ -41,7 +41,7 @@
     PPSettings *settings = [[PPSettings alloc] init];
 
     // tell which metadata you want to receive. Metadata collection takes CPU time - so use it only if necessary!
-    // settings.metadataSettings.dewarpedImage = YES; // get dewarped image of ID documents
+     settings.metadataSettings.dewarpedImage = YES; // get dewarped image of ID documents
 
 
     /** 2. Setup the license key */
@@ -60,6 +60,7 @@
 
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
         PPMrtdRecognizerSettings *mrtdRecognizerSettings = [[PPMrtdRecognizerSettings alloc] init];
+        mrtdRecognizerSettings.dewarpFullDocument = NO;
 
         /** You can modify the properties of mrtdRecognizerSettings to suit your use-case */
 
@@ -204,7 +205,8 @@
     };
 
     // present the alert view with scanned results
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView =
+        [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 
@@ -221,20 +223,18 @@
 
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
 
-        if ([imageMetadata.name isEqualToString:@"EUDL"]) {
-            UIImage *eudlImage = [imageMetadata image];
-            NSLog(@"We have dewarped and trimmed image of the EUDL, with size (%@, %@)", @(eudlImage.size.width), @(eudlImage.size.height));
-        } else if ([imageMetadata.name isEqualToString:@"MRTD"]) {
-            UIImage *mrtdImage = [imageMetadata image];
-            NSLog(@"We have dewarped and trimmed image of the Machine readable travel document, with size (%@, %@)",
-                  @(mrtdImage.size.width), @(mrtdImage.size.height));
-        } else if ([imageMetadata.name isEqualToString:@"MyKad"]) {
-            UIImage *myKadImage = [imageMetadata image];
-            NSLog(@"We have dewarped and trimmed image of the MyKad, with size (%@, %@)", @(myKadImage.size.width),
-                  @(myKadImage.size.height));
-        } else {
-            UIImage *image = [imageMetadata image];
-            NSLog(@"We have image %@ with size (%@, %@)", metadata.name, @(image.size.width), @(image.size.height));
+        UIImage *image = [imageMetadata image];
+        NSLog(@"We have image %@ with size %@", metadata.name, NSStringFromCGSize(image.size));
+
+        if ([imageMetadata.name isEqualToString:[PPEudlRecognizerSettings FULL_DOCUMENT_IMAGE]]) {
+            NSLog(@"This image is EUDL full document");
+        } else if ([imageMetadata.name isEqualToString:[PPMrtdRecognizerSettings FULL_DOCUMENT_IMAGE]]) {
+            NSLog(@"This image is full Machine readable travel document");
+        } else if ([imageMetadata.name isEqualToString:[PPMrtdRecognizerSettings MRZ_IMAGE]]) {
+            NSLog(@"This image is image of the MRZ zone");
+            NSLog(@"This image becomes available if mrtdRecognizerSettings.dewarpFullDocument == NO");
+        } else if ([imageMetadata.name isEqualToString:[PPMyKadRecognizerSettings FULL_DOCUMENT_IMAGE]]) {
+            NSLog(@"This image is full MyKad");
         }
     }
 }

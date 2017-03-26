@@ -20,6 +20,12 @@
 
 @property (nonatomic, strong) PPImageMetadata *imageMetadata;
 
+@property (nonatomic) CGFloat bestImageFrameQuality;
+
+@property (nonatomic) NSUInteger numUpdates;
+
+@property (nonatomic) BOOL frameQualityRising;
+
 @end
 
 @implementation ViewController
@@ -64,14 +70,25 @@
 
     PPDocumentDetectorSettings *documentDetectorSettings = [[PPDocumentDetectorSettings alloc] initWithNumStableDetectionsThreshold:5];
 
-    PPDocumentSpecification *specification = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
+    // ID1 specification
 
-    NSMutableArray<PPDecodingInfo *> *documentDecoding = [NSMutableArray<PPDecodingInfo *> array];
-    [documentDecoding
-        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"IDCard1"]];
-    [specification setDecodingInfo:documentDecoding];
+    PPDocumentSpecification *specificationId1 = [PPDocumentSpecification newFromPreset:PPDocumentPresetId1Card];
 
-    [documentDetectorSettings setDocumentSpecifications:@[ specification ]];
+    NSMutableArray<PPDecodingInfo *> *documentDecodingId1 = [NSMutableArray<PPDecodingInfo *> array];
+    [documentDecodingId1
+        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:700 uniqueId:@"ID1"]];
+    [specificationId1 setDecodingInfo:documentDecodingId1];
+
+    // ID2 specification
+
+    PPDocumentSpecification *specificationId2 = [PPDocumentSpecification newFromPreset:PPDocumentPresetId2Card];
+
+    NSMutableArray<PPDecodingInfo *> *documentDecodingId2 = [NSMutableArray<PPDecodingInfo *> array];
+    [documentDecodingId2
+        addObject:[[PPDecodingInfo alloc] initWithLocation:CGRectMake(0.0, 0.0, 1.0, 1.0) dewarpedHeight:800 uniqueId:@"ID2"]];
+    [specificationId2 setDecodingInfo:documentDecodingId2];
+
+    [documentDetectorSettings setDocumentSpecifications:@[ specificationId1, specificationId2 ]];
 
 
     // MRTD detector
@@ -102,7 +119,16 @@
     return coordinator;
 }
 
+- (void)resetMetadata {
+    self.imageMetadata = nil;
+    self.bestImageFrameQuality = -INFINITY;
+    self.numUpdates = 0;
+    self.frameQualityRising = YES;
+}
+
 - (IBAction)didTapScan:(id)sender {
+
+    [self resetMetadata];
 
     /** Instantiate the scanning coordinator */
     NSError *error;
@@ -157,7 +183,16 @@
     // Check if metadata obtained is image
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
-        self.imageMetadata = imageMetadata;
+
+        CGFloat currentFrameQuality = imageMetadata.frameQuality;
+
+        if (currentFrameQuality < 0.9 * self.bestImageFrameQuality) {
+            self.frameQualityRising = NO;
+        } else if (currentFrameQuality > self.bestImageFrameQuality) {
+            self.imageMetadata = imageMetadata;
+            self.bestImageFrameQuality = imageMetadata.frameQuality;
+            self.numUpdates++;
+        }
     }
 }
 
@@ -168,11 +203,9 @@
     // Collect data from the result
     for (PPRecognizerResult *result in results) {
 
-        if ([result isKindOfClass:[PPDetectorRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPDetectorRecognizerResult class]] && self.numUpdates > 2 && !self.frameQualityRising) {
             PPDetectorRecognizerResult *detectorRecognizerResult = (PPDetectorRecognizerResult *)result;
-
             [self showDetectorResult:detectorRecognizerResult scanningViewController:scanningViewController];
-
             return;
         }
     };
@@ -213,6 +246,8 @@
             [scannedViewController removeFromParentViewController];
 
             [self.cameraViewController resumeScanningAndResetState:YES];
+
+            [self resetMetadata];
         }];
 }
 
