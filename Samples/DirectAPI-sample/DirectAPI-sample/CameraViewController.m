@@ -144,7 +144,30 @@ static NSString *rawOcrParserId = @"Raw ocr";
     didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
            fromConnection:(AVCaptureConnection *)connection {
 
-    [self.coordinator processImage:[PPImage imageWithCmSampleBuffer:sampleBuffer]];
+    PPImage *image = [PPImage imageWithCmSampleBuffer:sampleBuffer];
+
+    // Default image orientation from camera is Landscape Right, so default PPimage orintation UP is not OK
+    // We need to change it to the orientation of the view controller to compensate
+    switch ([UIApplication sharedApplication].statusBarOrientation) {
+        case UIInterfaceOrientationUnknown:
+            image.orientation = PPProcessingOrientationUp;
+            // special case - we assyme up orientation here, although we cannot guaratee
+            break;
+        case UIInterfaceOrientationPortrait:
+            image.orientation = PPProcessingOrientationLeft;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            image.orientation = PPProcessingOrientationRight;
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            image.orientation = PPProcessingOrientationDown;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            image.orientation = PPProcessingOrientationUp;
+            break;
+    }
+
+    [self.coordinator processImage:image];
 }
 
 - (void)createCoordinator {
