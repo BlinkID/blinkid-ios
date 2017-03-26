@@ -224,8 +224,18 @@ class ViewController: UIViewController, PPScanningDelegate {
             let result: PPImageMetadata = metadata as! PPImageMetadata
 
             let image: UIImage = result.image()
-            
+
             print("result \(image)")
+
+            if (result.name == PPEudlRecognizerSettings.full_DOCUMENT_IMAGE()) {
+                print("This image is EUDL full document");
+            } else if (result.name == PPMrtdRecognizerSettings.full_DOCUMENT_IMAGE()) {
+                print("This image is full Machine readable travel document");
+            } else if (result.name == PPMrtdRecognizerSettings.mrz_IMAGE()) {
+                print("This image is Machine readable zone");
+            } else if (result.name == PPMyKadRecognizerSettings.full_DOCUMENT_IMAGE()) {
+                print("This image is full MyKad");
+            }
         }
     }
 
