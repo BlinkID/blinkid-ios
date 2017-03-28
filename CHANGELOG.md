@@ -1,3 +1,9 @@
+## 2.7.1
+
+- Fixed wrong Assertion which didn't allow usage of custom Resources bundle. 
+- Fixed internal bug which caused crashes if `PPCoordinator applySettings` was called with the same Recognizer settings (this is a very rare use case)
+- Added working license key in pdf417-sample for Aztec scanning
+
 ## 2.7.0
 
 - Added Romanian ID Front recognizer for scanning Romanian IDs.

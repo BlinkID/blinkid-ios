@@ -17,6 +17,12 @@ BlinkID SDK is a delightful component for quick and easy scanning of ID cards, p
 
 BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning and many others. 
 
+<p align="center" >
+  <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
+    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
+  </a>
+</p>
+
 ## How to get started
 
 - [Download BlinkID SDK](https://github.com/BlinkID/blinkid-ios/releases) and try out the included iOS sample apps (Download .zip or .tar.gz file starting with BlinkID. DO NOT download Source Code as GitHub does not fully support Git Large File Storage)
@@ -49,7 +55,7 @@ pod try PPBlinkID
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'PPBlinkID', '~> 2.7.0'
+  pod 'PPBlinkID', '~> 2.7.1'
 end
 ```
 
