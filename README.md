@@ -17,8 +17,6 @@ BlinkID SDK is a delightful component for quick and easy scanning of ID cards, p
 
 BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning and many others. 
 
-#### BlinkID in Action:
-
 <p align="center" >
   <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
