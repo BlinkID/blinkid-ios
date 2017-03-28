@@ -66,7 +66,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Full path to the sound file which is played when the valid result is scanned.
  *
- * Default: `[bundle pathForResource:@"PPbeep" ofType:@"wav"];`, where bundle is NSBundle instance passed to the initializer
+ * Default: `[bundle pathForResource:@"PPbeep" ofType:@"wav"];`, where bundle is either Microblink.bundle, or bundle used by PPSettings
  */
 @property (nonatomic, strong, nullable) NSString *soundFilePath;
 
@@ -118,11 +118,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Designated initializer. Initializes the object with default settings (see above for defaults).
  *
- * Also receives bundle where UI specific resources can be found for default values (such as sound file).
+ * Also receives a path to the sound file used when scanning finishes successfully
  *
  *  @return object initialized with default values.
  */
-- (instancetype)initWithResourceBundle:(NSBundle *)bundle NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSoundFilePath:(nullable NSString *)soundFilePath NS_DESIGNATED_INITIALIZER;
 
 @end
 
