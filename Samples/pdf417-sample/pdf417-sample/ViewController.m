@@ -94,7 +94,7 @@
     {
         // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
         // You can obta
-        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yz/G8hFJN10Ys2HB0vrNviw="];
+        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
 
         // Add AztecRecognizerSettings to a list of used recognizer settings
         [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
