@@ -10,40 +10,30 @@
 
 @interface CustomOverlayViewController ()
 
+@property (nonatomic, strong) PPModernViewfinderOverlaySubview *viewfinderSubview;
+
 @end
 
 @implementation CustomOverlayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    self.viewfinderSubview = [[PPModernViewfinderOverlaySubview alloc] init];
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    PPOverlaySubview *subview = [[PPModernViewfinderOverlaySubview  alloc] init];
-    [self registerOverlaySubview:subview];
-    [self.view addSubview:subview];
+    [self registerOverlaySubview:self.viewfinderSubview];
+    [self.view addSubview:self.viewfinderSubview];
 
-
-    PPOverlaySubview *ocrSubview = [[PPOcrResultOverlaySubview alloc] initWithFrame:self.view.frame];
+    PPOcrResultOverlaySubview *ocrSubview = [[PPOcrResultOverlaySubview alloc] initWithFrame:self.view.bounds];
     [self registerOverlaySubview:ocrSubview];
-    
+
     [self.view addSubview:ocrSubview];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    self.viewfinderSubview.frame = self.view.bounds;
 }
-*/
 
 @end
