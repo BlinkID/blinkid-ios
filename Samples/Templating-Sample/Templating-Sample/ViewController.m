@@ -72,7 +72,7 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
      * Remove undesired recognizers (added below) for optimal performance.
      */
-    
+
     [settings.scanSettings addRecognizerSettings:ocrSettings];
 
 
@@ -117,14 +117,14 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
 }
 
 - (IBAction)didTapScanStarbucks:(id)sender {
-    
+
     /** Instantiate the scanning coordinator */
     NSError *error;
     if (!ocrSetttings || [ocrSetttings isKindOfClass:[CroIdRecognizerSettings class]]) {
         ocrSetttings = [[StarbucksCardRecognizerSettings alloc] init];
     }
-    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error withOcrSettings:ocrSetttings];
-    
+    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error withOcrSettings:self.ocrSetttings];
+
     /** If scanning isn't supported, present an error */
     if (coordinator == nil) {
         NSString *messageString = [error localizedDescription];
@@ -133,21 +133,21 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
                                    delegate:nil
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil, nil] show];
-        
+
         return;
     }
-    
+
     /** Create new scanning view controller */
-    
+
     PPModernBaseOverlayViewController *overlay = [[CustomOverlayViewController alloc] init];
-    
+
     UIViewController<PPScanningViewController> *scanningViewController =
-    [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlay coordinator:coordinator error:nil];
-    
+        [PPViewControllerFactory cameraViewControllerWithDelegate:self overlayViewController:overlay coordinator:coordinator error:nil];
+
     // allow rotation if VC is displayed as a modal view controller
     scanningViewController.autorotate = YES;
     scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAll;
-    
+
     /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
     [self presentViewController:scanningViewController animated:YES completion:nil];
 }

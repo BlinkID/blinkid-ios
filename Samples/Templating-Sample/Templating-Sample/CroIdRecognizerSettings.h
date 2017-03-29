@@ -9,5 +9,7 @@
 #import <MicroBlink/MicroBlink.h>
 
 @interface CroIdRecognizerSettings : PPBlinkOcrRecognizerSettings
+
 - (NSString *)extractMessageFromResult:(PPBlinkOcrRecognizerResult *)result;
+
 @end

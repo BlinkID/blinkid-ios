@@ -11,4 +11,5 @@
 @interface StarbucksCardRecognizerSettings : PPBlinkOcrRecognizerSettings
 
 - (NSString *)extractMessageFromResult:(PPBlinkOcrRecognizerResult *)result;
+
 @end
