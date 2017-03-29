@@ -15,10 +15,12 @@
 
 @interface ViewController () <PPScanningDelegate>
 
+@property (nonatomic, strong) PPBlinkOcrRecognizerSettings *ocrSetttings;
+
 @end
 
 @implementation ViewController
-PPBlinkOcrRecognizerSettings *ocrSetttings;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -87,10 +89,10 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
 
     /** Instantiate the scanning coordinator */
     NSError *error;
-    if (!ocrSetttings || [ocrSetttings isKindOfClass:[StarbucksCardRecognizerSettings class]]) {
-        ocrSetttings = [[CroIdRecognizerSettings alloc] init];
+    if (!self.ocrSetttings || [self.ocrSetttings isKindOfClass:[StarbucksCardRecognizerSettings class]]) {
+        self.ocrSetttings = [[CroIdRecognizerSettings alloc] init];
     }
-    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error withOcrSettings:ocrSetttings];
+    PPCameraCoordinator *coordinator = [self coordinatorWithError:&error withOcrSettings:self.ocrSetttings];
 
     /** If scanning isn't supported, present an error */
     if (coordinator == nil) {
@@ -120,8 +122,8 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
 
     /** Instantiate the scanning coordinator */
     NSError *error;
-    if (!ocrSetttings || [ocrSetttings isKindOfClass:[CroIdRecognizerSettings class]]) {
-        ocrSetttings = [[StarbucksCardRecognizerSettings alloc] init];
+    if (!self.ocrSetttings || [self.ocrSetttings isKindOfClass:[CroIdRecognizerSettings class]]) {
+        self.ocrSetttings = [[StarbucksCardRecognizerSettings alloc] init];
     }
     PPCameraCoordinator *coordinator = [self coordinatorWithError:&error withOcrSettings:self.ocrSetttings];
 
@@ -187,13 +189,13 @@ PPBlinkOcrRecognizerSettings *ocrSetttings;
     for (PPRecognizerResult *result in results) {
 
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
-            if ([ocrSetttings isKindOfClass:[CroIdRecognizerSettings class]]) {
+            if ([self.ocrSetttings isKindOfClass:[CroIdRecognizerSettings class]]) {
                 /** MRTD was detected */
                 PPBlinkOcrRecognizerResult *ocrResult = (PPBlinkOcrRecognizerResult *)result;
-                message = [(CroIdRecognizerSettings *)ocrSetttings extractMessageFromResult:ocrResult];
-            } else if ([ocrSetttings isKindOfClass:[StarbucksCardRecognizerSettings class]]) {
+                message = [(CroIdRecognizerSettings *)self.ocrSetttings extractMessageFromResult:ocrResult];
+            } else if ([self.ocrSetttings isKindOfClass:[StarbucksCardRecognizerSettings class]]) {
                 PPBlinkOcrRecognizerResult *ocrResult = (PPBlinkOcrRecognizerResult *)result;
-                message = [(StarbucksCardRecognizerSettings *)ocrSetttings extractMessageFromResult:ocrResult];
+                message = [(StarbucksCardRecognizerSettings *)self.ocrSetttings extractMessageFromResult:ocrResult];
             }
         }
     };
