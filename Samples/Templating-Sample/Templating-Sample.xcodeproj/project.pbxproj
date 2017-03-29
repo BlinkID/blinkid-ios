@@ -22,6 +22,9 @@
 		3153E6981D097A5900797C93 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3153E6961D097A5900797C93 /* MicroBlink.bundle */; };
 		3153E6991D097A5900797C93 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6971D097A5900797C93 /* MicroBlink.framework */; };
 		31F4D2DD1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */; };
+		CDD4DECD1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */; };
+		CDD4DED01E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DECF1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m */; };
+		CDD4DED51E8BCE8A00B9BD38 /* CustomOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,10 @@
 		3153E6961D097A5900797C93 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		3153E6971D097A5900797C93 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Croatian_ID_Images.xcassets; sourceTree = "<group>"; };
+		CDD4DECB1E8BAF2200B9BD38 /* CroIdRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroIdRecognizerSettings.h; sourceTree = "<group>"; };
+		CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroIdRecognizerSettings.m; sourceTree = "<group>"; };
+		CDD4DED31E8BCE8A00B9BD38 /* CustomOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
+		CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +95,16 @@
 				3153E6761D08758900797C93 /* AppDelegate.m */,
 				3153E6781D08758900797C93 /* ViewController.h */,
 				3153E6791D08758900797C93 /* ViewController.m */,
+				CDD4DED31E8BCE8A00B9BD38 /* CustomOverlayViewController.h */,
+				CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */,
 				3153E67B1D08758900797C93 /* Main.storyboard */,
 				3153E67E1D08758900797C93 /* Assets.xcassets */,
 				3153E6801D08758900797C93 /* LaunchScreen.storyboard */,
 				3153E6831D08758900797C93 /* Info.plist */,
 				3153E6721D08758900797C93 /* Supporting Files */,
 				31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */,
+				CDD4DECB1E8BAF2200B9BD38 /* CroIdRecognizerSettings.h */,
+				CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */,
 			);
 			path = "Templating-Sample";
 			sourceTree = "<group>";
@@ -196,6 +207,8 @@
 			files = (
 				3153E67A1D08758900797C93 /* ViewController.m in Sources */,
 				3153E6771D08758900797C93 /* AppDelegate.m in Sources */,
+				CDD4DED51E8BCE8A00B9BD38 /* CustomOverlayViewController.m in Sources */,
+				CDD4DECD1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m in Sources */,
 				3153E6741D08758900797C93 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
