@@ -49,6 +49,8 @@
 		31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Croatian_ID_Images.xcassets; sourceTree = "<group>"; };
 		CDD4DECB1E8BAF2200B9BD38 /* CroIdRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroIdRecognizerSettings.h; sourceTree = "<group>"; };
 		CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroIdRecognizerSettings.m; sourceTree = "<group>"; };
+		CDD4DECE1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarbucksCardRecognizerSettings.h; sourceTree = "<group>"; };
+		CDD4DECF1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarbucksCardRecognizerSettings.m; sourceTree = "<group>"; };
 		CDD4DED31E8BCE8A00B9BD38 /* CustomOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
 		CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,8 @@
 				31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */,
 				CDD4DECB1E8BAF2200B9BD38 /* CroIdRecognizerSettings.h */,
 				CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */,
+				CDD4DECE1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.h */,
+				CDD4DECF1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m */,
 			);
 			path = "Templating-Sample";
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 				3153E67A1D08758900797C93 /* ViewController.m in Sources */,
 				3153E6771D08758900797C93 /* AppDelegate.m in Sources */,
 				CDD4DED51E8BCE8A00B9BD38 /* CustomOverlayViewController.m in Sources */,
+				CDD4DED01E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m in Sources */,
 				CDD4DECD1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m in Sources */,
 				3153E6741D08758900797C93 /* main.m in Sources */,
 			);

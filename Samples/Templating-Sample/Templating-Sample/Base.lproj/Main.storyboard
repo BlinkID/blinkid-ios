@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,18 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-gK-g0z">
-                                <rect key="frame" x="116.5" y="316" width="142" height="35"/>
+                                <rect key="frame" x="116" y="286" width="142" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Scan Croatian ID"/>
                                 <connections>
                                     <action selector="didTapScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vb3-2q-GTS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rky-Rh-8UW">
+                                <rect key="frame" x="99" y="381" width="176" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Scan Starbucks card"/>
+                                <connections>
+                                    <action selector="didTapScanStarbucks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFU-rx-V5O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="77Y-gK-g0z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Wr-9u-ItU"/>
-                            <constraint firstItem="77Y-gK-g0z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e52-9x-Fco"/>
+                            <constraint firstItem="77Y-gK-g0z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="3ou-th-JZ2"/>
+                            <constraint firstItem="Rky-Rh-8UW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Fb-8X-RkT"/>
+                            <constraint firstItem="Rky-Rh-8UW" firstAttribute="top" secondItem="77Y-gK-g0z" secondAttribute="bottom" constant="60" id="BgN-6f-uKb"/>
                         </constraints>
                     </view>
                 </viewController>
