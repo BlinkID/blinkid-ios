@@ -31,7 +31,7 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 
 @implementation StarbucksCardRecognizerSettings
 
-- (NSMutableSet *)uppercaseCharsWhitelist {
+- (NSMutableSet *)numberWhitelist {
 
     // initialize new char whitelist
     NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
@@ -100,9 +100,9 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 
     int dewarpedHeight = 100;
     
-    CGRect firstLocation = CGRectMake(0.2328f, 0.1253f, 0.5953f, 0.0927f);
+    CGRect firstLocation = CGRectMake(0.3406f, 0.1303f, 0.5125f, 0.0977f);//0.2062f, 0.1278f, 0.6625f, 0.0927f);
     CGRect secondLocation = CGRectMake(0.2088f, 0.1688f, 0.5500f, 0.0866f);
-    CGRect thirdLocation = CGRectMake(0.2225f, 0.6554f, 0.4812f, 0.0871f);
+    CGRect thirdLocation = CGRectMake(0.2000f, 0.6700f, 0.5000f, 0.0700f);
 
     [decodingInfoArrayDictionary[FIRST_TYPE]
         addObject:[[PPDecodingInfo alloc] initWithLocation:firstLocation dewarpedHeight:dewarpedHeight uniqueId:CARD_NUMBER_FIRST_TYPE]];
@@ -111,16 +111,13 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     [decodingInfoArrayDictionary[THIRD_TYPE]
      addObject:[[PPDecodingInfo alloc] initWithLocation:thirdLocation dewarpedHeight:dewarpedHeight uniqueId:CARD_NUMBER_THIRD_TYPE]];
 
-    PPRegexOcrParserFactory *documentNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"(\\d{4} ?){4}"];
+    PPRegexOcrParserFactory *documentNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"(\\d{4} ){3}(\\d{4})"];
 
-    NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
-    // Add chars '0'-'9'
-    for (int c = '0'; c <= '9'; c++) {
-        [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
-    }
     PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
-    options.charWhitelist = charWhitelist;
-    options.minimalLineHeight = 30;
+    options.charWhitelist = [self numberWhitelist];
+    options.minimalLineHeight = 40;
+    options.maximalLineHeight = 100;
+    options.maxCharsExpected = 150;
     [documentNumberParser setOptions:options];
 
    
@@ -132,11 +129,11 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 
 - (void)setSecurityNumberWithClassificationDecodingInfoArray:(NSMutableArray<PPDecodingInfo *> *)classificationDecodingInfoArray {
 
-    int dewarpedHeight = 100;
+    int dewarpedHeight = 200;
 
-    CGRect firstLocation = CGRectMake(0.4953f, 0.2180f, 0.2266f, 0.0677f);
+    CGRect firstLocation = CGRectMake(0.4750f, 0.2180f, 0.2266f, 0.0800f);
     CGRect secondLocation = CGRectMake(0.7198f, 0.1602f, 0.2253f, 0.1082f);
-    CGRect thirdLocation = CGRectMake(0.7238f, 0.6436f, 0.2338f, 0.0851f);
+    CGRect thirdLocation = CGRectMake(0.6950f, 0.6416f, 0.2625f, 0.0980f);
 
     [classificationDecodingInfoArray addObject:[[PPDecodingInfo alloc] initWithLocation:firstLocation
                                                                          dewarpedHeight:dewarpedHeight
@@ -150,22 +147,56 @@ static NSString *const THIRD_TYPE = @"ThirdType";
                                                                          dewarpedHeight:dewarpedHeight
                                                                                uniqueId:CARD_SECURITY_CODE_THIRD_TYPE]];
 
-    PPRegexOcrParserFactory *documentNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"\\d{8}"];
 
-    NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
-    // Add chars '0'-'9'
-    for (int c = '0'; c <= '9'; c++) {
-        [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
+    NSMutableSet *charWhiteList = [self numberWhitelist];
+    
+    for (int c = 'a'; c <= 'z'; c++) {
+        [charWhiteList addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
     }
-    PPOcrEngineOptions *options = [[PPOcrEngineOptions alloc] init];
-    options.charWhitelist = charWhitelist;
-    options.minimalLineHeight = 30;
-    [documentNumberParser setOptions:options];
+    
+    PPRegexOcrParserFactory *firstLocationSecurityNumber = [self createSecurityNumberParserWithCharWhiteList:charWhiteList
+                                                                                         andMinimalLineHeight:80
+                                                                                         andMaximalLineHeight:150
+                                                                                        andMaxCharsExpected:15];
 
-    [self addOcrParser:documentNumberParser name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_FIRST_TYPE];
-    [self addOcrParser:documentNumberParser name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_SECOND_TYPE];
-    [self addOcrParser:documentNumberParser name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_THIRD_TYPE];
+    [self addOcrParser:firstLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_FIRST_TYPE];
+
+    PPRegexOcrParserFactory *secondLocationSecurityNumber = [self createSecurityNumberParserWithCharWhiteList:charWhiteList
+                                                                                         andMinimalLineHeight:60
+                                                                                         andMaximalLineHeight:150
+                                                                                          andMaxCharsExpected:35];
+
+    [self addOcrParser:secondLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_SECOND_TYPE];
+
+    PPRegexOcrParserFactory *thirdLocationSecurityNumber = [self createSecurityNumberParserWithCharWhiteList:charWhiteList
+                                                                                        andMinimalLineHeight:70
+                                                                                        andMaximalLineHeight:120
+                                                                                         andMaxCharsExpected:25];
+
+    [self addOcrParser:thirdLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_THIRD_TYPE];
 }
+
+#pragma mark - Parser creation
+
+- (PPRegexOcrParserFactory *)createSecurityNumberParserWithCharWhiteList:(NSMutableSet *)charWhiteList
+                                        andMinimalLineHeight:(NSUInteger)minimalLineHeight
+                                        andMaximalLineHeight:(NSUInteger)maximalLineHeight
+                                         andMaxCharsExpected:(NSUInteger)maxCharsExpected {
+    PPRegexOcrParserFactory *securityNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"\\d{8}"];
+    
+    PPOcrEngineOptions *engineOptions = [[PPOcrEngineOptions alloc] init];
+    
+    engineOptions.charWhitelist = charWhiteList;
+    engineOptions.minimalLineHeight = minimalLineHeight;
+    engineOptions.maximalLineHeight = maximalLineHeight;
+    engineOptions.maxCharsExpected = maxCharsExpected;
+    
+    [securityNumberParser setOptions:engineOptions];
+
+    return securityNumberParser;
+}
+
+#pragma mark - Message extraction
 
 - (NSString *)extractMessageFromResult:(PPBlinkOcrRecognizerResult *)result {
     NSString *message;
@@ -181,15 +212,8 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 
 - (NSString *)classifyDocumentFromResult:(PPTemplatingRecognizerResult *)result {
     _type = @"";
-    NSString *securityNumber =  [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_THIRD_TYPE];
     
-    if (securityNumber != nil && ![securityNumber isEqualToString:@""] ){
-        // If result exists then we are dealing with third type card
-        _type = THIRD_TYPE;
-        return _type;
-    }
-    
-    securityNumber = [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_FIRST_TYPE];
+    NSString *securityNumber = [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_FIRST_TYPE];
     
     if (securityNumber != nil && ![securityNumber isEqualToString:@""] ){
         // If result exists then we are dealing with second type card
@@ -202,6 +226,14 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     if (securityNumber != nil && ![securityNumber isEqualToString:@""] ){
         // If result exists then we are dealing with first type card
         _type = SECOND_TYPE;
+        return _type;
+    }
+    
+    securityNumber =  [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_THIRD_TYPE];
+    
+    if (securityNumber != nil && ![securityNumber isEqualToString:@""] ){
+        // If result exists then we are dealing with third type card
+        _type = THIRD_TYPE;
         return _type;
     }
     
