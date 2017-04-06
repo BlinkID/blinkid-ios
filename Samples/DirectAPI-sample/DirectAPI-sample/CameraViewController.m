@@ -151,7 +151,7 @@ static NSString *rawOcrParserId = @"Raw ocr";
     switch ([UIApplication sharedApplication].statusBarOrientation) {
         case UIInterfaceOrientationUnknown:
             image.orientation = PPProcessingOrientationUp;
-            // special case - we assyme up orientation here, although we cannot guaratee
+            // special case - we assume up orientation here, although we cannot guaratee
             break;
         case UIInterfaceOrientationPortrait:
             image.orientation = PPProcessingOrientationLeft;
