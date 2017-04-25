@@ -26,3 +26,5 @@ DerivedData
 # Pods/
 
 .DS_Store
+
+Samples/MicroBlinkDynamic/Release
