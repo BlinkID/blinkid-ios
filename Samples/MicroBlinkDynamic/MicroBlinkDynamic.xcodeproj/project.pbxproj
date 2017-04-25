@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		18841BC21EAAB5B900E2F81C /* MicroBlinkDynamicRelease */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 18841BC31EAAB5B900E2F81C /* Build configuration list for PBXAggregateTarget "MicroBlinkDynamicRelease" */;
+			buildPhases = (
+				18841BC61EAAB5C100E2F81C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = MicroBlinkDynamicRelease;
+			productName = MicroBlinkDynamicRelease;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		184A7F301EAF536000C1AC54 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18841BBE1EAAB4F800E2F81C /* libc++.tbd */; };
+		18841BAF1EAAB46C00E2F81C /* MicroBlinkDynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 18841BAD1EAAB46C00E2F81C /* MicroBlinkDynamic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18841BB91EAAB48500E2F81C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18841BB71EAAB48500E2F81C /* MicroBlink.framework */; };
+		18841BBC1EAAB4BE00E2F81C /* PPConserve.h in Headers */ = {isa = PBXBuildFile; fileRef = 18841BBA1EAAB4BE00E2F81C /* PPConserve.h */; };
+		18841BBD1EAAB4BE00E2F81C /* PPConserve.m in Sources */ = {isa = PBXBuildFile; fileRef = 18841BBB1EAAB4BE00E2F81C /* PPConserve.m */; };
+		18841BC11EAAB50200E2F81C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18841BC01EAAB50200E2F81C /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18841BAA1EAAB46C00E2F81C /* MicroBlinkDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MicroBlinkDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18841BAD1EAAB46C00E2F81C /* MicroBlinkDynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroBlinkDynamic.h; sourceTree = "<group>"; };
+		18841BAE1EAAB46C00E2F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18841BB71EAAB48500E2F81C /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		18841BBA1EAAB4BE00E2F81C /* PPConserve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPConserve.h; sourceTree = "<group>"; };
+		18841BBB1EAAB4BE00E2F81C /* PPConserve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPConserve.m; sourceTree = "<group>"; };
+		18841BBE1EAAB4F800E2F81C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18841BC01EAAB50200E2F81C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18841BA61EAAB46C00E2F81C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184A7F301EAF536000C1AC54 /* libc++.tbd in Frameworks */,
+				18841BB91EAAB48500E2F81C /* MicroBlink.framework in Frameworks */,
+				18841BC11EAAB50200E2F81C /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18841BA01EAAB46C00E2F81C = {
+			isa = PBXGroup;
+			children = (
+				18841BAC1EAAB46C00E2F81C /* MicroBlinkDynamic */,
+				18841BB51EAAB47900E2F81C /* Frameworks */,
+				18841BAB1EAAB46C00E2F81C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18841BAB1EAAB46C00E2F81C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18841BAA1EAAB46C00E2F81C /* MicroBlinkDynamic.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18841BAC1EAAB46C00E2F81C /* MicroBlinkDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				18841BAD1EAAB46C00E2F81C /* MicroBlinkDynamic.h */,
+				18841BBA1EAAB4BE00E2F81C /* PPConserve.h */,
+				18841BBB1EAAB4BE00E2F81C /* PPConserve.m */,
+				18841BAE1EAAB46C00E2F81C /* Info.plist */,
+			);
+			path = MicroBlinkDynamic;
+			sourceTree = "<group>";
+		};
+		18841BB51EAAB47900E2F81C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18841BB71EAAB48500E2F81C /* MicroBlink.framework */,
+				18841BC01EAAB50200E2F81C /* Accelerate.framework */,
+				18841BBE1EAAB4F800E2F81C /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		18841BA71EAAB46C00E2F81C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18841BAF1EAAB46C00E2F81C /* MicroBlinkDynamic.h in Headers */,
+				18841BBC1EAAB4BE00E2F81C /* PPConserve.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		18841BA91EAAB46C00E2F81C /* MicroBlinkDynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18841BB21EAAB46C00E2F81C /* Build configuration list for PBXNativeTarget "MicroBlinkDynamic" */;
+			buildPhases = (
+				18841BA51EAAB46C00E2F81C /* Sources */,
+				18841BA61EAAB46C00E2F81C /* Frameworks */,
+				18841BA71EAAB46C00E2F81C /* Headers */,
+				18841BA81EAAB46C00E2F81C /* Resources */,
+				18841CF61EAABC3A00E2F81C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MicroBlinkDynamic;
+			productName = MicroBlinkDynamic;
+			productReference = 18841BAA1EAAB46C00E2F81C /* MicroBlinkDynamic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18841BA11EAAB46C00E2F81C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					18841BA91EAAB46C00E2F81C = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+					18841BC21EAAB5B900E2F81C = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18841BA41EAAB46C00E2F81C /* Build configuration list for PBXProject "MicroBlinkDynamic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 18841BA01EAAB46C00E2F81C;
+			productRefGroup = 18841BAB1EAAB46C00E2F81C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18841BA91EAAB46C00E2F81C /* MicroBlinkDynamic */,
+				18841BC21EAAB5B900E2F81C /* MicroBlinkDynamicRelease */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18841BA81EAAB46C00E2F81C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18841BC61EAAB5C100E2F81C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = MicroBlinkDynamic/dynamic_release.sh;
+		};
+		18841CF61EAABC3A00E2F81C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -r ../../MicroBlink.framework/Headers/ ${CONFIGURATION_BUILD_DIR}/${PRODUCT_NAME}.framework/Headers/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18841BA51EAAB46C00E2F81C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18841BBD1EAAB4BE00E2F81C /* PPConserve.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		18841BB01EAAB46C00E2F81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18841BB11EAAB46C00E2F81C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		18841BB31EAAB46C00E2F81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				INFOPLIST_FILE = MicroBlinkDynamic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.MicroBlinkDynamic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		18841BB41EAAB46C00E2F81C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				INFOPLIST_FILE = MicroBlinkDynamic/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.MicroBlinkDynamic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		18841BC41EAAB5B900E2F81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18841BC51EAAB5B900E2F81C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18841BA41EAAB46C00E2F81C /* Build configuration list for PBXProject "MicroBlinkDynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18841BB01EAAB46C00E2F81C /* Debug */,
+				18841BB11EAAB46C00E2F81C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18841BB21EAAB46C00E2F81C /* Build configuration list for PBXNativeTarget "MicroBlinkDynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18841BB31EAAB46C00E2F81C /* Debug */,
+				18841BB41EAAB46C00E2F81C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18841BC31EAAB5B900E2F81C /* Build configuration list for PBXAggregateTarget "MicroBlinkDynamicRelease" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18841BC41EAAB5B900E2F81C /* Debug */,
+				18841BC51EAAB5B900E2F81C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18841BA11EAAB46C00E2F81C /* Project object */;
+}
