@@ -1,6 +1,13 @@
 #!/bin/sh
 set -e
 
+xcodebuild -project Samples/MicroBlinkDynamic/MicroBlinkDynamic.xcodeproj \
+    -scheme MicroBlinkDynamicRelease \
+    -configuration Debug \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build
+
 xcodebuild -project Samples/DirectAPI-sample/DirectAPI-sample.xcodeproj \
     -scheme DirectAPI-Sample \
     -configuration Debug \
