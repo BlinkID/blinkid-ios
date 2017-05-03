@@ -22,10 +22,26 @@
 		3153E6981D097A5900797C93 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3153E6961D097A5900797C93 /* MicroBlink.bundle */; };
 		3153E6991D097A5900797C93 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6971D097A5900797C93 /* MicroBlink.framework */; };
 		31F4D2DD1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */; };
+		CD0BD0A31EB870CB00A66134 /* StarbucksCardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0BD0A21EB870CB00A66134 /* StarbucksCardTest.m */; };
+		CD0BD0A61EB8740A00A66134 /* TemplateRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0BD0A51EB8740A00A66134 /* TemplateRecognizerTests.m */; };
+		CD4D695D1E9B658500881457 /* RecognizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D695C1E9B658500881457 /* RecognizerTest.m */; };
 		CDD4DECD1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */; };
 		CDD4DED01E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DECF1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m */; };
 		CDD4DED51E8BCE8A00B9BD38 /* CustomOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */; };
+		CDEAEBC31EB9C41F00D8E1DC /* IMG_2388.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDEAEBC11EB9C41F00D8E1DC /* IMG_2388.jpg */; };
+		CDEAEBC41EB9C41F00D8E1DC /* IMG_2405.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDEAEBC21EB9C41F00D8E1DC /* IMG_2405.jpg */; };
+		CDEAEBC81EB9D4EB00D8E1DC /* IMG_2385.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDEAEBC71EB9D4EB00D8E1DC /* IMG_2385.jpg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD4D695F1E9B658500881457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3153E6671D08758900797C93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3153E66E1D08758900797C93;
+			remoteInfo = "Templating-Sample";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3153E66F1D08758900797C93 /* Templating-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Templating-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +63,22 @@
 		3153E6961D097A5900797C93 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		3153E6971D097A5900797C93 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Croatian_ID_Images.xcassets; sourceTree = "<group>"; };
+		CD0BD0A21EB870CB00A66134 /* StarbucksCardTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarbucksCardTest.m; sourceTree = "<group>"; };
+		CD0BD0A41EB8740A00A66134 /* TemplateRecognizerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateRecognizerTests.h; sourceTree = "<group>"; };
+		CD0BD0A51EB8740A00A66134 /* TemplateRecognizerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateRecognizerTests.m; sourceTree = "<group>"; };
+		CD4D695A1E9B658500881457 /* Templating-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Templating-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D695C1E9B658500881457 /* RecognizerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognizerTest.m; sourceTree = "<group>"; };
+		CD4D695E1E9B658500881457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4D69641E9B65DA00881457 /* RecognizerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognizerTest.h; sourceTree = "<group>"; };
 		CDD4DECB1E8BAF2200B9BD38 /* CroIdRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CroIdRecognizerSettings.h; sourceTree = "<group>"; };
 		CDD4DECC1E8BAF2200B9BD38 /* CroIdRecognizerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CroIdRecognizerSettings.m; sourceTree = "<group>"; };
 		CDD4DECE1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarbucksCardRecognizerSettings.h; sourceTree = "<group>"; };
 		CDD4DECF1E8BB76300B9BD38 /* StarbucksCardRecognizerSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarbucksCardRecognizerSettings.m; sourceTree = "<group>"; };
 		CDD4DED31E8BCE8A00B9BD38 /* CustomOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
 		CDD4DED41E8BCE8A00B9BD38 /* CustomOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
+		CDEAEBC11EB9C41F00D8E1DC /* IMG_2388.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_2388.jpg; path = Images/IMG_2388.jpg; sourceTree = "<group>"; };
+		CDEAEBC21EB9C41F00D8E1DC /* IMG_2405.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_2405.jpg; path = Images/IMG_2405.jpg; sourceTree = "<group>"; };
+		CDEAEBC71EB9D4EB00D8E1DC /* IMG_2385.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_2385.jpg; path = Images/IMG_2385.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD4D69571E9B658500881457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				3153E6711D08758900797C93 /* Templating-Sample */,
+				CD4D695B1E9B658500881457 /* Templating-SampleTests */,
 				3153E6891D097A0C00797C93 /* Frameworks */,
 				3153E6701D08758900797C93 /* Products */,
 			);
@@ -86,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3153E66F1D08758900797C93 /* Templating-Sample.app */,
+				CD4D695A1E9B658500881457 /* Templating-SampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +171,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD0BD0A11EB86F9700A66134 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0BD0A21EB870CB00A66134 /* StarbucksCardTest.m */,
+				CD0BD0A41EB8740A00A66134 /* TemplateRecognizerTests.h */,
+				CD0BD0A51EB8740A00A66134 /* TemplateRecognizerTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		CD0BD0A71EB87D8700A66134 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CDEAEBC71EB9D4EB00D8E1DC /* IMG_2385.jpg */,
+				CDEAEBC11EB9C41F00D8E1DC /* IMG_2388.jpg */,
+				CDEAEBC21EB9C41F00D8E1DC /* IMG_2405.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CD4D695B1E9B658500881457 /* Templating-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0BD0A71EB87D8700A66134 /* Images */,
+				CD0BD0A11EB86F9700A66134 /* Tests */,
+				CD4D695C1E9B658500881457 /* RecognizerTest.m */,
+				CD4D69641E9B65DA00881457 /* RecognizerTest.h */,
+				CD4D695E1E9B658500881457 /* Info.plist */,
+			);
+			path = "Templating-SampleTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +223,24 @@
 			productReference = 3153E66F1D08758900797C93 /* Templating-Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CD4D69591E9B658500881457 /* Templating-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4D69611E9B658500881457 /* Build configuration list for PBXNativeTarget "Templating-SampleTests" */;
+			buildPhases = (
+				CD4D69561E9B658500881457 /* Sources */,
+				CD4D69571E9B658500881457 /* Frameworks */,
+				CD4D69581E9B658500881457 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4D69601E9B658500881457 /* PBXTargetDependency */,
+			);
+			name = "Templating-SampleTests";
+			productName = "Templating-SampleTests";
+			productReference = CD4D695A1E9B658500881457 /* Templating-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +253,12 @@
 					3153E66E1D08758900797C93 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = CQTJWP89J7;
+					};
+					CD4D69591E9B658500881457 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3153E66E1D08758900797C93;
 					};
 				};
 			};
@@ -185,6 +276,7 @@
 			projectRoot = "";
 			targets = (
 				3153E66E1D08758900797C93 /* Templating-Sample */,
+				CD4D69591E9B658500881457 /* Templating-SampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +291,16 @@
 				3153E67F1D08758900797C93 /* Assets.xcassets in Resources */,
 				3153E67D1D08758900797C93 /* Main.storyboard in Resources */,
 				3153E6981D097A5900797C93 /* MicroBlink.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D69581E9B658500881457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDEAEBC81EB9D4EB00D8E1DC /* IMG_2385.jpg in Resources */,
+				CDEAEBC41EB9C41F00D8E1DC /* IMG_2405.jpg in Resources */,
+				CDEAEBC31EB9C41F00D8E1DC /* IMG_2388.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +320,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD4D69561E9B658500881457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0BD0A61EB8740A00A66134 /* TemplateRecognizerTests.m in Sources */,
+				CD0BD0A31EB870CB00A66134 /* StarbucksCardTest.m in Sources */,
+				CD4D695D1E9B658500881457 /* RecognizerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD4D69601E9B658500881457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3153E66E1D08758900797C93 /* Templating-Sample */;
+			targetProxy = CD4D695F1E9B658500881457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3153E67B1D08758900797C93 /* Main.storyboard */ = {
@@ -356,6 +476,40 @@
 			};
 			name = Release;
 		};
+		CD4D69621E9B658500881457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				INFOPLIST_FILE = "Templating-SampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Templating-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Templating-Sample.app/Templating-Sample";
+			};
+			name = Debug;
+		};
+		CD4D69631E9B658500881457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				INFOPLIST_FILE = "Templating-SampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Templating-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Templating-Sample.app/Templating-Sample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +527,15 @@
 			buildConfigurations = (
 				3153E6871D08758900797C93 /* Debug */,
 				3153E6881D08758900797C93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4D69611E9B658500881457 /* Build configuration list for PBXNativeTarget "Templating-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4D69621E9B658500881457 /* Debug */,
+				CD4D69631E9B658500881457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
