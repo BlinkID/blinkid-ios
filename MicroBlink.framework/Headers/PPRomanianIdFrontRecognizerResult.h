@@ -1,5 +1,5 @@
 //
-//  PPRomanianIdFrontRecognizerResult.h
+//  PPRomanianIDFrontRecognizerResult.h
 //  BlinkIdFramework
 //
 //  Created by Jura on 22/03/17.
@@ -12,7 +12,7 @@
  * Class representing values obtained when scanning front side of Romanian ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPRomanianIdFrontRecognizerResult : PPMrtdRecognizerResult
+@interface PPRomanianIDFrontRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * Last name

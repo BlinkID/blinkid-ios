@@ -27,6 +27,26 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *ownerAddress;
 
 /**
+ * Owner address city. Determined from owner address.
+ */
+@property (nonatomic, readonly, nullable) NSString *ownerAddressCity;
+
+/**
+ * Owner address state. Determined from owner address.
+ */
+@property (nonatomic, readonly, nullable) NSString *ownerAddressState;
+
+/**
+ * Owner address Zip code. Determined from owner address.
+ */
+@property (nonatomic, readonly, nullable) NSString *ownerAddressZipCode;
+
+/**
+ * Owner street. Determined from owner address.
+ */
+@property (nonatomic, readonly, nullable) NSString *ownerAddressStreet;
+
+/**
  * Owner birth date string, as written on the document (YYMMDD format)
  */
 @property (nonatomic, readonly, nullable) NSString *rawOwnerBirthDate;

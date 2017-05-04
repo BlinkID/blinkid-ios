@@ -24,16 +24,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Property which determines if the recognizer is enabled
  *
- *  @param enabled If YES, recognizer is enabled, and it peroforms recognition on each video frame.
- */
-- (void)setEnabled:(BOOL)enabled;
-
-/**
- * Determines if recognizer is enabled
+ *  If YES, recognizer is enabled, and it peroforms recognition on each video frame.
  *
- *  @return YES if recognizer is enabled
+ * Default: YES
  */
-- (BOOL)isEnabled;
+@property (nonatomic, getter=isEnabled) BOOL enabled;
 
 @end
 

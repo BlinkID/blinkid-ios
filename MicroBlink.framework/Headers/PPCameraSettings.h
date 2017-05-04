@@ -85,9 +85,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default
  *  - 10.0f for BlinkID and BlinkOCR product
- *  - 3.2f for PhotoPay product
- *  - 5.0f for Pdf417 product
- *  - 0.0f for PhotoMath product
+ *  - 8.0f for PhotoPay, pdf417 and other products
  */
 @property (nonatomic, assign) NSTimeInterval autofocusInterval;
 

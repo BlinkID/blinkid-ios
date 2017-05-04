@@ -40,4 +40,10 @@
 // Recognizers
 #import "PPBlinkIDRecognizers.h"
 
+/// Additional recognizers
+
+// Aztec barcodes
+#import "PPAztecRecognizerSettings.h"
+#import "PPAztecRecognizerResult.h"
+
 #endif

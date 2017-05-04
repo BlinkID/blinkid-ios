@@ -25,8 +25,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *issuingAuthority;
 
 /**
+ * The document date of issue of the Croatian ID in DD.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfIssue;
+
+/**
  * The document date of issue of the Croatian ID.
  */
-@property (nonatomic, readonly, nullable) NSString *documentDateOfIssue;
+@property (nonatomic, readonly, nullable) NSDate *documentDateOfIssue;
 
 @end

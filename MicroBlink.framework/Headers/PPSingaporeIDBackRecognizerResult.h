@@ -26,9 +26,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *bloodGroup;
 
 /**
+ * The date of issue of the Singapore ID in dd-MM-yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+
+/**
  * The date of issue of the Singapore ID.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
+@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
 
 /**
  * The address of the Singapore ID owner.

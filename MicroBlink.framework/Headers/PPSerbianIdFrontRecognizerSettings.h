@@ -1,5 +1,5 @@
 //
-//  PPSerbianIdFrontRecognizerSettings.h
+//  PPSerbianIDFrontRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by DoDo on 09/11/2016.
@@ -14,7 +14,7 @@
  * Serbian Front ID recognizer is used for scanning front side of Serbian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSerbianIdFrontRecognizerSettings : PPRecognizerSettings
+@interface PPSerbianIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
