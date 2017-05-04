@@ -1,3 +1,17 @@
+## 2.8.0
+
+- If you have problems in naming of the classes with "ID" in the name, we now use uppercase "ID" in all filenames and all class names. Update accordingly. This gets rid of the Clang's warning about the case insensitivity.
+
+- If you're using PPGermanIDMrzRecognizer, it's functionality is now split into two recognizers:
+    - one for back side of the new ID (PPGermanIDBackRecognizer)
+    - one for front side of the old ID (PPGermanOldIDRecognizer)
+    
+- Add libz into link binary with libaries. We removed internally used libz library to make the SDK smaller.
+
+## 2.7.1
+
+## 2.7.0
+
 ## 2.6.0
 
 - If you're using PPSingaporeIdRecognizer, you should now decide which side of the ID you want to use, and use either PPSingaporeIDBackRecognizer, or PPSingaporeIDFrontRecognizer
