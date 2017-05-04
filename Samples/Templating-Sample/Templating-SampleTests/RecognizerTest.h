@@ -10,12 +10,11 @@
 
 @interface RecognizerTest : XCTestCase <PPCoordinatorDelegate>
 
-@property (nonatomic) PPCoordinator *coordinator;
+@property (strong, nonatomic) PPCoordinator *coordinator;
 
 @property (copy, nonatomic) void (^didOutputResults)(NSArray<PPRecognizerResult *> *);
 
-
-@property (nonatomic) XCTestExpectation *expectation;
+@property (strong, nonatomic) XCTestExpectation *expectation;
 
 - (void)testImage:(NSString *)imageName ofType:(NSString *)imageType withDescription:(NSString *)description;
 

@@ -15,6 +15,12 @@
 
 @implementation StarbucksCardTest
 
+/**
+ *  Test for the first type of cards.
+ *  First type of cards have card number in the center top, and security number below it.
+ *  Example: IMG_2385.jpg
+ */
+
 - (void)testStarbucksCardFirstType {
     [self.coordinator.currentSettings.scanSettings addRecognizerSettings:[[StarbucksCardRecognizerSettings alloc] init]];
     [self.coordinator applySettings];
@@ -23,6 +29,12 @@
     [self testImage:@"IMG_2385" ofType:@"jpg" withDescription:@"Type one starbucks card"];
 }
 
+/**
+ *  Test for the second type of cards.
+ *  Second type of cards have card number in the upper left corner, and security number in the upper right corner.
+ *  Example: IMG_2405.jpg
+ */
+
 - (void)testStarbucksCardSecondType {
     [self.coordinator.currentSettings.scanSettings addRecognizerSettings:[[StarbucksCardRecognizerSettings alloc] init]];
     [self.coordinator applySettings];
@@ -30,6 +42,12 @@
 
     [self testImage:@"IMG_2405" ofType:@"jpg" withDescription:@"Type two starbucks card"];
 }
+
+/**
+ *  Test for the third type of cards.
+ *  Third type of cards have card number in the lower left corner, and security number in the lower right corner.
+ *  Example: IMG_2388.jpg
+ */
 
 - (void)testStarbucksCardThirdType {
     [self.coordinator.currentSettings.scanSettings addRecognizerSettings:[[StarbucksCardRecognizerSettings alloc] init]];
@@ -55,13 +73,17 @@
         }
         for (PPRecognizerResult *result in results) {
             if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
-                [weakSelf checkStringValueInResult:result
-                                             truth:cardNumberTruth
-                                               key:[[@"CardNumber" stringByAppendingString:type] stringByAppendingString:@".CardNumber"]];
-                [weakSelf
-                    checkStringValueInResult:result
-                                       truth:securityCodeTruth
-                                         key:[[@"SecurityCode" stringByAppendingString:type] stringByAppendingString:@".SecurityCode"]];
+
+                // Key used to get recognized card number, key used depends on the type of card recognized therefore key is dynamically
+                // created using the type of card recognized. If the First type of card is recognized, the key will be :
+                // @"CardNumberFirstType.CardNumber"
+                NSString *cardNumberKey = [[@"CardNumber" stringByAppendingString:type] stringByAppendingString:@".CardNumber"];
+
+                [weakSelf checkStringValueInResult:result truth:cardNumberTruth key:cardNumberKey];
+
+                // Same as the CardNumber above, but this one is used to get security code values.
+                NSString *securityCodeKey = [[@"SecurityCode" stringByAppendingString:type] stringByAppendingString:@".SecurityCode"];
+                [weakSelf checkStringValueInResult:result truth:securityCodeTruth key:securityCodeKey];
             }
         }
 
