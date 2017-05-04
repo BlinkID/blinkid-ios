@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E17A11EBB38B300DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A01EBB38B300DCD6B4 /* libz.tbd */; };
 		18D64AE81E83DE2E009AE8EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AE71E83DE2E009AE8EA /* main.m */; };
 		18D64AEB1E83DE2E009AE8EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AEA1E83DE2E009AE8EA /* AppDelegate.m */; };
 		18D64AEE1E83DE2E009AE8EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D64AED1E83DE2E009AE8EA /* ViewController.m */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E17A01EBB38B300DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18D64AE31E83DE2E009AE8EA /* AutodetectID-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutodetectID-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D64AE71E83DE2E009AE8EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18D64AE91E83DE2E009AE8EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E17A11EBB38B300DCD6B4 /* libz.tbd in Frameworks */,
 				18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */,
 				18D64B051E83DEC6009AE8EA /* libiconv.tbd in Frameworks */,
 				18D64B031E83DEC2009AE8EA /* libc++.tbd in Frameworks */,
@@ -101,6 +104,7 @@
 				18D64AFE1E83DEA3009AE8EA /* MicroBlink.bundle */,
 				18D64B061E83DECA009AE8EA /* Accelerate.framework */,
 				18D64B041E83DEC6009AE8EA /* libiconv.tbd */,
+				184E17A01EBB38B300DCD6B4 /* libz.tbd */,
 				18D64B021E83DEC2009AE8EA /* libc++.tbd */,
 			);
 			name = Frameworks;

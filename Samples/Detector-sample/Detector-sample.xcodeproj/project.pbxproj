@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E17AC1EBB417200DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17AB1EBB417200DCD6B4 /* libz.tbd */; };
 		1894F4021C67B68200C5F64F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F4011C67B68200C5F64F /* main.m */; };
 		1894F4051C67B68200C5F64F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F4041C67B68200C5F64F /* AppDelegate.m */; };
 		1894F4081C67B68300C5F64F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894F4071C67B68300C5F64F /* ViewController.m */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E17AB1EBB417200DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1894F3FD1C67B68200C5F64F /* Detector-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Detector-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1894F4011C67B68200C5F64F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1894F4031C67B68200C5F64F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E17AC1EBB417200DCD6B4 /* libz.tbd in Frameworks */,
 				1894F41F1C68722B00C5F64F /* Accelerate.framework in Frameworks */,
 				1894F4191C6871DC00C5F64F /* MicroBlink.framework in Frameworks */,
 				1894F4211C68723100C5F64F /* libiconv.tbd in Frameworks */,
@@ -56,11 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184E17AA1EBB417200DCD6B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1894F4181C6871DC00C5F64F /* MicroBlink.framework */,
+				1894F41A1C6871E300C5F64F /* MicroBlink.bundle */,
+				1894F41E1C68722B00C5F64F /* Accelerate.framework */,
+				1894F4201C68723100C5F64F /* libiconv.tbd */,
+				1894F41C1C68721E00C5F64F /* libc++.tbd */,
+				184E17AB1EBB417200DCD6B4 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1894F3F41C67B68200C5F64F = {
 			isa = PBXGroup;
 			children = (
 				1894F3FF1C67B68200C5F64F /* Detector-sample */,
-				1894F4171C6871D000C5F64F /* Framework */,
+				184E17AA1EBB417200DCD6B4 /* Frameworks */,
 				1894F3FE1C67B68200C5F64F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,18 +113,6 @@
 				1894F4011C67B68200C5F64F /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1894F4171C6871D000C5F64F /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				1894F4181C6871DC00C5F64F /* MicroBlink.framework */,
-				1894F41A1C6871E300C5F64F /* MicroBlink.bundle */,
-				1894F41E1C68722B00C5F64F /* Accelerate.framework */,
-				1894F4201C68723100C5F64F /* libiconv.tbd */,
-				1894F41C1C68721E00C5F64F /* libc++.tbd */,
-			);
-			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

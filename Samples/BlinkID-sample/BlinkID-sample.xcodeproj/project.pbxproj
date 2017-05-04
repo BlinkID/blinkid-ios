@@ -17,6 +17,7 @@
 		1842A1CC1ACED3AA00DE6CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1CA1ACED3AA00DE6CAB /* Main.storyboard */; };
 		1842A1CE1ACED3AA00DE6CAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1CD1ACED3AA00DE6CAB /* Images.xcassets */; };
 		1842A1D11ACED3AA00DE6CAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1CF1ACED3AA00DE6CAB /* LaunchScreen.xib */; };
+		184E17A31EBB390900DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A21EBB390900DCD6B4 /* libz.tbd */; };
 		18827C2D1CD7A42E00248183 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18827C2C1CD7A42E00248183 /* MicroBlink.framework */; };
 		18A968CF1C44E26D003A408A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A968CE1C44E26D003A408A /* MicroBlink.bundle */; };
 		18D0E8511C39A09B00E47EF5 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8501C39A09B00E47EF5 /* libiconv.tbd */; };
@@ -39,6 +40,7 @@
 		1842A1CB1ACED3AA00DE6CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1842A1CD1ACED3AA00DE6CAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1842A1D01ACED3AA00DE6CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		184E17A21EBB390900DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18827C2C1CD7A42E00248183 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		18A968CE1C44E26D003A408A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		18D0E8501C39A09B00E47EF5 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -57,6 +59,7 @@
 				18D0E85B1C39A18800E47EF5 /* AssetsLibrary.framework in Frameworks */,
 				1809F22A1C23061B00DEE72E /* AVFoundation.framework in Frameworks */,
 				1809F22C1C23062300DEE72E /* CoreMedia.framework in Frameworks */,
+				184E17A31EBB390900DCD6B4 /* libz.tbd in Frameworks */,
 				18D0E8511C39A09B00E47EF5 /* libiconv.tbd in Frameworks */,
 				1809F22E1C23062C00DEE72E /* libc++.tbd in Frameworks */,
 			);
@@ -118,6 +121,7 @@
 				1809F22B1C23062300DEE72E /* CoreMedia.framework */,
 				1809F22D1C23062C00DEE72E /* libc++.tbd */,
 				18D0E8501C39A09B00E47EF5 /* libiconv.tbd */,
+				184E17A21EBB390900DCD6B4 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

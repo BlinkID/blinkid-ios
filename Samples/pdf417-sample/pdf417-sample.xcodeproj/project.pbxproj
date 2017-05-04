@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E17B01EBB41B600DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17AF1EBB41B600DCD6B4 /* libz.tbd */; };
 		315880E91C3C0B990083850C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 315880E81C3C0B990083850C /* main.m */; };
 		315880EC1C3C0B990083850C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 315880EB1C3C0B990083850C /* AppDelegate.m */; };
 		315880EF1C3C0B990083850C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 315880EE1C3C0B990083850C /* ViewController.m */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E17AF1EBB41B600DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		315880E41C3C0B990083850C /* pdf417-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pdf417-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		315880E81C3C0B990083850C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		315880EA1C3C0B990083850C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				315881501C3C150D0083850C /* MicroBlink.framework in Frameworks */,
 				3158810B1C3C0C670083850C /* Accelerate.framework in Frameworks */,
 				315881091C3C0C620083850C /* libiconv.tbd in Frameworks */,
+				184E17B01EBB41B600DCD6B4 /* libz.tbd in Frameworks */,
 				315881071C3C0C5A0083850C /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +140,7 @@
 				3158810C1C3C0C6C0083850C /* CoreMedia.framework */,
 				3158810A1C3C0C670083850C /* Accelerate.framework */,
 				315881081C3C0C620083850C /* libiconv.tbd */,
+				184E17AF1EBB41B600DCD6B4 /* libz.tbd */,
 				315881061C3C0C5A0083850C /* libc++.tbd */,
 			);
 			name = Frameworks;
