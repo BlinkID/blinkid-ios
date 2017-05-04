@@ -18,7 +18,7 @@
 
 @property (nonatomic) XCTestExpectation *expectation;
 
-- (void)testImage:(NSString *)image ofType:(NSString *)imageType inDirectory:(NSString *)directory withDescription:(NSString *)description;
+- (void)testImage:(NSString *)imageName ofType:(NSString *)imageType withDescription:(NSString *)description;
 
 - (BOOL)checkStringValueInResult:(PPRecognizerResult *)result truth:(NSString *)truth key:(NSString *)key;
 

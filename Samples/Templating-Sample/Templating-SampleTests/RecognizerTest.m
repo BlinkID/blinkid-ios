@@ -45,13 +45,13 @@
 
 #pragma mark - Testing
 
-- (void)testImage:(NSString *)image ofType:(NSString *)imageType inDirectory:(NSString *)directory withDescription:(NSString *)description {
+- (void)testImage:(NSString *)imageName ofType:(NSString *)imageType withDescription:(NSString *)description {
 
-    NSString *imageName = [NSString stringWithFormat:@"%@/%@.%@", directory, image, imageType];
+    NSString *fullImageName = [NSString stringWithFormat:@"%@.%@", imageName, imageType];
 
-    NSString *imagePath = [[NSBundle bundleForClass:[self class]] pathForResource:image ofType:imageType inDirectory:directory];
+    NSString *imagePath = [[NSBundle bundleForClass:[self class]] pathForResource:imageName ofType:imageType];
 
-    XCTAssertNotNil(imagePath, @"Image %@ doesn't exist", imageName);
+    XCTAssertNotNil(imagePath, @"Image %@ doesn't exist", fullImageName);
 
     self.expectation = [self expectationWithDescription:description];
 
@@ -59,7 +59,7 @@
     ppImage.orientation = PPProcessingOrientationUp;
     ppImage.cameraFrame = NO;
 
-    XCTAssertNotNil(ppImage, @"Image %@ failed initialization", imageName);
+    XCTAssertNotNil(ppImage, @"Image %@ failed initialization", fullImageName);
 
     [self.coordinator processImage:ppImage];
 

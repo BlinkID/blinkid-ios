@@ -20,7 +20,7 @@
     [self.coordinator applySettings];
     [self setUpDidOutputResultsWithCardNumberTruth:@"6046 0391 6441 1573" andSecurityCodeTruth:@"77993675" forType:@"FirstType"];
 
-    [self testImage:@"IMG_2385" ofType:@"jpg" inDirectory:@"." withDescription:@"Type one starbucks card"];
+    [self testImage:@"IMG_2385" ofType:@"jpg" withDescription:@"Type one starbucks card"];
 }
 
 - (void)testStarbucksCardSecondType {
@@ -28,7 +28,7 @@
     [self.coordinator applySettings];
     [self setUpDidOutputResultsWithCardNumberTruth:@"6083 0771 2728 4166" andSecurityCodeTruth:@"37470746" forType:@"SecondType"];
 
-    [self testImage:@"IMG_2405" ofType:@"jpg" inDirectory:@"." withDescription:@"Type two starbucks card"];
+    [self testImage:@"IMG_2405" ofType:@"jpg" withDescription:@"Type two starbucks card"];
 }
 
 - (void)testStarbucksCardThirdType {
@@ -36,7 +36,7 @@
     [self.coordinator applySettings];
     [self setUpDidOutputResultsWithCardNumberTruth:@"6078 7827 3165 3467" andSecurityCodeTruth:@"25977048" forType:@"ThirdType"];
 
-    [self testImage:@"IMG_2388" ofType:@"jpg" inDirectory:@"." withDescription:@"Type three starbucks card"];
+    [self testImage:@"IMG_2388" ofType:@"jpg" withDescription:@"Type three starbucks card"];
 }
 
 
