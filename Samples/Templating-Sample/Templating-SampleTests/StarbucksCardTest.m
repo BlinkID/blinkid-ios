@@ -48,7 +48,7 @@
 
     __weak StarbucksCardTest *weakSelf = self;
 
-    weakSelf.didOutputResults = ^(PPCoordinator *coordinator, NSArray<PPRecognizerResult *> *results) {
+    weakSelf.didOutputResults = ^(NSArray<PPRecognizerResult *> *results) {
 
         if (results.count == 0 || results == nil) {
             return;

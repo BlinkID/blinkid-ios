@@ -12,9 +12,8 @@
 
 @property (nonatomic) PPCoordinator *coordinator;
 
-@property (nonatomic, copy) void (^didOutputResults)(PPCoordinator *coordinator, NSArray<PPRecognizerResult *> *);
+@property (copy, nonatomic) void (^didOutputResults)(NSArray<PPRecognizerResult *> *);
 
-@property (nonatomic, copy) void (^didOutputMetadata)(PPCoordinator *coordinator, PPMetadata *);
 
 @property (nonatomic) XCTestExpectation *expectation;
 

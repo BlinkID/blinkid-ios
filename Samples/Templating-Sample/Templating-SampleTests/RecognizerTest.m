@@ -77,14 +77,7 @@
 - (void)coordinator:(PPCoordinator *)coordinator didOutputResults:(NSArray<PPRecognizerResult *> *)results {
 
     if (self.didOutputResults) {
-        self.didOutputResults(coordinator, results);
-    }
-}
-
-- (void)coordinator:(PPCoordinator *)coordinator didOutputMetadata:(PPMetadata *)metadata {
-
-    if (self.didOutputMetadata) {
-        self.didOutputMetadata(coordinator, metadata);
+        self.didOutputResults(results);
     }
 }
 
