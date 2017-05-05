@@ -59,8 +59,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"ZJYY4UFT-5QDAH3LY-DP7PPMAT-U33LF3AF-ATLVMINT-5QCQJV2W-EGZ6ZJL3-MXI5JTZ4";
-    // License key is valid temporarily until 2017-05-01
+    settings.licenseSettings.licenseKey = @"XDINCJE7-IB25MCBG-GEOD4WM7-I5XCMMIB-YAMULZ5H-TAIIEWYN-5OWSQZBQ-LWAE56BU";
+    // License key is valid temporarily until 2017-08-03
 
 
     /** 3. Set up what is being scanned. See detailed guides for specific use cases. */

@@ -55,8 +55,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"3OUAORDH-JWEQTP73-EUL75IZD-KKYNCCCE-MBAPJB5V-FGNPPGKJ-O5KARZHJ-FR4YOPHD";
-    // license key is valid temporarily - until 2017-06-24
+    settings.licenseSettings.licenseKey = @"MI2QEQC3-QAMIK3GO-2KFWJ2PL-H5VBN4YL-EJXKOBFQ-2EEEIYCA-6SD3LCI7-QPZFEAKI";
+    // license key is valid temporarily - until 2017-08-03
 
 
     /**
@@ -90,15 +90,15 @@
         [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
     }
 
-    // Remove this code if you don't need Aztec scanning
-    {
-        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
-        // You can obta
-        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
-
-        // Add AztecRecognizerSettings to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
-    }
+//    // Remove this code if you don't need Aztec scanning
+//    {
+//        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
+//        // You can obta
+//        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
+//
+//        // Add AztecRecognizerSettings to a list of used recognizer settings
+//        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
+//    }
 
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
 

@@ -75,8 +75,8 @@ static NSString *rawOcrParserId = @"RawOcrParser";
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"CXIHMIAT-BONQURGE-73JTZ2AE-3WQ4NKX7-JWH4EK72-RGNLB5FN-YVJUQG2A-7L24O4N7";
-    // license key valid temporarily until 2017-05-01
+    settings.licenseSettings.licenseKey = @"M6S4GLC2-3WRMJ7UO-DNOKPQXE-MNHNADMV-XPY6LHVO-R7BCX6UJ-TKYPIDMU-UN2QLIYK";
+    // license key valid temporarily until 2017-08-03
 
     /**
      * 3. Set up what is being scanned. See detailed guides for specific use cases.
