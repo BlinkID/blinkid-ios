@@ -30,19 +30,34 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
+ * The date of birth of the Czech ID owner in dd.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+
+/**
  * The date of birth of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
+@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+
+/**
+ * The date of issue of the Czech ID owner in dd.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
 
 /**
  * The date of issue of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
+@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+
+/**
+ * The date of expiry of the Czech ID owner in dd.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfExpiry;
 
 /**
  * The date of expiry of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
 
 /**
  * The sex of the Czech ID owner.

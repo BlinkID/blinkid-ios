@@ -1,5 +1,5 @@
 //
-//  PPSlovenianIdFrontRecognizerSettings.h
+//  PPSlovenianIDFrontRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/09/16.
@@ -14,7 +14,7 @@
  * Slovenian Front ID recognizer is used for scanning front side of Slovenian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovenianIdFrontRecognizerSettings : PPRecognizerSettings
+@interface PPSlovenianIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.

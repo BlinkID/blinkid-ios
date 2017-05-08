@@ -17,16 +17,36 @@
 @class PPBarcodeDetailedData;
 @class PPDetectorResult;
 
+typedef NS_ENUM(NSUInteger, PPElementType) {
+    PPElementTypeNull,
+    PPElementTypeBoolean,
+    PPElementTypeInt,
+    PPElementTypeString,
+    PPElementTypeBarcodeData,
+    PPElementTypeQuadrangle,
+    PPElementTypeDetectorResult,
+    PPElementTypeOcr,
+    PPElementTypeDateTime,
+    PPElementTypeByteArray,
+};
+
 /**
  Common superclass for all result classes of MicroBlink scanning library
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPRecognizerResult : NSObject <NSCopying>
 
-/**
- * These objects are always privately constructed
- */
 - (instancetype _Nonnull)init NS_UNAVAILABLE;
+
+/**
+ * Initializes the result with a dictionary of result elements
+ *
+ * @param elements dictionary of result elements
+ * @param types     dictionary of result element types
+ * @return Initialized instance
+ */
+- (instancetype _Nonnull)initWithElements:(NSMutableDictionary *_Nonnull)elements
+                       resultElementTypes:(NSMutableDictionary<NSString *, NSNumber *> *_Nonnull)types NS_DESIGNATED_INITIALIZER;
 
 /**
  * All data obtained in the recotnition phase is contained in this Dictionay as Key-Value pairs.
@@ -48,6 +68,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *  @return eturns a dictionary with all string elements found as a recognizer results
  */
 - (NSDictionary *_Nonnull)getAllStringElements;
+
+
+/**
+ * Method returns a dictionary with all the type information for each key
+ *
+ * @return A dictionary with type information for each key.
+ */
+- (NSMutableDictionary<NSString *, NSNumber *> *_Nonnull)getAllElementTypes;
 
 /**
  * Returns NSData* element from allElements dictionary.

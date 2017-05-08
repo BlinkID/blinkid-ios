@@ -80,4 +80,29 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, readonly) BOOL matchingData;
 
+/**
+ * YES if the person is non Croatian resident
+ */
+@property (nonatomic, readonly) BOOL nonResident;
+
+/**
+ * YES if the document is bilingual
+ */
+@property (nonatomic, readonly) BOOL documentBilingual;
+
+/**
+ * Contains signature which confirms that this data originates from the SDK
+ */
+@property (nonatomic, readonly, nullable) NSData *signature;
+
+/**
+ * Contains the version of the signature
+ */
+@property (nonatomic, readonly, nullable) NSString *signatureVersion;
+
+/**
+ * Byte buffer with face image
+ */
+@property (nonatomic, readonly, nullable) NSData *faceImage;
+
 @end

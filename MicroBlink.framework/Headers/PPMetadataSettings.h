@@ -12,6 +12,7 @@
 
 #import "PPMetadata.h"
 #import "PPImageMetadata.h"
+#import "PPRecognitionStatusMetadata.h"
 #import "PPTextMetadata.h"
 
 NS_ASSUME_NONNULL_BEGIN

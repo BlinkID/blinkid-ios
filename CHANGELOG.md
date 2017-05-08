@@ -1,3 +1,26 @@
+## 2.8.0
+
+- Improvements in iOS SDK: 
+    - Reduced library size by more than 20%
+    - Fixed case sensitivity in class & file naming
+    - ID result classes which have Date fields now return both parsed `NSDate` and raw `NSString`
+- Improvements in scanning:
+    - TopUp scanning improvements
+    - Restructured German ID recognizers into:
+        - GermanIDFrontRecognizer, for scanning front side of the new German ID
+        - GermanIDBackRecognizer, for scanning back side of the new German ID
+        - GermanOldIDRecognizer, for scanning front side of the old German ID
+        - GermanPassportRecognizer, for scanning front side of the German Passport
+    - Splitting address on new German IDs to ZIP code, city, street and house number
+    - Added name and surname dictionaries for the German ID front side recognizer which improves the scanning performance
+    - MyKadRecognizer now knows how to split address to street, ZIP code, city and state
+    - Improved CroIDCombinedRecognizer, which can scan both sides of the ID consecutively 
+    - Added support for polish IBAN without PL prefix in PPIbanParser
+    - Improvements in CroID scanning, use multiple scans to boost confidence
+- Improvements in Samples:
+    - Added MicroBlinkDynamic sample which packages our static library into a dynamic framework
+    - Added libz to all samples to prevent linker errors (caused by slimming down the SDK)
+
 ## 2.7.1
 
 - Fixed wrong Assertion which didn't allow usage of custom Resources bundle. 

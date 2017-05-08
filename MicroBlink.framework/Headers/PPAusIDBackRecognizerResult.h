@@ -35,9 +35,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *height;
 
 /**
+ * The date of issue of the Austrian ID in DD.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+
+/**
  * The date of issue of the Austrian ID.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
+@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
 
 /**
  * The eye color of the Austrian ID owner.

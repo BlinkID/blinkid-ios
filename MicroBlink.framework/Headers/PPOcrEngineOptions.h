@@ -62,6 +62,24 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @end
 
 /**
+ * Type of the document which recognizer scans
+ */
+typedef NS_ENUM(NSUInteger, PPDocumentType) {
+
+    /** Document type for latin documents used with BlinkOCR recognizer */
+    PPBlinkOCRDocumentType,
+
+    /** Document type for MICR font */
+    PPMicrDocumentType,
+
+    /** Document type for Arabic characters */
+    PPArabicDocumentType,
+
+    /** Document type for handwriting */
+    PPHandwrittenDocumentType
+};
+
+/**
  * Options used for OCR process. These options enable you to customize how some OCR parsers work.
  * For example, you can set character whitelists, character height, supported fonts etc.
  */
@@ -72,6 +90,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Creates PPOcrEngineOptions with default settings.
  */
 - (instancetype)init;
+
+/**
+ * Type of document scanned.
+ *
+ * Default: PPBlinkOCRDocumentType
+ */
+@property (nonatomic, assign) PPDocumentType documentType;
 
 /**
  * Minimal height of the line of text given in pixels. All chars smaller than this value will be ignored.

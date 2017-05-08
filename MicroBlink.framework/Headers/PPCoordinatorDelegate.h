@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "PPLivenessAction.h"
+#import "PPLivenessError.h"
+
 @class PPMetadata;
 @class PPCoordinator;
 @class PPOcrLayout;
@@ -24,7 +27,7 @@
 @optional
 
 /**
- *Called when the recognition of a current image is initiated
+ * Called when the recognition of a current image is initiated
  */
 - (void)coordinatorDidStartDetection:(PPCoordinator *)coordinator;
 
@@ -43,6 +46,11 @@
  * Called when the recognition of a current image starts
  */
 - (void)coordinatorDidStartRecognition:(PPCoordinator *)coordinator;
+
+/**
+ * Called when the recognition manager finishes scanning the first side of the document
+ */
+- (void)coordinator:(PPCoordinator *)coordinator didFinishRecognitionFirstSide:(PPRecognizerResult *)result;
 
 /**
  * Called when the recognition one recognizer finishes
@@ -78,5 +86,15 @@
  * TODO Ugly way of passing UI-related transformation information that should not be here
  */
 - (CGAffineTransform)coordinatorAffineTransformToScreen:(PPCoordinator *)coordinator;
+
+/**
+ *  Only liveness uses this. Liveness recognizer requires an action from the user.
+ */
+- (void)coordinator:(PPCoordinator *)coordinator didRequestLivenessAction:(PPLivenessAction)action;
+
+/**
+ *  Only liveness uses this. Liveness recognizer found an issue with face positioning.
+ */
+- (void)coordinator:(PPCoordinator *)coordinator didFindLivenessActionError:(PPLivenessError)error;
 
 @end

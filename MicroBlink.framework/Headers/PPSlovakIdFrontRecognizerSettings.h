@@ -1,5 +1,5 @@
 //
-//  PPSlovakIdFrontRecognizerSettings.h
+//  PPSlovakIDFrontRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/08/16.
@@ -14,7 +14,7 @@
  * Slovakian Front ID recognizer is used for scanning front side of Slovakian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovakIdFrontRecognizerSettings : PPRecognizerSettings
+@interface PPSlovakIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.

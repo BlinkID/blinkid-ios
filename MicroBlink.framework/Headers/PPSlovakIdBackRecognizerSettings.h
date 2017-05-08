@@ -1,5 +1,5 @@
 //
-//  PPSlovakIdBackRecognizerSettings.h
+//  PPSlovakIDBackRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/08/16.
@@ -14,7 +14,7 @@
  * Slovakian Back ID recognizer is used for scanning back side of Slovakian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovakIdBackRecognizerSettings : PPRecognizerSettings
+@interface PPSlovakIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.

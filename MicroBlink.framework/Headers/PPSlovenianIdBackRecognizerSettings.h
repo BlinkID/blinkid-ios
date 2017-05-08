@@ -1,5 +1,5 @@
 //
-//  PPSlovenianIdBackRecognizerSettings.h
+//  PPSlovenianIDBackRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/09/16.
@@ -14,7 +14,7 @@
  * Slovenian Back ID recognizer is used for scanning back side of Slovenian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovenianIdBackRecognizerSettings : PPRecognizerSettings
+@interface PPSlovenianIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.

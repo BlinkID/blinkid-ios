@@ -1,5 +1,5 @@
 //
-//  PPGermanIdFrontRecognizerSettings.h
+//  PPGermanIDFrontRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/08/16.
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German ID Front recognizer is used for scanning front side of German ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanIdFrontRecognizerSettings : PPRecognizerSettings
+@interface PPGermanIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.

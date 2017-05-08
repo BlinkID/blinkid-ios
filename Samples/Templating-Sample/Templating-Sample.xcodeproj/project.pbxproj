@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E17B21EBB41DD00DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17B11EBB41DD00DCD6B4 /* libz.tbd */; };
 		3153E6741D08758900797C93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3153E6731D08758900797C93 /* main.m */; };
 		3153E6771D08758900797C93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3153E6761D08758900797C93 /* AppDelegate.m */; };
 		3153E67A1D08758900797C93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3153E6791D08758900797C93 /* ViewController.m */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E17B11EBB41DD00DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3153E66F1D08758900797C93 /* Templating-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Templating-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3153E6731D08758900797C93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3153E6751D08758900797C93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E17B21EBB41DD00DCD6B4 /* libz.tbd in Frameworks */,
 				3153E6951D097A4800797C93 /* libiconv.tbd in Frameworks */,
 				3153E6931D097A4200797C93 /* libc++.tbd in Frameworks */,
 				3153E68E1D097A3C00797C93 /* Accelerate.framework in Frameworks */,
@@ -117,6 +120,7 @@
 				3153E68D1D097A3C00797C93 /* CoreMedia.framework */,
 				3153E6941D097A4800797C93 /* libiconv.tbd */,
 				3153E6921D097A4200797C93 /* libc++.tbd */,
+				184E17B11EBB41DD00DCD6B4 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

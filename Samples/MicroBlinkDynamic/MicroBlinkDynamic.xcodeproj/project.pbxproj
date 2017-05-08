@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		184A7F301EAF536000C1AC54 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18841BBE1EAAB4F800E2F81C /* libc++.tbd */; };
+		184E179F1EBB382B00DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E179E1EBB382B00DCD6B4 /* libz.tbd */; };
 		18841BAF1EAAB46C00E2F81C /* MicroBlinkDynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 18841BAD1EAAB46C00E2F81C /* MicroBlinkDynamic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18841BB91EAAB48500E2F81C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18841BB71EAAB48500E2F81C /* MicroBlink.framework */; };
 		18841BBC1EAAB4BE00E2F81C /* PPConserve.h in Headers */ = {isa = PBXBuildFile; fileRef = 18841BBA1EAAB4BE00E2F81C /* PPConserve.h */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E179E1EBB382B00DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18841BAA1EAAB46C00E2F81C /* MicroBlinkDynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MicroBlinkDynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18841BAD1EAAB46C00E2F81C /* MicroBlinkDynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroBlinkDynamic.h; sourceTree = "<group>"; };
 		18841BAE1EAAB46C00E2F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E179F1EBB382B00DCD6B4 /* libz.tbd in Frameworks */,
 				184A7F301EAF536000C1AC54 /* libc++.tbd in Frameworks */,
 				18841BB91EAAB48500E2F81C /* MicroBlink.framework in Frameworks */,
 				18841BC11EAAB50200E2F81C /* Accelerate.framework in Frameworks */,
@@ -88,6 +91,7 @@
 				18841BB71EAAB48500E2F81C /* MicroBlink.framework */,
 				18841BC01EAAB50200E2F81C /* Accelerate.framework */,
 				18841BBE1EAAB4F800E2F81C /* libc++.tbd */,
+				184E179E1EBB382B00DCD6B4 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

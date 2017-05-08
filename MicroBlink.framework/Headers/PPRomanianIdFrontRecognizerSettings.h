@@ -1,5 +1,5 @@
 //
-//  PPRomanianIdFrontRecognizerSettings.h
+//  PPRomanianIDFrontRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by Jura on 22/03/17.
@@ -14,7 +14,7 @@
  * Romanian Front ID recognizer is used for scanning front side of Czech ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPRomanianIdFrontRecognizerSettings : PPRecognizerSettings
+@interface PPRomanianIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.

@@ -6,7 +6,7 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPRecognizerSettings.h"
+#import "PPCombinedRecognizerSettings.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Croatian Combined ID recognizer is used for scanning both front and back side of croatian IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPCroIDCombinedRecognizerSettings : PPRecognizerSettings
+@interface PPCroIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -53,7 +53,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displayFaceImage;
+@property (nonatomic, assign) BOOL returnFacePhoto;
+
+/**
+ * Sets whether face photo should be encoded in the result object returned by didOutputResult:
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL encodeFacePhoto;
 
 /**
  * Sets whether signature image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -61,7 +68,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displaySignatureImage;
+@property (nonatomic, assign) BOOL returnSignaturePhoto;
+
+/**
+ * Sets whether signature image should be encoded in the result object returned by didOutputResult:
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL encodeSignaturePhoto;
 
 /**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -69,7 +83,15 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displayFullDocumentImage;
+@property (nonatomic, assign) BOOL returnFullDocumentPhoto;
+
+/**
+ * Sets whether full document image should be encoded in the result object returned by didOutputResult:
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL encodeFullDocumentPhoto;
+
 
 @end
 

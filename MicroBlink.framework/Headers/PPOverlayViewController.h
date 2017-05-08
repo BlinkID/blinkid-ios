@@ -15,6 +15,9 @@
 
 #import "PPDetectorResult.h"
 
+#import "PPLivenessAction.h"
+#import "PPLivenessError.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class PPOcrLayout;
@@ -217,6 +220,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (void)cameraViewControllerDidStartRecognition:(UIViewController<PPScanningViewController> *)cameraViewController;
 
 /**
+ Camera view reports finished recognition of the first side of the document. After this, recognition of the back side immediately
+ Follows. Overlay is responsible for changing the appearance.
+ */
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
+    didFinishRecognitionFirstSide:(PPRecognizerResult *)result;
+
+/**
  Camera view controller ended the recognition cycle with a certain Scanning result.
  The scanning result cannot be considered as valid, sometimes here are received objects which
  contain only partial scanning information.
@@ -236,7 +246,32 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
             didOutputResults:(nullable NSArray<PPRecognizerResult *> *)results;
 
+/**
+ * Camera view controller ended with recognition metadata.
+ * This is always called *before* method did output results
+ *
+ *  @param cameraViewController scaning view controller instance
+ *  @param metadata             returned metadata
+ */
 - (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didOutputMetadata:(PPMetadata *)metadata;
+
+/**
+ * Camera view requested a specific liveness action
+ *
+ * @param cameraViewController  scanning view controller instance
+ * @param action                action which was requested
+ */
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
+    didRequestLivenessAction:(PPLivenessAction)action;
+
+/**
+ * Camera view controller reported an error with liveness detection
+ *
+ * @param cameraViewController  scanning view controller instance
+ * @param error                 action which was requested
+ */
+- (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController
+    didFindLivenessActionError:(PPLivenessError)error;
 
 /**
  Called when a manual focus (user tapped the screen for example) will be performed at specified point.

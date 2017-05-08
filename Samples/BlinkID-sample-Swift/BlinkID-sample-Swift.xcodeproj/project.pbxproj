@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184E17A51EBB392500DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A41EBB392500DCD6B4 /* libz.tbd */; };
 		18757D681C3A591C002E2E6E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18757D671C3A591C002E2E6E /* AssetsLibrary.framework */; };
 		3139C8951C294F2C005AC32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C8941C294F2C005AC32C /* AppDelegate.swift */; };
 		3139C89A1C294F2C005AC32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C8981C294F2C005AC32C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184E17A41EBB392500DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18757D671C3A591C002E2E6E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		3139C8911C294F2C005AC32C /* BlinkID-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3139C8941C294F2C005AC32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 				18757D681C3A591C002E2E6E /* AssetsLibrary.framework in Frameworks */,
 				3139C8AC1C294FC1005AC32C /* CoreMedia.framework in Frameworks */,
 				3139C8AA1C294FB9005AC32C /* AVFoundation.framework in Frameworks */,
+				184E17A51EBB392500DCD6B4 /* libz.tbd in Frameworks */,
 				3139C8B21C294FDB005AC32C /* libiconv.tbd in Frameworks */,
 				3139C8B01C294FCE005AC32C /* libc++.tbd in Frameworks */,
 			);
@@ -103,6 +106,7 @@
 				3139C8AB1C294FC1005AC32C /* CoreMedia.framework */,
 				3139C8B11C294FDB005AC32C /* libiconv.tbd */,
 				3139C8AF1C294FCE005AC32C /* libc++.tbd */,
+				184E17A41EBB392500DCD6B4 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

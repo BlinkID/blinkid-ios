@@ -1,5 +1,5 @@
 //
-//  PPSlovenianIdBackRecognizerResult.h
+//  PPSlovenianIDBackRecognizerResult.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/09/16.
@@ -12,7 +12,7 @@
  * Class representing values obtained when scanning back side of Slovenian ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovenianIdBackRecognizerResult : PPMrtdRecognizerResult
+@interface PPSlovenianIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * The address of the Slovenian ID owner.
@@ -25,8 +25,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *authority;
 
 /**
+ * Date of issue of the Slovenian ID in dd.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+
+/**
  * Date of issue of the Slovenian ID.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfIssue;
+@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
 
 @end

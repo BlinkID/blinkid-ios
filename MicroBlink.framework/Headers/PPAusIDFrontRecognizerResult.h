@@ -30,9 +30,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 /**
+ 8 The date of birth of the Austrian ID owner in DD.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+
+/**
  * The date of birth of the Austrian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
+@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
 
 /**
  * The sex of the Austrian ID owner.

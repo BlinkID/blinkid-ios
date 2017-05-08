@@ -1,5 +1,5 @@
 //
-//  PPSerbianIdBackRecognizerSettings.h
+//  PPSerbianIDBackRecognizerSettings.h
 //  BlinkIdFramework
 //
 //  Created by DoDo on 09/11/2016.
@@ -14,7 +14,7 @@
  * Serbian Back ID recognizer is used for scanning back side of Serbian ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSerbianIdBackRecognizerSettings : PPRecognizerSettings
+@interface PPSerbianIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.

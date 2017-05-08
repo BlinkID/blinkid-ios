@@ -1,5 +1,5 @@
 //
-//  PPSlovakIdBackRecognizerResult.h
+//  PPSlovakIDBackRecognizerResult.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 22/08/16.
@@ -12,7 +12,7 @@
  * Class representing values obtained when scanning front side of Slovak ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSlovakIdBackRecognizerResult : PPMrtdRecognizerResult
+@interface PPSlovakIDBackRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * The address of the Slovakian ID owner.

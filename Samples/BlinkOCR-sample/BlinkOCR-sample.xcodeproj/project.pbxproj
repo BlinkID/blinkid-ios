@@ -10,6 +10,7 @@
 		181F2D821C5978BA00DBB3F7 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 181F2D801C5978BA00DBB3F7 /* MicroBlink.bundle */; };
 		181F2D831C5978BA00DBB3F7 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */; };
 		181F2D851C5978ED00DBB3F7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D841C5978ED00DBB3F7 /* Accelerate.framework */; };
+		184E17A91EBB411800DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A81EBB411800DCD6B4 /* libz.tbd */; };
 		186226B71AB1B0A6002D71E5 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 186226B51AB1B0A6002D71E5 /* en.strings */; };
 		187392091AA4B1060031D6C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187392081AA4B1060031D6C9 /* main.m */; };
 		1873920C1AA4B1070031D6C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873920B1AA4B1070031D6C9 /* AppDelegate.m */; };
@@ -28,6 +29,7 @@
 		181F2D801C5978BA00DBB3F7 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		181F2D841C5978ED00DBB3F7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		184E17A81EBB411800DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		186226B61AB1B0A6002D71E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/en.strings; sourceTree = "<group>"; };
 		187392031AA4B1060031D6C9 /* BlinkOCR-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkOCR-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187392071AA4B1060031D6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E17A91EBB411800DCD6B4 /* libz.tbd in Frameworks */,
 				18790A211C806240001FEF7F /* libiconv.tbd in Frameworks */,
 				18790A1F1C80623D001FEF7F /* libc++.tbd in Frameworks */,
 				181F2D851C5978ED00DBB3F7 /* Accelerate.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		189EA8DE1AADE7FE005732C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				184E17A81EBB411800DCD6B4 /* libz.tbd */,
 				181F2D841C5978ED00DBB3F7 /* Accelerate.framework */,
 				181F2D801C5978BA00DBB3F7 /* MicroBlink.bundle */,
 				181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */,

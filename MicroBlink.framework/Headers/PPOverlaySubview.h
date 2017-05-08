@@ -11,11 +11,15 @@
 #import "PPMicroBlinkDefines.h"
 #import "PPDetectorResult.h"
 
+#import "PPLivenessAction.h"
+#import "PPLivenessError.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol PPOverlaySubviewDelegate;
 
 @class PPOcrLayout;
+@class PPMetadata;
 @class PPOverlayViewController;
 @class PPRecognizerResult;
 
@@ -51,6 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)overlayDidStartRecognition;
 
 /**
+ Overlay finished recognition of the first side of the document. After this, recognition of the back side immediately
+ Follows. Overlay is responsible for changing the appearance.
+ */
+- (void)overlayDidFinishRecognitionFirstSide:(PPRecognizerResult *)result;
+
+/**
  Overlay ended the recognition cycle with a certain result.
  The scanning result cannot be considered as valid, sometimes here are received objects which
  contain only partial scanning information.
@@ -75,28 +85,56 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)overlayDidPublishProgress:(CGFloat)progress;
 
 /**
- Overlay reports the status of the object detection. Scanning status contain information
- about whether the scan was successful, whether the user holds the device too far from
- the object, whether the angles was too high, or the object isn't seen on the camera in
- it's entirety. If the object was found, the corner points of the object are returned.
+ * Overlay reports the status of the object detection. Scanning status contain information
+ * about whether the scan was successful, whether the user holds the device too far from
+ * the object, whether the angles was too high, or the object isn't seen on the camera in
+ * it's entirety. If the object was found, the corner points of the object are returned.
  */
 - (void)overlayDidFinishDetectionWithResult:(PPDetectorResult *)result;
 
 /**
- Overlay reports obtained ocr layout
-
- Besides the ocr layout itself, we get the ID of the layout so we can
- distinguish consecutive layouts of the same area on the image
+ * Overlay reports obtained ocr layout
+ *
+ * Besides the ocr layout itself, we get the ID of the layout so we can
+ * distinguish consecutive layouts of the same area on the image
  */
 - (void)overlayDidObtainOcrLayout:(PPOcrLayout *)ocrLayout withIdentifier:(NSString *)identifier;
 
 /**
- Overlay ended the recognition cycle with a certain Scanning result.
- The scanning result can be considered as valid, meaning it can be presented to the user for inspection.
- Use this method only if you need UI update on this event (although this is unnecessary in many cases).
- The actual result will be passed to your PPPhotoPayDelegate object.
+ * Overlay ended with recognition metadata.
+ * This is always called *before* method did output results
+ *
+ *  @param metadata             returned metadata
+ */
+- (void)overlayDidOutputMetadata:(PPMetadata *)metadata;
+
+/**
+ * Overlay ended the recognition cycle with a certain Scanning result.
+ * The scanning result can be considered as valid, meaning it can be presented to the user for inspection.
+ * Use this method only if you need UI update on this event (although this is unnecessary in many cases).
+ * The actual result will be passed to your PPPhotoPayDelegate object.
  */
 - (void)overlayDidOutputResults:(nullable NSArray<PPRecognizerResult *> *)results;
+
+/**
+ * Overlay was tapped and focusing at the given point is initiated
+ */
+- (void)willFocusAtPoint:(CGPoint)point;
+
+/**
+ * Called when overlay received request for a particular liveness verification action. Check
+ * PPLivenessAction enum for a list of all available actions.
+ *
+ *  @param action One particular liveness action
+ */
+- (void)overlayDidRequestLivenessAction:(PPLivenessAction)action;
+
+/**
+ * Called when overlay received error status about the liveness verification action.
+ *
+ *  @param error One particular liveness aciton error
+ */
+- (void)overlayDidFindLivenessActionError:(PPLivenessError)error;
 
 /**
  Method called when a rotation to a given

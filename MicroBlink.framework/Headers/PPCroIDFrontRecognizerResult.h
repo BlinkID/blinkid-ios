@@ -40,13 +40,23 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
+ * The date of birth of Croatian ID owner in DD.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+
+/**
  * The date of birth of Croatian ID owner
  */
-@property (nonatomic, readonly, nullable) NSString *dateOfBirth;
+@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+
+/**
+ * The document date of expiry of the Croatian ID in DD.MM.yyyy format.
+ */
+@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfExpiry;
 
 /**
  * The document date of expiry of the Croatian ID
  */
-@property (nonatomic, readonly, nullable) NSString *documentDateOfExpiry;
+@property (nonatomic, readonly, nullable) NSDate *documentDateOfExpiry;
 
 @end
