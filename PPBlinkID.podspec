@@ -43,6 +43,6 @@ Pod::Spec.new do |s|
   s.ios.requires_arc = false
   s.ios.vendored_frameworks = 'MicroBlink.framework'
   s.ios.frameworks = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia'
-  s.ios.libraries = 'c++', 'iconv'
+  s.ios.libraries = 'c++', 'iconv', 'z'
 
 end
