@@ -90,15 +90,15 @@
         [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
     }
 
-//    // Remove this code if you don't need Aztec scanning
-//    {
-//        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
-//        // You can obta
-//        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
-//
-//        // Add AztecRecognizerSettings to a list of used recognizer settings
-//        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
-//    }
+    // Remove this code if you don't need Aztec scanning
+    {
+        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
+        // You can obta
+        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
+
+        // Add AztecRecognizerSettings to a list of used recognizer settings
+        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
+    }
 
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
 
