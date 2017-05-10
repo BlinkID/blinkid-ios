@@ -12,9 +12,9 @@
 
 @property (nonatomic) NSInteger pageIndex;
 
-@property (nonatomic) UIImage* image;
+@property (nonatomic) UIImage *image;
 
-@property (nonatomic) NSString* text;
+@property (nonatomic) NSString *text;
 
 + (instancetype)allocFromStoryboard;
 

@@ -27,7 +27,7 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    //Encode properties, other class variables, etc
+    // Encode properties, other class variables, etc
     [encoder encodeObject:self.identifier forKey:@"id"];
     [encoder encodeObject:NSStringFromClass([self.factory class]) forKey:@"factory"];
     [encoder encodeObject:self.localizedTextfieldText forKey:@"textfield"];
@@ -41,19 +41,19 @@
 }
 
 - (id)initWithCoder:(NSCoder *)encoder {
-    if((self = [super init])) {
-        _identifier=[encoder decodeObjectForKey:@"id"];
+    if ((self = [super init])) {
+        _identifier = [encoder decodeObjectForKey:@"id"];
 
-        NSString *factory=[encoder decodeObjectForKey:@"factory"];
+        NSString *factory = [encoder decodeObjectForKey:@"factory"];
         _factory = [[NSClassFromString(factory) alloc] init];
-        _localizedTextfieldText=[encoder decodeObjectForKey:@"textfield"];
-        _localizedTooltip=[encoder decodeObjectForKey:@"tooltip"];
-        _localizedTitle=[encoder decodeObjectForKey:@"title"];
-        _scanned=[encoder decodeBoolForKey:@"scanner"];
-        _edited=[encoder decodeBoolForKey:@"edited"];
-        _value=[encoder decodeObjectForKey:@"value"];
-        _scanningRegionHeight=[encoder decodeFloatForKey:@"height"];
-        _scanningRegionWidth=[encoder decodeFloatForKey:@"width"];
+        _localizedTextfieldText = [encoder decodeObjectForKey:@"textfield"];
+        _localizedTooltip = [encoder decodeObjectForKey:@"tooltip"];
+        _localizedTitle = [encoder decodeObjectForKey:@"title"];
+        _scanned = [encoder decodeBoolForKey:@"scanner"];
+        _edited = [encoder decodeBoolForKey:@"edited"];
+        _value = [encoder decodeObjectForKey:@"value"];
+        _scanningRegionHeight = [encoder decodeFloatForKey:@"height"];
+        _scanningRegionWidth = [encoder decodeFloatForKey:@"width"];
     }
     return self;
 }

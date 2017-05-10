@@ -37,7 +37,10 @@
 
     UIViewController *startingViewController = [self viewControllerAtIndex:self.pageIndex];
 
-    [self setViewControllers:@[startingViewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self setViewControllers:@[ startingViewController ]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:NO
+                  completion:nil];
 }
 
 #pragma mark - UIPageViewControllerDataSource
@@ -107,7 +110,7 @@
     if (vc != nil) {
         [self.pageControllers setObject:vc atIndexedSubscript:index];
     }
-    
+
     return vc;
 }
 

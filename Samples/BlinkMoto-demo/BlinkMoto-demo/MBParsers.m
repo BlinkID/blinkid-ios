@@ -28,7 +28,7 @@
     vinElement.scanningRegionHeight = 0.20;
     vinElement.scanningRegionWidth = 0.86;
     [parsersArray addObject:vinElement];
-    
+
     PPLicensePlatesParserFactory *licensePlatesFactory = [[PPLicensePlatesParserFactory alloc] init];
     licensePlatesFactory.isRequired = NO;
     PPScanElement *licensePlatesElement = [[PPScanElement alloc] initWithIdentifier:@"License plate" parserFactory:licensePlatesFactory];

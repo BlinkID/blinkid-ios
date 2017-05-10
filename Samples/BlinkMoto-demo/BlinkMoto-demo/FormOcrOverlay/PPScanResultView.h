@@ -16,7 +16,7 @@
 /**
  * Text field which can be used to manually edit the text
  */
-@property(weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 /**
  * Animates the display of scan result view.
@@ -41,7 +41,9 @@
  *  @param animationDuration duration of the animation
  *  @param completion        completion block
  */
-- (void)animateHideToViewCenter:(UIView *)endCenter animationDuration:(NSTimeInterval)animationDuration completion:(void (^)(BOOL finished))completion;
+- (void)animateHideToViewCenter:(UIView *)endCenter
+              animationDuration:(NSTimeInterval)animationDuration
+                     completion:(void (^)(BOOL finished))completion;
 
 /**
  * Used for easier instantiation from Nib file

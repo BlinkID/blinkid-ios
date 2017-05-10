@@ -15,40 +15,40 @@
 /**
  * Array of NSString* objects which should be presented in Pivot view
  */
-@property(nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSArray *titles;
 
 /**
  * Font used in Pivot view control
  */
-@property(nonatomic, strong) UIFont *font;
+@property (nonatomic, strong) UIFont *font;
 
 /**
  * Margin bewteen elements in Pivot view.
  * Default is 30.f
  */
-@property(nonatomic, assign) CGFloat marginBetweenElements;
+@property (nonatomic, assign) CGFloat marginBetweenElements;
 
 /**
  * Margin between the edge of the UIView and first (and last) elements
  * Default is 20.f
  */
-@property(nonatomic, assign) CGFloat borderMargin;
+@property (nonatomic, assign) CGFloat borderMargin;
 
 /**
  * Duration for move animation.
  * Default: 0.4f;
  */
-@property(nonatomic, assign) CGFloat moveAnimationDuration;
+@property (nonatomic, assign) CGFloat moveAnimationDuration;
 
 /**
  * Delegate which gets notified on move events.
  */
-@property(nonatomic, weak) id<PPPivotViewDelegate> delegate;
+@property (nonatomic, weak) id<PPPivotViewDelegate> delegate;
 
 /**
  * If yes, Pivot view will be centered.
  */
-@property(nonatomic, assign) BOOL centered;
+@property (nonatomic, assign) BOOL centered;
 
 /**
  * After initializing the Pivot View and setting the titles property, the caller needs to call

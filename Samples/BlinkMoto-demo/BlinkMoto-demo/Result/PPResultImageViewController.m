@@ -42,7 +42,8 @@
 + (instancetype)allocFromStoryboard {
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"VinResult" bundle:nil];
-    PPResultImageViewController *vc = (PPResultImageViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PPResultImageViewController"];
+    PPResultImageViewController *vc =
+        (PPResultImageViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PPResultImageViewController"];
 
     return vc;
 }

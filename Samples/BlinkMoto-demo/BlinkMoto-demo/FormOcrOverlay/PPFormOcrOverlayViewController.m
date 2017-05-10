@@ -19,9 +19,13 @@
 
 #import <MicroBlink/PPTapToFocusOverlaySubview.h>
 
-CGPoint CGRectCenter(CGRect rect) { return CGPointMake(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2); }
+CGPoint CGRectCenter(CGRect rect) {
+    return CGPointMake(rect.origin.x + rect.size.width / 2, rect.origin.y + rect.size.height / 2);
+}
 
-CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect.size.height); }
+CGRect CGRectBounds(CGRect rect) {
+    return CGRectMake(0, 0, rect.size.width, rect.size.height);
+}
 
 @interface PPFormOcrOverlayViewController () <PPPivotViewDelegate, PPBlinkOcrHelpViewControllerDelegate>
 
@@ -54,7 +58,7 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
 @implementation PPFormOcrOverlayViewController
 
 - (void)setupSubviews {
-    
+
     self.ocrResultOverlaySubview = [[PPOcrResultOverlaySubview alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.ocrResultOverlaySubview];
     [self registerOverlaySubview:self.ocrResultOverlaySubview];
@@ -133,13 +137,11 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
         zxingRecognizerSettings.scanDataMatrix = YES;
 
         [self.coordinator.currentSettings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
-
     }
 
     self.coordinator.currentSettings.metadataSettings.currentFrame = YES;
 
     [self.coordinator applySettings];
-
 }
 
 - (NSArray *)pivotViewTitles {
@@ -177,7 +179,7 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     // hide light if not available on device
     if (![self.containerViewController overlayViewControllerShouldDisplayTorch:self]) {
         self.buttonLight.enabled = NO;
@@ -198,9 +200,15 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
 }
 
 - (void)registerForKeyboardNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 - (void)keyboardWasShown:(NSNotification *)aNotification {
@@ -209,11 +217,11 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                       self.scanResultView.center = CGRectCenter([self scanResultViewWithKeyboardFrame]);
-                       self.scanResultView.bounds = CGRectBounds([self scanResultViewWithKeyboardFrame]);
-                       self.scanResultView.backgroundColor = [self.scanResultView.backgroundColor colorWithAlphaComponent:1.0f];
+                         self.scanResultView.center = CGRectCenter([self scanResultViewWithKeyboardFrame]);
+                         self.scanResultView.bounds = CGRectBounds([self scanResultViewWithKeyboardFrame]);
+                         self.scanResultView.backgroundColor = [self.scanResultView.backgroundColor colorWithAlphaComponent:1.0f];
 
-                       self.ocrResultOverlaySubview.alpha = 0.0f;
+                         self.ocrResultOverlaySubview.alpha = 0.0f;
                      }
                      completion:nil];
 
@@ -226,11 +234,11 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                       self.scanResultView.center = CGRectCenter([self scanResultViewFrame]);
-                       self.scanResultView.bounds = CGRectBounds([self scanResultViewFrame]);
-                       self.scanResultView.backgroundColor = [self.scanResultView.backgroundColor colorWithAlphaComponent:0.7f];
+                         self.scanResultView.center = CGRectCenter([self scanResultViewFrame]);
+                         self.scanResultView.bounds = CGRectBounds([self scanResultViewFrame]);
+                         self.scanResultView.backgroundColor = [self.scanResultView.backgroundColor colorWithAlphaComponent:0.7f];
 
-                       self.ocrResultOverlaySubview.alpha = 1.0f;
+                         self.ocrResultOverlaySubview.alpha = 1.0f;
                      }
                      completion:nil];
 
@@ -281,9 +289,9 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
         [self.view addConstraint:constraint];
     }
 
-    self.scanningRegion = CGRectMake((self.viewfinder.frame.origin.x) / self.view.frame.size.width, (self.viewfinder.frame.origin.y) / self.view.frame.size.height,
-                                     (self.viewfinder.frame.size.width) / self.view.frame.size.width, (self.viewfinder.frame.size.height) / self.view.frame.size.height);
-
+    self.scanningRegion = CGRectMake(
+        (self.viewfinder.frame.origin.x) / self.view.frame.size.width, (self.viewfinder.frame.origin.y) / self.view.frame.size.height,
+        (self.viewfinder.frame.size.width) / self.view.frame.size.width, (self.viewfinder.frame.size.height) / self.view.frame.size.height);
 }
 
 - (void)updateScanningRegion {
@@ -294,7 +302,7 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
 
     [UIView animateWithDuration:0.4
                      animations:^{
-                        [self.view layoutIfNeeded];
+                         [self.view layoutIfNeeded];
                      }];
 }
 
@@ -442,10 +450,10 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
         }
     }
 
-    if (countI / (float) [result length] > 0.8) {
+    if (countI / (float)[result length] > 0.8) {
         return NO;
     }
-    
+
     return YES;
 }
 
@@ -505,7 +513,6 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
                         }
                         completion:nil];
     }
-
 }
 
 - (void)processOcrRecognizerResult:(PPBlinkOcrRecognizerResult *)ocrRecognizerResult {
@@ -569,7 +576,7 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
                           duration:self.pivotView.moveAnimationDuration / 2
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         animations:^{
-                          self.scanResultView.textField.text = val;
+                            self.scanResultView.textField.text = val;
                         }
                         completion:nil];
     }
@@ -598,7 +605,7 @@ CGRect CGRectBounds(CGRect rect) { return CGRectMake(0, 0, rect.size.width, rect
                                            toFrame:self.resultViewPlaceholder
                                  animationDuration:0.3
                                         completion:^(BOOL finished) {
-                                          self.scanResultView.userInteractionEnabled = YES;
+                                            self.scanResultView.userInteractionEnabled = YES;
                                         }];
 }
 

@@ -28,9 +28,12 @@
                                                                             options:nil];
     self.pageViewController.dataSource = self;
     self.pageViewController.delegate = self;
-    
+
     PPResultImageViewController *initialVC = [self viewControllerAtIndex:0];
-    [self.pageViewController setViewControllers:@[initialVC] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageViewController setViewControllers:@[ initialVC ]
+                                      direction:UIPageViewControllerNavigationDirectionForward
+                                       animated:NO
+                                     completion:nil];
 
     [self addChildViewController:self.pageViewController];
     self.pageViewController.view.frame = self.view.bounds;
@@ -54,14 +57,16 @@
 + (instancetype)allocFromStoryboard {
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"VinResult" bundle:nil];
-    PPResultPageViewController *vc = (PPResultPageViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PPResultPageViewController"];
+    PPResultPageViewController *vc =
+        (PPResultPageViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PPResultPageViewController"];
 
     return vc;
 }
 
 #pragma mark - UIPageViewControllerDataSource
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+      viewControllerBeforeViewController:(UIViewController *)viewController {
 
     PPResultImageViewController *imageViewController = (PPResultImageViewController *)viewController;
 
@@ -72,7 +77,8 @@
     return [self viewControllerAtIndex:imageViewController.pageIndex - 1];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+       viewControllerAfterViewController:(UIViewController *)viewController {
 
     PPResultImageViewController *imageViewController = (PPResultImageViewController *)viewController;
 
@@ -111,7 +117,10 @@
 
 #pragma mark - UIPageViewControllerDelegate
 
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+- (void)pageViewController:(UIPageViewController *)pageViewController
+         didFinishAnimating:(BOOL)finished
+    previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers
+        transitionCompleted:(BOOL)completed {
 
     UIViewController *viewController = [pageViewController.viewControllers lastObject];
     PPResultImageViewController *imageViewController = (PPResultImageViewController *)viewController;

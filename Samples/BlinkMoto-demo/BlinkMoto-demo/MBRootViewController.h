@@ -10,6 +10,5 @@
 
 @interface MBRootViewController : UIViewController
 
-
 @end
 

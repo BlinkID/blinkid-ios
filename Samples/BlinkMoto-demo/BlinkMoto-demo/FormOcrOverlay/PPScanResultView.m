@@ -10,15 +10,15 @@
 
 @interface PPScanResultView () <UITextFieldDelegate>
 
-@property(nonatomic, strong) UIView *textContainerView;
+@property (nonatomic, strong) UIView *textContainerView;
 
-@property(nonatomic, strong) UIView *borderView;
+@property (nonatomic, strong) UIView *borderView;
 
-@property(nonatomic, assign) CGFloat topMargin;
+@property (nonatomic, assign) CGFloat topMargin;
 
-@property(nonatomic) NSArray *currentConstraints;
+@property (nonatomic) NSArray *currentConstraints;
 
-@property(nonatomic) BOOL shown;
+@property (nonatomic) BOOL shown;
 
 @end
 
@@ -112,13 +112,15 @@
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                       [self layoutIfNeeded];
+                         [self layoutIfNeeded];
                      }
                      completion:completion];
     self.shown = YES;
 }
 
-- (void)animateHideToViewCenter:(UIView *)endCenter animationDuration:(NSTimeInterval)animationDuration completion:(void (^)(BOOL finished))completion {
+- (void)animateHideToViewCenter:(UIView *)endCenter
+              animationDuration:(NSTimeInterval)animationDuration
+                     completion:(void (^)(BOOL finished))completion {
     [self layoutIfNeeded];
     for (NSLayoutConstraint *constraint in self.currentConstraints) {
         [self.superview removeConstraint:constraint];
@@ -160,14 +162,14 @@
         delay:0.0
         options:UIViewAnimationOptionCurveEaseIn
         animations:^{
-          [self layoutIfNeeded];
+            [self layoutIfNeeded];
         }
         completion:^(BOOL finished) {
-          self.hidden = YES;
-          self.alpha = 0.0f;
-          if (completion) {
-              completion(finished);
-          }
+            self.hidden = YES;
+            self.alpha = 0.0f;
+            if (completion) {
+                completion(finished);
+            }
         }];
     self.shown = NO;
 }

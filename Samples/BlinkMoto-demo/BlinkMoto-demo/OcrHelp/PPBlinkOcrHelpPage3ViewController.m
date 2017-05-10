@@ -18,7 +18,7 @@
     [super viewDidLoad];
 
     self.helpMessageLabel.text = @"You can move between the fields by swiping the titles.";
-    
+
     self.closeLabel.text = @"Close";
     self.lightLabel.text = @"Light";
     self.helpLabel.text = @"Help";

@@ -20,27 +20,27 @@
 @interface PPFormOcrOverlayViewController : PPBaseOverlayViewController
 
 // needs to be weak to avoid a reference cycle
-@property(nonatomic, weak) PPCoordinator *coordinator;
+@property (nonatomic, weak) PPCoordinator *coordinator;
 
 /**
  * Delegate which is notified with important UI events
  */
-@property(nonatomic, weak) id<PPFormOcrOverlayViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<PPFormOcrOverlayViewControllerDelegate> delegate;
 
 /**
  * Array of PPScanElement objects which defines which Elements are scanned
  */
-@property(nonatomic, strong) NSArray *scanElements;
+@property (nonatomic, strong) NSArray *scanElements;
 
 /**
  * Button for turning on/off the light
  */
-@property(weak, nonatomic) IBOutlet UIButton *buttonLight;
+@property (weak, nonatomic) IBOutlet UIButton *buttonLight;
 
 /**
  * Button for moving on to next scannning element
  */
-@property(weak, nonatomic) IBOutlet UIButton *buttonNext;
+@property (weak, nonatomic) IBOutlet UIButton *buttonNext;
 
 /**
  * Button for moving on to next scannning element
@@ -50,17 +50,17 @@
 /**
  * Container for Pivot view (a list with scanning elements which can be scrolled)
  */
-@property(weak, nonatomic) IBOutlet UIView *pivotViewContainer;
+@property (weak, nonatomic) IBOutlet UIView *pivotViewContainer;
 
 /**
  * Tooltip which displays help message
  */
-@property(weak, nonatomic) IBOutlet UILabel *labelTooltip;
+@property (weak, nonatomic) IBOutlet UILabel *labelTooltip;
 
 /**
  * Viewfinder view
  */
-@property(weak, nonatomic) IBOutlet UIView *viewfinder;
+@property (weak, nonatomic) IBOutlet UIView *viewfinder;
 
 /**
  * Called when user presses Close button
@@ -90,7 +90,7 @@
  */
 - (IBAction)didTapNext:(id)sender;
 
-@property(weak, nonatomic) IBOutlet UIView *resultViewPlaceholder;
+@property (weak, nonatomic) IBOutlet UIView *resultViewPlaceholder;
 /**
  * Used for easier instantiation from Nib file
  *

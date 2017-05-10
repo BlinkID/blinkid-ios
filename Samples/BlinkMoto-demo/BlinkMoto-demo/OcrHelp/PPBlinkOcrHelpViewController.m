@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    PPBlinkOcrHelpPageViewController *pageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PPBlinkOcrHelpPageViewController"];
+    PPBlinkOcrHelpPageViewController *pageVC =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PPBlinkOcrHelpPageViewController"];
 
     [self addChildViewController:pageVC];
     [self.view insertSubview:pageVC.view belowSubview:self.closeButton];
@@ -33,8 +34,9 @@
 #pragma mark - instantiation
 
 + (instancetype)allocFromStoryboardWithName:(NSString *)storyboardName {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    PPBlinkOcrHelpViewController *controller = (PPBlinkOcrHelpViewController*)[storyboard instantiateViewControllerWithIdentifier:@"PPBlinkOcrHelpViewController"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    PPBlinkOcrHelpViewController *controller =
+        (PPBlinkOcrHelpViewController *)[storyboard instantiateViewControllerWithIdentifier:@"PPBlinkOcrHelpViewController"];
     return controller;
 }
 
@@ -44,7 +46,7 @@
     return UIStatusBarStyleLightContent;
 }
 
-#pragma mark - orientation 
+#pragma mark - orientation
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;

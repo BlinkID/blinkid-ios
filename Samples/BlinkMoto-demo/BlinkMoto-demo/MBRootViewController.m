@@ -38,9 +38,12 @@
 
     [self hideResultsButton:YES];
 
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:22.f/256.f green:145.f/256.f blue:192.f/256.f alpha:1.0];
+    self.navigationController.navigationBar.tintColor =
+        [UIColor colorWithRed:22.f / 256.f green:145.f / 256.f blue:192.f / 256.f alpha:1.0];
 
-    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor colorWithRed:22.f/256.f green:145.f/256.f blue:192.f/256.f alpha:1.0] forKey:NSForegroundColorAttributeName];
+    self.navigationController.navigationBar.titleTextAttributes =
+        [NSDictionary dictionaryWithObject:[UIColor colorWithRed:22.f / 256.f green:145.f / 256.f blue:192.f / 256.f alpha:1.0]
+                                    forKey:NSForegroundColorAttributeName];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,21 +64,27 @@
     [self.view layoutIfNeeded];
 
     [UIView animateWithDuration:0.4f
-                          delay:0.0f
-         usingSpringWithDamping:1.0f
-          initialSpringVelocity:0.0f
-                        options:0
-                     animations:^{
-                         [self.view removeConstraint:self.constraintImageProductLogoCenterY];
-                         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.imageProductLogo attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:0.3f constant:0.0f]];
+        delay:0.0f
+        usingSpringWithDamping:1.0f
+        initialSpringVelocity:0.0f
+        options:0
+        animations:^{
+            [self.view removeConstraint:self.constraintImageProductLogoCenterY];
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.imageProductLogo
+                                                                  attribute:NSLayoutAttributeCenterY
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                 multiplier:0.3f
+                                                                   constant:0.0f]];
 
-                         self.imageProductLogo.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
+            self.imageProductLogo.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
 
-                         [self.view layoutIfNeeded];
-                     }
-                     completion:^(BOOL finished) {
-                         nil;
-                     }];
+            [self.view layoutIfNeeded];
+        }
+        completion:^(BOOL finished) {
+            nil;
+        }];
 
     [self showScanButton];
 }
@@ -87,13 +96,13 @@
 
 - (void)showScanButton {
     [UIView animateWithDuration:0.4f
-                     animations:^{
-                         self.buttonScanVin.hidden = NO;
-                         self.buttonScanVin.alpha = 1.0f;
-                     }
-                     completion:^(BOOL finished) {
-                         nil;
-                     }];
+        animations:^{
+            self.buttonScanVin.hidden = NO;
+            self.buttonScanVin.alpha = 1.0f;
+        }
+        completion:^(BOOL finished) {
+            nil;
+        }];
 }
 
 - (void)hideResultsButton:(BOOL)hidden {
@@ -128,7 +137,11 @@
 
     if ([PPCameraCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:&error]) {
         NSString *messageString = [error localizedDescription];
-        [[[UIAlertView alloc] initWithTitle:@"Warning" message:messageString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Warning"
+                                    message:messageString
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
         return nil;
     }
 
@@ -139,7 +152,6 @@
 }
 
 
-
 - (void)presentFormScannerWithCoordinator:(PPCameraCoordinator *)coordinator {
 
     if (coordinator == nil) {
@@ -147,13 +159,18 @@
     }
 
     if (self.scanElements.count > 0) {
-        PPFormOcrOverlayViewController *overlayViewController = [PPFormOcrOverlayViewController allocFromNibName:@"PPFormOcrOverlayViewController"];
+        PPFormOcrOverlayViewController *overlayViewController =
+            [PPFormOcrOverlayViewController allocFromNibName:@"PPFormOcrOverlayViewController"];
 
         overlayViewController.scanElements = self.scanElements;
         overlayViewController.coordinator = coordinator;
         overlayViewController.delegate = self;
 
-        UIViewController<PPScanningViewController> *scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:nil overlayViewController:overlayViewController coordinator:coordinator error:nil];
+        UIViewController<PPScanningViewController> *scanningViewController =
+            [PPViewControllerFactory cameraViewControllerWithDelegate:nil
+                                                overlayViewController:overlayViewController
+                                                          coordinator:coordinator
+                                                                error:nil];
 
         [self presentViewController:scanningViewController animated:YES completion:nil];
 
@@ -187,7 +204,6 @@
 
     // results are shared in self.scanElements array
 }
-
 
 
 @end
