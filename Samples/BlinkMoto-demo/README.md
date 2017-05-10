@@ -135,6 +135,26 @@ Results are saved in  `self.scanElements` array. Each element has the following 
 @property (nonatomic, strong) NSString *value;
 ```
 
+## License key
+
+This implementation assumes license key si defined as a macro
+
+```objective-c
+settings.licenseSettings.licenseKey = @LICENSE_KEY;
+```
+
+You can add the license key in build settings in Preprocessor macros, such as
+
+```
+LICENSE_KEY='"XEZAY472-DTKR3JVM-ITIDM6OR-K5XRWXRS-KQAWQIBI-MMICIYYQ-ERRRBBFR-DA34JGNK"'
+```
+
+Or you can set the key in code:
+
+```objective-c
+settings.licenseSettings.licenseKey = @"XEZAY472-DTKR3JVM-ITIDM6OR-K5XRWXRS-KQAWQIBI-MMICIYYQ-ERRRBBFR-DA34JGNK";
+```
+
 ## Important:
 
 For production software, it's important to understand the implementation details behind ForOcrOverlay group of classes.
