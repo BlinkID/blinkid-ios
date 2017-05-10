@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result Page View Controller-->
+        <scene sceneID="NRJ-C4-Lv3">
+            <objects>
+                <viewController storyboardIdentifier="PPResultPageViewController" id="diP-ka-9Ko" customClass="PPResultPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Afm-JF-np0"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHh-6R-IVP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsH-gH-Fv6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ch-ET-42T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="113"/>
+        </scene>
+        <!--Result Image View Controller-->
+        <scene sceneID="7LK-p4-qcH">
+            <objects>
+                <viewController storyboardIdentifier="PPResultImageViewController" id="WBN-BI-tLc" customClass="PPResultImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UQT-T4-1sm"/>
+                        <viewControllerLayoutGuide type="bottom" id="xq2-Ha-mOh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4dR-Ac-rKR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2J7-T0-1Pw"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfB-RO-V1N">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.79139423076923077" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g7i-a2-0uV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.086274509799999996" green="0.56862745100000001" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2J7-T0-1Pw" firstAttribute="width" secondItem="4dR-Ac-rKR" secondAttribute="width" id="8bm-sa-XAd"/>
+                            <constraint firstItem="2J7-T0-1Pw" firstAttribute="centerY" secondItem="4dR-Ac-rKR" secondAttribute="centerY" id="9co-FA-us7"/>
+                            <constraint firstItem="QfB-RO-V1N" firstAttribute="width" secondItem="2J7-T0-1Pw" secondAttribute="width" constant="-80" id="G7t-EU-xCF"/>
+                            <constraint firstItem="2J7-T0-1Pw" firstAttribute="bottom" secondItem="QfB-RO-V1N" secondAttribute="bottom" constant="40" id="JXc-UF-Lpr"/>
+                            <constraint firstItem="2J7-T0-1Pw" firstAttribute="centerX" secondItem="4dR-Ac-rKR" secondAttribute="centerX" id="UTg-9A-Vo6"/>
+                            <constraint firstItem="QfB-RO-V1N" firstAttribute="centerX" secondItem="2J7-T0-1Pw" secondAttribute="centerX" id="oS0-hR-LB5"/>
+                            <constraint firstItem="2J7-T0-1Pw" firstAttribute="height" secondItem="4dR-Ac-rKR" secondAttribute="height" id="pFa-Uc-4I9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageResult" destination="2J7-T0-1Pw" id="eNA-sN-Xfm"/>
+                        <outlet property="labelResult" destination="QfB-RO-V1N" id="yWe-h7-bIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHp-93-cw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="113"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18C76AB61EC337CB006E5639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AB51EC337CB006E5639 /* main.m */; };
+		18C76ABF1EC337CB006E5639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76ABD1EC337CB006E5639 /* Main.storyboard */; };
+		18C76AC11EC337CB006E5639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AC01EC337CB006E5639 /* Assets.xcassets */; };
+		18C76AC41EC337CB006E5639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */; };
+		18C76AEA1EC33B06006E5639 /* PPFormOcrOverlay.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C76ADF1EC33B06006E5639 /* PPFormOcrOverlay.xcassets */; };
+		18C76AEB1EC33B06006E5639 /* PPFormOcrOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AE11EC33B06006E5639 /* PPFormOcrOverlayViewController.m */; };
+		18C76AEC1EC33B06006E5639 /* PPFormOcrOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AE21EC33B06006E5639 /* PPFormOcrOverlayViewController.xib */; };
+		18C76AED1EC33B06006E5639 /* PPPivotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AE41EC33B06006E5639 /* PPPivotView.m */; };
+		18C76AEE1EC33B06006E5639 /* PPScanElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AE61EC33B06006E5639 /* PPScanElement.m */; };
+		18C76AEF1EC33B06006E5639 /* PPScanResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AE81EC33B06006E5639 /* PPScanResultView.m */; };
+		18C76AF01EC33B06006E5639 /* PPScanResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AE91EC33B06006E5639 /* PPScanResultView.xib */; };
+		18C76AF41EC33B47006E5639 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF21EC33B47006E5639 /* MicroBlink.bundle */; };
+		18C76AF51EC33B47006E5639 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; };
+		18C76B031EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF71EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard */; };
+		18C76B041EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF81EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets */; };
+		18C76B051EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AFA1EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m */; };
+		18C76B061EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AFC1EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m */; };
+		18C76B071EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AFE1EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.m */; };
+		18C76B081EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B001EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m */; };
+		18C76B091EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B021EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m */; };
+		18C76B0D1EC33C46006E5639 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B0C1EC33C46006E5639 /* libc++.tbd */; };
+		18C76B0F1EC33C55006E5639 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B0E1EC33C55006E5639 /* libz.tbd */; };
+		18C76B111EC33C65006E5639 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B101EC33C65006E5639 /* Accelerate.framework */; };
+		18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B151EC33E59006E5639 /* MBAppDelegate.m */; };
+		18C76B1C1EC33E5A006E5639 /* MBParsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B171EC33E59006E5639 /* MBParsers.m */; };
+		18C76B1D1EC33E5A006E5639 /* MBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B191EC33E5A006E5639 /* MBRootViewController.m */; };
+		18C76B241EC33F19006E5639 /* PPResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B201EC33F19006E5639 /* PPResultImageViewController.m */; };
+		18C76B251EC33F19006E5639 /* PPResultPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B221EC33F19006E5639 /* PPResultPageViewController.m */; };
+		18C76B261EC33F19006E5639 /* VinResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76B231EC33F19006E5639 /* VinResult.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkMoto-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C76AB51EC337CB006E5639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18C76ABE1EC337CB006E5639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18C76AC01EC337CB006E5639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C76AC31EC337CB006E5639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C76AC51EC337CB006E5639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C76ADF1EC33B06006E5639 /* PPFormOcrOverlay.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PPFormOcrOverlay.xcassets; sourceTree = "<group>"; };
+		18C76AE01EC33B06006E5639 /* PPFormOcrOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFormOcrOverlayViewController.h; sourceTree = "<group>"; };
+		18C76AE11EC33B06006E5639 /* PPFormOcrOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFormOcrOverlayViewController.m; sourceTree = "<group>"; };
+		18C76AE21EC33B06006E5639 /* PPFormOcrOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPFormOcrOverlayViewController.xib; sourceTree = "<group>"; };
+		18C76AE31EC33B06006E5639 /* PPPivotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPivotView.h; sourceTree = "<group>"; };
+		18C76AE41EC33B06006E5639 /* PPPivotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPivotView.m; sourceTree = "<group>"; };
+		18C76AE51EC33B06006E5639 /* PPScanElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPScanElement.h; sourceTree = "<group>"; };
+		18C76AE61EC33B06006E5639 /* PPScanElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPScanElement.m; sourceTree = "<group>"; };
+		18C76AE71EC33B06006E5639 /* PPScanResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPScanResultView.h; sourceTree = "<group>"; };
+		18C76AE81EC33B06006E5639 /* PPScanResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPScanResultView.m; sourceTree = "<group>"; };
+		18C76AE91EC33B06006E5639 /* PPScanResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPScanResultView.xib; sourceTree = "<group>"; };
+		18C76AF21EC33B47006E5639 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		18C76AF31EC33B47006E5639 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		18C76AF71EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PPBlinkOcrHelp.storyboard; sourceTree = "<group>"; };
+		18C76AF81EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PPBlinkOcrHelp.xcassets; sourceTree = "<group>"; };
+		18C76AF91EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBlinkOcrHelpPage1ViewController.h; sourceTree = "<group>"; };
+		18C76AFA1EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBlinkOcrHelpPage1ViewController.m; sourceTree = "<group>"; };
+		18C76AFB1EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBlinkOcrHelpPage2ViewController.h; sourceTree = "<group>"; };
+		18C76AFC1EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBlinkOcrHelpPage2ViewController.m; sourceTree = "<group>"; };
+		18C76AFD1EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBlinkOcrHelpPage3ViewController.h; sourceTree = "<group>"; };
+		18C76AFE1EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBlinkOcrHelpPage3ViewController.m; sourceTree = "<group>"; };
+		18C76AFF1EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBlinkOcrHelpPageViewController.h; sourceTree = "<group>"; };
+		18C76B001EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBlinkOcrHelpPageViewController.m; sourceTree = "<group>"; };
+		18C76B011EC33B9D006E5639 /* PPBlinkOcrHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBlinkOcrHelpViewController.h; sourceTree = "<group>"; };
+		18C76B021EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBlinkOcrHelpViewController.m; sourceTree = "<group>"; };
+		18C76B0C1EC33C46006E5639 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18C76B0E1EC33C55006E5639 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		18C76B101EC33C65006E5639 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		18C76B141EC33E59006E5639 /* MBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		18C76B151EC33E59006E5639 /* MBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
+		18C76B161EC33E59006E5639 /* MBParsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBParsers.h; sourceTree = "<group>"; };
+		18C76B171EC33E59006E5639 /* MBParsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBParsers.m; sourceTree = "<group>"; };
+		18C76B181EC33E5A006E5639 /* MBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRootViewController.h; sourceTree = "<group>"; };
+		18C76B191EC33E5A006E5639 /* MBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRootViewController.m; sourceTree = "<group>"; };
+		18C76B1F1EC33F19006E5639 /* PPResultImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResultImageViewController.h; sourceTree = "<group>"; };
+		18C76B201EC33F19006E5639 /* PPResultImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResultImageViewController.m; sourceTree = "<group>"; };
+		18C76B211EC33F19006E5639 /* PPResultPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResultPageViewController.h; sourceTree = "<group>"; };
+		18C76B221EC33F19006E5639 /* PPResultPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResultPageViewController.m; sourceTree = "<group>"; };
+		18C76B231EC33F19006E5639 /* VinResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VinResult.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C76AAE1EC337CB006E5639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C76AF51EC33B47006E5639 /* MicroBlink.framework in Frameworks */,
+				18C76B111EC33C65006E5639 /* Accelerate.framework in Frameworks */,
+				18C76B0F1EC33C55006E5639 /* libz.tbd in Frameworks */,
+				18C76B0D1EC33C46006E5639 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18C76AA81EC337CB006E5639 = {
+			isa = PBXGroup;
+			children = (
+				18C76AB31EC337CB006E5639 /* BlinkMoto-demo */,
+				18C76AF11EC33B37006E5639 /* Frameworks */,
+				18C76AB21EC337CB006E5639 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18C76AB21EC337CB006E5639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C76AB31EC337CB006E5639 /* BlinkMoto-demo */ = {
+			isa = PBXGroup;
+			children = (
+				18C76ADE1EC33B06006E5639 /* FormOcrOverlay */,
+				18C76AF61EC33B9D006E5639 /* OcrHelp */,
+				18C76ABD1EC337CB006E5639 /* Main.storyboard */,
+				18C76AC01EC337CB006E5639 /* Assets.xcassets */,
+				18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */,
+				18C76AC51EC337CB006E5639 /* Info.plist */,
+				18C76B141EC33E59006E5639 /* MBAppDelegate.h */,
+				18C76B151EC33E59006E5639 /* MBAppDelegate.m */,
+				18C76B161EC33E59006E5639 /* MBParsers.h */,
+				18C76B171EC33E59006E5639 /* MBParsers.m */,
+				18C76B181EC33E5A006E5639 /* MBRootViewController.h */,
+				18C76B191EC33E5A006E5639 /* MBRootViewController.m */,
+				18C76B1E1EC33F19006E5639 /* Result */,
+				18C76AB41EC337CB006E5639 /* Supporting Files */,
+			);
+			path = "BlinkMoto-demo";
+			sourceTree = "<group>";
+		};
+		18C76AB41EC337CB006E5639 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AB51EC337CB006E5639 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18C76ADE1EC33B06006E5639 /* FormOcrOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				18C76ADF1EC33B06006E5639 /* PPFormOcrOverlay.xcassets */,
+				18C76AE01EC33B06006E5639 /* PPFormOcrOverlayViewController.h */,
+				18C76AE11EC33B06006E5639 /* PPFormOcrOverlayViewController.m */,
+				18C76AE21EC33B06006E5639 /* PPFormOcrOverlayViewController.xib */,
+				18C76AE31EC33B06006E5639 /* PPPivotView.h */,
+				18C76AE41EC33B06006E5639 /* PPPivotView.m */,
+				18C76AE51EC33B06006E5639 /* PPScanElement.h */,
+				18C76AE61EC33B06006E5639 /* PPScanElement.m */,
+				18C76AE71EC33B06006E5639 /* PPScanResultView.h */,
+				18C76AE81EC33B06006E5639 /* PPScanResultView.m */,
+				18C76AE91EC33B06006E5639 /* PPScanResultView.xib */,
+			);
+			path = FormOcrOverlay;
+			sourceTree = "<group>";
+		};
+		18C76AF11EC33B37006E5639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AF31EC33B47006E5639 /* MicroBlink.framework */,
+				18C76AF21EC33B47006E5639 /* MicroBlink.bundle */,
+				18C76B101EC33C65006E5639 /* Accelerate.framework */,
+				18C76B0E1EC33C55006E5639 /* libz.tbd */,
+				18C76B0C1EC33C46006E5639 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18C76AF61EC33B9D006E5639 /* OcrHelp */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AF71EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard */,
+				18C76AF81EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets */,
+				18C76AF91EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.h */,
+				18C76AFA1EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m */,
+				18C76AFB1EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.h */,
+				18C76AFC1EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m */,
+				18C76AFD1EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.h */,
+				18C76AFE1EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.m */,
+				18C76AFF1EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.h */,
+				18C76B001EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m */,
+				18C76B011EC33B9D006E5639 /* PPBlinkOcrHelpViewController.h */,
+				18C76B021EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m */,
+			);
+			path = OcrHelp;
+			sourceTree = "<group>";
+		};
+		18C76B1E1EC33F19006E5639 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				18C76B1F1EC33F19006E5639 /* PPResultImageViewController.h */,
+				18C76B201EC33F19006E5639 /* PPResultImageViewController.m */,
+				18C76B211EC33F19006E5639 /* PPResultPageViewController.h */,
+				18C76B221EC33F19006E5639 /* PPResultPageViewController.m */,
+				18C76B231EC33F19006E5639 /* VinResult.storyboard */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C76AB01EC337CB006E5639 /* BlinkMoto-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C76AC81EC337CB006E5639 /* Build configuration list for PBXNativeTarget "BlinkMoto-demo" */;
+			buildPhases = (
+				18C76AAD1EC337CB006E5639 /* Sources */,
+				18C76AAE1EC337CB006E5639 /* Frameworks */,
+				18C76AAF1EC337CB006E5639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlinkMoto-demo";
+			productName = "BlinkMoto-demo";
+			productReference = 18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C76AA91EC337CB006E5639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					18C76AB01EC337CB006E5639 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18C76AAC1EC337CB006E5639 /* Build configuration list for PBXProject "BlinkMoto-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C76AA81EC337CB006E5639;
+			productRefGroup = 18C76AB21EC337CB006E5639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C76AB01EC337CB006E5639 /* BlinkMoto-demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C76AAF1EC337CB006E5639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C76AC41EC337CB006E5639 /* LaunchScreen.storyboard in Resources */,
+				18C76AC11EC337CB006E5639 /* Assets.xcassets in Resources */,
+				18C76ABF1EC337CB006E5639 /* Main.storyboard in Resources */,
+				18C76AEC1EC33B06006E5639 /* PPFormOcrOverlayViewController.xib in Resources */,
+				18C76AF41EC33B47006E5639 /* MicroBlink.bundle in Resources */,
+				18C76B261EC33F19006E5639 /* VinResult.storyboard in Resources */,
+				18C76B041EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets in Resources */,
+				18C76B031EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard in Resources */,
+				18C76AF01EC33B06006E5639 /* PPScanResultView.xib in Resources */,
+				18C76AEA1EC33B06006E5639 /* PPFormOcrOverlay.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C76AAD1EC337CB006E5639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C76B061EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m in Sources */,
+				18C76B241EC33F19006E5639 /* PPResultImageViewController.m in Sources */,
+				18C76B091EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m in Sources */,
+				18C76B051EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m in Sources */,
+				18C76B081EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m in Sources */,
+				18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */,
+				18C76AEB1EC33B06006E5639 /* PPFormOcrOverlayViewController.m in Sources */,
+				18C76B251EC33F19006E5639 /* PPResultPageViewController.m in Sources */,
+				18C76B1D1EC33E5A006E5639 /* MBRootViewController.m in Sources */,
+				18C76AEE1EC33B06006E5639 /* PPScanElement.m in Sources */,
+				18C76AEF1EC33B06006E5639 /* PPScanResultView.m in Sources */,
+				18C76B1C1EC33E5A006E5639 /* MBParsers.m in Sources */,
+				18C76AED1EC33B06006E5639 /* PPPivotView.m in Sources */,
+				18C76B071EC33B9D006E5639 /* PPBlinkOcrHelpPage3ViewController.m in Sources */,
+				18C76AB61EC337CB006E5639 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18C76ABD1EC337CB006E5639 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C76ABE1EC337CB006E5639 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C76AC31EC337CB006E5639 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C76AC61EC337CB006E5639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C76AC71EC337CB006E5639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C76AC91EC337CB006E5639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				GCC_PREPROCESSOR_DEFINITIONS = "LICENSE_KEY='\"XEZAY472-DTKR3JVM-ITIDM6OR-K5XRWXRS-KQAWQIBI-MMICIYYQ-ERRRBBFR-DA34JGNK\"'";
+				INFOPLIST_FILE = "BlinkMoto-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkMoto-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18C76ACA1EC337CB006E5639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				GCC_PREPROCESSOR_DEFINITIONS = "LICENSE_KEY='\"XEZAY472-DTKR3JVM-ITIDM6OR-K5XRWXRS-KQAWQIBI-MMICIYYQ-ERRRBBFR-DA34JGNK\"'";
+				INFOPLIST_FILE = "BlinkMoto-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkMoto-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C76AAC1EC337CB006E5639 /* Build configuration list for PBXProject "BlinkMoto-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C76AC61EC337CB006E5639 /* Debug */,
+				18C76AC71EC337CB006E5639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C76AC81EC337CB006E5639 /* Build configuration list for PBXNativeTarget "BlinkMoto-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C76AC91EC337CB006E5639 /* Debug */,
+				18C76ACA1EC337CB006E5639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C76AA91EC337CB006E5639 /* Project object */;
+}
