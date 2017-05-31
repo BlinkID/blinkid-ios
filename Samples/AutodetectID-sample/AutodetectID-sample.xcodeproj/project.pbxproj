@@ -15,11 +15,26 @@
 		18D64AF31E83DE2E009AE8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AF21E83DE2E009AE8EA /* Assets.xcassets */; };
 		18D64AF61E83DE2E009AE8EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AF41E83DE2E009AE8EA /* LaunchScreen.storyboard */; };
 		18D64B001E83DEA3009AE8EA /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18D64AFE1E83DEA3009AE8EA /* MicroBlink.bundle */; };
-		18D64B011E83DEA3009AE8EA /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */; };
 		18D64B031E83DEC2009AE8EA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B021E83DEC2009AE8EA /* libc++.tbd */; };
 		18D64B051E83DEC6009AE8EA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B041E83DEC6009AE8EA /* libiconv.tbd */; };
 		18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64B061E83DECA009AE8EA /* Accelerate.framework */; };
+		A2351A241EDEFFA900C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */; };
+		A2351A251EDEFFA900C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18D64AFF1E83DEA3009AE8EA /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A261EDEFFA900C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A251EDEFFA900C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		184E17A01EBB38B300DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -45,11 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184E17A11EBB38B300DCD6B4 /* libz.tbd in Frameworks */,
-				18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */,
+				A2351A241EDEFFA900C1271E /* MicroBlink.framework in Frameworks */,
 				18D64B051E83DEC6009AE8EA /* libiconv.tbd in Frameworks */,
+				184E17A11EBB38B300DCD6B4 /* libz.tbd in Frameworks */,
 				18D64B031E83DEC2009AE8EA /* libc++.tbd in Frameworks */,
-				18D64B011E83DEA3009AE8EA /* MicroBlink.framework in Frameworks */,
+				18D64B071E83DECA009AE8EA /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +135,7 @@
 				18D64ADF1E83DE2E009AE8EA /* Sources */,
 				18D64AE01E83DE2E009AE8EA /* Frameworks */,
 				18D64AE11E83DE2E009AE8EA /* Resources */,
+				A2351A261EDEFFA900C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
