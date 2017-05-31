@@ -148,17 +148,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL imageProcessingEnabled;
 
 /**
- * Specifies if line grouping (collecting adjacent chars into lines) is enabled.
- *
- * Since grouping works perfectly well when the lines are parallel to the image edges,
- * the only reason why you would like to set this to NO is to develop your own grouping method, when lines
- * are slanted on the image.
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL lineGroupingEnabled;
-
-/**
  * Whitelist of characters used in the OCR process. The set must contain PPOcrCharKey objects.
  *
  * Default: all chars with all fonts.

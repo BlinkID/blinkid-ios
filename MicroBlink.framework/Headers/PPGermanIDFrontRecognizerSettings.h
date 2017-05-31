@@ -68,13 +68,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL extractNationality;
 
 /**
- * Defines if owner's date of birth should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfBirth;
-
-/**
  * Defines if date of expiry should be extracted from German ID
  *
  * Default: YES

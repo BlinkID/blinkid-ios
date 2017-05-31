@@ -209,16 +209,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic) CGFloat height;
 
 /**
- * YES if font is bold
- */
-@property (nonatomic, getter=isBold) BOOL bold;
-
-/**
- * YES if font is italic
- */
-@property (nonatomic, getter=isItalic) BOOL italic;
-
-/**
  * YES if char is uncertain
  */
 @property (nonatomic, getter=isUncertain) BOOL uncertain;
