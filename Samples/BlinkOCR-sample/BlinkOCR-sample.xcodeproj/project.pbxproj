@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		181F2D821C5978BA00DBB3F7 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 181F2D801C5978BA00DBB3F7 /* MicroBlink.bundle */; };
-		181F2D831C5978BA00DBB3F7 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */; };
 		181F2D851C5978ED00DBB3F7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D841C5978ED00DBB3F7 /* Accelerate.framework */; };
 		184E17A91EBB411800DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A81EBB411800DCD6B4 /* libz.tbd */; };
 		186226B71AB1B0A6002D71E5 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 186226B51AB1B0A6002D71E5 /* en.strings */; };
@@ -23,7 +22,23 @@
 		18CC81F71B697101000F6DA5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CC81F61B697101000F6DA5 /* CoreMedia.framework */; };
 		18CC81F91B697106000F6DA5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CC81F81B697106000F6DA5 /* AVFoundation.framework */; };
 		18CC81FD1B697133000F6DA5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CC81FC1B697133000F6DA5 /* AudioToolbox.framework */; };
+		A2351A2D1EDF005200C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */; };
+		A2351A2E1EDF005200C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 181F2D811C5978BA00DBB3F7 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A2F1EDF005200C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A2E1EDF005200C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		181F2D801C5978BA00DBB3F7 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
@@ -53,14 +68,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184E17A91EBB411800DCD6B4 /* libz.tbd in Frameworks */,
-				18790A211C806240001FEF7F /* libiconv.tbd in Frameworks */,
-				18790A1F1C80623D001FEF7F /* libc++.tbd in Frameworks */,
+				A2351A2D1EDF005200C1271E /* MicroBlink.framework in Frameworks */,
 				181F2D851C5978ED00DBB3F7 /* Accelerate.framework in Frameworks */,
-				181F2D831C5978BA00DBB3F7 /* MicroBlink.framework in Frameworks */,
 				18CC81FD1B697133000F6DA5 /* AudioToolbox.framework in Frameworks */,
 				18CC81F91B697106000F6DA5 /* AVFoundation.framework in Frameworks */,
 				18CC81F71B697101000F6DA5 /* CoreMedia.framework in Frameworks */,
+				184E17A91EBB411800DCD6B4 /* libz.tbd in Frameworks */,
+				18790A211C806240001FEF7F /* libiconv.tbd in Frameworks */,
+				18790A1F1C80623D001FEF7F /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +150,7 @@
 				187391FF1AA4B1060031D6C9 /* Sources */,
 				187392001AA4B1060031D6C9 /* Frameworks */,
 				187392011AA4B1060031D6C9 /* Resources */,
+				A2351A2F1EDF005200C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
