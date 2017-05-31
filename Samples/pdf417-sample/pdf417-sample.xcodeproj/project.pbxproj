@@ -22,9 +22,24 @@
 		3158810D1C3C0C6C0083850C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158810C1C3C0C6C0083850C /* CoreMedia.framework */; };
 		3158810F1C3C0C750083850C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158810E1C3C0C750083850C /* AudioToolbox.framework */; };
 		315881111C3C0C7C0083850C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315881101C3C0C7C0083850C /* AVFoundation.framework */; };
-		315881501C3C150D0083850C /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158814E1C3C150D0083850C /* MicroBlink.framework */; };
 		31F013661C69EED800F6DBCD /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31F013651C69EED800F6DBCD /* MicroBlink.bundle */; };
+		A2351A361EDF00FE00C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3158814E1C3C150D0083850C /* MicroBlink.framework */; };
+		A2351A371EDF00FE00C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3158814E1C3C150D0083850C /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A381EDF00FE00C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A371EDF00FE00C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		184E17AF1EBB41B600DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -56,10 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2351A361EDF00FE00C1271E /* MicroBlink.framework in Frameworks */,
 				315881111C3C0C7C0083850C /* AVFoundation.framework in Frameworks */,
 				3158810F1C3C0C750083850C /* AudioToolbox.framework in Frameworks */,
 				3158810D1C3C0C6C0083850C /* CoreMedia.framework in Frameworks */,
-				315881501C3C150D0083850C /* MicroBlink.framework in Frameworks */,
 				3158810B1C3C0C670083850C /* Accelerate.framework in Frameworks */,
 				315881091C3C0C620083850C /* libiconv.tbd in Frameworks */,
 				184E17B01EBB41B600DCD6B4 /* libz.tbd in Frameworks */,
@@ -156,6 +171,7 @@
 				315880E01C3C0B990083850C /* Sources */,
 				315880E11C3C0B990083850C /* Frameworks */,
 				315880E21C3C0B990083850C /* Resources */,
+				A2351A381EDF00FE00C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
