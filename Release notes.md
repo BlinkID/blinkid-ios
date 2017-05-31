@@ -1,3 +1,37 @@
+## 2.9.0
+
+- Updates and additions:
+    - Microblink.framework is now a dynamic framework. The change is introduced because of the following reasons:
+        - isolation of code
+        - smaller binary size - roughly 16%
+    - Improved Screen shown when Camera permission is not granted:
+        - fixed crash which happened on tap anywhere on screen
+        - close button can now be removed (for example, if the scanning screen is inside `UINavigationController` instance)
+        - Header is now public so you can instantiate that class if needed
+    - Updated PPUiSettings with new features:
+        - flag `showStatusBar` which you can use to show or hide status bar on camera screen 
+        - flag `showCloseButton` which you can use to show or hide close button on camera screen. By default it's presented, but when inside `UINavigationController` it should be hidden
+        - flat `showTorchButton` which you can use to show or hide torch button on camera screen.
+    - Deprecated `PPHelpDisplayMode`. You should replace it with a custom logic for presenting help inside the application using the SDK.
+    - Renamed internal extension method with namespace so that they don't interfere with third party libraries
+    - Added standard tap to focus overlay subview in all default OverlayViewControllers. Also added it as a public header.
+    - PPScanningViewController now has a simple method to turn on torch
+    - Simplified `PPOcrLayout` class (removed properties which were not used)
+
+- Bugfixes:
+    - Fixed case sensitivity in class & file naming
+    - Fixed issue which sometimes caused scanning not to be started when the user is asked for camera permission (first run of the app)
+    - Fixed rare crash which Camera paused label UI being updated on background thread
+    - Fixed incorrect handling of camera mirror when using front facing camera
+    - Fixed crash which sometimes happened when presenting help screens (if `PPHelpDisplayModeAlways` or `PPHelpDisplayModeFirstRun` were used)
+
+ - Improvements in ID scanning performance:
+     - added PPGermanIDCombinedRecognizer which enables reading of all data contained on German passports, old and new IDs 
+     - Improvements in MRTD scanning:
+        - WSA (World Goverment of World Citizens) added as valid country code when parsing MRZ 
+    - Added option of encoding images of MRZ and full document in Machine readable travel documents and encoding of images in DocumentFaceRecognizer
+    - Handling names containing dashes and extra long names inside combined recognizers     
+    
 ## 2.8.0
 
 - Improvements in iOS SDK: 
