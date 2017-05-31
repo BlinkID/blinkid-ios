@@ -23,8 +23,23 @@
 		3170EA031CC0EF680017ABF0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170EA021CC0EF680017ABF0 /* libc++.tbd */; };
 		3170EA051CC0EF6F0017ABF0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3170EA041CC0EF6F0017ABF0 /* libiconv.tbd */; };
 		319649BD1D0AE282000561C5 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 319649BB1D0AE282000561C5 /* MicroBlink.bundle */; };
-		319649BE1D0AE282000561C5 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319649BC1D0AE282000561C5 /* MicroBlink.framework */; };
+		A2351A331EDF00C200C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319649BC1D0AE282000561C5 /* MicroBlink.framework */; };
+		A2351A341EDF00C200C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 319649BC1D0AE282000561C5 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A351EDF00C200C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A341EDF00C200C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1819B6F01B7745150002325E /* DirectAPI-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirectAPI-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,14 +72,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184E17AE1EBB419B00DCD6B4 /* libz.tbd in Frameworks */,
-				3170EA051CC0EF6F0017ABF0 /* libiconv.tbd in Frameworks */,
-				3170EA031CC0EF680017ABF0 /* libc++.tbd in Frameworks */,
+				A2351A331EDF00C200C1271E /* MicroBlink.framework in Frameworks */,
 				3170E9FE1CC0EEE60017ABF0 /* Accelerate.framework in Frameworks */,
-				319649BE1D0AE282000561C5 /* MicroBlink.framework in Frameworks */,
 				3170E9FF1CC0EEE60017ABF0 /* AudioToolbox.framework in Frameworks */,
 				3170EA001CC0EEE60017ABF0 /* AVFoundation.framework in Frameworks */,
 				3170EA011CC0EEE60017ABF0 /* CoreMedia.framework in Frameworks */,
+				184E17AE1EBB419B00DCD6B4 /* libz.tbd in Frameworks */,
+				3170EA051CC0EF6F0017ABF0 /* libiconv.tbd in Frameworks */,
+				3170EA031CC0EF680017ABF0 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +157,7 @@
 				1819B6EC1B7745150002325E /* Sources */,
 				1819B6ED1B7745150002325E /* Frameworks */,
 				1819B6EE1B7745150002325E /* Resources */,
+				A2351A351EDF00C200C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
