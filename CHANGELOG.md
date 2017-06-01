@@ -3,7 +3,7 @@
 - Updates and additions:
     - Microblink.framework is now a dynamic framework. The change is introduced because of the following reasons:
         - isolation of code
-        - smaller binary size - roughly 16%
+        - smaller binary size - roughly 38%
     - Improved Screen shown when Camera permission is not granted:
         - fixed crash which happened on tap anywhere on screen
         - close button can now be removed (for example, if the scanning screen is inside `UINavigationController` instance)
@@ -17,6 +17,10 @@
     - Added standard tap to focus overlay subview in all default OverlayViewControllers. Also added it as a public header.
     - PPScanningViewController now has a simple method to turn on torch
     - Simplified `PPOcrLayout` class (removed properties which were not used)
+    - Updated PPTopUpOcrParserFactory with new feature:
+        - flag `returnCodeWithoutPrefix` which does not return *digits* prefix and # at the end of scanned ussd code
+    - Updated PPMrtdRecognizerSettings with new feature:
+        - flag `allowUnverifiedResults` which allow obtaining results with incorrect check digits
 
 - Bugfixes:
     - Fixed case sensitivity in class & file naming
