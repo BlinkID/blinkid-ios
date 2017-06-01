@@ -63,6 +63,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL allowUnparsedResults;
 
 /**
+ * Set this to YES to allow obtaining of results with incorrect check digits.
+ * This flag will be taken into account only if Machine Readable Zone has been successfully parsed because only in that case check digits can be examined.
+ * 
+ * Default: NO.
+ */
+@property (nonatomic, assign) BOOL allowUnverifiedResults;
+
+/**
  * If YES, MRTD recognizer will determine the position of the whole
  * MRTD document, based on the position of the machine readable zone.
  *

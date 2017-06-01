@@ -38,6 +38,12 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic) BOOL allowNoPrefix;
 
 /**
+ * Do not return *digits* prefix and # at the end of scanned ussd code
+ * Default: NO.
+ */
+@property (nonatomic) BOOL returnCodeWithoutPrefix;
+
+/**
  * Initializes parser with desired top up prefix.
  */
 - (instancetype)initWithTopUpPrefix:(PPTopUpPrefix)topUpPrefix NS_DESIGNATED_INITIALIZER;

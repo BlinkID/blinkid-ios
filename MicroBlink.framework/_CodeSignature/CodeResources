@@ -370,7 +370,7 @@
 		</data>
 		<key>Headers/PPMrtdRecognizerSettings.h</key>
 		<data>
-		/QXPk4AJ6jXB41j34YvrXKj6FWg=
+		JkYbLpjO7X/IalJJ/o2TddHhTxw=
 		</data>
 		<key>Headers/PPMultiDetectorResult.h</key>
 		<data>
@@ -614,7 +614,7 @@
 		</data>
 		<key>Headers/PPTopUpOcrParserFactory.h</key>
 		<data>
-		knN2m8GnpU1bBDsDE5FiRMSYbNo=
+		1f1Le4ZHETVYbLBF74Tcmr+fko0=
 		</data>
 		<key>Headers/PPUiSettings.h</key>
 		<data>
@@ -658,7 +658,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8W84QFjNsyf6dl57YpTw1zKHYfY=
+		ev29sDsNFhRVhS8FDLgrjmCGdNA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1672,11 +1672,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/QXPk4AJ6jXB41j34YvrXKj6FWg=
+			JkYbLpjO7X/IalJJ/o2TddHhTxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			hgOak/IdAVdRhnOMBhjzbzhTzr1n4q3hty57nY+18eU=
+			0oJQHs471GaC8Chgcm7v868qb5IzRej/zoeQjE5Dya8=
 			</data>
 		</dict>
 		<key>Headers/PPMultiDetectorResult.h</key>
@@ -2343,11 +2343,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			knN2m8GnpU1bBDsDE5FiRMSYbNo=
+			1f1Le4ZHETVYbLBF74Tcmr+fko0=
 			</data>
 			<key>hash2</key>
 			<data>
-			yd5y+V9pXKyV2jr/ii/ONjj0dxJiKhYE72PhbBipTH4=
+			WWyg1dLe0hqhD43MSZE9leBcQq9JLfZiC7/XkXemNqI=
 			</data>
 		</dict>
 		<key>Headers/PPUiSettings.h</key>
