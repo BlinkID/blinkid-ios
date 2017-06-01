@@ -18,12 +18,27 @@
 		1842A1CE1ACED3AA00DE6CAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1CD1ACED3AA00DE6CAB /* Images.xcassets */; };
 		1842A1D11ACED3AA00DE6CAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842A1CF1ACED3AA00DE6CAB /* LaunchScreen.xib */; };
 		184E17A31EBB390900DCD6B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E17A21EBB390900DCD6B4 /* libz.tbd */; };
-		18827C2D1CD7A42E00248183 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18827C2C1CD7A42E00248183 /* MicroBlink.framework */; };
 		18A968CF1C44E26D003A408A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18A968CE1C44E26D003A408A /* MicroBlink.bundle */; };
 		18D0E8511C39A09B00E47EF5 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8501C39A09B00E47EF5 /* libiconv.tbd */; };
 		18D0E8591C39A16D00E47EF5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8581C39A16D00E47EF5 /* AudioToolbox.framework */; };
 		18D0E85B1C39A18800E47EF5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E85A1C39A18800E47EF5 /* AssetsLibrary.framework */; };
+		A2351A271EDEFFF700C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18827C2C1CD7A42E00248183 /* MicroBlink.framework */; };
+		A2351A281EDEFFF700C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18827C2C1CD7A42E00248183 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A291EDEFFF700C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A281EDEFFF700C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1809F2271C23061300DEE72E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -55,8 +70,8 @@
 			files = (
 				18D0E8591C39A16D00E47EF5 /* AudioToolbox.framework in Frameworks */,
 				1809F2281C23061300DEE72E /* Accelerate.framework in Frameworks */,
-				18827C2D1CD7A42E00248183 /* MicroBlink.framework in Frameworks */,
 				18D0E85B1C39A18800E47EF5 /* AssetsLibrary.framework in Frameworks */,
+				A2351A271EDEFFF700C1271E /* MicroBlink.framework in Frameworks */,
 				1809F22A1C23061B00DEE72E /* AVFoundation.framework in Frameworks */,
 				1809F22C1C23062300DEE72E /* CoreMedia.framework in Frameworks */,
 				184E17A31EBB390900DCD6B4 /* libz.tbd in Frameworks */,
@@ -136,6 +151,7 @@
 				1842A1B91ACED3AA00DE6CAB /* Sources */,
 				1842A1BA1ACED3AA00DE6CAB /* Frameworks */,
 				1842A1BB1ACED3AA00DE6CAB /* Resources */,
+				A2351A291EDEFFF700C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

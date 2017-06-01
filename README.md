@@ -55,13 +55,13 @@ pod try PPBlinkID
 platform :ios, '8.0'
 
 target 'TargetName' do
-  pod 'PPBlinkID', '~> 2.8.0'
+  pod 'PPBlinkID', '~> 2.9.0'
 end
 ```
 
 ## Requirements
 
-SDK package contains MicroBlink framework and one or more sample apps which demonstrate framework integration. Framework can be deployed on iOS 6.0 or later, iPhone 3GS or newer and iPad 2 or newer. 
+SDK package contains MicroBlink framework and one or more sample apps which demonstrate framework integration. Framework can be deployed on iOS 8.0 or later, iPhone 3GS or newer and iPad 2 or newer. 
 
 SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower perfomance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536).
 

@@ -57,6 +57,8 @@ class ViewController: UIViewController, PPScanningDelegate {
             // tell the library to get full image of the document. Setting this to YES makes sense just if
             // settings.metadataSettings.dewarpedImage = YES, otherwise it wastes CPU time.
             mrtdRecognizerSettings.dewarpFullDocument = false;
+            
+            mrtdRecognizerSettings.allowUnverifiedResults = true;
 
             // Add MRTD Recognizer setting to a list of used recognizer settings
             settings.scanSettings.add(mrtdRecognizerSettings)

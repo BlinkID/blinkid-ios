@@ -109,6 +109,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)playScanSuccesSound;
 
+/**
+ * Call to turn on torch without camera overlay
+ */
+- (void)willSetTorchOn:(BOOL)torchOn;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -46,14 +46,9 @@
 - (BOOL)shouldDisplayHelpButton;
 
 /**
- Overlay View Controller should know if it's presented modally or on navigation view controller.
-
- Use this method to ask if it's necessary to display Cancel button. (when on navigation view controller, button back is presented by
- default)
-
- This method replaced old method overlayViewControllerShouldDisplayCancel.
+ Check if status bar is hidden or showed
  */
-- (BOOL)isPresentedModally;
+- (BOOL)isStatusBarPresented;
 
 /**
  Overlay View Controller can ask it's delegete about the status of Torch

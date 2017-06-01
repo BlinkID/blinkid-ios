@@ -46,6 +46,8 @@
 #import "PPGermanOldIDRecognizerResult.h"
 #import "PPGermanPassportRecognizerSettings.h"
 #import "PPGermanPassportRecognizerResult.h"
+#import "PPGermanIDCombinedRecognizerSettings.h"
+#import "PPGermanIDCombinedRecognizerResult.h"
 
 // Malaysian immigration IDs (iKad)
 #import "PPiKadRecognizerSettings.h"
@@ -86,6 +88,10 @@
 #import "PPSlovenianIDBackRecognizerResult.h"
 #import "PPSlovenianIDFrontRecognizerSettings.h"
 #import "PPSlovenianIDFrontRecognizerResult.h"
+
+// Aztec barcode recognition
+#import "PPAztecRecognizerSettings.h"
+#import "PPAztecRecognizerResult.h"
 
 // Use all recognizers from BlinkInput
 #import "PPBlinkInputRecognizers.h"

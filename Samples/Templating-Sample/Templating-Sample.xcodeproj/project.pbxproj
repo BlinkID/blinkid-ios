@@ -21,9 +21,24 @@
 		3153E6931D097A4200797C93 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6921D097A4200797C93 /* libc++.tbd */; };
 		3153E6951D097A4800797C93 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6941D097A4800797C93 /* libiconv.tbd */; };
 		3153E6981D097A5900797C93 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3153E6961D097A5900797C93 /* MicroBlink.bundle */; };
-		3153E6991D097A5900797C93 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6971D097A5900797C93 /* MicroBlink.framework */; };
 		31F4D2DD1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31F4D2DC1D0EF87A00D87FE4 /* Croatian_ID_Images.xcassets */; };
+		A2351A391EDF013100C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6971D097A5900797C93 /* MicroBlink.framework */; };
+		A2351A3A1EDF013100C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3153E6971D097A5900797C93 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A3B1EDF013100C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A3A1EDF013100C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		184E17B11EBB41DD00DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -53,14 +68,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184E17B21EBB41DD00DCD6B4 /* libz.tbd in Frameworks */,
-				3153E6951D097A4800797C93 /* libiconv.tbd in Frameworks */,
-				3153E6931D097A4200797C93 /* libc++.tbd in Frameworks */,
+				A2351A391EDF013100C1271E /* MicroBlink.framework in Frameworks */,
 				3153E68E1D097A3C00797C93 /* Accelerate.framework in Frameworks */,
-				3153E6991D097A5900797C93 /* MicroBlink.framework in Frameworks */,
 				3153E68F1D097A3C00797C93 /* AudioToolbox.framework in Frameworks */,
 				3153E6901D097A3C00797C93 /* AVFoundation.framework in Frameworks */,
 				3153E6911D097A3C00797C93 /* CoreMedia.framework in Frameworks */,
+				184E17B21EBB41DD00DCD6B4 /* libz.tbd in Frameworks */,
+				3153E6951D097A4800797C93 /* libiconv.tbd in Frameworks */,
+				3153E6931D097A4200797C93 /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +150,7 @@
 				3153E66B1D08758900797C93 /* Sources */,
 				3153E66C1D08758900797C93 /* Frameworks */,
 				3153E66D1D08758900797C93 /* Resources */,
+				A2351A3B1EDF013100C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

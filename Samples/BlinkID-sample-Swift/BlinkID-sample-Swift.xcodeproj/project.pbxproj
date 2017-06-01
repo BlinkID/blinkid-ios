@@ -21,8 +21,23 @@
 		3139C8B21C294FDB005AC32C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8B11C294FDB005AC32C /* libiconv.tbd */; };
 		3155321E1D9418DA001B9440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155321D1D9418DA001B9440 /* ViewController.swift */; };
 		315532251D94241C001B9440 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 315532231D94241C001B9440 /* MicroBlink.bundle */; };
-		315532261D94241C001B9440 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; };
+		A2351A2A1EDF002000C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; };
+		A2351A2B1EDF002000C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2351A2C1EDF002100C1271E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2351A2B1EDF002000C1271E /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		184E17A41EBB392500DCD6B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -49,9 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2351A2A1EDF002000C1271E /* MicroBlink.framework in Frameworks */,
 				3139C8A81C294FB4005AC32C /* Accelerate.framework in Frameworks */,
 				3139C8AE1C294FC7005AC32C /* AudioToolbox.framework in Frameworks */,
-				315532261D94241C001B9440 /* MicroBlink.framework in Frameworks */,
 				18757D681C3A591C002E2E6E /* AssetsLibrary.framework in Frameworks */,
 				3139C8AC1C294FC1005AC32C /* CoreMedia.framework in Frameworks */,
 				3139C8AA1C294FB9005AC32C /* AVFoundation.framework in Frameworks */,
@@ -121,6 +136,7 @@
 				3139C88D1C294F2C005AC32C /* Sources */,
 				3139C88E1C294F2C005AC32C /* Frameworks */,
 				3139C88F1C294F2C005AC32C /* Resources */,
+				A2351A2C1EDF002100C1271E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Different options for displaying help
  */
-typedef NS_ENUM(NSUInteger, PPHelpDisplayMode) {
+typedef PP_DEPRECATED_IOS(1_0, 5_9) NS_ENUM(NSUInteger, PPHelpDisplayMode) {
 
     /** Defines that help should never be displayed */
     PPHelpDisplayModeNever,
@@ -41,6 +41,22 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: YES.
  */
 @property (nonatomic, assign) BOOL showCloseButton;
+
+/**
+ * If YES, default camera overlay will display Torch button.
+ * Usually, if camera is displayed inside Navigation View Controler, this is reasonable to set to NO.
+ *
+ * Default: YES.
+ */
+@property (nonatomic, assign) BOOL showTorchButton;
+
+/**
+ * If YES, default camera overlay will display Status bar.
+ * Usually, if camera is displayed inside Navigation View Controler, this is reasonable to set to YES.
+ *
+ * Default: NO.
+ */
+@property (nonatomic, assign) BOOL showStatusBar;
 
 /**
  * If YES, Overlay View Controller will be autorotated independently of ScanningViewController.
@@ -105,7 +121,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: PPHelpDisplayModeFirstRun
  */
-@property (nonatomic, assign) PPHelpDisplayMode helpDisplayMode;
+@property (nonatomic, assign) PPHelpDisplayMode helpDisplayMode PP_DEPRECATED_IOS(1_0, 5_9, "Perform manual help display in your app");
 
 
 /**

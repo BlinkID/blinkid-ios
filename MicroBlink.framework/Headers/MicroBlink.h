@@ -24,6 +24,10 @@
 #import "PPOcrLineOverlayViewController.h"
 #import "PPSegmentScanOverlayViewController.h"
 #import "PPTemplatingOverlayViewController.h"
+#import "PPTapToFocusOverlaySubview.h"
+
+// Permission denied view controller
+#import "PPPermissionDeniedViewController.h"
 
 // Overlay subviews
 #import "PPModernOcrResultOverlaySubview.h"
