@@ -26,7 +26,8 @@ Pod::Spec.new do |s|
 
   s.authors     = {
         "MicroBlink" => "info@microblink.com",
-        "Jurica Cerovec" => "jurica.cerovec@microblink.com"
+        "Jurica Cerovec" => "jurica.cerovec@microblink.com",
+        "Jura Skrlec" => "jura.skrlec@microblink.com"
   }
 
   s.source      = { 
