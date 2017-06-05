@@ -120,11 +120,33 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     [self.coordinator applySettings];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    [self updateScanningRegion];
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
     [self.containerViewController setScanningRegion:self.viewfinder.scanningRegion];
 
+}
+
+- (void)updateScanningRegion {
+    
+    [self.view layoutIfNeeded];
+    
+    [self updateScanningRegionArea];
+    
+    [UIView animateWithDuration:0.4
+                     animations:^{
+                         [self.view layoutIfNeeded];
+                     }];
+}
+
+- (void)updateScanningRegionArea {
+    self.scanningRegion = self.viewfinder.scanningRegion;
 }
 
 #pragma mark - notifications

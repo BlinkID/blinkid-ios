@@ -718,10 +718,10 @@ static const CGFloat kButtonAcceptMargin = 16.0;
 }
 
 - (CGRect)scanningRegion {
-    CGRect scanningRegion = CGRectMake(self.viewfinder.frame.origin.x / self.bounds.size.width,
-                                       self.viewfinder.frame.origin.y / self.bounds.size.height,
-                                       self.viewfinder.frame.size.width / self.bounds.size.width,
-                                       self.viewfinder.frame.size.height / self.bounds.size.height);
+    CGRect scanningRegion = CGRectMake(self.viewfinder.frame.origin.x / self.frame.size.width,
+                                       self.viewfinder.frame.origin.y / self.frame.size.height,
+                                       self.viewfinder.frame.size.width / self.frame.size.width,
+                                       self.viewfinder.frame.size.height / self.frame.size.height);
     
     // We need to ensure that the region is always in the image coordinate space
     // Processing code uses the scanningOrientation to rectify the roi-ed image if needed
