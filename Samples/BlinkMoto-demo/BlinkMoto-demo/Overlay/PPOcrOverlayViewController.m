@@ -126,13 +126,6 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     [self updateScanningRegion];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    [self.containerViewController setScanningRegion:self.viewfinder.scanningRegion];
-
-}
-
 - (void)updateScanningRegion {
     
     [self.view layoutIfNeeded];
@@ -232,27 +225,25 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     for (PPRecognizerResult *result in results) {
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
             PPBlinkOcrRecognizerResult *ocrRecognizerResult = (PPBlinkOcrRecognizerResult *)result;
+            NSString *result;
+            BOOL success;
             switch (self.orcRecognizerType) {
                 case VIN:
-                    _viewfinder.resultMessage.text =  [ocrRecognizerResult parsedResultForName:kVinOcrParser];
-                    _viewfinder.repeatButton.enabled = YES;
-                    _viewfinder.resultImageView.image = self.currentImageMetadata.image;
-                    _viewfinder.resultImageView.hidden = NO;
+                    result = [ocrRecognizerResult parsedResultForName:kVinOcrParser];
+                    success = YES;
                     break;
                 case LicensePlate:
-                    _viewfinder.resultMessage.text =  [ocrRecognizerResult parsedResultForName:kLicensePlateOcrParser];
-                    _viewfinder.repeatButton.enabled = YES;
-                    _viewfinder.resultImageView.image = self.currentImageMetadata.image;
-                    _viewfinder.resultImageView.hidden = NO;
+                    result =  [ocrRecognizerResult parsedResultForName:kLicensePlateOcrParser];
+                    success = YES;
                     break;
                 default:
-                    _viewfinder.resultMessage.text =  @"";
-                    _viewfinder.repeatButton.enabled = NO;
-                    _viewfinder.resultImageView.image = nil;
-                    _viewfinder.resultImageView.hidden = YES;
+                    result =  @"";
+                    success = NO;
                     [cameraViewController resumeScanningAndResetState:YES];
                     break;
             }
+            
+            [_viewfinder setOcrResultSucces:success withResult:result andImage:self.currentImageMetadata.image];
         }
         if ([result isKindOfClass:[PPBarDecoderRecognizerResult class]]) {
             PPBarDecoderRecognizerResult *barDecoderResult = (PPBarDecoderRecognizerResult *)result;
@@ -271,8 +262,8 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 }
 
 - (void)viewfinderViewDidTapAcceptButton:(UIButton *)sender {
-    if (_viewfinder.resultMessage.text.length > 0) {
-        [self.delegate ocrOverlayViewControllerDidReturnResult:_viewfinder.resultMessage.text];
+    if ([[self.viewfinder getScanningResult] length] > 0) {
+        [self.delegate ocrOverlayViewControllerDidReturnResult:[_viewfinder getScanningResult]];
     }
 }
 
@@ -281,10 +272,7 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 }
 
 - (void)viewfinderViewDidTapRepeatButton:(UIButton *)sender {
-    _viewfinder.resultImageView.image = nil;
-    _viewfinder.resultImageView.hidden = YES;
-    _viewfinder.repeatButton.enabled = NO;
-    _viewfinder.resultMessage.text = @"";
+    [_viewfinder resetScanningState];
     [self.scanningViewController resumeScanningAndResetState:YES];
 }
 

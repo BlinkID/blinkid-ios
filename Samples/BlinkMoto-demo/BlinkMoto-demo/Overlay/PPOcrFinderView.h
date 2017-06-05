@@ -41,6 +41,9 @@
 - (void)initViewfinderForLandscape;
 
 - (void)setButtonsSizeToFitText;
+- (void)setOcrResultSucces:(BOOL)succes withResult:(NSString *)result andImage:(UIImage *)resultImage;
+- (void)resetScanningState;
+- (NSString *)getScanningResult;
 
 @end
 

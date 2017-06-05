@@ -728,6 +728,25 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     return [self transformRegionIfNecessary:scanningRegion];
 }
 
+- (void)setOcrResultSucces:(BOOL)succes withResult:(NSString *)result andImage:(UIImage *)resultImage {
+    
+    self.repeatButton.enabled = succes;
+    self.resultImageView.hidden = !succes;
+    self.resultImageView.image = succes ? resultImage : nil;
+    self.resultMessage.text = result;
+}
+
+- (NSString *)getScanningResult {
+    return self.resultMessage.text;
+}
+
+- (void)resetScanningState {
+    self.resultImageView.image = nil;
+    self.resultImageView.hidden = YES;
+    self.repeatButton.enabled = NO;
+    self.resultMessage.text = @"";
+}
+
 #pragma mark - UIButton actions
 -(void)repeatButtonDidTap:(UIButton *)sender {
     [self.delegate viewfinderViewDidTapRepeatButton:sender];
