@@ -42,6 +42,12 @@
 
 @property (nonatomic) NSLayoutConstraint *shadeLeftConstraintLeft;
 @property (nonatomic) NSLayoutConstraint *shadeRightConstraintRight;
+
+@property (nonatomic, readonly) NSLayoutConstraint *resultImageViewHorizontalAlignmentConstraint;
+@property (nonatomic, readonly) NSLayoutConstraint *resultImageVerticalAlignmentConstraint;
+@property (nonatomic, readonly) NSLayoutConstraint *resultImageViewWidthConstraint;
+@property (nonatomic, readonly) NSLayoutConstraint *resultImageViewHeightConstraint;
+
 @end
 
 static const CGFloat kShadeAlpha = 0.4f;
@@ -283,8 +289,6 @@ static const CGFloat kButtonAcceptMargin = 16.0;
 - (void)_initMessage {
     _message = [[UILabel alloc] init];
     
-    _message.numberOfLines = 0;
-    
     _message.translatesAutoresizingMaskIntoConstraints = NO;
     
     _message.alpha = 1;
@@ -302,13 +306,9 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     }
     
     [_message setFont:[UIFont fontWithName:@"Helvetica" size:textSize]];
-    _message.adjustsFontSizeToFitWidth = YES;
-    
-    _message.layer.shadowColor = [[UIColor blackColor] CGColor];
-    _message.layer.shadowOpacity = 0.3;
-    _message.layer.shadowRadius = 1;
-    _message.layer.shadowOffset = CGSizeZero;
-    
+    _message.lineBreakMode = NSLineBreakByWordWrapping;
+    _message.numberOfLines = 0;
+        
     [self addSubview:_message];
     
     [NSLayoutConstraint activateConstraints:@[
@@ -329,17 +329,10 @@ static const CGFloat kButtonAcceptMargin = 16.0;
                                               _messageConstraintWidth = [NSLayoutConstraint constraintWithItem:_message
                                                                            attribute:NSLayoutAttributeWidth
                                                                            relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self
+                                                                              toItem:_viewfinder
                                                                            attribute:NSLayoutAttributeWidth
                                                                           multiplier:1
-                                                                            constant:_viewfinderWidthConstraint.constant],
-                                              _messageConstraintTop = [NSLayoutConstraint constraintWithItem:_message
-                                                                                                   attribute:NSLayoutAttributeTop
-                                                                                                   relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                                                      toItem:self
-                                                                                                   attribute:NSLayoutAttributeTop
-                                                                                                  multiplier:1
-                                                                                                    constant:70],
+                                                                            constant:0]
                                               
                                               ]];
 }
@@ -361,10 +354,10 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     CGFloat textSize;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        textSize = 24.0f;
+        textSize = 28.0f;
     }
     else {
-        textSize = 18.0f;
+        textSize = 22.0f;
     }
     
     [_resultMessage setFont:[UIFont fontWithName:@"Helvetica" size:textSize]];
@@ -394,10 +387,10 @@ static const CGFloat kButtonAcceptMargin = 16.0;
                                               _resultMessageConstraintWidth =[NSLayoutConstraint constraintWithItem:_resultMessage
                                                                            attribute:NSLayoutAttributeWidth
                                                                            relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self
+                                                                              toItem:_viewfinder
                                                                            attribute:NSLayoutAttributeWidth
                                                                           multiplier:1
-                                                                            constant:_viewfinderWidthConstraint.constant],
+                                                                            constant:0],
                                               _resultMessageConstraintBottom = [NSLayoutConstraint constraintWithItem:_message
                                                                                                    attribute:NSLayoutAttributeBottom
                                                                                                    relatedBy:NSLayoutRelationGreaterThanOrEqual
@@ -556,6 +549,57 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     }
 }
 
+- (void)_initResultImageView {
+    _resultImageView = [[UIImageView alloc] init];
+    
+    _resultImageView.translatesAutoresizingMaskIntoConstraints = NO;
+
+    _resultImageView.hidden = YES;
+    
+    _resultImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    _resultImageView.layer.borderWidth = 1.0f;
+    
+    [self addSubview:_resultImageView];
+    
+    _resultImageViewHorizontalAlignmentConstraint = [NSLayoutConstraint constraintWithItem:_resultImageView
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:self
+                                                                            attribute:NSLayoutAttributeCenterX
+                                                                           multiplier:1
+                                                                             constant:0];
+    
+    _resultImageVerticalAlignmentConstraint = [NSLayoutConstraint constraintWithItem:_resultImageView
+                                                                          attribute:NSLayoutAttributeCenterY
+                                                                          relatedBy:NSLayoutRelationEqual
+                                                                             toItem:self
+                                                                          attribute:NSLayoutAttributeCenterY
+                                                                         multiplier:1
+                                                                           constant:0];
+    
+    _resultImageViewWidthConstraint = [NSLayoutConstraint constraintWithItem:_resultImageView
+                                                              attribute:NSLayoutAttributeWidth
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:nil
+                                                              attribute:NSLayoutAttributeNotAnAttribute
+                                                             multiplier:1
+                                                               constant:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 600.0f : 300.0f];
+    
+    _resultImageViewHeightConstraint = [NSLayoutConstraint constraintWithItem:_resultImageView
+                                                               attribute:NSLayoutAttributeHeight
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:nil
+                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                              multiplier:1
+                                                                constant:80 /*these values are always overriden in initViewfinder*/];
+    
+    [NSLayoutConstraint activateConstraints:@[_resultImageViewHorizontalAlignmentConstraint,
+                                              _resultImageVerticalAlignmentConstraint,
+                                              _resultImageViewWidthConstraint,
+                                              _resultImageViewHeightConstraint]];
+}
+
 
 - (void)_init {
     
@@ -572,6 +616,8 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     [self _initResultMessage];
     
     [self _initButtons];
+    
+    [self _initResultImageView];
 
 }
 
@@ -588,27 +634,31 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     self.viewfinderWidthConstraint.constant = self.bounds.size.width - 50;
     self.viewfinderHeightConstraint.constant = 80;
     
+    self.resultImageViewWidthConstraint.constant = self.bounds.size.width - 50;
+    self.resultImageViewHeightConstraint.constant = 80;
+    
     self.motionEstimationRegionWidth = self.viewfinderWidthConstraint.constant + 25;
     self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 50;
     
     self.viewfinderVerticalAlignmentConstraint.constant = 0;
     self.viewfinderHorizontalAlignmentConstraint.constant = 0;
     
+    self.resultImageViewHorizontalAlignmentConstraint.constant = 0;
+    self.resultImageVerticalAlignmentConstraint.constant = 0;
+    
     // Adjust vertical positioning on small screen devices
     if (self.bounds.size.height < 500) { // small screen iphone 4/4s
         self.viewfinderVerticalAlignmentConstraint.constant += 20;
+        self.resultImageVerticalAlignmentConstraint.constant += 20;
     }
     
     // Override width to fixed size when appropriate
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.viewfinderWidthConstraint.constant = 600;
+        self.resultImageViewWidthConstraint.constant = 600;
         self.motionEstimationRegionWidth = self.viewfinderWidthConstraint.constant + 230;
         self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 160;
     }
-    
-    self.messageConstraintTop.constant = 70; // menu on top of screen
-    self.messageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
-    self.resultMessageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
     
     [self layoutIfNeeded];
 }
@@ -617,19 +667,20 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     self.viewfinderWidthConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? self.bounds.size.width : self.bounds.size.width * 0.95;
     self.viewfinderHeightConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?  self.bounds.size.height * 0.1 : self.bounds.size.height * 0.3;
     
-    self.viewfinderHorizontalAlignmentConstraint.constant = 0;
+    self.resultImageViewWidthConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? self.bounds.size.width : self.bounds.size.width * 0.95;
+    self.resultImageViewHeightConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?  self.bounds.size.height * 0.1 : self.bounds.size.height * 0.3;
     
+    self.viewfinderHorizontalAlignmentConstraint.constant = 0;
     self.viewfinderVerticalAlignmentConstraint.constant = 0;
+    
+    self.resultImageViewHorizontalAlignmentConstraint.constant = 0;
+    self.resultImageVerticalAlignmentConstraint.constant = 0;
     
     self.motionEstimationRegionWidth = 2 * self.viewfinderWidthConstraint.constant / 3;
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 50;
     }
-    
-    self.messageConstraintTop.constant = 0;
-    self.messageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
-    self.resultMessageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
     
     [self layoutIfNeeded];
 }
@@ -642,15 +693,15 @@ static const CGFloat kButtonAcceptMargin = 16.0;
         
         [self layoutIfNeeded];
         
-        // Initial viewfinder region sync
-        [self.delegate viewfinderViewUpdatedScanningRegion:self];
-        
         self.originalViewfinderWidth = self.viewfinderWidthConstraint.constant;
         self.originalViewfinderHeight = self.viewfinderHeightConstraint.constant;
         
         self.viewfinderWidthConstraint.constant = self.bounds.size.width * 0.9;
         self.viewfinderHeightConstraint.constant = self.bounds.size.height * 0.5;
         
+        self.resultImageViewWidthConstraint.constant = self.bounds.size.width * 0.9;
+        self.resultImageViewHeightConstraint.constant = self.bounds.size.height * 0.5;
+
         self.shadeTop.alpha = 0;
         self.shadeLeft.alpha = 0;
         self.shadeRight.alpha = 0;

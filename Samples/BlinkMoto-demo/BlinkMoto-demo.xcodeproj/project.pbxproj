@@ -38,7 +38,6 @@
 		A2667EE41EE54A9100BC6467 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; };
 		A2667EE51EE54A9100BC6467 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */; };
-		A2667EEE1EE54B2900BC6467 /* PPOcrOverlaySubview.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */; };
 		A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -105,8 +104,6 @@
 		A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrFinderView.h; sourceTree = "<group>"; };
 		A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrFinderView.m; sourceTree = "<group>"; };
 		A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPOcrFinderView+Private.h"; sourceTree = "<group>"; };
-		A2667EEB1EE54B2900BC6467 /* PPOcrOverlaySubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrOverlaySubview.h; sourceTree = "<group>"; };
-		A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrOverlaySubview.m; sourceTree = "<group>"; };
 		A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrOverlayViewController.h; sourceTree = "<group>"; };
 		A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrOverlayViewController.m; sourceTree = "<group>"; };
 		A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPOcrOverlayViewController+Private.h"; sourceTree = "<group>"; };
@@ -241,8 +238,6 @@
 				A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */,
 				A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */,
 				A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */,
-				A2667EEB1EE54B2900BC6467 /* PPOcrOverlaySubview.h */,
-				A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */,
 				A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */,
 				A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */,
 				A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */,
@@ -335,7 +330,6 @@
 				18C76B091EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m in Sources */,
 				A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */,
 				18C76B051EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m in Sources */,
-				A2667EEE1EE54B2900BC6467 /* PPOcrOverlaySubview.m in Sources */,
 				18C76B081EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m in Sources */,
 				18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */,
 				A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */,

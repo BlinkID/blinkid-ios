@@ -66,6 +66,7 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     [_viewfinder.repeatButton setTitle:@"Wiederholen" forState:UIControlStateNormal];
     
     _viewfinder.message.text = @"Bitte die FIN / VIN oder Barcode in diesem Bereich erfassen";
+    [_viewfinder.message sizeToFit];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -205,10 +206,14 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
                 case VIN:
                     _viewfinder.resultMessage.text =  [ocrRecognizerResult parsedResultForName:kVinOcrParser];
                     _viewfinder.repeatButton.enabled = YES;
+                    _viewfinder.resultImageView.image = self.currentImageMetadata.image;
+                    _viewfinder.resultImageView.hidden = NO;
                     break;
                 case LicensePlate:
                     _viewfinder.resultMessage.text =  [ocrRecognizerResult parsedResultForName:kLicensePlateOcrParser];
                     _viewfinder.repeatButton.enabled = YES;
+                    _viewfinder.resultImageView.image = self.currentImageMetadata.image;
+                    _viewfinder.resultImageView.hidden = NO;
                     break;
                 default:
                     _viewfinder.resultMessage.text =  @"";
@@ -241,6 +246,8 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 }
 
 - (void)viewfinderViewDidTapRepeatButton:(UIButton *)sender {
+    _viewfinder.resultImageView.image = nil;
+    _viewfinder.resultImageView.hidden = YES;
     _viewfinder.repeatButton.enabled = NO;
 }
 

@@ -33,6 +33,8 @@
 @property (nonatomic) NSLayoutConstraint *repeatButtonConstraintWidth;
 @property (nonatomic) NSLayoutConstraint *cancelButtonConstraintWidth;
 
+@property (nonatomic) UIImageView *resultImageView;
+
 - (void)initViewfinder;
 
 - (void)initViewfinderForPortrait;
@@ -44,7 +46,6 @@
 
 @protocol PPOcrFinderViewDelegate <NSObject>
 
-- (void)viewfinderViewUpdatedScanningRegion:(PPOcrFinderView *)viewfinderView;
 - (BOOL)viewfinderViewIsScanningPaused:(PPOcrFinderView *)viewfinderView;
 
 - (void)viewfinderViewDidTapCancelButton:(UIButton *)sender;
