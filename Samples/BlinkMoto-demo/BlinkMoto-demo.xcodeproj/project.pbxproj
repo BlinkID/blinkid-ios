@@ -19,7 +19,6 @@
 		18C76AEF1EC33B06006E5639 /* PPScanResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AE81EC33B06006E5639 /* PPScanResultView.m */; };
 		18C76AF01EC33B06006E5639 /* PPScanResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AE91EC33B06006E5639 /* PPScanResultView.xib */; };
 		18C76AF41EC33B47006E5639 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF21EC33B47006E5639 /* MicroBlink.bundle */; };
-		18C76AF51EC33B47006E5639 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; };
 		18C76B031EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF71EC33B9D006E5639 /* PPBlinkOcrHelp.storyboard */; };
 		18C76B041EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF81EC33B9D006E5639 /* PPBlinkOcrHelp.xcassets */; };
 		18C76B051EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AFA1EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m */; };
@@ -36,7 +35,26 @@
 		18C76B241EC33F19006E5639 /* PPResultImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B201EC33F19006E5639 /* PPResultImageViewController.m */; };
 		18C76B251EC33F19006E5639 /* PPResultPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B221EC33F19006E5639 /* PPResultPageViewController.m */; };
 		18C76B261EC33F19006E5639 /* VinResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76B231EC33F19006E5639 /* VinResult.storyboard */; };
+		A2667EE41EE54A9100BC6467 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; };
+		A2667EE51EE54A9100BC6467 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */; };
+		A2667EEE1EE54B2900BC6467 /* PPOcrOverlaySubview.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */; };
+		A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2667EE61EE54A9100BC6467 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2667EE51EE54A9100BC6467 /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkMoto-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +102,14 @@
 		18C76B211EC33F19006E5639 /* PPResultPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResultPageViewController.h; sourceTree = "<group>"; };
 		18C76B221EC33F19006E5639 /* PPResultPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResultPageViewController.m; sourceTree = "<group>"; };
 		18C76B231EC33F19006E5639 /* VinResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VinResult.storyboard; sourceTree = "<group>"; };
+		A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrFinderView.h; sourceTree = "<group>"; };
+		A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrFinderView.m; sourceTree = "<group>"; };
+		A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPOcrFinderView+Private.h"; sourceTree = "<group>"; };
+		A2667EEB1EE54B2900BC6467 /* PPOcrOverlaySubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrOverlaySubview.h; sourceTree = "<group>"; };
+		A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrOverlaySubview.m; sourceTree = "<group>"; };
+		A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrOverlayViewController.h; sourceTree = "<group>"; };
+		A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrOverlayViewController.m; sourceTree = "<group>"; };
+		A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPOcrOverlayViewController+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C76AF51EC33B47006E5639 /* MicroBlink.framework in Frameworks */,
+				A2667EE41EE54A9100BC6467 /* MicroBlink.framework in Frameworks */,
 				18C76B111EC33C65006E5639 /* Accelerate.framework in Frameworks */,
 				18C76B0F1EC33C55006E5639 /* libz.tbd in Frameworks */,
 				18C76B0D1EC33C46006E5639 /* libc++.tbd in Frameworks */,
@@ -121,6 +147,7 @@
 		18C76AB31EC337CB006E5639 /* BlinkMoto-demo */ = {
 			isa = PBXGroup;
 			children = (
+				A2667EE71EE54B0E00BC6467 /* Overlay */,
 				18C76ADE1EC33B06006E5639 /* FormOcrOverlay */,
 				18C76AF61EC33B9D006E5639 /* OcrHelp */,
 				18C76ABD1EC337CB006E5639 /* Main.storyboard */,
@@ -208,6 +235,21 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		A2667EE71EE54B0E00BC6467 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */,
+				A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */,
+				A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */,
+				A2667EEB1EE54B2900BC6467 /* PPOcrOverlaySubview.h */,
+				A2667EEC1EE54B2900BC6467 /* PPOcrOverlaySubview.m */,
+				A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */,
+				A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */,
+				A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +260,7 @@
 				18C76AAD1EC337CB006E5639 /* Sources */,
 				18C76AAE1EC337CB006E5639 /* Frameworks */,
 				18C76AAF1EC337CB006E5639 /* Resources */,
+				A2667EE61EE54A9100BC6467 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,9 +333,12 @@
 				18C76B061EC33B9D006E5639 /* PPBlinkOcrHelpPage2ViewController.m in Sources */,
 				18C76B241EC33F19006E5639 /* PPResultImageViewController.m in Sources */,
 				18C76B091EC33B9D006E5639 /* PPBlinkOcrHelpViewController.m in Sources */,
+				A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */,
 				18C76B051EC33B9D006E5639 /* PPBlinkOcrHelpPage1ViewController.m in Sources */,
+				A2667EEE1EE54B2900BC6467 /* PPOcrOverlaySubview.m in Sources */,
 				18C76B081EC33B9D006E5639 /* PPBlinkOcrHelpPageViewController.m in Sources */,
 				18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */,
+				A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */,
 				18C76AEB1EC33B06006E5639 /* PPFormOcrOverlayViewController.m in Sources */,
 				18C76B251EC33F19006E5639 /* PPResultPageViewController.m in Sources */,
 				18C76B1D1EC33E5A006E5639 /* MBRootViewController.m in Sources */,
@@ -468,6 +514,7 @@
 				18C76ACA1EC337CB006E5639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

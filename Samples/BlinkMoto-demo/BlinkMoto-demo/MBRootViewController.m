@@ -10,6 +10,7 @@
 
 #import "PPFormOcrOverlayViewController.h"
 #import "MBParsers.h"
+#import "PPOcrOverlayViewController.h"
 
 #import "PPResultPageViewController.h"
 
@@ -165,10 +166,12 @@
         overlayViewController.scanElements = self.scanElements;
         overlayViewController.coordinator = coordinator;
         overlayViewController.delegate = self;
+        
+        PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] init];
 
         UIViewController<PPScanningViewController> *scanningViewController =
             [PPViewControllerFactory cameraViewControllerWithDelegate:nil
-                                                overlayViewController:overlayViewController
+                                                overlayViewController:overlayVC
                                                           coordinator:coordinator
                                                                 error:nil];
 
