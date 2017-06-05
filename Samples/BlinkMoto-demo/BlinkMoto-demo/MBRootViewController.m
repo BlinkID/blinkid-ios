@@ -14,13 +14,14 @@
 
 #import "PPResultPageViewController.h"
 
-@interface MBRootViewController () <PPFormOcrOverlayViewControllerDelegate>
+@interface MBRootViewController () <PPOcrOverlayViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageProductLogo;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintImageProductLogoCenterY;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonScanVin;
 @property (weak, nonatomic) IBOutlet UIButton *buttonResults;
+@property (weak, nonatomic) IBOutlet UIButton *buttonScanLicensePlates;
 
 @property (nonatomic) NSMutableArray *scanElements;
 
@@ -116,8 +117,15 @@
 
 - (IBAction)buttonScanDidTap:(id)sender {
     PPCameraCoordinator *coordinator = [self createCordinator];
-    [self presentFormScannerWithCoordinator:coordinator];
+    [self presentFormScannerWithCoordinator:coordinator andOcrParserType:VIN];
 
+    [self hideResultsButton:YES];
+}
+
+- (IBAction)buttonScanLicensePlateDidTap:(id)sender {
+    PPCameraCoordinator *coordinator = [self createCordinator];
+    [self presentFormScannerWithCoordinator:coordinator andOcrParserType:LicensePlate];
+    
     [self hideResultsButton:YES];
 }
 
@@ -153,59 +161,42 @@
 }
 
 
-- (void)presentFormScannerWithCoordinator:(PPCameraCoordinator *)coordinator {
+- (void)presentFormScannerWithCoordinator:(PPCameraCoordinator *)coordinator andOcrParserType:(OcrRecognizerType)ocrRecognizerType {
 
     if (coordinator == nil) {
         return;
     }
+    
+    PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] initWithOcrRecognizerType:ocrRecognizerType];
+    overlayVC.coordinator = coordinator;
+    overlayVC.delegate = self;
 
-    if (self.scanElements.count > 0) {
-        PPFormOcrOverlayViewController *overlayViewController =
-            [PPFormOcrOverlayViewController allocFromNibName:@"PPFormOcrOverlayViewController"];
+    UIViewController<PPScanningViewController> *scanningViewController =
+        [PPViewControllerFactory cameraViewControllerWithDelegate:nil
+                                            overlayViewController:overlayVC
+                                                      coordinator:coordinator
+                                                            error:nil];
+    scanningViewController.autorotate = YES;
+    scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAllButUpsideDown;
+    overlayVC.scanningViewController = scanningViewController;
+    [self presentViewController:scanningViewController animated:YES completion:nil];
 
-        overlayViewController.scanElements = self.scanElements;
-        overlayViewController.coordinator = coordinator;
-        overlayViewController.delegate = self;
-        
-        PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] init];
-
-        UIViewController<PPScanningViewController> *scanningViewController =
-            [PPViewControllerFactory cameraViewControllerWithDelegate:nil
-                                                overlayViewController:overlayVC
-                                                          coordinator:coordinator
-                                                                error:nil];
-
-        [self presentViewController:scanningViewController animated:YES completion:nil];
-
-    } else {
-        UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"No Scan Elements Present"
-                                                           message:@"Tap Settings to add Scan Elements"
-                                                          delegate:self
-                                                 cancelButtonTitle:@"OK"
-                                                 otherButtonTitles:nil];
-        [theAlert show];
-    }
+    
 }
 
-#pragma mark - PPFormOcrOverlayViewControllerDelegate
-
-- (void)formOcrOverlayViewControllerWillClose:(PPFormOcrOverlayViewController *)vc {
+#pragma mark - PPOcrOverlayViewControllerDelegate 
+- (void)ocrOverlayViewControllerWillClose:(PPOcrOverlayViewController *)vc {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)formOcrOverlayViewController:(PPFormOcrOverlayViewController *)vc didFinishScanningWithElements:(NSArray *)scanElements {
-
-    [self dismissViewControllerAnimated:YES
-                             completion:^(void) {
-                                 ;
-                             }];
-
-    [self hideResultsButton:NO];
-
-    // We don't do anything with the results in this demo
-    // This demo shows the results if the user presses results button
-
-    // results are shared in self.scanElements array
+- (void)ocrOverlayViewControllerDidReturnResult:(NSString *)scanResult {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[[UIAlertView alloc] initWithTitle:@"Scan result"
+                                message:scanResult
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil, nil] show];
 }
 
 

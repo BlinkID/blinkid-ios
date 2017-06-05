@@ -16,7 +16,6 @@
 @property (nonatomic) NSLayoutConstraint *messageConstraintWidth;
 @property (nonatomic) NSLayoutConstraint *resultMessageConstraintWidth;
 
-
 @property (nonatomic) UIImageView *viewfinderCornerTopLeft;
 @property (nonatomic) UIImageView *viewfinderCornerTopRight;
 @property (nonatomic) UIImageView *viewfinderCornerBottomLeft;
@@ -48,6 +47,7 @@
 static const CGFloat kShadeAlpha = 0.4f;
 static const CGFloat kViewfinderMargin = 0.0f;
 static const CGFloat kMessageMargin = 15.0;
+static const CGFloat kButtonAcceptMargin = 16.0;
 
 @implementation PPOcrFinderView
 
@@ -289,11 +289,20 @@ static const CGFloat kMessageMargin = 15.0;
     
     _message.alpha = 1;
     
-    _message.adjustsFontSizeToFitWidth = YES;
-    
     _message.textColor = [UIColor whiteColor];
     _message.textAlignment = NSTextAlignmentCenter;
-    _message.text = @"Proba";
+    
+    CGFloat textSize;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        textSize = 20.0f;
+    }
+    else {
+        textSize = 14.0f;
+    }
+    
+    [_message setFont:[UIFont fontWithName:@"Helvetica" size:textSize]];
+    _message.adjustsFontSizeToFitWidth = YES;
     
     _message.layer.shadowColor = [[UIColor blackColor] CGColor];
     _message.layer.shadowOpacity = 0.3;
@@ -317,7 +326,7 @@ static const CGFloat kMessageMargin = 15.0;
                                                                            attribute:NSLayoutAttributeCenterX
                                                                           multiplier:1
                                                                             constant:0],
-                                              _messageConstraintWidth =[NSLayoutConstraint constraintWithItem:_message
+                                              _messageConstraintWidth = [NSLayoutConstraint constraintWithItem:_message
                                                                            attribute:NSLayoutAttributeWidth
                                                                            relatedBy:NSLayoutRelationEqual
                                                                               toItem:self
@@ -330,7 +339,7 @@ static const CGFloat kMessageMargin = 15.0;
                                                                                                       toItem:self
                                                                                                    attribute:NSLayoutAttributeTop
                                                                                                   multiplier:1
-                                                                                                    constant:70], // used to avoid overlap with control for switching between camera and calculator
+                                                                                                    constant:70],
                                               
                                               ]];
 }
@@ -348,7 +357,17 @@ static const CGFloat kMessageMargin = 15.0;
     
     _resultMessage.textColor = [UIColor whiteColor];
     _resultMessage.textAlignment = NSTextAlignmentCenter;
-    _resultMessage.text = @"Proba";
+    
+    CGFloat textSize;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        textSize = 24.0f;
+    }
+    else {
+        textSize = 18.0f;
+    }
+    
+    [_resultMessage setFont:[UIFont fontWithName:@"Helvetica" size:textSize]];
     
     _resultMessage.layer.shadowColor = [[UIColor blackColor] CGColor];
     _resultMessage.layer.shadowOpacity = 0.3;
@@ -390,6 +409,153 @@ static const CGFloat kMessageMargin = 15.0;
                                               ]];
 }
 
+- (void)_initButtons {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width/2.0f;
+    CGFloat wantedButtonContainerWidth = screenWidth + screenWidth/2.0f;
+    CGFloat wantedButtonWidth = wantedButtonContainerWidth / 3.0f;
+    
+    {
+        _acceptButton = [[UIButton alloc] init];
+        
+        _acceptButton.backgroundColor = [UIColor colorWithRed:22.0f/256.0f green:145.0f/256.0f blue:192.0f/256.0f alpha:1.0f];
+        _acceptButton.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [_acceptButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_acceptButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:12.0f]];
+        [_acceptButton addTarget:self action:@selector(acceptButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:_acceptButton];
+        
+        [NSLayoutConstraint activateConstraints:@[
+                                                  [NSLayoutConstraint constraintWithItem:_acceptButton
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                              multiplier:1
+                                                                                constant:-kButtonAcceptMargin],
+                                                  [NSLayoutConstraint constraintWithItem:_acceptButton
+                                                                               attribute:NSLayoutAttributeRight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self
+                                                                               attribute:NSLayoutAttributeRight
+                                                                              multiplier:1
+                                                                                constant:-kButtonAcceptMargin],
+                                                  [NSLayoutConstraint constraintWithItem:_acceptButton
+                                                                               attribute:NSLayoutAttributeWidth
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:wantedButtonWidth],
+                                                  [NSLayoutConstraint constraintWithItem:_acceptButton
+                                                                               attribute:NSLayoutAttributeHeight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:40.0f],
+                                                  
+                                                  ]];
+    }
+    
+    {
+        _repeatButton = [[UIButton alloc] init];
+        
+        _repeatButton.backgroundColor = [UIColor lightGrayColor];
+        _repeatButton.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        _repeatButton.enabled = NO;
+        
+        [_repeatButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_repeatButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+        [_repeatButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:12.0f]];
+        
+        [_repeatButton addTarget:self action:@selector(repeatButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:_repeatButton];
+        
+        [NSLayoutConstraint activateConstraints:@[
+                                                  [NSLayoutConstraint constraintWithItem:_repeatButton
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                              multiplier:1
+                                                                                constant:-kButtonAcceptMargin],
+                                                  [NSLayoutConstraint constraintWithItem:_repeatButton
+                                                                               attribute:NSLayoutAttributeRight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:_acceptButton
+                                                                               attribute:NSLayoutAttributeLeft
+                                                                              multiplier:1
+                                                                                constant:-8.0f],
+                                                  [NSLayoutConstraint constraintWithItem:_repeatButton
+                                                                               attribute:NSLayoutAttributeWidth
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:wantedButtonWidth],
+                                                  [NSLayoutConstraint constraintWithItem:_repeatButton
+                                                                               attribute:NSLayoutAttributeHeight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:40.0f],
+                                                  
+                                                  ]];    }
+    
+    {
+        _cancelButton = [[UIButton alloc] init];
+        
+        _cancelButton.backgroundColor = [UIColor lightGrayColor];
+        _cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        [_cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_cancelButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:12.0f]];
+        
+        [_cancelButton addTarget:self action:@selector(cancelButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:_cancelButton];
+        
+        [NSLayoutConstraint activateConstraints:@[
+                                                  [NSLayoutConstraint constraintWithItem:_cancelButton
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self
+                                                                               attribute:NSLayoutAttributeBottom
+                                                                              multiplier:1
+                                                                                constant:-kButtonAcceptMargin],
+                                                  [NSLayoutConstraint constraintWithItem:_cancelButton
+                                                                               attribute:NSLayoutAttributeRight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:_repeatButton
+                                                                               attribute:NSLayoutAttributeLeft
+                                                                              multiplier:1
+                                                                                constant:-8.0f],
+                                                  [NSLayoutConstraint constraintWithItem:_cancelButton
+                                                                               attribute:NSLayoutAttributeWidth
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:wantedButtonWidth],
+                                                  [NSLayoutConstraint constraintWithItem:_cancelButton
+                                                                               attribute:NSLayoutAttributeHeight
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:nil
+                                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                                              multiplier:1
+                                                                                constant:40.0f],
+                                                  
+                                                  ]];
+    }
+}
+
 
 - (void)_init {
     
@@ -404,6 +570,16 @@ static const CGFloat kMessageMargin = 15.0;
     [self _initMessage];
     
     [self _initResultMessage];
+    
+    [self _initButtons];
+
+}
+
+- (void)setButtonsSizeToFitText {
+    
+    [_acceptButton sizeToFit];
+    [_cancelButton sizeToFit];
+    [_repeatButton sizeToFit];
 
 }
 
@@ -433,14 +609,15 @@ static const CGFloat kMessageMargin = 15.0;
     self.messageConstraintTop.constant = 70; // menu on top of screen
     self.messageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
     self.resultMessageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
-
+    
+    [self layoutIfNeeded];
 }
 
 - (void)initViewfinderForLandscape {
-    self.viewfinderWidthConstraint.constant = self.bounds.size.width * 0.9;
-    self.viewfinderHeightConstraint.constant = self.bounds.size.height * 0.35;
+    self.viewfinderWidthConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? self.bounds.size.width : self.bounds.size.width * 0.95;
+    self.viewfinderHeightConstraint.constant = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?  self.bounds.size.height * 0.1 : self.bounds.size.height * 0.3;
     
-    self.viewfinderHorizontalAlignmentConstraint.constant = -self.bounds.size.width / 2 * (self.viewfinderHorizontalAlignmentConstraint.multiplier - 1);
+    self.viewfinderHorizontalAlignmentConstraint.constant = 0;
     
     self.viewfinderVerticalAlignmentConstraint.constant = 0;
     
@@ -450,9 +627,11 @@ static const CGFloat kMessageMargin = 15.0;
         self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 50;
     }
     
-    self.messageConstraintTop.constant = 0; // we hide menu in landscape
+    self.messageConstraintTop.constant = 0;
     self.messageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
     self.resultMessageConstraintWidth.constant = self.viewfinderWidthConstraint.constant;
+    
+    [self layoutIfNeeded];
 }
 
 - (void)initViewfinder {
@@ -482,74 +661,6 @@ static const CGFloat kMessageMargin = 15.0;
         [self layoutIfNeeded];
     }
 }
-
-- (void)setScanningOrientation:(UIInterfaceOrientation)scanningOrientation animated:(BOOL)animated {
-    
-    if (self.scanningOrientation == scanningOrientation) {
-        return;
-    }
-    
-    const CGFloat offset = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.height/2;  // TODO Better algorithm to determine minimum offset per shade that prevents transition artefacts
-    
-    _shadeTopConstraintTop.constant = -offset;
-    _shadeTopConstraintLeft.constant = -offset;
-    _shadeTopConstraintRight.constant = offset;
-    
-    _shadeBottomConstraintBottom.constant = offset;
-    _shadeBottomConstraintLeft.constant = -offset;
-    _shadeBottomConstraintRight.constant = offset;
-    
-    _shadeLeftConstraintLeft.constant = -offset;
-    _shadeRightConstraintRight.constant = offset;
-    
-    [self layoutIfNeeded];
-    
-    [UIView animateWithDuration:animated ? 0.3 : 0 animations:^{
-        if (UIInterfaceOrientationIsLandscape(scanningOrientation)) {
-            
-            if (!UIInterfaceOrientationIsLandscape(self.scanningOrientation)) {
-                self.bounds = CGRectMake(self.bounds.origin.y, self.bounds.origin.x, self.bounds.size.height, self.bounds.size.width);
-                
-                [self initViewfinderForLandscape];
-            }
-            
-            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-                self.transform = CGAffineTransformMakeRotation(scanningOrientation == UIInterfaceOrientationLandscapeRight ? -2*M_PI : 2*M_PI);
-            }
-            else {
-                self.transform = CGAffineTransformMakeRotation(scanningOrientation == UIInterfaceOrientationLandscapeRight ? -M_PI/2 : M_PI/2);
-            }
-            
-            [self layoutIfNeeded];
-        } else if (UIInterfaceOrientationIsPortrait(scanningOrientation)) {
-            if (!UIInterfaceOrientationIsPortrait(self.scanningOrientation)) {
-                self.transform = CGAffineTransformIdentity;
-                
-                self.bounds = CGRectMake(self.bounds.origin.y, self.bounds.origin.x, self.bounds.size.height, self.bounds.size.width);
-                
-                [self initViewfinderForPortrait];
-                
-                [self layoutIfNeeded];
-            }
-        }
-    } completion:^(BOOL finished) {
-        _shadeTopConstraintTop.constant = 0;
-        _shadeTopConstraintLeft.constant = 0;
-        _shadeTopConstraintRight.constant = 0;
-        
-        _shadeBottomConstraintBottom.constant = 0;
-        _shadeBottomConstraintLeft.constant = 0;
-        _shadeBottomConstraintRight.constant = 0;
-        
-        _shadeLeftConstraintLeft.constant = 0;
-        _shadeRightConstraintRight.constant = 0;
-        
-        [self.delegate viewfinderViewUpdatedScanningRegion:self];
-    }];
-    
-    _scanningOrientation = scanningOrientation;
-}
-
 
 - (CGRect)transformRegionIfNecessary:(CGRect)region {
     if (self.scanningOrientation == UIInterfaceOrientationLandscapeLeft) {
@@ -592,5 +703,19 @@ static const CGFloat kMessageMargin = 15.0;
     
     return CGRectMake(x, y, self.motionEstimationRegionWidth, self.motionEstimationRegionHeight);
 }
+
+#pragma mark - UIButton actions
+-(void)repeatButtonDidTap:(UIButton *)sender {
+    [self.delegate viewfinderViewDidTapRepeatButton:sender];
+}
+
+-(void)cancelButtonDidTap:(UIButton *)sender {
+    [self.delegate viewfinderViewDidTapCancelButton:sender];
+}
+
+-(void)acceptButtonDidTap:(UIButton *)sender {
+    [self.delegate viewfinderViewDidTapAcceptButton:sender];
+}
+
 
 @end

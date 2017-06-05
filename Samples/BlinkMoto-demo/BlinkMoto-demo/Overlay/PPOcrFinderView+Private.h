@@ -18,7 +18,5 @@
 @property (nonatomic, readonly) NSLayoutConstraint *viewfinderHorizontalAlignmentConstraint;
 @property (nonatomic, readonly) NSLayoutConstraint *viewfinderVerticalAlignmentConstraint;
 
-@property (nonatomic) UILabel *message;
-@property (nonatomic) UILabel *resultMessage;
 
 @end

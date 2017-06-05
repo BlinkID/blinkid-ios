@@ -22,9 +22,23 @@
 @property (nonatomic, readonly) CGRect motionEstimationRegion;
 @property (nonatomic, readonly) UIInterfaceOrientation scanningOrientation;
 
+@property (nonatomic) UILabel *message;
+@property (nonatomic) UILabel *resultMessage;
+
+@property (nonatomic) UIButton *cancelButton;
+@property (nonatomic) UIButton *repeatButton;
+@property (nonatomic) UIButton *acceptButton;
+
+@property (nonatomic) NSLayoutConstraint *acceptButtonConstraintWidth;
+@property (nonatomic) NSLayoutConstraint *repeatButtonConstraintWidth;
+@property (nonatomic) NSLayoutConstraint *cancelButtonConstraintWidth;
+
 - (void)initViewfinder;
 
-- (void)setScanningOrientation:(UIInterfaceOrientation)scanningOrientation animated:(BOOL)animated;
+- (void)initViewfinderForPortrait;
+- (void)initViewfinderForLandscape;
+
+- (void)setButtonsSizeToFitText;
 
 @end
 
@@ -32,5 +46,9 @@
 
 - (void)viewfinderViewUpdatedScanningRegion:(PPOcrFinderView *)viewfinderView;
 - (BOOL)viewfinderViewIsScanningPaused:(PPOcrFinderView *)viewfinderView;
+
+- (void)viewfinderViewDidTapCancelButton:(UIButton *)sender;
+- (void)viewfinderViewDidTapRepeatButton:(UIButton *)sender;
+- (void)viewfinderViewDidTapAcceptButton:(UIButton *)sender;
 
 @end
