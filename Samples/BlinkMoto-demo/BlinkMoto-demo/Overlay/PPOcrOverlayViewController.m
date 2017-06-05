@@ -199,6 +199,14 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 
 - (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didOutputResults:(NSArray *)results {
     
+    // First we check that we received a valid result!
+    if (results == nil || results.count == 0) {
+        return;
+    }
+    
+    // then, pause scanning until we process all the results
+    [cameraViewController pauseScanning];
+    
     for (PPRecognizerResult *result in results) {
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
             PPBlinkOcrRecognizerResult *ocrRecognizerResult = (PPBlinkOcrRecognizerResult *)result;
@@ -217,6 +225,9 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
                     break;
                 default:
                     _viewfinder.resultMessage.text =  @"";
+                    _viewfinder.repeatButton.enabled = NO;
+                    _viewfinder.resultImageView.image = nil;
+                    _viewfinder.resultImageView.hidden = YES;
                     break;
             }
         }
@@ -249,6 +260,8 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     _viewfinder.resultImageView.image = nil;
     _viewfinder.resultImageView.hidden = YES;
     _viewfinder.repeatButton.enabled = NO;
+    _viewfinder.resultMessage.text = @"";
+    [self.scanningViewController resumeScanningAndResetState:YES];
 }
 
 @end
