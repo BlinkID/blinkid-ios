@@ -29,9 +29,6 @@
 @property (nonatomic) CGFloat originalViewfinderWidth;
 @property (nonatomic) CGFloat originalViewfinderHeight;
 
-@property (nonatomic) CGFloat motionEstimationRegionWidth;
-@property (nonatomic) CGFloat motionEstimationRegionHeight;
-
 @property (nonatomic) NSLayoutConstraint *shadeTopConstraintTop;
 @property (nonatomic) NSLayoutConstraint *shadeTopConstraintLeft;
 @property (nonatomic) NSLayoutConstraint *shadeTopConstraintRight;
@@ -405,8 +402,16 @@ static const CGFloat kButtonAcceptMargin = 16.0;
 - (void)_initButtons {
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width/2.0f;
-    CGFloat wantedButtonContainerWidth = screenWidth + screenWidth/2.0f;
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat wantedWidthForAllButtonContainer;
+    if (screenHeight > screenWidth) { //Portrait mode
+        wantedWidthForAllButtonContainer = screenWidth / 2.0f;
+    }
+    else { // Landscape mode
+        wantedWidthForAllButtonContainer = screenHeight / 2.0f;
+    }
+    CGFloat wantedButtonContainerWidth = wantedWidthForAllButtonContainer + wantedWidthForAllButtonContainer/2.0f;
     CGFloat wantedButtonWidth = wantedButtonContainerWidth / 3.0f;
     
     {
@@ -637,9 +642,6 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     self.resultImageViewWidthConstraint.constant = self.bounds.size.width - 50;
     self.resultImageViewHeightConstraint.constant = 80;
     
-    self.motionEstimationRegionWidth = self.viewfinderWidthConstraint.constant + 25;
-    self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 50;
-    
     self.viewfinderVerticalAlignmentConstraint.constant = 0;
     self.viewfinderHorizontalAlignmentConstraint.constant = 0;
     
@@ -656,8 +658,6 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.viewfinderWidthConstraint.constant = 600;
         self.resultImageViewWidthConstraint.constant = 600;
-        self.motionEstimationRegionWidth = self.viewfinderWidthConstraint.constant + 230;
-        self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 160;
     }
     
     [self layoutIfNeeded];
@@ -675,12 +675,6 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     
     self.resultImageViewHorizontalAlignmentConstraint.constant = 0;
     self.resultImageVerticalAlignmentConstraint.constant = 0;
-    
-    self.motionEstimationRegionWidth = 2 * self.viewfinderWidthConstraint.constant / 3;
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        self.motionEstimationRegionHeight = self.viewfinderHeightConstraint.constant + 50;
-    }
     
     [self layoutIfNeeded];
 }
@@ -732,27 +726,6 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     // We need to ensure that the region is always in the image coordinate space
     // Processing code uses the scanningOrientation to rectify the roi-ed image if needed
     return [self transformRegionIfNecessary:scanningRegion];
-}
-
-- (CGRect)motionEstimationRegion {
-    CGRect motionEstimationFrame = [self motionEstimationFrame];
-    
-    CGRect region = CGRectMake(motionEstimationFrame.origin.x / self.bounds.size.width,
-                               motionEstimationFrame.origin.y / self.bounds.size.height,
-                               motionEstimationFrame.size.width / self.bounds.size.width,
-                               motionEstimationFrame.size.height / self.bounds.size.height);
-    
-    // We need to ensure that the region is always in the image coordinate space
-    // Processing code uses the scanningOrientation to rectify the roi-ed image if needed
-    return [self transformRegionIfNecessary:region];
-}
-
-- (CGRect)motionEstimationFrame {
-    
-    CGFloat const x = self.viewfinder.center.x - self.motionEstimationRegionWidth / 2;
-    CGFloat const y = self.viewfinder.center.y - self.motionEstimationRegionHeight / 2;
-    
-    return CGRectMake(x, y, self.motionEstimationRegionWidth, self.motionEstimationRegionHeight);
 }
 
 #pragma mark - UIButton actions

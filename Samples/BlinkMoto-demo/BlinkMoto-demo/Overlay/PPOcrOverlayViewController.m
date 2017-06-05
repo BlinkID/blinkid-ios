@@ -228,11 +228,13 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
                     _viewfinder.repeatButton.enabled = NO;
                     _viewfinder.resultImageView.image = nil;
                     _viewfinder.resultImageView.hidden = YES;
+                    [cameraViewController resumeScanningAndResetState:YES];
                     break;
             }
         }
         if ([result isKindOfClass:[PPBarDecoderRecognizerResult class]]) {
             PPBarDecoderRecognizerResult *barDecoderResult = (PPBarDecoderRecognizerResult *)result;
+            [cameraViewController resumeScanningAndResetState:YES];
             NSLog(@"%@", barDecoderResult);
         }
         
