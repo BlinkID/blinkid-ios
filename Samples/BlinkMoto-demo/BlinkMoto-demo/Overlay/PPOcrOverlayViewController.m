@@ -197,7 +197,10 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 - (void)cameraViewController:(UIViewController<PPScanningViewController> *)cameraViewController didOutputMetadata:(PPMetadata *)metadata {
     
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
-        self.currentImageMetadata = (PPImageMetadata *)metadata;
+        PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
+        if (imageMetadata.imageType == PPImageMetadataTypeSuccessfulFrame) {
+            self.currentImageMetadata = imageMetadata;
+        }
     }
 }
 

@@ -156,6 +156,7 @@
 
     PPSettings *settings = [[PPSettings alloc] init];
     settings.licenseSettings.licenseKey = @LICENSE_KEY;
+    settings.metadataSettings.successfulFrame = YES;
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings];
     return coordinator;
 }
