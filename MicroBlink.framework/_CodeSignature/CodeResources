@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/PPBlinkBarcodeRecognizers.h</key>
 		<data>
-		qDu3Q1z2AM2gXT5hyGe0YapdGZE=
+		Y+9xmSgUEkBebPrrZLYmWtWu1zw=
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
@@ -640,6 +640,14 @@
 		<data>
 		K70NUfWv/VhLLMkJOjmFiO4I6Mw=
 		</data>
+		<key>Headers/PPVinRecognizerResult.h</key>
+		<data>
+		olFcGUlHdY1odDcwuGCPGuf/tAw=
+		</data>
+		<key>Headers/PPVinRecognizerSettings.h</key>
+		<data>
+		MDN/OOGJBdpjt7HmGtNqgmNWZlM=
+		</data>
 		<key>Headers/PPZXingRecognizerResult.h</key>
 		<data>
 		ElOUcQZ95zuUmSbiTgJ4Tg3YEPs=
@@ -658,7 +666,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ev29sDsNFhRVhS8FDLgrjmCGdNA=
+		8W84QFjNsyf6dl57YpTw1zKHYfY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -836,11 +844,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qDu3Q1z2AM2gXT5hyGe0YapdGZE=
+			Y+9xmSgUEkBebPrrZLYmWtWu1zw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hf/Vxx09Q5WVxrN0ZKUOlObokULL8eaOysFZV/NkDHs=
+			mezSMHbH6ZQ1sSWHcvf5xKhpr31EEydw/Voxy9AeTwk=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
@@ -2414,6 +2422,28 @@
 			<key>hash2</key>
 			<data>
 			+Fk3qCIZyt5DA10w/ZGlcQol37AE4MjRieCH6NsxJi8=
+			</data>
+		</dict>
+		<key>Headers/PPVinRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			olFcGUlHdY1odDcwuGCPGuf/tAw=
+			</data>
+			<key>hash2</key>
+			<data>
+			eXOq+vmuKCRu4rszkZaynIs4AJwuZJtN2bSpI1WMIBg=
+			</data>
+		</dict>
+		<key>Headers/PPVinRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MDN/OOGJBdpjt7HmGtNqgmNWZlM=
+			</data>
+			<key>hash2</key>
+			<data>
+			oS5W065SF2Nq4aBbwMEeHNoIe907seeWkLysUPzNWZ0=
 			</data>
 		</dict>
 		<key>Headers/PPZXingRecognizerResult.h</key>

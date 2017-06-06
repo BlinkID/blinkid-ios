@@ -29,6 +29,10 @@
 #import "PPSimNumberRecognizerSettings.h"
 #import "PPSimNumberRecognizerResult.h"
 
+// Vin
+#import "PPVinRecognizerSettings.h"
+#import "PPVinRecognizerResult.h"
+
 // Basic functionality
 #import "PPRecognizerResult+Test.h"
 
