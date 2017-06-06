@@ -96,17 +96,8 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
         [self.ocrRecognizerSettings addOcrParser:[[PPVinOcrParserFactory alloc] init] name:kVinOcrParser];
         [self.coordinator.currentSettings.scanSettings addRecognizerSettings:self.ocrRecognizerSettings];
         
-        PPBarDecoderRecognizerSettings *barDecoderRecognizerSettings = [[PPBarDecoderRecognizerSettings alloc] init];
-        barDecoderRecognizerSettings.scanCode39 = YES;
-        barDecoderRecognizerSettings.scanCode128 = YES;
-        
-        [self.coordinator.currentSettings.scanSettings addRecognizerSettings:barDecoderRecognizerSettings];
-        
-        PPZXingRecognizerSettings *zxingRecognizerSettings = [[PPZXingRecognizerSettings alloc] init];
-        zxingRecognizerSettings.scanQR = NO;
-        zxingRecognizerSettings.scanDataMatrix = YES;
-        
-        [self.coordinator.currentSettings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
+        PPVinRecognizerSettings *vinRecognizerSettings = [[PPVinRecognizerSettings alloc] init];
+        [self.coordinator.currentSettings.scanSettings addRecognizerSettings:vinRecognizerSettings];
     }
     else if (self.orcRecognizerType == LicensePlate) {
         [self.ocrRecognizerSettings addOcrParser:[[PPLicensePlatesParserFactory alloc] init] name:kLicensePlateOcrParser];
@@ -221,33 +212,36 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     [cameraViewController pauseScanning];
     
     for (PPRecognizerResult *result in results) {
+        NSString *resultVin;
+        BOOL success = NO;
         if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
             PPBlinkOcrRecognizerResult *ocrRecognizerResult = (PPBlinkOcrRecognizerResult *)result;
-            NSString *result;
-            BOOL success;
+
             switch (self.orcRecognizerType) {
                 case VIN:
-                    result = [ocrRecognizerResult parsedResultForName:kVinOcrParser];
+                    resultVin = [ocrRecognizerResult parsedResultForName:kVinOcrParser];
                     success = YES;
                     break;
                 case LicensePlate:
-                    result =  [ocrRecognizerResult parsedResultForName:kLicensePlateOcrParser];
+                    resultVin =  [ocrRecognizerResult parsedResultForName:kLicensePlateOcrParser];
                     success = YES;
                     break;
                 default:
-                    result =  @"";
+                    resultVin =  @"";
                     success = NO;
                     [cameraViewController resumeScanningAndResetState:YES];
                     break;
             }
             
-            [_viewfinder setOcrResultSucces:success withResult:result andImage:self.currentImageMetadata.image];
+            
         }
-        if ([result isKindOfClass:[PPBarDecoderRecognizerResult class]]) {
-            PPBarDecoderRecognizerResult *barDecoderResult = (PPBarDecoderRecognizerResult *)result;
-            [cameraViewController resumeScanningAndResetState:YES];
-            NSLog(@"%@", barDecoderResult);
+        if ([result isKindOfClass:[PPVinRecognizerResult class]]) {
+            PPVinRecognizerResult *vinRecognizerResult = (PPVinRecognizerResult *)result;
+            resultVin = vinRecognizerResult.vinNumber;
+            success = YES;
         }
+        
+        [_viewfinder setOcrResultSucces:success withResult:resultVin andImage:self.currentImageMetadata.image];
         
     }
 }
