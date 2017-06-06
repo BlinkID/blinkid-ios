@@ -52,6 +52,11 @@ static const CGFloat kViewfinderMargin = 0.0f;
 static const CGFloat kMessageMargin = 15.0;
 static const CGFloat kButtonAcceptMargin = 16.0;
 
+static NSString * const kTitleText = @"title_text";
+static NSString * const kCancelText = @"cancel_text";
+static NSString * const kRepeatText = @"repeat_text";
+static NSString * const kAcceptText = @"accept_text";
+
 @implementation PPOcrFinderView
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -745,6 +750,16 @@ static const CGFloat kButtonAcceptMargin = 16.0;
     self.resultImageView.hidden = YES;
     self.repeatButton.enabled = NO;
     self.resultMessage.text = @"";
+}
+
+- (void)setTranslation:(NSDictionary *)translation {
+    
+    self.message.text = [translation objectForKey:kTitleText];
+    [self.message sizeToFit];
+
+    [self.acceptButton setTitle:[translation objectForKey:kAcceptText] forState:UIControlStateNormal];
+    [self.cancelButton setTitle:[translation objectForKey:kCancelText] forState:UIControlStateNormal];
+    [self.repeatButton setTitle:[translation objectForKey:kRepeatText] forState:UIControlStateNormal];
 }
 
 #pragma mark - UIButton actions

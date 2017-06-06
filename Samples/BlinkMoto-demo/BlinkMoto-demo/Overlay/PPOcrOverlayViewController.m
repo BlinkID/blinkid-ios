@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) PPBlinkOcrRecognizerSettings *ocrRecognizerSettings;
 
+@property (nonatomic, strong) NSDictionary *translation;
+
 @end
 
 static NSString * const kVinOcrParser = @"VIN OCR Parser";
@@ -29,14 +31,16 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
 
 @implementation PPOcrOverlayViewController
 
-- (instancetype)initWithOcrRecognizerType:(OcrRecognizerType)ocrRecognizerType {
+- (instancetype)initWithOcrRecognizerType:(OcrRecognizerType)ocrRecognizerType andTranslation:(NSDictionary *)translation {
     self = [super init];
     if (self) {
         self.orcRecognizerType = ocrRecognizerType;
+        self.translation = translation;
     }
     
     return self;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,13 +64,7 @@ static NSString * const kLicensePlateOcrParser = @"License Plate OCR Parser";
     [self registerOverlaySubview:self.resultOverlay];
     
     [self setupSettingsForRecognizerType];
-    
-    [_viewfinder.acceptButton setTitle:@"Ubernhemnen" forState:UIControlStateNormal];
-    [_viewfinder.cancelButton setTitle:@"Abbrechen" forState:UIControlStateNormal];
-    [_viewfinder.repeatButton setTitle:@"Wiederholen" forState:UIControlStateNormal];
-    
-    _viewfinder.message.text = @"Bitte die FIN / VIN oder Barcode in diesem Bereich erfassen";
-    [_viewfinder.message sizeToFit];
+    [_viewfinder setTranslation:self.translation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

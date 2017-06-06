@@ -167,7 +167,8 @@
         return;
     }
     
-    PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] initWithOcrRecognizerType:ocrRecognizerType];
+    NSDictionary *translation = @{@"title_text" : @"Bitte die FIN / VIN oder Barcode in diesem Bereich erfassen", @"cancel_text" : @"Abbrechen", @"repeat_text" : @"Wiederholen", @"accept_text" : @"Übernehmen"};
+    PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] initWithOcrRecognizerType:ocrRecognizerType andTranslation:translation];
     overlayVC.coordinator = coordinator;
     overlayVC.delegate = self;
 

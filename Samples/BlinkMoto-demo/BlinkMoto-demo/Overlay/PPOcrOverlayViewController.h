@@ -19,8 +19,7 @@ typedef NS_ENUM(NSInteger, OcrRecognizerType) {
 @interface PPOcrOverlayViewController : PPBaseOverlayViewController
 
 - (instancetype)init NS_UNAVAILABLE;
-
-- (instancetype)initWithOcrRecognizerType:(OcrRecognizerType)ocrRecognizerType;
+- (instancetype)initWithOcrRecognizerType:(OcrRecognizerType)ocrRecognizerType andTranslation:(NSDictionary *)translation;
 
 // needs to be weak to avoid a reference cycle
 @property (nonatomic, weak) PPCoordinator *coordinator;

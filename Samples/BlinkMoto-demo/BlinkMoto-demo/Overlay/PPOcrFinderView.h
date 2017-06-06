@@ -43,6 +43,8 @@
 - (void)setButtonsSizeToFitText;
 - (void)setOcrResultSucces:(BOOL)succes withResult:(NSString *)result andImage:(UIImage *)resultImage;
 - (void)resetScanningState;
+- (void)setTranslation:(NSDictionary *)translation;
+
 - (NSString *)getScanningResult;
 
 @end
