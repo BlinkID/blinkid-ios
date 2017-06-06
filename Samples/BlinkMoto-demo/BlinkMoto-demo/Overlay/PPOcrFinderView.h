@@ -35,6 +35,14 @@
 
 @property (nonatomic) UIImageView *resultImageView;
 
+@property (nonatomic) UIView *shadeTop;
+@property (nonatomic) UIView *shadeBottom;
+@property (nonatomic) UIView *shadeLeft;
+@property (nonatomic) UIView *shadeRight;
+
+@property (nonatomic, readonly) UIView *viewfinder;
+
+
 - (void)initViewfinder;
 
 - (void)initViewfinderForPortrait;

@@ -21,11 +21,6 @@
 @property (nonatomic) UIImageView *viewfinderCornerBottomLeft;
 @property (nonatomic) UIImageView *viewfinderCornerBottomRight;
 
-@property (nonatomic) UIView *shadeTop;
-@property (nonatomic) UIView *shadeBottom;
-@property (nonatomic) UIView *shadeLeft;
-@property (nonatomic) UIView *shadeRight;
-
 @property (nonatomic) CGFloat originalViewfinderWidth;
 @property (nonatomic) CGFloat originalViewfinderHeight;
 

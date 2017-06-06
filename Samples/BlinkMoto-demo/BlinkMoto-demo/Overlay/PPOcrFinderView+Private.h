@@ -10,8 +10,6 @@
 
 @interface PPOcrFinderView ()
 
-@property (nonatomic, readonly) UIView *viewfinder;
-
 @property (nonatomic, readonly) NSLayoutConstraint *viewfinderWidthConstraint;
 @property (nonatomic, readonly) NSLayoutConstraint *viewfinderHeightConstraint;
 
