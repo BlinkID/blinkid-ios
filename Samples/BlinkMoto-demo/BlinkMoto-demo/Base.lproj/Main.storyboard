@@ -98,7 +98,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonScanDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuE-dq-SRS"/>
                                     <action selector="buttonScanLicensePlateDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6h-A3-DWh"/>
                                 </connections>
                             </button>
