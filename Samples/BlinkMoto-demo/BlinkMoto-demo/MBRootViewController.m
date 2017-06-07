@@ -8,8 +8,6 @@
 
 #import "MBRootViewController.h"
 
-#import "PPFormOcrOverlayViewController.h"
-#import "MBParsers.h"
 #import "PPOcrOverlayViewController.h"
 
 #import "PPResultPageViewController.h"
@@ -23,8 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonResults;
 @property (weak, nonatomic) IBOutlet UIButton *buttonScanLicensePlates;
 
-@property (nonatomic) NSMutableArray *scanElements;
-
 @end
 
 @implementation MBRootViewController
@@ -33,8 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.scanElements = [[MBParsers getParsers] mutableCopy];
 
     [self hideScanButton];
 
@@ -133,8 +127,6 @@
 
     PPResultPageViewController *resultPageViewController = [PPResultPageViewController allocFromStoryboard];
 
-    resultPageViewController.scanElements = self.scanElements;
-
     [self.navigationController pushViewController:resultPageViewController animated:YES];
 }
 
@@ -168,7 +160,11 @@
         return;
     }
     
-    NSDictionary *translation = @{@"title_text" : @"Bitte die FIN / VIN oder Barcode in diesem Bereich erfassen", @"cancel_text" : @"Abbrechen", @"repeat_text" : @"Wiederholen", @"accept_text" : @"Übernehmen"};
+    NSDictionary *translation = @{@"title_text" : @"Bitte die FIN / VIN oder Barcode in diesem Bereich erfassen",
+                                  @"cancel_text" : @"Abbrechen",
+                                  @"repeat_text" : @"Wiederholen",
+                                  @"accept_text" : @"Übernehmen"};
+    
     PPOcrOverlayViewController *overlayVC = [[PPOcrOverlayViewController alloc] initWithOcrRecognizerType:ocrRecognizerType andTranslation:translation];
     overlayVC.coordinator = coordinator;
     overlayVC.delegate = self;
@@ -194,12 +190,11 @@
 - (void)ocrOverlayViewControllerDidReturnResult:(NSString *)scanResult {
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    [[[UIAlertView alloc] initWithTitle:@"Scan result"
+    [[[UIAlertView alloc] initWithTitle:@"Ergebnis"
                                 message:scanResult
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil, nil] show];
 }
-
 
 @end
