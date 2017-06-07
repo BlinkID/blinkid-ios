@@ -10,8 +10,6 @@
 
 #import "PPOcrOverlayViewController.h"
 
-#import "PPResultPageViewController.h"
-
 @interface MBRootViewController () <PPOcrOverlayViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageProductLogo;
@@ -124,10 +122,6 @@
 }
 
 - (IBAction)buttonResultsDidTap:(id)sender {
-
-    PPResultPageViewController *resultPageViewController = [PPResultPageViewController allocFromStoryboard];
-
-    [self.navigationController pushViewController:resultPageViewController animated:YES];
 }
 
 #pragma mark - Scanning
