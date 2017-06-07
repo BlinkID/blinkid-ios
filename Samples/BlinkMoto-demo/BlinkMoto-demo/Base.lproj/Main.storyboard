@@ -89,7 +89,7 @@
                                     <constraint firstAttribute="height" constant="50" id="vM1-95-8xM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="License plates">
+                                <state key="normal" title="Nummernschild">
                                     <color key="titleColor" red="0.086274509799999996" green="0.56862745100000001" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
