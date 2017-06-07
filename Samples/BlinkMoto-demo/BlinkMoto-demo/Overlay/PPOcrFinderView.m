@@ -42,7 +42,7 @@
 
 @end
 
-static const CGFloat kShadeAlpha = 0.4f;
+static const CGFloat kShadeAlpha = 0.7f;
 static const CGFloat kViewfinderMargin = 0.0f;
 static const CGFloat kMessageMargin = 15.0;
 static const CGFloat kButtonAcceptMargin = 16.0;
