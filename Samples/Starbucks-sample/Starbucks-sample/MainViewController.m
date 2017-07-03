@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "OverlayViewController.h"
 #import "StarbucksCardRecognizerSettings.h"
 
 @interface MainViewController () <PPScanningDelegate>
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) StarbucksCardRecognizerSettings *starbucksRecognizerSettings;
 
 @property (strong, nonatomic) UIViewController<PPScanningViewController> *scanningViewController;
+@property (strong, nonatomic) OverlayViewController *overlayViewController;
 
 @end
 
@@ -75,11 +77,11 @@
 
     /** Create new scanning view controller */
 
-
-    //    self.scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self
-    //                                                                      overlayViewController:self.overlayViewController
-    //                                                                                coordinator:self.coordinator
-    //                                                                                      error:nil];
+    self.overlayViewController = [OverlayViewController viewControllerFromStoryboard];
+    self.scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self
+                                                                      overlayViewController:self.overlayViewController
+                                                                                coordinator:self.coordinator
+                                                                                      error:nil];
 
     // allow rotation if VC is displayed as a modal view controller
     self.scanningViewController.autorotate = YES;

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0E09211F0505BF00C539F6 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0E09201F0505BF00C539F6 /* ShadowView.m */; };
 		CD2AC7C41F04EED30033717A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD2AC7C21F04EED30033717A /* MicroBlink.bundle */; };
 		CD2AC7C61F04EED90033717A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; };
 		CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */; };
 		CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */; };
 		CDCC568B1F04D86E00A747E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568A1F04D86E00A747E4 /* main.m */; };
 		CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568D1F04D86E00A747E4 /* AppDelegate.m */; };
@@ -42,11 +44,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD0E091F1F0505BF00C539F6 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShadowView.h; path = Overlay/ShadowView.h; sourceTree = "<group>"; };
+		CD0E09201F0505BF00C539F6 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShadowView.m; path = Overlay/ShadowView.m; sourceTree = "<group>"; };
 		CD2AC7C21F04EED30033717A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		CD2AC7C31F04EED30033717A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		CDC0FD841F051601008E3A23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CDC0FD861F05160B008E3A23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		CDC0FD881F051611008E3A23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CDC0FD8A1F05207B008E3A23 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = Overlay/OverlayViewController.h; sourceTree = "<group>"; };
+		CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayViewController.m; path = Overlay/OverlayViewController.m; sourceTree = "<group>"; };
+		CDC0FD8E1F053D44008E3A23 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
 		CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
 		CDCC56861F04D86E00A747E4 /* Starbucks-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starbucks-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCC568A1F04D86E00A747E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD1CC5EF1F067432000B7D39 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0FD8A1F05207B008E3A23 /* OverlayViewController.h */,
+				CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */,
+				CD0E091F1F0505BF00C539F6 /* ShadowView.h */,
+				CD0E09201F0505BF00C539F6 /* ShadowView.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
 		CD1CC5F01F067454000B7D39 /* Recognizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1CC5F01F067454000B7D39 /* Recognizer */,
+				CD1CC5EF1F067432000B7D39 /* Overlay */,
 				CDC0FD8D1F053D14008E3A23 /* About */,
 				CDCC568C1F04D86E00A747E4 /* AppDelegate.h */,
 				CDCC568D1F04D86E00A747E4 /* AppDelegate.m */,
@@ -243,7 +262,9 @@
 				CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */,
 				CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */,
 				CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */,
+				CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */,
 				CDCC56A71F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m in Sources */,
+				CD0E09211F0505BF00C539F6 /* ShadowView.m in Sources */,
 				CDCC56A41F04DC9800A747E4 /* UIColor+MBAdditions.m in Sources */,
 				CDCC568B1F04D86E00A747E4 /* main.m in Sources */,
 			);

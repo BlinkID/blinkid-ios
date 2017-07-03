@@ -100,9 +100,111 @@
             </objects>
             <point key="canvasLocation" x="22" y="533"/>
         </scene>
+        <!--Overlay View Controller-->
+        <scene sceneID="2sL-Yn-RhU">
+            <objects>
+                <viewController storyboardIdentifier="overlay" id="IOV-Kt-J2k" customClass="OverlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TP4-eS-NN2"/>
+                        <viewControllerLayoutGuide type="bottom" id="MhH-46-FeE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g4V-p6-KEC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-bH-NIY">
+                                <rect key="frame" x="20.666666666666657" y="616" width="372.66666666666663" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucksCard" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-B6-j32">
+                                        <rect key="frame" x="247.66666666666663" y="15" width="110" height="70"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position the device above Starbucks card and wait for scanning." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-eV-Ebl">
+                                        <rect key="frame" x="15" y="13" width="138" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="Ub7-pS-Isr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.35628360510000001" green="0.37202176450000002" blue="0.40526056290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yy3-eV-Ebl" firstAttribute="leading" secondItem="yO0-bH-NIY" secondAttribute="leading" constant="15" id="9Sl-8M-0Dw"/>
+                                    <constraint firstAttribute="bottom" secondItem="IjF-B6-j32" secondAttribute="bottom" constant="15" id="A2r-n9-KOi"/>
+                                    <constraint firstAttribute="trailing" secondItem="IjF-B6-j32" secondAttribute="trailing" constant="15" id="Izp-Ku-MCI"/>
+                                    <constraint firstItem="yy3-eV-Ebl" firstAttribute="top" secondItem="yO0-bH-NIY" secondAttribute="top" constant="13" id="Q17-0I-XPt"/>
+                                    <constraint firstItem="IjF-B6-j32" firstAttribute="top" secondItem="yO0-bH-NIY" secondAttribute="top" constant="15" id="Q9B-8O-7cX"/>
+                                    <constraint firstItem="IjF-B6-j32" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yy3-eV-Ebl" secondAttribute="trailing" constant="10" id="UHV-1w-FNf"/>
+                                    <constraint firstAttribute="height" constant="100" id="Y9e-Rq-Pep"/>
+                                    <constraint firstAttribute="bottom" secondItem="yy3-eV-Ebl" secondAttribute="bottom" constant="13" id="rF4-Hx-rG9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO7-dR-TEL">
+                                <rect key="frame" x="20.666666666666657" y="95" width="372.66666666666663" height="243.33333333333331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="height" multiplier="72:47" id="uoq-5w-a3M"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-5t-KIc">
+                                <rect key="frame" x="20" y="32" width="44" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCloseButton:" destination="IOV-Kt-J2k" eventType="touchUpInside" id="KaU-wy-pVg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io7-QY-jFi">
+                                <rect key="frame" x="363" y="33.666666666666664" width="31" height="30"/>
+                                <state key="normal" image="icSunOff"/>
+                                <connections>
+                                    <action selector="didTapTorchButton:" destination="IOV-Kt-J2k" eventType="touchUpInside" id="c9t-1L-d6A"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-oc-BHA">
+                                <rect key="frame" x="20.666666666666657" y="95" width="372.66666666666663" height="243.33333333333331"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="height" secondItem="RO7-dR-TEL" secondAttribute="height" id="51f-lW-AF4"/>
+                            <constraint firstItem="RO7-dR-TEL" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="95" id="JvN-n9-mOh"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerY" secondItem="RO7-dR-TEL" secondAttribute="centerY" id="MO1-06-0Sy"/>
+                            <constraint firstItem="io7-QY-jFi" firstAttribute="centerY" secondItem="m4l-5t-KIc" secondAttribute="centerY" id="RJH-5S-Kd1"/>
+                            <constraint firstItem="m4l-5t-KIc" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="32" id="X7o-Un-z6O"/>
+                            <constraint firstItem="RO7-dR-TEL" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="alE-bX-nup"/>
+                            <constraint firstItem="RO7-dR-TEL" firstAttribute="width" secondItem="g4V-p6-KEC" secondAttribute="width" multiplier="0.9" id="ddP-AP-wzJ"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerX" secondItem="RO7-dR-TEL" secondAttribute="centerX" id="fNV-0y-vIA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yO0-bH-NIY" secondAttribute="bottom" constant="20" id="iix-Hl-Hlk"/>
+                            <constraint firstItem="yO0-bH-NIY" firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="width" id="mJp-Jm-R48"/>
+                            <constraint firstItem="m4l-5t-KIc" firstAttribute="leading" secondItem="g4V-p6-KEC" secondAttribute="leading" constant="20" id="poS-uY-vER"/>
+                            <constraint firstAttribute="trailing" secondItem="io7-QY-jFi" secondAttribute="trailing" constant="20" id="u8l-Vd-chq"/>
+                            <constraint firstItem="yO0-bH-NIY" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="x1a-qE-K3B"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="width" id="yOc-Fw-hlg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="m4l-5t-KIc" id="hfw-O9-REa"/>
+                        <outlet property="containerView" destination="yO0-bH-NIY" id="1Xm-Qg-yem"/>
+                        <outlet property="instuctionLabel" destination="yy3-eV-Ebl" id="Sua-jq-FE5"/>
+                        <outlet property="pausedCameraImageView" destination="Gmo-oc-BHA" id="wkr-QT-X56"/>
+                        <outlet property="starbucksCardImageView" destination="IjF-B6-j32" id="VY0-fZ-nxP"/>
+                        <outlet property="torchButton" destination="io7-QY-jFi" id="qzA-zr-jkq"/>
+                        <outlet property="viewFinderView" destination="RO7-dR-TEL" id="s9J-nc-pXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8XN-7d-IlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="137"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icSunOff" width="31" height="30"/>
         <image name="infoIcon" width="35" height="35"/>
+        <image name="starbucksCard" width="110" height="70"/>
         <image name="starbucksLogo" width="166" height="166"/>
     </resources>
 </document>
