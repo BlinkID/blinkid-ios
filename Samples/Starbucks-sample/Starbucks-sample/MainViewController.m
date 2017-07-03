@@ -7,12 +7,14 @@
 //
 
 #import "MainViewController.h"
+#import "StarbucksCardRecognizerSettings.h"
 
 @interface MainViewController () <PPScanningDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
 @property (strong, nonatomic) PPCameraCoordinator *coordinator;
+@property (strong, nonatomic) StarbucksCardRecognizerSettings *starbucksRecognizerSettings;
 
 @property (strong, nonatomic) UIViewController<PPScanningViewController> *scanningViewController;
 
@@ -53,6 +55,8 @@
     PPPdf417RecognizerSettings *pdf417RecognizerSettings = [[PPPdf417RecognizerSettings alloc] init];
     [settings.scanSettings addRecognizerSettings:pdf417RecognizerSettings];
 
+    self.starbucksRecognizerSettings = [[StarbucksCardRecognizerSettings alloc] init];
+    [settings.scanSettings addRecognizerSettings:self.starbucksRecognizerSettings];
 
     /** 4. Initialize the Scanning Coordinator object */
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
