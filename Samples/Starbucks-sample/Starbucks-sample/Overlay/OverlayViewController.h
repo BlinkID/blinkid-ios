@@ -14,6 +14,4 @@
 
 + (instancetype)viewControllerFromStoryboard;
 
-- (void)setAllElementsToHidden:(BOOL)hidden;
-
 @end

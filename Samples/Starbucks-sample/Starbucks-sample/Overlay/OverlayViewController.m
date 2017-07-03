@@ -115,16 +115,6 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     _torchOn = torchOn;
 }
 
-- (void)setAllElementsToHidden:(BOOL)hidden {
-    self.torchButton.hidden = hidden;
-    self.shadowView.hidden = hidden;
-    self.viewFinderView.hidden = hidden;
-    self.closeButton.hidden = hidden;
-    self.containerView.hidden = hidden;
-    self.starbucksCardImageView.hidden = hidden;
-    self.instuctionLabel.hidden = hidden;
-}
-
 #pragma mark - IBAction
 
 - (IBAction)didTapTorchButton:(id)sender {

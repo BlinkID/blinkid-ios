@@ -86,6 +86,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     return coordinator;
 }
 
+#pragma mark - IBAction
 - (IBAction)didTapScanButton:(id)sender {
 
     /** Instantiate the scanning coordinator */
@@ -147,24 +148,10 @@ static NSString *const kScanButtonLabelText = @"SCAN";
         }
     }
 
-    [self.overlayViewController setAllElementsToHidden:YES];
-    self.overlayViewController.pausedCameraImageView.hidden = NO;
-
-    ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
-    resultsViewController.delegate = self;
-
-    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    [scanningViewController addChildViewController:resultsViewController];
-    [scanningViewController.view addSubview:resultsViewController.view];
-    [resultsViewController didMoveToParentViewController:scanningViewController];
-
-    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:scanningViewController.view.centerXAnchor constant:0.f].active = YES;
-    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:scanningViewController.view.centerYAnchor constant:0.f].active = YES;
-    [resultsViewController.view.widthAnchor constraintEqualToAnchor:scanningViewController.view.widthAnchor constant:0.f].active = YES;
-    [resultsViewController.view.heightAnchor constraintEqualToAnchor:scanningViewController.view.heightAnchor constant:0.f].active = YES;
-
-    [scanningViewController.view layoutIfNeeded];
+    if (resultsMap != nil && resultsMap.count != 0) {
+        self.overlayViewController.pausedCameraImageView.hidden = NO;
+        [self createResultsViewControllerWithResultsMap:resultsMap];
+    }
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController
@@ -181,6 +168,27 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     }
 }
 
+- (void)createResultsViewControllerWithResultsMap:(NSDictionary *)resultsMap {
+    ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
+    resultsViewController.delegate = self;
+
+    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    [self.scanningViewController addChildViewController:resultsViewController];
+    [self.scanningViewController.view addSubview:resultsViewController.view];
+    [resultsViewController didMoveToParentViewController:self.scanningViewController];
+
+    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.centerXAnchor constant:0.f].active =
+        YES;
+    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.centerYAnchor constant:0.f].active =
+        YES;
+    [resultsViewController.view.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.widthAnchor constant:0.f].active = YES;
+    [resultsViewController.view.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.heightAnchor constant:0.f].active =
+        YES;
+
+    [self.scanningViewController.view layoutIfNeeded];
+}
+
 #pragma mark - ResultsViewControllerDelegate
 
 - (void)didTapSubmitButton:(ResultsViewController *)viewController {
@@ -188,7 +196,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 }
 
 - (void)didTapCloseButton:(ResultsViewController *)viewController {
-    [self.overlayViewController setAllElementsToHidden:NO];
     self.overlayViewController.pausedCameraImageView.hidden = YES;
 
     [viewController willMoveToParentViewController:nil];
