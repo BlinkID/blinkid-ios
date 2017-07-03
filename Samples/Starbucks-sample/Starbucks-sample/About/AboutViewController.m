@@ -36,7 +36,9 @@
 }
 
 - (IBAction)didTapBrowseOtherProductsButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://microblink.com/en/products"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://microblink.com/en/products"]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 - (IBAction)didTapMicroblinkButton:(id)sender {
@@ -44,11 +46,15 @@
 }
 
 - (IBAction)didTapLinkedInButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/company/microblink"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/company/microblink"]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 - (IBAction)didTapFacebookButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/microblink"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/microblink"]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 - (IBAction)didTapTwitterButton:(id)sender {

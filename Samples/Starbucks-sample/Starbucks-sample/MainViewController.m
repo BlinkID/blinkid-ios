@@ -8,9 +8,10 @@
 
 #import "MainViewController.h"
 #import "OverlayViewController.h"
+#import "ResultsViewController.h"
 #import "StarbucksCardRecognizerSettings.h"
 
-@interface MainViewController () <PPScanningDelegate>
+@interface MainViewController () <PPScanningDelegate, ResultsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
@@ -108,8 +109,73 @@
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
+    [scanningViewController pauseScanning];
+    [scanningViewController pauseCamera];
+
+    NSDictionary *resultsMap;
+
+    // Collect data from the result
+    for (PPRecognizerResult *result in results) {
+
+        if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
+            PPPdf417RecognizerResult *ocrResult = (PPPdf417RecognizerResult *)result;
+            resultsMap = @{ @"Starbucks card number" : [ocrResult stringUsingGuessedEncoding] };
+        } else {
+            PPBlinkOcrRecognizerResult *ocrResult = (PPBlinkOcrRecognizerResult *)result;
+            resultsMap = [self.starbucksRecognizerSettings extractMessageFromResult:ocrResult];
+        }
+    }
+
+    [self.overlayViewController setAllElementsToHidden:YES];
+    self.overlayViewController.pausedCameraImageView.hidden = NO;
+
+    ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
+    resultsViewController.delegate = self;
+
+    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    [scanningViewController addChildViewController:resultsViewController];
+    [scanningViewController.view addSubview:resultsViewController.view];
+    [resultsViewController didMoveToParentViewController:scanningViewController];
+
+    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:scanningViewController.view.centerXAnchor constant:0.f].active = YES;
+    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:scanningViewController.view.centerYAnchor constant:0.f].active = YES;
+    [resultsViewController.view.widthAnchor constraintEqualToAnchor:scanningViewController.view.widthAnchor constant:0.f].active = YES;
+    [resultsViewController.view.heightAnchor constraintEqualToAnchor:scanningViewController.view.heightAnchor constant:0.f].active = YES;
+
+    [scanningViewController.view layoutIfNeeded];
 }
+
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController
+    didFinishDetectionWithResult:(PPDetectorResult *)result {
+}
+
+- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
+             didOutputMetadata:(PPMetadata *)metadata {
+
+    if ([metadata isKindOfClass:[PPImageMetadata class]]) {
+
+        PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
+        self.overlayViewController.pausedCameraImageView.image = imageMetadata.image;
+    }
+}
+
 #pragma mark - ResultsViewControllerDelegate
 
+- (void)didTapSubmitButton:(ResultsViewController *)viewController {
+    [self.scanningViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)didTapCloseButton:(ResultsViewController *)viewController {
+    [self.overlayViewController setAllElementsToHidden:NO];
+    self.overlayViewController.pausedCameraImageView.hidden = YES;
+
+    [viewController willMoveToParentViewController:nil];
+    [viewController.view removeFromSuperview];
+    [viewController removeFromParentViewController];
+
+    [self.scanningViewController resumeCamera];
+    [self.scanningViewController resumeScanningAndResetState:YES];
+}
 
 @end

@@ -13,6 +13,7 @@
 		CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */; };
 		CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */; };
+		CDC0FD931F0540CC008E3A23 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */; };
 		CDCC568B1F04D86E00A747E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568A1F04D86E00A747E4 /* main.m */; };
 		CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568D1F04D86E00A747E4 /* AppDelegate.m */; };
 		CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC56901F04D86E00A747E4 /* MainViewController.m */; };
@@ -26,7 +27,6 @@
 		CDCC56AC1F04E3AE00A747E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AB1F04E3AE00A747E4 /* libz.tbd */; };
 		CDCC56AE1F04E3BC00A747E4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AD1F04E3BC00A747E4 /* libiconv.tbd */; };
 		CDCC56B01F04E3C300A747E4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AF1F04E3C300A747E4 /* Accelerate.framework */; };
-		
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +55,8 @@
 		CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayViewController.m; path = Overlay/OverlayViewController.m; sourceTree = "<group>"; };
 		CDC0FD8E1F053D44008E3A23 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
 		CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
+		CDC0FD911F0540CC008E3A23 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = Overlay/Results/ResultsViewController.h; sourceTree = "<group>"; };
+		CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = Overlay/Results/ResultsViewController.m; sourceTree = "<group>"; };
 		CDCC56861F04D86E00A747E4 /* Starbucks-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starbucks-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCC568A1F04D86E00A747E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDCC568C1F04D86E00A747E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		CD1CC5EF1F067432000B7D39 /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				CDC0FD941F0540D7008E3A23 /* Results */,
 				CDC0FD8A1F05207B008E3A23 /* OverlayViewController.h */,
 				CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */,
 				CD0E091F1F0505BF00C539F6 /* ShadowView.h */,
@@ -120,6 +123,15 @@
 				CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		CDC0FD941F0540D7008E3A23 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0FD911F0540CC008E3A23 /* ResultsViewController.h */,
+				CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */,
+			);
+			name = Results;
 			sourceTree = "<group>";
 		};
 		CDCC567D1F04D86E00A747E4 = {
@@ -265,6 +277,7 @@
 				CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */,
 				CDCC56A71F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m in Sources */,
 				CD0E09211F0505BF00C539F6 /* ShadowView.m in Sources */,
+				CDC0FD931F0540CC008E3A23 /* ResultsViewController.m in Sources */,
 				CDCC56A41F04DC9800A747E4 /* UIColor+MBAdditions.m in Sources */,
 				CDCC568B1F04D86E00A747E4 /* main.m in Sources */,
 			);
