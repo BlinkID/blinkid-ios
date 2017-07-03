@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umF-uu-rkQ">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SU3-G6-XCQ">
+            <objects>
+                <navigationController id="umF-uu-rkQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5e3-ag-kGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.65976732969999996" blue="0.38288292289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.35628360510000001" green="0.37202176450000002" blue="0.40526056290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XXb-Km-PDp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4DX-fX-hqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-722" y="125"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucksLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Suc-85-6WI">
+                                <rect key="frame" x="124" y="161" width="166" height="166"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-S3-yjh">
+                                <rect key="frame" x="20" y="672" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.65976732969284058" blue="0.38288292288780212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Wcw-pg-LEW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="SCAN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapScanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFQ-o2-1R9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILx-Nl-E70">
+                                <rect key="frame" x="359" y="20" width="35" height="35"/>
+                                <color key="tintColor" red="0.0" green="0.65976732969999996" blue="0.38288292289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="-20" minY="-20" maxX="-20" maxY="-20"/>
+                                <state key="normal" image="infoIcon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yjo-S3-yjh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Cts-ZX-qtW"/>
+                            <constraint firstItem="ILx-Nl-E70" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="L1w-je-zbb"/>
+                            <constraint firstAttribute="trailing" secondItem="yjo-S3-yjh" secondAttribute="trailing" constant="20" id="jIx-86-efm"/>
+                            <constraint firstItem="Suc-85-6WI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqr-Vm-qp2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yjo-S3-yjh" secondAttribute="bottom" constant="20" id="qTA-y9-Ov9"/>
+                            <constraint firstAttribute="trailing" secondItem="ILx-Nl-E70" secondAttribute="trailing" constant="20" id="tZy-r8-JoF"/>
+                            <constraint firstItem="Suc-85-6WI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="161" id="xtr-fY-nij"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wv6-3H-8C7"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="scanButton" destination="yjo-S3-yjh" id="ro3-D9-FDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="infoIcon" width="35" height="35"/>
+        <image name="starbucksLogo" width="166" height="166"/>
+    </resources>
+</document>

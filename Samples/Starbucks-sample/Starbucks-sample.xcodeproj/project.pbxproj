@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD2AC7C41F04EED30033717A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD2AC7C21F04EED30033717A /* MicroBlink.bundle */; };
+		CD2AC7C61F04EED90033717A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; };
+		CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; settings = {ATTRIBUTES = 			(CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDCC568B1F04D86E00A747E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568A1F04D86E00A747E4 /* main.m */; };
+		CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568D1F04D86E00A747E4 /* AppDelegate.m */; };
+		CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC56901F04D86E00A747E4 /* MainViewController.m */; };
+		CDCC56941F04D86E00A747E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56921F04D86E00A747E4 /* Main.storyboard */; };
+		CDCC56961F04D86E00A747E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56951F04D86E00A747E4 /* Assets.xcassets */; };
+		CDCC56991F04D86E00A747E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56971F04D86E00A747E4 /* LaunchScreen.storyboard */; };
+		CDCC56AA1F04E3A700A747E4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56A91F04E3A700A747E4 /* libc++.tbd */; };
+		CDCC56AC1F04E3AE00A747E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AB1F04E3AE00A747E4 /* libz.tbd */; };
+		CDCC56AE1F04E3BC00A747E4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AD1F04E3BC00A747E4 /* libiconv.tbd */; };
+		CDCC56B01F04E3C300A747E4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AF1F04E3C300A747E4 /* Accelerate.framework */; };
+		
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD2AC7C81F04EED90033717A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CD2AC7C21F04EED30033717A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		CD2AC7C31F04EED30033717A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		CDC0FD841F051601008E3A23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CDC0FD861F05160B008E3A23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CDC0FD881F051611008E3A23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CDCC568A1F04D86E00A747E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CDCC568C1F04D86E00A747E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CDCC568D1F04D86E00A747E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CDCC568F1F04D86E00A747E4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CDCC56901F04D86E00A747E4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CDCC56931F04D86E00A747E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDCC56951F04D86E00A747E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDCC56981F04D86E00A747E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDCC569A1F04D86E00A747E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCC56A01F04DA3F00A747E4 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = About.storyboard; path = About/About.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDCC56831F04D86E00A747E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCC56B01F04E3C300A747E4 /* Accelerate.framework in Frameworks */,
+				CD2AC7C61F04EED90033717A /* MicroBlink.framework in Frameworks */,
+				CDCC56AE1F04E3BC00A747E4 /* libiconv.tbd in Frameworks */,
+				CDCC56AC1F04E3AE00A747E4 /* libz.tbd in Frameworks */,
+				CDCC56AA1F04E3A700A747E4 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDCC567D1F04D86E00A747E4 = {
+			isa = PBXGroup;
+			children = (
+				CDCC56881F04D86E00A747E4 /* Starbucks-sample */,
+				CDCC56871F04D86E00A747E4 /* Products */,
+				CDCC56A81F04E3A700A747E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CDCC56871F04D86E00A747E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC56861F04D86E00A747E4 /* Starbucks-sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDCC56881F04D86E00A747E4 /* Starbucks-sample */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC568C1F04D86E00A747E4 /* AppDelegate.h */,
+				CDCC568D1F04D86E00A747E4 /* AppDelegate.m */,
+				CDCC568F1F04D86E00A747E4 /* MainViewController.h */,
+				CDCC56901F04D86E00A747E4 /* MainViewController.m */,
+				CDCC56921F04D86E00A747E4 /* Main.storyboard */,
+				CDCC56951F04D86E00A747E4 /* Assets.xcassets */,
+				CDCC56971F04D86E00A747E4 /* LaunchScreen.storyboard */,
+				CDCC569A1F04D86E00A747E4 /* Info.plist */,
+				CDCC56891F04D86E00A747E4 /* Supporting Files */,
+			);
+			path = "Starbucks-sample";
+			sourceTree = "<group>";
+		};
+		CDCC56891F04D86E00A747E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC56A21F04DC9800A747E4 /* UIColor+MBAdditions.h */,
+				CDCC56A31F04DC9800A747E4 /* UIColor+MBAdditions.m */,
+				CDCC568A1F04D86E00A747E4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDCC56A81F04E3A700A747E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0FD881F051611008E3A23 /* AudioToolbox.framework */,
+				CDC0FD861F05160B008E3A23 /* CoreMedia.framework */,
+				CDC0FD841F051601008E3A23 /* AVFoundation.framework */,
+				CD2AC7C21F04EED30033717A /* MicroBlink.bundle */,
+				CD2AC7C31F04EED30033717A /* MicroBlink.framework */,
+				CDCC56AF1F04E3C300A747E4 /* Accelerate.framework */,
+				CDCC56AD1F04E3BC00A747E4 /* libiconv.tbd */,
+				CDCC56AB1F04E3AE00A747E4 /* libz.tbd */,
+				CDCC56A91F04E3A700A747E4 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDCC56851F04D86E00A747E4 /* Starbucks-sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDCC569D1F04D86E00A747E4 /* Build configuration list for PBXNativeTarget "Starbucks-sample" */;
+			buildPhases = (
+				CDCC56821F04D86E00A747E4 /* Sources */,
+				CDCC56831F04D86E00A747E4 /* Frameworks */,
+				CDCC56841F04D86E00A747E4 /* Resources */,
+				CD2AC7C81F04EED90033717A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Starbucks-sample";
+			productName = "Starbucks-sample";
+			productReference = CDCC56861F04D86E00A747E4 /* Starbucks-sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDCC567E1F04D86E00A747E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					CDCC56851F04D86E00A747E4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CDCC56811F04D86E00A747E4 /* Build configuration list for PBXProject "Starbucks-sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDCC567D1F04D86E00A747E4;
+			productRefGroup = CDCC56871F04D86E00A747E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDCC56851F04D86E00A747E4 /* Starbucks-sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDCC56841F04D86E00A747E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2AC7C41F04EED30033717A /* MicroBlink.bundle in Resources */,
+				CDCC56991F04D86E00A747E4 /* LaunchScreen.storyboard in Resources */,
+				CDCC56961F04D86E00A747E4 /* Assets.xcassets in Resources */,
+				CDCC56A11F04DA3F00A747E4 /* About.storyboard in Resources */,
+				CDCC56941F04D86E00A747E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDCC56821F04D86E00A747E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */,
+				CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */,
+				CDCC568B1F04D86E00A747E4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDCC56921F04D86E00A747E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDCC56931F04D86E00A747E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDCC56971F04D86E00A747E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDCC56981F04D86E00A747E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDCC569B1F04D86E00A747E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDCC569C1F04D86E00A747E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDCC569E1F04D86E00A747E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../..",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Starbucks-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Starbucks-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDCC569F1F04D86E00A747E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../..",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Starbucks-sample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Starbucks-sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDCC56811F04D86E00A747E4 /* Build configuration list for PBXProject "Starbucks-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDCC569B1F04D86E00A747E4 /* Debug */,
+				CDCC569C1F04D86E00A747E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDCC569D1F04D86E00A747E4 /* Build configuration list for PBXNativeTarget "Starbucks-sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDCC569E1F04D86E00A747E4 /* Debug */,
+				CDCC569F1F04D86E00A747E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDCC567E1F04D86E00A747E4 /* Project object */;
+}
