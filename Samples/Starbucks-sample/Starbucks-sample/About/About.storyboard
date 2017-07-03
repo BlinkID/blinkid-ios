@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ETg-oY-ieT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="UMk-x3-efm">
+            <objects>
+                <viewController storyboardIdentifier="PPAboutViewController" id="ETg-oY-ieT" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="whc-Ev-Vmg"/>
+                        <viewControllerLayoutGuide type="bottom" id="6r2-Cs-Xg4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lvf-sX-V7o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-OR-T0E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoMicroblink" translatesAutoresizingMaskIntoConstraints="NO" id="QRV-wU-3e9">
+                                        <rect key="frame" x="73.5" y="53" width="228" height="64"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4z-EL-Erl">
+                                        <rect key="frame" x="233.5" y="420" width="24" height="22"/>
+                                        <state key="normal" image="twitterIcon"/>
+                                        <connections>
+                                            <action selector="didTapTwitterButton:" destination="ETg-oY-ieT" eventType="touchUpInside" id="oak-f5-yln"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-Kw-lDO">
+                                        <rect key="frame" x="20" y="281" width="335" height="27"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Browse other products for eliminating manual data entry. ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35628360510000001" green="0.37202176450000002" blue="0.40526056290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="13" name=".SFNSText"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapBrowseOtherProductsButton:" destination="ETg-oY-ieT" eventType="touchUpInside" id="ogO-Uc-sZh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-mr-2rs">
+                                        <rect key="frame" x="20" y="162" width="335" height="109"/>
+                                        <string key="text">Microblink is a research and development company focused on machine vision technology for mobile devices. We use the most advanced neural networks and deep learning techniques to provide the fastest and the most accurate text recognition using smartphone camera.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.35628360510000001" green="0.37202176450000002" blue="0.40526056290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Llh-qQ-cfu">
+                                        <rect key="frame" x="108" y="363" width="159" height="32"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="www.microblink.com">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.35628360510000001" green="0.37202176450000002" blue="0.40526056290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="17" name=".SFNSText"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapMicroblinkButton:" destination="ETg-oY-ieT" eventType="touchUpInside" id="XCT-1j-V3F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-b0-aSB">
+                                        <rect key="frame" x="181.5" y="420" width="12" height="22"/>
+                                        <state key="normal" image="facebookIcon"/>
+                                        <connections>
+                                            <action selector="didTapFacebookButton:" destination="ETg-oY-ieT" eventType="touchUpInside" id="Le5-6J-WyM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbX-Ze-Ibv">
+                                        <rect key="frame" x="121.5" y="420" width="20" height="22"/>
+                                        <state key="normal" image="linkedinIcon"/>
+                                        <connections>
+                                            <action selector="didTapLinkedInButton:" destination="ETg-oY-ieT" eventType="touchUpInside" id="gvf-bM-g38"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ORm-b0-aSB" firstAttribute="centerX" secondItem="5Mm-OR-T0E" secondAttribute="centerX" id="8ux-ZF-gxE"/>
+                                    <constraint firstItem="1ax-mr-2rs" firstAttribute="centerX" secondItem="5Mm-OR-T0E" secondAttribute="centerX" id="8wX-sp-2U3"/>
+                                    <constraint firstItem="2c0-Kw-lDO" firstAttribute="top" secondItem="1ax-mr-2rs" secondAttribute="bottom" constant="10" id="ACd-S0-1kt"/>
+                                    <constraint firstItem="Llh-qQ-cfu" firstAttribute="centerX" secondItem="5Mm-OR-T0E" secondAttribute="centerX" id="BKN-Pb-d3F"/>
+                                    <constraint firstItem="BbX-Ze-Ibv" firstAttribute="centerY" secondItem="ORm-b0-aSB" secondAttribute="centerY" id="GB4-i9-nwg"/>
+                                    <constraint firstItem="1ax-mr-2rs" firstAttribute="top" secondItem="QRV-wU-3e9" secondAttribute="bottom" constant="45" id="GGR-AK-ch1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ORm-b0-aSB" secondAttribute="bottom" constant="100" id="Gga-wF-Xgm"/>
+                                    <constraint firstItem="2c0-Kw-lDO" firstAttribute="width" secondItem="1ax-mr-2rs" secondAttribute="width" id="Wfj-Pf-khX"/>
+                                    <constraint firstItem="QRV-wU-3e9" firstAttribute="top" secondItem="5Mm-OR-T0E" secondAttribute="topMargin" constant="45" id="XxF-6l-9ly"/>
+                                    <constraint firstItem="v4z-EL-Erl" firstAttribute="centerY" secondItem="ORm-b0-aSB" secondAttribute="centerY" id="Y9b-cP-qGp"/>
+                                    <constraint firstItem="ORm-b0-aSB" firstAttribute="leading" secondItem="BbX-Ze-Ibv" secondAttribute="trailing" constant="40" id="b9J-Zp-hv2"/>
+                                    <constraint firstItem="ORm-b0-aSB" firstAttribute="top" secondItem="Llh-qQ-cfu" secondAttribute="bottom" constant="25" id="fPE-pz-5Xf"/>
+                                    <constraint firstItem="1ax-mr-2rs" firstAttribute="leading" secondItem="5Mm-OR-T0E" secondAttribute="leading" constant="20" id="gxt-AW-Qd1"/>
+                                    <constraint firstItem="2c0-Kw-lDO" firstAttribute="centerX" secondItem="5Mm-OR-T0E" secondAttribute="centerX" id="iM2-r4-RDu"/>
+                                    <constraint firstItem="v4z-EL-Erl" firstAttribute="leading" secondItem="ORm-b0-aSB" secondAttribute="trailing" constant="40" id="mqQ-6y-5q2"/>
+                                    <constraint firstItem="QRV-wU-3e9" firstAttribute="centerX" secondItem="5Mm-OR-T0E" secondAttribute="centerX" id="sH1-ah-3FF"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ax-mr-2rs" secondAttribute="trailing" constant="20" id="si8-6y-Jlb"/>
+                                    <constraint firstItem="Llh-qQ-cfu" firstAttribute="top" secondItem="2c0-Kw-lDO" secondAttribute="bottom" constant="55" id="tWg-To-u7d"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5Mm-OR-T0E" secondAttribute="width" id="1c4-RQ-7e5"/>
+                            <constraint firstItem="5Mm-OR-T0E" firstAttribute="centerY" secondItem="Lvf-sX-V7o" secondAttribute="centerY" id="TNa-T5-QNn"/>
+                            <constraint firstItem="5Mm-OR-T0E" firstAttribute="width" secondItem="Lvf-sX-V7o" secondAttribute="width" id="ndu-Eg-X8q"/>
+                            <constraint firstItem="5Mm-OR-T0E" firstAttribute="centerX" secondItem="Lvf-sX-V7o" secondAttribute="centerX" id="uia-L1-0CS"/>
+                            <constraint firstItem="5Mm-OR-T0E" firstAttribute="height" secondItem="Lvf-sX-V7o" secondAttribute="height" id="zUW-in-5rJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="81a-dV-5pa">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="hCo-kI-6wI">
+                            <color key="tintColor" red="0.0" green="0.65976732969999996" blue="0.38288292289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTapCloseButton:" destination="ETg-oY-ieT" id="5hM-4q-Fio"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="closeButton" destination="hCo-kI-6wI" id="cMa-gz-XEj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBg-Z8-ghR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="1297"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebookIcon" width="12" height="20"/>
+        <image name="linkedinIcon" width="20" height="20"/>
+        <image name="logoMicroblink" width="228" height="64"/>
+        <image name="twitterIcon" width="24" height="20"/>
+    </resources>
+</document>
