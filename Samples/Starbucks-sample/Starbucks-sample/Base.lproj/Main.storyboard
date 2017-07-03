@@ -165,25 +165,25 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-oc-BHA">
-                                <rect key="frame" x="20.666666666666657" y="95" width="372.66666666666663" height="243.33333333333331"/>
+                                <rect key="frame" x="0.0" y="0.66666666666668561" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="height" secondItem="RO7-dR-TEL" secondAttribute="height" id="51f-lW-AF4"/>
                             <constraint firstItem="RO7-dR-TEL" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="95" id="JvN-n9-mOh"/>
-                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerY" secondItem="RO7-dR-TEL" secondAttribute="centerY" id="MO1-06-0Sy"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerY" secondItem="g4V-p6-KEC" secondAttribute="centerY" id="Qz0-8i-lmB"/>
                             <constraint firstItem="io7-QY-jFi" firstAttribute="centerY" secondItem="m4l-5t-KIc" secondAttribute="centerY" id="RJH-5S-Kd1"/>
                             <constraint firstItem="m4l-5t-KIc" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="32" id="X7o-Un-z6O"/>
                             <constraint firstItem="RO7-dR-TEL" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="alE-bX-nup"/>
                             <constraint firstItem="RO7-dR-TEL" firstAttribute="width" secondItem="g4V-p6-KEC" secondAttribute="width" multiplier="0.9" id="ddP-AP-wzJ"/>
-                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerX" secondItem="RO7-dR-TEL" secondAttribute="centerX" id="fNV-0y-vIA"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="foX-Jh-y7w"/>
                             <constraint firstAttribute="bottomMargin" secondItem="yO0-bH-NIY" secondAttribute="bottom" constant="20" id="iix-Hl-Hlk"/>
                             <constraint firstItem="yO0-bH-NIY" firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="width" id="mJp-Jm-R48"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="height" secondItem="g4V-p6-KEC" secondAttribute="height" id="nyK-0e-pH1"/>
                             <constraint firstItem="m4l-5t-KIc" firstAttribute="leading" secondItem="g4V-p6-KEC" secondAttribute="leading" constant="20" id="poS-uY-vER"/>
+                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="width" secondItem="g4V-p6-KEC" secondAttribute="width" id="trs-zu-Qq5"/>
                             <constraint firstAttribute="trailing" secondItem="io7-QY-jFi" secondAttribute="trailing" constant="20" id="u8l-Vd-chq"/>
                             <constraint firstItem="yO0-bH-NIY" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="x1a-qE-K3B"/>
-                            <constraint firstItem="Gmo-oc-BHA" firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="width" id="yOc-Fw-hlg"/>
                         </constraints>
                     </view>
                     <connections>

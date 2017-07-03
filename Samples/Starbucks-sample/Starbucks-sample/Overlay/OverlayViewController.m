@@ -74,7 +74,6 @@ static CGFloat const kContainerViewCornerRadius = 12.f;
     [super viewDidLayoutSubviews];
     self.shadowView.frame = self.view.bounds;
     [self.shadowView updateOvershadow:self.viewFinderView.frame];
-    self.scanningRegion = scanningRegionForFrameInBounds(self.viewFinderView.frame, self.view.bounds);
 }
 
 #pragma mark - Setters
