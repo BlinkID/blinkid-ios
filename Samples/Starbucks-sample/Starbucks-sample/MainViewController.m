@@ -51,6 +51,12 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     self.navigationController.navigationBarHidden = YES;
 }
 
+#pragma mark - Setup
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
 
     /** 0. Check if scanning is supported */

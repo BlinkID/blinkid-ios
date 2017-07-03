@@ -66,6 +66,12 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     return [[UIStoryboard storyboardWithName:kStoryboardName bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerIdentifier];
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Lifecycle
