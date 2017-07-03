@@ -23,12 +23,31 @@
 
 @end
 
+/* Graphical attributes */
+
+// Scan button corner radius
+static CGFloat const kScanButtonCornerRadius = 4.f;
+
+/* String constants */
+
+// License key, valid temporarily until 2017-07-29
+static NSString *const kLicenseKey = @"VNTJKWGS-2X4DI2JT-KNSQWZAA-SM34XJOX-2E4IRXNR-VF3IBLRV-RDO3CCNF-34GMCKWM";
+
+// Starbucks card number key title
+static NSString *const kStarbucksCardNumberKey = @"Starbucks card number";
+
+// Starbucks scan button label text
+static NSString *const kScanButtonLabelText = @"SCAN";
+
 @implementation MainViewController
 
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.scanButton.layer.cornerRadius = 4.f;
+    self.scanButton.layer.cornerRadius = kScanButtonCornerRadius;
+    self.scanButton.titleLabel.text = kScanButtonLabelText;
+
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -119,10 +138,12 @@
 
         if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
             PPPdf417RecognizerResult *ocrResult = (PPPdf417RecognizerResult *)result;
-            resultsMap = @{ @"Starbucks card number" : [ocrResult stringUsingGuessedEncoding] };
-        } else {
+            resultsMap = @{kStarbucksCardNumberKey : [ocrResult stringUsingGuessedEncoding]};
+            break;
+        } else if ([result isKindOfClass:[PPBlinkOcrRecognizerResult class]]) {
             PPBlinkOcrRecognizerResult *ocrResult = (PPBlinkOcrRecognizerResult *)result;
             resultsMap = [self.starbucksRecognizerSettings extractMessageFromResult:ocrResult];
+            break;
         }
     }
 

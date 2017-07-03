@@ -8,23 +8,29 @@
 
 #import "StarbucksCardRecognizerSettings.h"
 
-static NSString *const CARD_NUMBER = @"CardNumber";
-static NSString *const CARD_SECURITY_CODE = @"SecurityCode";
+static NSString *const kCardNumber = @"CardNumber";
+static NSString *const kSecurityCode = @"SecurityCode";
 
-static NSString *const CARD_NUMBER_FIRST_TYPE = @"CardNumberFirstType";
-static NSString *const CARD_NUMBER_SECOND_TYPE = @"CardNumberSecondType";
-static NSString *const CARD_NUMBER_THIRD_TYPE = @"CardNumberThirdType";
+static NSString *const kCardNumberFirstType = @"CardNumberFirstType";
+static NSString *const kCardNumberSecondType = @"CardNumberSecondType";
+static NSString *const KCardNumberThirdType = @"CardNumberThirdType";
 
-static NSString *const CARD_SECURITY_CODE_FIRST_TYPE = @"SecurityCodeFirstType";
-static NSString *const CARD_SECURITY_CODE_SECOND_TYPE = @"SecurityCodeSecondType";
-static NSString *const CARD_SECURITY_CODE_THIRD_TYPE = @"SecurityCodeThirdType";
+static NSString *const kSecurityCodeFirstType = @"SecurityCodeFirstType";
+static NSString *const kSecurityCodeSecondType = @"SecurityCodeSecondType";
+static NSString *const kSecurityCodeThirdType = @"SecurityCodeThirdType";
 
 // Type of card with security code in the middle
-static NSString *const FIRST_TYPE = @"FirstType";
+static NSString *const kFirstType = @"FirstType";
 // Type of card with security code in the upper right corner
-static NSString *const SECOND_TYPE = @"SecondType";
+static NSString *const kSecondType = @"SecondType";
 // Type of card with security code in the lower right corner
-static NSString *const THIRD_TYPE = @"ThirdType";
+static NSString *const kThirdType = @"ThirdType";
+
+// Starbucks card number key
+static NSString *const kStarbucksCardNumberKey = @"Starbucks card number";
+
+// Starbucks security code key
+static NSString *const kStarbucksSecurityCodeKey = @"Starbucks security code";
 
 @interface StarbucksCardRecognizerSettings () <PPDocumentClassifier>
 
@@ -51,7 +57,7 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     if (self) {
 
         NSDictionary *decodingInfoArrayDictionary =
-            @{FIRST_TYPE : [NSMutableArray array], SECOND_TYPE : [NSMutableArray array], THIRD_TYPE : [NSMutableArray array]};
+            @{kFirstType : [NSMutableArray array], kSecondType : [NSMutableArray array], kThirdType : [NSMutableArray array]};
 
         NSMutableArray<PPDecodingInfo *> *classificationDecodingInfoArray = [NSMutableArray array];
 
@@ -109,12 +115,12 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     CGRect secondLocation = CGRectMake(0.2088f, 0.1688f, 0.5500f, 0.0866f);
     CGRect thirdLocation = CGRectMake(0.2000f, 0.6700f, 0.5000f, 0.0700f);
 
-    [decodingInfoArrayDictionary[FIRST_TYPE]
-        addObject:[[PPDecodingInfo alloc] initWithLocation:firstLocation dewarpedHeight:dewarpedHeight uniqueId:CARD_NUMBER_FIRST_TYPE]];
-    [decodingInfoArrayDictionary[SECOND_TYPE]
-        addObject:[[PPDecodingInfo alloc] initWithLocation:secondLocation dewarpedHeight:dewarpedHeight uniqueId:CARD_NUMBER_SECOND_TYPE]];
-    [decodingInfoArrayDictionary[THIRD_TYPE]
-        addObject:[[PPDecodingInfo alloc] initWithLocation:thirdLocation dewarpedHeight:dewarpedHeight uniqueId:CARD_NUMBER_THIRD_TYPE]];
+    [decodingInfoArrayDictionary[kFirstType]
+        addObject:[[PPDecodingInfo alloc] initWithLocation:firstLocation dewarpedHeight:dewarpedHeight uniqueId:kCardNumberFirstType]];
+    [decodingInfoArrayDictionary[kSecondType]
+        addObject:[[PPDecodingInfo alloc] initWithLocation:secondLocation dewarpedHeight:dewarpedHeight uniqueId:kCardNumberSecondType]];
+    [decodingInfoArrayDictionary[kThirdType]
+        addObject:[[PPDecodingInfo alloc] initWithLocation:thirdLocation dewarpedHeight:dewarpedHeight uniqueId:KCardNumberThirdType]];
 
     PPRegexOcrParserFactory *documentNumberParser = [[PPRegexOcrParserFactory alloc] initWithRegex:@"(\\d{4} ){3}(\\d{4})"];
 
@@ -123,12 +129,13 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     options.minimalLineHeight = 40;
     options.maximalLineHeight = 100;
     options.maxCharsExpected = 150;
+    options.colorDropoutEnabled = NO;
     [documentNumberParser setOptions:options];
 
 
-    [self addOcrParser:documentNumberParser name:CARD_NUMBER group:CARD_NUMBER_FIRST_TYPE];
-    [self addOcrParser:documentNumberParser name:CARD_NUMBER group:CARD_NUMBER_SECOND_TYPE];
-    [self addOcrParser:documentNumberParser name:CARD_NUMBER group:CARD_NUMBER_THIRD_TYPE];
+    [self addOcrParser:documentNumberParser name:kCardNumber group:kCardNumberFirstType];
+    [self addOcrParser:documentNumberParser name:kCardNumber group:kCardNumberSecondType];
+    [self addOcrParser:documentNumberParser name:kCardNumber group:KCardNumberThirdType];
 }
 
 - (void)setSecurityNumberWithClassificationDecodingInfoArray:(NSMutableArray<PPDecodingInfo *> *)classificationDecodingInfoArray {
@@ -142,15 +149,15 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 
     [classificationDecodingInfoArray addObject:[[PPDecodingInfo alloc] initWithLocation:firstLocation
                                                                          dewarpedHeight:dewarpedHeight
-                                                                               uniqueId:CARD_SECURITY_CODE_FIRST_TYPE]];
+                                                                               uniqueId:kSecurityCodeFirstType]];
 
     [classificationDecodingInfoArray addObject:[[PPDecodingInfo alloc] initWithLocation:secondLocation
                                                                          dewarpedHeight:dewarpedHeight
-                                                                               uniqueId:CARD_SECURITY_CODE_SECOND_TYPE]];
+                                                                               uniqueId:kSecurityCodeSecondType]];
 
     [classificationDecodingInfoArray addObject:[[PPDecodingInfo alloc] initWithLocation:thirdLocation
                                                                          dewarpedHeight:dewarpedHeight
-                                                                               uniqueId:CARD_SECURITY_CODE_THIRD_TYPE]];
+                                                                               uniqueId:kSecurityCodeThirdType]];
 
 
     NSMutableSet *charWhiteList = [self numberWhitelist];
@@ -165,21 +172,21 @@ static NSString *const THIRD_TYPE = @"ThirdType";
                                                                                         andMaximalLineHeight:150
                                                                                          andMaxCharsExpected:15];
 
-    [self addOcrParser:firstLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_FIRST_TYPE];
+    [self addOcrParser:firstLocationSecurityNumber name:kSecurityCode group:kSecurityCodeFirstType];
 
     PPRegexOcrParserFactory *secondLocationSecurityNumber = [self createSecurityNumberParserWithCharWhiteList:charWhiteList
                                                                                          andMinimalLineHeight:60
                                                                                          andMaximalLineHeight:150
                                                                                           andMaxCharsExpected:35];
 
-    [self addOcrParser:secondLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_SECOND_TYPE];
+    [self addOcrParser:secondLocationSecurityNumber name:kSecurityCode group:kSecurityCodeSecondType];
 
     PPRegexOcrParserFactory *thirdLocationSecurityNumber = [self createSecurityNumberParserWithCharWhiteList:charWhiteList
                                                                                         andMinimalLineHeight:70
                                                                                         andMaximalLineHeight:120
                                                                                          andMaxCharsExpected:25];
 
-    [self addOcrParser:thirdLocationSecurityNumber name:CARD_SECURITY_CODE group:CARD_SECURITY_CODE_THIRD_TYPE];
+    [self addOcrParser:thirdLocationSecurityNumber name:kSecurityCode group:kSecurityCodeThirdType];
 }
 
 #pragma mark - Parser creation
@@ -196,6 +203,7 @@ static NSString *const THIRD_TYPE = @"ThirdType";
     engineOptions.minimalLineHeight = minimalLineHeight;
     engineOptions.maximalLineHeight = maximalLineHeight;
     engineOptions.maxCharsExpected = maxCharsExpected;
+    engineOptions.colorDropoutEnabled = NO;
 
     [securityNumberParser setOptions:engineOptions];
 
@@ -207,9 +215,10 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 - (NSDictionary *)extractMessageFromResult:(PPBlinkOcrRecognizerResult *)result {
 
     NSString *securityNumber =
-        [result parsedResultForName:CARD_SECURITY_CODE parserGroup:[CARD_SECURITY_CODE stringByAppendingString:self.type]];
-    NSString *cardNumber = [result parsedResultForName:CARD_NUMBER parserGroup:[CARD_NUMBER stringByAppendingString:self.type]];
-    return @{ @"Starbucks security Number" : securityNumber, @"Starbucks card number" : cardNumber };
+        [result parsedResultForName:kSecurityCode parserGroup:[kSecurityCode stringByAppendingString:self.type]];
+    NSString *cardNumber = [result parsedResultForName:kCardNumber parserGroup:[kCardNumber stringByAppendingString:self.type]];
+    return
+        @{kStarbucksSecurityCodeKey : securityNumber, kStarbucksCardNumberKey : cardNumber};
 }
 
 #pragma mark - PPDocumentClassifier
@@ -217,27 +226,27 @@ static NSString *const THIRD_TYPE = @"ThirdType";
 - (NSString *)classifyDocumentFromResult:(PPTemplatingRecognizerResult *)result {
     self.type = @"";
 
-    NSString *securityNumber = [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_FIRST_TYPE];
+    NSString *securityNumber = [result parsedResultForName:kSecurityCode parserGroup:kSecurityCodeFirstType];
 
     if (securityNumber != nil && ![securityNumber isEqualToString:@""]) {
         // If result exists then we are dealing with first type card
-        self.type = FIRST_TYPE;
+        self.type = kFirstType;
         return self.type;
     }
 
-    securityNumber = [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_SECOND_TYPE];
+    securityNumber = [result parsedResultForName:kSecurityCode parserGroup:kSecurityCodeSecondType];
 
     if (securityNumber != nil && ![securityNumber isEqualToString:@""]) {
         // If result exists then we are dealing with second type card
-        self.type = SECOND_TYPE;
+        self.type = kSecondType;
         return self.type;
     }
 
-    securityNumber = [result parsedResultForName:CARD_SECURITY_CODE parserGroup:CARD_SECURITY_CODE_THIRD_TYPE];
+    securityNumber = [result parsedResultForName:kSecurityCode parserGroup:kSecurityCodeThirdType];
 
     if (securityNumber != nil && ![securityNumber isEqualToString:@""]) {
         // If result exists then we are dealing with third type card
-        self.type = THIRD_TYPE;
+        self.type = kThirdType;
         return self.type;
     }
 

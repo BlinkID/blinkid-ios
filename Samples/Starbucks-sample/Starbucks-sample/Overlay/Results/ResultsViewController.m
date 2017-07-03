@@ -21,6 +21,15 @@
 
 /* Graphical attributes */
 
+// Distance from leading close button to leading view
+static CGFloat const kLeadingCloseButtonToViewLeadingDistance = 20.f;
+
+// Distance from top close button to top view
+static CGFloat const kTopCloseButtonToViewTopDistance = 32.f;
+
+// Results view corner radius
+static CGFloat const kResultsViewCornerRadius = 12.f;
+
 // Distance from bottom of result view to top submit button
 static CGFloat const kBottomResultViewToTopSubmitButtonDistance = 20.f;
 
@@ -45,6 +54,35 @@ static CGFloat const kSubmitButtonHeight = 44.f;
 // Submit button corner radius
 static CGFloat const kSubmitButtonCornerRadius = 4.f;
 
+// Distance from submit button trailing to view trailing
+static CGFloat const kTrailingSubmitButtonToViewTrailingDistance = 20.f;
+
+// Distance from submit button leading to view leading
+static CGFloat const kLeadingSubmitButtonToViewLeadingDistance = 20.f;
+
+// Distance from submit button bottom to view bottom
+static CGFloat const kBottomSubmitButtonToViewBottomDistance = 20.f;
+
+// Key label font size
+static CGFloat const kKeyLabelFontSize = 14.f;
+
+// Value label font size
+static CGFloat const kValueLabelFontSize = 18.f;
+
+// Close button font size
+static CGFloat const kCloseButtonFontSize = 17.f;
+
+// Submit button font size
+static CGFloat const kSubmitButtonFontSize = 16.f;
+
+/* String constants */
+
+// Close button label text
+static NSString *const kCloseButtonText = @"Close";
+
+// Submit button label text
+static NSString *const kSubmitButtonText = @"SUBMIT";
+
 @implementation ResultsViewController
 
 - (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap {
@@ -61,23 +99,24 @@ static CGFloat const kSubmitButtonCornerRadius = 4.f;
     self.view.backgroundColor = [UIColor MB_shadowColor];
 
     self.closeButton = [[UIButton alloc] init];
-    [self.closeButton setTitle:@"Close" forState:UIControlStateNormal];
+    [self.closeButton setTitle:kCloseButtonText forState:UIControlStateNormal];
     [self.closeButton setTintColor:[UIColor whiteColor]];
-    self.closeButton.titleLabel.font = [UIFont systemFontOfSize:17.0f weight:UIFontWeightRegular];
+    self.closeButton.titleLabel.font = [UIFont systemFontOfSize:kCloseButtonFontSize weight:UIFontWeightRegular];
     [self.closeButton addTarget:self action:@selector(didTapCloseButton:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:self.closeButton];
 
     // Set closeButton constraints
     [self.closeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20.f].active = YES;
-    [self.closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:32.f].active = YES;
+    [self.closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingCloseButtonToViewLeadingDistance]
+        .active = YES;
+    [self.closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kTopCloseButtonToViewTopDistance].active = YES;
 
     self.submitButton = [[UIButton alloc] init];
     self.submitButton.backgroundColor = [UIColor MB_emeraldColor];
-    [self.submitButton setTitle:@"SUBMIT" forState:UIControlStateNormal];
+    [self.submitButton setTitle:kSubmitButtonText forState:UIControlStateNormal];
     self.submitButton.tintColor = [UIColor whiteColor];
-    self.submitButton.titleLabel.font = [UIFont systemFontOfSize:16.0f weight:UIFontWeightRegular];
+    self.submitButton.titleLabel.font = [UIFont systemFontOfSize:kSubmitButtonFontSize weight:UIFontWeightRegular];
     self.submitButton.layer.cornerRadius = kSubmitButtonCornerRadius;
     [self.submitButton addTarget:self action:@selector(didTapSubmitButton:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -85,20 +124,23 @@ static CGFloat const kSubmitButtonCornerRadius = 4.f;
 
     // Set submitButton constraints
     [self.submitButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:20.f].active = YES;
-    [self.submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20.f].active = YES;
-    [self.submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-20.f].active = YES;
+    [self.submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingSubmitButtonToViewLeadingDistance]
+        .active = YES;
+    [self.submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor
+                                                     constant:-kTrailingSubmitButtonToViewTrailingDistance]
+        .active = YES;
+    [self.submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-kBottomSubmitButtonToViewBottomDistance]
+        .active = YES;
     [self.submitButton.heightAnchor constraintEqualToConstant:kSubmitButtonHeight].active = YES;
 
 
     if (self.labelMap.count == 0) {
-        [self.submitButton.heightAnchor constraintEqualToConstant:44.f].active = YES;
         return;
     }
 
     UIView *resultContainerView = [[UIView alloc] init];
     resultContainerView.backgroundColor = [UIColor whiteColor];
-    resultContainerView.layer.cornerRadius = 12.f;
+    resultContainerView.layer.cornerRadius = kResultsViewCornerRadius;
 
     [self.view addSubview:resultContainerView];
 
@@ -111,8 +153,8 @@ static CGFloat const kSubmitButtonCornerRadius = 4.f;
                                                      constant:-kBottomResultViewToTopSubmitButtonDistance]
         .active = YES;
 
-    UIFont *labelKeyFont = [UIFont systemFontOfSize:14.f weight:UIFontWeightRegular];
-    UIFont *labelValueFont = [UIFont systemFontOfSize:18.f weight:UIFontWeightRegular];
+    UIFont *labelKeyFont = [UIFont systemFontOfSize:kKeyLabelFontSize weight:UIFontWeightRegular];
+    UIFont *labelValueFont = [UIFont systemFontOfSize:kValueLabelFontSize weight:UIFontWeightRegular];
 
     UIColor *labelKeyColor = [UIColor MB_purpleyGreyColor];
     UIColor *labelValueColor = [UIColor MB_slateGreyColor];

@@ -42,10 +42,30 @@ static CGFloat const kViewFinderBorderWIdth = 3.f;
 // Container view corner radius
 static CGFloat const kContainerViewCornerRadius = 12.f;
 
+
+/* String constants */
+
+// Storyboard name
+static NSString *const kStoryboardName = @"Main";
+
+// ViewController identifier
+static NSString *const kViewControllerIdentifier = @"overlay";
+
+// Torch off image identifier
+static NSString *const kTorchOffImage = @"icSunOff";
+
+// Torch on image identifier
+static NSString *const kTorchOnImage = @"icSunOn";
+
+// Card canning instructions
+static NSString *const kCardScanInstructions = @"Position the device above Starbucks card and wait for scanning.";
+
 @implementation OverlayViewController
 
 + (instancetype)viewControllerFromStoryboard {
-    return [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"overlay"];
+    return [[UIStoryboard storyboardWithName:kStoryboardName bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerIdentifier];
+}
+
 }
 
 #pragma mark - Lifecycle
@@ -53,8 +73,15 @@ static CGFloat const kContainerViewCornerRadius = 12.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.torchOnImage = [UIImage imageNamed:@"icSunOn"];
-    self.torchOffImage = [UIImage imageNamed:@"icSunOff"];
+    self.instuctionLabel.text = kCardScanInstructions;
+
+    self.torchOnImage = [UIImage imageNamed:kTorchOnImage];
+    self.torchOffImage = [UIImage imageNamed:kTorchOffImage];
+
+    PPModernOcrResultOverlaySubview *dotsOverlaySubview = [[PPModernOcrResultOverlaySubview alloc] initWithFrame:self.view.bounds];
+
+    [self registerOverlaySubview:dotsOverlaySubview];
+    [self.view addSubview:dotsOverlaySubview];
 
     self.shadowView = [[ShadowView alloc] initWithFrame:self.view.bounds];
     self.shadowView.shadowColor = [UIColor MB_shadowColor];

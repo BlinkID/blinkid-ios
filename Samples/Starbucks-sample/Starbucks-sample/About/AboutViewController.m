@@ -14,12 +14,35 @@
 
 @end
 
+/* String constants */
+
+// Title string
+static NSString *const kTitleLabelText = @"About";
+
+// Close button text
+static NSString *const kCloseButtonLabelText = @"Close";
+
+// Microblink products site link
+static NSString *const kMicroblinkProductsLink = @"https://microblink.com/en/products";
+
+// Microblink site link
+static NSString *const kMicroblinkLink = @"https://microblink.com";
+
+// Microblink LinkedIn site link
+static NSString *const kLinkedInLink = @"https://www.linkedin.com/company/microblink";
+
+// Microblink Facebook site link
+static NSString *const kFacebookLink = @"https://www.facebook.com/microblink";
+
+// Microblink Twitter site link
+static NSString *const kTwitterLink = @"https://twitter.com/microblink";
+
 @implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"About";
-    self.closeButton.title = @"Close";
+    self.title = kTitleLabelText;
+    self.closeButton.title = kCloseButtonLabelText;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -30,35 +53,24 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)didTapBrowseOtherProductsButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://microblink.com/en/products"]
-                                       options:@{}
-                             completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kMicroblinkProductsLink] options:@{} completionHandler:nil];
 }
 
 - (IBAction)didTapMicroblinkButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://microblink.com"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kMicroblinkLink] options:@{} completionHandler:nil];
 }
 
 - (IBAction)didTapLinkedInButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/company/microblink"]
-                                       options:@{}
-                             completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kLinkedInLink] options:@{} completionHandler:nil];
 }
 
 - (IBAction)didTapFacebookButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/microblink"]
-                                       options:@{}
-                             completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kFacebookLink] options:@{} completionHandler:nil];
 }
 
 - (IBAction)didTapTwitterButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/microblink"] options:@{} completionHandler:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kTwitterLink] options:@{} completionHandler:nil];
 }
 
 - (IBAction)didTapCloseButton:(id)sender {
