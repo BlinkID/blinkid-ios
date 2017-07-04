@@ -42,6 +42,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 @implementation MainViewController
 
 #pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -76,7 +77,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"VNTJKWGS-2X4DI2JT-KNSQWZAA-SM34XJOX-2E4IRXNR-VF3IBLRV-RDO3CCNF-34GMCKWM";
+    settings.licenseSettings.licenseKey = kLicenseKey;
     // License key is valid temporarily until 2017-05-01
 
 
@@ -86,6 +87,8 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     self.starbucksRecognizerSettings = [[StarbucksCardRecognizerSettings alloc] init];
     [settings.scanSettings addRecognizerSettings:self.starbucksRecognizerSettings];
 
+    settings.scanSettings.partialRecognitionTimeout = 4.0;
+
     /** 4. Initialize the Scanning Coordinator object */
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
 
@@ -93,6 +96,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 }
 
 #pragma mark - IBAction
+
 - (IBAction)didTapScanButton:(id)sender {
 
     /** Instantiate the scanning coordinator */
