@@ -10,23 +10,20 @@
 
 @implementation ShadowView
 
-- (instancetype)initWithFrame:(CGRect)frame
-                  shadowColor:(UIColor *)shadowColor
-                 scanningRect:(CGRect)scanningRect
-                 cornerRadius:(CGFloat)cornerRadius {
+- (instancetype)initWithFrame:(CGRect)frame andShadowColor:(UIColor *)shadowColor andCornerRadius:(CGFloat)cornerRadius {
     self = [super initWithFrame:frame];
     if (self) {
         _shadowColor = shadowColor;
-        _scanningRect = scanningRect;
         _cornerRadius = cornerRadius;
+
         self.opaque = NO;
         self.userInteractionEnabled = NO;
     }
     return self;
 }
 
-- (void)updateOvershadow:(CGRect)scanningRect {
-    self.scanningRect = scanningRect;
+- (void)updateViewWithRect:(CGRect)viewfinderRect {
+    self.scanningRect = viewfinderRect;
     [self setNeedsDisplay];
 }
 

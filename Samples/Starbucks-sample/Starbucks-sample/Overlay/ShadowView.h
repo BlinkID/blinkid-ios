@@ -10,14 +10,20 @@
 
 @interface ShadowView : UIView
 
-@property UIColor *shadowColor;
-@property CGRect scanningRect;
-@property CGFloat cornerRadius;
+@property (strong, nonatomic) UIColor *shadowColor;
 
-- (instancetype)initWithFrame:(CGRect)frame
-                  shadowColor:(UIColor *)shadowColor
-                 scanningRect:(CGRect)scanningRect
-                 cornerRadius:(CGFloat)cornerRadius;
+@property (nonatomic) CGRect scanningRect;
 
-- (void)updateOvershadow:(CGRect)scanningRect;
+@property (nonatomic) CGFloat cornerRadius;
+
+- (instancetype)initWithFrame:(CGRect)frame andShadowColor:(UIColor *)shadowColor andCornerRadius:(CGFloat)cornerRadius NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+
+- (void)updateViewWithRect:(CGRect)viewfinderRect;
+
 @end

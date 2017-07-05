@@ -88,10 +88,9 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     [self registerOverlaySubview:dotsOverlaySubview];
     [self.view addSubview:dotsOverlaySubview];
 
-    self.shadowView = [[ShadowView alloc] initWithFrame:self.view.bounds];
-    self.shadowView.shadowColor = [UIColor MB_shadowColor];
-    self.shadowView.backgroundColor = [UIColor clearColor];
-    self.shadowView.cornerRadius = kViewFinderCornerRadius;
+    self.shadowView =
+        [[ShadowView alloc] initWithFrame:self.view.frame andShadowColor:[UIColor MB_shadowColor] andCornerRadius:kViewFinderCornerRadius];
+    self.shadowView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     [self.view insertSubview:self.shadowView atIndex:0];
 
@@ -104,8 +103,7 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.shadowView.frame = self.view.bounds;
-    [self.shadowView updateOvershadow:self.viewFinderView.frame];
+    [self.shadowView updateViewWithRect:self.viewFinderView.frame];
 }
 
 #pragma mark - Setters
