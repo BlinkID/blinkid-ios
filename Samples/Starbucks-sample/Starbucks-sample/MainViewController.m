@@ -72,14 +72,11 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     PPSettings *settings = [[PPSettings alloc] init];
 
     settings.metadataSettings.successfulFrame = YES;
-    settings.metadataSettings.dewarpedImage = YES;
 
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
     settings.licenseSettings.licenseKey = kLicenseKey;
-    // License key is valid temporarily until 2017-05-01
-
 
     PPPdf417RecognizerSettings *pdf417RecognizerSettings = [[PPPdf417RecognizerSettings alloc] init];
     [settings.scanSettings addRecognizerSettings:pdf417RecognizerSettings];
@@ -107,16 +104,11 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     }
 
     /** Create new scanning view controller */
-
     self.overlayViewController = [OverlayViewController viewControllerFromStoryboard];
     self.scanningViewController = [PPViewControllerFactory cameraViewControllerWithDelegate:self
                                                                       overlayViewController:self.overlayViewController
                                                                                 coordinator:self.coordinator
                                                                                       error:nil];
-
-    // allow rotation if VC is displayed as a modal view controller
-    self.scanningViewController.autorotate = YES;
-    self.scanningViewController.supportedOrientations = UIInterfaceOrientationMaskAll;
 
     /** Present the scanning view controller. You can use other presentation methods as well (instead of presentViewController) */
     [self presentViewController:self.scanningViewController animated:YES completion:nil];
@@ -139,6 +131,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
+
     [scanningViewController pauseScanning];
     [scanningViewController pauseCamera];
 
@@ -161,6 +154,9 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     if (resultsMap != nil && resultsMap.count != 0) {
         self.overlayViewController.pausedCameraImageView.hidden = NO;
         [self createResultsViewControllerWithResultsMap:resultsMap];
+    } else {
+        [scanningViewController resumeCamera];
+        [scanningViewController resumeScanningAndResetState:NO];
     }
 }
 
@@ -174,7 +170,9 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
 
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;
-        self.overlayViewController.pausedCameraImageView.image = imageMetadata.image;
+        if (imageMetadata.imageType == PPImageMetadataTypeSuccessfulFrame) {
+            self.overlayViewController.pausedCameraImageView.image = imageMetadata.image;
+        }
     }
 }
 

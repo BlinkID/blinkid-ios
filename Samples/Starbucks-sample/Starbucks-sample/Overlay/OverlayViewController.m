@@ -42,7 +42,6 @@ static CGFloat const kViewFinderBorderWIdth = 3.f;
 // Container view corner radius
 static CGFloat const kContainerViewCornerRadius = 12.f;
 
-
 /* String constants */
 
 // Storyboard name

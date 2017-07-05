@@ -8,6 +8,8 @@
 
 #import "StarbucksCardRecognizerSettings.h"
 
+/* String constants */
+
 static NSString *const kCardNumber = @"CardNumber";
 static NSString *const kSecurityCode = @"SecurityCode";
 
@@ -92,7 +94,7 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
          * Add created detector settings to recognizer
          */
         [self setDetectorSettings:detectorSettings];
-        
+
         /**
          * Set this class as document classifier delegate
          */
@@ -237,10 +239,12 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
     if (![securityNumber isEqualToString:@""]) {
         [resultsDictionary setObject:securityNumber forKey:kStarbucksSecurityCodeKey];
     }
+
     NSString *cardNumber = [result parsedResultForName:kCardNumber parserGroup:[kCardNumber stringByAppendingString:self.type]];
     if (![cardNumber isEqualToString:@""]) {
         [resultsDictionary setObject:cardNumber forKey:kStarbucksCardNumberKey];
     }
+
     return resultsDictionary;
 }
 
@@ -276,6 +280,5 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 
     return self.type;
 }
-
 
 @end
