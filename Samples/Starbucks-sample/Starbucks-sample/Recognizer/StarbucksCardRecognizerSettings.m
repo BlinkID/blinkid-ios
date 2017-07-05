@@ -10,15 +10,28 @@
 
 /* String constants */
 
+// Card number string key
 static NSString *const kCardNumber = @"CardNumber";
+
+// Security code string key
 static NSString *const kSecurityCode = @"SecurityCode";
 
+// Card number first type string key
 static NSString *const kCardNumberFirstType = @"CardNumberFirstType";
+
+// Card number second type string key
 static NSString *const kCardNumberSecondType = @"CardNumberSecondType";
+
+// Card number third type string key
 static NSString *const KCardNumberThirdType = @"CardNumberThirdType";
 
+// Security code first type string key
 static NSString *const kSecurityCodeFirstType = @"SecurityCodeFirstType";
+
+// Security code second type string key
 static NSString *const kSecurityCodeSecondType = @"SecurityCodeSecondType";
+
+// Security code third type string key
 static NSString *const kSecurityCodeThirdType = @"SecurityCodeThirdType";
 
 // Type of card with security code in the middle
@@ -34,8 +47,10 @@ static NSString *const kStarbucksCardNumberKey = @"Starbucks card number";
 // Starbucks security code key
 static NSString *const kStarbucksSecurityCodeKey = @"Starbucks security code";
 
+// Security code regex
 static NSString *const kSecurityCodeRegex = @"\\d{8}";
 
+// Card number regex
 static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 
 @interface StarbucksCardRecognizerSettings () <PPDocumentClassifier>
@@ -47,7 +62,6 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 @implementation StarbucksCardRecognizerSettings
 
 - (NSMutableSet *)numberWhitelist {
-
     // initialize new char whitelist
     NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
 
@@ -61,7 +75,6 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 - (instancetype)init {
     self = [super init];
     if (self) {
-
         NSDictionary *decodingInfoArrayDictionary =
             @{kFirstType : [NSMutableArray array], kSecondType : [NSMutableArray array], kThirdType : [NSMutableArray array]};
 
@@ -237,12 +250,12 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 
     NSString *securityNumber = [result parsedResultForName:kSecurityCode parserGroup:[kSecurityCode stringByAppendingString:self.type]];
     if (![securityNumber isEqualToString:@""]) {
-        [resultsDictionary setObject:securityNumber forKey:kStarbucksSecurityCodeKey];
+        resultsDictionary[kStarbucksSecurityCodeKey] = securityNumber;
     }
 
     NSString *cardNumber = [result parsedResultForName:kCardNumber parserGroup:[kCardNumber stringByAppendingString:self.type]];
     if (![cardNumber isEqualToString:@""]) {
-        [resultsDictionary setObject:cardNumber forKey:kStarbucksCardNumberKey];
+        resultsDictionary[kStarbucksCardNumberKey] = cardNumber;
     }
 
     return resultsDictionary;

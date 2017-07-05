@@ -16,9 +16,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
 @property (strong, nonatomic) PPCameraCoordinator *coordinator;
+
 @property (strong, nonatomic) StarbucksCardRecognizerSettings *starbucksRecognizerSettings;
 
 @property (strong, nonatomic) UIViewController<PPScanningViewController> *scanningViewController;
+
 @property (strong, nonatomic) OverlayViewController *overlayViewController;
 
 @end
@@ -59,7 +61,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 }
 
 - (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
-
     /** 0. Check if scanning is supported */
 
     if ([PPCameraCoordinator isScanningUnsupportedForCameraType:PPCameraTypeBack error:error]) {
@@ -95,7 +96,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 #pragma mark - IBAction
 
 - (IBAction)didTapScanButton:(id)sender {
-
     /** Instantiate the scanning coordinator */
     NSError *error;
 
@@ -125,13 +125,11 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 }
 
 - (void)scanningViewControllerDidClose:(UIViewController<PPScanningViewController> *)scanningViewController {
-
     // As scanning view controller is presented full screen and modally, dismiss it
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didOutputResults:(NSArray *)results {
-
     [scanningViewController pauseScanning];
     [scanningViewController pauseCamera];
 
@@ -166,7 +164,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
              didOutputMetadata:(PPMetadata *)metadata {
-
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
 
         PPImageMetadata *imageMetadata = (PPImageMetadata *)metadata;

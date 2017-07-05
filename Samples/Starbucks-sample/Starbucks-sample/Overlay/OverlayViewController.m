@@ -13,9 +13,11 @@
 @interface OverlayViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *torchButton;
 
 @property (strong, nonatomic) UIImage *torchOffImage;
+
 @property (strong, nonatomic) UIImage *torchOnImage;
 
 @property (nonatomic, getter=isTorchOn) BOOL torchOn;
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) IBOutlet UILabel *instuctionLabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *starbucksCardImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *viewFinderView;
