@@ -12,7 +12,13 @@
 
 @interface ResultsViewController : UIViewController
 
-- (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap;
+- (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
 @property (weak, nonatomic) UIViewController<ResultsViewControllerDelegate> *delegate;
 

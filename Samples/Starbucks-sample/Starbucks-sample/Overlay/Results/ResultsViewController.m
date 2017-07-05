@@ -11,8 +11,6 @@
 
 @interface ResultsViewController ()
 
-@property (strong, nonatomic) UIButton *closeButton;
-
 @property (strong, nonatomic) UIButton *submitButton;
 
 @property (nonatomic, readonly) NSDictionary<NSString *, NSString *> *labelMap;
@@ -86,7 +84,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 @implementation ResultsViewController
 
 - (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap {
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _labelMap = labelsMap;
     }
@@ -98,61 +96,86 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     self.view.backgroundColor = [UIColor MB_shadowColor];
 
-    self.closeButton = [[UIButton alloc] init];
-    [self.closeButton setTitle:kCloseButtonText forState:UIControlStateNormal];
-    [self.closeButton setTintColor:[UIColor whiteColor]];
-    self.closeButton.titleLabel.font = [UIFont systemFontOfSize:kCloseButtonFontSize weight:UIFontWeightRegular];
-    [self.closeButton addTarget:self action:@selector(didTapCloseButton:) forControlEvents:UIControlEventTouchUpInside];
-
-    [self.view addSubview:self.closeButton];
-
-    // Set closeButton constraints
-    [self.closeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingCloseButtonToViewLeadingDistance]
-        .active = YES;
-    [self.closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kTopCloseButtonToViewTopDistance].active = YES;
+    UIButton *closeButton = [[UIButton alloc] init];
+    [self setupCloseButton:closeButton];
 
     self.submitButton = [[UIButton alloc] init];
-    self.submitButton.backgroundColor = [UIColor MB_emeraldColor];
-    [self.submitButton setTitle:kSubmitButtonText forState:UIControlStateNormal];
-    self.submitButton.tintColor = [UIColor whiteColor];
-    self.submitButton.titleLabel.font = [UIFont systemFontOfSize:kSubmitButtonFontSize weight:UIFontWeightRegular];
-    self.submitButton.layer.cornerRadius = kSubmitButtonCornerRadius;
-    [self.submitButton addTarget:self action:@selector(didTapSubmitButton:) forControlEvents:UIControlEventTouchUpInside];
-
-    [self.view addSubview:self.submitButton];
-
-    // Set submitButton constraints
-    [self.submitButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingSubmitButtonToViewLeadingDistance]
-        .active = YES;
-    [self.submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor
-                                                     constant:-kTrailingSubmitButtonToViewTrailingDistance]
-        .active = YES;
-    [self.submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-kBottomSubmitButtonToViewBottomDistance]
-        .active = YES;
-    [self.submitButton.heightAnchor constraintEqualToConstant:kSubmitButtonHeight].active = YES;
-
+    [self setupSubmitButton:self.submitButton];
 
     if (self.labelMap.count == 0) {
         return;
     }
 
     UIView *resultContainerView = [[UIView alloc] init];
+    [self setupResultContainerView:resultContainerView];
+}
+
+- (UILabel *)createLabelWithFont:(UIFont *)font andTextColor:(UIColor *)color andText:(NSString *)text {
+    UILabel *label = [[UILabel alloc] init];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    label.text = text;
+    label.font = font;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 0;
+    label.textColor = color;
+    return label;
+}
+
+#pragma mark - Setup
+
+- (void)setupCloseButton:(UIButton *)closeButton {
+    [closeButton setTitle:kCloseButtonText forState:UIControlStateNormal];
+    [closeButton setTintColor:[UIColor whiteColor]];
+    closeButton.titleLabel.font = [UIFont systemFontOfSize:kCloseButtonFontSize weight:UIFontWeightRegular];
+    [closeButton addTarget:self action:@selector(didTapCloseButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:closeButton];
+
+    // Set closeButton constraints
+    [closeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingCloseButtonToViewLeadingDistance].active =
+    YES;
+    [closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kTopCloseButtonToViewTopDistance].active = YES;
+}
+
+- (void)setupSubmitButton:(UIButton *)submitButton {
+    submitButton.backgroundColor = [UIColor MB_emeraldColor];
+    [submitButton setTitle:kSubmitButtonText forState:UIControlStateNormal];
+    submitButton.tintColor = [UIColor whiteColor];
+    submitButton.titleLabel.font = [UIFont systemFontOfSize:kSubmitButtonFontSize weight:UIFontWeightRegular];
+    submitButton.layer.cornerRadius = kSubmitButtonCornerRadius;
+    [submitButton addTarget:self action:@selector(didTapSubmitButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.view addSubview:submitButton];
+
+    // Set submitButton constraints
+    [submitButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingSubmitButtonToViewLeadingDistance].active =
+    YES;
+    [submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-kTrailingSubmitButtonToViewTrailingDistance]
+    .active = YES;
+    [submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-kBottomSubmitButtonToViewBottomDistance].active =
+    YES;
+    [submitButton.heightAnchor constraintEqualToConstant:kSubmitButtonHeight].active = YES;
+}
+
+- (void)setupResultContainerView:(UIView *)resultContainerView {
     resultContainerView.backgroundColor = [UIColor whiteColor];
     resultContainerView.layer.cornerRadius = kResultsViewCornerRadius;
 
     [self.view addSubview:resultContainerView];
 
     [resultContainerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-
     [resultContainerView.widthAnchor constraintEqualToAnchor:self.submitButton.widthAnchor constant:0.f].active = YES;
     [resultContainerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:0.f].active = YES;
-
     [resultContainerView.bottomAnchor constraintEqualToAnchor:self.submitButton.topAnchor
                                                      constant:-kBottomResultViewToTopSubmitButtonDistance]
-        .active = YES;
+    .active = YES;
 
+    [self setupLabelsInResultContainerView:resultContainerView];
+}
+
+- (void)setupLabelsInResultContainerView:(UIView *)resultContainerView {
     UIFont *labelKeyFont = [UIFont systemFontOfSize:kKeyLabelFontSize weight:UIFontWeightRegular];
     UIFont *labelValueFont = [UIFont systemFontOfSize:kValueLabelFontSize weight:UIFontWeightRegular];
 
@@ -166,24 +189,23 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
     UILabel *lastLabel = nil;
     for (int i = 0; i < keyArray.count; ++i) {
         NSString *key = keyArray[i];
-        NSString *value = [self.labelMap objectForKey:key];
+        NSString *value = self.labelMap[key];
 
         UILabel *labelValue = [self createLabelWithFont:labelValueFont andTextColor:labelValueColor andText:value];
         [resultContainerView addSubview:labelValue];
 
-        [labelValue.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor
-                                                 constant:kLeadingResultViewToLeadingLabelDistance]
-            .active = YES;
+        [labelValue.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
+        .active = YES;
         [labelValue.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor
                                                   constant:-kTrailingResultViewToTrailingLabelDistance]
-            .active = YES;
+        .active = YES;
 
         CGSize neededValueSize = [labelValue sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
 
         if (i == 0) {
             [labelValue.bottomAnchor constraintEqualToAnchor:resultContainerView.bottomAnchor
                                                     constant:-kBottomResultViewToBottomValueLabelDistance]
-                .active = YES;
+            .active = YES;
             height += neededValueSize.height + kBottomResultViewToBottomValueLabelDistance;
         } else {
             [labelValue.bottomAnchor constraintEqualToAnchor:lastLabel.topAnchor constant:-kLabelToLabelDistance].active = YES;
@@ -195,10 +217,9 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
         [labelKey.bottomAnchor constraintEqualToAnchor:labelValue.topAnchor constant:-kLabelToLabelDistance].active = YES;
         [labelKey.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
-            .active = YES;
-        [labelKey.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor
-                                                constant:-kTrailingResultViewToTrailingLabelDistance]
-            .active = YES;
+        .active = YES;
+        [labelKey.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor constant:-kTrailingResultViewToTrailingLabelDistance]
+        .active = YES;
 
         CGSize neededKeySize = [labelKey sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
         height += kLabelToLabelDistance + neededKeySize.height;
@@ -208,19 +229,8 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     [lastLabel.topAnchor constraintEqualToAnchor:resultContainerView.topAnchor constant:kTopResultViewToTopValueLabelDistance].active = YES;
     height += kTopResultViewToTopValueLabelDistance;
-
+    
     [resultContainerView.heightAnchor constraintEqualToConstant:height];
-}
-
-- (UILabel *)createLabelWithFont:(UIFont *)font andTextColor:(UIColor *)color andText:(NSString *)text {
-    UILabel *label = [[UILabel alloc] init];
-    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
-    label.text = text;
-    label.font = font;
-    label.textAlignment = NSTextAlignmentCenter;
-    label.numberOfLines = 0;
-    label.textColor = color;
-    return label;
 }
 
 #pragma mark - Action
