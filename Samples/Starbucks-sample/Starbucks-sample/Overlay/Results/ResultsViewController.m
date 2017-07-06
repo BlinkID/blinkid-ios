@@ -194,6 +194,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
         UILabel *labelValue = [self createLabelWithFont:labelValueFont andTextColor:labelValueColor andText:value];
         [resultContainerView addSubview:labelValue];
 
+        [labelValue setTranslatesAutoresizingMaskIntoConstraints:NO];
         [labelValue.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
         .active = YES;
         [labelValue.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor
@@ -215,6 +216,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
         UILabel *labelKey = [self createLabelWithFont:labelKeyFont andTextColor:labelKeyColor andText:key];
         [resultContainerView addSubview:labelKey];
 
+        [labelKey setTranslatesAutoresizingMaskIntoConstraints:NO];
         [labelKey.bottomAnchor constraintEqualToAnchor:labelValue.topAnchor constant:-kLabelToLabelDistance].active = YES;
         [labelKey.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
         .active = YES;
