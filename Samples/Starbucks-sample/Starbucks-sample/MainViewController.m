@@ -170,6 +170,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     }
 
     if (resultsMap != nil && resultsMap.count != 0) {
+        [self.scanningViewController playScanSuccesSound];
         self.overlayViewController.pausedCameraImageView.hidden = NO;
         [self createResultsViewControllerWithResultsMap:resultsMap];
     } else {
