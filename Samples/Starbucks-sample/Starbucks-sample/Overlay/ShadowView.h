@@ -12,9 +12,10 @@
 
 @property (strong, nonatomic) UIColor *shadowColor;
 
-@property (nonatomic) CGRect scanningRect;
+@property (assign, nonatomic) CGRect scanningRect;
 
-@property (nonatomic) CGFloat cornerRadius;
+@property (assign, nonatomic) CGFloat cornerRadius;
+
 
 - (instancetype)initWithFrame:(CGRect)frame andShadowColor:(UIColor *)shadowColor andCornerRadius:(CGFloat)cornerRadius NS_DESIGNATED_INITIALIZER;
 

@@ -9,6 +9,31 @@
 
 @implementation UIColor (MBAdditions)
 
+#pragma mark - Public
+
++ (UIColor *)MB_colorInSRGBWithWhite:(CGFloat)white alpha:(CGFloat)alpha {
+    return [self MB_colorInSRGBWithRed:white green:white blue:white alpha:alpha];
+}
+
+
++ (UIColor *)MB_emeraldColor {
+    return [self MB_colorInSRGBWithRed:0.0f green:168.0f / 255.0f blue:98.0f / 255.0f alpha:1.0f];
+}
+
++ (UIColor *)MB_slateGreyColor {
+    return [self MB_colorInSRGBWithRed:90.0f / 255.0f green:95.0f / 255.0f blue:103.0f / 255.0f alpha:1.0f];
+}
+
++ (UIColor *)MB_purpleyGreyColor {
+    return [self MB_colorInSRGBWithWhite:155.0f / 255.0f alpha:1.0f];
+}
+
++ (UIColor *)MB_shadowColor {
+    return [self MB_colorInSRGBWithWhite:0.0f / 255.0f alpha:0.3f];
+}
+
+#pragma mark - Private
+
 + (UIColor *)MB_colorInSRGBWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
     CGColorSpaceRef sRGBColorSpace = CGColorSpaceCreateWithName(kCGColorSpaceSRGB);
 
@@ -27,27 +52,6 @@
     CFRelease(cgColor);
 
     return color;
-}
-
-+ (UIColor *)MB_colorInSRGBWithWhite:(CGFloat)white alpha:(CGFloat)alpha {
-    return [self MB_colorInSRGBWithRed:white green:white blue:white alpha:alpha];
-}
-
-
-+ (UIColor *)MB_emeraldColor {
-	return [self MB_colorInSRGBWithRed:0.0f green:168.0f / 255.0f blue:98.0f / 255.0f alpha:1.0f];
-}
-
-+ (UIColor *)MB_slateGreyColor {
-	return [self MB_colorInSRGBWithRed:90.0f / 255.0f green:95.0f / 255.0f blue:103.0f / 255.0f alpha:1.0f];
-}
-
-+ (UIColor *)MB_purpleyGreyColor {
-	return [self MB_colorInSRGBWithWhite:155.0f / 255.0f alpha:1.0f];
-}
-
-+ (UIColor *)MB_shadowColor {
-    return [self MB_colorInSRGBWithWhite:0.0f / 255.0f alpha:0.3f];
 }
 
 @end

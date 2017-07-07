@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *pausedCameraImageView;
 
+
 + (instancetype)viewControllerFromStoryboard;
 
 @end

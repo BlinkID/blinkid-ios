@@ -83,6 +83,8 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
 @implementation ResultsViewController
 
+#pragma mark - Lifecycle
+
 - (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -110,7 +112,9 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
     [self setupResultContainerView:resultContainerView];
 }
 
-- (UILabel *)createLabelWithFont:(UIFont *)font andTextColor:(UIColor *)color andText:(NSString *)text {
+#pragma mark - Private
+
+- (UILabel *)createLabelWithFont:(UIFont *)font textColor:(UIColor *)color text:(NSString *)text {
     UILabel *label = [[UILabel alloc] init];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     label.text = text;
@@ -120,8 +124,6 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
     label.textColor = color;
     return label;
 }
-
-#pragma mark - Setup
 
 - (void)setupCloseButton:(UIButton *)closeButton {
     [closeButton setTitle:kCloseButtonText forState:UIControlStateNormal];
@@ -191,7 +193,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
         NSString *key = keyArray[i];
         NSString *value = self.labelMap[key];
 
-        UILabel *labelValue = [self createLabelWithFont:labelValueFont andTextColor:labelValueColor andText:value];
+        UILabel *labelValue = [self createLabelWithFont:labelValueFont textColor:labelValueColor text:value];
         [resultContainerView addSubview:labelValue];
 
         [labelValue setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -213,7 +215,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
             height += kLabelToLabelDistance + neededValueSize.height;
         }
 
-        UILabel *labelKey = [self createLabelWithFont:labelKeyFont andTextColor:labelKeyColor andText:key];
+        UILabel *labelKey = [self createLabelWithFont:labelKeyFont textColor:labelKeyColor text:key];
         [resultContainerView addSubview:labelKey];
 
         [labelKey setTranslatesAutoresizingMaskIntoConstraints:NO];

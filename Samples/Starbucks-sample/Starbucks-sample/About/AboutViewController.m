@@ -8,6 +8,7 @@
 
 #import "AboutViewController.h"
 #import "UIColor+MBAdditions.h"
+
 @interface AboutViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *closeButton;
@@ -39,6 +40,8 @@ static NSString *const kTwitterLink = @"https://twitter.com/microblink";
 
 @implementation AboutViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = kTitleLabelText;
@@ -52,6 +55,8 @@ static NSString *const kTwitterLink = @"https://twitter.com/microblink";
 - (void)viewWillDisappear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+
+#pragma mark - Actions
 
 - (IBAction)didTapBrowseOtherProductsButton:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kMicroblinkProductsLink] options:@{} completionHandler:nil];

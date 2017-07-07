@@ -10,6 +10,8 @@
 
 @implementation ShadowView
 
+#pragma mark - Lifecycle
+
 - (instancetype)initWithFrame:(CGRect)frame andShadowColor:(UIColor *)shadowColor andCornerRadius:(CGFloat)cornerRadius {
     self = [super initWithFrame:frame];
     if (self) {
@@ -20,11 +22,6 @@
         self.userInteractionEnabled = NO;
     }
     return self;
-}
-
-- (void)updateViewWithRect:(CGRect)viewfinderRect {
-    self.scanningRect = viewfinderRect;
-    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -41,6 +38,13 @@
     [clipPath addClip];
     [self.shadowColor setFill];
     [clipPath fill];
+}
+
+#pragma mark - Private
+
+- (void)updateViewWithRect:(CGRect)viewfinderRect {
+    self.scanningRect = viewfinderRect;
+    [self setNeedsDisplay];
 }
 
 @end

@@ -7,30 +7,26 @@
 //
 
 #import "OverlayViewController.h"
-#import "UIColor+MBAdditions.h"
 #import "ShadowView.h"
+#import "UIColor+MBAdditions.h"
 
 @interface OverlayViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
-
-@property (weak, nonatomic) IBOutlet UIButton *torchButton;
-
-@property (strong, nonatomic) UIImage *torchOffImage;
-
-@property (strong, nonatomic) UIImage *torchOnImage;
-
-@property (nonatomic, getter=isTorchOn) BOOL torchOn;
-
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-
 @property (weak, nonatomic) IBOutlet UILabel *instuctionLabel;
-
 @property (weak, nonatomic) IBOutlet UIImageView *starbucksCardImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *viewFinderView;
 
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIButton *torchButton;
+
+@property (strong, nonatomic) UIImage *torchOffImage;
+@property (strong, nonatomic) UIImage *torchOnImage;
+
 @property (strong, nonatomic) ShadowView *shadowView;
+
+@property (assign, nonatomic, getter=isTorchOn) BOOL torchOn;
 
 @end
 
@@ -64,16 +60,10 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
 
 @implementation OverlayViewController
 
+#pragma mark - Public
+
 + (instancetype)viewControllerFromStoryboard {
     return [[UIStoryboard storyboardWithName:kStoryboardName bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerIdentifier];
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return NO;
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Lifecycle
@@ -87,15 +77,18 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     self.torchOffImage = [UIImage imageNamed:kTorchOffImage];
 
     PPModernOcrResultOverlaySubview *dotsOverlaySubview = [[PPModernOcrResultOverlaySubview alloc] initWithFrame:self.view.bounds];
-
     [self registerOverlaySubview:dotsOverlaySubview];
     [self.view addSubview:dotsOverlaySubview];
 
     self.shadowView =
         [[ShadowView alloc] initWithFrame:self.view.frame andShadowColor:[UIColor MB_shadowColor] andCornerRadius:kViewFinderCornerRadius];
-    self.shadowView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
     [self.view insertSubview:self.shadowView atIndex:0];
+
+    [self.shadowView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.shadowView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.shadowView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+    [self.shadowView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
+    [self.shadowView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor].active = YES;
 
     self.viewFinderView.layer.borderColor = [UIColor MB_emeraldColor].CGColor;
     self.viewFinderView.layer.cornerRadius = kViewFinderCornerRadius;
@@ -109,7 +102,15 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     [self.shadowView updateViewWithRect:self.viewFinderView.frame];
 }
 
-#pragma mark - Setters
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Custom Accessors
 
 - (void)setTorchOn:(BOOL)torchOn {
     BOOL success = [self.containerViewController overlayViewController:self willSetTorch:torchOn];
@@ -121,7 +122,7 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     _torchOn = torchOn;
 }
 
-#pragma mark - IBAction
+#pragma mark - Actions
 
 - (IBAction)didTapTorchButton:(id)sender {
     self.torchOn = !self.isTorchOn;

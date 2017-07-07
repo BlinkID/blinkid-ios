@@ -15,13 +15,13 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 
-@property (strong, nonatomic) PPCameraCoordinator *coordinator;
-
-@property (strong, nonatomic) StarbucksCardRecognizerSettings *starbucksRecognizerSettings;
-
 @property (strong, nonatomic) UIViewController<PPScanningViewController> *scanningViewController;
 
 @property (strong, nonatomic) OverlayViewController *overlayViewController;
+
+@property (strong, nonatomic) PPCameraCoordinator *coordinator;
+
+@property (strong, nonatomic) StarbucksCardRecognizerSettings *starbucksRecognizerSettings;
 
 @end
 
@@ -54,11 +54,11 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     self.navigationController.navigationBarHidden = YES;
 }
 
-#pragma mark - Setup
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
+#pragma mark - Private
 
 - (PPCameraCoordinator *)coordinatorWithError:(NSError **)error {
     /** 0. Check if scanning is supported */
@@ -93,7 +93,28 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     return coordinator;
 }
 
-#pragma mark - IBAction
+- (void)createResultsViewControllerWithResultsMap:(NSDictionary *)resultsMap {
+    ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
+    resultsViewController.delegate = self;
+
+    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    [self.scanningViewController addChildViewController:resultsViewController];
+    [self.scanningViewController.view addSubview:resultsViewController.view];
+    [resultsViewController didMoveToParentViewController:self.scanningViewController];
+
+    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.centerXAnchor constant:0.f].active =
+    YES;
+    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.centerYAnchor constant:0.f].active =
+    YES;
+    [resultsViewController.view.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.widthAnchor constant:0.f].active = YES;
+    [resultsViewController.view.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.heightAnchor constant:0.f].active =
+    YES;
+
+    [self.scanningViewController.view layoutIfNeeded];
+}
+
+#pragma mark - Actions
 
 - (IBAction)didTapScanButton:(id)sender {
     /** Instantiate the scanning coordinator */
@@ -114,7 +135,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     [self presentViewController:self.scanningViewController animated:YES completion:nil];
 }
 
-#pragma mark - PPScanDelegate
+#pragma mark - PPScaningDelegate
 
 - (void)scanningViewControllerUnauthorizedCamera:(UIViewController<PPScanningViewController> *)scanningViewController {
     // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
@@ -134,10 +155,9 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     [scanningViewController pauseCamera];
 
     NSDictionary *resultsMap;
-
     // Collect data from the result
     for (PPRecognizerResult *result in results) {
-
+        
         if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
             PPPdf417RecognizerResult *ocrResult = (PPPdf417RecognizerResult *)result;
             resultsMap = @{kStarbucksCardNumberKey : [ocrResult stringUsingGuessedEncoding]};
@@ -158,10 +178,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     }
 }
 
-- (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanninvViewController
-    didFinishDetectionWithResult:(PPDetectorResult *)result {
-}
-
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
              didOutputMetadata:(PPMetadata *)metadata {
     if ([metadata isKindOfClass:[PPImageMetadata class]]) {
@@ -171,27 +187,6 @@ static NSString *const kScanButtonLabelText = @"SCAN";
             self.overlayViewController.pausedCameraImageView.image = imageMetadata.image;
         }
     }
-}
-
-- (void)createResultsViewControllerWithResultsMap:(NSDictionary *)resultsMap {
-    ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
-    resultsViewController.delegate = self;
-
-    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    [self.scanningViewController addChildViewController:resultsViewController];
-    [self.scanningViewController.view addSubview:resultsViewController.view];
-    [resultsViewController didMoveToParentViewController:self.scanningViewController];
-
-    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.centerXAnchor constant:0.f].active =
-        YES;
-    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.centerYAnchor constant:0.f].active =
-        YES;
-    [resultsViewController.view.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.widthAnchor constant:0.f].active = YES;
-    [resultsViewController.view.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.heightAnchor constant:0.f].active =
-        YES;
-
-    [self.scanningViewController.view layoutIfNeeded];
 }
 
 #pragma mark - ResultsViewControllerDelegate

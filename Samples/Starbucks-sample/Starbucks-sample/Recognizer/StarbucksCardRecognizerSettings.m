@@ -36,8 +36,10 @@ static NSString *const kSecurityCodeThirdType = @"SecurityCodeThirdType";
 
 // Type of card with security code in the middle
 static NSString *const kFirstType = @"FirstType";
+
 // Type of card with security code in the upper right corner
 static NSString *const kSecondType = @"SecondType";
+
 // Type of card with security code in the lower right corner
 static NSString *const kThirdType = @"ThirdType";
 
@@ -61,16 +63,7 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 
 @implementation StarbucksCardRecognizerSettings
 
-- (NSMutableSet *)numberWhitelist {
-    // initialize new char whitelist
-    NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
-
-    // Add chars '0'-'9'
-    for (int c = '0'; c <= '9'; c++) {
-        [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
-    }
-    return charWhitelist;
-}
+#pragma mark - Lifecycle
 
 - (instancetype)init {
     self = [super init];
@@ -124,7 +117,7 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
     return self;
 }
 
-#pragma mark - Decoding info
+#pragma mark - Private
 
 - (void)setSecurityCodeWithDictionaryOfDecodingInfoArray:(NSDictionary *)decodingInfoArrayDictionary {
     int dewarpedHeight = 200;
@@ -145,26 +138,26 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
     NSMutableSet *charWhiteList = [self numberWhitelist];
 
     PPRegexOcrParserFactory *firstLocationSecurityNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                          andMinimalLineHeight:60
-                                                                          andMaximalLineHeight:150
-                                                                           andMaxCharsExpected:25
-                                                                                      andRegex:kSecurityCodeRegex];
+                                                                             minimalLineHeight:60
+                                                                             maximalLineHeight:150
+                                                                              maxCharsExpected:25
+                                                                                         regex:kSecurityCodeRegex];
 
     [self addOcrParser:firstLocationSecurityNumber name:kSecurityCode group:kSecurityCodeFirstType];
 
     PPRegexOcrParserFactory *secondLocationSecurityNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                           andMinimalLineHeight:80
-                                                                           andMaximalLineHeight:150
-                                                                            andMaxCharsExpected:15
-                                                                                       andRegex:kSecurityCodeRegex];
+                                                                              minimalLineHeight:80
+                                                                              maximalLineHeight:150
+                                                                               maxCharsExpected:15
+                                                                                          regex:kSecurityCodeRegex];
 
     [self addOcrParser:secondLocationSecurityNumber name:kSecurityCode group:kSecurityCodeSecondType];
 
     PPRegexOcrParserFactory *thirdLocationSecurityNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                          andMinimalLineHeight:70
-                                                                          andMaximalLineHeight:120
-                                                                           andMaxCharsExpected:35
-                                                                                      andRegex:kSecurityCodeRegex];
+                                                                             minimalLineHeight:70
+                                                                             maximalLineHeight:120
+                                                                              maxCharsExpected:35
+                                                                                         regex:kSecurityCodeRegex];
 
     [self addOcrParser:thirdLocationSecurityNumber name:kSecurityCode group:kSecurityCodeThirdType];
 }
@@ -192,39 +185,37 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
     }
 
     PPRegexOcrParserFactory *firstLocationCardNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                      andMinimalLineHeight:50
-                                                                      andMaximalLineHeight:100
-                                                                       andMaxCharsExpected:150
-                                                                                  andRegex:kCardNumberRegex];
+                                                                         minimalLineHeight:50
+                                                                         maximalLineHeight:100
+                                                                          maxCharsExpected:150
+                                                                                     regex:kCardNumberRegex];
 
     [self addOcrParser:firstLocationCardNumber name:kCardNumber group:kCardNumberFirstType];
 
     PPRegexOcrParserFactory *secondLocationCardNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                       andMinimalLineHeight:50
-                                                                       andMaximalLineHeight:100
-                                                                        andMaxCharsExpected:150
-                                                                                   andRegex:kCardNumberRegex];
+                                                                          minimalLineHeight:50
+                                                                          maximalLineHeight:100
+                                                                           maxCharsExpected:150
+                                                                                      regex:kCardNumberRegex];
 
     [self addOcrParser:secondLocationCardNumber name:kCardNumber group:kCardNumberSecondType];
 
     PPRegexOcrParserFactory *thirdLocationCardNumber = [self createParserWithCharWhiteList:charWhiteList
-                                                                      andMinimalLineHeight:50
-                                                                      andMaximalLineHeight:100
-                                                                       andMaxCharsExpected:150
-                                                                                  andRegex:kCardNumberRegex];
+                                                                         minimalLineHeight:50
+                                                                         maximalLineHeight:100
+                                                                          maxCharsExpected:150
+                                                                                     regex:kCardNumberRegex];
 
     [self addOcrParser:firstLocationCardNumber name:kCardNumber group:kCardNumberFirstType];
     [self addOcrParser:secondLocationCardNumber name:kCardNumber group:kCardNumberSecondType];
     [self addOcrParser:thirdLocationCardNumber name:kCardNumber group:KCardNumberThirdType];
 }
 
-#pragma mark - Parser creation
-
 - (PPRegexOcrParserFactory *)createParserWithCharWhiteList:(NSMutableSet *)charWhiteList
-                                      andMinimalLineHeight:(NSUInteger)minimalLineHeight
-                                      andMaximalLineHeight:(NSUInteger)maximalLineHeight
-                                       andMaxCharsExpected:(NSUInteger)maxCharsExpected
-                                                  andRegex:(NSString *)regex {
+                                         minimalLineHeight:(NSUInteger)minimalLineHeight
+                                         maximalLineHeight:(NSUInteger)maximalLineHeight
+                                          maxCharsExpected:(NSUInteger)maxCharsExpected
+                                                     regex:(NSString *)regex {
     PPRegexOcrParserFactory *parser = [[PPRegexOcrParserFactory alloc] initWithRegex:regex];
 
     parser.startsWithWhitespace = YES;
@@ -243,7 +234,18 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
     return parser;
 }
 
-#pragma mark - Message extraction
+- (NSMutableSet *)numberWhitelist {
+    // initialize new char whitelist
+    NSMutableSet *charWhitelist = [[NSMutableSet alloc] init];
+
+    // Add chars '0'-'9'
+    for (int c = '0'; c <= '9'; c++) {
+        [charWhitelist addObject:[PPOcrCharKey keyWithCode:c font:PP_OCR_FONT_ANY]];
+    }
+    return charWhitelist;
+}
+
+#pragma mark - Public
 
 - (NSDictionary *)extractMessageFromResult:(PPBlinkOcrRecognizerResult *)result {
     NSMutableDictionary *resultsDictionary = [[NSMutableDictionary alloc] init];
