@@ -17,6 +17,10 @@
 #import "PPDetectorRecognizerSettings.h"
 #import "PPDetectorRecognizerResult.h"
 
+// Vin
+#import "PPVinRecognizerSettings.h"
+#import "PPVinRecognizerResult.h"
+
 // Use all recognizers from BlinkBarcode
 #import "PPBlinkBarcodeRecognizers.h"
 

@@ -1,8 +1,8 @@
 //
-//  PPGermanIDCombinedRecognizerSettings.h
-//  PhotoPayDev
+//  PPSlovakIDCombinedRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Jura Skrlec on 22/05/2017.
+//  Created by Jura Skrlec on 19/06/2017.
 //
 //
 
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German Combined ID recognizer is used for scanning both front and back side of german IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
+@interface PPSlovakIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -45,6 +45,76 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
 + (NSString *)FULL_DOCUMENT_IMAGE_BACK;
+
+/**
+ * Defines if owner's sex should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractSex;
+
+/**
+ * Defines if owner's nationality should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractNationality;
+
+/**
+ * Defines if owner's date of birth should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfBirth;
+
+/**
+ * Defines if ID's date of expiry should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+ * Defines if ID's date of issue should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfIssue;
+
+/**
+ * Defines if issuing authority should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractIssuedBy;
+
+/**
+ * Defines if issuing document number should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDocumentNumber;
+
+/**
+ * Defines if owner's surname at birth should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractSurnameAtBirth;
+
+/**
+ * Defines if owner's place of birth should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
+
+/**
+ * Defines if owner's special remarks should be extracted from Slovakian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractSpecialRemarks;
 
 /**
  * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -94,4 +164,3 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @end
 
 NS_ASSUME_NONNULL_END
-

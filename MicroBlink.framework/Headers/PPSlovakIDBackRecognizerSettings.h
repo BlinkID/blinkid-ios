@@ -24,13 +24,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- * Defines if owner's address should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractAddress;
-
-/**
  * Defines if owner's surname at birth should be extracted from Slovakian ID
  *
  * Default: YES

@@ -17,6 +17,7 @@
 @class PPOcrLine;
 @class PPOcrChar;
 @class PPPosition;
+@class PPCharWithVariants;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -156,7 +157,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Ocr chars of the line
  */
-@property (nonatomic) NSArray<PPOcrChar *> *chars;
+@property (nonatomic) NSArray<PPCharWithVariants *> *chars;
 
 /**
  * Position of the line on the image, in the coordinate system of the image
@@ -176,7 +177,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return initialized ocr line
  */
-- (instancetype)initWithOcrChars:(NSArray<PPOcrChar *> *)ocrChars position:(PPPosition *)position NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithOcrChars:(NSArray<PPCharWithVariants *> *)ocrChars position:(PPPosition *)position NS_DESIGNATED_INITIALIZER;
 
 /**
  * Helper method which returna a simple string representation of the ocr line
@@ -184,6 +185,39 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *  @return ocr line converted to string
  */
 - (NSString *)string;
+
+@end
+
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPCharWithVariants : NSObject
+
+/**
+ * Character that was recognised
+ */
+@property (nonatomic) PPOcrChar * character;
+
+/**
+ * Alternative characters which are possible instead of this character.
+ *
+ * In the list of characters, each char (unicode value), can appear multiple times, each time with different font.
+ * This means variant is uniquely defined with a combination of value and font properties.
+ *
+ * Each variant has quality property set, so you can use it to verify other options.
+ *
+ * @Warning If you use variants, please note you need to take font into account.
+ */
+@property (nonatomic) NSSet *variants;
+
+- (instancetype)init NS_UNAVAILABLE;
+
+/**
+ * Initializer for a CharWithVariant
+ *
+ *  @param character Character with all recognition information (value, font, position, etc.)
+ *
+ *  @return initialized char with zero variants
+ */
+- (instancetype)initWithValue:(PPOcrChar *)character NS_DESIGNATED_INITIALIZER;
 
 @end
 
@@ -222,18 +256,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Font of the character
  */
 @property (nonatomic) PPOcrFont font;
-
-/**
- * Alternative characters which are possible instead of this character.
- *
- * In the list of characters, each char (unicode value), can appear multiple times, each time with different font.
- * This means variant is uniquely defined with a combination of value and font properties.
- *
- * Each variant has quality property set, so you can use it to verify other options.
- *
- * @Warning If you use variants, please note you need to take font into account.
- */
-@property (nonatomic) NSSet *variants;
 
 - (instancetype)init NS_UNAVAILABLE;
 

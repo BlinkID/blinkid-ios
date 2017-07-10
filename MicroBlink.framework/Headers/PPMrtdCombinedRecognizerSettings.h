@@ -1,8 +1,8 @@
 //
-//  PPGermanIDCombinedRecognizerSettings.h
-//  PhotoPayDev
+//  PPMrtdCombinedRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Jura Skrlec on 22/05/2017.
+//  Created by Jura Skrlec on 03/07/2017.
 //
 //
 
@@ -11,12 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring German ID Combined Recognizer.
+ * Settings class for configuring MRTD Combined Recognizer.
  *
- * German Combined ID recognizer is used for scanning both front and back side of german IDs.
+ * MRTD Combined recognizer is used for scanning both front and back side of german IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
+@interface PPMrtdCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -26,11 +26,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)ID_FACE;
 
 /**
- * Name of the image sent to didOutputMetadata method of scanDelegate object that contains signature.
- * This image will be sent to scan delegate during recognition process if displaying of face image
- * is enabled via displaySignatureImage property and receiving of dewarpedImage in MetadataSettings is enabled.
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains machine readable zone.
+ * This image will be sent to scan delegate during recognition process if displaying of full document image
+ * is disabled via dewarpFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-+ (NSString *)ID_SIGNATURE;
++ (NSString *)MRZ_IMAGE;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document front side.
@@ -67,14 +67,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL returnSignaturePhoto;
+@property (nonatomic, assign) BOOL returnMRZPhoto;
 
 /**
  * Sets whether signature image should be encoded in the result object returned by didOutputResult:
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL encodeSignaturePhoto;
+@property (nonatomic, assign) BOOL encodeMRZPhoto;
 
 /**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -91,7 +91,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) BOOL encodeFullDocumentPhoto;
 
+
 @end
-
 NS_ASSUME_NONNULL_END
-

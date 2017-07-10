@@ -11,7 +11,7 @@
  * Result of scanning with Aztec Recognizer
  *
  */
-PP_CLASS_AVAILABLE_IOS(6.0)
+PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerResult instead")
 @interface PPAztecRecognizerResult : PPRecognizerResult
 
 /**
