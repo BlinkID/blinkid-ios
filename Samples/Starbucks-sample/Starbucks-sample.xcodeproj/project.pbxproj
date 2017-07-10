@@ -11,6 +11,7 @@
 		CD2AC7C41F04EED30033717A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD2AC7C21F04EED30033717A /* MicroBlink.bundle */; };
 		CD2AC7C61F04EED90033717A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; };
 		CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD3747431F0FB33500D3F90C /* CardTypeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3747421F0FB33500D3F90C /* CardTypeFactory.m */; };
 		CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */; };
 		CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */; };
 		CDC0FD931F0540CC008E3A23 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */; };
@@ -27,6 +28,10 @@
 		CDCC56AC1F04E3AE00A747E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AB1F04E3AE00A747E4 /* libz.tbd */; };
 		CDCC56AE1F04E3BC00A747E4 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AD1F04E3BC00A747E4 /* libiconv.tbd */; };
 		CDCC56B01F04E3C300A747E4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56AF1F04E3C300A747E4 /* Accelerate.framework */; };
+		CDF23C2D1F13993A00C684AC /* BaseCardType.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF23C261F13993A00C684AC /* BaseCardType.m */; };
+		CDF23C2E1F13993A00C684AC /* BottomLeftCardNumberType.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF23C281F13993A00C684AC /* BottomLeftCardNumberType.m */; };
+		CDF23C2F1F13993A00C684AC /* TopCenterCardNumberType.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF23C2A1F13993A00C684AC /* TopCenterCardNumberType.m */; };
+		CDF23C301F13993A00C684AC /* TopLeftCardNumberType.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF23C2C1F13993A00C684AC /* TopLeftCardNumberType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +53,8 @@
 		CD0E09201F0505BF00C539F6 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShadowView.m; path = Overlay/ShadowView.m; sourceTree = "<group>"; };
 		CD2AC7C21F04EED30033717A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		CD2AC7C31F04EED30033717A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		CD3747411F0FB33500D3F90C /* CardTypeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardTypeFactory.h; path = Recognizer/CardTypeFactory.h; sourceTree = "<group>"; };
+		CD3747421F0FB33500D3F90C /* CardTypeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardTypeFactory.m; path = Recognizer/CardTypeFactory.m; sourceTree = "<group>"; };
 		CDC0FD841F051601008E3A23 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CDC0FD861F05160B008E3A23 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		CDC0FD881F051611008E3A23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -76,6 +83,14 @@
 		CDCC56AB1F04E3AE00A747E4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CDCC56AD1F04E3BC00A747E4 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		CDCC56AF1F04E3C300A747E4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		CDF23C251F13993A00C684AC /* BaseCardType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCardType.h; path = Recognizer/CardType/BaseCardType.h; sourceTree = "<group>"; };
+		CDF23C261F13993A00C684AC /* BaseCardType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCardType.m; path = Recognizer/CardType/BaseCardType.m; sourceTree = "<group>"; };
+		CDF23C271F13993A00C684AC /* BottomLeftCardNumberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BottomLeftCardNumberType.h; path = Recognizer/CardType/BottomLeftCardNumberType.h; sourceTree = "<group>"; };
+		CDF23C281F13993A00C684AC /* BottomLeftCardNumberType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BottomLeftCardNumberType.m; path = Recognizer/CardType/BottomLeftCardNumberType.m; sourceTree = "<group>"; };
+		CDF23C291F13993A00C684AC /* TopCenterCardNumberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopCenterCardNumberType.h; path = Recognizer/CardType/TopCenterCardNumberType.h; sourceTree = "<group>"; };
+		CDF23C2A1F13993A00C684AC /* TopCenterCardNumberType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopCenterCardNumberType.m; path = Recognizer/CardType/TopCenterCardNumberType.m; sourceTree = "<group>"; };
+		CDF23C2B1F13993A00C684AC /* TopLeftCardNumberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopLeftCardNumberType.h; path = Recognizer/CardType/TopLeftCardNumberType.h; sourceTree = "<group>"; };
+		CDF23C2C1F13993A00C684AC /* TopLeftCardNumberType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopLeftCardNumberType.m; path = Recognizer/CardType/TopLeftCardNumberType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +124,28 @@
 		CD1CC5F01F067454000B7D39 /* Recognizer */ = {
 			isa = PBXGroup;
 			children = (
+				CD3747441F0FB60A00D3F90C /* CardType */,
 				CDCC56A51F04E26F00A747E4 /* StarbucksCardRecognizerSettings.h */,
 				CDCC56A61F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m */,
+				CD3747411F0FB33500D3F90C /* CardTypeFactory.h */,
+				CD3747421F0FB33500D3F90C /* CardTypeFactory.m */,
 			);
 			name = Recognizer;
+			sourceTree = "<group>";
+		};
+		CD3747441F0FB60A00D3F90C /* CardType */ = {
+			isa = PBXGroup;
+			children = (
+				CDF23C251F13993A00C684AC /* BaseCardType.h */,
+				CDF23C261F13993A00C684AC /* BaseCardType.m */,
+				CDF23C271F13993A00C684AC /* BottomLeftCardNumberType.h */,
+				CDF23C281F13993A00C684AC /* BottomLeftCardNumberType.m */,
+				CDF23C291F13993A00C684AC /* TopCenterCardNumberType.h */,
+				CDF23C2A1F13993A00C684AC /* TopCenterCardNumberType.m */,
+				CDF23C2B1F13993A00C684AC /* TopLeftCardNumberType.h */,
+				CDF23C2C1F13993A00C684AC /* TopLeftCardNumberType.m */,
+			);
+			name = CardType;
 			sourceTree = "<group>";
 		};
 		CDC0FD8D1F053D14008E3A23 /* About */ = {
@@ -273,13 +306,18 @@
 			files = (
 				CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */,
 				CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */,
+				CDF23C2F1F13993A00C684AC /* TopCenterCardNumberType.m in Sources */,
 				CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */,
 				CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */,
 				CDCC56A71F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m in Sources */,
 				CD0E09211F0505BF00C539F6 /* ShadowView.m in Sources */,
+				CD3747431F0FB33500D3F90C /* CardTypeFactory.m in Sources */,
+				CDF23C2E1F13993A00C684AC /* BottomLeftCardNumberType.m in Sources */,
 				CDC0FD931F0540CC008E3A23 /* ResultsViewController.m in Sources */,
 				CDCC56A41F04DC9800A747E4 /* UIColor+MBAdditions.m in Sources */,
+				CDF23C2D1F13993A00C684AC /* BaseCardType.m in Sources */,
 				CDCC568B1F04D86E00A747E4 /* main.m in Sources */,
+				CDF23C301F13993A00C684AC /* TopLeftCardNumberType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
