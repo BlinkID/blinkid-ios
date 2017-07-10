@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18C76AB61EC337CB006E5639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76AB51EC337CB006E5639 /* main.m */; };
+		18C76ABF1EC337CB006E5639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76ABD1EC337CB006E5639 /* Main.storyboard */; };
+		18C76AC11EC337CB006E5639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AC01EC337CB006E5639 /* Assets.xcassets */; };
+		18C76AC41EC337CB006E5639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */; };
+		18C76AF41EC33B47006E5639 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C76AF21EC33B47006E5639 /* MicroBlink.bundle */; };
+		18C76B0D1EC33C46006E5639 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B0C1EC33C46006E5639 /* libc++.tbd */; };
+		18C76B0F1EC33C55006E5639 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B0E1EC33C55006E5639 /* libz.tbd */; };
+		18C76B111EC33C65006E5639 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76B101EC33C65006E5639 /* Accelerate.framework */; };
+		18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B151EC33E59006E5639 /* MBAppDelegate.m */; };
+		18C76B1D1EC33E5A006E5639 /* MBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C76B191EC33E5A006E5639 /* MBRootViewController.m */; };
+		A2667EE41EE54A9100BC6467 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; };
+		A2667EE51EE54A9100BC6467 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18C76AF31EC33B47006E5639 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */; };
+		A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2667EE61EE54A9100BC6467 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2667EE51EE54A9100BC6467 /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkMoto-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C76AB51EC337CB006E5639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18C76ABE1EC337CB006E5639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18C76AC01EC337CB006E5639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C76AC31EC337CB006E5639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C76AC51EC337CB006E5639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C76AF21EC33B47006E5639 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		18C76AF31EC33B47006E5639 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		18C76B0C1EC33C46006E5639 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		18C76B0E1EC33C55006E5639 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		18C76B101EC33C65006E5639 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		18C76B141EC33E59006E5639 /* MBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		18C76B151EC33E59006E5639 /* MBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
+		18C76B181EC33E5A006E5639 /* MBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRootViewController.h; sourceTree = "<group>"; };
+		18C76B191EC33E5A006E5639 /* MBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRootViewController.m; sourceTree = "<group>"; };
+		A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrFinderView.h; sourceTree = "<group>"; };
+		A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrFinderView.m; sourceTree = "<group>"; };
+		A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPOcrFinderView+Private.h"; sourceTree = "<group>"; };
+		A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPOcrOverlayViewController.h; sourceTree = "<group>"; };
+		A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPOcrOverlayViewController.m; sourceTree = "<group>"; };
+		A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPOcrOverlayViewController+Private.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C76AAE1EC337CB006E5639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2667EE41EE54A9100BC6467 /* MicroBlink.framework in Frameworks */,
+				18C76B111EC33C65006E5639 /* Accelerate.framework in Frameworks */,
+				18C76B0F1EC33C55006E5639 /* libz.tbd in Frameworks */,
+				18C76B0D1EC33C46006E5639 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18C76AA81EC337CB006E5639 = {
+			isa = PBXGroup;
+			children = (
+				18C76AB31EC337CB006E5639 /* BlinkMoto-demo */,
+				18C76AF11EC33B37006E5639 /* Frameworks */,
+				18C76AB21EC337CB006E5639 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18C76AB21EC337CB006E5639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C76AB31EC337CB006E5639 /* BlinkMoto-demo */ = {
+			isa = PBXGroup;
+			children = (
+				A2667EE71EE54B0E00BC6467 /* Overlay */,
+				18C76ABD1EC337CB006E5639 /* Main.storyboard */,
+				18C76AC01EC337CB006E5639 /* Assets.xcassets */,
+				18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */,
+				18C76AC51EC337CB006E5639 /* Info.plist */,
+				18C76B141EC33E59006E5639 /* MBAppDelegate.h */,
+				18C76B151EC33E59006E5639 /* MBAppDelegate.m */,
+				18C76B181EC33E5A006E5639 /* MBRootViewController.h */,
+				18C76B191EC33E5A006E5639 /* MBRootViewController.m */,
+				18C76AB41EC337CB006E5639 /* Supporting Files */,
+			);
+			path = "BlinkMoto-demo";
+			sourceTree = "<group>";
+		};
+		18C76AB41EC337CB006E5639 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AB51EC337CB006E5639 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18C76AF11EC33B37006E5639 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C76AF31EC33B47006E5639 /* MicroBlink.framework */,
+				18C76AF21EC33B47006E5639 /* MicroBlink.bundle */,
+				18C76B101EC33C65006E5639 /* Accelerate.framework */,
+				18C76B0E1EC33C55006E5639 /* libz.tbd */,
+				18C76B0C1EC33C46006E5639 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2667EE71EE54B0E00BC6467 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				A2667EE81EE54B2900BC6467 /* PPOcrFinderView.h */,
+				A2667EE91EE54B2900BC6467 /* PPOcrFinderView.m */,
+				A2667EEA1EE54B2900BC6467 /* PPOcrFinderView+Private.h */,
+				A2667EEF1EE54B3700BC6467 /* PPOcrOverlayViewController.h */,
+				A2667EF01EE54B3700BC6467 /* PPOcrOverlayViewController.m */,
+				A2667EF21EE557CB00BC6467 /* PPOcrOverlayViewController+Private.h */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C76AB01EC337CB006E5639 /* BlinkMoto-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C76AC81EC337CB006E5639 /* Build configuration list for PBXNativeTarget "BlinkMoto-demo" */;
+			buildPhases = (
+				18C76AAD1EC337CB006E5639 /* Sources */,
+				18C76AAE1EC337CB006E5639 /* Frameworks */,
+				18C76AAF1EC337CB006E5639 /* Resources */,
+				A2667EE61EE54A9100BC6467 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlinkMoto-demo";
+			productName = "BlinkMoto-demo";
+			productReference = 18C76AB11EC337CB006E5639 /* BlinkMoto-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C76AA91EC337CB006E5639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = MicroBlink;
+				TargetAttributes = {
+					18C76AB01EC337CB006E5639 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CQTJWP89J7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18C76AAC1EC337CB006E5639 /* Build configuration list for PBXProject "BlinkMoto-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C76AA81EC337CB006E5639;
+			productRefGroup = 18C76AB21EC337CB006E5639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C76AB01EC337CB006E5639 /* BlinkMoto-demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C76AAF1EC337CB006E5639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C76AC41EC337CB006E5639 /* LaunchScreen.storyboard in Resources */,
+				18C76AC11EC337CB006E5639 /* Assets.xcassets in Resources */,
+				18C76ABF1EC337CB006E5639 /* Main.storyboard in Resources */,
+				18C76AF41EC33B47006E5639 /* MicroBlink.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C76AAD1EC337CB006E5639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2667EED1EE54B2900BC6467 /* PPOcrFinderView.m in Sources */,
+				18C76B1B1EC33E5A006E5639 /* MBAppDelegate.m in Sources */,
+				A2667EF11EE54B3700BC6467 /* PPOcrOverlayViewController.m in Sources */,
+				18C76B1D1EC33E5A006E5639 /* MBRootViewController.m in Sources */,
+				18C76AB61EC337CB006E5639 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18C76ABD1EC337CB006E5639 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C76ABE1EC337CB006E5639 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18C76AC21EC337CB006E5639 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C76AC31EC337CB006E5639 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C76AC61EC337CB006E5639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C76AC71EC337CB006E5639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C76AC91EC337CB006E5639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "LICENSE_KEY='\"C7NKVA3H-CGINWRSB-CA4QKCC4-DTLPUHGW-7IONN6Q4-235BZVX2-DTLPVPDK-2V3BJSBE\"'";
+				INFOPLIST_FILE = "BlinkMoto-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkMoto-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18C76ACA1EC337CB006E5639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "LICENSE_KEY='\"C7NKVA3H-CGINWRSB-CA4QKCC4-DTLPUHGW-7IONN6Q4-235BZVX2-DTLPVPDK-2V3BJSBE\"'";
+				INFOPLIST_FILE = "BlinkMoto-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkMoto-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C76AAC1EC337CB006E5639 /* Build configuration list for PBXProject "BlinkMoto-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C76AC61EC337CB006E5639 /* Debug */,
+				18C76AC71EC337CB006E5639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C76AC81EC337CB006E5639 /* Build configuration list for PBXNativeTarget "BlinkMoto-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C76AC91EC337CB006E5639 /* Debug */,
+				18C76ACA1EC337CB006E5639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C76AA91EC337CB006E5639 /* Project object */;
+}

@@ -14,7 +14,7 @@
  * BarDecoder recognizer is used for scanning Code 39 and Code 128 barcodes and is superior in performance
  * to ZXingRecognizer
  */
-PP_CLASS_AVAILABLE_IOS(6.0)
+PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerSettings instead")
 @interface PPBarDecoderRecognizerSettings : PPRecognizerSettings
 
 /**

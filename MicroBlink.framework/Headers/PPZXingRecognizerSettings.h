@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  * ZXIngRecognizer recognizer is used for scanning most of 1D barcode formats, and 2D format
  * such as Aztec, DataMatrix and QR code
  */
-PP_CLASS_AVAILABLE_IOS(6.0)
+PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerSettings")
 @interface PPZXingRecognizerSettings : PPRecognizerSettings
 
 /**

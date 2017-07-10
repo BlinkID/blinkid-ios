@@ -14,6 +14,8 @@
 #import "PPAusIDBackRecognizerResult.h"
 #import "PPAusIDFrontRecognizerSettings.h"
 #import "PPAusIDFrontRecognizerResult.h"
+#import "PPAusIDCombinedRecognizerSettings.h"
+#import "PPAusIDCombinedRecognizerResult.h"
 
 // Croatia
 #import "PPCroIDBackRecognizerSettings.h"
@@ -28,6 +30,8 @@
 #import "PPCzIDBackRecognizerResult.h"
 #import "PPCzIDFrontRecognizerSettings.h"
 #import "PPCzIDFrontRecognizerResult.h"
+#import "PPCzIDCombinedRecognizerSettings.h"
+#import "PPCzIDCombinedRecognizerResult.h"
 
 // Document Face
 #import "PPDocumentFaceRecognizerSettings.h"
@@ -60,34 +64,48 @@
 // MRTD
 #import "PPMrtdRecognizerSettings.h"
 #import "PPMrtdRecognizerResult.h"
+#import "PPMrtdCombinedRecognizerSettings.h"
+#import "PPMrtdCombinedRecognizerResult.h"
 
 // Romania
 #import "PPRomanianIDFrontRecognizerSettings.h"
 #import "PPRomanianIDFrontRecognizerResult.h"
+
+// USDL
+#import "PPUsdlCombinedRecognizerSettings.h"
+#import "PPUsdlCombinedRecognizerResult.h"
 
 // Serbia
 #import "PPSerbianIDBackRecognizerSettings.h"
 #import "PPSerbianIDBackRecognizerResult.h"
 #import "PPSerbianIDFrontRecognizerSettings.h"
 #import "PPSerbianIDFrontRecognizerResult.h"
+#import "PPSerbianIDCombinedRecognizerSettings.h"
+#import "PPSerbianIDCombinedRecognizerResult.h"
 
 // Singapore
 #import "PPSingaporeIDBackRecognizerSettings.h"
 #import "PPSingaporeIDBackRecognizerResult.h"
 #import "PPSingaporeIDFrontRecognizerSettings.h"
 #import "PPSingaporeIDFrontRecognizerResult.h"
+#import "PPSingaporeIDCombinedRecognizerSettings.h"
+#import "PPSingaporeIDCombinedRecognizerResult.h"
 
 // Slovakia
 #import "PPSlovakIDBackRecognizerSettings.h"
 #import "PPSlovakIDBackRecognizerResult.h"
 #import "PPSlovakIDFrontRecognizerSettings.h"
 #import "PPSlovakIDFrontRecognizerResult.h"
+#import "PPSlovakIDCombinedRecognizerSettings.h"
+#import "PPSlovakIDCombinedRecognizerResult.h"
 
 // Slovenia
 #import "PPSlovenianIDBackRecognizerSettings.h"
 #import "PPSlovenianIDBackRecognizerResult.h"
 #import "PPSlovenianIDFrontRecognizerSettings.h"
 #import "PPSlovenianIDFrontRecognizerResult.h"
+#import "PPSlovenianIDCombinedRecognizerSettings.h"
+#import "PPSlovenianIDCombinedRecognizerResult.h"
 
 // Aztec barcode recognition
 #import "PPAztecRecognizerSettings.h"

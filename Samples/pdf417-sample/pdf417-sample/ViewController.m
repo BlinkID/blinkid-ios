@@ -55,8 +55,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"MI2QEQC3-QAMIK3GO-2KFWJ2PL-H5VBN4YL-EJXKOBFQ-2EEEIYCA-6SD3LCI7-QPZFEAKI";
-    // license key is valid temporarily - until 2017-08-03
+    settings.licenseSettings.licenseKey = @"CLRNQZQ4-T5CHOVCI-3VTTG7RE-D6FRVZVY-4JIUGWJA-ZD3ZSSLX-KQEEJQB3-IQOORZYU";
+    // license key is valid temporarily - until 2017-10-08
 
 
     /**
@@ -79,25 +79,17 @@
     // Remove this code if you don't need to scan QR codes
     {
         // To specify we want to perform recognition of other barcode formats, initialize the ZXing recognizer settings
-        PPZXingRecognizerSettings *zxingRecognizerSettings = [[PPZXingRecognizerSettings alloc] init];
+        PPBarcodeRecognizerSettings *barcodeRecognizerSettings = [[PPBarcodeRecognizerSettings alloc] init];
 
         /** You can modify the properties of zxingRecognizerSettings to suit your use-case (i.e. add other types of barcodes like QR, Aztec
          * or EAN)*/
-        zxingRecognizerSettings.scanQR = YES; // we use just QR code
+        barcodeRecognizerSettings.scanQR = YES; // we use just QR code
+        barcodeRecognizerSettings.scanAztec = YES;
+        barcodeRecognizerSettings.manateeKey = @"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so=";
 
 
         // Add ZXingRecognizer setting to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:zxingRecognizerSettings];
-    }
-
-    // Remove this code if you don't need Aztec scanning
-    {
-        // To specify we want to perform recognition of Aztec barcodes, initialize Aztec recognizer settings
-        // You can obta
-        PPAztecRecognizerSettings *aztecRecognizerSettings = [[PPAztecRecognizerSettings alloc] initWithManateeLibKey:@"l2CsULemUMlhwDWyYSo7Yy+2O2n+KDrlN3ZsYcP98so="];
-
-        // Add AztecRecognizerSettings to a list of used recognizer settings
-        [settings.scanSettings addRecognizerSettings:aztecRecognizerSettings];
+        [settings.scanSettings addRecognizerSettings:barcodeRecognizerSettings];
     }
 
     PPCameraCoordinator *coordinator = [[PPCameraCoordinator alloc] initWithSettings:settings delegate:nil];
@@ -199,12 +191,12 @@
 
     // Collect data from the result
     for (PPRecognizerResult *result in results) {
-        if ([result isKindOfClass:[PPZXingRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPBarcodeRecognizerResult class]]) {
             /** One of ZXing codes was detected */
 
-            PPZXingRecognizerResult *zxingResult = (PPZXingRecognizerResult *)result;
+            PPBarcodeRecognizerResult *zxingResult = (PPBarcodeRecognizerResult *)result;
 
-            title = @"QR code";
+            title = @"Barcode";
 
             // Save the string representation of the code
             message = [zxingResult stringUsingGuessedEncoding];
@@ -219,17 +211,6 @@
             // Save the string representation of the code
             message = [pdf417Result stringUsingGuessedEncoding];
         }
-        if ([result isKindOfClass:[PPAztecRecognizerResult class]]) {
-            /** Aztec barcode was detected */
-
-            PPAztecRecognizerResult *aztecResult = (PPAztecRecognizerResult *)result;
-
-            title = @"Aztec";
-
-            // Save the string representation of the code
-            message = [aztecResult barcodeStringWithGuessedEncoding];
-        }
-
     }
 
     // present the alert view with scanned results
