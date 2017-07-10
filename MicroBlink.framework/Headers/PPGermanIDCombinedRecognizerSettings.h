@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
  * German Combined ID recognizer is used for scanning both front and back side of german IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-
 @interface PPGermanIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**

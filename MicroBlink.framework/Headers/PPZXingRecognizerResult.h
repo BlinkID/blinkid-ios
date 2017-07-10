@@ -12,7 +12,7 @@
 /**
  * Type of the barcode which BarDecoderRecognizer returnes
  */
-typedef NS_ENUM(NSUInteger, PPZXingBarcodeType) {
+typedef PP_DEPRECATED_IOS(1_0, 5_9_3) NS_ENUM(NSUInteger, PPZXingBarcodeType) {
     /** Code 39 */
     PPZXingBarcodeTypeAztec,
     /** Code 128 */
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, PPZXingBarcodeType) {
  *
  * Contains raw Barcode detailed data, barcode type, and methods for getting string representation of results.
  */
-PP_CLASS_AVAILABLE_IOS(6.0)
+PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerResult instead")
 @interface PPZXingRecognizerResult : PPRecognizerResult
 
 /**
@@ -49,7 +49,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return Type of the barcode
  */
-- (PPZXingBarcodeType)barcodeType;
+- (PPZXingBarcodeType)barcodeType PP_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeType instead");
 
 /**
  * Byte array with result of the scan
@@ -90,6 +90,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return String representation of a given PPZXingBarcodeType enum value.
  */
-+ (NSString *_Nonnull)toTypeName:(PPZXingBarcodeType)type;
++ (NSString *_Nonnull)toTypeName:(PPZXingBarcodeType)type PP_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeType instead");
 
 @end

@@ -28,4 +28,10 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 - (instancetype)initWithCountryCodeWhitelist:(NSArray<NSString *> *)countryCodeWhitelist;
 
+/**
+ * Always return result with prefix
+ * Default: NO.
+ */
+@property (nonatomic) BOOL alwaysReturnWithPrefix;
+
 @end
