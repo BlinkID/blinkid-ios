@@ -36,50 +36,6 @@
 		<data>
 		Xb0StcYWpiPm8rwYc8jS8uZZvUI=
 		</data>
-		<key>Headers/PPAusQrRecognizerResult.h</key>
-		<data>
-		UXubQ2dIfUMQNruwATFOVjFj0aU=
-		</data>
-		<key>Headers/PPAusQrRecognizerSettings.h</key>
-		<data>
-		P02VOC0x374ehhUKcv7AisEjGBU=
-		</data>
-		<key>Headers/PPAusRecognizerResult.h</key>
-		<data>
-		sGGS3HYRFmzmC9hueM/e/A65oK0=
-		</data>
-		<key>Headers/PPAusReferenceOcrParserFactory.h</key>
-		<data>
-		7XFkqGq/l/gaxuE6t0yEL1FrnnE=
-		</data>
-		<key>Headers/PPAusSlipRecognizerResult.h</key>
-		<data>
-		HS59wBJdCT/3lf1fEbmumSyoD5M=
-		</data>
-		<key>Headers/PPAusSlipRecognizerSettings.h</key>
-		<data>
-		tXIiHdlmexf+DjW1fs9VqKXAgBI=
-		</data>
-		<key>Headers/PPAustralianAbnOcrParserFactory.h</key>
-		<data>
-		ujTBr6dO/0Meu8W4HFSjVXtDdUM=
-		</data>
-		<key>Headers/PPAustralianAccountOcrParserFactory.h</key>
-		<data>
-		EFUwFqXakI6TkKFD6g11t3NKPok=
-		</data>
-		<key>Headers/PPAustralianBSBOcrParserFactory.h</key>
-		<data>
-		8OSpTziuuahhaCHuU85A0zp0Ejw=
-		</data>
-		<key>Headers/PPAustralianBillerOcrParserFactory.h</key>
-		<data>
-		ajbY3PFBMB+z0P/Ctl7kf3z+MRg=
-		</data>
-		<key>Headers/PPAustralianReferenceOcrParserFactory.h</key>
-		<data>
-		QCSvbqC95Xo6SzcJ9KYcx1+CocI=
-		</data>
 		<key>Headers/PPAztecRecognizerResult.h</key>
 		<data>
 		rVXwvUdl/hIermophJuVCr359s0=
@@ -124,22 +80,6 @@
 		<data>
 		Dt8x5wG8sycbqMPONdR0VLsTzEk=
 		</data>
-		<key>Headers/PPBeSlipRecognizerResult.h</key>
-		<data>
-		IAgug4dnne5b4+HmN868tiKsjA0=
-		</data>
-		<key>Headers/PPBeSlipRecognizerSettings.h</key>
-		<data>
-		ofExUUr4xiDS2x3Re7z5aSEu9D4=
-		</data>
-		<key>Headers/PPBiHAccountOcrParserFactory.h</key>
-		<data>
-		jERHrSeiAw+IVVmlJlSdJTqKmrc=
-		</data>
-		<key>Headers/PPBiHReferenceOcrParserFactory.h</key>
-		<data>
-		Ds+AvlbvrTry4cy0dtK7pKwpu5E=
-		</data>
 		<key>Headers/PPBlinkBarcodeRecognizers.h</key>
 		<data>
 		oNZBUiLEo8igo355TaSm2kJTn4o=
@@ -172,14 +112,6 @@
 		<data>
 		5bgHEukqwusGScJUHhlXRzI7Pjk=
 		</data>
-		<key>Headers/PPChSlipRecognizerResult.h</key>
-		<data>
-		z1QZ2Xh8YDo1P6ZR6y44kmQKNfg=
-		</data>
-		<key>Headers/PPChSlipRecognizerSettings.h</key>
-		<data>
-		ScGrGsZ44w7V2gkw3z/ZmF3a4xo=
-		</data>
 		<key>Headers/PPCombinedRecognizerSettings.h</key>
 		<data>
 		dpmHzbIGFJPFLRYJ26udNP3IYyA=
@@ -191,14 +123,6 @@
 		<key>Headers/PPCoordinatorDelegate.h</key>
 		<data>
 		cCtiF3h5tzspuFPqW7E29h5b8Ns=
-		</data>
-		<key>Headers/PPCroAmountOcrParserFactory.h</key>
-		<data>
-		eNWeg1NtAS4eDa3qirlcjEHdH+c=
-		</data>
-		<key>Headers/PPCroBarcodeRecognizerResult.h</key>
-		<data>
-		svQpVkh60r5ji5fzh1evelgN1Hk=
 		</data>
 		<key>Headers/PPCroIDBackRecognizerResult.h</key>
 		<data>
@@ -224,38 +148,6 @@
 		<data>
 		00AdPO12EpMFjC89wa41lNEYSMs=
 		</data>
-		<key>Headers/PPCroPdf417RecognizerResult.h</key>
-		<data>
-		El30zxR91etnOQVqyrRPRaKT4oc=
-		</data>
-		<key>Headers/PPCroPdf417RecognizerSettings.h</key>
-		<data>
-		3vjZX+tHpqhD/MNZPZX5pS7DiHI=
-		</data>
-		<key>Headers/PPCroQrRecognizerResult.h</key>
-		<data>
-		8aD4CAQ6wvdpNFp9tJi3QbzTG6E=
-		</data>
-		<key>Headers/PPCroQrRecognizerSettings.h</key>
-		<data>
-		qrP7yxa8Eh204nsgyhPMutwIKNo=
-		</data>
-		<key>Headers/PPCroRecognizerResult.h</key>
-		<data>
-		l+TaJGKzO/BXdmlQ11VejkRTe68=
-		</data>
-		<key>Headers/PPCroReferenceOcrParserFactory.h</key>
-		<data>
-		AobyN6wd0/6m/RQ8JgcQzyiOxX4=
-		</data>
-		<key>Headers/PPCroSlipRecognizerResult.h</key>
-		<data>
-		f+ne08bLIJ6X5k/QVX6cs8gB5QE=
-		</data>
-		<key>Headers/PPCroSlipRecognizerSettings.h</key>
-		<data>
-		lHwm1hbFUfDd21jW5WUAlh03Cyo=
-		</data>
 		<key>Headers/PPCzIDBackRecognizerResult.h</key>
 		<data>
 		17OJtudDfAPlixX2jUdulPSsqbI=
@@ -280,30 +172,6 @@
 		<data>
 		36w40VMVqCohusX7a7KhIQmXGAk=
 		</data>
-		<key>Headers/PPCzQrCodeRecognizerResult.h</key>
-		<data>
-		PrMKO+pvYv++aAaPEgk/NhYpy8A=
-		</data>
-		<key>Headers/PPCzQrCodeRecognizerSettings.h</key>
-		<data>
-		gg9Txo8yt+OHZSmrYOcMcLSCJrY=
-		</data>
-		<key>Headers/PPCzSlipRecognizerResult.h</key>
-		<data>
-		3sKQMZX6xMpt1IWabgOL1Fm3CI4=
-		</data>
-		<key>Headers/PPCzSlipRecognizerSettings.h</key>
-		<data>
-		WowxkOThOkYAnX8BtpZ6I+1VZxs=
-		</data>
-		<key>Headers/PPCzechAccountOcrParserFactory.h</key>
-		<data>
-		2RriBmxKNFBTqxfF35MJFlqvD/s=
-		</data>
-		<key>Headers/PPCzechVariabilniSymbolParserFactory.h</key>
-		<data>
-		UBMehAG0pxA0NmNrerBnXai43QM=
-		</data>
 		<key>Headers/PPDateOcrParserFactory.h</key>
 		<data>
 		QKpZaKP5SlNNPpxsMV4OpqmJVjs=
@@ -311,30 +179,6 @@
 		<key>Headers/PPDateResult.h</key>
 		<data>
 		QJJNxKBILg/4kGY1N5x9dqHG36M=
-		</data>
-		<key>Headers/PPDeQrRecognizerResult.h</key>
-		<data>
-		oiBlZ648lVAd4yBK+Sm+4Bvc/YY=
-		</data>
-		<key>Headers/PPDeQrRecognizerSettings.h</key>
-		<data>
-		wfAgiNK4UYzDK5CgS7458mlawTk=
-		</data>
-		<key>Headers/PPDeRecognizerResult.h</key>
-		<data>
-		rJCjDcD/jVSHASC26rTJjtjwi9o=
-		</data>
-		<key>Headers/PPDeReferenceOcrParserFactory.h</key>
-		<data>
-		oADvFJqsYbGz+bJU47y76MuYYbM=
-		</data>
-		<key>Headers/PPDeSlipRecognizerResult.h</key>
-		<data>
-		KnfgQvhHiLHzo2aqiCUCySpLqqs=
-		</data>
-		<key>Headers/PPDeSlipRecognizerSettings.h</key>
-		<data>
-		5BlbR5+LKwqm8CiPvBMfZadOQGw=
 		</data>
 		<key>Headers/PPDecodingInfo.h</key>
 		<data>
@@ -464,22 +308,6 @@
 		<data>
 		7L/WFEHd7/WEX5zx5uuSO6a2sys=
 		</data>
-		<key>Headers/PPHuAccountOcrParserFactory.h</key>
-		<data>
-		s8N51IS95MRmWwAUOC/i6JX6OMM=
-		</data>
-		<key>Headers/PPHuPayerIDOcrParserFactory.h</key>
-		<data>
-		KEGPwdGRTjwlL486xiAm8GrNQE4=
-		</data>
-		<key>Headers/PPHuSlipRecognizerResult.h</key>
-		<data>
-		bk/mq+hNEo1ACRxGxN0i3oAO1xo=
-		</data>
-		<key>Headers/PPHuSlipRecognizerSettings.h</key>
-		<data>
-		UZm4oV+b3GZaYtOes7i3VfbbsiU=
-		</data>
 		<key>Headers/PPIDCardOverlayViewController.h</key>
 		<data>
 		T/1WcgOTec1sUY3/LadOJefOFY8=
@@ -500,30 +328,6 @@
 		<data>
 		ICwsFjaaCRgr8ob0hycy4QkVNF0=
 		</data>
-		<key>Headers/PPKosBarcodeRecognizerResult.h</key>
-		<data>
-		2o/beSvvs5ZYVa19HNAj1RvtSpY=
-		</data>
-		<key>Headers/PPKosCode128RecognizerResult.h</key>
-		<data>
-		7sBCReh7H/mLX7riczSrUI3sqHA=
-		</data>
-		<key>Headers/PPKosCode128RecognizerSettings.h</key>
-		<data>
-		NASmO9MIjfKlUrWY0dqpnxmTfI8=
-		</data>
-		<key>Headers/PPKosRecognizerResult.h</key>
-		<data>
-		wyFtnNnexbjswRu8zD3UH1nUYWo=
-		</data>
-		<key>Headers/PPKosSlipRecognizerResult.h</key>
-		<data>
-		QE6YhFtA0Wa9zjvdHLNyYRPWokU=
-		</data>
-		<key>Headers/PPKosSlipRecognizerSettings.h</key>
-		<data>
-		fHFntRfW6pdofrPDcGlhx6/SoPM=
-		</data>
 		<key>Headers/PPLicensePlatesParserFactory.h</key>
 		<data>
 		Zn6RJgB/Sq5ViGSH6SJe1N4jb1w=
@@ -539,30 +343,6 @@
 		<key>Headers/PPLivenessError.h</key>
 		<data>
 		hRzOLPuBnl8a4emqbQ5+p5oB3Q8=
-		</data>
-		<key>Headers/PPLivenessRecognizerResult.h</key>
-		<data>
-		N8kbQ6o6vHucHpOyqLbK//0s2pA=
-		</data>
-		<key>Headers/PPLivenessRecognizerSettings.h</key>
-		<data>
-		0BSznbPUn7jkGigeW/aBnBVP2gc=
-		</data>
-		<key>Headers/PPMacedonianAccountOcrParserFactory.h</key>
-		<data>
-		xFqTrBy7/O3TKrrD6jMxmw/Dysw=
-		</data>
-		<key>Headers/PPMacedonianReferenceOcrParserFactory.h</key>
-		<data>
-		YsOV86DHxLbWF6E/++4WHLXBBJs=
-		</data>
-		<key>Headers/PPMeAccountParserFactory.h</key>
-		<data>
-		ne7RPbFxGr4BYytE/k0qlA9uPLE=
-		</data>
-		<key>Headers/PPMeReferenceParserFactory.h</key>
-		<data>
-		napSXo5B+RWpGOoaBBZDdcBm57k=
 		</data>
 		<key>Headers/PPMetadata.h</key>
 		<data>
@@ -643,14 +423,6 @@
 		<key>Headers/PPNativeResult.h</key>
 		<data>
 		HSdWRhCGqykM28actPnOfF2MbzA=
-		</data>
-		<key>Headers/PPNedSlipRecognizerResult.h</key>
-		<data>
-		gMRU4X/mQGx8QPpHs8QteOQRqVc=
-		</data>
-		<key>Headers/PPNedSlipRecognizerSettings.h</key>
-		<data>
-		ZvmuS6KRzGPztJX5lbPDZsqHXkc=
 		</data>
 		<key>Headers/PPOcrEngineOptions.h</key>
 		<data>
@@ -772,22 +544,6 @@
 		<data>
 		VnkQeME0H3QeirEPB4as/BqINVE=
 		</data>
-		<key>Headers/PPSepaQrRecognizerResult.h</key>
-		<data>
-		E39YmVGQmrNgsEdjncolJ5ONUFk=
-		</data>
-		<key>Headers/PPSepaQrRecognizerSettings.h</key>
-		<data>
-		CyRfoGHm92HGLTn+ZSPiOoFCyv8=
-		</data>
-		<key>Headers/PPSerbianAccountOcrParserFactory.h</key>
-		<data>
-		0clzLFzTRVhqo1fU9BJmYD3b6RQ=
-		</data>
-		<key>Headers/PPSerbianBarcodeRecognizerResult.h</key>
-		<data>
-		l7tXxXTKpU4jRr3pnivtYQMVckI=
-		</data>
 		<key>Headers/PPSerbianIDBackRecognizerResult.h</key>
 		<data>
 		1ERleiFmu3kYqW5OpvZBBI4YorY=
@@ -811,22 +567,6 @@
 		<key>Headers/PPSerbianIDFrontRecognizerSettings.h</key>
 		<data>
 		7kBvOSqXhK2/uLjFrAPVG6pqCyo=
-		</data>
-		<key>Headers/PPSerbianPdf417RecognizerResult.h</key>
-		<data>
-		goCSzbtCKwOUBRSmsundbKoxECI=
-		</data>
-		<key>Headers/PPSerbianPdf417RecognizerSettings.h</key>
-		<data>
-		NuY/R0RCHkfWu4uJu5Qm1PX/G94=
-		</data>
-		<key>Headers/PPSerbianRecognizerResult.h</key>
-		<data>
-		JEx5D2q31+O3qmt3fiyH44Cnn4I=
-		</data>
-		<key>Headers/PPSerbianReferenceOcrParserFactory.h</key>
-		<data>
-		lHdPrPUliEl6knAYby9oudoWruY=
 		</data>
 		<key>Headers/PPSettings.h</key>
 		<data>
@@ -863,66 +603,6 @@
 		<key>Headers/PPSingaporeIDFrontRecognizerSettings.h</key>
 		<data>
 		wp3s9VK0Mg3TTLmVA0/7Mu1cTqw=
-		</data>
-		<key>Headers/PPSkBarcodeRecognizerResult.h</key>
-		<data>
-		CnfjZW7lv1u2TKnCjZsHnIy4Oek=
-		</data>
-		<key>Headers/PPSkCode128RecognizerResult.h</key>
-		<data>
-		yzjnwHfGF5ONndjR6zR458WQ5sU=
-		</data>
-		<key>Headers/PPSkCode128RecognizerSettings.h</key>
-		<data>
-		9Df4jIuYzBgg96tP1C0CgHtbXxc=
-		</data>
-		<key>Headers/PPSkDataMatrixRecognizerResult.h</key>
-		<data>
-		9JVP4xGQ1za/H7RBZH4vm6u6xM4=
-		</data>
-		<key>Headers/PPSkDataMatrixRecognizerSettings.h</key>
-		<data>
-		5bYRrelzSDSErcQDh4Q/QaBOYrM=
-		</data>
-		<key>Headers/PPSkQrCodeRecognizerResult.h</key>
-		<data>
-		BqX4rPA4SgXF1IoCfEEti1bchX8=
-		</data>
-		<key>Headers/PPSkQrCodeRecognizerSettings.h</key>
-		<data>
-		rn1xjZkzL5lvkVi76ZYItNChsFI=
-		</data>
-		<key>Headers/PPSkRecognizerResult.h</key>
-		<data>
-		FBZBisZU74I5i4kZOYjJ+iHRwJc=
-		</data>
-		<key>Headers/PPSkSlipRecognizerResult.h</key>
-		<data>
-		+t/PI4sds+M36OY6bOpzWhGUiDk=
-		</data>
-		<key>Headers/PPSkSlipRecognizerSettings.h</key>
-		<data>
-		bQanIwNVbx9mW4EsDUOrAV0FMYY=
-		</data>
-		<key>Headers/PPSloQrCodeRecognizerResult.h</key>
-		<data>
-		US1/fjwqawIw3opWGnUTieBBeb4=
-		</data>
-		<key>Headers/PPSloQrCodeRecognizerSettings.h</key>
-		<data>
-		OkHFM+eJk5VGtlVlFVVM6Q+CUwI=
-		</data>
-		<key>Headers/PPSloReferenceOcrParserFactory.h</key>
-		<data>
-		WFKgBkXBlYnvj/ebg6gtIVni4Tk=
-		</data>
-		<key>Headers/PPSloSlipRecognizerResult.h</key>
-		<data>
-		4cvGHgOj8qQE45fRpSNBYizLF6s=
-		</data>
-		<key>Headers/PPSloSlipRecognizerSettings.h</key>
-		<data>
-		gjEqv9zNaLmwdBbvb7sbDGWoK7w=
 		</data>
 		<key>Headers/PPSlovakIDBackRecognizerResult.h</key>
 		<data>
@@ -972,22 +652,6 @@
 		<data>
 		sVklU9tt9Geac/0VLhXt0lp94Rg=
 		</data>
-		<key>Headers/PPSwedenAmountOcrParserFactory.h</key>
-		<data>
-		3hggMVBdAWJb1rB/NUUN9B+Uglw=
-		</data>
-		<key>Headers/PPSwedenBankGiroNumberOcrParserFactory.h</key>
-		<data>
-		LKuUeClQSiqf7CAsSLE5RvmQskY=
-		</data>
-		<key>Headers/PPSwedenReferenceOcrParserFactory.h</key>
-		<data>
-		7bz6QL7hvksQ+v413aAeyxLIiS8=
-		</data>
-		<key>Headers/PPSwedenSlipCodeOcrParserFactory.h</key>
-		<data>
-		8jZndt/Evmt/Re4wsI9Rb1b5UG8=
-		</data>
 		<key>Headers/PPTapToFocusOverlaySubview.h</key>
 		<data>
 		VA2YEXbj7QLF6lRYAAjOq0eba4Q=
@@ -1019,26 +683,6 @@
 		<key>Headers/PPUiSettings.h</key>
 		<data>
 		fGh9ZS8qSR/6F4EqP7TjpSB2SD8=
-		</data>
-		<key>Headers/PPUkQrRecognizerResult.h</key>
-		<data>
-		JwkTKM4+8H0WaQwkT9Cbyndc5sY=
-		</data>
-		<key>Headers/PPUkQrRecognizerSettings.h</key>
-		<data>
-		p9xXDgJzC8iKAeZkAjopuRV/4XM=
-		</data>
-		<key>Headers/PPUkRecognizerResult.h</key>
-		<data>
-		H77eHTtdbJTIM7lOM45cyB1dij4=
-		</data>
-		<key>Headers/PPUkSlipRecognizerResult.h</key>
-		<data>
-		elsRDg/Nj5jnYHqoTtSARdDt6DA=
-		</data>
-		<key>Headers/PPUkSlipRecognizerSettings.h</key>
-		<data>
-		OWdXnTzHzLvQ4MYlPepBrABDz1k=
 		</data>
 		<key>Headers/PPUsdlCombinedRecognizerResult.h</key>
 		<data>
@@ -1094,7 +738,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ngD1vNz3smopEBr8Sv7FZq7ROQ4=
+		e72Oz/HBlwFG5a+pRVs4tf15o/Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1189,127 +833,6 @@
 			<key>hash2</key>
 			<data>
 			5NCJFZKMK4IYJtKOfJUCBX/51K8oV0MrW/Rl9JYaFZg=
-			</data>
-		</dict>
-		<key>Headers/PPAusQrRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UXubQ2dIfUMQNruwATFOVjFj0aU=
-			</data>
-			<key>hash2</key>
-			<data>
-			tT5KtmPuy+rrBY8OxcHSGDEiQz1THqu5OkzKiqd37gM=
-			</data>
-		</dict>
-		<key>Headers/PPAusQrRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			P02VOC0x374ehhUKcv7AisEjGBU=
-			</data>
-			<key>hash2</key>
-			<data>
-			L5dBw22ZJjjhL/weemDdR3Lf3YZ/VCye9s1rrmozCHI=
-			</data>
-		</dict>
-		<key>Headers/PPAusRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sGGS3HYRFmzmC9hueM/e/A65oK0=
-			</data>
-			<key>hash2</key>
-			<data>
-			HJxRnVBlt1TQlIxyUlD59bBCaSuzURWT11GcKhNcNZo=
-			</data>
-		</dict>
-		<key>Headers/PPAusReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7XFkqGq/l/gaxuE6t0yEL1FrnnE=
-			</data>
-			<key>hash2</key>
-			<data>
-			SwNlxx5TV1k7QtnSlZdeZKzO5JghQ1g2jzj1UFDCKzA=
-			</data>
-		</dict>
-		<key>Headers/PPAusSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HS59wBJdCT/3lf1fEbmumSyoD5M=
-			</data>
-			<key>hash2</key>
-			<data>
-			uObHQobR0yR4NbJ7Dg55m0ISYOM+0FdNF3jXQHt7RoA=
-			</data>
-		</dict>
-		<key>Headers/PPAusSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			tXIiHdlmexf+DjW1fs9VqKXAgBI=
-			</data>
-			<key>hash2</key>
-			<data>
-			2J6PexSC7W+pViRgxskQZvc7xd0YPAJd/BEZNZPPLaE=
-			</data>
-		</dict>
-		<key>Headers/PPAustralianAbnOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ujTBr6dO/0Meu8W4HFSjVXtDdUM=
-			</data>
-			<key>hash2</key>
-			<data>
-			GtMXsdTguapi2X7cMKF6UnLPKbvWlD7Mc+jaedmpZoQ=
-			</data>
-		</dict>
-		<key>Headers/PPAustralianAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EFUwFqXakI6TkKFD6g11t3NKPok=
-			</data>
-			<key>hash2</key>
-			<data>
-			tGFeCo1JSLCI1mWOtO/3N8LwSzeeR/TEfDGkX4GIlw8=
-			</data>
-		</dict>
-		<key>Headers/PPAustralianBSBOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8OSpTziuuahhaCHuU85A0zp0Ejw=
-			</data>
-			<key>hash2</key>
-			<data>
-			J3d3dwauBk3L/12Fr67UAzV8UK3bj5wnQmHGvPW107I=
-			</data>
-		</dict>
-		<key>Headers/PPAustralianBillerOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ajbY3PFBMB+z0P/Ctl7kf3z+MRg=
-			</data>
-			<key>hash2</key>
-			<data>
-			k0xn6t/BB8lOHhGFs8EqO72IkExcFinKsloXECbvVyc=
-			</data>
-		</dict>
-		<key>Headers/PPAustralianReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			QCSvbqC95Xo6SzcJ9KYcx1+CocI=
-			</data>
-			<key>hash2</key>
-			<data>
-			HYKKfHOVoND3Zq6WFlUvweiZ8kT2ipY8F/ocPovvzIY=
 			</data>
 		</dict>
 		<key>Headers/PPAztecRecognizerResult.h</key>
@@ -1433,50 +956,6 @@
 			wnkjjBegEUUGPTGlSL1la5r0PXGdQ/zMAYR20DRC9lk=
 			</data>
 		</dict>
-		<key>Headers/PPBeSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IAgug4dnne5b4+HmN868tiKsjA0=
-			</data>
-			<key>hash2</key>
-			<data>
-			M4r9VXv1XYliEpQJu72HyG6TRH5FTPLnf3WQJQa0rzE=
-			</data>
-		</dict>
-		<key>Headers/PPBeSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ofExUUr4xiDS2x3Re7z5aSEu9D4=
-			</data>
-			<key>hash2</key>
-			<data>
-			BqoeIMzWYudnyv3sTrfkwlz7RwkgKvvjKElyh4JtYqs=
-			</data>
-		</dict>
-		<key>Headers/PPBiHAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jERHrSeiAw+IVVmlJlSdJTqKmrc=
-			</data>
-			<key>hash2</key>
-			<data>
-			i/p6gT3MYoUFYnzY0SMNrU4G2mEbE6pFmFwdNRCNdiA=
-			</data>
-		</dict>
-		<key>Headers/PPBiHReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Ds+AvlbvrTry4cy0dtK7pKwpu5E=
-			</data>
-			<key>hash2</key>
-			<data>
-			xhSgR1lPTmY73AvKQbqliaqNzPyczOUg3wm2z16WAgk=
-			</data>
-		</dict>
 		<key>Headers/PPBlinkBarcodeRecognizers.h</key>
 		<dict>
 			<key>hash</key>
@@ -1565,28 +1044,6 @@
 			yfVi0+5Mm/42znaqBqfNYWVWihUSRLBsCfDXb5tEFWA=
 			</data>
 		</dict>
-		<key>Headers/PPChSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			z1QZ2Xh8YDo1P6ZR6y44kmQKNfg=
-			</data>
-			<key>hash2</key>
-			<data>
-			oBDG5Xd7y1e+r8hqO7XN3vIsnTKw13Mgx+ZA/wMi2dk=
-			</data>
-		</dict>
-		<key>Headers/PPChSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ScGrGsZ44w7V2gkw3z/ZmF3a4xo=
-			</data>
-			<key>hash2</key>
-			<data>
-			/R6R+g/huuIwzXD6KHxSICOKjmembXHE55uzPa80mk4=
-			</data>
-		</dict>
 		<key>Headers/PPCombinedRecognizerSettings.h</key>
 		<dict>
 			<key>hash</key>
@@ -1618,28 +1075,6 @@
 			<key>hash2</key>
 			<data>
 			5keJgfmmdD0vVr6THQFvroDJzSsfqdm445SdFvDdndk=
-			</data>
-		</dict>
-		<key>Headers/PPCroAmountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eNWeg1NtAS4eDa3qirlcjEHdH+c=
-			</data>
-			<key>hash2</key>
-			<data>
-			n3Cw9pzkZ1GbMnMhC70eaBtbGtHrCSgqLsOl4b3T9+4=
-			</data>
-		</dict>
-		<key>Headers/PPCroBarcodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			svQpVkh60r5ji5fzh1evelgN1Hk=
-			</data>
-			<key>hash2</key>
-			<data>
-			2HZyoEJ3goNJ8CcFfDyQOQEobp/D+BNBzz5IN/Jtvnk=
 			</data>
 		</dict>
 		<key>Headers/PPCroIDBackRecognizerResult.h</key>
@@ -1708,94 +1143,6 @@
 			XLkQpYEREsOtzdF8WAF/xe+1YeQP95iJQgwhbXgwMVE=
 			</data>
 		</dict>
-		<key>Headers/PPCroPdf417RecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			El30zxR91etnOQVqyrRPRaKT4oc=
-			</data>
-			<key>hash2</key>
-			<data>
-			tPO7S+qIQXC80ZLEIqCR+7sNAOVrlfOAG7wuj8mYSYY=
-			</data>
-		</dict>
-		<key>Headers/PPCroPdf417RecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3vjZX+tHpqhD/MNZPZX5pS7DiHI=
-			</data>
-			<key>hash2</key>
-			<data>
-			9Muw9Z6XP5MCHXuPtcy5y4hrrv61qZNARLooK8DNCrU=
-			</data>
-		</dict>
-		<key>Headers/PPCroQrRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8aD4CAQ6wvdpNFp9tJi3QbzTG6E=
-			</data>
-			<key>hash2</key>
-			<data>
-			0sHochmvaSGJj4aLbrKoAYu1jUWsw6HBmInndOQ9wt4=
-			</data>
-		</dict>
-		<key>Headers/PPCroQrRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qrP7yxa8Eh204nsgyhPMutwIKNo=
-			</data>
-			<key>hash2</key>
-			<data>
-			l4XnAp0U8Pjtl/7rE/rRTC1N4gkj8opDexcS7JmncYQ=
-			</data>
-		</dict>
-		<key>Headers/PPCroRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			l+TaJGKzO/BXdmlQ11VejkRTe68=
-			</data>
-			<key>hash2</key>
-			<data>
-			/lcCl7uNu4nwdw8YnlTtoaEHSXFMOH40IMYusDjFU44=
-			</data>
-		</dict>
-		<key>Headers/PPCroReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AobyN6wd0/6m/RQ8JgcQzyiOxX4=
-			</data>
-			<key>hash2</key>
-			<data>
-			VJ9u1Y4J5MX+ckzHZZZ+el3+wjQe+NgCHGxXq4dz6VQ=
-			</data>
-		</dict>
-		<key>Headers/PPCroSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			f+ne08bLIJ6X5k/QVX6cs8gB5QE=
-			</data>
-			<key>hash2</key>
-			<data>
-			hBak8PLID5mnXJaEiPseQWh7i/SL6xODvdOBfpsPT2Y=
-			</data>
-		</dict>
-		<key>Headers/PPCroSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lHwm1hbFUfDd21jW5WUAlh03Cyo=
-			</data>
-			<key>hash2</key>
-			<data>
-			qzPZ/4MP5EJELvv4WdbGeU5fIMQ9guYwHg1V7Hy+zuc=
-			</data>
-		</dict>
 		<key>Headers/PPCzIDBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
@@ -1862,72 +1209,6 @@
 			mt5PRnv7rP1T3X8IFeSxxXdIS83mER/6Fu+YTQPKg0g=
 			</data>
 		</dict>
-		<key>Headers/PPCzQrCodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PrMKO+pvYv++aAaPEgk/NhYpy8A=
-			</data>
-			<key>hash2</key>
-			<data>
-			mpW2fuLLU+KeseKHEX4BL7JJ23iXQc8x9snHMEJbGDA=
-			</data>
-		</dict>
-		<key>Headers/PPCzQrCodeRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gg9Txo8yt+OHZSmrYOcMcLSCJrY=
-			</data>
-			<key>hash2</key>
-			<data>
-			/P785kZve09LjqDt/nbRc9/iDBeIVF6mJeBhhKx4cLQ=
-			</data>
-		</dict>
-		<key>Headers/PPCzSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3sKQMZX6xMpt1IWabgOL1Fm3CI4=
-			</data>
-			<key>hash2</key>
-			<data>
-			6fNvTBUrrCX+w6fkT350pX1n3ebGGhwaWqDMqcArcOo=
-			</data>
-		</dict>
-		<key>Headers/PPCzSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WowxkOThOkYAnX8BtpZ6I+1VZxs=
-			</data>
-			<key>hash2</key>
-			<data>
-			6U+/9n13mFiv8eIaXu/R0tlPUNu7S92BAq829yRb/k8=
-			</data>
-		</dict>
-		<key>Headers/PPCzechAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2RriBmxKNFBTqxfF35MJFlqvD/s=
-			</data>
-			<key>hash2</key>
-			<data>
-			OMMqZ4kedN4klAZjYe90uEkwQaP0vL5tTcE/yKFahJk=
-			</data>
-		</dict>
-		<key>Headers/PPCzechVariabilniSymbolParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UBMehAG0pxA0NmNrerBnXai43QM=
-			</data>
-			<key>hash2</key>
-			<data>
-			1Dy71BOLWDomKhJnCRuc0WYukb4xO/SAaUoQTacfVEY=
-			</data>
-		</dict>
 		<key>Headers/PPDateOcrParserFactory.h</key>
 		<dict>
 			<key>hash</key>
@@ -1948,72 +1229,6 @@
 			<key>hash2</key>
 			<data>
 			+CG4wbROp6BfQbxwszhk8Q65fKE7JaemiQqhkasCMz8=
-			</data>
-		</dict>
-		<key>Headers/PPDeQrRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oiBlZ648lVAd4yBK+Sm+4Bvc/YY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Je2QtCk0F/nOwVMahGJasICi808/De41Jj/5GW38AZA=
-			</data>
-		</dict>
-		<key>Headers/PPDeQrRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wfAgiNK4UYzDK5CgS7458mlawTk=
-			</data>
-			<key>hash2</key>
-			<data>
-			4I412xpddjPul+2f81aCnlXbXsyX9kTPiRm3dL1g5lE=
-			</data>
-		</dict>
-		<key>Headers/PPDeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rJCjDcD/jVSHASC26rTJjtjwi9o=
-			</data>
-			<key>hash2</key>
-			<data>
-			HHRW95YVhKaRrIysmg3RDcGQqo1zUkRbo03rbz8NJBE=
-			</data>
-		</dict>
-		<key>Headers/PPDeReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oADvFJqsYbGz+bJU47y76MuYYbM=
-			</data>
-			<key>hash2</key>
-			<data>
-			LmFkxNod5aoS9QiLxck+rEdVihjwBIDu2FwRSghoN+o=
-			</data>
-		</dict>
-		<key>Headers/PPDeSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KnfgQvhHiLHzo2aqiCUCySpLqqs=
-			</data>
-			<key>hash2</key>
-			<data>
-			RTlolMGRxkszCUmDf890hh9FYmzRpZADMQfj3M0qa8g=
-			</data>
-		</dict>
-		<key>Headers/PPDeSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5BlbR5+LKwqm8CiPvBMfZadOQGw=
-			</data>
-			<key>hash2</key>
-			<data>
-			aBOqXVNAkSsk1WcVjq0vsxYaW+gNKGrbevIxM8duH4Q=
 			</data>
 		</dict>
 		<key>Headers/PPDecodingInfo.h</key>
@@ -2368,50 +1583,6 @@
 			G4yedVUTiDDu7V+kE7v9QgZ6sE2lzS2Es13HQtI4pzA=
 			</data>
 		</dict>
-		<key>Headers/PPHuAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			s8N51IS95MRmWwAUOC/i6JX6OMM=
-			</data>
-			<key>hash2</key>
-			<data>
-			h8u9x7X9/bFJ3UbwFD8n5pMJjsZ3Jpfw6QrwBSqQSVQ=
-			</data>
-		</dict>
-		<key>Headers/PPHuPayerIDOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KEGPwdGRTjwlL486xiAm8GrNQE4=
-			</data>
-			<key>hash2</key>
-			<data>
-			cff3o++QUqQs44iJConhgE01nW6egBXXWR3fcidx5BU=
-			</data>
-		</dict>
-		<key>Headers/PPHuSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			bk/mq+hNEo1ACRxGxN0i3oAO1xo=
-			</data>
-			<key>hash2</key>
-			<data>
-			Hhj0wb9QAm/ODdqmL09D6x0S9HDXuvfcATPuZNZn4vg=
-			</data>
-		</dict>
-		<key>Headers/PPHuSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			UZm4oV+b3GZaYtOes7i3VfbbsiU=
-			</data>
-			<key>hash2</key>
-			<data>
-			+hC2LnWuaQ7opJuEfo6rvzyzzhRYMSaggqiRzL9iIFU=
-			</data>
-		</dict>
 		<key>Headers/PPIDCardOverlayViewController.h</key>
 		<dict>
 			<key>hash</key>
@@ -2467,72 +1638,6 @@
 			eDlHHM39KWW+JdtwnTsdENN0Fii9TRd4mkHhJU6QINw=
 			</data>
 		</dict>
-		<key>Headers/PPKosBarcodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2o/beSvvs5ZYVa19HNAj1RvtSpY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Q08cVAFBpFMBFmMd+lKQaCL8J/ksjQ+3aodYsXdrPsg=
-			</data>
-		</dict>
-		<key>Headers/PPKosCode128RecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7sBCReh7H/mLX7riczSrUI3sqHA=
-			</data>
-			<key>hash2</key>
-			<data>
-			lECwHomzxHOZQ6nyJuACu3oSGOZ84fRf++llNH/Idi0=
-			</data>
-		</dict>
-		<key>Headers/PPKosCode128RecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NASmO9MIjfKlUrWY0dqpnxmTfI8=
-			</data>
-			<key>hash2</key>
-			<data>
-			aQTokWuhQjEJnf5dnF8iioaBFb75v06qjeKciwEm2Jc=
-			</data>
-		</dict>
-		<key>Headers/PPKosRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wyFtnNnexbjswRu8zD3UH1nUYWo=
-			</data>
-			<key>hash2</key>
-			<data>
-			7SFlu9WLtQ1pNLC43cNdpJesRjObIeN9abQQGeMUvlA=
-			</data>
-		</dict>
-		<key>Headers/PPKosSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			QE6YhFtA0Wa9zjvdHLNyYRPWokU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Hu4Py8RUJLMDckWlPjnWf7obc2ZWvEfSNe14YPwU6tQ=
-			</data>
-		</dict>
-		<key>Headers/PPKosSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fHFntRfW6pdofrPDcGlhx6/SoPM=
-			</data>
-			<key>hash2</key>
-			<data>
-			Z4h3uacg3deRMo3b7nf14v/26ShP1v94grN6G6+BK+0=
-			</data>
-		</dict>
 		<key>Headers/PPLicensePlatesParserFactory.h</key>
 		<dict>
 			<key>hash</key>
@@ -2575,72 +1680,6 @@
 			<key>hash2</key>
 			<data>
 			1rwYxQtM0ltOT+0n6HF2Z9VC2FP3CFFFsImgwipG8Qw=
-			</data>
-		</dict>
-		<key>Headers/PPLivenessRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			N8kbQ6o6vHucHpOyqLbK//0s2pA=
-			</data>
-			<key>hash2</key>
-			<data>
-			gl2Kx5ghFzavDscKD3cJm1RW1s/JjekGR0B01rG6FD0=
-			</data>
-		</dict>
-		<key>Headers/PPLivenessRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0BSznbPUn7jkGigeW/aBnBVP2gc=
-			</data>
-			<key>hash2</key>
-			<data>
-			yKVEQPgN9yNd3ENT6R5dKWEuqu77WoJ6EBqY4gMZs3A=
-			</data>
-		</dict>
-		<key>Headers/PPMacedonianAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xFqTrBy7/O3TKrrD6jMxmw/Dysw=
-			</data>
-			<key>hash2</key>
-			<data>
-			CTfGaNs3UFBfnVpjmZPtFav3ztfDcjCLX1sfoDCNZ/0=
-			</data>
-		</dict>
-		<key>Headers/PPMacedonianReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			YsOV86DHxLbWF6E/++4WHLXBBJs=
-			</data>
-			<key>hash2</key>
-			<data>
-			ZKnjOMAlsVhGV0GmTOxJ7TOTEaGlVLBCySFm4kvkQL8=
-			</data>
-		</dict>
-		<key>Headers/PPMeAccountParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ne7RPbFxGr4BYytE/k0qlA9uPLE=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ug+iCMBPxM6NvdFOD6FwuEo1YuB3TWzOBi74dkpWNaE=
-			</data>
-		</dict>
-		<key>Headers/PPMeReferenceParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			napSXo5B+RWpGOoaBBZDdcBm57k=
-			</data>
-			<key>hash2</key>
-			<data>
-			6VC5Ae60J9ZXNNjW4BM0Euoxp3q02eMZ3mMPop3aqBY=
 			</data>
 		</dict>
 		<key>Headers/PPMetadata.h</key>
@@ -2861,28 +1900,6 @@
 			<key>hash2</key>
 			<data>
 			a8nDvOfJi8QY2y5mD+Or3fhiP7AxiT2hsFVpqkhUwGk=
-			</data>
-		</dict>
-		<key>Headers/PPNedSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gMRU4X/mQGx8QPpHs8QteOQRqVc=
-			</data>
-			<key>hash2</key>
-			<data>
-			dG6L/lca/fzIfdgigJ6zwk/+j2o8mgDC24qxh7P7lp0=
-			</data>
-		</dict>
-		<key>Headers/PPNedSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZvmuS6KRzGPztJX5lbPDZsqHXkc=
-			</data>
-			<key>hash2</key>
-			<data>
-			BVCJ3bfFThr8VqDvc+srr3oWwX8/1e9Qhs5NaN3ZW9Y=
 			</data>
 		</dict>
 		<key>Headers/PPOcrEngineOptions.h</key>
@@ -3215,50 +2232,6 @@
 			bOBcYsGaqDrgDsLa+ZbrWtcvm9nsIKQvlNCHkfiWKEs=
 			</data>
 		</dict>
-		<key>Headers/PPSepaQrRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			E39YmVGQmrNgsEdjncolJ5ONUFk=
-			</data>
-			<key>hash2</key>
-			<data>
-			SzEcv1462TXmKWel74yJc44Uwzwrzgu/FxHh0/VdrjU=
-			</data>
-		</dict>
-		<key>Headers/PPSepaQrRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CyRfoGHm92HGLTn+ZSPiOoFCyv8=
-			</data>
-			<key>hash2</key>
-			<data>
-			x7HQ/OUrq7YlrxWH1xUJvxdJhu5/pUc0MtMpbkfgKPA=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianAccountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0clzLFzTRVhqo1fU9BJmYD3b6RQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			Qc5qAKtvOs7dthZBqPxhKEEKw9RmdnunuIJC9mqXTAg=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianBarcodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			l7tXxXTKpU4jRr3pnivtYQMVckI=
-			</data>
-			<key>hash2</key>
-			<data>
-			6X72TNb9DoPI4JhtNrcuzrtA13qjNx1gUo6cOrMKSf8=
-			</data>
-		</dict>
 		<key>Headers/PPSerbianIDBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
@@ -3323,50 +2296,6 @@
 			<key>hash2</key>
 			<data>
 			b5hPcKWpjV9hG1wTx/2ENmzYOm6BOAe/dX12M+Mu/zU=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianPdf417RecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			goCSzbtCKwOUBRSmsundbKoxECI=
-			</data>
-			<key>hash2</key>
-			<data>
-			x7bkLFIhYhYOtnzBevhgb31pysNKZpkpm2+97jB+mNo=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianPdf417RecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NuY/R0RCHkfWu4uJu5Qm1PX/G94=
-			</data>
-			<key>hash2</key>
-			<data>
-			kN/cpKR3tMEFYMlXlSAAynV/dk97p0j0YW3T5+Lbkic=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JEx5D2q31+O3qmt3fiyH44Cnn4I=
-			</data>
-			<key>hash2</key>
-			<data>
-			rtbR4Gzk4yTgbTvftcZuXNF3brUWhW4esiqAcCHmB9E=
-			</data>
-		</dict>
-		<key>Headers/PPSerbianReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lHdPrPUliEl6knAYby9oudoWruY=
-			</data>
-			<key>hash2</key>
-			<data>
-			ckWs7mLX3CZdiD0JguSlcqbofsceIpoZVawanMUNZAA=
 			</data>
 		</dict>
 		<key>Headers/PPSettings.h</key>
@@ -3466,171 +2395,6 @@
 			<key>hash2</key>
 			<data>
 			MafgEhuS3ik+k/kdXZHmRyaLW97NMxjwgdHxfYdcLMo=
-			</data>
-		</dict>
-		<key>Headers/PPSkBarcodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CnfjZW7lv1u2TKnCjZsHnIy4Oek=
-			</data>
-			<key>hash2</key>
-			<data>
-			yEj76rR8zMTOVZjEGt4ThHjd+s2KrULclX5b6Xf5Tus=
-			</data>
-		</dict>
-		<key>Headers/PPSkCode128RecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yzjnwHfGF5ONndjR6zR458WQ5sU=
-			</data>
-			<key>hash2</key>
-			<data>
-			vsX6cwgVAtPtOdokt3guRmmuZkkdIzoheEsSfY5nHRk=
-			</data>
-		</dict>
-		<key>Headers/PPSkCode128RecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9Df4jIuYzBgg96tP1C0CgHtbXxc=
-			</data>
-			<key>hash2</key>
-			<data>
-			dDLbpwn73T0+xx2TmsQQm/egNHDfARCxwHRj8LQStrk=
-			</data>
-		</dict>
-		<key>Headers/PPSkDataMatrixRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9JVP4xGQ1za/H7RBZH4vm6u6xM4=
-			</data>
-			<key>hash2</key>
-			<data>
-			aO86kb7zMp9GyUdUKa3x6PKqE5yuHQPlzTEhsun6qMI=
-			</data>
-		</dict>
-		<key>Headers/PPSkDataMatrixRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5bYRrelzSDSErcQDh4Q/QaBOYrM=
-			</data>
-			<key>hash2</key>
-			<data>
-			gifPLjsOUXxRV8nx1o3ABuzbUEnhlemQ3aD3HgWaojo=
-			</data>
-		</dict>
-		<key>Headers/PPSkQrCodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BqX4rPA4SgXF1IoCfEEti1bchX8=
-			</data>
-			<key>hash2</key>
-			<data>
-			6qF4aup2Itp86n1pyCaLwthVJgsTANQoyiqf0jiUPXQ=
-			</data>
-		</dict>
-		<key>Headers/PPSkQrCodeRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			rn1xjZkzL5lvkVi76ZYItNChsFI=
-			</data>
-			<key>hash2</key>
-			<data>
-			+9318pJsUe2Ape+0e5ep1znWiHoEjrnMgWDf1xQZ3a0=
-			</data>
-		</dict>
-		<key>Headers/PPSkRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FBZBisZU74I5i4kZOYjJ+iHRwJc=
-			</data>
-			<key>hash2</key>
-			<data>
-			VL2UTtCr9in5RlwJN3XAJMXWK/E+RxrPCYmQETRs8wo=
-			</data>
-		</dict>
-		<key>Headers/PPSkSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+t/PI4sds+M36OY6bOpzWhGUiDk=
-			</data>
-			<key>hash2</key>
-			<data>
-			eBeeClv7lpn0gy9HHf8LiiEa2zlMWUN2zCItY9uwsWg=
-			</data>
-		</dict>
-		<key>Headers/PPSkSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			bQanIwNVbx9mW4EsDUOrAV0FMYY=
-			</data>
-			<key>hash2</key>
-			<data>
-			UAGhIWV4lHUnIhTnWd19ihxJaXgcjjlJGKByNcpmyK0=
-			</data>
-		</dict>
-		<key>Headers/PPSloQrCodeRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			US1/fjwqawIw3opWGnUTieBBeb4=
-			</data>
-			<key>hash2</key>
-			<data>
-			GFXGjHUtZ5hYUKppU8DzBaJAdtt7y5isZujDywGiX04=
-			</data>
-		</dict>
-		<key>Headers/PPSloQrCodeRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OkHFM+eJk5VGtlVlFVVM6Q+CUwI=
-			</data>
-			<key>hash2</key>
-			<data>
-			6KSUi70dS+6QVRwcqQQ07UFz7jYKdzp3gXw4fv5YS7E=
-			</data>
-		</dict>
-		<key>Headers/PPSloReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WFKgBkXBlYnvj/ebg6gtIVni4Tk=
-			</data>
-			<key>hash2</key>
-			<data>
-			cB64qypbYSduNi+zzYFh2xwZmuVAUM9RO3U5CEq25bg=
-			</data>
-		</dict>
-		<key>Headers/PPSloSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4cvGHgOj8qQE45fRpSNBYizLF6s=
-			</data>
-			<key>hash2</key>
-			<data>
-			ce91vLY12tsV+YFuYtsYaxdpe5Zcf1Dl716qIYl35TY=
-			</data>
-		</dict>
-		<key>Headers/PPSloSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gjEqv9zNaLmwdBbvb7sbDGWoK7w=
-			</data>
-			<key>hash2</key>
-			<data>
-			bBpcHDsIGNu9fKPRyIrLtO6zcpKKqP5/5khmXU49iOk=
 			</data>
 		</dict>
 		<key>Headers/PPSlovakIDBackRecognizerResult.h</key>
@@ -3765,50 +2529,6 @@
 			6vKZ5TbpuGO9DlSQJOWvnQwrv2nuycL2g0EtUsSYprk=
 			</data>
 		</dict>
-		<key>Headers/PPSwedenAmountOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3hggMVBdAWJb1rB/NUUN9B+Uglw=
-			</data>
-			<key>hash2</key>
-			<data>
-			5ihd0x+FNG3dIWu8/VcZaL0yiOLu5uYo+/u6AGYnLUc=
-			</data>
-		</dict>
-		<key>Headers/PPSwedenBankGiroNumberOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LKuUeClQSiqf7CAsSLE5RvmQskY=
-			</data>
-			<key>hash2</key>
-			<data>
-			vhrl+SwHKXY0Gc2+RUqQK34zhT+6tMiRyemq+dVK2pI=
-			</data>
-		</dict>
-		<key>Headers/PPSwedenReferenceOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7bz6QL7hvksQ+v413aAeyxLIiS8=
-			</data>
-			<key>hash2</key>
-			<data>
-			Gx4oyndruW/E4iyyGXwKdc2GqWnlEb2gcslQriKr3Us=
-			</data>
-		</dict>
-		<key>Headers/PPSwedenSlipCodeOcrParserFactory.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8jZndt/Evmt/Re4wsI9Rb1b5UG8=
-			</data>
-			<key>hash2</key>
-			<data>
-			NFKg7N4j866PScaCvwuHeEj83Op7irq1+pqZVttPj2U=
-			</data>
-		</dict>
 		<key>Headers/PPTapToFocusOverlaySubview.h</key>
 		<dict>
 			<key>hash</key>
@@ -3895,61 +2615,6 @@
 			<key>hash2</key>
 			<data>
 			GonfZqhBrQSV68P9pXdSV5yMeLpnG9HR3oh72zWK0bQ=
-			</data>
-		</dict>
-		<key>Headers/PPUkQrRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JwkTKM4+8H0WaQwkT9Cbyndc5sY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Gc8kXwzKs4vQHmddZgyFvhNHwInVwSI1uTK1Ds+y9OQ=
-			</data>
-		</dict>
-		<key>Headers/PPUkQrRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			p9xXDgJzC8iKAeZkAjopuRV/4XM=
-			</data>
-			<key>hash2</key>
-			<data>
-			95UuyI06coU6xPfgQiN3Agp1AFzn/WxDvU2K3DdBYN4=
-			</data>
-		</dict>
-		<key>Headers/PPUkRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			H77eHTtdbJTIM7lOM45cyB1dij4=
-			</data>
-			<key>hash2</key>
-			<data>
-			a2TBwUaeVBjCY2sokWlNcTvyuPdtbpg5vBKnmPukEAk=
-			</data>
-		</dict>
-		<key>Headers/PPUkSlipRecognizerResult.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			elsRDg/Nj5jnYHqoTtSARdDt6DA=
-			</data>
-			<key>hash2</key>
-			<data>
-			D6ADnuBNtPYO1ZE5D4569xS15KOr1ZqH26MnXXF/+Nw=
-			</data>
-		</dict>
-		<key>Headers/PPUkSlipRecognizerSettings.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			OWdXnTzHzLvQ4MYlPepBrABDz1k=
-			</data>
-			<key>hash2</key>
-			<data>
-			DztG1O70lX57KWYbXx5FPOHA/bt5TuaFC2bxNI72278=
 			</data>
 		</dict>
 		<key>Headers/PPUsdlCombinedRecognizerResult.h</key>
