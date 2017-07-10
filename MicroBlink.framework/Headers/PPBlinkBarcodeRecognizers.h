@@ -29,6 +29,10 @@
 #import "PPSimNumberRecognizerSettings.h"
 #import "PPSimNumberRecognizerResult.h"
 
+// Barcode
+#import "PPBarcodeRecognizerSettings.h"
+#import "PPBarcodeRecognizerResult.h"
+
 // Basic functionality
 #import "PPRecognizerResult+Test.h"
 

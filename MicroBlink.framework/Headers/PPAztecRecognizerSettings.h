@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  * MicroBlink's image processing and camera management. 
  * It's superior in performance to ZXingRecognizer and others.
  */
-PP_CLASS_AVAILABLE_IOS(6.0)
+PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerSettings instead")
 @interface PPAztecRecognizerSettings : PPRecognizerSettings
 
 PP_INIT_UNAVAILABLE;

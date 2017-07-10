@@ -47,7 +47,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Nationality - missing if parent names exists
  */
-@property (nonatomic, strong, readonly, nullable) NSString *nationality;
+@property (nonatomic, strong, readonly, nullable) NSString *nonMRZNationality;
 
 /**
  * Place of birth
@@ -67,7 +67,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 /**
  * Sex
  */
-@property (nonatomic, strong, readonly, nullable) NSString *sex;
+@property (nonatomic, strong, readonly, nullable) NSString *nonMRZSex;
 
 /**
  * Valid from

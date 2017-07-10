@@ -1,8 +1,8 @@
 //
-//  PPGermanIDCombinedRecognizerSettings.h
-//  PhotoPayDev
+//  PPSlovenianIDCombinedRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Jura Skrlec on 22/05/2017.
+//  Created by Jura Skrlec on 20/06/2017.
 //
 //
 
@@ -11,12 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring German ID Combined Recognizer.
+ * Settings class for configuring Slovenian ID Combined Recognizer.
  *
  * German Combined ID recognizer is used for scanning both front and back side of german IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
+@interface PPSlovenianIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -94,4 +94,3 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @end
 
 NS_ASSUME_NONNULL_END
-

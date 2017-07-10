@@ -1,3 +1,46 @@
+## 2.10.0
+
+- Updates and additions:
+    - Added Barcode Recognizer `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
+    - Deprecated `PPAztecRecognizerResult` and `PPAztecRecognizerSettings`. Use Barcode Recognizer
+    - Deprecated `PPBarDecoderRecognizerResult` and `PPBarDecoderRecognizerSettings`. Use Barcode Recognizer
+    - Deprecated `PPZXingRecognizerResult` and `PPZXingRecognizerSettings`. Use Barcode Recognizer
+    - Added creation of customized build of framework. If your final app size is too large, you can create a customised build of MicroBlink.framework and MicroBlink.bundle which will contain only features and resources that you really need. You can see detailed explanation at [Creating customized build of BlinkID SDK](https://github.com/BlinkID/blinkid-ios/wiki/Creating-customized-build)
+    - Added US Driver's license Combined Recognizer `PPUsdlCombinedRecognizerResult` and `PPUsdlCombinedRecognizerSettings` 
+    - Added Austrian ID Combined Recognizer `PPAusIDCombinedRecognizerResult` and `PPAusIDCombinedRecognizerSettings`
+    - Added Czech ID Combined Recognizer `PPCzIDCombinedRecognizerResult` and `PPCzIDCombinedRecognizerSettings`
+    - Added Serbian ID Combined Recognizer `PPSerbianIDCombinedRecognizerResult` and `PPSerbianIDCombinedRecognizerSettings`
+    - Added Singapore ID Combined Recognizer `PPSingaporeIDCombinedRecognizerResult` and `PPSingaporeIDCombinedRecognizerSettings`
+    - Added Slovakian ID Combined Recognizer `PPSlovakIDCombinedRecognizerResult` and `PPSlovakIDCombinedRecognizerSettings`
+    - Added Slovenian ID Combined Recognizer `PPSlovenianIDCombinedRecognizerResult` and `PPSlovenianIDCombinedRecognizerSettings`
+    - Added MRTD Combined Recognizer `PPMrtdCombinedRecognizerResult` and `PPMrtdCombinedRecognizerSettings`
+    - Added VIN Recognizer `PPVinRecognizerResult` and `PPVinRecognizerSettings`
+    - Added `nonMRZNationality` and `nonMRZSex` properties to Romanian ID Recognizer for getting sex and nationality outside MRZ
+    - Added support for long addresses and employer names for iKad
+    - `extractAddress` property in `PPSlovakIDBackRecognizerSettings` is now removed since previously wasn't used
+    - Added `extractDocumentNumber` property in `PPSlovakIDFrontRecognizerSettings` for defining if issuing document number should be extracted from Slovakian ID 
+    - Added to Slovakian ID Combined Settings options properties:
+        - `extractSex`
+        - `extractNationality`
+        - `extractDateOfBirth`
+        - `extractDateOfExpiry`
+        - `extractDateOfIssue`
+        - `extractIssuedBy`
+        - `extractDocumentNumber`
+        - `extractSurnameAtBirth`
+        - `extractPlaceOfBirth`
+        - `extractSpecialRemarks`
+
+- Bugfixes:
+    - Fixed reading positions of ID elements on Slovakian ID card
+    - Fixed reading positions of ID elements on Singapore ID card
+
+- Improvements in ID scanning performance:
+    - Always read personal number field on front side of Slovakian ID card
+    - Improved reading precision of address, place of birth, last name and issuing authority on Slovakian ID card
+    - Improved reading of name and blood type on Singapore ID card
+    - Improved reading of pdf417 barcodes having width:height bar aspect ratio less than 2:1
+
 ## 2.9.0
 
 - Updates and additions:

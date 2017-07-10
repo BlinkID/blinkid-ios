@@ -1,9 +1,9 @@
 //
-//  PPZXingRecognizerResult.h
-//  Pdf417Framework
+//  PPBarcodeRecognizerResult.h
+//  MicroBlinkDev
 //
-//  Created by Jura on 11/07/15.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 26/06/2017.
+//
 //
 
 #import "PPRecognizerResult.h"
@@ -12,44 +12,45 @@
 /**
  * Type of the barcode which BarDecoderRecognizer returnes
  */
-typedef PP_DEPRECATED_IOS(1_0, 5_9_3) NS_ENUM(NSUInteger, PPZXingBarcodeType) {
-    /** Code 39 */
-    PPZXingBarcodeTypeAztec,
-    /** Code 128 */
-    PPZXingBarcodeTypeCode128,
-    /** Code 39 */
-    PPZXingBarcodeTypeCode39,
-    /** Data Matrix */
-    PPZXingBarcodeTypeDataMatrix,
-    /** EAN 13 */
-    PPZXingBarcodeTypeEAN13,
-    /** EAN 8 */
-    PPZXingBarcodeTypeEAN8,
-    /** ITF */
-    PPZXingBarcodeTypeITF,
+typedef NS_ENUM(NSUInteger, PPBarcodeType) {
+    PPBarcodeNone = 0,
     /** QR code */
-    PPZXingBarcodeTypeQR,
-    /** UPCA */
-    PPZXingBarcodeTypeUPCA,
+    PPBarcodeTypeQR,
+    /** Data Matrix */
+    PPBarcodeTypeDataMatrix,
     /** UPCE */
-    PPZXingBarcodeTypeUPCE,
-
+    PPBarcodeTypeUPCE,
+    /** UPCA */
+    PPBarcodeTypeUPCA,
+    /** EAN 8 */
+    PPBarcodeTypeEAN8,
+    /** EAN 13 */
+    PPBarcodeTypeEAN13,
+    /** Code 128 */
+    PPBarcodeTypeCode128,
+    /** Code 39 */
+    PPBarcodeTypeCode39,
+    /** ITF */
+    PPBarcodeTypeITF,
+    /** Code 39 */
+    PPBarcodeTypeAztec
 };
 
+
 /**
- * Result of scanning with ZXing Recognizer
+ * Result of scanning with Barcode Recognizer
  *
  * Contains raw Barcode detailed data, barcode type, and methods for getting string representation of results.
  */
-PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerResult instead")
-@interface PPZXingRecognizerResult : PPRecognizerResult
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBarcodeRecognizerResult : PPRecognizerResult
 
 /**
  * Type of the barcode scanned
  *
  *  @return Type of the barcode
  */
-- (PPZXingBarcodeType)barcodeType PP_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeType instead");
+- (PPBarcodeType)barcodeType;
 
 /**
  * Byte array with result of the scan
@@ -84,12 +85,12 @@ PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerResult instead")
 - (PPBarcodeDetailedData *_Nullable)rawData;
 
 /**
- * Method which gives string representation for a given PPZXingBarcodeType enum value.
+ * Method which gives string representation for a given PPBarcodeType enum value.
  *
- *  @param type PPZXingBarcodeType enum value
+ *  @param type PPBarcodeType enum value
  *
- *  @return String representation of a given PPZXingBarcodeType enum value.
+ *  @return String representation of a given PPBarcodeType enum value.
  */
-+ (NSString *_Nonnull)toTypeName:(PPZXingBarcodeType)type PP_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeType instead");
++ (NSString *_Nonnull)toTypeName:(PPBarcodeType)type;
 
 @end

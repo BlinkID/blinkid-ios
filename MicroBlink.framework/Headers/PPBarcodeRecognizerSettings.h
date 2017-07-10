@@ -1,9 +1,9 @@
 //
-//  PPZXingRecognizerSettings.h
-//  Pdf417Framework
+//  PPBarcodeRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Jura on 10/07/15.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 26/06/2017.
+//
 //
 
 #import "PPRecognizerSettings.h"
@@ -11,13 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring ZXing Recognizer
+ * Settings class for configuring Barcode Recognizer
  *
- * ZXIngRecognizer recognizer is used for scanning most of 1D barcode formats, and 2D format
+ * VarcodeRecognizer recognizer is used for scanning most of 1D barcode formats, and 2D format
  * such as Aztec, DataMatrix and QR code
  */
-PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerSettings")
-@interface PPZXingRecognizerSettings : PPRecognizerSettings
+PP_CLASS_AVAILABLE_IOS(6.0)
+@interface PPBarcodeRecognizerSettings : PPRecognizerSettings
 
 /**
  * Set this to YES to scan Aztec 2D barcodes
@@ -101,8 +101,17 @@ PP_CLASS_DEPRECATED_IOS(1_0, 5_9_3, "Use PPBarcodeRecognizerSettings")
 
 /**
  * Set this to YES to allow slower, but better image processing.
+ *
+ * Defailt: YES
+ *
  */
 @property (nonatomic, assign) BOOL useSlowerThoroughScan;
+
+
+/**
+ * Set manatee license key and unlock the aztec scanning feature.
+ */
+@property (nonatomic) NSString *manateeKey;
 
 @end
 

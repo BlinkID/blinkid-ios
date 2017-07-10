@@ -1,3 +1,10 @@
+## 2.10.0
+
+- `PPAztecRecognizerResult` and `PPAztecRecognizerSettings` are now deprecated. Use `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
+- `PPBarDecoderRecognizerResult` and `PPBarDecoderRecognizerSettings` are now deprecated. Use `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
+- `PPZXingRecognizerResult` and `PPZXingRecognizerSettings` are now deprecated. Use `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
+- `extractAddress` property in `PPSlovakIDBackRecognizerSettings` is now removed since previously wasn't used
+
 ## 2.9.0
 
 - Since Microblink.framework is a dynamic framework, you also need to **add it to embedded binaries section in General settings of your target.**
