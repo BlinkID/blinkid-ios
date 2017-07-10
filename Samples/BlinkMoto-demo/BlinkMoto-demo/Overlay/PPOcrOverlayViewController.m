@@ -8,7 +8,6 @@
 
 #import "PPOcrOverlayViewController.h"
 #import "PPOcrOverlayViewController+Private.h"
-#import "PPOcrOverlaySubview.h"
 
 @interface PPOcrOverlayViewController ()<PPOcrFinderViewDelegate>
 
