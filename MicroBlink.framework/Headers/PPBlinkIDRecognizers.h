@@ -14,6 +14,8 @@
 #import "PPAusIDBackRecognizerResult.h"
 #import "PPAusIDFrontRecognizerSettings.h"
 #import "PPAusIDFrontRecognizerResult.h"
+#import "PPAusPassportRecognizerSettings.h"
+#import "PPAusPassportRecognizerResult.h"
 #import "PPAusIDCombinedRecognizerSettings.h"
 #import "PPAusIDCombinedRecognizerResult.h"
 
@@ -107,9 +109,9 @@
 #import "PPSlovenianIDCombinedRecognizerSettings.h"
 #import "PPSlovenianIDCombinedRecognizerResult.h"
 
-// Aztec barcode recognition
-#import "PPAztecRecognizerSettings.h"
-#import "PPAztecRecognizerResult.h"
+// Switzerland
+#import "PPSwissPassportRecognizerSettings.h"
+#import "PPSwissPassportRecognizerResult.h"
 
 // Use all recognizers from BlinkInput
 #import "PPBlinkInputRecognizers.h"

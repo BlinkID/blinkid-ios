@@ -59,4 +59,9 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, readonly, nullable) NSDate *documentDateOfExpiry;
 
+/**
+ * Check if date of expiry is permanent on the Croatian ID.
+ */
+@property (nonatomic, readonly) BOOL isDocumentDateOfExpiryPermanent;
+
 @end

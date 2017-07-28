@@ -36,6 +36,14 @@
 		<data>
 		Xb0StcYWpiPm8rwYc8jS8uZZvUI=
 		</data>
+		<key>Headers/PPAusPassportRecognizerResult.h</key>
+		<data>
+		cM6XDSKmQLcfO657oS6vCzYpYgI=
+		</data>
+		<key>Headers/PPAusPassportRecognizerSettings.h</key>
+		<data>
+		w9WtebK5qf+88tHsa3uPfoAVOzU=
+		</data>
 		<key>Headers/PPAztecRecognizerResult.h</key>
 		<data>
 		rVXwvUdl/hIermophJuVCr359s0=
@@ -86,7 +94,7 @@
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
-		6uEvQ/RS/3m0vp287o8ctUpvm+s=
+		RvQP2cPgfrTq4wBOpToF8CBAcR0=
 		</data>
 		<key>Headers/PPBlinkInputRecognizers.h</key>
 		<data>
@@ -126,7 +134,7 @@
 		</data>
 		<key>Headers/PPCroIDBackRecognizerResult.h</key>
 		<data>
-		2RYzoCFFq7DioFjziwcBR+I7wyE=
+		YNpi283X6gBgnca2MytExckkx6c=
 		</data>
 		<key>Headers/PPCroIDBackRecognizerSettings.h</key>
 		<data>
@@ -134,7 +142,7 @@
 		</data>
 		<key>Headers/PPCroIDCombinedRecognizerResult.h</key>
 		<data>
-		agARgSHwh1Vx0hBHGaQl/drnLXM=
+		ssJHnSV1d8oH4ufuV2/wEzOxFxA=
 		</data>
 		<key>Headers/PPCroIDCombinedRecognizerSettings.h</key>
 		<data>
@@ -142,7 +150,7 @@
 		</data>
 		<key>Headers/PPCroIDFrontRecognizerResult.h</key>
 		<data>
-		PvkuflThlMi1Rw9xguucYsROhD8=
+		2DtVRDazvLQP3/rdkFQ1U6tL5rI=
 		</data>
 		<key>Headers/PPCroIDFrontRecognizerSettings.h</key>
 		<data>
@@ -652,6 +660,14 @@
 		<data>
 		sVklU9tt9Geac/0VLhXt0lp94Rg=
 		</data>
+		<key>Headers/PPSwissPassportRecognizerResult.h</key>
+		<data>
+		FV8/92Rp5ZHJaqla0dVp/KyFznA=
+		</data>
+		<key>Headers/PPSwissPassportRecognizerSettings.h</key>
+		<data>
+		GkoAdqzgtCGt2K52WWnHetZxyHU=
+		</data>
 		<key>Headers/PPTapToFocusOverlaySubview.h</key>
 		<data>
 		VA2YEXbj7QLF6lRYAAjOq0eba4Q=
@@ -662,7 +678,7 @@
 		</data>
 		<key>Headers/PPTemplatingRecognizerResult.h</key>
 		<data>
-		qNjOUUnB/plGLh7hBhGp+02zhC0=
+		E0Y4kpx7EG2R65XK5XfJrDK7U+E=
 		</data>
 		<key>Headers/PPTemplatingRecognizerSettings.h</key>
 		<data>
@@ -690,7 +706,7 @@
 		</data>
 		<key>Headers/PPUsdlCombinedRecognizerSettings.h</key>
 		<data>
-		m+HQuZs9ZAmx1gy4tYDiscSz4v4=
+		qg145BizGr8Te/7iIq1dJoPJ3D8=
 		</data>
 		<key>Headers/PPUsdlRecognizerResult.h</key>
 		<data>
@@ -738,7 +754,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		e72Oz/HBlwFG5a+pRVs4tf15o/Q=
+		f9Aq7AGZQdDNt5GZnljIrOhp80w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -833,6 +849,28 @@
 			<key>hash2</key>
 			<data>
 			5NCJFZKMK4IYJtKOfJUCBX/51K8oV0MrW/Rl9JYaFZg=
+			</data>
+		</dict>
+		<key>Headers/PPAusPassportRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cM6XDSKmQLcfO657oS6vCzYpYgI=
+			</data>
+			<key>hash2</key>
+			<data>
+			fqb9+sQiOufUkuIPS7kB5rzILL2Rmvjn08jJJCaNASY=
+			</data>
+		</dict>
+		<key>Headers/PPAusPassportRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w9WtebK5qf+88tHsa3uPfoAVOzU=
+			</data>
+			<key>hash2</key>
+			<data>
+			+c0BodY5VBMr97oblofBn2fcstJIiknF3tk6y8sPQpM=
 			</data>
 		</dict>
 		<key>Headers/PPAztecRecognizerResult.h</key>
@@ -971,11 +1009,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6uEvQ/RS/3m0vp287o8ctUpvm+s=
+			RvQP2cPgfrTq4wBOpToF8CBAcR0=
 			</data>
 			<key>hash2</key>
 			<data>
-			CMrBer8fBcVnOHlhveyjZgSaE/k0to8SfJT96OWoKag=
+			zFwvWR3tycts+iFw9d8h4SMCEO/E3sCoukPqes3PVqM=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkInputRecognizers.h</key>
@@ -1081,11 +1119,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2RYzoCFFq7DioFjziwcBR+I7wyE=
+			YNpi283X6gBgnca2MytExckkx6c=
 			</data>
 			<key>hash2</key>
 			<data>
-			wQQnmF0c3oqeEcaKQoLO1u52wZGC5K/uYsWQpsafd2Y=
+			VFFZvcRiyloMOyMeC4RJiGajl0GW5q5COfm5sYv+TvE=
 			</data>
 		</dict>
 		<key>Headers/PPCroIDBackRecognizerSettings.h</key>
@@ -1103,11 +1141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			agARgSHwh1Vx0hBHGaQl/drnLXM=
+			ssJHnSV1d8oH4ufuV2/wEzOxFxA=
 			</data>
 			<key>hash2</key>
 			<data>
-			5Z7C+gtqHLVZw2U+iBuwsRjAK2eZTPlIxZc5Cn82SBo=
+			eN8IDeH/+Xh4j5yyr7lHHQT17BtJqtg3U28hw1RLECE=
 			</data>
 		</dict>
 		<key>Headers/PPCroIDCombinedRecognizerSettings.h</key>
@@ -1125,11 +1163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PvkuflThlMi1Rw9xguucYsROhD8=
+			2DtVRDazvLQP3/rdkFQ1U6tL5rI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nhtfxsy4LJsZdErRmGhruZIEvrDWietmRHljUmy4G6k=
+			3xKXwjsglckRe2nUX5EwtLcOlqcs+hR/E1Qk0V3bcdc=
 			</data>
 		</dict>
 		<key>Headers/PPCroIDFrontRecognizerSettings.h</key>
@@ -2529,6 +2567,28 @@
 			6vKZ5TbpuGO9DlSQJOWvnQwrv2nuycL2g0EtUsSYprk=
 			</data>
 		</dict>
+		<key>Headers/PPSwissPassportRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FV8/92Rp5ZHJaqla0dVp/KyFznA=
+			</data>
+			<key>hash2</key>
+			<data>
+			+ZwNii/HY9dQf3NcUEphsnMwMlv+2xCyJ0o14QvQ+nU=
+			</data>
+		</dict>
+		<key>Headers/PPSwissPassportRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GkoAdqzgtCGt2K52WWnHetZxyHU=
+			</data>
+			<key>hash2</key>
+			<data>
+			zdKVwsGlWLoKFeekbGi9cflFpuoWN7sLsve2AoJXgsU=
+			</data>
+		</dict>
 		<key>Headers/PPTapToFocusOverlaySubview.h</key>
 		<dict>
 			<key>hash</key>
@@ -2555,11 +2615,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qNjOUUnB/plGLh7hBhGp+02zhC0=
+			E0Y4kpx7EG2R65XK5XfJrDK7U+E=
 			</data>
 			<key>hash2</key>
 			<data>
-			gaTqTRSGmqFRLLV8okZhI7FR93z5wUxkTo1hDMs1KQs=
+			nMUzCxhsH7r4WAMH/PCpxdJY1lWyuA1RHxC2/ZFQSZg=
 			</data>
 		</dict>
 		<key>Headers/PPTemplatingRecognizerSettings.h</key>
@@ -2632,11 +2692,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m+HQuZs9ZAmx1gy4tYDiscSz4v4=
+			qg145BizGr8Te/7iIq1dJoPJ3D8=
 			</data>
 			<key>hash2</key>
 			<data>
-			3igaoYZo1gFHeyhfCyATUylrtJmsreOKz2Q+kkih6nM=
+			5JFfLdZg5BlK1Hi5TbaekD4xE+EdAeNco/cEmkNjBiY=
 			</data>
 		</dict>
 		<key>Headers/PPUsdlRecognizerResult.h</key>
