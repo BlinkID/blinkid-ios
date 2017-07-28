@@ -68,8 +68,8 @@ static NSString *CLASS_NEW_ID = @"newCroId";
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"IZNH27RG-WC4SNMH2-ZTAWNUUZ-UNXBSN4D-MVOM6ZK4-Z5SVZT3F-LTHWL7BJ-YSHLEWAL";
-    // License key is valid temporarily until 2017-10-08
+    settings.licenseSettings.licenseKey = @"RA3RBMS3-PJHN4BJD-2M372INK-JGGY7IJZ-KQR5GKV6-UNXBSN4D-MVOM7RMK-62PU3W6E";
+    // License key is valid temporarily until 2017-10-26
 
 
     /**********************************************************************************************************************/
