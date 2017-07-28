@@ -1,3 +1,20 @@
+## 2.11.0
+
+- Updates and additions
+    - Added Austrian Passport Recognizer `PPAusPassportRecognizerResult` and `PPAusPassportRecognizerSettings`
+    - Added Swiss Passport Recognizer `PPSwissPassportRecognizerResult` and `PPSwissPassportRecognizerSettings`
+    - Added support for scanning MRZ on Mexican voters card
+    - Added support for reading Croatian ID with permanent DateOfExpiry in `PPCroIDFrontRecognizerResult` and `PPCroIDCombinedRecognizerResult` with BOOL property `isDocumentDateOfExpiryPermanent`
+    - Added combining data from MRZ and fields in Austrian passport through `PPAusIDCombinedRecognizerResult` and `PPAusIDCombinedRecognizerSettings`
+
+- Bugfixes:
+    - Fixed crash which sometimes happened while scanning MRTD documents
+
+- Improvements in ID scanning performance:
+    - Improved scanning of IKad addresses
+    - Improved reading of Croatian ID Address field
+    - Improved reading of Croatian ID IssuedBy field 
+
 ## 2.10.0
 
 - Updates and additions:

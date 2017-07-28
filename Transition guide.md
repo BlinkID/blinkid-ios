@@ -1,3 +1,6 @@
+## 2.11.0
+- No changes
+
 ## 2.10.0
 
 - `PPAztecRecognizerResult` and `PPAztecRecognizerSettings` are now deprecated. Use `PPBarcodeRecognizerResult` and `PPBarcodeRecognizerSettings`
