@@ -65,6 +65,16 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (NSString *_Nullable)parsedResultForName:(NSString *_Nonnull)name parserGroup:(NSString *_Nonnull)parserGroup;
 
 /**
+ *  Retrieves parsed boolean from given parser group
+ *
+ *  @param name        name of the parser responsible for parsing the wanted string
+ *  @param parserGroup parser group name
+ *
+ *  @return parsed string
+ */
+- (NSNumber *_Nullable)boolParsedResultForName:(NSString *_Nonnull)name parserGroup:(NSString *_Nonnull)parserGroup;
+
+/**
  *  Retrieves parsed object from given parser group
  *
  *  @param name        name of the parser responsible for parsing the wanted string

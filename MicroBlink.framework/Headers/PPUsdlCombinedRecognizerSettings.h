@@ -6,7 +6,7 @@
 //
 //
 
-#import "PPRecognizerSettings.h"
+#import "PPCombinedRecognizerSettings.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Settings for scanning USDL 
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPUsdlCombinedRecognizerSettings : PPRecognizerSettings
+@interface PPUsdlCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
