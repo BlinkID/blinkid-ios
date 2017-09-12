@@ -60,6 +60,12 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic) BOOL returnFullDocumentPhoto;
 
+/**
+ * Defines if glare detection should be turned on/off for back side of German IDs.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
 
 @end
 

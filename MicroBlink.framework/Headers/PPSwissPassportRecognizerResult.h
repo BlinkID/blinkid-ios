@@ -6,13 +6,13 @@
 //
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning of Swiss Passport
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSwissPassportRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPSwissPassportRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The surname of the Swiss Passport owner.

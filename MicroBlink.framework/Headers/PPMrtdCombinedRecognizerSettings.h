@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Settings class for configuring MRTD Combined Recognizer.
  *
- * MRTD Combined recognizer is used for scanning both front and back side of german IDs.
+ * MRTD Combined recognizer is used for scanning both front and back side of generic IDs.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPMrtdCombinedRecognizerSettings : PPCombinedRecognizerSettings
@@ -90,6 +90,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO
  */
 @property (nonatomic, assign) BOOL encodeFullDocumentPhoto;
+
+/**
+ * Defines if glare detection should be turned on/off for front and back side of generic ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
 
 
 @end

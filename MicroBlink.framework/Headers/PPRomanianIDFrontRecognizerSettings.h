@@ -116,4 +116,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) BOOL encodeFullDocumentImage;
 
+/**
+ * Defines if glare detection should be turned on/off for front side of Romanian IDs.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
+
 @end

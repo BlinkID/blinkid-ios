@@ -1,4 +1,10 @@
+## 2.12.0
+
+- There is no more option in `PPUsdlRecognizerSettings` to scan 1D barcodes. Previously this setting did nothing - it's OK to just delete the setter call if you use it.
+- `PPBlinkOcrRecognizerResult` and `PPBlinkOcrRecognizerSettings` are now deprecated. Use `PPDetectorRecognizerResult` and `PPDetectorRecognizerSettings` for templating or `PPBlinkInputRecognizerResult` and `PPBlinkInputRecognizerSettings` for segment scan
+
 ## 2.11.0
+
 - No changes
 
 ## 2.10.0

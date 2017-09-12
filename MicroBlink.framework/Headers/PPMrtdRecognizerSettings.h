@@ -7,6 +7,7 @@
 //
 
 #import "PPTemplatingRecognizerSettings.h"
+#import "PPMrzFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -85,6 +86,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO.
  */
 @property (nonatomic, assign) BOOL dewarpFullDocument;
+
+/**
+ * Delegate for mrz filter.
+ *
+ * Default: nil
+ */
+@property (nonatomic, weak) id<PPMrzFilter> mrzFilter;
 
 @end
 

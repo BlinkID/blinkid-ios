@@ -17,6 +17,10 @@
 #import "PPDetectorRecognizerSettings.h"
 #import "PPDetectorRecognizerResult.h"
 
+/** BlinkInput */
+#import "PPBlinkInputRecognizerSettings.h"
+#import "PPBlinkInputRecognizerResult.h"
+
 // Vin
 #import "PPVinRecognizerSettings.h"
 #import "PPVinRecognizerResult.h"

@@ -6,13 +6,13 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning front side of Czech ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPCzIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPCzIDFrontRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The ID card number of the Czech ID.

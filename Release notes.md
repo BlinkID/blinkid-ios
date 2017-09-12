@@ -1,3 +1,37 @@
+## 2.12.0
+
+- Updates and additions
+    - Added Australian Driver Licence Recognizer `PPAustraliaDLFrontRecognizerResult` and `PPAustraliaDLFrontRecognizerSettings` for state Victoria
+    - Added Swiss ID Back Recognizer `PPSwissIDBackRecognizerResult` and `PPSwissIDBackRecognizerSettings`
+    - Added Swiss ID Front Recognizer `PPSwissIDFrontRecognizerResult` and `PPSwissIDFrontRecognizerSettings`
+    - Added reading of mirrored QR codes
+    - Added `PPMrzFilter` protocol and delegate `mrzFilter` on `PPMrtdRecognizerSettings`
+        - Determines whether document should be processed or it is filtered out, based on its MRZ (Machine Readable Zone)
+    - Introduced `GlareDetector` which is by default used in all recognizers whose settings implement `GlareDetectorOptions`:
+        - When glare is detected, OCR will not be performed on the affected document position to prevent errors in the extracted data
+        - If the glare detector is used and obtaining of glare metadata is enabled in `MetadataSettings`
+        - Glare detector can be disabled by using `detectGlare` property on the recognizer settings
+    - Added `PPQuadDetectorResultWithSize` which inherits existing `PPQuadDetectorResult`
+        - It's subclasses are `PPDocumentDetectorResult` and `PPMrtdDetectorResult`
+        - Returns information about physical size (height) in inches of the detected location when physical size is known
+
+- Minor API changes
+    - `PPBlinkOcrRecognizerResult` and `PPBlinkOcrRecognizerSettings` are now deprecated. Use `PPDetectorRecognizerResult` and `PPDetectorRecognizerSettings` for templating or `PPBlinkInputRecognizerResult` and `PPBlinkInputRecognizerSettings` for segment scan
+    - removed option to scan 1D Code39 and Code128 barcodes on US Driver's licenses that contain those barcodes alongside PDF417 barcode
+
+- Bugfixes:
+    - Fixed crash which sometimes happened while scanning MRTD documents
+    - Fixed returning valid data for MRZ based recognizers when not all fields outside MRZ have been scanned
+    - Fixed crash in QR code which happened periodically in all recognizers
+    - Fixed autorotation of overlay view controller 
+    - Fixed scanning return result type of `PPDetectorRecognizerSettings` when initialized with `PPMrtdDetectorSettings` - returning `PPMrtdDetectorResult`
+
+- Improvements in ID scanning performance:
+    - Date parsing improvements
+    - Better extraction of fields on back side of the Croatian ID card
+    - Improved reading of issuing authority on Croatian ID back side
+    - Improved USDLRecognizer - added support for new USDL standard
+
 ## 2.11.0
 
 - Updates and additions

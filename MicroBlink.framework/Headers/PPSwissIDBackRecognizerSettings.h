@@ -1,9 +1,9 @@
 //
-//  PPCroIDBackRecognizerSettings.h
-//  BlinkIdFramework
+//  PPSwissIDBackRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Boris Trubic on 05/05/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 04/08/2017.
+//
 //
 
 #import "PPRecognizerSettings.h"
@@ -12,13 +12,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring Croatian Back ID Recognizer.
+ * Settings class for configuring Swiss Back ID Recognizer.
  *
- * Croatian Back ID recognizer is used for scanning back side of Croatian ID. It always extracts
+ * Swiss Back ID recognizer is used for scanning back side of Swiss ID. It always extracts
  * MRZ zone and address of ID holder while extracting other elements is optional.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPCroIDBackRecognizerSettings : PPRecognizerSettings
+@interface PPSwissIDBackRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
@@ -28,18 +28,46 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- * Defines if issuing authority of Croatian ID should be extracted
+ * Defines if issuing authority of Swiss ID should be extracted
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractIssuingAuthority;
 
 /**
- * Defines if date of issue of Croatian ID should be extracted
+ * Defines if date of issue of Swiss ID should be extracted
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractDateOfIssue;
+
+/**
+ * Defines if date of expiry of Swiss ID should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+ * Defines if place of origin of Swiss ID holder should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPlaceOfOrigin;
+
+/**
+ * Defines if height of Swiss ID holder should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractHeight;
+
+/**
+ * Defines if sex of Swiss ID folder should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractSex;
 
 /**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -50,7 +78,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL displayFullDocumentImage;
 
 /**
- * Defines if glare detection should be turned on/off for  back side of Croatian IDs.
+ * Defines if glare detection should be turned on/off for back side of Swiss IDs.
  *
  * Default: YES
  */

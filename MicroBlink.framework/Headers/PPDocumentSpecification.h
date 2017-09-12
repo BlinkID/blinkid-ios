@@ -97,7 +97,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  *  @return initialized object
  */
-- (instancetype)initWithAspectRatio:(CGFloat)aspectRatio decodingInfo:(NSArray<PPDecodingInfo *> *)decodingInfoArray;
+- (instancetype)initWithAspectRatio:(CGFloat)aspectRatio decodingInfo:(NSArray<PPDecodingInfo *> *)decodingInfoArray physicalSizeInInches:(CGFloat)physicalSizeInInches;
 
 
 // unavailable initializer
@@ -165,6 +165,12 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: PPMakeRange(-1, -1);
  */
 @property (nonatomic, assign) PPRange yRange;
+
+
+/**
+ * Physical size of document in inches
+ */
+@property (nonatomic, assign, readonly) CGFloat physicalSizeInInches;
 
 @end
 

@@ -6,7 +6,7 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPQuadDetectorResult.h"
+#import "PPQuadDetectorResultWithSize.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -42,22 +42,12 @@ typedef NS_ENUM(NSUInteger, PPMrtdDetectionCode) {
  * Result of MRTD detector
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPMrtdDetectorResult : PPQuadDetectorResult
+@interface PPMrtdDetectorResult : PPQuadDetectorResultWithSize
 
 /**
  * Detection code of MRTD detection
  */
 @property (nonatomic) PPMrtdDetectionCode mrtdDetectionCode;
-
-/**
- * Number of characters per line
- */
-@property (nonatomic) NSArray<NSNumber *> *elementsCountPerLine;
-
-/**
- * Confidence in detector result
- */
-@property (nonatomic) CGFloat confidence;
 
 @end
 
