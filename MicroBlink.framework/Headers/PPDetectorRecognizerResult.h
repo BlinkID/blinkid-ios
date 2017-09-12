@@ -6,7 +6,7 @@
 //  Copyright © 2015 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPRecognizerResult.h"
+#import "PPTemplatingRecognizerResult.h"
 
 #import "PPDetectorResult.h"
 #import "PPQuadDetectorResult.h"
@@ -20,7 +20,7 @@
  * Recognizer wrapper for PPDetectorResult
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPDetectorRecognizerResult : PPRecognizerResult
+@interface PPDetectorRecognizerResult : PPTemplatingRecognizerResult
 
 /**
  * The detector result. The type of the detector result depends on the DetectorSettings used when initializing

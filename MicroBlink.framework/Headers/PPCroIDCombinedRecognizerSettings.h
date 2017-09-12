@@ -92,6 +92,12 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) BOOL encodeFullDocumentPhoto;
 
+/**
+ * Defines if glare detection should be turned on/off for both front and back side of Croatian IDs.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
 
 @end
 

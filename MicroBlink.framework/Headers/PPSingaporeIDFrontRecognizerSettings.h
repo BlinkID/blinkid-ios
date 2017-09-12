@@ -74,4 +74,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic) BOOL displayFullDocumentImage;
 
+/**
+ * Defines if glare detection should be turned on/off for for side of Singapore IDs.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
+
 @end

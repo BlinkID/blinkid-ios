@@ -922,16 +922,6 @@ PP_EXTERN NSString *_Nonnull const kPPSecurityVersion;
  */
 PP_EXTERN NSString *_Nonnull const kPPPdf417;
 
-/**
- Raw code128 result
- */
-PP_EXTERN NSString *_Nonnull const kPPCode128;
-
-/**
- Raw code39 result
- */
-PP_EXTERN NSString *_Nonnull const kPPCode39;
-
 #pragma mark - PPUsdlRecognizerResult implementation
 
 /**

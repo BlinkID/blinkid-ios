@@ -6,13 +6,13 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning front side of Austrian ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPAusIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPAusIDFrontRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The first name of the Austrian ID owner.

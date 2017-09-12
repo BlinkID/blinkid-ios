@@ -1,22 +1,24 @@
 //
-//  PPGermanIDFrontRecognizerSettings.h
-//  BlinkIdFramework
+//  PPAustraliaDLFrontRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Dino on 22/08/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 06/09/2017.
+//
 //
 
 #import "PPRecognizerSettings.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring German ID Front Recognizer.
+ * Settings class for configuring Asutralian Front DL Recognizer.
  *
- * German ID Front recognizer is used for scanning front side of German ID.
+ * Australian Front ID recognizer is used for scanning front side of Australian DL. It always extracts
+ * identity card number, first and last name of ID holder while extracting other elements is optional.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanPassportRecognizerSettings : PPRecognizerSettings
+@interface PPAustraliaDLFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -40,46 +42,32 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- * Defines if owner's surname should be extracted from German ID
+ *  Defines if sex of Australian DL owner should be extracted
  *
- * Default: YES
+ *  Default: YES
  */
-@property (nonatomic, assign) BOOL extractSurname;
+@property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if owner's name should be extracted from German ID
+ * Defines if citizenship of Australian DL owner should be extracted
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractName;
+@property (nonatomic, assign) BOOL extractLicenceNumber;
 
 /**
- * Defines if owner's nationality should be extracted from German ID
+ * Defines if date of birth of Australian DL owner should be extracted
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractNationality;
+@property (nonatomic, assign) BOOL extractDateOfBirth;
 
 /**
- * Defines if owner's place of birth should be extracted from German ID
+ * Defines if date of expiry should be extracted from Australian DL
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractPlaceOfBirth;
-
-/**
- * Defines if date of issue should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfIssue;
-
-/**
- * Defines if authority should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractAuthority;
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
 
 /**
  * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -87,7 +75,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL returnFacePhoto;
+@property (nonatomic, assign) BOOL displayFaceImage;
 
 /**
  * Sets whether signature image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -95,7 +83,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL returnSignaturePhoto;
+@property (nonatomic, assign) BOOL displaySignatureImage;
 
 /**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -103,14 +91,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL returnFullDocumentPhoto;
-
-/**
- * Defines if glare detection should be turned on/off for German Passport.
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL detectGlare;
+@property (nonatomic, assign) BOOL displayFullDocumentImage;
 
 @end
 

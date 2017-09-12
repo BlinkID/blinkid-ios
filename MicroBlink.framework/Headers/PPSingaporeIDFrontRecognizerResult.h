@@ -6,13 +6,13 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning front side of Singapore ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSingaporeIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPSingaporeIDFrontRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The identity card number of the Singapore ID.

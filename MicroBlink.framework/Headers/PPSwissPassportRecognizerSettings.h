@@ -118,6 +118,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) BOOL returnFullDocumentPhoto;
 
+/**
+ * Defines if glare detection should be turned on/off for Swiss Passports.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL detectGlare;
+
 @end
 
 NS_ASSUME_NONNULL_END

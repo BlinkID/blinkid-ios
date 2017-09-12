@@ -6,13 +6,13 @@
 //
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning of Austrian Passport
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPAusPassportRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPAusPassportRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The surname of the Austrian Passport owner.

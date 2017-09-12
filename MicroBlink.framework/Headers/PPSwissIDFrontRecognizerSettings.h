@@ -1,22 +1,20 @@
 //
-//  PPGermanIDFrontRecognizerSettings.h
-//  BlinkIdFramework
+//  PPSwissIDFrontRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Dino on 22/08/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 04/09/2017.
+//
 //
 
 #import "PPRecognizerSettings.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
- * Settings class for configuring German ID Front Recognizer.
+ * Settings class for configuring Swiss Front ID Recognizer.
  *
- * German ID Front recognizer is used for scanning front side of German ID.
+ * Swiss Front ID recognizer is used for scanning front side of Swiss ID.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanIDFrontRecognizerSettings : PPRecognizerSettings
+@interface PPSwissIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -40,71 +38,48 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- * Defines if owner's first name should be extracted from German ID
+ * Defines if owner's first name should be extracted from Swiss ID
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractFirstName;
 
 /**
- * Defines if owner's last name should be extracted from German ID
+ * Defines if owner's last name should be extracted from Swiss ID
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractLastName;
 
 /**
- * Defines if owner's place of birth should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractPlaceOfBirth;
-
-/**
- * Defines if owner's nationality should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNationality;
-
-/**
- * Defines if date of expiry should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfExpiry;
-
-/**
- * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
+ * Sets whether face photo from ID card should be sent to didOutputMetadata method of scanDelegate object.
  * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displayFaceImage;
+@property (nonatomic) BOOL displayFacePhoto;
 
 /**
- * Sets whether signature image from ID card should be sent to didOutputMetadata method of scanDelegate object.
+ * Sets whether signature photo of ID card should be sent to didOutputMetadata method of scanDelegate object.
  * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displaySignatureImage;
+@property (nonatomic) BOOL displaySignaturePhoto;
 
 /**
- * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
+ * Sets whether full image of ID card should be sent to didOutputMetadata method of scanDelegate object.
  * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL displayFullDocumentImage;
+@property (nonatomic) BOOL displayFullDocumentImage;
 
 /**
- * Defines if glare detection should be turned on/off for front side of German IDs.
+ * Defines if glare detection should be turned on/off for front side of Swiss IDs.
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL detectGlare;
 
 @end
-
-NS_ASSUME_NONNULL_END

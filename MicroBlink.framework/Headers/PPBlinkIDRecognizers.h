@@ -19,6 +19,10 @@
 #import "PPAusIDCombinedRecognizerSettings.h"
 #import "PPAusIDCombinedRecognizerResult.h"
 
+// Australia
+#import "PPAustraliaDLFrontRecognizerSettings.h"
+#import "PPAustraliaDLFrontRecognizerResult.h"
+
 // Croatia
 #import "PPCroIDBackRecognizerSettings.h"
 #import "PPCroIDBackRecognizerResult.h"
@@ -68,6 +72,7 @@
 #import "PPMrtdRecognizerResult.h"
 #import "PPMrtdCombinedRecognizerSettings.h"
 #import "PPMrtdCombinedRecognizerResult.h"
+#import "PPMrzFilter.h"
 
 // Romania
 #import "PPRomanianIDFrontRecognizerSettings.h"
@@ -110,6 +115,10 @@
 #import "PPSlovenianIDCombinedRecognizerResult.h"
 
 // Switzerland
+#import "PPSwissIDBackRecognizerSettings.h"
+#import "PPSwissIDBackRecognizerResult.h"
+#import "PPSwissIDFrontRecognizerSettings.h"
+#import "PPSwissIDFrontRecognizerResult.h"
 #import "PPSwissPassportRecognizerSettings.h"
 #import "PPSwissPassportRecognizerResult.h"
 

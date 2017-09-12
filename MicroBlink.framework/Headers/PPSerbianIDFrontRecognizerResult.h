@@ -6,13 +6,13 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPBlinkOcrRecognizerResult.h"
+#import "PPDetectorRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning front side side of Serbian ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPSerbianIDFrontRecognizerResult : PPBlinkOcrRecognizerResult
+@interface PPSerbianIDFrontRecognizerResult : PPDetectorRecognizerResult
 
 /**
  * The issuing date of the Serbian ID.
