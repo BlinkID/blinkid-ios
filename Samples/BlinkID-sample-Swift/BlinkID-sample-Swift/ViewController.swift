@@ -135,32 +135,32 @@ class ViewController: UIViewController, PPScanningDelegate {
         self.present(scanningViewController, animated: true, completion: nil)
     }
 
-    func scanningViewControllerUnauthorizedCamera(_ scanningViewController: UIViewController) {
+    func scanningViewControllerUnauthorizedCamera(_ scanningViewController: UIViewController & PPScanningViewController) {
         // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
     }
 
     func scanningViewController(scanningViewController: UIViewController, didFindError error: NSError) {
         // Can be ignored. See description of the method
     }
-    
-    public func scanningViewController(_ scanningViewController: UIViewController, didFindError error: Error) {
+
+    func scanningViewController(_ scanningViewController: UIViewController & PPScanningViewController, didFindError error: Error) {
         // Can be ignored
     }
 
-    func scanningViewControllerDidClose(_ scanningViewController: UIViewController) {
+    func scanningViewControllerDidClose(_ scanningViewController: UIViewController & PPScanningViewController) {
         // As scanning view controller is presented full screen and modally, dismiss it
         self.dismiss(animated: true, completion: nil)
     }
     
 
-    func scanningViewController(_ scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
+    func scanningViewController(_ scanningViewController: (UIViewController & PPScanningViewController)?, didOutputResults results: [PPRecognizerResult]) {
 
         // return if we don't have any results
         if (results.count == 0) {
             return
         }
 
-        let scanController = scanningViewController as! PPScanningViewController
+        let scanController = scanningViewController!
 
         /**
          * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
@@ -219,7 +219,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         scanningViewController?.present(alertController, animated: true, completion: nil)
     }
 
-    func scanningViewController(_ scanningViewController: UIViewController?, didOutputMetadata metadata: PPMetadata) {
+    func scanningViewController(_ scanningViewController: (UIViewController & PPScanningViewController)?, didOutputMetadata metadata: PPMetadata) {
         
         if (metadata is PPImageMetadata) {
 
