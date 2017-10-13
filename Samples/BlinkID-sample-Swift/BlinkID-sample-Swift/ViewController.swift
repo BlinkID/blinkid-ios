@@ -124,12 +124,10 @@ class ViewController: UIViewController, PPScanningDelegate {
         }
 
         /** Allocate and present the scanning view controller */
-        let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator!, error: nil)
+        let scanningViewController: UIViewController & PPScanningViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator!, error: nil)
 
-        /** Allow autorotation - if it makes sense for your use case */
-        let scanController = scanningViewController as! PPScanningViewController
-        scanController.autorotate = true
-        scanController.supportedOrientations = UIInterfaceOrientationMask.all
+        scanningViewController.autorotate = true
+        scanningViewController.supportedOrientations = UIInterfaceOrientationMask.all
 
         /** You can use other presentation methods as well */
         self.present(scanningViewController, animated: true, completion: nil)
@@ -152,15 +150,15 @@ class ViewController: UIViewController, PPScanningDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-
     func scanningViewController(_ scanningViewController: (UIViewController & PPScanningViewController)?, didOutputResults results: [PPRecognizerResult]) {
 
-        // return if we don't have any results
-        if (results.count == 0) {
+        guard results.count > 0 else {
             return
         }
 
-        let scanController = scanningViewController!
+        guard let scanningViewController = scanningViewController else {
+            return
+        }
 
         /**
          * Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
@@ -169,7 +167,7 @@ class ViewController: UIViewController, PPScanningDelegate {
          */
 
         // first, pause scanning until we process all the results
-        scanController.pauseScanning()
+        scanningViewController.pauseScanning()
 
         var message = ""
         var title = ""
@@ -216,7 +214,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         })
 
         alertController.addAction(okAction)
-        scanningViewController?.present(alertController, animated: true, completion: nil)
+        scanningViewController.present(alertController, animated: true, completion: nil)
     }
 
     func scanningViewController(_ scanningViewController: (UIViewController & PPScanningViewController)?, didOutputMetadata metadata: PPMetadata) {
@@ -247,5 +245,6 @@ class ViewController: UIViewController, PPScanningDelegate {
         self.dismiss(animated: true, completion: nil)
     }
 }
+
 
 
