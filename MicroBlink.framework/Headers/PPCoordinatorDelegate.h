@@ -83,6 +83,11 @@
 - (void)coordinator:(PPCoordinator *)coordinator invalidLicenseKeyWithError:(NSError *)error;
 
 /**
+ * Called when the we have license key with time restriction
+ */
+- (void)coordinator:(PPCoordinator *)coordinator isLicenseKeyTimeRestricted:(BOOL)timeRestricted;
+
+/**
  * TODO Ugly way of passing UI-related transformation information that should not be here
  */
 - (CGAffineTransform)coordinatorAffineTransformToScreen:(PPCoordinator *)coordinator;

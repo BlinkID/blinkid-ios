@@ -74,6 +74,14 @@
 #import "PPMrtdCombinedRecognizerResult.h"
 #import "PPMrzFilter.h"
 
+// Poland
+#import "PPPolishIDFrontRecognizerSettings.h"
+#import "PPPolishIDFrontRecognizerResult.h"
+#import "PPPolishIDBackRecognizerSettings.h"
+#import "PPPolishIDBackRecognizerResult.h"
+#import "PPPolishIDCombinedRecognizerSettings.h"
+#import "PPPolishIDCombinedRecognizerResult.h"
+
 // Romania
 #import "PPRomanianIDFrontRecognizerSettings.h"
 #import "PPRomanianIDFrontRecognizerResult.h"
@@ -121,6 +129,10 @@
 #import "PPSwissIDFrontRecognizerResult.h"
 #import "PPSwissPassportRecognizerSettings.h"
 #import "PPSwissPassportRecognizerResult.h"
+
+// USDL
+#import "PPUsdlRecognizerSettings.h"
+#import "PPUsdlRecognizerResult.h"
 
 // Use all recognizers from BlinkInput
 #import "PPBlinkInputRecognizers.h"

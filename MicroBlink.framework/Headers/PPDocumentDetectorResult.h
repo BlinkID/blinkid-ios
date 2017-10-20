@@ -23,11 +23,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic) CGFloat aspectRatio;
 
-/**
- * Screen orientation used when detecting the document.
- */
-@property (nonatomic) UIInterfaceOrientation screenOrientation;
-
 @end
 
 NS_ASSUME_NONNULL_END
