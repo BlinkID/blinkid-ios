@@ -1,3 +1,26 @@
+## 2.13.0
+
+- Updates and additions
+    - added support for scanning front and back side of Polish ID - use `PPPolishIDFrontRecognizerSettings`, `PolishIDBackRecognizerSettings` and `PPPolishIDCombinedRecognizerSettings`
+    - new document specification presets in `PPDocumentPreset` enum:  `PPDocumentPresetId1VerticalCard` and  `PPDocumentPresetId2VerticalCard` - use `[PPDocumentSpecification newFromPreset]` method to create document specification for detector
+    - `PPEudlRecognizer` can return face image from the driver's license
+    - warning for time limited license keys when using provided activities, custom UI integration or Direct API:
+        - the goal is to prevent unintentional publishing of application to production with the demo license key that will expire
+        - warning toast can be disabled by using `showLicenseKeyTimeLimitedWarning` property on `PPUiSettings`
+    - added `PPMrtdSpecification` and method `setMrtdSpecifications` on `PPMrtdDetectorSettings`
+        - setting `PPMrtdSpecification` on `PPMrtdDetectorSettings` will return results only for specified MRTD Documents
+        - `PPMrtdSpecification` can be created using `PPMrtdPreset`: `PPMrtdPresetTd1, PPMrtdPresetTd2, PPMrtdPresetTd3`
+
+- Minor API changes
+    - `PPDocumentDetectorResult` does not contain information about screen orientation any more
+
+- Improvements in ID scanning performance:
+    - improved face detection in `DocumentFaceRecognizer`: stable detection is required to prevent returning of blurred images
+    - improved reading of Malaysian `MyKad` documents:
+    - improved reading and parsing of address fields: previously recognizer was unable to read some documents because of the expected address format
+    - improved reading of Malaysian visas and work permits
+    - better reading of dates on Australian Driver's Licence
+
 ## 2.12.0
 
 - Updates and additions
