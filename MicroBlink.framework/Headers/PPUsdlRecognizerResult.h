@@ -680,6 +680,13 @@ FOUNDATION_EXPORT NSString *_Nonnull const kPPFederalCommercialVehicleCodes;
 PP_EXTERN NSString *_Nonnull const kPPIssuingJurisdiction;
 
 /**
+ Optional on all AAMVA and Magnetic barcodes.
+
+ Name of issuing jurisdiction, for example: Alabama, Alaska ...
+ */
+PP_EXTERN NSString *_Nonnull const kPPIssuingJurisdictionName;
+
+/**
  Optional on all AAMVA barcodes.
  Mandatory on Compact barcodes.
 

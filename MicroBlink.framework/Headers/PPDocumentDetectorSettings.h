@@ -9,6 +9,7 @@
 #import "PPDetectorSettings.h"
 
 #import "PPDocumentSpecification.h"
+#import "PPQuadDetectorSettingsWithSize.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Settings for document detector
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPDocumentDetectorSettings : PPDetectorSettings
+@interface PPDocumentDetectorSettings : PPQuadDetectorSettingsWithSize
 
 /**
  * Defines how many times the same document should be detected before the detector

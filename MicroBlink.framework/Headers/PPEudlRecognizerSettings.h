@@ -31,6 +31,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 - (instancetype)initWithEudlCountry:(PPEudlCountry)country NS_DESIGNATED_INITIALIZER;
 
 /**
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
+ * This image will be sent to scan delegate during recognition process if displaying of face image
+ * is enabled via displayFaceImage property and receiving of dewarpedImage in MetadataSettings is enabled.
+ */
++ (NSString *)ID_FACE;
+
+/**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via showFullDocument property and receiving of dewarpedImage in MetadataSettings is enabled.
@@ -67,6 +74,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO.
  */
 @property (nonatomic, assign) BOOL showFullDocument;
+
+/**
+ * If YES, face image of the document will be dewarped and returned via the API.
+ *
+ * Default: NO.
+ */
+@property (nonatomic, assign) BOOL showFaceImage;
 
 /**
  * Country of scanning Eudl. The default value of PPEudlCountryAny will scan all supported driver's licenses.

@@ -1,3 +1,7 @@
+## 2.13.0
+
+- `PPDocumentDetectorResult` does not contain information about screen orientation any more
+
 ## 2.12.0
 
 - There is no more option in `PPUsdlRecognizerSettings` to scan 1D barcodes. Previously this setting did nothing - it's OK to just delete the setter call if you use it.

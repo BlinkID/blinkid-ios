@@ -9,6 +9,7 @@
 #import "PPOcrParserFactory.h"
 
 #import "PPOcrEngineOptions.h"
+#import "PPBaseOcrEngineOptions.h"
 
 /**
  * Parser responsible for parsing raw OCR text
@@ -26,7 +27,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: [[PPOcrEngineOptions alloc] init]
  */
-- (void)setOptions:(PPOcrEngineOptions *)options;
+- (void)setOptions:(PPBaseOcrEngineOptions *)options;
 
 /**
  * Use algorithm for combining consecutive OCR results between video frames

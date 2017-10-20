@@ -35,6 +35,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPUiSettings : NSObject <NSCopying>
 
 /**
+ * If YES, tooltip limited license key warning messages will appear on screen
+ *
+ * Default: YES.
+ */
+@property (nonatomic, assign) BOOL showLicenseKeyTimeLimitedWarning;
+
+/**
  * If YES, default camera overlay will display Cancel button.
  * Usually, if camera is displayed inside Navigation View Controler, this is reasonable to set to NO.
  *

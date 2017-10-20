@@ -13,10 +13,6 @@
 #import "PPPdf417RecognizerSettings.h"
 #import "PPPdf417RecognizerResult.h"
 
-// USDL
-#import "PPUsdlRecognizerSettings.h"
-#import "PPUsdlRecognizerResult.h"
-
 // ZXing
 #import "PPZXingRecognizerSettings.h"
 #import "PPZXingRecognizerResult.h"

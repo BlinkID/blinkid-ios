@@ -8,6 +8,7 @@
 
 #import "PPOcrParserFactory.h"
 #import "PPOcrEngineOptions.h"
+#import "PPBaseOcrEngineOptions.h"
 
 /**
  * Customizable raw parser that is optimized for a given regex.
@@ -68,6 +69,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: [[PPOcrEngineOptions alloc] init]
  */
-- (void)setOptions:(PPOcrEngineOptions *)options;
+- (void)setOptions:(PPBaseOcrEngineOptions *)options;
 
 @end

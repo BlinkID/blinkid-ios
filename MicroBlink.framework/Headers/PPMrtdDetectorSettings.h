@@ -6,7 +6,8 @@
 //  Copyright © 2015 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPQuadDetectorSettings.h"
+#import "PPQuadDetectorSettingsWithSize.h"
+#import "PPMrtdSpecification.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class used for detection of MRTD documents
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPMrtdDetectorSettings : PPQuadDetectorSettings
+@interface PPMrtdDetectorSettings : PPQuadDetectorSettingsWithSize
 
 /**
  * Initializes MRTD Detector settings with decoding information array
@@ -49,6 +50,14 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: YES.
  */
 @property (nonatomic) BOOL detectFullDocument;
+
+/**
+ * Sets the mrtd specifications. Mrtd specifications describe the images that should be returned by
+ * the detector.
+ *
+ *  @param mrtdSpecifications mrtd specifications
+ */
+- (void)setMrtdSpecifications:(NSArray<__kindof PPMrtdSpecification *> *)mrtdSpecifications;
 
 @end
 
