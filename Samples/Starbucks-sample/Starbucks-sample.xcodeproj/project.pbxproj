@@ -13,7 +13,6 @@
 		CD2AC7C71F04EED90033717A /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD2AC7C31F04EED30033717A /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD3747431F0FB33500D3F90C /* CardTypeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3747421F0FB33500D3F90C /* CardTypeFactory.m */; };
 		CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */; };
-		CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */; };
 		CDC0FD931F0540CC008E3A23 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */; };
 		CDCC568B1F04D86E00A747E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568A1F04D86E00A747E4 /* main.m */; };
 		CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC568D1F04D86E00A747E4 /* AppDelegate.m */; };
@@ -21,7 +20,6 @@
 		CDCC56941F04D86E00A747E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56921F04D86E00A747E4 /* Main.storyboard */; };
 		CDCC56961F04D86E00A747E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56951F04D86E00A747E4 /* Assets.xcassets */; };
 		CDCC56991F04D86E00A747E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56971F04D86E00A747E4 /* LaunchScreen.storyboard */; };
-		CDCC56A11F04DA3F00A747E4 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCC56A01F04DA3F00A747E4 /* About.storyboard */; };
 		CDCC56A41F04DC9800A747E4 /* UIColor+MBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC56A31F04DC9800A747E4 /* UIColor+MBAdditions.m */; };
 		CDCC56A71F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCC56A61F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m */; };
 		CDCC56AA1F04E3A700A747E4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC56A91F04E3A700A747E4 /* libc++.tbd */; };
@@ -60,8 +58,6 @@
 		CDC0FD881F051611008E3A23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CDC0FD8A1F05207B008E3A23 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = Overlay/OverlayViewController.h; sourceTree = "<group>"; };
 		CDC0FD8B1F05207B008E3A23 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayViewController.m; path = Overlay/OverlayViewController.m; sourceTree = "<group>"; };
-		CDC0FD8E1F053D44008E3A23 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
-		CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
 		CDC0FD911F0540CC008E3A23 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = Overlay/Results/ResultsViewController.h; sourceTree = "<group>"; };
 		CDC0FD921F0540CC008E3A23 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = Overlay/Results/ResultsViewController.m; sourceTree = "<group>"; };
 		CDCC56861F04D86E00A747E4 /* Starbucks-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starbucks-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +70,6 @@
 		CDCC56951F04D86E00A747E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCC56981F04D86E00A747E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDCC569A1F04D86E00A747E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDCC56A01F04DA3F00A747E4 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = About.storyboard; path = About/About.storyboard; sourceTree = "<group>"; };
 		CDCC56A21F04DC9800A747E4 /* UIColor+MBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MBAdditions.h"; sourceTree = "<group>"; };
 		CDCC56A31F04DC9800A747E4 /* UIColor+MBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MBAdditions.m"; sourceTree = "<group>"; };
 		CDCC56A51F04E26F00A747E4 /* StarbucksCardRecognizerSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarbucksCardRecognizerSettings.h; path = Recognizer/StarbucksCardRecognizerSettings.h; sourceTree = "<group>"; };
@@ -148,16 +143,6 @@
 			name = CardType;
 			sourceTree = "<group>";
 		};
-		CDC0FD8D1F053D14008E3A23 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				CDCC56A01F04DA3F00A747E4 /* About.storyboard */,
-				CDC0FD8E1F053D44008E3A23 /* AboutViewController.h */,
-				CDC0FD8F1F053D44008E3A23 /* AboutViewController.m */,
-			);
-			name = About;
-			sourceTree = "<group>";
-		};
 		CDC0FD941F0540D7008E3A23 /* Results */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +174,6 @@
 			children = (
 				CD1CC5F01F067454000B7D39 /* Recognizer */,
 				CD1CC5EF1F067432000B7D39 /* Overlay */,
-				CDC0FD8D1F053D14008E3A23 /* About */,
 				CDCC568C1F04D86E00A747E4 /* AppDelegate.h */,
 				CDCC568D1F04D86E00A747E4 /* AppDelegate.m */,
 				CDCC568F1F04D86E00A747E4 /* MainViewController.h */,
@@ -292,7 +276,6 @@
 				CD2AC7C41F04EED30033717A /* MicroBlink.bundle in Resources */,
 				CDCC56991F04D86E00A747E4 /* LaunchScreen.storyboard in Resources */,
 				CDCC56961F04D86E00A747E4 /* Assets.xcassets in Resources */,
-				CDCC56A11F04DA3F00A747E4 /* About.storyboard in Resources */,
 				CDCC56941F04D86E00A747E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +290,6 @@
 				CDCC56911F04D86E00A747E4 /* MainViewController.m in Sources */,
 				CDCC568E1F04D86E00A747E4 /* AppDelegate.m in Sources */,
 				CDF23C2F1F13993A00C684AC /* TopCenterCardNumberType.m in Sources */,
-				CDC0FD901F053D44008E3A23 /* AboutViewController.m in Sources */,
 				CDC0FD8C1F05207B008E3A23 /* OverlayViewController.m in Sources */,
 				CDCC56A71F04E26F00A747E4 /* StarbucksCardRecognizerSettings.m in Sources */,
 				CD0E09211F0505BF00C539F6 /* ShadowView.m in Sources */,
