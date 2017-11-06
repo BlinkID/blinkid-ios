@@ -15,13 +15,12 @@
     return [self MB_colorInSRGBWithRed:white green:white blue:white alpha:alpha];
 }
 
-
-+ (UIColor *)MB_emeraldColor {
-    return [self MB_colorInSRGBWithRed:0.0f green:168.0f / 255.0f blue:98.0f / 255.0f alpha:1.0f];
-}
-
 + (UIColor *)MB_slateGreyColor {
     return [self MB_colorInSRGBWithRed:90.0f / 255.0f green:95.0f / 255.0f blue:103.0f / 255.0f alpha:1.0f];
+}
+
++ (UIColor *)MB_darkSkyBlueColor {
+    return [self MB_colorInSRGBWithRed:72.0f / 255.0f green:178.0f / 255.0f blue:232.0f / 255.0f alpha:1.0f];
 }
 
 + (UIColor *)MB_purpleyGreyColor {

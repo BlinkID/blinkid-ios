@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="umF-uu-rkQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="umF-uu-rkQ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
             <objects>
                 <navigationController id="umF-uu-rkQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5e3-ag-kGa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.0" green="0.65976732969999996" blue="0.38288292289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -36,16 +37,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucksLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Suc-85-6WI">
-                                <rect key="frame" x="124" y="161" width="166" height="166"/>
+                                <rect key="frame" x="124" y="181" width="166" height="166"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-S3-yjh">
                                 <rect key="frame" x="20" y="672" width="374" height="44"/>
@@ -64,11 +61,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yjo-S3-yjh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Cts-ZX-qtW"/>
-                            <constraint firstItem="Suc-85-6WI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nqr-Vm-qp2"/>
+                            <constraint firstItem="yjo-S3-yjh" firstAttribute="leading" secondItem="oaA-qK-pXG" secondAttribute="leading" constant="20" id="Cts-ZX-qtW"/>
+                            <constraint firstItem="oaA-qK-pXG" firstAttribute="trailing" secondItem="yjo-S3-yjh" secondAttribute="trailing" constant="20" id="jIx-86-efm"/>
+                            <constraint firstItem="Suc-85-6WI" firstAttribute="centerX" secondItem="oaA-qK-pXG" secondAttribute="centerX" id="nqr-Vm-qp2"/>
                             <constraint firstAttribute="bottomMargin" secondItem="yjo-S3-yjh" secondAttribute="bottom" constant="20" id="qTA-y9-Ov9"/>
-                            <constraint firstItem="Suc-85-6WI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="161" id="xtr-fY-nij"/>
+                            <constraint firstItem="Suc-85-6WI" firstAttribute="top" secondItem="oaA-qK-pXG" secondAttribute="top" constant="161" id="xtr-fY-nij"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="oaA-qK-pXG"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wv6-3H-8C7"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -84,16 +83,12 @@
         <scene sceneID="2sL-Yn-RhU">
             <objects>
                 <viewController storyboardIdentifier="overlay" id="IOV-Kt-J2k" customClass="OverlayViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TP4-eS-NN2"/>
-                        <viewControllerLayoutGuide type="bottom" id="MhH-46-FeE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g4V-p6-KEC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-bH-NIY">
-                                <rect key="frame" x="20.666666666666657" y="616" width="372.66666666666663" height="100"/>
+                                <rect key="frame" x="20.666666666666657" y="616" width="372.66666666666674" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucksCard" translatesAutoresizingMaskIntoConstraints="NO" id="IjF-B6-j32">
                                         <rect key="frame" x="247.66666666666663" y="15" width="110" height="70"/>
@@ -121,7 +116,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO7-dR-TEL">
-                                <rect key="frame" x="20.666666666666657" y="95" width="372.66666666666663" height="243.33333333333331"/>
+                                <rect key="frame" x="20.666666666666657" y="115.00000000000001" width="372.66666666666674" height="243.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="height" multiplier="72:47" id="uoq-5w-a3M"/>
@@ -150,21 +145,23 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RO7-dR-TEL" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="95" id="JvN-n9-mOh"/>
+                            <constraint firstItem="RO7-dR-TEL" firstAttribute="top" secondItem="b8k-xm-bbv" secondAttribute="top" constant="95" id="JvN-n9-mOh"/>
                             <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerY" secondItem="g4V-p6-KEC" secondAttribute="centerY" id="Qz0-8i-lmB"/>
                             <constraint firstItem="io7-QY-jFi" firstAttribute="centerY" secondItem="m4l-5t-KIc" secondAttribute="centerY" id="RJH-5S-Kd1"/>
-                            <constraint firstItem="m4l-5t-KIc" firstAttribute="top" secondItem="g4V-p6-KEC" secondAttribute="topMargin" constant="32" id="X7o-Un-z6O"/>
+                            <constraint firstItem="m4l-5t-KIc" firstAttribute="top" secondItem="b8k-xm-bbv" secondAttribute="top" constant="12" id="X7o-Un-z6O"/>
                             <constraint firstItem="RO7-dR-TEL" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="alE-bX-nup"/>
+                            <constraint firstItem="b8k-xm-bbv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m4l-5t-KIc" secondAttribute="trailing" constant="20" symbolic="YES" id="d29-AU-I1H"/>
                             <constraint firstItem="RO7-dR-TEL" firstAttribute="width" secondItem="g4V-p6-KEC" secondAttribute="width" multiplier="0.9" id="ddP-AP-wzJ"/>
                             <constraint firstItem="Gmo-oc-BHA" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="foX-Jh-y7w"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="yO0-bH-NIY" secondAttribute="bottom" constant="20" id="iix-Hl-Hlk"/>
+                            <constraint firstItem="b8k-xm-bbv" firstAttribute="bottom" secondItem="yO0-bH-NIY" secondAttribute="bottom" constant="20" id="iix-Hl-Hlk"/>
                             <constraint firstItem="yO0-bH-NIY" firstAttribute="width" secondItem="RO7-dR-TEL" secondAttribute="width" id="mJp-Jm-R48"/>
                             <constraint firstItem="Gmo-oc-BHA" firstAttribute="height" secondItem="g4V-p6-KEC" secondAttribute="height" id="nyK-0e-pH1"/>
-                            <constraint firstItem="m4l-5t-KIc" firstAttribute="leading" secondItem="g4V-p6-KEC" secondAttribute="leading" constant="20" id="poS-uY-vER"/>
+                            <constraint firstItem="m4l-5t-KIc" firstAttribute="leading" secondItem="b8k-xm-bbv" secondAttribute="leading" constant="20" id="poS-uY-vER"/>
                             <constraint firstItem="Gmo-oc-BHA" firstAttribute="width" secondItem="g4V-p6-KEC" secondAttribute="width" id="trs-zu-Qq5"/>
-                            <constraint firstAttribute="trailing" secondItem="io7-QY-jFi" secondAttribute="trailing" constant="20" id="u8l-Vd-chq"/>
+                            <constraint firstItem="b8k-xm-bbv" firstAttribute="trailing" secondItem="io7-QY-jFi" secondAttribute="trailing" constant="20" id="u8l-Vd-chq"/>
                             <constraint firstItem="yO0-bH-NIY" firstAttribute="centerX" secondItem="g4V-p6-KEC" secondAttribute="centerX" id="x1a-qE-K3B"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="b8k-xm-bbv"/>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="m4l-5t-KIc" id="hfw-O9-REa"/>
@@ -183,7 +180,6 @@
     </scenes>
     <resources>
         <image name="icSunOff" width="31" height="30"/>
-        <image name="infoIcon" width="35" height="35"/>
         <image name="starbucksCard" width="110" height="70"/>
         <image name="starbucksLogo" width="166" height="166"/>
     </resources>

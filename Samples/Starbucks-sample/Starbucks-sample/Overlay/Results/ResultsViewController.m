@@ -141,7 +141,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 }
 
 - (void)setupSubmitButton:(UIButton *)submitButton {
-    submitButton.backgroundColor = [UIColor MB_emeraldColor];
+    submitButton.backgroundColor = [UIColor MB_darkSkyBlueColor];
     [submitButton setTitle:kSubmitButtonText forState:UIControlStateNormal];
     submitButton.tintColor = [UIColor whiteColor];
     submitButton.titleLabel.font = [UIFont systemFontOfSize:kSubmitButtonFontSize weight:UIFontWeightRegular];

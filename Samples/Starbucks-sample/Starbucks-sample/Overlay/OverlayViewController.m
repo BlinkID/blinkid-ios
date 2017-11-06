@@ -90,7 +90,7 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     [self.shadowView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
     [self.shadowView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor].active = YES;
 
-    self.viewFinderView.layer.borderColor = [UIColor MB_emeraldColor].CGColor;
+    self.viewFinderView.layer.borderColor = [UIColor MB_darkSkyBlueColor].CGColor;
     self.viewFinderView.layer.cornerRadius = kViewFinderCornerRadius;
     self.viewFinderView.layer.borderWidth = kViewFinderBorderWIdth;
 

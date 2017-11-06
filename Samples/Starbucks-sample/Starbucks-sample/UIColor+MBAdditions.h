@@ -9,12 +9,12 @@
 
 @interface UIColor (MBAdditions)
 
-+ (UIColor *)MB_emeraldColor;
++ (nonnull UIColor *)MB_slateGreyColor;
 
-+ (UIColor *)MB_slateGreyColor;
++ (nonnull UIColor *)MB_darkSkyBlueColor;
 
-+ (UIColor *)MB_purpleyGreyColor;
++ (nonnull UIColor *)MB_purpleyGreyColor;
 
-+ (UIColor *)MB_shadowColor;
++ (nonnull UIColor *)MB_shadowColor;
 
 @end
