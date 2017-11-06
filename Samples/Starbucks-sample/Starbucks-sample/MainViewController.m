@@ -33,7 +33,7 @@ static CGFloat const kScanButtonCornerRadius = 4.f;
 /* String constants */
 
 // License key, valid temporarily until 2017-07-29
-static NSString *const kLicenseKey = @"VNTJKWGS-2X4DI2JT-KNSQWZAA-SM34XJOX-2E4IRXNR-VF3IBLRV-RDO3CCNF-34GMCKWM";
+static NSString *const kLicenseKey = @"TYM6BENN-XB6YBLTV-CCVP4OCH-GCX7S72D-EA2YRXNR-VF3IBLRV-RDO3CCNF-34GMD3GE";
 
 // Starbucks card number key title
 static NSString *const kStarbucksCardNumberKey = @"Starbucks card number";
