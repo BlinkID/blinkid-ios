@@ -94,6 +94,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, weak) id<PPMrzFilter> mrzFilter;
 
+/**
+ * Property got setting DPI for full document images
+ *
+ * Default: 250.0
+ */
+@property (nonatomic, assign) NSUInteger fullDocumentImageDPI;
+
 @end
 
 NS_ASSUME_NONNULL_END

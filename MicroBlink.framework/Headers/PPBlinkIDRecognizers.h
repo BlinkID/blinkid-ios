@@ -22,6 +22,8 @@
 // Australia
 #import "PPAustraliaDLFrontRecognizerSettings.h"
 #import "PPAustraliaDLFrontRecognizerResult.h"
+#import "PPAustraliaDLBackRecognizerSettings.h"
+#import "PPAustraliaDLBackRecognizerResult.h"
 
 // Croatia
 #import "PPCroIDBackRecognizerSettings.h"
@@ -73,6 +75,10 @@
 #import "PPMrtdCombinedRecognizerSettings.h"
 #import "PPMrtdCombinedRecognizerResult.h"
 #import "PPMrzFilter.h"
+
+// Indonesia
+#import "PPIndonesianIDFrontRecognizerSettings.h"
+#import "PPIndonesianIDFrontRecognizerResult.h"
 
 // Poland
 #import "PPPolishIDFrontRecognizerSettings.h"

@@ -1,24 +1,21 @@
 //
-//  PPAustraliaDLFrontRecognizerSettings.h
+//  PPIndonesianIDFrontRecognizerSettings.h
 //  MicroBlinkDev
 //
-//  Created by Jura Skrlec on 06/09/2017.
+//  Created by Jura Skrlec on 30/11/2017.
 //
-//
-
 #import "PPRecognizerSettings.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Settings class for configuring Asutralian Front DL Recognizer.
  *
- * Australian Front ID recognizer is used for scanning front side of Australian DL. It always extracts
+ * Australian Front ID recognizer is used for scanning front side of Indonesian ID. It always extracts
  * identity card number, first and last name of ID holder while extracting other elements is optional.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPAustraliaDLFrontRecognizerSettings : PPRecognizerSettings
+@interface PPIndonesianIDFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -42,32 +39,102 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- *  Defines if sex of Australian DL owner should be extracted
+ *  Defines if city of Indonesian ID owner should be extracted
  *
  *  Default: YES
+ */
+@property (nonatomic, assign) BOOL extractCity;
+
+/**
+ * Defines if name of Indonesian ID owner should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractName;
+
+/**
+ * Defines if place of birth of Indonesian ID owner should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
+
+/**
+ * Defines if blood type should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractBloodType;
+
+/**
+ * Defines if address should be extracted from Indonesian ID
+ *
+ * Default: YES
  */
 @property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if citizenship of Australian DL owner should be extracted
+ * Defines if rt should be extracted from Indonesian ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractLicenceNumber;
+@property (nonatomic, assign) BOOL extractRT;
 
 /**
- * Defines if date of birth of Australian DL owner should be extracted
+ * Defines if rw should be extracted from Indonesian ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractDateOfBirth;
+@property (nonatomic, assign) BOOL extractRW;
 
 /**
- * Defines if date of expiry should be extracted from Australian DL
+ * Defines if keldesa should be extracted from Indonesian ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractDateOfExpiry;
+@property (nonatomic, assign) BOOL extractKelDesa;
+
+/**
+ * Defines if district should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDistrict;
+
+/**
+ * Defines if religion should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractReligion;
+
+/**
+ * Defines if marital status should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractMaritalStatus;
+
+/**
+ * Defines if work should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractWork;
+
+/**
+ * Defines if citizenship should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractCitizenship;
+
+/**
+ * Defines if valid until should be extracted from Indonesian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractValidUntil;
 
 /**
  * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -92,13 +159,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO
  */
 @property (nonatomic, assign) BOOL displayFullDocumentImage;
-
-/**
- * Property got setting DPI for full document images
- *
- * Default: 250.0
- */
-@property (nonatomic, assign) NSUInteger fullDocumentImageDPI;
 
 @end
 
