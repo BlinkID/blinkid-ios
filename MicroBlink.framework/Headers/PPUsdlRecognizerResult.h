@@ -662,7 +662,7 @@ PP_EXTERN NSString *_Nonnull const kPPDocumentIssueDate;
  that are generally applicable to commercial motor vehicles. If the vehicle is not a
  commercial vehicle, "NONE" is to be entered.
  */
-FOUNDATION_EXPORT NSString *_Nonnull const kPPFederalCommercialVehicleCodes;
+PP_EXTERN NSString *_Nonnull const kPPFederalCommercialVehicleCodes;
 
 /**
  Optional on all AAMVA barcodes.

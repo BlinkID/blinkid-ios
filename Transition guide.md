@@ -1,3 +1,7 @@
+## 2.14.0
+
+- Removed `imageDPI` property on `PPTemplatingRecognizerSettings`   
+
 ## 2.13.0
 
 - `PPDocumentDetectorResult` does not contain information about screen orientation any more

@@ -32,6 +32,34 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic) BOOL displayFullDocumentImage;
 
 /**
+ * Defines if issuing authority should be extracted from Austrian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractIssuingAuthority;
+
+/**
+ * Defines if owner's name should be extracted from Austrian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPrincipalResidence;
+
+/**
+ * Defines ifdate of issue should be extracted from Austrian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfIssue;
+
+/**
+ * Defines if owner's height should be extracted from Austrian ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractHeight;
+
+/**
  * Defines if glare detection should be turned on/off for front side of Austrian ID
  *
  * Default: YES

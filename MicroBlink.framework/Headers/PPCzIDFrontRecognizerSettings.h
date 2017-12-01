@@ -38,6 +38,48 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
+ *  Defines if sex of Czech ID owner should be extracted
+ *
+ *  Default: YES
+ */
+@property (nonatomic, assign) BOOL extractSex;
+
+/**
+ * Defines if citizenship of Czech ID owner should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractLastName;
+
+/**
+ * Defines if date of birth of Czech ID owner should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractFirstName;
+
+/**
+ * Defines if date of expiry should be extracted from Czech ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+ * Defines if date of issue should be extracted from Czech ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfIssue;
+
+/**
+ * Defines if date of expiry should be extracted from Czech ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfBirth;
+
+/**
  * Sets whether face photo from ID card should be sent to didOutputMetadata method of scanDelegate object.
  * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *

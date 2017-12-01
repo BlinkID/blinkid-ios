@@ -49,13 +49,6 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, assign) BOOL detectGlare;
 
-/**
- * Set Image DPI that will return Image in DPI
- *
- * Default: 250.0
- */
-@property (nonatomic, assign) CGFloat imageDPI;
-
 @end
 
 NS_ASSUME_NONNULL_END

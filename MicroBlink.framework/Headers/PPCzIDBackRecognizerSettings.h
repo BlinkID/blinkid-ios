@@ -32,6 +32,27 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic) BOOL displayFullDocumentImage;
 
 /**
+ * Defines if citizenship of Czech ID authority should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractAuthority;
+
+/**
+ * Defines if address of Czech ID owner should be extracted
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractAddress;
+
+/**
+ * Defines if personal number should be extracted from Czech ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPersonalNumber;
+
+/**
  * Defines if glare detection should be turned on/off for back side of Czech IDs.
  *
  * Default: YES

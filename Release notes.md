@@ -1,3 +1,18 @@
+## 2.14.0
+
+- Updates and additions
+    - added support for reading back side of new Australian Driver's licence for state Victoria - use `PPAustraliaDLBackRecognizerSettings` and `PPAustraliaDLBackRecognizerResult`
+    - added support for reading front side of Indonesian ID - use `PPIndonesianIDFrontRecognizerSettings` and `PPIndonesianIDFrontRecognizerSettings`
+    - added support for Malaysian visa with document code TS - use `PPMrtdRecognizerSettings` and `PPMrtdRecognizerResult`
+    - added support for setting DPI for full document images returned by `PPMrtdRecognizerSettings`, `PPAustraliaDLBackRecognizerSettings`, `PPAustraliaDLFrontRecognizerSettings` and `PPEudlRecognizerSettings`:
+        - use `fullDocumentImageDPI` on the corresponding recognizer settings
+
+- Minor API changes
+    - removed `imageDPI` property on `PPTemplatingRecognizerSettings`        
+
+- Improvements in ID scanning performance:
+    - improved reading of Malaysian MyKad address        
+
 ## 2.13.0
 
 - Updates and additions
