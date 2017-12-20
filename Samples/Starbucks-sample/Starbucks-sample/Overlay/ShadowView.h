@@ -16,8 +16,9 @@
 
 @property (assign, nonatomic) CGFloat cornerRadius;
 
-
-- (instancetype)initWithFrame:(CGRect)frame andShadowColor:(UIColor *)shadowColor andCornerRadius:(CGFloat)cornerRadius NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame
+               andShadowColor:(UIColor *)shadowColor
+              andCornerRadius:(CGFloat)cornerRadius NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 

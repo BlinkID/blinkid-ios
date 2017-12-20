@@ -153,7 +153,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     NSDictionary *resultsMap;
     // Collect data from the result
     for (PPRecognizerResult *result in results) {
-        
+
         if ([result isKindOfClass:[PPPdf417RecognizerResult class]]) {
             PPPdf417RecognizerResult *ocrResult = (PPPdf417RecognizerResult *)result;
             resultsMap = @{kStarbucksCardNumberKey : [ocrResult stringUsingGuessedEncoding]};

@@ -11,7 +11,7 @@
 #import "BaseCardType.h"
 
 /**
- *  Type of card with card number in top left position on the card and security number in top right position 
+ *  Type of card with card number in top left position on the card and security number in top right position
  */
 
 @interface TopLeftCardNumberType : BaseCardType

@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) UIViewController<ResultsViewControllerDelegate> *delegate;
 
-
 - (instancetype)initWithLabelsMap:(NSDictionary<NSString *, NSString *> *)labelsMap NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;

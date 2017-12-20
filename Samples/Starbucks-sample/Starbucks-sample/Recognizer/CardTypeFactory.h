@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, CardTypeEnum) {
 
     /*  Type of card with card number in bottom left position on the card and security number in the bottom right position */
     BottomLeftCardNumberTypeEnum,
-    
+
 };
 
 @interface CardTypeFactory : NSObject
