@@ -71,6 +71,8 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.resultShadowView.backgroundColor = [UIColor MB_shadowColor];
+
     self.instuctionLabel.text = kCardScanInstructions;
 
     self.torchOnImage = [UIImage imageNamed:kTorchOnImage];
@@ -85,6 +87,8 @@ static NSString *const kCardScanInstructions = @"Position the device above Starb
     [self.view insertSubview:self.shadowView atIndex:0];
 
     [self.shadowView setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    // Setup shadow view constraints
     [self.shadowView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     [self.shadowView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
     [self.shadowView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;

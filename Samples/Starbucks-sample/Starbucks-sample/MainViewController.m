@@ -93,19 +93,23 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     ResultsViewController *resultsViewController = [[ResultsViewController alloc] initWithLabelsMap:resultsMap];
     resultsViewController.delegate = self;
 
-    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-
     [self.scanningViewController addChildViewController:resultsViewController];
     [self.scanningViewController.view addSubview:resultsViewController.view];
     [resultsViewController didMoveToParentViewController:self.scanningViewController];
 
-    [resultsViewController.view.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.centerXAnchor constant:0.f].active =
-    YES;
-    [resultsViewController.view.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.centerYAnchor constant:0.f].active =
-    YES;
-    [resultsViewController.view.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.widthAnchor constant:0.f].active = YES;
-    [resultsViewController.view.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.heightAnchor constant:0.f].active =
-    YES;
+    [resultsViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+    if (@available(iOS 11.0, *)) {
+        [resultsViewController.view.safeAreaLayoutGuide.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.safeAreaLayoutGuide.centerXAnchor].active = YES;
+        [resultsViewController.view.safeAreaLayoutGuide.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.safeAreaLayoutGuide.centerYAnchor].active = YES;
+        [resultsViewController.view.safeAreaLayoutGuide.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.safeAreaLayoutGuide.widthAnchor].active = YES;
+        [resultsViewController.view.safeAreaLayoutGuide.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.safeAreaLayoutGuide.heightAnchor].active = YES;
+    } else {
+        [resultsViewController.view.centerXAnchor constraintEqualToAnchor:self.scanningViewController.view.centerXAnchor].active = YES;
+        [resultsViewController.view.centerYAnchor constraintEqualToAnchor:self.scanningViewController.view.centerYAnchor].active = YES;
+        [resultsViewController.view.widthAnchor constraintEqualToAnchor:self.scanningViewController.view.widthAnchor].active = YES;
+        [resultsViewController.view.heightAnchor constraintEqualToAnchor:self.scanningViewController.view.heightAnchor].active = YES;
+    }
 
     [self.scanningViewController.view layoutIfNeeded];
 }
@@ -168,6 +172,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
     if (resultsMap != nil && resultsMap.count != 0) {
         [self.scanningViewController playScanSuccesSound];
         self.overlayViewController.pausedCameraImageView.hidden = NO;
+        self.overlayViewController.resultShadowView.hidden = NO;
         [self createResultsViewControllerWithResultsMap:resultsMap];
     } else {
         [scanningViewController resumeCamera];
@@ -194,6 +199,7 @@ static NSString *const kScanButtonLabelText = @"SCAN";
 
 - (void)didTapCloseButton:(ResultsViewController *)viewController {
     self.overlayViewController.pausedCameraImageView.hidden = YES;
+    self.overlayViewController.resultShadowView.hidden = YES;
 
     [viewController willMoveToParentViewController:nil];
     [viewController.view removeFromSuperview];

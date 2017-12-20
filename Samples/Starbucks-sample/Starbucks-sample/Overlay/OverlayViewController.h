@@ -11,7 +11,7 @@
 @interface OverlayViewController : PPBaseOverlayViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *pausedCameraImageView;
-
+@property (strong, nonatomic) IBOutlet UIView *resultShadowView;
 
 + (instancetype)viewControllerFromStoryboard;
 

@@ -23,6 +23,9 @@
 static CGFloat const kLeadingCloseButtonToViewLeadingDistance = 20.f;
 
 // Distance from top close button to top view
+static CGFloat const kTopCloseButtonToViewSafeTopDistance = 12.f;
+
+// Distance from top close button to top view
 static CGFloat const kTopCloseButtonToViewTopDistance = 32.f;
 
 // Results view corner radius
@@ -96,8 +99,6 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor MB_shadowColor];
-
     UIButton *closeButton = [[UIButton alloc] init];
     [self setupCloseButton:closeButton];
 
@@ -135,9 +136,19 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     // Set closeButton constraints
     [closeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingCloseButtonToViewLeadingDistance].active =
-    YES;
-    [closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kTopCloseButtonToViewTopDistance].active = YES;
+
+    if (@available(iOS 11.0, *)) {
+        [closeButton.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor
+                                              constant:kTopCloseButtonToViewSafeTopDistance]
+            .active = YES;
+        [closeButton.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor
+                                                  constant:kLeadingCloseButtonToViewLeadingDistance]
+            .active = YES;
+    } else {
+        [closeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kTopCloseButtonToViewTopDistance].active = YES;
+        [closeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingCloseButtonToViewLeadingDistance]
+            .active = YES;
+    }
 }
 
 - (void)setupSubmitButton:(UIButton *)submitButton {
@@ -152,13 +163,27 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     // Set submitButton constraints
     [submitButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingSubmitButtonToViewLeadingDistance].active =
-    YES;
-    [submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-kTrailingSubmitButtonToViewTrailingDistance]
-    .active = YES;
-    [submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-kBottomSubmitButtonToViewBottomDistance].active =
-    YES;
+
     [submitButton.heightAnchor constraintEqualToConstant:kSubmitButtonHeight].active = YES;
+
+    if (@available(iOS 11.0, *)) {
+        [submitButton.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor
+                                                   constant:kLeadingSubmitButtonToViewLeadingDistance]
+            .active = YES;
+        [submitButton.trailingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.trailingAnchor
+                                                    constant:-kTrailingSubmitButtonToViewTrailingDistance]
+            .active = YES;
+        [submitButton.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor
+                                                  constant:-kBottomSubmitButtonToViewBottomDistance]
+            .active = YES;
+    } else {
+        [submitButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:kLeadingSubmitButtonToViewLeadingDistance]
+            .active = YES;
+        [submitButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-kTrailingSubmitButtonToViewTrailingDistance]
+            .active = YES;
+        [submitButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-kBottomSubmitButtonToViewBottomDistance]
+            .active = YES;
+    }
 }
 
 - (void)setupResultContainerView:(UIView *)resultContainerView {
@@ -169,10 +194,14 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     [resultContainerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [resultContainerView.widthAnchor constraintEqualToAnchor:self.submitButton.widthAnchor constant:0.f].active = YES;
-    [resultContainerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:0.f].active = YES;
     [resultContainerView.bottomAnchor constraintEqualToAnchor:self.submitButton.topAnchor
                                                      constant:-kBottomResultViewToTopSubmitButtonDistance]
-    .active = YES;
+        .active = YES;
+    if (@available(iOS 11.0, *)) {
+        [resultContainerView.centerXAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.centerXAnchor].active = YES;
+    } else {
+        [resultContainerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    }
 
     [self setupLabelsInResultContainerView:resultContainerView];
 }
@@ -197,18 +226,19 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
         [resultContainerView addSubview:labelValue];
 
         [labelValue setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [labelValue.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
-        .active = YES;
+        [labelValue.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor
+                                                 constant:kLeadingResultViewToLeadingLabelDistance]
+            .active = YES;
         [labelValue.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor
                                                   constant:-kTrailingResultViewToTrailingLabelDistance]
-        .active = YES;
+            .active = YES;
 
         CGSize neededValueSize = [labelValue sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
 
         if (i == 0) {
             [labelValue.bottomAnchor constraintEqualToAnchor:resultContainerView.bottomAnchor
                                                     constant:-kBottomResultViewToBottomValueLabelDistance]
-            .active = YES;
+                .active = YES;
             height += neededValueSize.height + kBottomResultViewToBottomValueLabelDistance;
         } else {
             [labelValue.bottomAnchor constraintEqualToAnchor:lastLabel.topAnchor constant:-kLabelToLabelDistance].active = YES;
@@ -221,9 +251,10 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
         [labelKey setTranslatesAutoresizingMaskIntoConstraints:NO];
         [labelKey.bottomAnchor constraintEqualToAnchor:labelValue.topAnchor constant:-kLabelToLabelDistance].active = YES;
         [labelKey.leadingAnchor constraintEqualToAnchor:resultContainerView.leadingAnchor constant:kLeadingResultViewToLeadingLabelDistance]
-        .active = YES;
-        [labelKey.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor constant:-kTrailingResultViewToTrailingLabelDistance]
-        .active = YES;
+            .active = YES;
+        [labelKey.trailingAnchor constraintEqualToAnchor:resultContainerView.trailingAnchor
+                                                constant:-kTrailingResultViewToTrailingLabelDistance]
+            .active = YES;
 
         CGSize neededKeySize = [labelKey sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
         height += kLabelToLabelDistance + neededKeySize.height;
@@ -233,7 +264,7 @@ static NSString *const kSubmitButtonText = @"SUBMIT";
 
     [lastLabel.topAnchor constraintEqualToAnchor:resultContainerView.topAnchor constant:kTopResultViewToTopValueLabelDistance].active = YES;
     height += kTopResultViewToTopValueLabelDistance;
-    
+
     [resultContainerView.heightAnchor constraintEqualToConstant:height];
 }
 
