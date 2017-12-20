@@ -10,6 +10,26 @@
 
 @implementation BaseCardType
 
+- (instancetype)initWith:(PPDecodingInfo *)cardNumberDecodingInfo
+    securityCodeDecodingInfo:(PPDecodingInfo *)securityCodeDecodingInfo
+       cardNumberRegexParser:(PPRegexOcrParserFactory *)cardNumberRegexParser
+     securityCodeRegexParser:(PPRegexOcrParserFactory *)securityCodeRegexParser
+                 cardTypeKey:(NSString *)cardTypeKey
+             securityCodeKey:(NSString *)securityCodeKey
+               cardNumberKey:(NSString *)cardNumberKey {
+    self = [super init];
+    if (self) {
+        _cardNumberDecodingInfo = cardNumberDecodingInfo;
+        _securityCodeDecodingInfo = securityCodeDecodingInfo;
+        _cardNumberRegexParser = cardNumberRegexParser;
+        _securityCodeRegexParser = securityCodeRegexParser;
+        _cardTypeKey = cardTypeKey;
+        _securityCodeKey = securityCodeKey;
+        _cardNumberKey = cardNumberKey;
+    }
+    return self;
+}
+
 - (PPRegexOcrParserFactory *)createParserWithCharWhiteList:(NSSet *)charWhiteList
                                          minimalLineHeight:(NSUInteger)minimalLineHeight
                                          maximalLineHeight:(NSUInteger)maximalLineHeight

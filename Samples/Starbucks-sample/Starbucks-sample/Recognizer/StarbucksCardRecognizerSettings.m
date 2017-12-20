@@ -66,7 +66,7 @@ static NSString *const kStarbucksSecurityCodeKey = @"Starbucks security code";
             [self addOcrParser:cardType.cardNumberRegexParser name:kCardNumber group:cardType.cardNumberKey];
         }
 
-        self.cardDecodingInfos = cardDecodingInfo;
+        _cardDecodingInfos = cardDecodingInfo;
 
         /**
          * Create starbucks card document specification. Document specification defines geometric/scanning properties of documents to be

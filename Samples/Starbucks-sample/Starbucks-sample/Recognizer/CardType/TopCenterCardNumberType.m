@@ -50,32 +50,33 @@ static CGRect const kCardNumberLocation = {{0.2088f, 0.1688f}, {0.5500f, 0.0866f
 @implementation TopCenterCardNumberType
 
 - (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.cardNumberDecodingInfo =
-            [[PPDecodingInfo alloc] initWithLocation:kCardNumberLocation dewarpedHeight:kCardNumberDewarpedHeight uniqueId:kCardNumberKey];
 
-        self.securityCodeDecodingInfo = [[PPDecodingInfo alloc] initWithLocation:kSecurityCodeLocation
-                                                                  dewarpedHeight:kSecurityCodeDewarpedHeight
-                                                                        uniqueId:kSecurityCodeKey];
+    PPDecodingInfo *cardNumberDecodingInfo =
+        [[PPDecodingInfo alloc] initWithLocation:kCardNumberLocation dewarpedHeight:kCardNumberDewarpedHeight uniqueId:kCardNumberKey];
 
-        self.securityCodeRegexParser = [self createParserWithCharWhiteList:[self numberWhitelist]
-                                                         minimalLineHeight:kSecurityCodeMinHeight
-                                                         maximalLineHeight:kSecurityCodeMaxHeight
-                                                          maxCharsExpected:kSecurityCodeMaxCharExpected
-                                                                     regex:kSecurityCodeRegex];
+    PPDecodingInfo *securityCodeDecodingInfo = [[PPDecodingInfo alloc] initWithLocation:kSecurityCodeLocation
+                                                                         dewarpedHeight:kSecurityCodeDewarpedHeight
+                                                                               uniqueId:kSecurityCodeKey];
 
-        self.cardNumberRegexParser = [self createParserWithCharWhiteList:[self charAndNumberWhiteList]
-                                                       minimalLineHeight:kCardNumberMinHeight
-                                                       maximalLineHeight:kCardNumberMaxHeight
-                                                        maxCharsExpected:kCardNumberMaxCharExpected
-                                                                   regex:kCardNumberRegex];
-        self.cardTypeKey = kCardType;
+    PPRegexOcrParserFactory *cardNumberRegexParser = [self createParserWithCharWhiteList:[self numberWhitelist]
+                                                                       minimalLineHeight:kSecurityCodeMinHeight
+                                                                       maximalLineHeight:kSecurityCodeMaxHeight
+                                                                        maxCharsExpected:kSecurityCodeMaxCharExpected
+                                                                                   regex:kSecurityCodeRegex];
 
-        self.securityCodeKey = kSecurityCodeKey;
+    PPRegexOcrParserFactory *securityCodeRegexParser = [self createParserWithCharWhiteList:[self charAndNumberWhiteList]
+                                                                         minimalLineHeight:kCardNumberMinHeight
+                                                                         maximalLineHeight:kCardNumberMaxHeight
+                                                                          maxCharsExpected:kCardNumberMaxCharExpected
+                                                                                     regex:kCardNumberRegex];
 
-        self.cardNumberKey = kCardNumberKey;
-    }
+    self = [super initWith:cardNumberDecodingInfo
+        securityCodeDecodingInfo:securityCodeDecodingInfo
+           cardNumberRegexParser:cardNumberRegexParser
+         securityCodeRegexParser:securityCodeRegexParser
+                     cardTypeKey:kCardType
+                 securityCodeKey:kSecurityCodeKey
+                   cardNumberKey:kCardNumberKey];
     return self;
 }
 

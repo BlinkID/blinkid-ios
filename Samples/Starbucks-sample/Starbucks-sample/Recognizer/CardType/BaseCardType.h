@@ -36,6 +36,14 @@ static NSString *const kCardNumberRegex = @"(\\d{4} ){3}(\\d{4})";
 
 @property (strong, nonatomic) NSString *cardNumberKey;
 
+- (instancetype)initWith:(PPDecodingInfo *)cardNumberDecodingInfo
+    securityCodeDecodingInfo:(PPDecodingInfo *)securityCodeDecodingInfo
+       cardNumberRegexParser:(PPRegexOcrParserFactory *)cardNumberRegexParser
+     securityCodeRegexParser:(PPRegexOcrParserFactory *)securityCodeRegexParser
+                 cardTypeKey:(NSString *)cardTypeKey
+             securityCodeKey:(NSString *)securityCodeKey
+               cardNumberKey:(NSString *)cardNumberKey;
+
 - (PPRegexOcrParserFactory *)createParserWithCharWhiteList:(NSSet *)charWhiteList
                                          minimalLineHeight:(NSUInteger)minimalLineHeight
                                          maximalLineHeight:(NSUInteger)maximalLineHeight
