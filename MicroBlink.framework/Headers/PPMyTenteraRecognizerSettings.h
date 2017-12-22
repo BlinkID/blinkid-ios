@@ -1,9 +1,8 @@
 //
-//  PPiKadRecognizerSettings.h
-//  PhotoPayFramework
+//  PPMyTenteraRecognizerSettings.h
+//  MicroBlinkDev
 //
-//  Created by Dino on 28/09/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Created by Jura Skrlec on 21/12/2017.
 //
 
 #import "PPRecognizerSettings.h"
@@ -11,12 +10,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Settings class for configuring Malaysian iKad Recognizer.
+ * Settings class for configuring Malaysian MyTentera Recognizer.
  *
- * Malaysian iKad recognizer is used for scanning front side of Malaysian iKad.
+ * Malaysian MyTentera recognizer is used for scanning front side of Malaysian myTentera.
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPiKadRecognizerSettings : PPRecognizerSettings
+
+@interface PPMyTenteraRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -33,53 +33,25 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
- * Defines if owner's sector should be extracted from iKad
+ * Defines if religion should be extracted from MyTentera
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractSector;
+@property (nonatomic, assign) BOOL extractReligion;
 
 /**
- * Defines if owner's employer should be extracted from iKad
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractEmployer;
-
-/**
- * Defines if owner's address should be extracted from iKad
+ * Defines if address should be extracted from MyTentera
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if owner's passport number should be extracted from iKad
+ * Defines if owner's full name should be extracted from MyTentera
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractPassportNumber;
-
-/**
- * Defines if expiry date should be extracted from iKad
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractExpiryDate;
-
-/**
- * Defines if date of expiry should be extracted from iKad
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNationality;
-
-/**
- * Defines if owner's sex should be extracted from iKad
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSex;
+@property (nonatomic, assign) BOOL extractFullName;
 
 /**
  * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -98,7 +70,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL displayFullDocumentImage;
 
 /**
- * Defines if glare detection should be turned on/off for Malaysian iKad.
+ * Defines if glare detection should be turned on/off for Malaysian MyTentera.
  *
  * Default: YES
  */

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @see https://en.wikipedia.org/wiki/Malaysian_identity_card
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPMyKadRecognizerSettings : PPRecognizerSettings
+@interface PPMyKadFrontRecognizerSettings : PPRecognizerSettings
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -36,6 +36,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 + (NSString *)FULL_DOCUMENT_IMAGE;
 
 /**
+ * Defines if army number should be extracted from MyTentera documents with MyKadRecognizer
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL extractArmyNumber;
+
+/**
  * Sets whether full document image of ID card should be sent to didOutputMetadata method of scanDelegate object.
  * If you want to recieve this image, be sure to enable dewarpedImage in MetadataSettings.
  *
@@ -50,6 +57,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Default: NO
  */
 @property (nonatomic, assign) BOOL showFaceImage;
+
+/**
+ * Property got setting DPI for full document images
+ *
+ * Default: 250.0
+ */
+@property (nonatomic, assign) NSUInteger fullDocumentImageDPI;
 
 @end
 

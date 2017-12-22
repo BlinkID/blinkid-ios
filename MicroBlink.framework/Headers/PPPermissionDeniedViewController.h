@@ -18,6 +18,8 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 
 @property (nonatomic, assign) BOOL hideCancelButton;
 
+@property (nonatomic, assign) UIInterfaceOrientation futureInterfaceOrinetation;
+
 @end
 
 @protocol PPPermissionDeniedDelegate <NSObject>
