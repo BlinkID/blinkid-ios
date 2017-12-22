@@ -1,3 +1,7 @@
+## 2.15.0
+
+- Renamed `PPMyKadRecognizerSettings` and `PPMyKadRecognizerResult` to `PPMyKadFrontRecognizerSettings` and `PPMyKadFrontRecognizerResult`
+
 ## 2.14.0
 
 - Removed `imageDPI` property on `PPTemplatingRecognizerSettings`   
