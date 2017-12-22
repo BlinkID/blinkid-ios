@@ -12,7 +12,7 @@
  * Result of scanning MyKad (Malaysian ID document).
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPMyKadRecognizerResult : PPRecognizerResult
+@interface PPMyKadFrontRecognizerResult : PPRecognizerResult
 
 /**
  * NRIC number (National Registration Identity Card Number)
@@ -70,5 +70,10 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  * Owner sex (M for male, F for female)
  */
 @property (nonatomic, readonly, nullable) NSString *ownerSex;
+
+/**
+ * Owner army number on MyTentera documents
+ */
+@property (nonatomic, readonly, nullable) NSString *armyNumber;
 
 @end

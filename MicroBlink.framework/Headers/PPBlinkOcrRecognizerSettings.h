@@ -52,35 +52,6 @@ PP_CLASS_DEPRECATED_IOS(1_0, 5_10_0, "Use PPDetectorRecognizerSettings for templ
  */
 @property (nonatomic) BOOL allowFlippedRecognition;
 
-/**
- * Delegate for document classification.
- *
- * Default: nil
- */
-@property (nonatomic) id<PPDocumentClassifier> documentClassifier;
-
-/**
- * Sets array of PPDecodingInfo to be used when PPDocumentClassifer outputs a selected result.
- *
- *  @see PPDocumentClassifier
- *
- *  @param decodingInfos    Decoding infos to be used when PPDocumentClassifier outputs selected result
- *  @param classifierResult Output from PPDocumentClassifer
- */
-- (void)setDecodingInfoSet:(NSArray<PPDecodingInfo *> *)decodingInfos forClassifierResult:(NSString *)classifierResult;
-
-/**
- * Removes all decoding infos for a given classifier result.
- *
- * @param classifierResult Removes all decoding infos linked to specified classifier result
- */
-- (void)removeDecodingInfoSetForClassifierResult:(NSString *)classifierResult;
-
-/**
- * Removes all present decoding info
- */
-- (void)removeAllDecodingInfoSets;
-
 @end
 
 NS_ASSUME_NONNULL_END

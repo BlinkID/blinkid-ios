@@ -9,6 +9,7 @@
 #import "PPSegmentRecognizerSettings.h"
 #import "PPOcrParserFactory.h"
 #import "PPDecodingInfo.h"
+#import "PPDocumentClassifier.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,13 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPTemplatingRecognizerSettings : PPSegmentRecognizerSettings
 
 @property (nonatomic) BOOL allowUnparsedResults;
+
+/**
+ * Delegate for document classification.
+ *
+ * Default: nil
+ */
+@property (nonatomic) id<PPDocumentClassifier> documentClassifier;
 
 /**
  * Sets array of PPDecodingInfo to be used when PPDocumentClassifer outputs a selected result.

@@ -66,8 +66,16 @@
 #import "PPiKadRecognizerResult.h"
 
 // Malaysian IDs (MyKad)
-#import "PPMyKadRecognizerSettings.h"
-#import "PPMyKadRecognizerResult.h"
+#import "PPMyKadFrontRecognizerSettings.h"
+#import "PPMyKadFrontRecognizerResult.h"
+
+// Malaysian IDs Back (MyKad)
+#import "PPMyKadBackRecognizerSettings.h"
+#import "PPMyKadBackRecognizerResult.h"
+
+// Malaysian army IDs (MyTentera)
+#import "PPMyTenteraRecognizerSettings.h"
+#import "PPMyTenteraRecognizerResult.h"
 
 // MRTD
 #import "PPMrtdRecognizerSettings.h"

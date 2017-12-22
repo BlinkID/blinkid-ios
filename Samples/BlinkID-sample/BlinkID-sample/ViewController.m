@@ -182,9 +182,9 @@
             title = @"EUDL";
             message = [eudlResult description];
         }
-        if ([result isKindOfClass:[PPMyKadRecognizerResult class]]) {
+        if ([result isKindOfClass:[PPMyKadFrontRecognizerResult class]]) {
             /** MyKad was detected */
-            PPMyKadRecognizerResult *myKadResult = (PPMyKadRecognizerResult *)result;
+            PPMyKadFrontRecognizerResult *myKadResult = (PPMyKadFrontRecognizerResult *)result;
             title = @"MyKad";
             message = [myKadResult description];
         }
@@ -233,7 +233,7 @@
         } else if ([imageMetadata.name isEqualToString:[PPMrtdRecognizerSettings MRZ_IMAGE]]) {
             NSLog(@"This image is image of the MRZ zone");
             NSLog(@"This image becomes available if mrtdRecognizerSettings.dewarpFullDocument == NO");
-        } else if ([imageMetadata.name isEqualToString:[PPMyKadRecognizerSettings FULL_DOCUMENT_IMAGE]]) {
+        } else if ([imageMetadata.name isEqualToString:[PPMyKadFrontRecognizerSettings FULL_DOCUMENT_IMAGE]]) {
             NSLog(@"This image is full MyKad");
         }
     }

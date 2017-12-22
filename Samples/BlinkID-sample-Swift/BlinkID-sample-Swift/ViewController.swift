@@ -92,7 +92,7 @@ class ViewController: UIViewController, PPScanningDelegate {
         do { // Remove this if you're not using MyKad recognition
 
             // To specify we want to perform MyKad recognition, initialize the MyKad recognizer settings
-            let myKadRecognizerSettings = PPMyKadRecognizerSettings()
+            let myKadRecognizerSettings = PPMyKadFrontRecognizerSettings()
             
             /** You can modify the properties of myKadRecognizerSettings to suit your use-case */
             
@@ -196,9 +196,9 @@ class ViewController: UIViewController, PPScanningDelegate {
                 title = "EUDL"
                 message = eudlResult.description
             }
-            if (result is PPMyKadRecognizerResult) {
+            if (result is PPMyKadFrontRecognizerResult) {
                 /** MyKad was detected */
-                let myKadResult = result as! PPMyKadRecognizerResult
+                let myKadResult = result as! PPMyKadFrontRecognizerResult
                 title = "MyKad"
                 message = myKadResult.description
             }
@@ -233,7 +233,7 @@ class ViewController: UIViewController, PPScanningDelegate {
                 print("This image is full Machine readable travel document");
             } else if (result.name == PPMrtdRecognizerSettings.mrz_IMAGE()) {
                 print("This image is Machine readable zone");
-            } else if (result.name == PPMyKadRecognizerSettings.full_DOCUMENT_IMAGE()) {
+            } else if (result.name == PPMyKadFrontRecognizerSettings.full_DOCUMENT_IMAGE()) {
                 print("This image is full MyKad");
             }
         }

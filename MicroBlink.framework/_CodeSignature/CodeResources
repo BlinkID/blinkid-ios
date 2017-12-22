@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
-		Z1b7jmGiVEE3vX7u8P865JyjGrU=
+		j9f6cGSEvAZOm4txOVpPaagcZA8=
 		</data>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/PPBlinkOcrRecognizerSettings.h</key>
 		<data>
-		cDs2ky3ZSuuqk/r3Qn4ykZUJfL8=
+		8Jpeowdipxo6d7kQB58Q6+72jbw=
 		</data>
 		<key>Headers/PPBlurredFieldOfViewOverlaySubview.h</key>
 		<data>
@@ -468,13 +468,29 @@
 		<data>
 		2e66HGMJEK7epXZLs9tXuvXltE4=
 		</data>
-		<key>Headers/PPMyKadRecognizerResult.h</key>
+		<key>Headers/PPMyKadBackRecognizerResult.h</key>
 		<data>
-		Zv/Rya1DdNyeKoMPZZpjesDtrwQ=
+		qCy4gFXzVc3HYd1Zgbed4RQD63A=
 		</data>
-		<key>Headers/PPMyKadRecognizerSettings.h</key>
+		<key>Headers/PPMyKadBackRecognizerSettings.h</key>
 		<data>
-		YsLy9jlOtiT2C/lwuaqKrdHaIIs=
+		3qURS8DtqZfre89sShAAF+haqrQ=
+		</data>
+		<key>Headers/PPMyKadFrontRecognizerResult.h</key>
+		<data>
+		40Xro2NA7z35vx0NSM6PaWvFd08=
+		</data>
+		<key>Headers/PPMyKadFrontRecognizerSettings.h</key>
+		<data>
+		qfSAhuVRaVp/4wz8Qe83seJrSQQ=
+		</data>
+		<key>Headers/PPMyTenteraRecognizerResult.h</key>
+		<data>
+		rTL4natwE32wsoM8s84bdwGEtZk=
+		</data>
+		<key>Headers/PPMyTenteraRecognizerSettings.h</key>
+		<data>
+		oklVd+DdHr3dc8p97nwIc6GGQAk=
 		</data>
 		<key>Headers/PPNativeResult.h</key>
 		<data>
@@ -530,7 +546,7 @@
 		</data>
 		<key>Headers/PPPermissionDeniedViewController.h</key>
 		<data>
-		JqM7bxAsoLHnQhJzoqImLd9kT7M=
+		WU2RM4G3OkydrDvrHa5y/ESKqtc=
 		</data>
 		<key>Headers/PPPointsDetectorResult.h</key>
 		<data>
@@ -786,7 +802,7 @@
 		</data>
 		<key>Headers/PPTemplatingRecognizerSettings.h</key>
 		<data>
-		3tOoridTBOnhsGjfVD4FUWIt+Xw=
+		VJat0AcV3z67kXlB0Fcv8Wtc6Og=
 		</data>
 		<key>Headers/PPTextMetadata.h</key>
 		<data>
@@ -854,11 +870,11 @@
 		</data>
 		<key>Headers/PPiKadRecognizerSettings.h</key>
 		<data>
-		691jAX2NRZTEq0CaHHprHIo1bho=
+		BQ8xOMgW0Voc6AMny1apPaIYM30=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		N1ujcMuq6PrgGPN0ZBPlwC/q6/E=
+		HxvZGP86dx9pve9MH8ayAlshxeM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1168,11 +1184,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z1b7jmGiVEE3vX7u8P865JyjGrU=
+			j9f6cGSEvAZOm4txOVpPaagcZA8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CFVZVQ1faqx+m0RHJqFMjY0SlorM8Xknh+hJH/2yW/0=
+			KAJdILAePxTicGwLr5i5SLpryDo26Jjch+spy7ZMOGY=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
@@ -1223,11 +1239,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cDs2ky3ZSuuqk/r3Qn4ykZUJfL8=
+			8Jpeowdipxo6d7kQB58Q6+72jbw=
 			</data>
 			<key>hash2</key>
 			<data>
-			B8cMPlCJuv83o5dTyKFtiRlAAIoruau4pllOa0XNSMs=
+			5N6wbzr/A7K1QCEmU3/tC1Nhp+W4N2PBxeC5ZGv8oT8=
 			</data>
 		</dict>
 		<key>Headers/PPBlurredFieldOfViewOverlaySubview.h</key>
@@ -2143,26 +2159,70 @@
 			/bN3LTjcaS9JNHDsqcB+ogMDsLuzsd1ECeAR6k7xOds=
 			</data>
 		</dict>
-		<key>Headers/PPMyKadRecognizerResult.h</key>
+		<key>Headers/PPMyKadBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Zv/Rya1DdNyeKoMPZZpjesDtrwQ=
+			qCy4gFXzVc3HYd1Zgbed4RQD63A=
 			</data>
 			<key>hash2</key>
 			<data>
-			NK+qZaQLQfQCI6L3RbSDo8ld8UaxSrJsnmneBciVK7Q=
+			z7kkgNE3fqIsmkqiRxQPLwDpg9rsu/9jobtyuuAFRUM=
 			</data>
 		</dict>
-		<key>Headers/PPMyKadRecognizerSettings.h</key>
+		<key>Headers/PPMyKadBackRecognizerSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YsLy9jlOtiT2C/lwuaqKrdHaIIs=
+			3qURS8DtqZfre89sShAAF+haqrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			OEPTuLjLL//0XcsZQf71QHNJpkXvMLUejapF71FuKNg=
+			Y8behUP4jGXs8U8NbL6Lqi3tfKQCleHdEVRoxgGVtrc=
+			</data>
+		</dict>
+		<key>Headers/PPMyKadFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			40Xro2NA7z35vx0NSM6PaWvFd08=
+			</data>
+			<key>hash2</key>
+			<data>
+			oMfz5Ic3AJx7yBMeAFHC/tOegNNkzv9J5yAjtUTJx7Y=
+			</data>
+		</dict>
+		<key>Headers/PPMyKadFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qfSAhuVRaVp/4wz8Qe83seJrSQQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			WEE4JMuD6xjkrC33QxaNjaefvoVZlRcG0OtnC2M723Y=
+			</data>
+		</dict>
+		<key>Headers/PPMyTenteraRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rTL4natwE32wsoM8s84bdwGEtZk=
+			</data>
+			<key>hash2</key>
+			<data>
+			WFpJKgS9UfS/zxScM0dxSzRJk+QQAqUVHBr1ehT9CRQ=
+			</data>
+		</dict>
+		<key>Headers/PPMyTenteraRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oklVd+DdHr3dc8p97nwIc6GGQAk=
+			</data>
+			<key>hash2</key>
+			<data>
+			BsY2eRQdcch/Hu8iJu0Qwd3xYD9diU2DiXqFgN7Wy8I=
 			</data>
 		</dict>
 		<key>Headers/PPNativeResult.h</key>
@@ -2312,11 +2372,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JqM7bxAsoLHnQhJzoqImLd9kT7M=
+			WU2RM4G3OkydrDvrHa5y/ESKqtc=
 			</data>
 			<key>hash2</key>
 			<data>
-			GBUCaoES/HM9LTMaSBx6qSqBMAxh6WM1BGaNWSf2kd8=
+			iygxB2rffrqwVt+XJrpqCtFdNkqzp9BMBaWl04ecbd0=
 			</data>
 		</dict>
 		<key>Headers/PPPointsDetectorResult.h</key>
@@ -3016,11 +3076,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3tOoridTBOnhsGjfVD4FUWIt+Xw=
+			VJat0AcV3z67kXlB0Fcv8Wtc6Og=
 			</data>
 			<key>hash2</key>
 			<data>
-			VweIkL18AO48qn4v8s2WpbmKFvQAkqbs/W1sPP0x2pM=
+			5+WNghZ+7eMNmlv+MMRW1au6d3CXqWLv68k2ylTSViA=
 			</data>
 		</dict>
 		<key>Headers/PPTextMetadata.h</key>
@@ -3203,11 +3263,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			691jAX2NRZTEq0CaHHprHIo1bho=
+			BQ8xOMgW0Voc6AMny1apPaIYM30=
 			</data>
 			<key>hash2</key>
 			<data>
-			WWIpHgWaMu/hGCreSlpRaJgy42vIPofsvF8L1EoFojY=
+			GljwzDOwougscVPF5DiXpRLaEfGKVRV+ilkMsWiKrPk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

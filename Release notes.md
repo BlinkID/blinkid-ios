@@ -1,3 +1,29 @@
+## 2.15.0
+
+- Updates and additions
+    - added support for reading back side of Malaysian MyKad - use `PPMyKadBackRecognizerSettings` 
+    - added support for reading Malaysian MyTentera documents - use `PPMyTenteraRecognizerSettings`
+    - added support for reading Malaysian MyTentera documents with MyKad recognizer - use `PPMyKadFrontRecognizerSettings` and enable reading of army number 
+    - added support for setting DPI for full document images returned by `PPMyKadFrontRecognizerSettings`, `PPMyKadBackRecognizerSettings`, `PPMyKadFrontRecognizerSettings` and `PPIKadRecognizerSettings`:
+    - use `fullDocumentImageDPI` on the corresponding recognizer settings
+    - added full support for iPhone X layout for all SDK's overlay views
+
+- Minor API changes
+    - renamed `PPMyKadRecognizerSettings` and `PPMyKadRecognizerResult` to `PPMyKadFrontRecognizerSettings` and `PPMyKadFrontRecognizerResult`
+
+- Improvements in ID scanning performance
+    - improved `PPAustraliaDLFrontRecognizer`:
+        - improved reading of names and addresses
+        - added support for reading first names with more words
+    - improved `PPSingaporeIDFrontRecognizer`:
+        - tuned ID card data extraction positions
+    - improved Malaysian `IKadRecognizer`:
+        - better reading of date of expiry and employer fields
+
+- Bugfixes
+    - fixed crash in `PPDocumentFaceRecognizer`
+    - added missing document classifier property `documentClassifier` to `PPTemplatingRecognizerSettings`         
+
 ## 2.14.0
 
 - Updates and additions
