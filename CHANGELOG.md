@@ -1,3 +1,25 @@
+## 2.16.0
+
+- Updates and additions
+	- added support for reading front side of Hong Kong ID - use `PPHongKongIDFrontRecognizerSettings`
+	- added support for reading front and back side of Colombian ID - use `PPColombiaIDFrontRecognizerSettings` and `PPColombiaIDBackRecognizerSettings`
+	- added support for reading front and back side of United Arab Emirates ID - use `PPUnitedArabEmiratesIDFrontRecognizerSettings` and `PPUnitedArabEmiratesIDBackRecognizerSettings`
+	- added support for reading front side of New Zealand drivers license - use `PPNewZealandDLFrontRecognizerSettings`
+	
+- Improvements in ID scanning performance
+	- Improved reading of Belgium ID BRZ OPT2 field
+	- added support for reading Belgium MRZ with partial date of birth - `PPMrtdRecognizerSettings.allowUnverifiedResults` must be set to `true`
+	- added support for reading Kenya MRZ - `PPMrtdRecognizerSettings.allowUnverifiedResults` must be set to `true`
+	- improved `MyKadFrontSideRecognizer` and `MyTenteraRecognizer`:
+		- better reading of name field
+		- better reading of address field
+
+- Bugfixes	
+	- when setting DPI for full document image in concrete recognizer settings that has property `fullDocumentImageDPI`, exception is thrown if DPI value is not in the expected range `[100, 400]`
+	- fixed a crash in Templating API caused by using a `MultiDetector` with `DetectorRecognizer`
+        - fixed returning of face image when using `PPUnitedArabEmiratesIDFrontRecognizer`:
+            - fixed face image position
+
 ## 2.15.0
 
 - Updates and additions
