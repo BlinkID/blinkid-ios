@@ -1,3 +1,7 @@
+## 2.16.0
+
+- No changes
+
 ## 2.15.0
 
 - Renamed `PPMyKadRecognizerSettings` and `PPMyKadRecognizerResult` to `PPMyKadFrontRecognizerSettings` and `PPMyKadFrontRecognizerResult`

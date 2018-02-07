@@ -55,8 +55,8 @@
     /** 2. Setup the license key */
 
     // Visit www.microblink.com to get the license key for your app
-    settings.licenseSettings.licenseKey = @"KUGZRDAV-PMIPKKO2-G22VPDD7-YI4Y6AKL-PXXF3WGZ-3HM5TWOZ-3HM5S6PR-GP5POGXC";
-    // license key is valid temporarily - until 2018-03-01
+    settings.licenseSettings.licenseKey = @"YAKUYRUO-QOGR2M6G-UWBB3S2T-HHZCKCUK-F6TQJMGR-BBCGAQHU-Q62SSOWQ-45VZUMAH";
+    // license key is valid temporarily - until 2018-05-08
 
 
     /**

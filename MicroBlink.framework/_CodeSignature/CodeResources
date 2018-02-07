@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/PPAustraliaDLBackRecognizerSettings.h</key>
 		<data>
-		8DQ/4B0VzvBOPlcVOu1qqpMvTaA=
+		XgH0Ipv7Iamp7tbozGKLG7Nr7ms=
 		</data>
 		<key>Headers/PPAustraliaDLFrontRecognizerResult.h</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/PPAustraliaDLFrontRecognizerSettings.h</key>
 		<data>
-		Q5/e8h+a8kfppnGwjNi+OeLKAHc=
+		xhzRaMjhona2GFebQTBbVU0CYPM=
 		</data>
 		<key>Headers/PPAztecRecognizerResult.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
-		j9f6cGSEvAZOm4txOVpPaagcZA8=
+		phx57lT1XK2N3q+4fSW07uskn+U=
 		</data>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
 		<data>
@@ -147,6 +147,22 @@
 		<key>Headers/PPCameraSettings.h</key>
 		<data>
 		5bgHEukqwusGScJUHhlXRzI7Pjk=
+		</data>
+		<key>Headers/PPColombiaIDBackRecognizerResult.h</key>
+		<data>
+		ylZNiNllM+WC3a0yLKJlQ61jjLE=
+		</data>
+		<key>Headers/PPColombiaIDBackRecognizerSettings.h</key>
+		<data>
+		z4EYmcv51IIyx6ezKx2r8ZcPcYs=
+		</data>
+		<key>Headers/PPColombiaIDFrontRecognizerResult.h</key>
+		<data>
+		ZfY5KRs/CE1g5lUrCn3yxhKB31o=
+		</data>
+		<key>Headers/PPColombiaIDFrontRecognizerSettings.h</key>
+		<data>
+		B6AikjublpKuRUS7csDvmwn0EDs=
 		</data>
 		<key>Headers/PPCombinedRecognizerSettings.h</key>
 		<data>
@@ -282,7 +298,7 @@
 		</data>
 		<key>Headers/PPEudlRecognizerSettings.h</key>
 		<data>
-		SaNp0Pdr/4K2BILlqjAf+0SdXeM=
+		liAwJqeftWumWwyngW8PmGdtYOQ=
 		</data>
 		<key>Headers/PPFaceDetectorResult.h</key>
 		<data>
@@ -338,7 +354,7 @@
 		</data>
 		<key>Headers/PPGermanPassportRecognizerResult.h</key>
 		<data>
-		E06GxkN9FljrygYIYkFI3NbVA7s=
+		lNRwcp9hhDTmhS7lTtlvUc6v8B8=
 		</data>
 		<key>Headers/PPGermanPassportRecognizerSettings.h</key>
 		<data>
@@ -347,6 +363,14 @@
 		<key>Headers/PPGlareStatusOverlaySubview.h</key>
 		<data>
 		EnZzfLDXByxVSOLBcMcqHOM7sEA=
+		</data>
+		<key>Headers/PPHongKongIDFrontRecognizerResult.h</key>
+		<data>
+		BS3Q6UeR2CLuH2sBknW4jVl85/M=
+		</data>
+		<key>Headers/PPHongKongIDFrontRecognizerSettings.h</key>
+		<data>
+		6qAHIRsSVs0HHvFnlKHoM75zafo=
 		</data>
 		<key>Headers/PPIDCardOverlayViewController.h</key>
 		<data>
@@ -450,7 +474,7 @@
 		</data>
 		<key>Headers/PPMrtdRecognizerSettings.h</key>
 		<data>
-		9n7AteaSr2+XNdUnpO/HCSmS6Tk=
+		26Nu1SuM54Y7aA0e0kWUvMg39dw=
 		</data>
 		<key>Headers/PPMrtdSpecification.h</key>
 		<data>
@@ -474,7 +498,7 @@
 		</data>
 		<key>Headers/PPMyKadBackRecognizerSettings.h</key>
 		<data>
-		3qURS8DtqZfre89sShAAF+haqrQ=
+		K6aZ3N1JUz6797B+fOufGPSALu4=
 		</data>
 		<key>Headers/PPMyKadFrontRecognizerResult.h</key>
 		<data>
@@ -482,7 +506,7 @@
 		</data>
 		<key>Headers/PPMyKadFrontRecognizerSettings.h</key>
 		<data>
-		qfSAhuVRaVp/4wz8Qe83seJrSQQ=
+		kVkufg5o65OoCbzt3XSFLnJmFUY=
 		</data>
 		<key>Headers/PPMyTenteraRecognizerResult.h</key>
 		<data>
@@ -490,11 +514,19 @@
 		</data>
 		<key>Headers/PPMyTenteraRecognizerSettings.h</key>
 		<data>
-		oklVd+DdHr3dc8p97nwIc6GGQAk=
+		nIyBtr7FzpcjbT0kwWkgMN83MNc=
 		</data>
 		<key>Headers/PPNativeResult.h</key>
 		<data>
 		HSdWRhCGqykM28actPnOfF2MbzA=
+		</data>
+		<key>Headers/PPNewZealandDLFrontRecognizerResult.h</key>
+		<data>
+		KprY5vzv6E4Fd5AvF45iFdw0OYo=
+		</data>
+		<key>Headers/PPNewZealandDLFrontRecognizerSettings.h</key>
+		<data>
+		mU4kevos4QYIFAv27KM49pZWEJE=
 		</data>
 		<key>Headers/PPOcrEngineOptions.h</key>
 		<data>
@@ -820,6 +852,22 @@
 		<data>
 		WXEma8jOQEbVXvTXQDQqNgr6vek=
 		</data>
+		<key>Headers/PPUnitedArabEmiratesIDBackRecognizerResult.h</key>
+		<data>
+		bh5GTM21T7gbVFGPuvcVQjNE3tA=
+		</data>
+		<key>Headers/PPUnitedArabEmiratesIDBackRecognizerSettings.h</key>
+		<data>
+		Y/Ws+5hWM5JrBKHN4k2sUXJKMA0=
+		</data>
+		<key>Headers/PPUnitedArabEmiratesIDFrontRecognizerResult.h</key>
+		<data>
+		H5zBX3Tb/nvwJfeDEPMFw/HX4RQ=
+		</data>
+		<key>Headers/PPUnitedArabEmiratesIDFrontRecognizerSettings.h</key>
+		<data>
+		xoPgAjNsl7v5hY50mj3n0MBcoik=
+		</data>
 		<key>Headers/PPUsdlCombinedRecognizerResult.h</key>
 		<data>
 		Lf4mgdAwZJSdd1usv78nRtNMffU=
@@ -870,11 +918,11 @@
 		</data>
 		<key>Headers/PPiKadRecognizerSettings.h</key>
 		<data>
-		BQ8xOMgW0Voc6AMny1apPaIYM30=
+		oCkCg6WqZLWTrCCZdE8rvWdOWs4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HxvZGP86dx9pve9MH8ayAlshxeM=
+		iYle5LhF2TgUzklmLgERHnNEhQs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1008,11 +1056,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8DQ/4B0VzvBOPlcVOu1qqpMvTaA=
+			XgH0Ipv7Iamp7tbozGKLG7Nr7ms=
 			</data>
 			<key>hash2</key>
 			<data>
-			2aDChnX15ebiphJyOu4R7dKZSy4S3pizoBAWv7M5e1M=
+			uJmF7PYD0B7HUVqOd9LknKLYbBxa37foemRO+B4fXYc=
 			</data>
 		</dict>
 		<key>Headers/PPAustraliaDLFrontRecognizerResult.h</key>
@@ -1030,11 +1078,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q5/e8h+a8kfppnGwjNi+OeLKAHc=
+			xhzRaMjhona2GFebQTBbVU0CYPM=
 			</data>
 			<key>hash2</key>
 			<data>
-			GM1V9QYMkSsAIAt0IUVxndd4bEu8VYKGRAizjkLI7Uw=
+			AG5mePqSLzgDRJTNNwiYo1MvMwA3eYrTqsbbSqJVugw=
 			</data>
 		</dict>
 		<key>Headers/PPAztecRecognizerResult.h</key>
@@ -1184,11 +1232,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j9f6cGSEvAZOm4txOVpPaagcZA8=
+			phx57lT1XK2N3q+4fSW07uskn+U=
 			</data>
 			<key>hash2</key>
 			<data>
-			KAJdILAePxTicGwLr5i5SLpryDo26Jjch+spy7ZMOGY=
+			FxsqFQbSuRFLxysOwg9RIyGZz1yC5UAAZ9V+DZt2+cc=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
@@ -1277,6 +1325,50 @@
 			<key>hash2</key>
 			<data>
 			yfVi0+5Mm/42znaqBqfNYWVWihUSRLBsCfDXb5tEFWA=
+			</data>
+		</dict>
+		<key>Headers/PPColombiaIDBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ylZNiNllM+WC3a0yLKJlQ61jjLE=
+			</data>
+			<key>hash2</key>
+			<data>
+			h6aKGWZtc5weLfkfgamBfGzF9wV+ZKCBoinNewG7iD4=
+			</data>
+		</dict>
+		<key>Headers/PPColombiaIDBackRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z4EYmcv51IIyx6ezKx2r8ZcPcYs=
+			</data>
+			<key>hash2</key>
+			<data>
+			MH3T1EoO2JznuWW6lnnnaUFJM2iuw/1Te1DybydusuE=
+			</data>
+		</dict>
+		<key>Headers/PPColombiaIDFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZfY5KRs/CE1g5lUrCn3yxhKB31o=
+			</data>
+			<key>hash2</key>
+			<data>
+			OzASZHV4yz3soGATUXB7GHuYzVohYA/UJwd1YURF0Qs=
+			</data>
+		</dict>
+		<key>Headers/PPColombiaIDFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B6AikjublpKuRUS7csDvmwn0EDs=
+			</data>
+			<key>hash2</key>
+			<data>
+			t6Ss3/50GgBk+o55i7rRHMOURshNB/Drk6z3eISu1Pk=
 			</data>
 		</dict>
 		<key>Headers/PPCombinedRecognizerSettings.h</key>
@@ -1646,11 +1738,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SaNp0Pdr/4K2BILlqjAf+0SdXeM=
+			liAwJqeftWumWwyngW8PmGdtYOQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			vp6MxyLirL1sbZyHaQNpckZWHPASryg9rtBUb3aECYM=
+			AUBH5IYTKkyf5iHCaOon5kVet3kSfxgGdGWpPxfxgjg=
 			</data>
 		</dict>
 		<key>Headers/PPFaceDetectorResult.h</key>
@@ -1800,11 +1892,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E06GxkN9FljrygYIYkFI3NbVA7s=
+			lNRwcp9hhDTmhS7lTtlvUc6v8B8=
 			</data>
 			<key>hash2</key>
 			<data>
-			x4prEsTSWCoU/DCT0smuUlL/4f8NGCK5oAagmm8/zZw=
+			o/md3BmPCc2xUW+AYi6BWmV+zzbHBeVUEUFYUQiPIw0=
 			</data>
 		</dict>
 		<key>Headers/PPGermanPassportRecognizerSettings.h</key>
@@ -1827,6 +1919,28 @@
 			<key>hash2</key>
 			<data>
 			gnp5UGJFNWTzb8oga1uE2JPrEUg4dDBGhqB1I72wJjU=
+			</data>
+		</dict>
+		<key>Headers/PPHongKongIDFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BS3Q6UeR2CLuH2sBknW4jVl85/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			AiyqVFrT21s0EDoOA3XIhK4fUvQG6SpJO7muvlB+VDE=
+			</data>
+		</dict>
+		<key>Headers/PPHongKongIDFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6qAHIRsSVs0HHvFnlKHoM75zafo=
+			</data>
+			<key>hash2</key>
+			<data>
+			GAC9ODGi0GNHZXuVCqRRMqJKi2rHz5E8XE+5OssNw4U=
 			</data>
 		</dict>
 		<key>Headers/PPIDCardOverlayViewController.h</key>
@@ -2108,11 +2222,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9n7AteaSr2+XNdUnpO/HCSmS6Tk=
+			26Nu1SuM54Y7aA0e0kWUvMg39dw=
 			</data>
 			<key>hash2</key>
 			<data>
-			hFKH9XgTr3zoUPKNE2yyXy0GtnxGPfcHJfYr8GCXDPg=
+			kJn6Er7VgYaqLoSLuUT6AkRE8JPm3zbh142nTIoavqg=
 			</data>
 		</dict>
 		<key>Headers/PPMrtdSpecification.h</key>
@@ -2174,11 +2288,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3qURS8DtqZfre89sShAAF+haqrQ=
+			K6aZ3N1JUz6797B+fOufGPSALu4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y8behUP4jGXs8U8NbL6Lqi3tfKQCleHdEVRoxgGVtrc=
+			fxtsR9E+aDNuwJP4Zynt/QgoopU9nEH3x2RcQqkB6cQ=
 			</data>
 		</dict>
 		<key>Headers/PPMyKadFrontRecognizerResult.h</key>
@@ -2196,11 +2310,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qfSAhuVRaVp/4wz8Qe83seJrSQQ=
+			kVkufg5o65OoCbzt3XSFLnJmFUY=
 			</data>
 			<key>hash2</key>
 			<data>
-			WEE4JMuD6xjkrC33QxaNjaefvoVZlRcG0OtnC2M723Y=
+			dxPOsbd21q5HePTBPBlhhyHIYtm8xu6+ef9+xZM26Qo=
 			</data>
 		</dict>
 		<key>Headers/PPMyTenteraRecognizerResult.h</key>
@@ -2218,11 +2332,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oklVd+DdHr3dc8p97nwIc6GGQAk=
+			nIyBtr7FzpcjbT0kwWkgMN83MNc=
 			</data>
 			<key>hash2</key>
 			<data>
-			BsY2eRQdcch/Hu8iJu0Qwd3xYD9diU2DiXqFgN7Wy8I=
+			oHuR3iBQ+lE4/Rp3KO3QUzBpX5v80mjjWnuwnLUXvHM=
 			</data>
 		</dict>
 		<key>Headers/PPNativeResult.h</key>
@@ -2234,6 +2348,28 @@
 			<key>hash2</key>
 			<data>
 			a8nDvOfJi8QY2y5mD+Or3fhiP7AxiT2hsFVpqkhUwGk=
+			</data>
+		</dict>
+		<key>Headers/PPNewZealandDLFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KprY5vzv6E4Fd5AvF45iFdw0OYo=
+			</data>
+			<key>hash2</key>
+			<data>
+			N12Xxd/RlUktVgqUSKEQrbOhatAoBWwA51tU8JGa4Ro=
+			</data>
+		</dict>
+		<key>Headers/PPNewZealandDLFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mU4kevos4QYIFAv27KM49pZWEJE=
+			</data>
+			<key>hash2</key>
+			<data>
+			m65hfvpIIxKA9LcBFQMKS9lYZJf4y1slKokHCe0zg7M=
 			</data>
 		</dict>
 		<key>Headers/PPOcrEngineOptions.h</key>
@@ -3127,6 +3263,50 @@
 			N/YGaD/Q+o5K9+wHeDGyiMAwCyOEKSUAsagmoaxpCHU=
 			</data>
 		</dict>
+		<key>Headers/PPUnitedArabEmiratesIDBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bh5GTM21T7gbVFGPuvcVQjNE3tA=
+			</data>
+			<key>hash2</key>
+			<data>
+			qoRIix6zgy5uzDNnesZkIbnwb8ZiMyoT7jJMDF1umjE=
+			</data>
+		</dict>
+		<key>Headers/PPUnitedArabEmiratesIDBackRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y/Ws+5hWM5JrBKHN4k2sUXJKMA0=
+			</data>
+			<key>hash2</key>
+			<data>
+			zsRjYRXesy0gWBZRcnUq4USFqrYwXzWemXAPqows/wU=
+			</data>
+		</dict>
+		<key>Headers/PPUnitedArabEmiratesIDFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H5zBX3Tb/nvwJfeDEPMFw/HX4RQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			SSm2mrzGHZ78Jidj2n80Wi/CiotezMXgwWv6Eic+6r0=
+			</data>
+		</dict>
+		<key>Headers/PPUnitedArabEmiratesIDFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xoPgAjNsl7v5hY50mj3n0MBcoik=
+			</data>
+			<key>hash2</key>
+			<data>
+			gO03Brmog7PWY7iaFz211aJOZ3wOD38AR/ILxZ+hVVk=
+			</data>
+		</dict>
 		<key>Headers/PPUsdlCombinedRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
@@ -3263,11 +3443,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BQ8xOMgW0Voc6AMny1apPaIYM30=
+			oCkCg6WqZLWTrCCZdE8rvWdOWs4=
 			</data>
 			<key>hash2</key>
 			<data>
-			GljwzDOwougscVPF5DiXpRLaEfGKVRV+ilkMsWiKrPk=
+			gFiqsjHDxh/69IigLU84R91CMiBVA8guQwucoW4MK2Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

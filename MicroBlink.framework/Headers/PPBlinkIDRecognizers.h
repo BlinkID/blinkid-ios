@@ -41,6 +41,12 @@
 #import "PPCzIDCombinedRecognizerSettings.h"
 #import "PPCzIDCombinedRecognizerResult.h"
 
+// Colombia
+#import "PPColombiaIDBackRecognizerSettings.h"
+#import "PPColombiaIDBackRecognizerResult.h"
+#import "PPColombiaIDFrontRecognizerSettings.h"
+#import "PPColombiaIDFrontRecognizerResult.h"
+
 // Document Face
 #import "PPDocumentFaceRecognizerSettings.h"
 #import "PPDocumentFaceRecognizerResult.h"
@@ -48,6 +54,10 @@
 // EU Driver License
 #import "PPEudlRecognizerSettings.h"
 #import "PPEudlRecognizerResult.h"
+
+// Hong Kong
+#import "PPHongKongIDFrontRecognizerSettings.h"
+#import "PPHongKongIDFrontRecognizerResult.h"
 
 // Germany
 #import "PPGermanIDFrontRecognizerSettings.h"
@@ -83,6 +93,10 @@
 #import "PPMrtdCombinedRecognizerSettings.h"
 #import "PPMrtdCombinedRecognizerResult.h"
 #import "PPMrzFilter.h"
+
+// New Zealand
+#import "PPNewZealandDLFrontRecognizerSettings.h"
+#import "PPNewZealandDLFrontRecognizerResult.h"
 
 // Indonesia
 #import "PPIndonesianIDFrontRecognizerSettings.h"
@@ -147,6 +161,12 @@
 // USDL
 #import "PPUsdlRecognizerSettings.h"
 #import "PPUsdlRecognizerResult.h"
+
+// United Arab Emirates
+#import "PPUnitedArabEmiratesIDFrontRecognizerResult.h"
+#import "PPUnitedArabEmiratesIDFrontRecognizerSettings.h"
+#import "PPUnitedArabEmiratesIDBackRecognizerResult.h"
+#import "PPUnitedArabEmiratesIDBackRecognizerSettings.h"
 
 // Use all recognizers from BlinkInput
 #import "PPBlinkInputRecognizers.h"

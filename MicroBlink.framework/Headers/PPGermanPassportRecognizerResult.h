@@ -6,13 +6,13 @@
 //  Copyright © 2016 MicroBlink Ltd. All rights reserved.
 //
 
-#import "PPDetectorRecognizerResult.h"
+#import "PPMrtdRecognizerResult.h"
 
 /**
  * Class representing values obtained when scanning front side of German ID
  */
 PP_CLASS_AVAILABLE_IOS(6.0)
-@interface PPGermanPassportRecognizerResult : PPDetectorRecognizerResult
+@interface PPGermanPassportRecognizerResult : PPMrtdRecognizerResult
 
 /**
  * The surname of the German Passport owner.
