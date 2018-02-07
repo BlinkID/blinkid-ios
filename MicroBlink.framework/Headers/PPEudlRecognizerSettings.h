@@ -91,6 +91,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 
 /**
  * Property got setting DPI for full document images
+ * Valid ranges are [100,400]. Setting DPI out of valid ranges throws an exception
  *
  * Default: 250.0
  */

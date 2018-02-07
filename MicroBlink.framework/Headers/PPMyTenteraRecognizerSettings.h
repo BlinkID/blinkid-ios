@@ -40,18 +40,11 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @property (nonatomic, assign) BOOL extractReligion;
 
 /**
- * Defines if address should be extracted from MyTentera
+ * Defines if full name and address should be extracted from MyTentera
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractAddress;
-
-/**
- * Defines if owner's full name should be extracted from MyTentera
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractFullName;
+@property (nonatomic, assign) BOOL extractFullNameAndAddress;
 
 /**
  * Sets whether face image from ID card should be sent to didOutputMetadata method of scanDelegate object.
@@ -78,6 +71,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 
 /**
  * Property got setting DPI for full document images
+ * Valid ranges are [100,400]. Setting DPI out of valid ranges throws an exception
  *
  * Default: 250.0
  */
