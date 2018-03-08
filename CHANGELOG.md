@@ -1,3 +1,9 @@
+## 2.16.1
+
+- Bugfixes
+    - fixed incorrect setting of missing dates to current date in MRTD recognizers. If date is not present in MRTD, the corresponding getter will now return nil
+    - fixed an error where disabling extraction of some elements on  `PPNewZealandDLFrontRecognizerSettings`  did not work correctly
+
 ## 2.16.0
 
 - Updates and additions
