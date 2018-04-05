@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
-		phx57lT1XK2N3q+4fSW07uskn+U=
+		zpENoeBIlvQ+Qog25e4IDtrIXPw=
 		</data>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/PPCoordinatorDelegate.h</key>
 		<data>
-		fk1thDd7YO8TmsJeVi5MsKUug/0=
+		H5viUb0VzMsSzq4MZy8AE8oRfVc=
 		</data>
 		<key>Headers/PPCroIDBackRecognizerResult.h</key>
 		<data>
@@ -283,6 +283,14 @@
 		<key>Headers/PPDotsOverlaySubview.h</key>
 		<data>
 		J17/lEyC/2sOjJzh8e6f26jCUJY=
+		</data>
+		<key>Headers/PPEgyptIDFrontRecognizerResult.h</key>
+		<data>
+		S7q2qDdWbhEcCNNKXL6RdCh5T5c=
+		</data>
+		<key>Headers/PPEgyptIDFrontRecognizerSettings.h</key>
+		<data>
+		C6dLvF3G7MuItYi2FiP3Xatu8uw=
 		</data>
 		<key>Headers/PPEmailOcrParserFactory.h</key>
 		<data>
@@ -400,6 +408,30 @@
 		<data>
 		sdFGTxr0AOS2EO22s2PdUHFwXx0=
 		</data>
+		<key>Headers/PPJordanIDBackRecognizerResult.h</key>
+		<data>
+		iog0uykZiv7A6n5qjW9o+3YAaHU=
+		</data>
+		<key>Headers/PPJordanIDBackRecognizerSettings.h</key>
+		<data>
+		Uy7KZyAHANTVxH7QgdNUWnOIPAw=
+		</data>
+		<key>Headers/PPJordanIDCombinedRecognizerResult.h</key>
+		<data>
+		CiPAYsdIVblOXTkyYNrhTF9wCgM=
+		</data>
+		<key>Headers/PPJordanIDCombinedRecognizerSettings.h</key>
+		<data>
+		tjm7KHnQivmLYyzfgPTPOm9dZ04=
+		</data>
+		<key>Headers/PPJordanIDFrontRecognizerResult.h</key>
+		<data>
+		MlKqnGWNjkslzQd6zQ11wcnaeyA=
+		</data>
+		<key>Headers/PPJordanIDFrontRecognizerSettings.h</key>
+		<data>
+		aq1fCv1N0G6QjeVoPZh54vxbmqQ=
+		</data>
 		<key>Headers/PPLicensePlatesParserFactory.h</key>
 		<data>
 		Zn6RJgB/Sq5ViGSH6SJe1N4jb1w=
@@ -415,6 +447,14 @@
 		<key>Headers/PPLivenessError.h</key>
 		<data>
 		hRzOLPuBnl8a4emqbQ5+p5oB3Q8=
+		</data>
+		<key>Headers/PPMalaysianDLFrontRecognizerResult.h</key>
+		<data>
+		RvZQmu9K1/uG/BZDTxT+30ZJ8JM=
+		</data>
+		<key>Headers/PPMalaysianDLFrontRecognizerSettings.h</key>
+		<data>
+		csaFcxF7m8ddouYmTKvyiuz7bf8=
 		</data>
 		<key>Headers/PPMetadata.h</key>
 		<data>
@@ -466,7 +506,7 @@
 		</data>
 		<key>Headers/PPMrtdDocumentType.h</key>
 		<data>
-		WIIUeQ7rx1Qz3uiNTfLp+VXLlhk=
+		dKM2a4dJLnidCrib3Ewz9BG/Ovs=
 		</data>
 		<key>Headers/PPMrtdRecognizerResult.h</key>
 		<data>
@@ -474,7 +514,7 @@
 		</data>
 		<key>Headers/PPMrtdRecognizerSettings.h</key>
 		<data>
-		26Nu1SuM54Y7aA0e0kWUvMg39dw=
+		JaJh8yNwLFWfPT6k5CGSPFwblco=
 		</data>
 		<key>Headers/PPMrtdSpecification.h</key>
 		<data>
@@ -922,7 +962,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/9ajgoiQ8GwVKlTifTr4FWSaQ7c=
+		+lOpS7zASO/GUTIuc+V9681W490=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1232,11 +1272,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			phx57lT1XK2N3q+4fSW07uskn+U=
+			zpENoeBIlvQ+Qog25e4IDtrIXPw=
 			</data>
 			<key>hash2</key>
 			<data>
-			FxsqFQbSuRFLxysOwg9RIyGZz1yC5UAAZ9V+DZt2+cc=
+			QQ8p1gz1Uf6QgPjX6dLDUXf51BVCitIxin5BcfXuhZs=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
@@ -1397,11 +1437,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fk1thDd7YO8TmsJeVi5MsKUug/0=
+			H5viUb0VzMsSzq4MZy8AE8oRfVc=
 			</data>
 			<key>hash2</key>
 			<data>
-			yWHOAL5s5zd7QNgxAUZQgGZiDqZPRrfe8SfWlA5fZg8=
+			/VlN7fAPTGeoIgFJgNiR36G4fiMxdyg1uKKHMr14vNc=
 			</data>
 		</dict>
 		<key>Headers/PPCroIDBackRecognizerResult.h</key>
@@ -1699,6 +1739,28 @@
 			<key>hash2</key>
 			<data>
 			4Z3goSBv8o9SsVdTXxQOdJLPHSatnpZBdECAZ7MJH1M=
+			</data>
+		</dict>
+		<key>Headers/PPEgyptIDFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			S7q2qDdWbhEcCNNKXL6RdCh5T5c=
+			</data>
+			<key>hash2</key>
+			<data>
+			1fBlzfEEkh7y5Wo5n8ptmP0Kws0brrBTXgGxDj9Gpzg=
+			</data>
+		</dict>
+		<key>Headers/PPEgyptIDFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C6dLvF3G7MuItYi2FiP3Xatu8uw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Sod5x0JWUEVi7ZEM2WW+z6XbBt1Ee8zpu+GPWyc5GNY=
 			</data>
 		</dict>
 		<key>Headers/PPEmailOcrParserFactory.h</key>
@@ -2020,6 +2082,72 @@
 			rIOwuqZGGaHgQXrp0EJ5jQG6vPC4i85pwsMh5f63W24=
 			</data>
 		</dict>
+		<key>Headers/PPJordanIDBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iog0uykZiv7A6n5qjW9o+3YAaHU=
+			</data>
+			<key>hash2</key>
+			<data>
+			QTkRSaebKt06jo944CprUuNFB5i9/thsLMLIFWXuxbQ=
+			</data>
+		</dict>
+		<key>Headers/PPJordanIDBackRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Uy7KZyAHANTVxH7QgdNUWnOIPAw=
+			</data>
+			<key>hash2</key>
+			<data>
+			U686+0ZUVfzgkDmuecmeULNa4OhW/4vZDzbm0Pt7Luw=
+			</data>
+		</dict>
+		<key>Headers/PPJordanIDCombinedRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CiPAYsdIVblOXTkyYNrhTF9wCgM=
+			</data>
+			<key>hash2</key>
+			<data>
+			22QgDsXcMbzHCPhokKyor2rzoco4dSugejb7e1cSJrw=
+			</data>
+		</dict>
+		<key>Headers/PPJordanIDCombinedRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tjm7KHnQivmLYyzfgPTPOm9dZ04=
+			</data>
+			<key>hash2</key>
+			<data>
+			uKEYgq+3y+c+9apwOtoXQec/NX/1fWRMEzYi8mOaQDI=
+			</data>
+		</dict>
+		<key>Headers/PPJordanIDFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MlKqnGWNjkslzQd6zQ11wcnaeyA=
+			</data>
+			<key>hash2</key>
+			<data>
+			jueijLza9Jq8V5gKY+WH2zNMJCNPqrxu7XNdJXFwuf8=
+			</data>
+		</dict>
+		<key>Headers/PPJordanIDFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aq1fCv1N0G6QjeVoPZh54vxbmqQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			rsAqjWuzwx+YxE1IiiGA9QOOnqUkm/fcDqnoI65FjoY=
+			</data>
+		</dict>
 		<key>Headers/PPLicensePlatesParserFactory.h</key>
 		<dict>
 			<key>hash</key>
@@ -2062,6 +2190,28 @@
 			<key>hash2</key>
 			<data>
 			1rwYxQtM0ltOT+0n6HF2Z9VC2FP3CFFFsImgwipG8Qw=
+			</data>
+		</dict>
+		<key>Headers/PPMalaysianDLFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RvZQmu9K1/uG/BZDTxT+30ZJ8JM=
+			</data>
+			<key>hash2</key>
+			<data>
+			gCJKQ4wgOWgN3t3QLc4DLRYU+Fy0SA4UythrYacrRvo=
+			</data>
+		</dict>
+		<key>Headers/PPMalaysianDLFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			csaFcxF7m8ddouYmTKvyiuz7bf8=
+			</data>
+			<key>hash2</key>
+			<data>
+			zomDwzSVi0IS66coLIZQSgTD6QuOSVZBLAR7gIBcwnY=
 			</data>
 		</dict>
 		<key>Headers/PPMetadata.h</key>
@@ -2200,11 +2350,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WIIUeQ7rx1Qz3uiNTfLp+VXLlhk=
+			dKM2a4dJLnidCrib3Ewz9BG/Ovs=
 			</data>
 			<key>hash2</key>
 			<data>
-			XDznAzNtZFrBx5Zui6C8/lQAK3Lp0jP8g5YcTrRRpFc=
+			D0puEaHRFBEjUXEOsgVMEfabK+3NexxSQgXHKo7Hihw=
 			</data>
 		</dict>
 		<key>Headers/PPMrtdRecognizerResult.h</key>
@@ -2222,11 +2372,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			26Nu1SuM54Y7aA0e0kWUvMg39dw=
+			JaJh8yNwLFWfPT6k5CGSPFwblco=
 			</data>
 			<key>hash2</key>
 			<data>
-			kJn6Er7VgYaqLoSLuUT6AkRE8JPm3zbh142nTIoavqg=
+			9ZllvxQsot08A9FzYoWW2LMfxstoXuUAjLSny++ntxs=
 			</data>
 		</dict>
 		<key>Headers/PPMrtdSpecification.h</key>

@@ -55,6 +55,9 @@
 #import "PPEudlRecognizerSettings.h"
 #import "PPEudlRecognizerResult.h"
 
+#import "PPEgyptIDFrontRecognizerSettings.h"
+#import "PPEgyptIDFrontRecognizerResult.h"
+
 // Hong Kong
 #import "PPHongKongIDFrontRecognizerSettings.h"
 #import "PPHongKongIDFrontRecognizerResult.h"
@@ -71,6 +74,14 @@
 #import "PPGermanIDCombinedRecognizerSettings.h"
 #import "PPGermanIDCombinedRecognizerResult.h"
 
+//Jordan
+#import "PPJordanIDFrontRecognizerSettings.h"
+#import "PPJordanIDFrontRecognizerResult.h"
+#import "PPJordanIDBackRecognizerSettings.h"
+#import "PPJordanIDBackRecognizerResult.h"
+#import "PPJordanIDCombinedRecognizerSettings.h"
+#import "PPJordanIDCombinedRecognizerResult.h"
+
 // Malaysian immigration IDs (iKad)
 #import "PPiKadRecognizerSettings.h"
 #import "PPiKadRecognizerResult.h"
@@ -86,6 +97,10 @@
 // Malaysian army IDs (MyTentera)
 #import "PPMyTenteraRecognizerSettings.h"
 #import "PPMyTenteraRecognizerResult.h"
+
+// Malaysian DLs
+#import "PPMalaysianDLFrontRecognizerSettings.h"
+#import "PPMalaysianDLFrontRecognizerResult.h"
 
 // MRTD
 #import "PPMrtdRecognizerSettings.h"
