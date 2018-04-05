@@ -36,7 +36,11 @@ typedef NS_ENUM(NSUInteger, PPMrtdDocumentType) {
     /**
      *  US Green Card
      */
-    PPMrtdTypeGreenCard
+    PPMrtdTypeGreenCard,
+    /**
+     *  Malaysian Passport IMM13P
+     */
+    PPMrtdTypeMalaysianPassportImm13P
 };
 
 // Ignore unused method warning
@@ -59,6 +63,10 @@ static NSString *mrtdDocumentTypeToString(PPMrtdDocumentType documentType) {
 
         case PPMrtdTypeGreenCard:
             return @"Green Card";
+            break;
+            
+        case PPMrtdTypeMalaysianPassportImm13P:
+            return @"Malaysian Passport IMM13P";
             break;
 
         default:

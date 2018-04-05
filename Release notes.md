@@ -1,3 +1,25 @@
+## 2.17.0
+
+- Updates and additions
+    - added support for reading front and back side of Jordan ID - use `PPJordanIDFrontRecognizerSettings` and `PPJordanIDBackRecognizerSettings`
+    - added Jordan Combined Recognizer - use `PPJordanIDCombinedRecognizerSettings`
+    - added support for reading Egyptian ID Front - use `PPEgyptIDFrontRecognizerSettings`
+    - added support for reading Malaysian DL Front - use `PPMalaysianDLFrontRecognizerSettings`
+    - added support for reading Malaysian Passport IMM13P MRTD - be sure to set `allowSpecialCharacters` to `true` when creating `PPMrtdRecognizerSettings`
+    
+- Improvements in ID scanning performance
+    - Improved reading Malaysian MyKad and MyTentera
+    - Improved reading VINs
+    - Improved parsing of USDL
+    
+- Bugfixes
+    - fixed returning of face image when using `PPUnitedArabEmiratesIDFrontRecognizer`:
+        - fixed face image position
+    - fixed crash in `PPDocumentFaceRecognizer`
+    - Fixed expiry date for magnetic stripe USDL subtype - using day of birth not last day of the month for license expiry day
+    - Fixed rare crashes that sometimes happened when trying to fetch unparsed dates
+    - fixed crashes that happened when trying to activate the torch while video input hasn't loaded
+
 ## 2.16.1
 
 - Bugfixes

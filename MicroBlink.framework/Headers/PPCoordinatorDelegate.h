@@ -27,6 +27,11 @@
 @optional
 
 /**
+ * Called when coordinator has released all resources and has finished deallocating
+ */
+- (void)coordinatorDidDealloc;
+
+/**
  * Called when the recognition of a current image is initiated
  */
 - (void)coordinatorDidStartDetection:(PPCoordinator *)coordinator;
