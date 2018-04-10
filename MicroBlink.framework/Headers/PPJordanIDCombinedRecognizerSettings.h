@@ -16,11 +16,18 @@ PP_CLASS_AVAILABLE_IOS(6.0)
 @interface PPJordanIDCombinedRecognizerSettings : PPCombinedRecognizerSettings
 
 /**
- * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document.
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document front side.
  * This image will be sent to scan delegate during recognition process if displaying of full document image
  * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
  */
-+ (NSString *)FULL_DOCUMENT_IMAGE;
++ (NSString *)FULL_DOCUMENT_IMAGE_FRONT;
+
+/**
+ * Name of the image sent to didOutputMetadata method of scanDelegate object that contains full document back side.
+ * This image will be sent to scan delegate during recognition process if displaying of full document image
+ * is enabled via displayFullDocumentImage property and receiving of dewarpedImage in MetadataSettings is enabled.
+ */
++ (NSString *)FULL_DOCUMENT_IMAGE_BACK;
 
 /**
  * Name of the image sent to didOutputMetadata method of scanDelegate object that contains face.
@@ -42,7 +49,7 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  *
  * Default: NO
  */
-@property (nonatomic, assign) BOOL encodeFullDocument;
+@property (nonatomic, assign) BOOL encodeFullDocumentImage;
 
 /**
  * Sets whether face image from Jordan ID should be sent to didOutputMetadata method of scanDelegate object.

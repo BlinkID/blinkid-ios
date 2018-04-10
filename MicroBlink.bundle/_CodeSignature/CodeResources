@@ -82,27 +82,27 @@
 		</data>
 		<key>model_arabic.zzip</key>
 		<data>
-		LE7J+kCYr31pgEurrgWhAxjekps=
+		yKjrtOqj0bcmjf61+R2G6QTkn8E=
 		</data>
 		<key>model_eudl.zzip</key>
 		<data>
-		sseLd+TsJ7n4vKKW/1BowrPBkA0=
+		DlnY66Xxl+O/E8sJqRekb+T47Ow=
 		</data>
 		<key>model_general_blink_ocr.zzip</key>
 		<data>
-		H7ynjraTl/uK/InhIYWiG+XT424=
+		pjC8MpeUG2doZ8O5GcuwNIiCzlQ=
 		</data>
 		<key>model_malaysian.zzip</key>
 		<data>
-		FcwEUDBK0E/5lBO92sE3keKlCIA=
+		HQCq1NXSU1VYeW2vTa+ulyCuDTM=
 		</data>
 		<key>model_micr.zzip</key>
 		<data>
-		EIODraO5FsHrJYmv/Dqo0/RPjys=
+		V1bdHHL/UCfbVPppPLzTLlk5rkQ=
 		</data>
 		<key>model_mrtd.zzip</key>
 		<data>
-		FiMuGG4UyKD/UgPJiuduhpMnFFE=
+		q+BYZJUp4Di/NxgErvwQvBXkOx8=
 		</data>
 		<key>torchoff.png</key>
 		<data>
@@ -352,66 +352,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LE7J+kCYr31pgEurrgWhAxjekps=
+			yKjrtOqj0bcmjf61+R2G6QTkn8E=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/ScB5jSCQHaT4gWSE4friKP3wZIdeNcfDlgW+rvSP8=
+			KHbw9zWIUOxtt1Nv8s4CmqTqrIt991yHwnULbdKT0WY=
 			</data>
 		</dict>
 		<key>model_eudl.zzip</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sseLd+TsJ7n4vKKW/1BowrPBkA0=
+			DlnY66Xxl+O/E8sJqRekb+T47Ow=
 			</data>
 			<key>hash2</key>
 			<data>
-			qhDeG0DhzrA9UVqdWyjcycWBS8Zt5lYRWH8J9eKsahA=
+			I11c4D0xlCt03WmAL5sZgbCqfoXMRuJAPudrEDpfETc=
 			</data>
 		</dict>
 		<key>model_general_blink_ocr.zzip</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H7ynjraTl/uK/InhIYWiG+XT424=
+			pjC8MpeUG2doZ8O5GcuwNIiCzlQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			1z7xR1TK3tnXttXixtnJhY0HJzZuEzdou2P3QpOvdIk=
+			PnS0ivlhNQHZL/jtRI+eS8R0KrIQwAXFtiB9/6oLZR0=
 			</data>
 		</dict>
 		<key>model_malaysian.zzip</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FcwEUDBK0E/5lBO92sE3keKlCIA=
+			HQCq1NXSU1VYeW2vTa+ulyCuDTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ol/QVHLlK4fOpSbabdVheJ6nPAXoBX8TUe0TWcAiIVI=
+			WlaCAanV8UO3L02x3UExpM83IJmy8IR2q+Vtann7s84=
 			</data>
 		</dict>
 		<key>model_micr.zzip</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EIODraO5FsHrJYmv/Dqo0/RPjys=
+			V1bdHHL/UCfbVPppPLzTLlk5rkQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			I5eblIw+oZZuya3NXzckgpyehndRFfbtyAK2GgBTCHI=
+			F1oIaAridPHBua2bIurFIfE+m9L5MsMEeOVJQTQwpiE=
 			</data>
 		</dict>
 		<key>model_mrtd.zzip</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FiMuGG4UyKD/UgPJiuduhpMnFFE=
+			q+BYZJUp4Di/NxgErvwQvBXkOx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			XcSwQlWiZ52Kyocl/zXQnlCwx/CbZ/pIGLcgfD+3c24=
+			02/iCNgX5NLOBpWsca08HX4ypUmjuUFAvPtQDbzT2Pc=
 			</data>
 		</dict>
 		<key>torchoff.png</key>

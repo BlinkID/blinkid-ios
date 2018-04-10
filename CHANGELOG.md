@@ -1,3 +1,11 @@
+## 2.17.1
+
+- Bugfixes
+    - Fixed errors related to fetching document number from Egyptian ID
+    - Fixed errors related to fetching validFrom and validUntil dates from Malaysian DL
+    - Fixed errors related to returning and encoding face and full document images when using `PPJordanIDCombinedRecognizerSettings`
+    - Fixed dateOfExpiry property type from `NSString` to `NSDate` on  `PPJordanIDCombinedRecognizerSettings`
+
 ## 2.17.0
 
 - Updates and additions
