@@ -1,3 +1,8 @@
+## 2.17.2
+
+- Bugfixes
+    - Fixed error where app upload to the store would be rejected because of missing bitcode
+
 ## 2.17.1
 
 - Bugfixes
