@@ -1,3 +1,8 @@
+## 2.17.3
+
+- Bugfixes
+    - Added support for nonstandard pdf417 barcodes  which wrongly encode number of data codewords
+
 ## 2.17.2
 
 - Bugfixes
