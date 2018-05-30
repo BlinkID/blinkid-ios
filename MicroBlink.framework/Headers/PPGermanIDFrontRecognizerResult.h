@@ -59,4 +59,9 @@ PP_CLASS_AVAILABLE_IOS(6.0)
  */
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
 
+/**
+ * The can number of the German ID
+ */
+@property (nonatomic, readonly, nullable) NSString *canNumber;
+
 @end

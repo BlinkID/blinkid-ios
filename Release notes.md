@@ -1,3 +1,16 @@
+## 2.18.0
+
+- Updates and additions
+    - Added support for reading front side of Swedish Driver's License- use `PPSwedenDLFrontRecognizerSettings`
+    - Added ability to extend full document cropping zone on `PPGermanIDFrontRecognizerSettings`
+    - Added support for CAN number extraction on German ID Front
+    - Added support for iKAD MM55 ID's
+
+- Improvements in ID scanning performance
+    - Improved reading of document number on Hong Kong ID
+    - Improvements when returning partial data in Document Face Recognizer
+    - Improvements in USDL data parsing
+
 ## 2.17.3
 
 - Bugfixes
