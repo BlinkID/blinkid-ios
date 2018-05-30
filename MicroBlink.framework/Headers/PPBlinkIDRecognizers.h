@@ -165,6 +165,10 @@
 #import "PPSlovenianIDCombinedRecognizerSettings.h"
 #import "PPSlovenianIDCombinedRecognizerResult.h"
 
+//Sweden
+#import "PPSwedenDLFrontRecognizerResult.h"
+#import "PPSwedenDLFrontRecognizerSettings.h"
+
 // Switzerland
 #import "PPSwissIDBackRecognizerSettings.h"
 #import "PPSwissIDBackRecognizerResult.h"

@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/PPBlinkIDRecognizers.h</key>
 		<data>
-		zpENoeBIlvQ+Qog25e4IDtrIXPw=
+		9umUQTxFJt3LiZvKsrmQKNNFn6s=
 		</data>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
 		<data>
@@ -346,11 +346,11 @@
 		</data>
 		<key>Headers/PPGermanIDFrontRecognizerResult.h</key>
 		<data>
-		pEsyjdpxmjm+I02mmWW5TkjJb8k=
+		dvKah74xfelf6A5+AVgYdVCkg/s=
 		</data>
 		<key>Headers/PPGermanIDFrontRecognizerSettings.h</key>
 		<data>
-		JggQFu2GA9vXp78AaTbLm5bxH0s=
+		7K/qnnaQizc9WuEWPphzItlolRg=
 		</data>
 		<key>Headers/PPGermanOldIDRecognizerResult.h</key>
 		<data>
@@ -836,6 +836,14 @@
 		<data>
 		tkNk/eS5M6aVrJyuQfcgWcWY1mY=
 		</data>
+		<key>Headers/PPSwedenDLFrontRecognizerResult.h</key>
+		<data>
+		kJUvdFZLfzieIZOvZFT3vZbqN9M=
+		</data>
+		<key>Headers/PPSwedenDLFrontRecognizerSettings.h</key>
+		<data>
+		wrBoYUyNVHwngqeUtP1QDsQ3MvU=
+		</data>
 		<key>Headers/PPSwissIDBackRecognizerResult.h</key>
 		<data>
 		R8m9VP7Iou7RX3Zx6klFzUiqQEg=
@@ -962,7 +970,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OBrrz/9yfjdgf7OIfXUZ+ZczsnQ=
+		Yknh9WohNC1J64woqszmgUTvIuo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1272,11 +1280,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zpENoeBIlvQ+Qog25e4IDtrIXPw=
+			9umUQTxFJt3LiZvKsrmQKNNFn6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			QQ8p1gz1Uf6QgPjX6dLDUXf51BVCitIxin5BcfXuhZs=
+			M5wb1Id0Kq8TDvv5jKHKZFtN2FCFBMdGwEM04p3FrWo=
 			</data>
 		</dict>
 		<key>Headers/PPBlinkInputRecognizerResult.h</key>
@@ -1910,22 +1918,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pEsyjdpxmjm+I02mmWW5TkjJb8k=
+			dvKah74xfelf6A5+AVgYdVCkg/s=
 			</data>
 			<key>hash2</key>
 			<data>
-			5dQmHnCRH+OCtJp3JckX+jfLxp+g9AtaXOirgCqLwRU=
+			F9b7n33d3Vdk+NTw51jfk6exfrsA9Scw67nogGh1trg=
 			</data>
 		</dict>
 		<key>Headers/PPGermanIDFrontRecognizerSettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JggQFu2GA9vXp78AaTbLm5bxH0s=
+			7K/qnnaQizc9WuEWPphzItlolRg=
 			</data>
 			<key>hash2</key>
 			<data>
-			KHTzLaqFku3zNCFjK6p+1sN7Np505H9D5fLzwag6tko=
+			gp1vredb1EbjPi7xeYGqoEvHoHd8ZZ8CbL29NpWKdFw=
 			</data>
 		</dict>
 		<key>Headers/PPGermanOldIDRecognizerResult.h</key>
@@ -3257,6 +3265,28 @@
 			<key>hash2</key>
 			<data>
 			aq3b7xj7vpg767pQXDTenEVq0cZ9TzQxPfsl5M8KHfk=
+			</data>
+		</dict>
+		<key>Headers/PPSwedenDLFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kJUvdFZLfzieIZOvZFT3vZbqN9M=
+			</data>
+			<key>hash2</key>
+			<data>
+			KRj0pslQme87zWlVtS6pgxtNXT/2hYpkB76ZB8LSaP0=
+			</data>
+		</dict>
+		<key>Headers/PPSwedenDLFrontRecognizerSettings.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wrBoYUyNVHwngqeUtP1QDsQ3MvU=
+			</data>
+			<key>hash2</key>
+			<data>
+			WPKQYmo6OeWWgjqdxl/v8KQVbsW3/1GD4V88Cp58sE8=
 			</data>
 		</dict>
 		<key>Headers/PPSwissIDBackRecognizerResult.h</key>
