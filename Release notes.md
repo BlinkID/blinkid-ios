@@ -1,3 +1,8 @@
+## 2.18.1
+
+- Bugfixes
+    - `coordinatorDidDealloc` method in `PPCoordinatorDelegate` is now correctly called when all resources are released
+
 ## 2.18.0
 
 - Updates and additions
