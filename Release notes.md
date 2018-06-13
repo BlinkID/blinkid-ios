@@ -1,3 +1,9 @@
+## 2.18.2
+
+- Bugfixes
+    - fixed `UnitedArabEmiratesIDBackRecognizer`:
+        - enabled reading of UAE back side where MRZ starts with IR
+
 ## 2.18.1
 
 - Bugfixes
