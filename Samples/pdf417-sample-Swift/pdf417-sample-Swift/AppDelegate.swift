@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BlinkID-sample-Swift
+//  pdf417-sample-Swift
 //
-//  Created by Dino on 22/12/15.
+//  Created by Dino on 17/12/15.
 //  Copyright © 2015 Dino. All rights reserved.
 //
 
@@ -14,8 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 

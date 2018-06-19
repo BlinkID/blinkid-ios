@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BlinkID-sample-Swift
+//  BlinkOCR-sample-Swift
 //
-//  Created by Dino on 22/12/15.
+//  Created by Dino on 15/12/15.
 //  Copyright © 2015 Dino. All rights reserved.
 //
 
@@ -14,8 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Valid until: 2018-09-27
+        MBMicroblinkSDK.sharedInstance().setLicenseResource("blinkinput-swift-license", withExtension: "txt", inSubdirectory: "License", for: Bundle.main)
         return true
     }
 

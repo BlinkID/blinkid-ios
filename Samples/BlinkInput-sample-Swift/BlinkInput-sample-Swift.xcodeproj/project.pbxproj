@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184958DC20AD8E8700F27C8D /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 184958DA20AD8E8700F27C8D /* MicroBlink.bundle */; };
+		184958DD20AD8E8700F27C8D /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184958DB20AD8E8700F27C8D /* MicroBlink.framework */; };
+		184958E820AD908400F27C8D /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 184958DB20AD8E8700F27C8D /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		310E459A1C20612300B546BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310E45991C20612300B546BD /* AppDelegate.swift */; };
+		310E459F1C20612300B546BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310E459D1C20612300B546BD /* Main.storyboard */; };
+		310E45A11C20612300B546BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310E45A01C20612300B546BD /* Assets.xcassets */; };
+		310E45A41C20612300B546BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310E45A21C20612300B546BD /* LaunchScreen.storyboard */; };
+		310E45DC1C206DB500B546BD /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45DB1C206DB500B546BD /* Accelerate.framework */; };
+		310E45DE1C206DB900B546BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45DD1C206DB900B546BD /* AVFoundation.framework */; };
+		310E45E01C206DC100B546BD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45DF1C206DC100B546BD /* AudioToolbox.framework */; };
+		310E45E21C206DEB00B546BD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45E11C206DEB00B546BD /* CoreMedia.framework */; };
+		310E45E41C206DF100B546BD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45E31C206DF100B546BD /* libiconv.tbd */; };
+		310E45E61C206DF600B546BD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45E51C206DF600B546BD /* libc++.tbd */; };
+		3139C9371C32AE72005AC32C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C9361C32AE72005AC32C /* MobileCoreServices.framework */; };
+		31BF2FD41D95498C008816F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF2FD31D95498C008816F3 /* ViewController.swift */; };
+		A2DA179F2074FFB900A59D11 /* License in Resources */ = {isa = PBXBuildFile; fileRef = A2DA179E2074FFB900A59D11 /* License */; };
+		A2FE137A1F75097F00C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE13791F75097F00C6F1EA /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2FE13781F75097500C6F1EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				184958E820AD908400F27C8D /* MicroBlink.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		184958DA20AD8E8700F27C8D /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
+		184958DB20AD8E8700F27C8D /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		310E45961C20612300B546BD /* BlinkInput-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkInput-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		310E45991C20612300B546BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		310E459E1C20612300B546BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		310E45A01C20612300B546BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		310E45A31C20612300B546BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		310E45A51C20612300B546BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		310E45DB1C206DB500B546BD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		310E45DD1C206DB900B546BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		310E45DF1C206DC100B546BD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		310E45E11C206DEB00B546BD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		310E45E31C206DF100B546BD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		310E45E51C206DF600B546BD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3139C9361C32AE72005AC32C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		31BF2FD31D95498C008816F3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2DA179E2074FFB900A59D11 /* License */ = {isa = PBXFileReference; lastKnownFileType = folder; path = License; sourceTree = "<group>"; };
+		A2FE13791F75097F00C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		310E45931C20612300B546BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2FE137A1F75097F00C6F1EA /* libz.tbd in Frameworks */,
+				310E45E61C206DF600B546BD /* libc++.tbd in Frameworks */,
+				310E45E41C206DF100B546BD /* libiconv.tbd in Frameworks */,
+				184958DD20AD8E8700F27C8D /* MicroBlink.framework in Frameworks */,
+				3139C9371C32AE72005AC32C /* MobileCoreServices.framework in Frameworks */,
+				310E45E21C206DEB00B546BD /* CoreMedia.framework in Frameworks */,
+				310E45E01C206DC100B546BD /* AudioToolbox.framework in Frameworks */,
+				310E45DE1C206DB900B546BD /* AVFoundation.framework in Frameworks */,
+				310E45DC1C206DB500B546BD /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		310E458D1C20612300B546BD = {
+			isa = PBXGroup;
+			children = (
+				310E45981C20612300B546BD /* BlinkInput-sample-Swift */,
+				310E45AB1C2063F300B546BD /* Frameworks */,
+				310E45971C20612300B546BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		310E45971C20612300B546BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				310E45961C20612300B546BD /* BlinkInput-sample-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		310E45981C20612300B546BD /* BlinkInput-sample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				A2DA179E2074FFB900A59D11 /* License */,
+				310E45991C20612300B546BD /* AppDelegate.swift */,
+				31BF2FD31D95498C008816F3 /* ViewController.swift */,
+				310E459D1C20612300B546BD /* Main.storyboard */,
+				310E45A01C20612300B546BD /* Assets.xcassets */,
+				310E45A21C20612300B546BD /* LaunchScreen.storyboard */,
+				310E45A51C20612300B546BD /* Info.plist */,
+			);
+			path = "BlinkInput-sample-Swift";
+			sourceTree = "<group>";
+		};
+		310E45AB1C2063F300B546BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184958DA20AD8E8700F27C8D /* MicroBlink.bundle */,
+				184958DB20AD8E8700F27C8D /* MicroBlink.framework */,
+				3139C9361C32AE72005AC32C /* MobileCoreServices.framework */,
+				310E45E11C206DEB00B546BD /* CoreMedia.framework */,
+				310E45DF1C206DC100B546BD /* AudioToolbox.framework */,
+				310E45DD1C206DB900B546BD /* AVFoundation.framework */,
+				310E45DB1C206DB500B546BD /* Accelerate.framework */,
+				A2FE13791F75097F00C6F1EA /* libz.tbd */,
+				310E45E51C206DF600B546BD /* libc++.tbd */,
+				310E45E31C206DF100B546BD /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		310E45951C20612300B546BD /* BlinkInput-sample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 310E45A81C20612300B546BD /* Build configuration list for PBXNativeTarget "BlinkInput-sample-Swift" */;
+			buildPhases = (
+				310E45921C20612300B546BD /* Sources */,
+				310E45931C20612300B546BD /* Frameworks */,
+				310E45941C20612300B546BD /* Resources */,
+				A2FE13781F75097500C6F1EA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlinkInput-sample-Swift";
+			productName = "BlinkOCR-sample-Swift";
+			productReference = 310E45961C20612300B546BD /* BlinkInput-sample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		310E458E1C20612300B546BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Dino;
+				TargetAttributes = {
+					310E45951C20612300B546BD = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CQTJWP89J7;
+						LastSwiftMigration = 0900;
+					};
+				};
+			};
+			buildConfigurationList = 310E45911C20612300B546BD /* Build configuration list for PBXProject "BlinkInput-sample-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 310E458D1C20612300B546BD;
+			productRefGroup = 310E45971C20612300B546BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				310E45951C20612300B546BD /* BlinkInput-sample-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		310E45941C20612300B546BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184958DC20AD8E8700F27C8D /* MicroBlink.bundle in Resources */,
+				310E45A41C20612300B546BD /* LaunchScreen.storyboard in Resources */,
+				310E45A11C20612300B546BD /* Assets.xcassets in Resources */,
+				310E459F1C20612300B546BD /* Main.storyboard in Resources */,
+				A2DA179F2074FFB900A59D11 /* License in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		310E45921C20612300B546BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31BF2FD41D95498C008816F3 /* ViewController.swift in Sources */,
+				310E459A1C20612300B546BD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		310E459D1C20612300B546BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				310E459E1C20612300B546BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		310E45A21C20612300B546BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				310E45A31C20612300B546BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		310E45A61C20612300B546BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		310E45A71C20612300B546BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../../;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		310E45A91C20612300B546BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "BlinkInput-sample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkInput-sample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		310E45AA1C20612300B546BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = CQTJWP89J7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "BlinkInput-sample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.BlinkInput-sample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		310E45911C20612300B546BD /* Build configuration list for PBXProject "BlinkInput-sample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310E45A61C20612300B546BD /* Debug */,
+				310E45A71C20612300B546BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		310E45A81C20612300B546BD /* Build configuration list for PBXNativeTarget "BlinkInput-sample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				310E45A91C20612300B546BD /* Debug */,
+				310E45AA1C20612300B546BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 310E458E1C20612300B546BD /* Project object */;
+}
