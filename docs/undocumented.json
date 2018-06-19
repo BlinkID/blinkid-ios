@@ -1,0 +1,2567 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAmountParser.h",
+      "line": 22,
+      "symbol": "MBAmountParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAmountParserResult.h",
+      "line": 21,
+      "symbol": "MBAmountParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustraliaDlBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBAustraliaDlBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustraliaDlBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBAustraliaDlBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustraliaDlFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBAustraliaDlFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustraliaDlFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBAustraliaDlFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaCombinedRecognizer.h",
+      "line": 41,
+      "symbol": "MBAustriaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaCombinedRecognizerResult.h",
+      "line": 34,
+      "symbol": "MBAustriaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBAustriaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaIdBackRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBAustriaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaIdFrontRecognizer.h",
+      "line": 34,
+      "symbol": "MBAustriaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaIdFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBAustriaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaPassportRecognizer.h",
+      "line": 30,
+      "symbol": "MBAustriaPassportRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBAustriaPassportRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBAustriaPassportRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlaySettings.h",
+      "line": 18,
+      "symbol": "MBBarcodeOverlaySettings.displayBarcodeDots",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlaySettings.h",
+      "line": 20,
+      "symbol": "MBBarcodeOverlaySettings.displayViewfinder",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlayViewController.h",
+      "line": 20,
+      "symbol": "MBBarcodeOverlayViewController",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeRecognizer.h",
+      "line": 24,
+      "symbol": "MBBarcodeRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBBarcodeRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeResult.h",
+      "line": 12,
+      "symbol": "MBBarcodeType.MBBarcodeNone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBlinkInputRecognizer.h",
+      "line": 24,
+      "symbol": "MBBlinkInputRecognizer.-initWithProcessors:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBlinkInputRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBBlinkInputRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBColombiaIdBackRecognizer.h",
+      "line": 24,
+      "symbol": "MBColombiaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBColombiaIdBackRecognizerResult.h",
+      "line": 19,
+      "symbol": "MBColombiaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBColombiaIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBColombiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBColombiaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBColombiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCombinedFullDocumentImageResult.h",
+      "line": 13,
+      "symbol": "MBCombinedFullDocumentImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCombinedRecognizer.h",
+      "line": 14,
+      "symbol": "MBCombinedRecognizer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCombinedRecognizerResult.h",
+      "line": 11,
+      "symbol": "MBCombinedRecognizerResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaCombinedRecognizer.h",
+      "line": 36,
+      "symbol": "MBCroatiaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaCombinedRecognizerResult.h",
+      "line": 32,
+      "symbol": "MBCroatiaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaIdBackRecognizer.h",
+      "line": 30,
+      "symbol": "MBCroatiaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaIdBackRecognizerResult.h",
+      "line": 25,
+      "symbol": "MBCroatiaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaIdFrontRecognizer.h",
+      "line": 33,
+      "symbol": "MBCroatiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCroatiaIdFrontRecognizerResult.h",
+      "line": 28,
+      "symbol": "MBCroatiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 28,
+      "symbol": "MBCustomOverlayViewController.recognizerCollection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 29,
+      "symbol": "MBCustomOverlayViewController.cameraSettings",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 30,
+      "symbol": "MBCustomOverlayViewController.metadataDelegates",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 31,
+      "symbol": "MBCustomOverlayViewController.scanningRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 32,
+      "symbol": "MBCustomOverlayViewController.recognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 41,
+      "symbol": "MBCustomOverlayViewController.-initWithRecognizerCollection:cameraSettings:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
+      "line": 76,
+      "symbol": "MBCustomOverlayViewController.-reconfigureRecognizers:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaCombinedRecognizer.h",
+      "line": 36,
+      "symbol": "MBCzechiaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaCombinedRecognizerResult.h",
+      "line": 32,
+      "symbol": "MBCzechiaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBCzechiaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBCzechiaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBCzechiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCzechiaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBCzechiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 20,
+      "symbol": "MBDateFormat.MBDateFormatDDMMYYYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 21,
+      "symbol": "MBDateFormat.MBDateFormatDDMMYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 22,
+      "symbol": "MBDateFormat.MBDateFormatMMDDYYYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 23,
+      "symbol": "MBDateFormat.MBDateFormatMMDDYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 24,
+      "symbol": "MBDateFormat.MBDateFormatYYYYMMDD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 25,
+      "symbol": "MBDateFormat.MBDateFormatYYMMDD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 26,
+      "symbol": "MBDateFormat.MBDateFormatDDMONTHYYYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 27,
+      "symbol": "MBDateFormat.MBDateFormatDDMONTHYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 28,
+      "symbol": "MBDateFormat.MBDateFormatMONTHDDYYYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 29,
+      "symbol": "MBDateFormat.MBDateFormatMONTHDDYY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 30,
+      "symbol": "MBDateFormat.MBDateFormatYYYYMONTHDD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 31,
+      "symbol": "MBDateFormat.MBDateFormatYYMONTHDD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 34,
+      "symbol": "MBDateFormatArray",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 35,
+      "symbol": "MBDateSeparatorCharsArray",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParser.h",
+      "line": 45,
+      "symbol": "MBDateParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateParserResult.h",
+      "line": 22,
+      "symbol": "MBDateParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDateResult.h",
+      "line": 23,
+      "symbol": "MBDateResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDetectorRecognizer.h",
+      "line": 25,
+      "symbol": "MBDetectorRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDetectorRecognizer.h",
+      "line": 27,
+      "symbol": "MBDetectorRecognizer.-initWithQuadWithSizeDetector:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDetectorRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBDetectorRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDetectorResult.h",
+      "line": 40,
+      "symbol": "MBDetectorResult.detectionCode",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDetectorResult.h",
+      "line": 41,
+      "symbol": "MBDetectorResult.detectionStatus",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDewarpPolicy.h",
+      "line": 19,
+      "symbol": "MBDewarpPolicy.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDigitalSignature.h",
+      "line": 11,
+      "symbol": "MBDigitalSignature",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDigitalSignatureResult.h",
+      "line": 13,
+      "symbol": "MBDigitalSignatureResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentDetector.h",
+      "line": 24,
+      "symbol": "MBDocumentDetector.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentDetectorResult.h",
+      "line": 22,
+      "symbol": "MBDocumentDetectorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentFaceRecognizer.h",
+      "line": 28,
+      "symbol": "MBDocumentFaceRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentFaceRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBDocumentFaceRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 17,
+      "symbol": "MBRange",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 18,
+      "symbol": "MBRange._MBRange.start",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 18,
+      "symbol": "_MBRange.start",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 19,
+      "symbol": "MBRange._MBRange.stop",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 19,
+      "symbol": "_MBRange.stop",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 35,
+      "symbol": "MBScale",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 36,
+      "symbol": "MBScale._MBScale.scale",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 36,
+      "symbol": "_MBScale.scale",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 37,
+      "symbol": "MBScale._MBScale.tolerance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 37,
+      "symbol": "_MBScale.tolerance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSpecification.h",
+      "line": 108,
+      "symbol": "MBDocumentSpecification.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSubview.h",
+      "line": 56,
+      "symbol": "MBDocumentSubview.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationInstructionsSubview.h",
+      "line": 13,
+      "symbol": "MBDocumentVerificationInstructionsSubview",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationInstructionsSubview.h",
+      "line": 15,
+      "symbol": "MBDocumentVerificationInstructionsSubview.instructionsLabel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationInstructionsSubview.h",
+      "line": 17,
+      "symbol": "MBDocumentVerificationInstructionsSubview.instructionsImageView",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 15,
+      "symbol": "MBDocumentVerificationSubview",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 17,
+      "symbol": "MBDocumentVerificationSubview.helpLabel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 19,
+      "symbol": "MBDocumentVerificationSubview.helpImageView",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 21,
+      "symbol": "MBDocumentVerificationSubview.-animateHelp",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 23,
+      "symbol": "MBDocumentVerificationSubview.documentVerificationSubviewDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 27,
+      "symbol": "MBDocumentVerificationSubviewDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationSubview.h",
+      "line": 29,
+      "symbol": "MBDocumentVerificationSubviewDelegate.-documentVerificationSubviewDidFinishAnimation:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDotsSubview.h",
+      "line": 23,
+      "symbol": "MBDotsSubview.dotsLayer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDotsSubview.h",
+      "line": 42,
+      "symbol": "MBDotsSubview.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEgyptIdFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBEgyptIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEgyptIdFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBEgyptIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEmailParserResult.h",
+      "line": 20,
+      "symbol": "MBEmailParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodeFaceImage.h",
+      "line": 11,
+      "symbol": "MBEncodeFaceImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodeFullDocumentImage.h",
+      "line": 11,
+      "symbol": "MBEncodeFullDocumentImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodeMrzImage.h",
+      "line": 11,
+      "symbol": "MBEncodeMrzImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodeSignatureImage.h",
+      "line": 11,
+      "symbol": "MBEncodeSignatureImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodedCombinedFullDocumentImageResult.h",
+      "line": 11,
+      "symbol": "MBEncodedCombinedFullDocumentImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodedFaceImageResult.h",
+      "line": 11,
+      "symbol": "MBEncodedFaceImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodedFullDocumentImageResult.h",
+      "line": 11,
+      "symbol": "MBEncodedFullDocumentImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodedMrzImageResult.h",
+      "line": 11,
+      "symbol": "MBEncodedMrzImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEncodedSignatureImageResult.h",
+      "line": 11,
+      "symbol": "MBEncodedSignatureImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEudlRecognizer.h",
+      "line": 27,
+      "symbol": "MBEudlRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBEudlRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBEudlRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 11,
+      "symbol": "MBExceptionName",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 13,
+      "symbol": "MBIllegalModificationException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 14,
+      "symbol": "MBInvalidLicenseKeyException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 15,
+      "symbol": "MBInvalidLicenseeKeyException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 16,
+      "symbol": "MBInvalidLicenseResourceException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 17,
+      "symbol": "MBInvalidBundleException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 18,
+      "symbol": "MBMissingSettingsException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBException.h",
+      "line": 19,
+      "symbol": "MBInvalidArgumentException",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFaceImage.h",
+      "line": 11,
+      "symbol": "MBFaceImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFaceImageDpi.h",
+      "line": 11,
+      "symbol": "MBFaceImageDpi",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFaceImageResult.h",
+      "line": 13,
+      "symbol": "MBFaceImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFieldByFieldOverlaySettings.h",
+      "line": 24,
+      "symbol": "MBFieldByFieldOverlaySettings.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "line": 30,
+      "symbol": "MBFieldByFieldOverlayViewController.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "line": 32,
+      "symbol": "MBFieldByFieldOverlayViewController.-initWithNibName:bundle:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFieldByFieldOverlayViewController.h",
+      "line": 34,
+      "symbol": "MBFieldByFieldOverlayViewController.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFirstSideFinishedRecognizerRunnerDelegate.h",
+      "line": 13,
+      "symbol": "MBFirstSideFinishedRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFirstSideFinishedRecognizerRunnerViewControllerDelegate.h",
+      "line": 15,
+      "symbol": "MBFirstSideFinishedRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "line": 24,
+      "symbol": "MBFrameGrabberRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "line": 25,
+      "symbol": "MBFrameGrabberRecognizer.-initWithFrameGrabberDelegate:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "line": 43,
+      "symbol": "MBFrameGrabberRecognizerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFullDocumentImage.h",
+      "line": 11,
+      "symbol": "MBFullDocumentImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFullDocumentImageDpi.h",
+      "line": 8,
+      "symbol": "MBFullDocumentImageDpi",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBFullDocumentImageResult.h",
+      "line": 13,
+      "symbol": "MBFullDocumentImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 27,
+      "symbol": "CGDelta",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 30,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 30,
+      "symbol": "CGLine",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 30,
+      "symbol": "CGLine.",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 31,
+      "symbol": ".point1",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 31,
+      "symbol": "CGLine..point1",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 32,
+      "symbol": ".point2",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 32,
+      "symbol": "CGLine..point2",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 38,
+      "symbol": "CGDeltaMake",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 41,
+      "symbol": "CGPointWithDelta",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 44,
+      "symbol": "CGPointDistance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 47,
+      "symbol": "CGPointAlongLine",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 50,
+      "symbol": "CGPointRotatedAroundPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 55,
+      "symbol": "CGLineMake",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 58,
+      "symbol": "CGLineEqualToLine",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 61,
+      "symbol": "CGLineMidPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 64,
+      "symbol": "CGLineDirection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 67,
+      "symbol": "CGLinesAngle",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 70,
+      "symbol": "CGLinesIntersectAtPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 73,
+      "symbol": "CGLineLength",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 76,
+      "symbol": "CGLineScale",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 79,
+      "symbol": "CGLineTranslate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 82,
+      "symbol": "CGLineScaleOnMidPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 85,
+      "symbol": "CGLineDelta",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 88,
+      "symbol": "CGLinesAreParallel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 93,
+      "symbol": "CGRectTopLeftPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 94,
+      "symbol": "CGRectTopRightPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 95,
+      "symbol": "CGRectBottomLeftPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 96,
+      "symbol": "CGRectBottomRightPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 99,
+      "symbol": "CGRectResize",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 102,
+      "symbol": "CGRectInsetEdge",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 113,
+      "symbol": "CGRectCenterPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 116,
+      "symbol": "CGRectClosestTwoCornerPoints",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 120,
+      "symbol": "CGLineIntersectsRectAtPoint",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 129,
+      "symbol": "CGControlPointsForArcBetweenPointsWithRadius",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGeometry.h",
+      "line": 135,
+      "symbol": "scanningRegionForFrameInBounds",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyCombinedRecognizer.h",
+      "line": 32,
+      "symbol": "MBGermanyCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyCombinedRecognizerResult.h",
+      "line": 29,
+      "symbol": "MBGermanyCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBGermanyIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBGermanyIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBGermanyIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBGermanyIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyOldIdRecognizer.h",
+      "line": 28,
+      "symbol": "MBGermanyOldIdRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyOldIdRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBGermanyOldIdRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyPassportRecognizer.h",
+      "line": 28,
+      "symbol": "MBGermanyPassportRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGermanyPassportRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBGermanyPassportRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareDetection.h",
+      "line": 11,
+      "symbol": "MBGlareDetection",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareRecognizerRunnerDelegate.h",
+      "line": 13,
+      "symbol": "MBGlareRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareRecognizerRunnerViewControllerDelegate.h",
+      "line": 15,
+      "symbol": "MBGlareRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareStatusSubview.h",
+      "line": 20,
+      "symbol": "MBGlareStatusSubview.label",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareStatusSubview.h",
+      "line": 22,
+      "symbol": "MBGlareStatusSubview.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareStatusSubview.h",
+      "line": 24,
+      "symbol": "MBGlareStatusSubview.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareStatusSubview.h",
+      "line": 26,
+      "symbol": "MBGlareStatusSubview.-initWithFrame:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBGlareStatusSubview.h",
+      "line": 28,
+      "symbol": "MBGlareStatusSubview.-glareDetectionFinishedWithResult:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBHongKongIdFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBHongKongIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBHongKongIdFrontRecognizer.h",
+      "line": 60,
+      "symbol": "MBHongKongIdFrontRecognizer.extractSex",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBHongKongIdFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBHongKongIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIbanParser.h",
+      "line": 22,
+      "symbol": "MBIbanParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIbanParserResult.h",
+      "line": 21,
+      "symbol": "MBIbanParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIkadRecognizer.h",
+      "line": 28,
+      "symbol": "MBIkadRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIkadRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBIkadRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBImageProcessingRecognizerRunnerDelegate.h",
+      "line": 11,
+      "symbol": "MBImageProcessingRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBImageReturnProcessor.h",
+      "line": 22,
+      "symbol": "MBImageReturnProcessor.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBImageReturnProcessorResult.h",
+      "line": 22,
+      "symbol": "MBImageReturnProcessorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIndonesiaIdFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBIndonesiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIndonesiaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBIndonesiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanCombinedRecognizer.h",
+      "line": 34,
+      "symbol": "MBJordanCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanCombinedRecognizerResult.h",
+      "line": 29,
+      "symbol": "MBJordanCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBJordanIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBJordanIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBJordanIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBJordanIdFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBJordanIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyMRTDRecognizerResult.h",
+      "line": 18,
+      "symbol": "MBLegacyMRTDRecognizerResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyMRTDRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBLegacyMRTDRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyRecognizer.h",
+      "line": 19,
+      "symbol": "MBLegacyRecognizer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyRecognizer.h",
+      "line": 21,
+      "symbol": "MBLegacyRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyRecognizerResult.h",
+      "line": 19,
+      "symbol": "MBLegacyRecognizerResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLegacyRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBLegacyRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLicensePlatesParser.h",
+      "line": 22,
+      "symbol": "MBLicensePlatesParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBLicensePlatesParserResult.h",
+      "line": 20,
+      "symbol": "MBLicensePlatesParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaDlFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaDlFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaDlFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBMalaysiaDlFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMetadata.h",
+      "line": 25,
+      "symbol": "MBMetadata.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMetadata.h",
+      "line": 27,
+      "symbol": "MBMetadata.-initWithName:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMicroblinkApp.h",
+      "line": 37,
+      "symbol": "MBMicroblinkApp",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMicroblinkApp.h",
+      "line": 39,
+      "symbol": "MBMicroblinkApp.language",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMicroblinkSDK.h",
+      "line": 19,
+      "symbol": "MBMicroblinkSDK.+sharedInstance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdCombinedRecognizer.h",
+      "line": 37,
+      "symbol": "MBMrtdCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdCombinedRecognizerResult.h",
+      "line": 34,
+      "symbol": "MBMrtdCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdDetector.h",
+      "line": 23,
+      "symbol": "MBMrtdDetector.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdDetectorResult.h",
+      "line": 21,
+      "symbol": "MBMrtdDetectorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizer.h",
+      "line": 30,
+      "symbol": "MBMrtdRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizer.h",
+      "line": 88,
+      "symbol": "MBMrzFilter",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizerResult.h",
+      "line": 25,
+      "symbol": "MBMrtdRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdSpecification.h",
+      "line": 34,
+      "symbol": "MBMrtdSpecification.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzImage.h",
+      "line": 11,
+      "symbol": "MBMrzImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzImageResult.h",
+      "line": 13,
+      "symbol": "MBMrzImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzResult.h",
+      "line": 19,
+      "symbol": "MBMrtdDocumentType.MBMrtdTypeUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzResult.h",
+      "line": 36,
+      "symbol": "MBMrzResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzResult.h",
+      "line": 38,
+      "symbol": "MBMrzResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadBackRecognizer.h",
+      "line": 28,
+      "symbol": "MBMyKadBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadBackRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBMyKadBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBMyKadFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBMyKadFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyTenteraRecognizer.h",
+      "line": 28,
+      "symbol": "MBMyTenteraRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyTenteraRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBMyTenteraRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBNativeResult.h",
+      "line": 14,
+      "symbol": "MBNativeResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBNewZealandDlFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBNewZealandDlFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBNewZealandDlFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBNewZealandDlFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOcrLayout.h",
+      "line": 74,
+      "symbol": "MBOcrLayout.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOcrLayout.h",
+      "line": 192,
+      "symbol": "MBCharWithVariants",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOcrLayout.h",
+      "line": 211,
+      "symbol": "MBCharWithVariants.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOcrLayout.h",
+      "line": 260,
+      "symbol": "MBOcrChar.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOcrLayout.h",
+      "line": 302,
+      "symbol": "MBPosition.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBOverlayViewController.h",
+      "line": 33,
+      "symbol": "MBOverlayViewController.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserGroupProcessor.h",
+      "line": 24,
+      "symbol": "MBParserGroupProcessor.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserGroupProcessor.h",
+      "line": 26,
+      "symbol": "MBParserGroupProcessor.-initWithParsers:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserGroupProcessorResult.h",
+      "line": 21,
+      "symbol": "MBParserGroupProcessorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserGroupProcessorResult.h",
+      "line": 23,
+      "symbol": "MBParserGroupProcessorResult.ocrLayout",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserResult.h",
+      "line": 41,
+      "symbol": "MBParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBParserResult.h",
+      "line": 43,
+      "symbol": "MBParserResult.resultState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPdf417Recognizer.h",
+      "line": 23,
+      "symbol": "MBPdf417Recognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPdf417RecognizerResult.h",
+      "line": 22,
+      "symbol": "MBPdf417RecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandCombinedRecognizer.h",
+      "line": 34,
+      "symbol": "MBPolandCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandCombinedRecognizerResult.h",
+      "line": 28,
+      "symbol": "MBPolandCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBPolandIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBPolandIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandIdFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBPolandIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBPolandIdFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBPolandIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBProcessorGroup.h",
+      "line": 23,
+      "symbol": "MBProcessorGroup.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBProcessorResult.h",
+      "line": 41,
+      "symbol": "MBProcessorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBProcessorResult.h",
+      "line": 43,
+      "symbol": "MBProcessorResult.resultState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBQuadDetector.h",
+      "line": 22,
+      "symbol": "MBQuadDetector.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBQuadDetectorResult.h",
+      "line": 21,
+      "symbol": "MBQuadDetectorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBQuadWithSizeDetector.h",
+      "line": 24,
+      "symbol": "MBQuadWithSizeDetector.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBQuadWithSizeDetectorResult.h",
+      "line": 24,
+      "symbol": "MBQuadWithSizeDetectorResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRawParser.h",
+      "line": 24,
+      "symbol": "MBRawParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRawParserResult.h",
+      "line": 21,
+      "symbol": "MBRawParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizer.h",
+      "line": 35,
+      "symbol": "MBRecognizer.-getOptimalHudOrientation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerCollection.h",
+      "line": 51,
+      "symbol": "MBRecognizerCollection.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerCollection.h",
+      "line": 53,
+      "symbol": "MBRecognizerCollection.-initWithRecognizers:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerResult.h",
+      "line": 41,
+      "symbol": "MBRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerResult.h",
+      "line": 43,
+      "symbol": "MBRecognizerResult.resultState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 29,
+      "symbol": "MBRecognizerRunner.metadataDelegates",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 30,
+      "symbol": "MBRecognizerRunner.scanningRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 31,
+      "symbol": "MBRecognizerRunner.imageProcessingRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 32,
+      "symbol": "MBRecognizerRunner.stringProcessingRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 34,
+      "symbol": "MBRecognizerRunner.coordinator",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 36,
+      "symbol": "MBRecognizerRunner.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 41,
+      "symbol": "MBRecognizerRunner.-resetState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunner.h",
+      "line": 43,
+      "symbol": "MBRecognizerRunner.-resetState:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "line": 22,
+      "symbol": "MBRecognizerRunnerMetadataDelegates.debugRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "line": 23,
+      "symbol": "MBRecognizerRunnerMetadataDelegates.detectionRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "line": 24,
+      "symbol": "MBRecognizerRunnerMetadataDelegates.ocrRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "line": 25,
+      "symbol": "MBRecognizerRunnerMetadataDelegates.glareRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "line": 26,
+      "symbol": "MBRecognizerRunnerMetadataDelegates.firstSideFinishedRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "line": 22,
+      "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.debugRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "line": 23,
+      "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.detectionRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "line": 24,
+      "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.ocrRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "line": 25,
+      "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.glareRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "line": 26,
+      "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.firstSideFinishedRecognizerRunnerViewControllerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRegexParser.h",
+      "line": 29,
+      "symbol": "MBRegexParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRegexParserResult.h",
+      "line": 21,
+      "symbol": "MBRegexParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRomaniaIdFrontRecognizer.h",
+      "line": 27,
+      "symbol": "MBRomaniaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRomaniaIdFrontRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBRomaniaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBScanElement.h",
+      "line": 38,
+      "symbol": "MBScanElement.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaCombinedRecognizer.h",
+      "line": 32,
+      "symbol": "MBSerbiaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaCombinedRecognizerResult.h",
+      "line": 31,
+      "symbol": "MBSerbiaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBSerbiaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSerbiaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBSerbiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSerbiaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBSerbiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSignatureImage.h",
+      "line": 11,
+      "symbol": "MBSignatureImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSignatureImageDpi.h",
+      "line": 11,
+      "symbol": "MBSignatureImageDpi",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSignatureImageResult.h",
+      "line": 13,
+      "symbol": "MBSignatureImageResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSimNumberRecognizer.h",
+      "line": 22,
+      "symbol": "MBSimNumberRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSimNumberRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSimNumberRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeCombinedRecognizer.h",
+      "line": 34,
+      "symbol": "MBSingaporeCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeCombinedRecognizerResult.h",
+      "line": 30,
+      "symbol": "MBSingaporeCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBSingaporeIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSingaporeIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeIdFrontRecognizer.h",
+      "line": 26,
+      "symbol": "MBSingaporeIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSingaporeIdFrontRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSingaporeIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaCombinedRecognizer.h",
+      "line": 34,
+      "symbol": "MBSlovakiaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaCombinedRecognizerResult.h",
+      "line": 31,
+      "symbol": "MBSlovakiaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBSlovakiaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSlovakiaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBSlovakiaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSlovakiaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBSlovakiaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaCombinedRecognizer.h",
+      "line": 33,
+      "symbol": "MBSloveniaCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaCombinedRecognizerResult.h",
+      "line": 29,
+      "symbol": "MBSloveniaCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBSloveniaIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSloveniaIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBSloveniaIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSloveniaIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBSloveniaIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
+      "line": 10,
+      "symbol": "MBStringProcessingRecognizerRunnerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "line": 21,
+      "symbol": "MBSuccessFrameGrabberRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "line": 22,
+      "symbol": "MBSuccessFrameGrabberRecognizer.-initWithRecognizer:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBSuccessFrameGrabberRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwedenDlFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBSwedenDlFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwedenDlFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBSwedenDlFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBSwitzerlandIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdBackRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBSwitzerlandIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBSwitzerlandIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBSwitzerlandIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandPassportRecognizer.h",
+      "line": 27,
+      "symbol": "MBSwitzerlandPassportRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandPassportRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBSwitzerlandPassportRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTapToFocusSubview.h",
+      "line": 25,
+      "symbol": "MBTapToFocusSubview.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTapToFocusSubview.h",
+      "line": 27,
+      "symbol": "MBTapToFocusSubview.-willFocusAtPoint:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTemplatingClass.h",
+      "line": 24,
+      "symbol": "MBTemplatingClass.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTemplatingClass.h",
+      "line": 60,
+      "symbol": "MBTemplatingClassifier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTemplatingClass.h",
+      "line": 63,
+      "symbol": "MBTemplatingClassifier.-classify",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTemplatingRecognizer.h",
+      "line": 24,
+      "symbol": "MBTemplatingRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTemplatingRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBTemplatingRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTopUpParser.h",
+      "line": 41,
+      "symbol": "MBTopUpParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBTopUpParserResult.h",
+      "line": 20,
+      "symbol": "MBTopUpParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUnitedArabEmiratesIdBackRecognizer.h",
+      "line": 26,
+      "symbol": "MBUnitedArabEmiratesIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUnitedArabEmiratesIdBackRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBUnitedArabEmiratesIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUnitedArabEmiratesIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBUnitedArabEmiratesIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUnitedArabEmiratesIdFrontRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBUnitedArabEmiratesIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUsdlCombinedRecognizer.h",
+      "line": 65,
+      "symbol": "MBUsdlCombinedRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUsdlCombinedRecognizerResult.h",
+      "line": 34,
+      "symbol": "MBUsdlCombinedRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUsdlRecognizer.h",
+      "line": 21,
+      "symbol": "MBUsdlRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBUsdlRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBUsdlRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBVinParser.h",
+      "line": 22,
+      "symbol": "MBVinParser.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBVinParserResult.h",
+      "line": 20,
+      "symbol": "MBVinParserResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBVinRecognizer.h",
+      "line": 22,
+      "symbol": "MBVinRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBVinRecognizerResult.h",
+      "line": 20,
+      "symbol": "MBVinRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/juraskrlec/Documents/Workspace/BlinkID/blinkidapp-ios/blinkid-ios-framework/xcode-build/production"
+}
