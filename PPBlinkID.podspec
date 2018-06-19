@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "2.18.2"
+  s.version     = "4.0.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.license     = { 
         :type => 'commercial',
         :text => <<-LICENSE
-                © 2013-2015 MicroBlink Ltd. All rights reserved.
+                © 2013-2018 MicroBlink Ltd. All rights reserved.
                 LICENSE
         }
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.source      = { 
         :git => 'https://github.com/BlinkID/blinkid-ios.git', 
-        :tag => 'v2.18.2'
+        :tag => 'v4.0.0'
   }
 
   s.platform     = :ios
