@@ -11,6 +11,7 @@
 #import "MBViewControllerFactory.h"
 #import "MBMicroblinkSDK.h"
 #import "MBException.h"
+#import "MBImage.h"
 
 // Settings
 #import "MBCameraSettings.h"
