@@ -93,6 +93,17 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) NSString *eyeColor;
 
+/**
+ * The CAN number of German ID.
+ */
+@property (nonatomic, readonly, nullable) NSString *canNumber;
+
+/**
+ * YES if all check digits inside MRZ are correct, NO otherwise.
+ * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzVerified;
+
 @end
 
 NS_ASSUME_NONNULL_END

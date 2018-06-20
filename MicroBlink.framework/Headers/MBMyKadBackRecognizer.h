@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class for configuring Kad Back Recognizer.
  *
- * My KadBack recognizer is used for scanning back side of MyKad.
+ * MyKadBack recognizer is used for scanning back side of MyKad.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
 @interface MBMyKadBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBGlareDetection>

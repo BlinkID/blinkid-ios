@@ -58,17 +58,17 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
- * The issuing authority of Polish ID.
+ * The issuer of Polish ID.
  */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *issuer;
 
 /**
- * The issuing authority of Polish ID.
+ * The document number on Polish ID.
  */
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 /**
- * The issuing authority of Polish ID.
+ * The personal number of Polish ID.
  */
 @property (nonatomic, readonly, nullable) NSString *personalNumber;
 
@@ -81,6 +81,12 @@ MB_INIT_UNAVAILABLE
  * The document date of expiry of the Polish ID
  */
 @property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+
+/**
+ * YES if all check digits inside MRZ are correct, NO otherwise.
+ * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzVerified;
 
 @end
 

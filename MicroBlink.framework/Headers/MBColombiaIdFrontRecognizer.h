@@ -12,6 +12,11 @@
 #import "MBFaceImage.h"
 #import "MBSignatureImage.h"
 #import "MBFullDocumentImage.h"
+
+#import "MBFaceImageDpi.h"
+#import "MBSignatureImageDpi.h"
+#import "MBFullDocumentImageDpi.h"
+
 #import "MBGlareDetection.h"
 
 
@@ -23,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Colombia ID Front recognizer is used for scanning front side of Colombia ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBColombiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+@interface MBColombiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBFaceImageDpi, MBSignatureImageDpi, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 

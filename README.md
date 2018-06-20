@@ -927,7 +927,17 @@ This recognizer can be used in any overlay view controller, but it works best wi
 
 The [`MBUnitedArabEmiratesIdBackRecognizer.h`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdBackRecognizer.html) is recognizer specialised for scanning back side of UAE ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.# <a name="fieldScan"></a> `Field by field` scanning feature
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="unitedStatesBlinkId"></a> United States
+
+The [`MBUsdlRecognizer.h`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is recognizer specialised for scanning back side of US Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBUsdlCombinedRecognizer.h`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.# <a name="fieldScan"></a> `Field by field` scanning feature
 
 [`Field by field`](#fieldByFieldFeature) scanning feature is designed for scanning small text fields which are called scan elements. For each scan element, specific [`MBParser`](#parserConcept) that will extract structured data of interest from the OCR result is defined. Focusing on the small text fields which are scanned one by one enables implementing support for the **free-form documents** because field detection is not required. The user is responsible for positioning the field of interest inside the scanning window and the scanning process guides him. When implementing support for the custom document, only fields of interest has to be defined.
 

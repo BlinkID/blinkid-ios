@@ -32,7 +32,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The issuing authority of Swiss ID.
  */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *authority;
 
 /**
  * The document date of issue of the Swiss ID in DD.MM.yyyy format.

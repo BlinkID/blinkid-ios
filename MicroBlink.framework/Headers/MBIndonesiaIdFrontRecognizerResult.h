@@ -97,9 +97,9 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *religion;
 
 /**
- * The marriage status of the Indonesian ID owner.
+ * The marital status of the Indonesian ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *marriageStatus;
+@property (nonatomic, readonly, nullable) NSString *maritalStatus;
 
 /**
  * The occupation of the Indonesian ID owner.

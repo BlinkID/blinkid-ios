@@ -31,11 +31,11 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBSwitzerlandIdBackRecognizerResult *result;
 
 /**
- * Defines if issuing authority of Swiss ID should be extracted
+ * Defines if authority of Swiss ID should be extracted
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractIssuingAuthority;
+@property (nonatomic, assign) BOOL extractAuthority;
 
 /**
  * Defines if date of issue of Swiss ID should be extracted

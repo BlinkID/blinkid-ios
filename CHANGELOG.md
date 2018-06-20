@@ -104,7 +104,6 @@
         - fixed returning of face image when using `PPUnitedArabEmiratesIDFrontRecognizer`:
             - fixed face image position
 
-    
 ## 2.15.0
 
 - Updates and additions

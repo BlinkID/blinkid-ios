@@ -13,6 +13,7 @@
 #import "MBSignatureImage.h"
 #import "MBFaceImage.h"
 #import "MBGlareDetection.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German Old ID recognizer is used for scanning German Old ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyOldIdRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBSignatureImage, MBGlareDetection>
+@interface MBGermanyOldIdRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBSignatureImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

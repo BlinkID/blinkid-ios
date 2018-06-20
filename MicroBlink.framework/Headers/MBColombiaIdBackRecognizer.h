@@ -43,9 +43,9 @@ MB_INIT
  *
  * Use only if necessary because it slows down the recognition process
  *
- * Default: NO
+ * Default: YES
  */
-@property (nonatomic) BOOL allowNullQuietZone;
+@property (nonatomic) BOOL nullQuietZoneAllowed;
 
 @end
 

@@ -21,6 +21,8 @@
 #import "MBMrzResult.h"
 #import "MBEncodedMrzImageResult.h"
 
+#import "MBDigitalSignatureResult.h"
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning both front and back side of Croatian ID.
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMrtdCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedFaceImageResult, MBEncodedCombinedFullDocumentImageResult, MBMrzImageResult, MBEncodedMrzImageResult>
+@interface MBMrtdCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedFaceImageResult, MBEncodedCombinedFullDocumentImageResult, MBMrzImageResult, MBEncodedMrzImageResult, MBDigitalSignatureResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -45,7 +47,7 @@ MB_INIT_UNAVAILABLE
  *
  *  @return YES if MRTD Recognizer result was successfully parsed and all the fields are extracted. NO otherwise.
  */
-@property (nonatomic, readonly) BOOL isParsed;
+@property (nonatomic, readonly) BOOL mrzParsed;
 
 /**
  * Returns the MRTD document type of recognized document.
@@ -158,6 +160,12 @@ MB_INIT_UNAVAILABLE
  * other elements.
  */
 @property (nonatomic, readonly, nullable) NSString *mrzText;
+
+/**
+ * YES if all check digits inside MRZ are correct, NO otherwise.
+ * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzVerified;
 
 
 @end

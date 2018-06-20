@@ -66,6 +66,11 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
 
+/**
+ * The CAN number of the German ID
+ */
+@property (nonatomic, readonly, nullable) NSString *canNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

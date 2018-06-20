@@ -32,7 +32,7 @@
  * MRTD Combined recognizer is used for scanning both front and back side of generic IDs.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBFaceImage, MBMrzImage, MBEncodeFaceImage, MBEncodeFullDocumentImage>
+@interface MBMrtdCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBFaceImage, MBMrzImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBDigitalSignature>
 
 MB_INIT
 

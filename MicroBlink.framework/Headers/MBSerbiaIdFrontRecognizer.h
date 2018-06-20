@@ -44,7 +44,7 @@ MB_INIT
  *
  *  Default: YES
  */
-@property (nonatomic) BOOL extractValidUntilDate;
+@property (nonatomic) BOOL extractValidUntil;
 
 @end
 

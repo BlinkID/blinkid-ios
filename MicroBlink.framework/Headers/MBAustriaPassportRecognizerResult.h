@@ -27,57 +27,57 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * The surname of the Aus Passport owner.
+ * The surname of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *surname;
 
 /**
- * The given Name of the Aus Passport owner.
+ * The given Name of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *givenName;
 
 /**
- * The nationality of the Aus Passport owner.
+ * The nationality of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *nationality;
 
 /**
- * The place Of Birth of the Aus Passport owner.
+ * The place Of Birth of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * The issuing Authority of the Aus Passport owner.
+ * The issuing Authority of the Austrian Passport.
  */
 @property (nonatomic, readonly) NSString *issuingAuthority;
 
 /**
- * The height of the Aus Passport owner.
+ * The height of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *height;
 
 /**
- * The sex of the Aus Passport owner.
+ * The sex of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) NSString *sex;
 
 /**
- * The passport Number of the Aus Passport owner.
+ * The passport Number of the Austrian Passport.
  */
 @property (nonatomic, readonly) NSString *passportNumber;
 
 /**
- * The date Of Issue of the Aus Passport owner.
+ * The date Of Issue of the Austrian Passport.
  */
 @property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The date Of Birth of the Aus Passport owner.
+ * The date Of Birth of the Austrian Passport owner.
  */
 @property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The date Of Expiry of the Aus Passport owner.
+ * The date Of Expiry of the Austrian Passport.
  */
 @property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 

@@ -10,6 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MBFullDocumentImage.h"
+#import "MBFaceImage.h"
 #import "MBGlareDetection.h"
 
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Singapore ID Front recognizer is used for scanning front side of Singapore ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+@interface MBSingaporeIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBGlareDetection>
 
 MB_INIT
 

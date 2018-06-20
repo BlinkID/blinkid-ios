@@ -12,6 +12,7 @@
 #import "MBFullDocumentImage.h"
 #import "MBFaceImage.h"
 #import "MBSignatureImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 
 
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Sweden Dl Front recognizer is used for scanning front side of Sweden Dl.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwedenDlFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBSignatureImage, MBGlareDetection>
+@interface MBSwedenDlFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBSignatureImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 

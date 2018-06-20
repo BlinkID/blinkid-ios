@@ -47,11 +47,11 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractNationality;
 
 /**
- * Defines if owner's class should be extracted from Malaysian DL
+ * Defines if owner's license class should be extracted from Malaysian DL
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractClass;
+@property (nonatomic, assign) BOOL extractDlClass;
 
 /**
  * Defines if owner's valid from should be extracted from Malaysian DL
@@ -68,11 +68,11 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractValidUntil;
 
 /**
- * Defines if owner's address should be extracted from Malaysian DL
+ * Defines if owner's full address should be extracted from Malaysian DL
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractAddress;
+@property (nonatomic, assign) BOOL extractFullAddress;
 
 @end
 

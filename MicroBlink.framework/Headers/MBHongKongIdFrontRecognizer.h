@@ -52,7 +52,7 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL extractDateOfBirth;
 
-/*
+/**
  * Defines if owner's sex should be extracted from Hong Kong ID
  *
  * Default: YES
@@ -60,11 +60,11 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractSex;
 
 /**
- * Defines if card's issue date should be extracted from Hong Kong ID
+ * Defines if card's date of issue should be extracted from Hong Kong ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractIssueDate;
+@property (nonatomic, assign) BOOL extractDateOfIssue;
 
 @end
 

@@ -8,6 +8,7 @@
 #import "MBLegacyRecognizerResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBFaceImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning front side of Singapore ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBSingaporeIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
 
 MB_INIT_UNAVAILABLE
 

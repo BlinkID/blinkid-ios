@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German ID Back recognizer is used for scanning back side of German ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+@interface MBGermanyIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -57,6 +58,13 @@ MB_INIT
  * Default: YES
  */
 @property (nonatomic) BOOL extractAuthority;
+
+/**
+ * Defines if owner's address should be extracted from German ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractAddress;
 
 @end
 

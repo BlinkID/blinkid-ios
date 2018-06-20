@@ -111,7 +111,7 @@ MB_INIT
 /**
  * Defines if owner's nationality should be extracted from Austrian Passport
  *
- * Default: YES
+ * Default: NO
  */
 @property (nonatomic, assign) BOOL extractNationality;
 

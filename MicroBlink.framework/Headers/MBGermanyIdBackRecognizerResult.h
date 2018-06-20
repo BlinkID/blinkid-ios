@@ -22,7 +22,7 @@ MB_INIT_UNAVAILABLE
 /**
  * Eye colour
  */
-@property (nonatomic, readonly, nullable) NSString *eyeColor;
+@property (nonatomic, readonly, nullable) NSString *eyeColour;
 
 /**
  * Height in cm
@@ -47,7 +47,7 @@ MB_INIT_UNAVAILABLE
 /**
  * Full address
  */
-@property (nonatomic, readonly, nullable) NSString *fullAddress;
+@property (nonatomic, readonly, nullable) NSString *address;
 
 /**
  * ZIP code

@@ -82,10 +82,11 @@ MB_INIT
 
 /**
  * Defines if the owner's sex information should be extracted from the ID
+ * from non-MRZ part of the ID.
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractSex;
+@property (nonatomic, assign) BOOL extractNonMRZSex;
 
 @end
 

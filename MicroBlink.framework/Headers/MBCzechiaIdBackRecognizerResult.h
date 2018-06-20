@@ -27,7 +27,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The address of the Czech ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *address;
+@property (nonatomic, readonly, nullable) NSString *permanentStay;
 
 /**
  * The personal number of the Czech ID owner.

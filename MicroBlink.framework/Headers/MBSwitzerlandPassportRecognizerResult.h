@@ -35,10 +35,6 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) NSString *placeOfBirth;
 
-/**
- * Raw date of issue, as written on the passport
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
 
 /**
  * Date of issue in NSDate object
@@ -46,24 +42,14 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
 
 /**
- * Raw date of birth, as written on the passport
+ * Date of birth, as written on the passport
  */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+@property (nonatomic, readonly, nullable) NSDate *nonMrzDateOfBirth;
 
 /**
- * Date of birth in NSDate object
+ * Date of expiry, as written on the passport
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
-
-/**
- * Raw date of expiry, as written on the passport
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfExpiry;
-
-/**
- * Date of expiry in NSDate object
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+@property (nonatomic, readonly, nullable) NSDate *nonMrzDateOfExpiry;
 
 /**
  * Issuing authority of the Passport
@@ -78,7 +64,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The sex of the Swiss Passport owner
  */
-@property (nonatomic, readonly, nullable) NSString *sex;
+@property (nonatomic, readonly, nullable) NSString *nonMrzSex;
 
 /**
  * The height of the Swiss Passport owner

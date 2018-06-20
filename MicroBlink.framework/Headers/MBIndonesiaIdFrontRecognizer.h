@@ -12,6 +12,7 @@
 #import "MBFaceImage.h"
 #import "MBSignatureImage.h"
 #import "MBFullDocumentImage.h"
+#import "MBGlareDetection.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -22,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Indonesian ID Front recognizer is used for scanning front side of Indonesian ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBIndonesiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage>
+@interface MBIndonesiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
 
 MB_INIT
 
@@ -71,14 +72,14 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractRT;
+@property (nonatomic, assign) BOOL extractRt;
 
 /**
  * Defines if rw should be extracted from Indonesian ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractRW;
+@property (nonatomic, assign) BOOL extractRw;
 
 /**
  * Defines if keldesa should be extracted from Indonesian ID
@@ -109,11 +110,11 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractMaritalStatus;
 
 /**
- * Defines if work should be extracted from Indonesian ID
+ * Defines if occupation should be extracted from Indonesian ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractWork;
+@property (nonatomic, assign) BOOL extractOccupation;
 
 /**
  * Defines if citizenship should be extracted from Indonesian ID

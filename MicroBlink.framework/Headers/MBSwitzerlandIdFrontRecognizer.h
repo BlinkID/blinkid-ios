@@ -37,7 +37,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extracGivenName;
+@property (nonatomic, assign) BOOL extractGivenName;
 
 /**
  * Defines if owner's last name should be extracted from Swiss ID

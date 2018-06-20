@@ -40,18 +40,18 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractSex;
 
 /**
- * Defines if citizenship of Czech ID owner should be extracted
+ * Defines if surname of Czech ID owner should be extracted
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractLastName;
+@property (nonatomic, assign) BOOL extractSurname;
 
 /**
- * Defines if date of birth of Czech ID owner should be extracted
+ * Defines if given names of Czech ID owner should be extracted
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractFirstName;
+@property (nonatomic, assign) BOOL extractGivenNames;
 
 /**
  * Defines if date of expiry should be extracted from Czech ID
@@ -73,6 +73,13 @@ MB_INIT
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractDateOfBirth;
+
+/**
+ * Defines if place of birth should be extracted from Czech ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
 
 @end
 

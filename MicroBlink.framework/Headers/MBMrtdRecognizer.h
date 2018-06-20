@@ -11,6 +11,7 @@
 #import "MBMrtdRecognizerResult.h"
 #import "MBMicroBlinkInitialization.h"
 #import "MBMrtdSpecification.h"
+#import "MBGlareDetection.h"
 
 #import "MBFullDocumentImage.h"
 
@@ -25,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer that can recognizer Machine Readable Zone (MRZ) of the Machine Readable Travel Document (MRTD)
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage>
+@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBGlareDetection>
 
 MB_INIT
 
@@ -60,7 +61,7 @@ MB_INIT
 /**
  * Desired DPI for MRZ and full document images (if saving of those is enabled)
  *
- * Default: 250.0
+ * Default: 250
  */
 @property (nonatomic, assign) NSUInteger saveImageDPI;
 

@@ -42,7 +42,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractAddress;
+@property (nonatomic, assign) BOOL extractPermanentStay;
 
 /**
  * Defines if personal number should be extracted from Czech ID

@@ -66,6 +66,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *address;
 
 /**
+ * The faculty address of the iKad owner
+ */
+@property (nonatomic, readonly, nullable) NSString *facultyAddress;
+
+/**
  * The expiry date of the iKad, as written on the iKad (DD/MM/YYYY)
  */
 @property (nonatomic, readonly, nullable) NSString *rawExpiryDate;

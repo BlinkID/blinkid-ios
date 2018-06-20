@@ -13,6 +13,7 @@
 #import "MBSignatureImage.h"
 #import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German Passport recognizer is used for scanning German Passport.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyPassportRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+@interface MBGermanyPassportRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

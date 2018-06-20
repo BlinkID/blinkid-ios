@@ -12,6 +12,7 @@
 
 #import "MBGlareDetection.h"
 #import "MBFullDocumentImage.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 #import "MBSignatureImage.h"
 #import "MBFaceImage.h"
 
@@ -27,7 +28,7 @@
  * German ID Combined recognizer is used for scanning both front and back side of German ID.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBGermanyCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBSignatureImage, MBFaceImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature>
+@interface MBGermanyCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBSignatureImage, MBFaceImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -35,5 +36,12 @@ MB_INIT
  * German ID Combined recognizer result
  */
 @property (nonatomic, strong, readonly) MBGermanyCombinedRecognizerResult* result;
+
+/**
+ * Defines if owner's address should be extracted from German ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractAddress;
 
 @end

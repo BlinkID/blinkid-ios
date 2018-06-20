@@ -72,14 +72,20 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *nationality;
 
 /**
- * The issuing authority of Serbian ID.
+ * The issuer of Serbian ID.
  */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *issuer;
 
 /**
  * The sex of the Serbian ID owner.
  */
 @property (nonatomic, readonly, nullable) NSString *sex;
+
+/**
+ * YES if all check digits inside MRZ are correct, NO otherwise.
+ * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzVerified;
 
 @end
 

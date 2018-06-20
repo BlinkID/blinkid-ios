@@ -32,11 +32,6 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *name;
 
 /**
- * The nationality of the German Passport owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
-
-/**
  * The place of birth of the German Passport owner
  */
 @property (nonatomic, readonly, nullable) NSString *placeOfBirth;

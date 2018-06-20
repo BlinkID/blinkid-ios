@@ -37,7 +37,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractFirstName;
+@property (nonatomic, assign) BOOL extractFirstNames;
 
 /**
  * Defines if owner's last name should be extracted from New Zealand Driver License

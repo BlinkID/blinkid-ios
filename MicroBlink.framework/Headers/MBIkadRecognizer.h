@@ -18,9 +18,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring i Kad Recognizer.
+ * Class for configuring iKad Recognizer.
  *
- * i Kad recognizer is used for scanning i Kad.
+ * iKad recognizer is used for scanning iKad.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
 @interface MBIkadRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageDpi>
@@ -52,6 +52,13 @@ MB_INIT
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractAddress;
+
+/**
+ * Defines if owner's faculty address should be extracted from iKad
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractFacultyAddress;
 
 /**
  * Defines if owner's passport number should be extracted from iKad

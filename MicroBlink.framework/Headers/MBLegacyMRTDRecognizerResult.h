@@ -107,6 +107,26 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) NSString *mrzText;
 
+/**
+ * Boolean value which denotes that MRTD result is successfully parsed. When the result is parsed, all
+ * properties below are present.
+ *
+ * If in the PPMrtdRecognizerSettings you specified allowUnparsedResults = YES, then it can happen that
+ * MRTDRecognizerResult is not parsed. When this happens, this property will be equal to YES.
+ *
+ * In that case, you can use rawOcrResult property to obtain the raw result of the OCR process, so you can
+ * implement MRTD parsing in your application.
+ *
+ *  @return YES if MRTD Recognizer result was successfully parsed and all the fields are extracted. NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzParsed;
+
+/**
+ * YES if all check digits inside MRZ are correct, NO otherwise.
+ * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
+ */
+@property (nonatomic, readonly) BOOL mrzVerified;
+
 @end
 
 NS_ASSUME_NONNULL_END

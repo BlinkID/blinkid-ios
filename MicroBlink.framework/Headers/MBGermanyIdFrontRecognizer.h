@@ -13,6 +13,7 @@
 #import "MBSignatureImage.h"
 #import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * German ID Front recognizer is used for scanning front side of German ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+@interface MBGermanyIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -33,18 +34,18 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBGermanyIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's first name should be extracted from German ID
+ * Defines if owner's first names should be extracted from German ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractFirstName;
+@property (nonatomic, assign) BOOL extractGivenNames;
 
 /**
- * Defines if owner's last name should be extracted from German ID
+ * Defines if owner's surname should be extracted from German ID
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractLastName;
+@property (nonatomic, assign) BOOL extractSurname;
 
 /**
  * Defines if owner's place of birth should be extracted from German ID
@@ -66,6 +67,20 @@ MB_INIT
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+ * Defines if CAN number should be extracted from German ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractCanNumber;
+
+/**
+ * Defines if document number should be extracted from German ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDocumentNumber;
 
 @end
 
