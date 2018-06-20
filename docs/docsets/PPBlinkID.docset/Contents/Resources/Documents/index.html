@@ -404,9 +404,6 @@
                 <a class="nav-group-task-link" href="Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBMetadata.html">MBMetadata</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -965,6 +962,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a>
               </li>
               <li class="nav-group-task">
@@ -1063,6 +1063,9 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions/MBRange.html">MBRange</a>
               </li>
               <li class="nav-group-task">
@@ -1158,6 +1161,9 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@CGRectTopRightPoint">CGRectTopRightPoint</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:MBDocumentSpecification.h@F@MBMakeRange">MBMakeRange</a>
               </li>
               <li class="nav-group-task">
@@ -1171,6 +1177,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/_MBImageExtensionFactors.html">_MBImageExtensionFactors</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/_MBRange.html">_MBRange</a>
               </li>
@@ -2077,7 +2086,16 @@ MRZ zone and address of ID holder while extracting other elements is optional.</
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdBackRecognizer.html"><code>MBUnitedArabEmiratesIdBackRecognizer.h</code></a> is recognizer specialised for scanning back side of UAE ID.</p>
 
-<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.# <a name="fieldScan"></a> <code>Field by field</code> scanning feature</p>
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<h4 id='a-name-unitedstatesblinkid-a-united-states' class='heading'><a name="unitedStatesBlinkId"></a> United States</h4>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html"><code>MBUsdlRecognizer.h</code></a> is recognizer specialised for scanning back side of US Driver&rsquo;s License.</p>
+
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html"><code>MBUsdlCombinedRecognizer.h</code></a> is recognizer specialised for scanning both front and back side of US Driver&rsquo;s License.</p>
+
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html"><code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a>, which has UI best suited for both side document scanning.# <a name="fieldScan"></a> <code>Field by field</code> scanning feature</p>
 
 <p><a href="#fieldByFieldFeature"><code>Field by field</code></a> scanning feature is designed for scanning small text fields which are called scan elements. For each scan element, specific <a href="#parserConcept"><code><a href="Classes/MBParser.html">MBParser</a></code></a> that will extract structured data of interest from the OCR result is defined. Focusing on the small text fields which are scanned one by one enables implementing support for the <strong>free-form documents</strong> because field detection is not required. The user is responsible for positioning the field of interest inside the scanning window and the scanning process guides him. When implementing support for the custom document, only fields of interest has to be defined.</p>
 

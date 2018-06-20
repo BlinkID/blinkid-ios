@@ -660,10 +660,6 @@
 		<data>
 		nIYRLB+wXtzA2GB48lVA3mNg8Es=
 		</data>
-		<key>Headers/MBMetadata.h</key>
-		<data>
-		ajiL7ozJNGr8ciWaZtv5+WktRLI=
-		</data>
 		<key>Headers/MBMicroBlinkDefines.h</key>
 		<data>
 		O/HBCk52leRQ1YV8XDCUpkN1NFw=
@@ -3033,17 +3029,6 @@
 			<key>hash2</key>
 			<data>
 			pKz1YJ+2RW8uQgG36FMt9VrRR6+qIPfCRVjtzL7RB/A=
-			</data>
-		</dict>
-		<key>Headers/MBMetadata.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ajiL7ozJNGr8ciWaZtv5+WktRLI=
-			</data>
-			<key>hash2</key>
-			<data>
-			PZoLDV164XqnQxHFd4Mq6BVqXLdVoE6Z7Y1cjdaPJPk=
 			</data>
 		</dict>
 		<key>Headers/MBMicroBlinkDefines.h</key>

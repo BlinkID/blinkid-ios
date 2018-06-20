@@ -405,9 +405,6 @@
                 <a class="nav-group-task-link" href="Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBMetadata.html">MBMetadata</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -966,6 +963,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a>
               </li>
               <li class="nav-group-task">
@@ -1064,6 +1064,9 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions/MBRange.html">MBRange</a>
               </li>
               <li class="nav-group-task">
@@ -1159,6 +1162,9 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@CGRectTopRightPoint">CGRectTopRightPoint</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:MBDocumentSpecification.h@F@MBMakeRange">MBMakeRange</a>
               </li>
               <li class="nav-group-task">
@@ -1172,6 +1178,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/_MBImageExtensionFactors.html">_MBImageExtensionFactors</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs/_MBRange.html">_MBRange</a>
               </li>
@@ -2298,12 +2307,14 @@ For example, you can set character whitelists, character height, supported fonts
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBColombiaIdFrontRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImageDpi.html">MBFaceImageDpi</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBColombiaIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBColombiaIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageDpi.html">MBFaceImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4449,12 +4460,13 @@ This view hierarchy is added as an overlay to Camera preview</p>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyCombinedRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyCombinedRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4534,12 +4546,13 @@ This view hierarchy is added as an overlay to Camera preview</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyIdBackRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyIdBackRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyIdBackRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4615,12 +4628,13 @@ This view hierarchy is added as an overlay to Camera preview</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyIdFrontRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4698,12 +4712,13 @@ This view hierarchy is added as an overlay to Camera preview</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyOldIdRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyOldIdRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyOldIdRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4780,12 +4795,13 @@ This view hierarchy is added as an overlay to Camera preview</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyPassportRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyPassportRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBGermanyPassportRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span></code></pre>
 
                         </div>
                       </div>
@@ -5047,9 +5063,9 @@ The subview is presented as translucent view with detection status label in the 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Class for configuring i Kad Recognizer.</p>
+                        <p>Class for configuring iKad Recognizer.</p>
 
-<p>i Kad recognizer is used for scanning i Kad.</p>
+<p>iKad recognizer is used for scanning iKad.</p>
 
                         <a href="Classes/MBIkadRecognizer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -5256,12 +5272,12 @@ The subview is presented as translucent view with detection status label in the 
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBIndonesiaIdFrontRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIndonesiaIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIndonesiaIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -5835,44 +5851,6 @@ The subview is presented as translucent view with detection status label in the 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MBMetadata"></a>
-                    <a name="//apple_ref/objc/Class/MBMetadata" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBMetadata">MBMetadata</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Base class for outputting various data via &lsquo;didOutputMetadata:&rsquo; method</p>
-
-                        <a href="Classes/MBMetadata.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">MBMetadata</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMetadata</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)MBMicroblinkApp"></a>
                     <a name="//apple_ref/objc/Class/MBMicroblinkApp" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MBMicroblinkApp">MBMicroblinkApp</a>
@@ -6055,12 +6033,12 @@ The subview is presented as green corners located on edges of detection points.<
 <span class="k">@interface</span> <span class="nc">MBMrtdCombinedRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBMrzImage.html">MBMrzImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdCombinedRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBMrzImage.html">MBMrzImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdCombinedRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBMrzImage.html">MBMrzImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span></code></pre>
 
                         </div>
                       </div>
@@ -6098,12 +6076,12 @@ The subview is presented as green corners located on edges of detection points.<
           <span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span>
           <span class="n"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span>
           <span class="n"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBMrzImageResult.html">MBMrzImageResult</a></span><span class="p">,</span>
-          <span class="n"><a href="Protocols/MBEncodedMrzImageResult.html">MBEncodedMrzImageResult</a></span><span class="o">&gt;</span></code></pre>
+          <span class="n"><a href="Protocols/MBEncodedMrzImageResult.html">MBEncodedMrzImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBMrzImageResult.html">MBMrzImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedMrzImageResult.html">MBEncodedMrzImageResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBMrzImageResult.html">MBMrzImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedMrzImageResult.html">MBEncodedMrzImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -6213,12 +6191,12 @@ The subview is presented as green corners located on edges of detection points.<
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBMrtdRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="Classes/MBTemplatingRecognizer.html">MBTemplatingRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="Classes/MBTemplatingRecognizer.html">MBTemplatingRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBTemplatingRecognizer.html">MBTemplatingRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBTemplatingRecognizer.html">MBTemplatingRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -6473,7 +6451,7 @@ We encurage users to create specifications with one of our presets, if possible.
                       <div class="abstract">
                         <p>Class for configuring Kad Back Recognizer.</p>
 
-<p>My KadBack recognizer is used for scanning back side of MyKad.</p>
+<p>MyKadBack recognizer is used for scanning back side of MyKad.</p>
 
                         <a href="Classes/MBMyKadBackRecognizer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -9121,12 +9099,13 @@ like back references.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBSingaporeIdFrontRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSingaporeIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSingaporeIdFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -9160,12 +9139,13 @@ like back references.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBSingaporeIdFrontRecognizerResult</span>
-    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span>
+                                <span class="n"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSingaporeIdFrontRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSingaporeIdFrontRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizerResult.html">MBLegacyRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -9819,12 +9799,13 @@ like back references.</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBSwedenDlFrontRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSwedenDlFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSwedenDlFrontRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBGlareDetection.html">MBGlareDetection</a></span></code></pre>
 
                         </div>
                       </div>

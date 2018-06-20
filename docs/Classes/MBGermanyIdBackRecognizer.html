@@ -405,9 +405,6 @@
                 <a class="nav-group-task-link" href="../Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMetadata.html">MBMetadata</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -966,6 +963,9 @@
                 <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a>
               </li>
               <li class="nav-group-task">
@@ -1064,6 +1064,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions/MBRange.html">MBRange</a>
               </li>
               <li class="nav-group-task">
@@ -1159,6 +1162,9 @@
                 <a class="nav-group-task-link" href="../Functions.html#/c:@F@CGRectTopRightPoint">CGRectTopRightPoint</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Functions.html#/c:MBDocumentSpecification.h@F@MBMakeRange">MBMakeRange</a>
               </li>
               <li class="nav-group-task">
@@ -1172,6 +1178,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/_MBImageExtensionFactors.html">_MBImageExtensionFactors</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/_MBRange.html">_MBRange</a>
               </li>
@@ -1191,7 +1200,8 @@
                 <div class="language">
                   <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyIdBackRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="../Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="../Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
+                          <span class="n"><a href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1401,6 +1411,40 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractAuthority</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBGermanyIdBackRecognizer(py)extractAddress"></a>
+                    <a name="//apple_ref/objc/Property/extractAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdBackRecognizer(py)extractAddress">extractAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if owner&rsquo;s address should be extracted from German ID</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractAddress</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractAddress</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

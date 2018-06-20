@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MBMetadata Class Reference</title>
+    <title>_MBImageExtensionFactors Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/MBMetadata" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Struct/_MBImageExtensionFactors" class="dashAnchor"></a>
 
-    <a title="MBMetadata Class Reference"></a>
+    <a title="_MBImageExtensionFactors Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">PPBlinkID Reference</a>
       <img class="carat" src="../img/carat.png" />
-      MBMetadata Class Reference
+      _MBImageExtensionFactors Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -403,9 +403,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMetadata.html">MBMetadata</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
@@ -966,6 +963,9 @@
                 <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a>
               </li>
               <li class="nav-group-task">
@@ -1064,6 +1064,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions/MBRange.html">MBRange</a>
               </li>
               <li class="nav-group-task">
@@ -1159,6 +1162,9 @@
                 <a class="nav-group-task-link" href="../Functions.html#/c:@F@CGRectTopRightPoint">CGRectTopRightPoint</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Functions.html#/c:MBDocumentSpecification.h@F@MBMakeRange">MBMakeRange</a>
               </li>
               <li class="nav-group-task">
@@ -1173,6 +1179,9 @@
             <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/_MBImageExtensionFactors.html">_MBImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/_MBRange.html">_MBRange</a>
               </li>
               <li class="nav-group-task">
@@ -1186,15 +1195,16 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>MBMetadata</h1>
+            <h1>_MBImageExtensionFactors</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">MBMetadata</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">struct</span> <span class="n">_MBImageExtensionFactors</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            <p>Base class for outputting various data via &lsquo;didOutputMetadata:&rsquo; method</p>
+            <p>Struct which describes image extension factors. Each factors denotes by what percentage is image extended.
+For example, value of top = 0.3f means that top side of the image is extended by 30% of cards height,
+while value of right = 1.3f means that the right side of the image is extended by 120% of the cards width.</p>
 
           </div>
         </section>
@@ -1206,41 +1216,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MBMetadata(py)name"></a>
-                    <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBMetadata(py)name">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Unique metadata name/Id</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">name</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MBMetadata(im)init"></a>
-                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBMetadata(im)init">-init</a>
+                    <a name="/c:@S@_MBImageExtensionFactors@FI@top"></a>
+                    <a name="//apple_ref/objc/Field/top" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@_MBImageExtensionFactors@FI@top">top</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1255,7 +1233,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">top</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">top</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -1265,9 +1248,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MBMetadata(im)initWithName:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithName:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBMetadata(im)initWithName:">-initWithName:</a>
+                    <a name="/c:@S@_MBImageExtensionFactors@FI@right"></a>
+                    <a name="//apple_ref/objc/Field/right" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@_MBImageExtensionFactors@FI@right">right</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1282,12 +1265,76 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">right</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@_MBImageExtensionFactors@FI@bottom"></a>
+                    <a name="//apple_ref/objc/Field/bottom" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@_MBImageExtensionFactors@FI@bottom">bottom</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">bottom</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bottom</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@_MBImageExtensionFactors@FI@left"></a>
+                    <a name="//apple_ref/objc/Field/left" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@_MBImageExtensionFactors@FI@left">left</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">left</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">left</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
