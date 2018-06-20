@@ -1,121 +1,100 @@
 #!/bin/sh
 set -e
 
-xcodebuild -project Samples/MicroBlinkDynamic/MicroBlinkDynamic.xcodeproj \
-    -scheme MicroBlinkDynamicRelease \
+xcodebuild -project Samples/BlinkInput-sample-ObjC/BlinkInput-sample.xcodeproj \
+    -scheme BlinkInput-sample \
     -configuration Debug \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
     clean build
 
-xcodebuild -project Samples/DirectAPI-sample/DirectAPI-sample.xcodeproj \
-    -scheme DirectAPI-Sample \
-    -configuration Debug \
-    -sdk iphonesimulator \
-    ONLY_ACTIVE_ARCH=NO \
-    clean build
-
-xcodebuild -project Samples/DirectAPI-sample/DirectAPI-sample.xcodeproj \
-    -scheme DirectAPI-Sample \
+xcodebuild -project Samples/BlinkInput-sample-ObjC/BlinkInput-sample.xcodeproj \
+    -scheme BlinkInput-sample \
     -configuration Release \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
     clean build
 
-xcodebuild -project Samples/Templating-Sample/Templating-Sample.xcodeproj \
-    -scheme Templating-Sample \
+ xcodebuild -project Samples/BlinkID-sample-Swift/BlinkID-sample-Swift.xcodeproj \
+    -scheme BlinkID-sample-Swift \
     -configuration Debug \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
     clean build
-
-xcodebuild -project Samples/Templating-Sample/Templating-Sample.xcodeproj \
-    -scheme Templating-Sample \
-    -configuration Release \
-    -sdk iphonesimulator \
-    ONLY_ACTIVE_ARCH=NO \
-    clean build
-
-xcodebuild -project Samples/BlinkOCR-sample/BlinkOCR-sample.xcodeproj \
-	-scheme BlinkOCR-sample \
-	-configuration Debug \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/BlinkOCR-sample/BlinkOCR-sample.xcodeproj \
-	-scheme BlinkOCR-sample \
-	-configuration Release \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/BlinkID-sample/BlinkID-sample.xcodeproj \
-	-scheme BlinkID-sample \
-	-configuration Debug \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/BlinkID-sample/BlinkID-sample.xcodeproj \
-	-scheme BlinkID-sample \
-	-configuration Release \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
 
 xcodebuild -project Samples/BlinkID-sample-Swift/BlinkID-sample-Swift.xcodeproj \
-	-scheme BlinkID-sample-Swift \
-	-configuration Debug \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
+    -scheme BlinkID-sample-Swift \
+    -configuration Release \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build    
 
-xcodebuild -project Samples/BlinkID-sample-Swift/BlinkID-sample-Swift.xcodeproj \
-	-scheme BlinkID-sample-Swift \
-	-configuration Release \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/Detector-sample/Detector-sample.xcodeproj \
-	-scheme Detector-sample \
-	-configuration Debug \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/Detector-sample/Detector-sample.xcodeproj \
-	-scheme Detector-sample \
-	-configuration Release \
-	-sdk iphonesimulator \
-	ONLY_ACTIVE_ARCH=NO \
- 	clean build
-
-xcodebuild -project Samples/pdf417-sample/pdf417-sample.xcodeproj \
-    -scheme pdf417-sample \
+ xcodebuild -project Samples/BlinkInput-sample-Swift/BlinkInput-sample-Swift.xcodeproj \
+    -scheme BlinkInput-sample-Swift \
     -configuration Debug \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
     clean build
 
-xcodebuild -project Samples/pdf417-sample/pdf417-sample.xcodeproj \
-    -scheme pdf417-sample \
+xcodebuild -project Samples/BlinkInput-sample-Swift/BlinkInput-sample-Swift.xcodeproj \
+    -scheme BlinkInput-sample-Swift \
     -configuration Release \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
-    clean build
+    clean build  
 
-xcodebuild -project Samples/AutodetectID-sample/AutodetectID-sample.xcodeproj \
-    -scheme AutodetectID-sample \
+ xcodebuild -project Samples/DirectAPI-sample-Swift/DirectAPI-sample-Swift.xcodeproj \
+    -scheme DirectAPI-sample-Swift \
     -configuration Debug \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
     clean build
 
-xcodebuild -project Samples/AutodetectID-sample/AutodetectID-sample.xcodeproj \
-    -scheme AutodetectID-sample \
+xcodebuild -project Samples/DirectAPI-sample-Swift/DirectAPI-sample-Swift.xcodeproj \
+    -scheme DirectAPI-sample-Swift \
     -configuration Release \
     -sdk iphonesimulator \
     ONLY_ACTIVE_ARCH=NO \
+    clean build     
+
+ xcodebuild -project Samples/FieldByField-sample-Swift/FieldByField-sample-Swift.xcodeproj \
+    -scheme FieldByField-sample-Swift \
+    -configuration Debug \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
     clean build
+
+xcodebuild -project Samples/FieldByField-sample-Swift/FieldByField-sample-Swift.xcodeproj \
+    -scheme FieldByField-sample-Swift \
+    -configuration Release \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build     
+
+ xcodebuild -project Samples/pdf417-sample-Swift/pdf417-sample-Swift.xcodeproj \
+    -scheme pdf417-sample-Swift \
+    -configuration Debug \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build
+
+xcodebuild -project Samples/pdf417-sample-Swift/pdf417-sample-Swift.xcodeproj \
+    -scheme pdf417-sample-Swift \
+    -configuration Release \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build     
+
+ xcodebuild -project Samples/Templating-sample-swift/Templating-sample-swift.xcodeproj \
+    -scheme Templating-sample-swift \
+    -configuration Debug \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build
+
+xcodebuild -project Samples/Templating-sample-swift/Templating-sample-swift.xcodeproj \
+    -scheme Templating-sample-swift \
+    -configuration Release \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    clean build     

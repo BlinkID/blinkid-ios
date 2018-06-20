@@ -1,3 +1,17 @@
+# Release notes
+
+## 4.0.0
+
+- new API, which is not backward compatible. Please check [README](README.md) and updated demo applications for more information, but the gist of it is:
+    - `PPScanningViewController` has been renamed to `MBRecognizerRunnerViewController` and `MBCoordinator` to `MBRecognizerRunner`
+    - `PPBarcodeOverlayViewController` has been renamed to `MBBarcodeOverlayViewController`
+    - previously internal `MBRecognizer` objects are not internal anymore - instead of having opaque `MBRecognizerSettings` and `MBRecognizerResult` objects, you now have stateful `MBRecognizer` object that contains its `MBResult` within and mutates it while performing recognition. For more information, see [README](README.md) and updated demo applications
+    - introduced `MBFieldByFieldOverlayViewController` that can be used for easy integration of the _field-by-field scanning_ feature (previously known as _segment scan_)
+    - introduced `MBDocumentVerificationController` that can be used for easy integration of _ID verification scanning_ feature (previously available only in [BlinkID AppStore app](https://itunes.apple.com/us/app/blinkid/id1258136557?mt=8)
+    - introduced `MBProcessor` concept. For more information, check updated code samples, [README](README.md) and [this blog post](https://microblink.com/blog/major-change-of-the-api-and-in-the-license-key-formats)
+- new licence format, which is not backward compatible. Full details are given in [README](README.md) and in updated applications, but the gist of it is:
+    - licence can now be provided with either file, byte array or base64-encoded bytes
+
 ## 2.18.2
 
 - Bugfixes

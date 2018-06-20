@@ -2,52 +2,34 @@
 //  MicroBlink.h
 //  MicroBlinkFramework
 //
-//  Created by Jurica Cerovec on 3/29/12.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Created by Dino Gustin on 06/06/18.
+//  Copyright (c) 2012 MicroBlink Ltd. All rights reserved.
 //
 
-#ifndef PhotoPayFramework_MicroBlink_h
-#define PhotoPayFramework_MicroBlink_h
+// Include Common API
+#import "MBMicroblinkApp.h"
+#import "MBViewControllerFactory.h"
+#import "MBMicroblinkSDK.h"
+#import "MBException.h"
+#import "MBImage.h"
 
-// Common API
-#import "PPViewControllerFactory.h"
-#import "PPApp.h"
+// Settings
+#import "MBCameraSettings.h"
 
-/*  UI  */
-// Overlays
-#import "PPModernBaseOverlayViewController.h"
-#import "PPBarcodeOverlayViewController.h"
-#import "PPBaseBarcodeOverlayViewController.h"
-#import "PPFieldOfViewOverlayViewController.h"
-#import "PPIDCardOverlayViewController.h"
-#import "PPModernOverlayViewController.h"
-#import "PPOcrLineOverlayViewController.h"
-#import "PPSegmentScanOverlayViewController.h"
-#import "PPTemplatingOverlayViewController.h"
-#import "PPTapToFocusOverlaySubview.h"
+// Delegates
+#import "MBRecognizerRunnerViewControllerMetadataDelegates.h"
+#import "MBRecognizerRunnerViewControllerDelegate.h"
+#import "MBScanningRecognizerRunnerViewControllerDelegate.h"
 
-// Permission denied view controller
-#import "PPPermissionDeniedViewController.h"
+#import "MBRecognizerRunner.h"
+#import "MBRecognizerRunnerMetadataDelegates.h"
+#import "MBScanningRecognizerRunnerDelegate.h"
 
-// Overlay subviews
-#import "PPModernOcrResultOverlaySubview.h"
-#import "PPModernViewfinderOverlaySubview.h"
-#import "PPOcrResultOverlaySubview.h"
-#import "PPBlurredFieldOfViewOverlaySubview.h"
-#import "PPDotsOverlaySubview.h"
-#import "PPFieldOfViewOverlaySubview.h"
-#import "PPModernToastOverlaySubview.h"
-#import "PPOcrLineOverlaySubview.h"
-#import "PPToastOverlaySubview.h"
-#import "PPViewfinderOverlaySubview.h"
+// Frame Grabbers
+#import "MBFrameGrabberRecognizer.h"
+#import "MBSuccessFrameGrabberRecognizer.h"
+#import "MBSuccessFrameGrabberRecognizerResult.h"
 
-// Recognizers
-#import "PPBlinkIDRecognizers.h"
+#import "MBEntities.h"
+#import "MBUIComponents.h"
 
-/// Additional recognizers
-
-// Aztec barcodes
-#import "PPAztecRecognizerSettings.h"
-#import "PPAztecRecognizerResult.h"
-
-#endif
