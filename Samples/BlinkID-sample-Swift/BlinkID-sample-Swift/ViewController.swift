@@ -18,14 +18,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Valid until: 2018-09-27
-        MBMicroblinkSDK.sharedInstance().setLicenseResource("blinkid-swift", withExtension: "txt", inSubdirectory: "License", for: Bundle.main)
+        MBMicroblinkSDK.sharedInstance().setLicenseResource("license", withExtension: "", inSubdirectory: "License", for: Bundle.main)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
         
         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
         self.mrtdRecognizer = MBMrtdRecognizer()
-        self.mrtdRecognizer?.returnFullDocumentImage = false;
+        self.mrtdRecognizer?.returnFullDocumentImage = true;
         self.mrtdRecognizer?.allowUnverifiedResults = true;
         
         /** Create usdl recognizer */
@@ -65,17 +65,23 @@ extension ViewController: MBDocumentOverlayViewControllerDelegate {
         if (self.mrtdRecognizer?.result.resultState == MBRecognizerResultState.valid) {
             title = "MRTD"
             
+            let fullDocumentImage: UIImage! = self.mrtdRecognizer?.result.fullDocumentImage?.image
+            print("Got MRTD image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
+            
             // Save the string representation of the code
             message = self.mrtdRecognizer!.result.description
         }
         else if (self.usdlRecognizer?.result.resultState == MBRecognizerResultState.valid) {
-            title = "USDL"
+            title = "USDL"                        
             
             // Save the string representation of the code
             message = (self.usdlRecognizer?.result.description)!
         }
         else if (self.eudlRecognizer?.result.resultState == MBRecognizerResultState.valid) {
             title = "EUDL"
+            
+            let fullDocumentImage: UIImage! = self.eudlRecognizer?.result.fullDocumentImage?.image
+            print("Got EUDL image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
             
             // Save the string representation of the code
             message = (self.eudlRecognizer?.result.description)!

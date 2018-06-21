@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Valid until: 2018-09-27
-        MBMicroblinkSDK.sharedInstance().setLicenseResource("directapi-swift-license", withExtension: "txt", inSubdirectory: "License", for: Bundle.main)
+        MBMicroblinkSDK.sharedInstance().setLicenseResource("license", withExtension: "", inSubdirectory: "License", for: Bundle.main)
         return true
     }
 
