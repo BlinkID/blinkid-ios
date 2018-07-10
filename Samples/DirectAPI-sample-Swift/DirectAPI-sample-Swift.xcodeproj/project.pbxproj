@@ -22,8 +22,8 @@
 		A207A4BE20A4862D002AEDB0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A4BD20A4862D002AEDB0 /* libiconv.tbd */; };
 		A207A4C020A48633002AEDB0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A4BF20A48633002AEDB0 /* libc++.tbd */; };
 		A207A4C220A4863E002AEDB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A4C120A4863E002AEDB0 /* libz.tbd */; };
-		A207A4CB20A4866D002AEDB0 /* License in Resources */ = {isa = PBXBuildFile; fileRef = A207A4CA20A4866D002AEDB0 /* License */; };
 		A207A4CF20A49237002AEDB0 /* MBCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */; };
+		B4A57AD420F4E68F004AA280 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4A57AD320F4E68F004AA280 /* license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,8 +57,8 @@
 		A207A4BD20A4862D002AEDB0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A207A4BF20A48633002AEDB0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A207A4C120A4863E002AEDB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A207A4CA20A4866D002AEDB0 /* License */ = {isa = PBXFileReference; lastKnownFileType = folder; path = License; sourceTree = "<group>"; };
 		A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCameraViewController.swift; sourceTree = "<group>"; };
+		B4A57AD320F4E68F004AA280 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		A207A4A120A485DF002AEDB0 /* DirectAPI-sample-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				A207A4CA20A4866D002AEDB0 /* License */,
+				B4A57AD220F4E68F004AA280 /* License */,
 				A207A4A220A485DF002AEDB0 /* AppDelegate.swift */,
 				A207A4A420A485DF002AEDB0 /* ViewController.swift */,
 				A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */,
@@ -126,6 +126,14 @@
 				A207A4BD20A4862D002AEDB0 /* libiconv.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A57AD220F4E68F004AA280 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				B4A57AD320F4E68F004AA280 /* license.txt */,
+			);
+			path = License;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				184958E520AD8F4800F27C8D /* MicroBlink.bundle in Resources */,
+				B4A57AD420F4E68F004AA280 /* license.txt in Resources */,
 				A207A4AD20A485E0002AEDB0 /* LaunchScreen.storyboard in Resources */,
 				A207A4AA20A485E0002AEDB0 /* Assets.xcassets in Resources */,
 				A207A4A820A485DF002AEDB0 /* Main.storyboard in Resources */,
-				A207A4CB20A4866D002AEDB0 /* License in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +364,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.DirectAPI-sample-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.DirectAPI-sample-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

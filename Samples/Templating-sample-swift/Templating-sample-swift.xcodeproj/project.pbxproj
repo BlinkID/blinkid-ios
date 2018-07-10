@@ -22,9 +22,9 @@
 		A207A48420A45D26002AEDB0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A48320A45D26002AEDB0 /* libc++.tbd */; };
 		A207A48620A45D2C002AEDB0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A48520A45D2C002AEDB0 /* libiconv.tbd */; };
 		A207A48820A45D32002AEDB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A48720A45D32002AEDB0 /* libz.tbd */; };
-		A207A49120A45D8A002AEDB0 /* License in Resources */ = {isa = PBXBuildFile; fileRef = A207A49020A45D8A002AEDB0 /* License */; };
 		A207A49320A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A49220A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift */; };
 		A207A49520A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A49420A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift */; };
+		B4A57ADD20F4E775004AA280 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4A57ADC20F4E774004AA280 /* license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,9 +58,9 @@
 		A207A48320A45D26002AEDB0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A207A48520A45D2C002AEDB0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A207A48720A45D32002AEDB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		A207A49020A45D8A002AEDB0 /* License */ = {isa = PBXFileReference; lastKnownFileType = folder; path = License; sourceTree = "<group>"; };
 		A207A49220A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCroatianIDTemplateUtils.swift; sourceTree = "<group>"; };
 		A207A49420A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCroatianIDFrontTemplateRecognizer.swift; sourceTree = "<group>"; };
+		B4A57ADC20F4E774004AA280 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		A207A46720A45C7A002AEDB0 /* Templating-sample-swift */ = {
 			isa = PBXGroup;
 			children = (
-				A207A49020A45D8A002AEDB0 /* License */,
+				B4A57ADB20F4E774004AA280 /* License */,
 				A207A46820A45C7A002AEDB0 /* AppDelegate.swift */,
 				A207A46A20A45C7A002AEDB0 /* ViewController.swift */,
 				A207A49220A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift */,
@@ -129,6 +129,14 @@
 				A207A47B20A45D05002AEDB0 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A57ADB20F4E774004AA280 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				B4A57ADC20F4E774004AA280 /* license.txt */,
+			);
+			path = License;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				184958F120AD917500F27C8D /* MicroBlink.bundle in Resources */,
+				B4A57ADD20F4E775004AA280 /* license.txt in Resources */,
 				A207A47320A45C7C002AEDB0 /* LaunchScreen.storyboard in Resources */,
 				A207A47020A45C7C002AEDB0 /* Assets.xcassets in Resources */,
 				A207A46E20A45C7A002AEDB0 /* Main.storyboard in Resources */,
-				A207A49120A45D8A002AEDB0 /* License in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Templating-sample-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.Templating-sample-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
