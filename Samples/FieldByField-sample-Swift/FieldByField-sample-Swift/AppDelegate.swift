@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Valid until: 2018-09-27
-        MBMicroblinkSDK.sharedInstance().setLicenseResource("license", withExtension: "", inSubdirectory: "License", for: Bundle.main)
+        // Valid until: 2019-07-10
+        MBMicroblinkSDK.sharedInstance().setLicenseResource("license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
         
         return true
     }
