@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/MBBarcodeOverlaySettings.h</key>
 		<data>
-		TJbkp8L2vcKiWqdTZCxyqgfrVMw=
+		UMYN30bejIsBy5SsEZPohb6w97M=
 		</data>
 		<key>Headers/MBBarcodeOverlayViewController.h</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>Headers/MBBaseOverlaySettings.h</key>
 		<data>
-		E9zGTmK4w0LaGjL3d0zfUY3YxL4=
+		WdytmHWrdISiASbJrQVV30k3imM=
 		</data>
 		<key>Headers/MBBaseOverlayViewController.h</key>
 		<data>
-		oO19CN5viDYBWodk3lia1LVZpx0=
+		dQJiU8ZZIm4S+TsVdFB31Fjz81k=
 		</data>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Headers/MBCustomOverlayViewController.h</key>
 		<data>
-		57ovNFJm2EjMnQWIRcjC2ibjzp0=
+		II5Qw8o7D/VAIsLP+g11VLo26fI=
 		</data>
 		<key>Headers/MBCzechiaCombinedRecognizer.h</key>
 		<data>
@@ -322,7 +322,7 @@
 		</data>
 		<key>Headers/MBDocumentOverlaySettings.h</key>
 		<data>
-		CuKGk6DhXfpavjQrtuKS8Wok+no=
+		vC+0c+Y9An/xU5dpsgJh0f3wP1o=
 		</data>
 		<key>Headers/MBDocumentOverlayViewController.h</key>
 		<data>
@@ -346,7 +346,7 @@
 		</data>
 		<key>Headers/MBDocumentVerificationOverlaySettings.h</key>
 		<data>
-		OXI2rHKrGjAoB97CmezTrwXtBSY=
+		Uc1aBbEJQvBCqx2Icl+KTqwcUdk=
 		</data>
 		<key>Headers/MBDocumentVerificationOverlayViewController.h</key>
 		<data>
@@ -1214,11 +1214,11 @@
 		</data>
 		<key>Headers/PPMicroBlinkDefines.h</key>
 		<data>
-		R7L06bZfIBS7EOFa5cC/DbR4ZbE=
+		iLU8D8oejxsZXnWup4B/TVJm2Eo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		irUxxei+ZclJmpljmPevmHAzmbs=
+		/DMHxZgAykTObWuoTJzI/TfDPic=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1396,11 +1396,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TJbkp8L2vcKiWqdTZCxyqgfrVMw=
+			UMYN30bejIsBy5SsEZPohb6w97M=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Awsxse/NAwBh+YAgmupNxmGjvYZnEEpQ5yyNfDims0=
+			E+Awksld+RGOmXBxTHLVFyLIFPWN4wYeTP6swROXKhg=
 			</data>
 		</dict>
 		<key>Headers/MBBarcodeOverlayViewController.h</key>
@@ -1495,22 +1495,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E9zGTmK4w0LaGjL3d0zfUY3YxL4=
+			WdytmHWrdISiASbJrQVV30k3imM=
 			</data>
 			<key>hash2</key>
 			<data>
-			P5PSjS5ANrZDMCkD5OmV7B7LnhYapGoWp5K6L4l7Yds=
+			2EnLHr1C1krv7eHq9g/xAqSt6qaMOFAA9SuQNWpbZus=
 			</data>
 		</dict>
 		<key>Headers/MBBaseOverlayViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oO19CN5viDYBWodk3lia1LVZpx0=
+			dQJiU8ZZIm4S+TsVdFB31Fjz81k=
 			</data>
 			<key>hash2</key>
 			<data>
-			vwgU3xw+iEpXPSKk3ikG43NIhopSpMTB1OpBWqOMP/g=
+			r0VbZHjkTb9kJjVAy2dbrIMHZk3nzz1EBcn0tWVQFGA=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIDEntities.h</key>
@@ -1737,11 +1737,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			57ovNFJm2EjMnQWIRcjC2ibjzp0=
+			II5Qw8o7D/VAIsLP+g11VLo26fI=
 			</data>
 			<key>hash2</key>
 			<data>
-			nTGMFnt2decFRI15sko/M6lycm7JYKUwbz+2TnWkrIE=
+			yhv07axUUrdL0QKkVSBp90Td17yEm1XylFt/Me5ARq8=
 			</data>
 		</dict>
 		<key>Headers/MBCzechiaCombinedRecognizer.h</key>
@@ -2100,11 +2100,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CuKGk6DhXfpavjQrtuKS8Wok+no=
+			vC+0c+Y9An/xU5dpsgJh0f3wP1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			CnKKtj2ObZ9+hsmImEsFteonSJRrIeIBeRs+/8W3hWg=
+			vRDHjKqtAYqbQLldt3Yce8f/cbNfWtCDeCnb7An4xeQ=
 			</data>
 		</dict>
 		<key>Headers/MBDocumentOverlayViewController.h</key>
@@ -2166,11 +2166,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OXI2rHKrGjAoB97CmezTrwXtBSY=
+			Uc1aBbEJQvBCqx2Icl+KTqwcUdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			yzQOGTd2Zp+SctJdH9AGLK+5xd9+ZfV7X9vDOnBMS1c=
+			HsuqVnOriyt4tKpu4RhBWpYMdtSPgJ7YarnvAOmfLQM=
 			</data>
 		</dict>
 		<key>Headers/MBDocumentVerificationOverlayViewController.h</key>
@@ -4553,11 +4553,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R7L06bZfIBS7EOFa5cC/DbR4ZbE=
+			iLU8D8oejxsZXnWup4B/TVJm2Eo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Dc3TkXU61/+ofj8U9PYIOBfSVDgnYBo6Q07rKWotK7M=
+			1RcExkAASufAzz9NQBHClG43MZ9jLDVePsH0N2p+yp8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

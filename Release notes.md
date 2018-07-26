@@ -1,5 +1,15 @@
 # Release notes
 
+## 4.0.1
+- Bugfixes
+    - Calling  `reconfigureRecognizers` before showing camera now correctly applies supplied recognizers
+    - Fixed autorotation of overlays and `MBRecognizerRunnerViewController`
+    - Fixed localization issues with some overlays
+    - Fixed constraint errors on `MBDocumentVerificationOverlayViewController`
+    
+- Updates and additions
+    - Added  `reconfigureRecognizers` method to `MBBaseOverlayViewController`, enabling it on all it's subclasses
+
 ## 4.0.0
 
 - new API, which is not backward compatible. Please check [README](README.md) and updated demo applications for more information, but the gist of it is:
