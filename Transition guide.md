@@ -1,3 +1,7 @@
+## 4.0.1
+
+- No changes
+
 ## 4.0.0
 Please check [README](README.md) and updated demo applications for more information, but the gist of it is:
     - `PPScanningViewController` has been renamed to `MBRecognizerRunnerViewController` and `MBCoordinator` to `MBRecognizerRunner`

@@ -17,5 +17,3 @@
 "photopay_back_verification_document" = "Place the back side of the document in the frame and wait for automatic scan.";
 "photopay_front_splash_verification_document" = "Document front side";
 "photopay_back_splash_verification_document" = "Document back side";
-
-"photopay_time_restricted_license_key" = "Using time-limited license!";

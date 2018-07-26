@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 MB_CLASS_AVAILABLE_IOS(8.0)
 @interface MBBaseOverlayViewController : MBOverlayViewController
 
+/**
+ * Reconfigures current recognizer collection to new recognizer collection. Use this method to reconfigure what you wish to scan.
+ */
+- (void)reconfigureRecognizers:(MBRecognizerCollection *)recognizerCollection;
+
 @end
 
 NS_ASSUME_NONNULL_END

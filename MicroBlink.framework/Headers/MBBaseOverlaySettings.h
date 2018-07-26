@@ -33,7 +33,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Default: UIInterfaceOrientationMaskPortrait
  */
-@property (nonatomic, assign) NSUInteger supportedOrientations;
+@property (nonatomic, assign) UIInterfaceOrientationMask supportedOrientations;
 
 /**
  * Full path to the sound file which is played when the valid result is scanned.
@@ -48,9 +48,33 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic, assign) BOOL displayCancelButton;
 
 /**
+ * Returns/sets cancel button text that is shown if displayCancelButton is on.
+ *
+ * Default: string defined by "photopay_close"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *cancelButtonText;
+
+/**
  * Default: YES.
  */
 @property (nonatomic, assign) BOOL displayTorchButton;
+
+/**
+ * Returns/sets torch on button text that is shown if displayTorchButton is on.
+ *
+ * Default: string defined by "photopay_light_on"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *torchOnButtonText;
+
+/**
+ * Returns/sets torch off button text that is shown if displayTorchButton is on.
+ *
+ * Default: string defined by "photopay_light_off"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *torchOffButtonText;
 
 @end
 

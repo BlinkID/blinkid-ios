@@ -34,6 +34,16 @@ MB_LOCALIZED_DEFAULT_STRING(key), nil),                               \
 ##__VA_ARGS__]
 #endif
 
+#ifndef MB_LOCALIZED_PROPERTY_GETTER
+// note - this might return nil if frameworkBundle is nil!
+#define MB_LOCALIZED_PROPERTY_GETTER(propertyName, key) \
+if (propertyName) {                                     \
+return propertyName;                                    \
+} else {                                                \
+return MB_LOCALIZED(key);                               \
+}
+#endif
+
 #ifdef __cplusplus
 #define PP_EXTERN extern "C" __attribute__((visibility("default")))
 #else
