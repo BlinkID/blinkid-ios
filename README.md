@@ -111,7 +111,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.0.0'
+pod 'PPBlinkID', '~> 4.0.1'
 ```
 
 - Install the dependencies in your project:
