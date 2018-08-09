@@ -9,8 +9,10 @@
 #import "MBUnitedArabEmiratesIdFrontRecognizerResult.h"
 
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
 #import "MBGlareDetection.h"
 

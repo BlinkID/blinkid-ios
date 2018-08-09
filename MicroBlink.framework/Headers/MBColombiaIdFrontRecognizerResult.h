@@ -1,40 +1,46 @@
 //
-//  MBColombiaIdFrontRecognizerResult.h
+//  MBColombiaIdFrontRecognizerRecognizerResult.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by dodo on 24/07/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Colombia ID
+ * Class representing values obtained when scanning front side of the Colombia Id
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBColombiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBColombiaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult,  MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
-/**
- * The first name of the Colombian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
- * The last name of the Colombian ID owner.
+ * The document Number of the Colombia Id.
  */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The document number of the Colombian ID card.
+ * The first Name of the Colombia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
+@property (nonatomic, readonly) NSString *firstName;
+
+/**
+ * The last Name of the Colombia Id owner.
+ */
+@property (nonatomic, readonly) NSString *lastName;
 
 @end
 

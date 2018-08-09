@@ -99,20 +99,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios/Executor0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlaySettings.h",
-      "line": 18,
-      "symbol": "MBBarcodeOverlaySettings.displayBarcodeDots",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/Executor0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlaySettings.h",
-      "line": 20,
-      "symbol": "MBBarcodeOverlaySettings.displayViewfinder",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
       "file": "/opt/jenkins-ios/Executor0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBarcodeOverlayViewController.h",
       "line": 20,
       "symbol": "MBBarcodeOverlayViewController",
@@ -284,13 +270,6 @@
       "file": "/opt/jenkins-ios/Executor0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
       "line": 41,
       "symbol": "MBCustomOverlayViewController.-initWithRecognizerCollection:cameraSettings:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/Executor0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCustomOverlayViewController.h",
-      "line": 76,
-      "symbol": "MBCustomOverlayViewController.-reconfigureRecognizers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },

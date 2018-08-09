@@ -1,51 +1,51 @@
 //
-//  MBColombiaIdFrontRecognizer.h
+//  MBColombiaIdFrontRecognizerRecognizer.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by dodo on 24/07/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBColombiaIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
 #import "MBFaceImage.h"
-#import "MBSignatureImage.h"
-#import "MBFullDocumentImage.h"
-
+#import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
+#import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
 #import "MBSignatureImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
-
 #import "MBGlareDetection.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Colombia ID Front Recognizer.
+ * Class for configuring Colombia Id Front Recognizer.
  *
- * Colombia ID Front recognizer is used for scanning front side of Colombia ID.
+ * Colombia Id Front recognizer is used for scanning front side of the Colombia Id.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBColombiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBFaceImageDpi, MBSignatureImageDpi, MBFullDocumentImageDpi, MBGlareDetection>
+@interface MBColombiaIdFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBEncodeSignatureImage, MBSignatureImageDpi, MBGlareDetection>
 
 MB_INIT
 
 /**
- * Colombia ID Front recognizer result
+ * Result of scanning Colombia Id Front
  */
 @property (nonatomic, strong, readonly) MBColombiaIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's first name should be extracted from Colombian ID
+ * Defines if owner's first name should be extracted from front side of the Colombia Id
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractFirstName;
 
 /**
- * Defines if owner's last name should be extracted from Colombian ID
+ * Defines if owner's last name should be extracted from front side of the Colombia Id
  *
  * Default: YES
  */

@@ -8,14 +8,15 @@
 #ifndef MBCroatiaIdFrontRecognizerResult_h
 #define MBCroatiaIdFrontRecognizerResult_h
 
-#import "MBMicroBlinkDefines.h"
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 #import "MBSignatureImageResult.h"
-
-#import <Foundation/Foundation.h>
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning front side of Croatian ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCroatiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult, MBSignatureImageResult>
+@interface MBCroatiaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -38,9 +39,9 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *lastName;
 
 /**
- * The identity card number of Croatian ID.
+ * The document number of the Croatian ID.
  */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+@property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 /**
  * The sex of the Croatian ID owner.
@@ -53,24 +54,14 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *citizenship;
 
 /**
- * The date of birth of Croatian ID owner in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
-
-/**
  * The date of birth of Croatian ID owner
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
-
-/**
- * The document date of expiry of the Croatian ID in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfExpiry;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfBirth;
 
 /**
  * The document date of expiry of the Croatian ID
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfExpiry;
 
 /**
  * Check if date of expiry is permanent on the Croatian ID.

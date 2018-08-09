@@ -5,13 +5,18 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBNewZealandDlFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
 #import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
+#import "MBSignatureImageDpi.h"
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 
 
@@ -23,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * New Zealand DL Front recognizer is used for scanning front side of New Zealand DL.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBNewZealandDlFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+@interface MBNewZealandDlFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBSignatureImage, MBEncodeSignatureImage, MBSignatureImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 
@@ -58,14 +63,14 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractIssueDate;
+@property (nonatomic, assign) BOOL extractDateOfIssue;
 
 /**
  * Defines if card's expiry date should be extracted from New Zealand Driver License
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractExpiryDate;
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
 
 /**
  * Defines if owner's donor indicator should be extracted from New Zealand Driver License

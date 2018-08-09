@@ -14,49 +14,49 @@
 /**
  * Camera resolution preset
  */
-typedef NS_ENUM(NSUInteger, PPCameraPreset) {
+typedef NS_ENUM(NSUInteger, MBCameraPreset) {
 
     /** 480p video will always be used */
-    PPCameraPreset480p,
+    MBCameraPreset480p,
 
     /** 720p video will always be used */
-    PPCameraPreset720p,
+    MBCameraPreset720p,
 
     /** The library will calculate optimal resolution based on the use case and device used */
-    PPCameraPresetOptimal,
+    MBCameraPresetOptimal,
 
     /** Device's maximal video resolution will be used. */
-    PPCameraPresetMax,
+    MBCameraPresetMax,
 
     /** Device's photo preview resolution will be used */
-    PPCameraPresetPhoto,
+    MBCameraPresetPhoto,
 };
 
 /**
  * Camera type
  */
-typedef NS_ENUM(NSUInteger, PPCameraType) {
+typedef NS_ENUM(NSUInteger, MBCameraType) {
 
     /** Back facing camera */
-    PPCameraTypeBack,
+    MBCameraTypeBack,
 
     /** Front facing camera */
-    PPCameraTypeFront
+    MBCameraTypeFront
 };
 
 /**
  * Camera autofocus restricion mode
  */
-typedef NS_ENUM(NSUInteger, PPCameraAutofocusRestriction) {
+typedef NS_ENUM(NSUInteger, MBCameraAutofocusRestriction) {
 
     /** Default. Indicates that the autofocus system should not restrict the focus range. */
-    PPCameraAutofocusRestrictionNone,
+    MBCameraAutofocusRestrictionNone,
 
     /** Indicates that the autofocus system should restrict the focus range for subject matter that is near to the camera. */
-    PPCameraAutofocusRestrictionNear,
+    MBCameraAutofocusRestrictionNear,
 
     /** Indicates that the autofocus system should restrict the focus range for subject matter that is far from the camera. */
-    PPCameraAutofocusRestrictionFar,
+    MBCameraAutofocusRestrictionFar,
 };
 
 /**
@@ -70,14 +70,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: PPCameraPresetOptimal
  */
-@property (nonatomic, assign) PPCameraPreset cameraPreset;
+@property (nonatomic, assign) MBCameraPreset cameraPreset;
 
 /**
  * Camera type. You can choose between front and back facing.
  *
- * Default: PPCameraTypeBack
+ * Default: MBCameraTypeBack
  */
-@property (nonatomic, assign) PPCameraType cameraType;
+@property (nonatomic, assign) MBCameraType cameraType;
 
 /**
  * Interval between forcing two camera focuses. If <= 0, forced focuses arent performed
@@ -94,7 +94,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: PPCameraAutofocusRestrictionNone
  */
-@property (nonatomic, assign) PPCameraAutofocusRestriction cameraAutofocusRestriction;
+@property (nonatomic, assign) MBCameraAutofocusRestriction cameraAutofocusRestriction;
 
 /**
  * Gravity of Camera preview on screen.

@@ -32,6 +32,13 @@ MB_INIT
  */
 @property (nonatomic, strong, readonly) MBMyKadBackRecognizerResult *result;
 
+/**
+ * Defines if old NRIC should be extracted from back side of the MyKad
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractOldNric;
+
 @end
 
 NS_ASSUME_NONNULL_END

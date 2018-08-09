@@ -1,30 +1,33 @@
 //
-//  MBColombiaIdBackRecognizer.h
+//  MBColombiaIdBackRecognizerRecognizer.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by dodo on 24/07/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBColombiaIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBGlareDetection.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Colombia ID Back Recognizer.
+ * Class for configuring Colombia Id Back Recognizer.
  *
- * Colombia ID Back recognizer is used for scanning back side of Colombia ID.
+ * Colombia Id Back recognizer is used for scanning back side of the Colombia Id.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBColombiaIdBackRecognizer : MBLegacyRecognizer <NSCopying>
+@interface MBColombiaIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 
 /**
- * Colombia ID Back recognizer result
+ * Result of scanning Colombia Id Back Recognizer
  */
 @property (nonatomic, strong, readonly) MBColombiaIdBackRecognizerResult *result;
 

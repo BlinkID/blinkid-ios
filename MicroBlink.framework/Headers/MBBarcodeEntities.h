@@ -14,10 +14,6 @@
 #import "MBSimNumberRecognizer.h"
 #import "MBSimNumberRecognizerResult.h"
 
-//VIN
-#import "MBVinRecognizer.h"
-#import "MBVinRecognizerResult.h"
-
 // Barcode
 #import "MBBarcodeRecognizer.h"
 #import "MBBarcodeRecognizerResult.h"

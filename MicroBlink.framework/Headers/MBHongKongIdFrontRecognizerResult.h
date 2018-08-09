@@ -5,10 +5,13 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning front side of Hong Kong ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBHongKongIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult>
+@interface MBHongKongIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -33,7 +36,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The date of birth of the Hong Kong ID ownder.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfBirth;
 
 /**
  * The sex of the Hong Kong ID owner.
@@ -43,12 +46,17 @@ MB_INIT_UNAVAILABLE
 /**
  * The issue date of the Hong Kong ID owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfIssue;
 
 /**
  * The document number of the Hong Kong card.
  */
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
+
+/**
+ * The residential status of the Hong Kong ID.
+ */
+@property (nonatomic, readonly, nullable) NSString *residentialStatus;
 
 @end
 

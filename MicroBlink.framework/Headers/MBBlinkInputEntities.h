@@ -48,6 +48,10 @@
 #import "MBDateParser.h"
 #import "MBDateParserResult.h"
 
+// VIN
+#import "MBVinRecognizer.h"
+#import "MBVinRecognizerResult.h"
+
 // Raw
 #import "MBRawParser.h"
 #import "MBRawParserResult.h"

@@ -10,12 +10,14 @@
 
 #import <Foundation/Foundation.h>
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
 #import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
 #import "MBSignatureImageDpi.h"
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
-#import "MBEncodeFaceImage.h"
 #import "MBGlareDetection.h"
 #import "MBRecognizer.h"
 #import "MBMicroBlinkInitialization.h"
@@ -29,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Aus ID Front recognizer is used for scanning front side of Austrian Id.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBAustriaIdFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBFaceImageDpi, MBSignatureImage, MBSignatureImageDpi, MBFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBEncodeFaceImage>
+@interface MBAustriaIdFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBSignatureImage, MBEncodeSignatureImage, MBSignatureImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 

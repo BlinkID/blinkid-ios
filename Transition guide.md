@@ -1,3 +1,8 @@
+## 4.1.0
+
+- Minor API changes
+    - `identityCardNumber` property has been renamed to `documentNumber` on `MBCroatiaIdFrontRecognizerResult`
+
 ## 4.0.1
 
 - No changes

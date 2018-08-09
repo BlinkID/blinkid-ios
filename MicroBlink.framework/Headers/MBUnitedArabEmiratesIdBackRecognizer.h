@@ -9,6 +9,7 @@
 #import "MBUnitedArabEmiratesIdBackRecognizerResult.h"
 
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * United Arab Emirates ID Back recognizer is used for scanning back side of United Arab Emirates ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBUnitedArabEmiratesIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
+@interface MBUnitedArabEmiratesIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 

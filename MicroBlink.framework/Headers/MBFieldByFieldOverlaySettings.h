@@ -49,6 +49,11 @@ MB_INIT_UNAVAILABLE;
  */
 @property(nonatomic) NSUInteger consecutiveScanThreshold;
 
+/**
+ * Background color of successful scan result
+ */
+@property(nonatomic) UIColor *scanResultViewColor;
+
 @end
 
 NS_ASSUME_NONNULL_END
