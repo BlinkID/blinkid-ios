@@ -22,8 +22,8 @@
 		A288D47B2073B5F20042A45F /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288D47A2073B5F20042A45F /* CustomOverlay.swift */; };
 		A2AD639720D93B2D00739244 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* MicroBlink.framework */; };
 		A2AD639820D93B2D00739244 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2FC5AF92121883A00E263C2 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2FC5AF82121883A00E263C2 /* blinkid-license.txt */; };
 		A2FE137F1F75106F00C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE137E1F75106F00C6F1EA /* libz.tbd */; };
-		B4A57ADA20F4E700004AA280 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4A57AD920F4E700004AA280 /* license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,8 +57,8 @@
 		3139C8351C22B338005AC32C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3139C8371C22B33E005AC32C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		A288D47A2073B5F20042A45F /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
+		A2FC5AF82121883A00E263C2 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A2FE137E1F75106F00C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B4A57AD920F4E700004AA280 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		B4A57AD820F4E700004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				B4A57AD920F4E700004AA280 /* license.txt */,
+				A2FC5AF82121883A00E263C2 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				184958EC20AD90F000F27C8D /* MicroBlink.bundle in Resources */,
-				B4A57ADA20F4E700004AA280 /* license.txt in Resources */,
 				3139C8251C22B2AC005AC32C /* LaunchScreen.storyboard in Resources */,
 				3139C8221C22B2AC005AC32C /* Assets.xcassets in Resources */,
+				A2FC5AF92121883A00E263C2 /* blinkid-license.txt in Resources */,
 				3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +372,7 @@
 				INFOPLIST_FILE = "pdf417-sample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -388,7 +388,7 @@
 				INFOPLIST_FILE = "pdf417-sample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
