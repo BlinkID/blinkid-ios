@@ -23,7 +23,7 @@
 		315532251D94241C001B9440 /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 315532231D94241C001B9440 /* MicroBlink.bundle */; };
 		A2351A2A1EDF002000C1271E /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; };
 		A2351A2B1EDF002000C1271E /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B466BA2620F4E587003108A7 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B466BA2520F4E587003108A7 /* license.txt */; };
+		A2FC5AEF2121844500E263C2 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2FC5AEE2121844500E263C2 /* blinkid-license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,7 +58,7 @@
 		3155321D1D9418DA001B9440 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		315532231D94241C001B9440 /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
 		315532241D94241C001B9440 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
-		B466BA2520F4E587003108A7 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		A2FC5AEE2121844500E263C2 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 		B466BA2420F4E587003108A7 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				B466BA2520F4E587003108A7 /* license.txt */,
+				A2FC5AEE2121844500E263C2 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3139C89F1C294F2C005AC32C /* LaunchScreen.storyboard in Resources */,
-				B466BA2620F4E587003108A7 /* license.txt in Resources */,
 				3139C89C1C294F2C005AC32C /* Assets.xcassets in Resources */,
 				3139C89A1C294F2C005AC32C /* Main.storyboard in Resources */,
+				A2FC5AEF2121844500E263C2 /* blinkid-license.txt in Resources */,
 				315532251D94241C001B9440 /* MicroBlink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +359,7 @@
 				INFOPLIST_FILE = "BlinkID-sample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -376,7 +376,7 @@
 				INFOPLIST_FILE = "BlinkID-sample-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

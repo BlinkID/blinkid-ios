@@ -9,17 +9,20 @@
 #ifndef MBCroatiaIdFrontRecognizer_h
 #define MBCroatiaIdFrontRecognizer_h
 
-#import "MBMicroBlinkDefines.h"
-#import "MBLegacyRecognizer.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBRecognizer.h"
 #import "MBCroatiaIdFrontRecognizerResult.h"
 
-#import "MBGlareDetection.h"
-#import "MBFullDocumentImage.h"
-#import "MBSignatureImage.h"
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBGlareDetection.h"
 
-#import <Foundation/Foundation.h>
 
 /**
  * Croatian ID Front Recognizer.
@@ -28,7 +31,7 @@
  * identity card number, first and last name of ID holder while extracting other elements is optional.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBCroatiaIdFrontRecognizer : MBLegacyRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBSignatureImage, MBFaceImage>
+@interface MBCroatiaIdFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBSignatureImage, MBEncodeSignatureImage, MBSignatureImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 
@@ -36,6 +39,20 @@ MB_INIT
  * Croatian ID Front recognizer result
  */
 @property (nonatomic, strong, readonly) MBCroatiaIdFrontRecognizerResult *result;
+
+/**
+ *  Defines if first name of Croatian ID owner should be extracted
+ *
+ *  Default: YES
+ */
+@property (nonatomic, assign) BOOL extractFirstName;
+
+/**
+ *  Defines if last name of Croatian ID owner should be extracted
+ *
+ *  Default: YES
+ */
+@property (nonatomic, assign) BOOL extractLastName;
 
 /**
  *  Defines if sex of Croatian ID owner should be extracted

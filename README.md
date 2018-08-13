@@ -111,7 +111,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.0.1'
+pod 'PPBlinkID', '~> 4.1.0'
 ```
 
 - Install the dependencies in your project:
@@ -1298,6 +1298,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

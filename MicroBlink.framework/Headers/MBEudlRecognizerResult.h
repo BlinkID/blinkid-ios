@@ -8,8 +8,10 @@
 #import "MBRecognizerResult.h"
 
 #import "MBEudlCountry.h"
-#import "MBFullDocumentImageResult.h"
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
+#import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 #import "MBDateResult.h"
 
 
@@ -19,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning EU Driver License
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBEudlRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
+@interface MBEudlRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 

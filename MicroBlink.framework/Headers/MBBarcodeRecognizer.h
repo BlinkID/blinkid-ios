@@ -161,13 +161,6 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL nullQuietZoneAllowed;
 
-/**
- * Set manatee license key and unlock the aztec scanning feature.
- *
- * Default: ""
- */
-@property (nonatomic, strong) NSString *manateeLicenseKey;
-
 @end
 
 NS_ASSUME_NONNULL_END

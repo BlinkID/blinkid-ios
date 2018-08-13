@@ -1,57 +1,62 @@
 //
-//  MBColombiaIdBackRecognizerResult.h
+//  MBColombiaIdBackRecognizerRecognizerResult.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by dodo on 24/07/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
+#import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Colombia ID
+ * Class representing values obtained when scanning back side of the Colombia Id
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBColombiaIdBackRecognizerResult : MBLegacyRecognizerResult<NSCopying>
+@interface MBColombiaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
-/**
- * The first name of the Colombian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
- * The last name of the Colombian ID owner.
+ * The birth Date of the Colombia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+@property (nonatomic, readonly) MBDateResult *birthDate;
 
 /**
- * The sex of the Colombian ID owner.
+ * The blood Group of the Colombia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *sex;
+@property (nonatomic, readonly) NSString *bloodGroup;
 
 /**
- * The date of birth of the Colombian ID owner.
+ * The document Number Colombia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The blood group of the Colombian ID owner.
+ * The first Name of the Colombia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *bloodGroup;
+@property (nonatomic, readonly) NSString *firstName;
+
+/**
+ * The last Name of the Colombia Id owner.
+ */
+@property (nonatomic, readonly) NSString *lastName;
+
+/**
+ * The sex of the Colombia Id owner.
+ */
+@property (nonatomic, readonly) NSString *sex;
 
 /**
  * The fingerprint of the Colombian ID owner.
  */
 @property (nonatomic, readonly, nullable) NSData *fingerprint;
-
-/**
- * The document number of the Colombian ID card.
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
 
 @end
 

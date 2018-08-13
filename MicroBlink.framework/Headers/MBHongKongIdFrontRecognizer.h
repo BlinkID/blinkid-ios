@@ -5,14 +5,16 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBHongKongIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Hong Kong ID Front recognizer is used for scanning front side of Hong Kong ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBHongKongIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBFullDocumentImage, MBGlareDetection>
+@interface MBHongKongIdFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 
@@ -51,6 +53,13 @@ MB_INIT
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractDateOfBirth;
+
+/**
+ * Defines if card's residential status should be extracted from Hong Kong ID
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractResidentialStatus;
 
 /**
  * Defines if owner's sex should be extracted from Hong Kong ID

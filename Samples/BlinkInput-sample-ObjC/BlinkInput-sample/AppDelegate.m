@@ -21,7 +21,7 @@
     
     /** First, set license key as soon as possible */
     // Valid until: 2019-07-10
-    [[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
+    [[MBMicroblinkSDK sharedInstance] setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
     return YES;
 }
 

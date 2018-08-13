@@ -8,7 +8,9 @@
 #import "MBRecognizerResult.h"
 
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning front side of United Arab Emirates ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBUnitedArabEmiratesIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult>
+@interface MBUnitedArabEmiratesIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult>
 
 MB_INIT_UNAVAILABLE
 

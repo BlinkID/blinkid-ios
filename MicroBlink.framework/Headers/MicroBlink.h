@@ -12,6 +12,7 @@
 #import "MBMicroblinkSDK.h"
 #import "MBException.h"
 #import "MBImage.h"
+#import "MBDateResult.h"
 
 // Settings
 #import "MBCameraSettings.h"

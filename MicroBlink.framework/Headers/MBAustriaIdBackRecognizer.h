@@ -9,6 +9,7 @@
 #import "MBAustriaIdBackRecognizerResult.h"
 
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Austrian ID Back recognizer is used for scanning back side of Austrian ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustriaIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
+@interface MBAustriaIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 

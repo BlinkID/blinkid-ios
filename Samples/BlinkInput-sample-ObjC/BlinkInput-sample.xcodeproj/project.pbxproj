@@ -21,10 +21,10 @@
 		3159A5C11CF4A5E900641A11 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C01CF4A5E900641A11 /* libc++.tbd */; };
 		3159A5C31CF4A5F100641A11 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C21CF4A5F100641A11 /* libiconv.tbd */; };
 		3159A5C51CF4A5F400641A11 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C41CF4A5F400641A11 /* Accelerate.framework */; };
+		A2FC5AF1212184FD00E263C2 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2FC5AF0212184FD00E263C2 /* blinkid-license.txt */; };
 		A2FE135D1F7503A600C6F1EA /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A58A1CF4805D00641A11 /* MicroBlink.framework */; };
 		A2FE135E1F7503A600C6F1EA /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A58A1CF4805D00641A11 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2FE13611F7503C200C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE13601F7503C200C6F1EA /* libz.tbd */; };
-		B4A57ACE20F4E61B004AA280 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4A57ACD20F4E61B004AA280 /* license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,8 +61,8 @@
 		3159A5C01CF4A5E900641A11 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3159A5C21CF4A5F100641A11 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		3159A5C41CF4A5F400641A11 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A2FC5AF0212184FD00E263C2 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A2FE13601F7503C200C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B4A57ACD20F4E61B004AA280 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 		B4A57ACC20F4E61B004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				B4A57ACD20F4E61B004AA280 /* license.txt */,
+				A2FC5AF0212184FD00E263C2 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -210,11 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A57ACE20F4E61B004AA280 /* license.txt in Resources */,
 				3159A58B1CF4805D00641A11 /* MicroBlink.bundle in Resources */,
 				187392121AA4B1070031D6C9 /* Main.storyboard in Resources */,
 				187392171AA4B1070031D6C9 /* LaunchScreen.xib in Resources */,
 				186226B71AB1B0A6002D71E5 /* en.strings in Resources */,
+				A2FC5AF1212184FD00E263C2 /* blinkid-license.txt in Resources */,
 				187392141AA4B1070031D6C9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = ../../;
 				INFOPLIST_FILE = "BlinkInput-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -387,7 +387,7 @@
 				FRAMEWORK_SEARCH_PATHS = ../../;
 				INFOPLIST_FILE = "BlinkInput-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.blinkid.sample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

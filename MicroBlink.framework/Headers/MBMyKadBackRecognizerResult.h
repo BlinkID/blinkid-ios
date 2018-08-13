@@ -34,6 +34,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *nric;
 
 /**
+ * The old NRIC of the MyKad owner.
+ */
+@property (nonatomic, readonly) NSString *oldNric;
+
+/**
  * The Sex of the MyKad owner.
  */
 @property (nonatomic, readonly) NSString *sex;

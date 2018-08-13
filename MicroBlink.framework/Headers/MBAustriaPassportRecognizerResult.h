@@ -8,8 +8,11 @@
 #import "MBRecognizerResult.h"
 #import "MBMrzResult.h"
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning Aus Passport
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustriaPassportRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBAustriaPassportRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 /**

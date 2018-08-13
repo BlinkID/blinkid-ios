@@ -8,6 +8,7 @@
 #import "MBRecognizerResult.h"
 #import "MBMrzResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning back side of Austrian ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustriaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBAustriaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 

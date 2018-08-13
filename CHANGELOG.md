@@ -1,6 +1,30 @@
 # Release notes
 
+## 4.1.0
+
+- Updates and additions
+    - Added support for reading front side of Swiss Driver's License - use `MBSwitzerlandDlFrontRecognizer`
+    - Added support for reading front side of Singapore Driver's License - use `MBSingaporeDlFrontRecognizer`
+    - Added support for reading front side of Morocco ID card - use `MBMoroccoIdFrontRecognizer`
+    - Added support for reading back side of Morocco ID card - use `MBMoroccoIdBackRecognizer`
+    - Added support for reading Singapore Changi Employee ID card - use `MBSingaporeChangiEmployeeIdRecognizer`
+    - Added support for reading residential status on front side of Hong Kong ID Card
+    - Added support for reading partial dates on all MRTD documents
+    - Added support for returning encoded images on all recognizers that support image return
+    - Added support for checking if scanning is unsupported for camera type on `MBRecognizerRunnerViewController`
+    - Added support for reading sticker with new address on back side of Singapore ID card
+    - Added missing `oldNric` property on `MBMyKadBackRecognizerResult`
+    - Removed manatee 
+
+- Improvements in ID scanning performance
+    - Improved reading of New Zealeand Driver's License
+    - Better name and nationality extraction on `MBUnitedArabEmiratesIdFrontRecognizer`
+
+- Minor API changes
+    - `identityCardNumber` property has been renamed to `documentNumber` on `MBCroatiaIdFrontRecognizerResult`
+
 ## 4.0.1
+
 - Bugfixes
     - Calling  `reconfigureRecognizers` before showing camera now correctly applies supplied recognizers
     - Fixed autorotation of overlays and `MBRecognizerRunnerViewController`

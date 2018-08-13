@@ -2,47 +2,62 @@
 //  MBSingaporeIdBackRecognizer.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by dinogustin on 27/07/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSingaporeIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Singapore ID Back Recognizer.
+ * Class for configuring Singapore Id Back Recognizer.
  *
- * Singapore ID Back recognizer is used for scanning back side of Singapore ID.
+ * Singapore Id Back recognizer is used for scanning back side of the Singapore Id.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+@interface MBSingaporeIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
 
 MB_INIT
 
 /**
- * Singapore ID Back recognizer result
+ * Result of scanning Singapore Id Back
  */
 @property (nonatomic, strong, readonly) MBSingaporeIdBackRecognizerResult *result;
 
 /**
- *  Defines if blood group of Singapore ID owner should be extracted
+ * Defines if owner's address should be extracted from back side of the Singapore Id
  *
- *  Default: YES
+ * Default: YES
  */
-@property (nonatomic) BOOL extractBloodGroup;
+@property (nonatomic, assign) BOOL extractAddress;
 
 /**
- *  Defines if date of issue of Singapore ID owner should be extracted
+ * Defines if owner's address change date should be extracted from back side of the Singapore Id
  *
- *  Default: YES
+ * Default: NO
  */
-@property (nonatomic) BOOL extractDateOfIssue;
+@property (nonatomic, assign) BOOL extractAddressChangeDate;
+
+/**
+ * Defines if owner's blood type should be extracted from back side of the Singapore Id
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractBloodType;
+
+/**
+ * Defines if owner's date of issue should be extracted from back side of the Singapore Id
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractDateOfIssue;
 
 @end
 

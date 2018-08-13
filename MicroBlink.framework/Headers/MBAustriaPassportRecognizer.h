@@ -9,10 +9,13 @@
 #import "MBAustriaPassportRecognizerResult.h"
 
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
 #import "MBSignatureImageDpi.h"
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
 #import "MBGlareDetection.h"
 
@@ -25,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Austrian Passport recognizer is used for scanning Austrian Passport.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustriaPassportRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBFaceImage, MBFaceImageDpi, MBGlareDetection>
+@interface MBAustriaPassportRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBEncodeSignatureImage, MBSignatureImageDpi, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBGlareDetection>
 
 MB_INIT
 
