@@ -47,7 +47,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * NSDate object which represents the same date as this result
  */
-@property (nonatomic, readonly, nonnull) NSDate *date;
+@property (nonatomic, readonly, nullable) NSDate *date;
 
 /**
  * Day in month.

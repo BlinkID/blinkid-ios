@@ -5,10 +5,13 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,37 +19,37 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning front side of Singapore ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
+@interface MBSingaporeIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The identity card number of the Singapore ID.
+ * The identity card number of the Singaporean ID card.
  */
-@property (nonatomic, readonly, nullable) NSString *cardNumber;
+@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
 
 /**
- * The name of the Singapore ID owner.
+ * The name of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *name;
 
 /**
- * The race of the Singapore ID owner.
+ * The race of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *race;
 
 /**
- * The sex of the Singapore ID owner.
+ * The sex of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
- * The date of birth of the Singapore ID owner.
+ * The date of birth of the Singaporean ID card owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfBirth;
 
 /**
- * The country of birth of the Singapore ID owner.
+ * The country/place of birth of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *countryOfBirth;
 

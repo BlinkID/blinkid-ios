@@ -45,6 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)documentVerificationOverlayViewControllerDidTapClose:(nonnull MBDocumentVerificationOverlayViewController *)documentVerificationOverlayViewController;
 
+@optional
+/**
+ * Called when scanning library finished scanning first side of the document
+ *
+ *  @param documentVerificationOverlayViewController documentVerificationOverlayViewController Scanning view controller responsible for scanning
+ */
+- (void)documentVerificationOverlayViewControllerDidFinishScanningFirstSide:(nonnull MBDocumentVerificationOverlayViewController *)documentVerificationOverlayViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

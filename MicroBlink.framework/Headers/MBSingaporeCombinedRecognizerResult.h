@@ -5,19 +5,17 @@
 //  Created by DoDo on 17/05/2018.
 //
 
-#import "MBMicroBlinkDefines.h"
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
+#import "MBDigitalSignatureResult.h"
 
 #import "MBCombinedRecognizerResult.h"
-
-#import "MBFaceImageResult.h"
-#import "MBDigitalSignatureResult.h"
 #import "MBCombinedFullDocumentImageResult.h"
-
-#import "MBEncodedFaceImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
 
-#import <Foundation/Foundation.h>
+#import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,55 +23,59 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning both front and back side of Czech ID.
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBSingaporeCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Singapore ID owner.
+ * The identity card number of the Singaporean ID card.
+ */
+@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+
+/**
+ * The name of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *name;
 
 /**
- * The name of the Singapore ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
-
-/**
- * The blood group of the Singapore ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *bloodGroup;
-
-/**
- * The sex of the Singapore ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
-
-/**
- * The country of birth of the Singapore ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *countryOfBirth;
-
-/**
- * The race of the Singapore ID owner.
+ * The race of the Singaporean ID card owner.
  */
 @property (nonatomic, readonly, nullable) NSString *race;
 
 /**
- * The identity card number of Singapore ID.
+ * The sex of the Singaporean ID card owner.
  */
-@property (nonatomic, readonly, nullable) NSString *cardNumber;
-
-
-/**
- * The date of birth of Singapore ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+@property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
- * The date of issue of Singapore ID owner
+ * The date of birth of the Singaporean ID card owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfBirth;
+
+/**
+ * The country/place of birth of the Singaporean ID card owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *countryOfBirth;
+
+/**
+ * The address of the back side of the Singapore Id owner.
+ */
+@property (nonatomic, readonly) NSString *address;
+
+/**
+ * The address Change Date of the back side of the Singapore Id owner.
+ */
+@property (nonatomic, readonly) MBDateResult *addressChangeDate;
+
+/**
+ * The blood Type of the back side of the Singapore Id owner.
+ */
+@property (nonatomic, readonly) NSString *bloodType;
+
+/**
+ * The date Of Issue of the back side of the Singapore Id owner.
+ */
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 @end
 
