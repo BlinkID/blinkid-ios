@@ -71,10 +71,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /** Returns true if the help was already shown */
 - (BOOL)isHelpShown;
 
-/** 
- * This method check existance of the default resources bundle Microblink.bundle,
- * and throws an exception if it's missing
+/**
+ * Returns the default resources bundle. If it doesn't exist, it will be nil.
  */
-+ (NSBundle *)verifyAndGetDefaultResourcesBundle;
++ (NSBundle *)getDefaultResourcesBundle;
 
 @end

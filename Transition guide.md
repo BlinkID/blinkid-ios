@@ -1,3 +1,18 @@
+## 4.2.0
+
+- Minor API changes
+    - Renamed properties in `MBCroatiaIdBackRecognizerResult`:
+        - `address` to `residence`
+        - `documentForNonResident` to `isDocumentForNonResident`
+        - `issuingAuthority` to `issuedBy`
+        - MRZ fields are available through `MBMrzResult` which can be obtained by using property `mrzResult`
+    - Renamed properties in `MBSingaporeIdFrontRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+    - Renamed properties in `MBSingaporeCombinedRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+        - `bloodGroup` to `bloodType`
+    - `isScanningUnsupportedForCameraType:` is now class method of `MBMicroblinkSDK`    
+
 ## 4.1.0
 
 - Minor API changes

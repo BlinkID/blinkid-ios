@@ -105,18 +105,6 @@ NS_ASSUME_NONNULL_BEGIN
 /**-------------------------------*/
 - (void)resetState;
 
-/**
- * This method returns true when scanning is unsupported on a specific device.
- * Error object contains description of the reason for that.
- *
- *  @param type The camera type you want to check for.
- *  @param error If scanning is not supported, when method this method returns, this parameter contains an NSError object that describes the
- * problem. If you are not interested in possible errors, pass in NULL.
- *
- *  @return YES if scanning is not supported, NO otherwise.
- */
-- (BOOL)isScanningUnsupportedForCameraType:(MBCameraType)type error:(NSError *_Nullable *_Nullable)error NS_SWIFT_NOTHROW;
-
 @end
 
 NS_ASSUME_NONNULL_END

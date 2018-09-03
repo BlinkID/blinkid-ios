@@ -1,5 +1,40 @@
 # Release notes
 
+## 4.2.0
+
+- Updates and additions
+    - Added support for reading front side of Spain Driver's License - use `MBSpainDlFrontRecognizer`
+    - Added support for reading front side of UAE Driver's License - use `MBUnitedArabEmiratesDlFrontRecognizer`
+    - Added support for reading front side of Cyprus ID card - use `MBCyprusIdFrontRecognizer`
+    - Added support for reading back side of Cyprus ID card - use `MBCyprusIdBackRecognizer`
+    - Added support for reading front side of Kuwait ID card - use `MBKuwaitIdFrontRecognizer`
+    - Added support for reading back side of Kuwait ID card - use `MBKuwaitIdBackRecognizer`
+    - Added support for reading front side of Payment Card - use `MBPaymentCardFrontRecognizer`
+    - Added support for reading back side of Payment Card - use `MBPaymentCardBackRecognizer`
+    - Added support for reading front and back side of Payment Card - use `MBPaymentCardCombinedRecognizer`
+    - Added support for optional protocol method implementation in `MBDocumentVerificationOverlayViewControllerDelegate` - `documentVerificationOverlayViewControllerDidFinishScanningFirstSide:`
+
+- Improvements in ID scanning performance
+    - Added support for reading sticker with new address on back side of Singapore ID card with `MBSingaporeCombinedRecognizer`
+    - Performance improvements
+
+- Minor API changes
+    - Renamed properties in `MBCroatiaIdBackRecognizerResult`:
+        - `address` to `residence`
+        - `documentForNonResident` to `isDocumentForNonResident`
+        - `issuingAuthority` to `issuedBy`
+        - MRZ fields are available through `MBMrzResult` which can be obtained by using property `mrzResult`
+    - Renamed properties in `MBSingaporeIdFrontRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+    - Renamed properties in `MBSingaporeCombinedRecognizerResult`:
+        - `cardNumber` to `identityCardNumber`
+        - `bloodGroup` to `bloodType`
+    - `isScanningUnsupportedForCameraType:` is now class method of `MBMicroblinkSDK`    
+
+- Bugfixes
+    - Fixed bug where SDK crashed with exception when the user wanted to use custom resource bundle
+    - Various other bug fixes and improvements
+
 ## 4.1.0
 
 - Updates and additions

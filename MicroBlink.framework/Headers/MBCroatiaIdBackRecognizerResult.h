@@ -8,11 +8,12 @@
 #ifndef MBCroatiaIdBackRecognizerResult_h
 #define MBCroatiaIdBackRecognizerResult_h
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFullDocumentImageResult.h"
-
-#import <Foundation/Foundation.h>
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,35 +21,39 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning back side of Croatian ID
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCroatiaIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBCroatiaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The address of the Croatian ID owner.
+ * The residence of Croatian ID owner
  */
-@property (nonatomic, readonly, nullable) NSString *address;
+@property (nonatomic, readonly, nullable) NSString *residence;
 
 /**
- * The issuing authority of Croatian ID.
+ * The issuer of Croatian ID
  */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
+@property (nonatomic, readonly, nullable) NSString *issuedBy;
 
 /**
- * The document date of issue of the Croatian ID in DD.MM.yyyy format.
+ * The date of issue of Croatian ID
  */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfIssue;
+@property (nonatomic, readonly, nullable) MBDateResult *dateOfIssue;
 
 /**
- * The document date of issue of the Croatian ID.
+ * Determines if Croatian ID is issued for non resident
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+@property (nonatomic, readonly) BOOL documentForNonResident;
 
 /**
- * Check if date of expiry is permanent on the Croatian ID.
+ * Determines if date of expiry of Croatian ID is permanent
  */
 @property (nonatomic, readonly) BOOL dateOfExpiryPermanent;
 
+/**
+ * The data extracted from the machine readable zone
+ */
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 @end
 

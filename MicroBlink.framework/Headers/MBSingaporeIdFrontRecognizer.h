@@ -5,12 +5,15 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSingaporeIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
 #import "MBGlareDetection.h"
 
 
@@ -22,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Singapore ID Front recognizer is used for scanning front side of Singapore ID.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBGlareDetection>
+@interface MBSingaporeIdFrontRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBGlareDetection>
 
 MB_INIT
 
@@ -32,28 +35,35 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBSingaporeIdFrontRecognizerResult *result;
 
 /**
- *  Defines if race of Singapore ID owner should be extracted
+ *  Defines if name of Singaporean ID card owner should be extracted
+ *
+ *  Default: YES
+ */
+@property (nonatomic) BOOL extractName;
+
+/**
+ *  Defines if race of Singaporean ID card owner should be extracted
  *
  *  Default: YES
  */
 @property (nonatomic) BOOL extractRace;
 
 /**
- *  Defines if date of birth of Singapore ID owner should be extracted
+ *  Defines if date of birth of Singaporean ID card owner should be extracted
  *
  *  Default: YES
  */
 @property (nonatomic) BOOL extractDateOfBirth;
 
 /**
- *  Defines if sex of Singapore ID owner should be extracted
+ *  Defines if sex of Singaporean ID card owner should be extracted
  *
  *  Default: YES
  */
 @property (nonatomic) BOOL extractSex;
 
 /**
- *  Defines if country of birth of Singapore ID owner should be extracted
+ *  Defines if country/place of birth of Singaporean ID card owner should be extracted
  *
  *  Default: YES
  */
