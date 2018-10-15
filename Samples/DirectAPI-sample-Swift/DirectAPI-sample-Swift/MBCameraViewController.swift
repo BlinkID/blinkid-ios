@@ -56,10 +56,10 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
     }
     
     func addNotificationObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.appplicationWillResignActive(_:)), name: .UIApplicationWillResignActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.appplicationWillEnterForeground(_:)), name: .UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.applicationDidEnterBackgroundNotification(_:)), name: .UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.applicationWillTerminateNotification(_:)), name: .UIApplicationWillTerminate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.appplicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.appplicationWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.applicationDidEnterBackgroundNotification(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.applicationWillTerminateNotification(_:)), name: UIApplication.willTerminateNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.captureSessionDidStartRunning(_:)), name: .AVCaptureSessionDidStartRunning, object: nil)
         NotificationCenter.default.addObserver(self, selector :#selector(MBCameraViewController.captureSessionDidStopRunning(_:)), name: .AVCaptureSessionDidStopRunning, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MBCameraViewController.captureSessionRuntimeErrorNotification(_:)), name: .AVCaptureSessionRuntimeError, object: nil)
