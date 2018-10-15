@@ -14,7 +14,7 @@
 #import "MBFullDocumentImage.h"
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * EU Driver License recognizer is used for scanning EU Driver License.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBEudlRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBEudlRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

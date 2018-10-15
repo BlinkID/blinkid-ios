@@ -55,7 +55,7 @@ extension ViewController : MBFieldByFieldOverlayViewControllerDelegate {
             description += "\(key): \(value)\n"
         }
         
-        let alert = UIAlertController(title: "Field by field Result", message: "\(description)", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Field by field Result", message: "\(description)", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             self.dismiss(animated: true, completion: nil)
         }))

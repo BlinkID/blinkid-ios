@@ -23,12 +23,16 @@
 #import "MBAustriaCombinedRecognizerResult.h"
 #import "MBAustriaPassportRecognizer.h"
 #import "MBAustriaPassportRecognizerResult.h"
+#import "MBAustriaDlFrontRecognizer.h"
+#import "MBAustriaDlFrontRecognizerResult.h"
 
 // Colombia
 #import "MBColombiaIdBackRecognizer.h"
 #import "MBColombiaIdBackRecognizerResult.h"
 #import "MBColombiaIdFrontRecognizer.h"
 #import "MBColombiaIdFrontRecognizerResult.h"
+#import "MBColombiaDlFrontRecognizer.h"
+#import "MBColombiaDlFrontRecognizerResult.h"
 
 // Croatia
 #import "MBCroatiaIdFrontRecognizer.h"
@@ -84,6 +88,14 @@
 #import "MBIndonesiaIdFrontRecognizer.h"
 #import "MBIndonesiaIdFrontRecognizerResult.h"
 
+// Ireland
+#import "MBIrelandDlFrontRecognizer.h"
+#import "MBIrelandDlFrontRecognizerResult.h"
+
+// Italy
+#import "MBItalyDlFrontRecognizer.h"
+#import "MBItalyDlFrontRecognizerResult.h"
+
 // Kuwait
 #import "MBKuwaitIdFrontRecognizer.h"
 #import "MBKuwaitIdFrontRecognizerResult.h"
@@ -133,6 +145,12 @@
 #import "MBPaymentCardFrontRecognizerResult.h"
 #import "MBPaymentCardCombinedRecognizer.h"
 #import "MBPaymentCardCombinedRecognizerResult.h"
+#import "MBElitePaymentCardBackRecognizer.h"
+#import "MBElitePaymentCardBackRecognizerResult.h"
+#import "MBElitePaymentCardFrontRecognizer.h"
+#import "MBElitePaymentCardFrontRecognizerResult.h"
+#import "MBElitePaymentCardCombinedRecognizer.h"
+#import "MBElitePaymentCardCombinedRecognizerResult.h"
 
 // Poland
 #import "MBPolandIdBackRecognizer.h"

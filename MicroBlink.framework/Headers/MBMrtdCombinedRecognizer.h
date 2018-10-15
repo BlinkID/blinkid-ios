@@ -41,4 +41,29 @@ MB_INIT
  */
 @property (nonatomic, strong, readonly) MBMrtdCombinedRecognizerResult* result;
 
+/**
+ * Whether returning of unparsed results is allowed
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowUnparsedResults;
+
+/**
+ * Whether returning of unverified results is allowed
+ * Unverified result is result that is parsed, but check digits are incorrect.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowUnverifiedResults;
+
+/**
+ * Defines how many times the same document should be detected before the detector
+ * returns this document as a result of the deteciton
+ *
+ * Higher number means more reliable detection, but slower processing
+ *
+ * Default: 6
+ */
+@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+
 @end

@@ -12,7 +12,7 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Singapore Id Back recognizer is used for scanning back side of the Singapore Id.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBSingaporeIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -50,7 +50,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractBloodType;
+@property (nonatomic, assign) BOOL extractBloodGroup;
 
 /**
  * Defines if owner's date of issue should be extracted from back side of the Singapore Id

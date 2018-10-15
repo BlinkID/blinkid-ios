@@ -24,7 +24,7 @@
 		A207A44E20A44207002AEDB0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A44D20A44206002AEDB0 /* libc++.tbd */; };
 		A207A45020A44211002AEDB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A44F20A44211002AEDB0 /* libz.tbd */; };
 		A207A45B20A4467B002AEDB0 /* MBGenericPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A45A20A4467B002AEDB0 /* MBGenericPreset.swift */; };
-		A27ED1F2213D98D200FD53E6 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A27ED1F1213D98D200FD53E6 /* blinkid-license.txt */; };
+		A254B5272174D3C900E720C4 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A254B5262174D3C900E720C4 /* blinkid-license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +60,7 @@
 		A207A44D20A44206002AEDB0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A207A44F20A44211002AEDB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A207A45A20A4467B002AEDB0 /* MBGenericPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBGenericPreset.swift; sourceTree = "<group>"; };
-		A27ED1F1213D98D200FD53E6 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
+		A254B5262174D3C900E720C4 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 		B4A57AD520F4E6C9004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				A27ED1F1213D98D200FD53E6 /* blinkid-license.txt */,
+				A254B5262174D3C900E720C4 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -173,6 +173,7 @@
 				TargetAttributes = {
 					A207A42A20A44199002AEDB0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -202,7 +203,7 @@
 				184958D820AD8E4700F27C8D /* MicroBlink.bundle in Resources */,
 				A207A43920A4419A002AEDB0 /* LaunchScreen.storyboard in Resources */,
 				A207A43620A4419A002AEDB0 /* Assets.xcassets in Resources */,
-				A27ED1F2213D98D200FD53E6 /* blinkid-license.txt in Resources */,
+				A254B5272174D3C900E720C4 /* blinkid-license.txt in Resources */,
 				A207A43420A44199002AEDB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,14 +365,14 @@
 				DEVELOPMENT_TEAM = CQTJWP89J7;
 				FRAMEWORK_SEARCH_PATHS = ../../;
 				INFOPLIST_FILE = "FieldByField-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,14 +385,14 @@
 				DEVELOPMENT_TEAM = CQTJWP89J7;
 				FRAMEWORK_SEARCH_PATHS = ../../;
 				INFOPLIST_FILE = "FieldByField-sample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.microblink.blinkid-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

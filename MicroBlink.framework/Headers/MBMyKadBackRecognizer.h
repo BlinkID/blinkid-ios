@@ -13,7 +13,7 @@
 #import "MBSignatureImage.h"
 #import "MBSignatureImageDpi.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * MyKadBack recognizer is used for scanning back side of MyKad.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMyKadBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBGlareDetection>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBMyKadBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

@@ -46,6 +46,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
         * [BlinkInput recognizer](#blinkInputRecognizer)
         * [Detector recognizer](#detectorRecognizer)
         * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
+* [`Field by field` scanning feature](#fieldScan)
     * [`Field by field` feature](#fieldByFieldFeature)
 * [`MBProcessor` and `MBParser`](#processorsAndParsers)
     * [The `MBProcessor` concept](#processorConcept)
@@ -63,6 +64,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
         * [Regex Parser](#regexParser)
         * [TopUp Parser](#topUpParser)
         * [VIN (*Vehicle Identification Number*) Parser](#vinParser)
+* [Scanning generic documents with Templating API](#detectorTemplating)
         * [The `MBProcessorGroup` component](#processorGroup)
         * [List of available dewarp policies](#dewarpPolicyList)
         * [The `MBTemplatingClass` component](#templatingClass)
@@ -71,6 +73,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     * [List of available detectors](#detectorList)
         * [Document Detector](#documentDetector)
         * [MRTD Detector](#mrtdDetector)
+* [Creating customized build of BlinkID SDK](#customizedBuild)
 * [Troubleshooting](#troubleshoot)
     * [Integration problems](#integrationTroubleshoot)
     * [SDK problems](#sdkTroubleshoot)
@@ -685,6 +688,10 @@ The [`MBAustriaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
+The [`MBAustriaDlFrontRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaDlFrontRecognizerResult.html) is recognizer specialised for scanning front side of Austrian Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
 #### <a name="australiaBlinkId"></a> Australia
 
 The [`MBAustraliaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
@@ -702,6 +709,10 @@ The [`MBColombiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBColombiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Colombian ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBColombiaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaDlFrontRecognizer.html) is recognizer specialised for scanning front side Colombian Driver's License.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
@@ -790,6 +801,24 @@ The [`MBIndonesiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classe
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
+#### <a name="irelandBlinkId"></a> Ireland
+
+The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="irelandBlinkId"></a> Ireland
+
+The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="italyBlinkId"></a> Italy
+
+The [`MBItalyDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBItalyDlFrontRecognizer.html) is recognizer specialised for scanning front side of Italian Driver's License.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
 #### <a name="jordanBlinkId"></a> Jordan
 
 The [`MBJordanIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanIdFrontRecognizer.html) is recognizer specialised for scanning front side of Jordan ID.
@@ -851,6 +880,20 @@ This recognizer can be used in any overlay view controller, but it works best wi
 The [`MBNewZealandDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBNewZealandDLFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="elitePaymentCardBlinkId"></a> Elite Payment Card
+
+The [`MBElitePaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Elite Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBElitePaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardBackRecognizer.html) is recognizer specialised for scanning back side of Elite Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBElitePaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Elite Payment Card.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 #### <a name="paymentCardBlinkId"></a> Payment Card
 
@@ -1002,7 +1045,8 @@ This recognizer can be used in any overlay view controller, but it works best wi
 
 The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.# <a name="fieldScan"></a> `Field by field` scanning feature
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
+# <a name="fieldScan"></a> `Field by field` scanning feature
 
 [`Field by field`](#fieldByFieldFeature) scanning feature is designed for scanning small text fields which are called scan elements. For each scan element, specific [`MBParser`](#parserConcept) that will extract structured data of interest from the OCR result is defined. Focusing on the small text fields which are scanned one by one enables implementing support for the **free-form documents** because field detection is not required. The user is responsible for positioning the field of interest inside the scanning window and the scanning process guides him. When implementing support for the custom document, only fields of interest has to be defined.
 
@@ -1144,7 +1188,9 @@ There are a lot of different `MBParsers` for extracting most common fields which
 
 ### <a name="vinParser"></a> VIN (*Vehicle Identification Number*) Parser
 
-[`MBVinParser`](http://blinkid.github.io/blinkid-ios/Classes/MBVinParser.html) is used for extracting VIN (*Vehicle Identification Number*) from the OCR result.# <a name="detectorTemplating"></a> Scanning generic documents with Templating API
+[`MBVinParser`](http://blinkid.github.io/blinkid-ios/Classes/MBVinParser.html) is used for extracting VIN (*Vehicle Identification Number*) from the OCR result.
+
+# <a name="detectorTemplating"></a> Scanning generic documents with Templating API
 
 This section discusses the setting up of `MBDetectorRecognizer` for scanning templated documents. Please check `Templating-sample` sample app for source code examples.
 
@@ -1268,6 +1314,84 @@ Method `- (void)setMrtdSpecifications:(NSArray<__kindof MBMrtdSpecification *> *
 If `MBMrtdSpecifications` are not set, all supported MRTD formats will be detectable.
 
 For the list of all available configuration methods see [`MBMrtdDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdDetector.html) doc, and for available result content see [`MBMrtdDetectorResult`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdDetectorResult.html) doc.
+
+# <a name="customizedBuild"></a> Creating customized build of BlinkID SDK
+
+If your final app size is too large, you can create a customised build of _MicroBlink.framework_ and _MicroBlink.bundle_ which will contain only features and resources that you really need.
+
+In order to create customised build of BlinkID SDK, you first need to download the static distribution of BlinkID SDK. A valid production licence key is required in order to gain access to the download link of BlinkID SDK static distribution. Once you have a valid production licence key, please contact our [support team](http://help.microblink.com) and ask them to provide you with the download link. After they give you access to the static distribution of BlinkID SDK, you will be able to download it from you account at [MicroBlink Developer Dashboard](https://www.microblink.com/login).
+
+The static distribution of BlinkID SDK is a large zip file (several hundred megabytes) which contains static libraries of BlinkID SDK's native code, all assets and resources and a script which will create the customised build for you.
+
+### Prerequisites for creating customised build
+
+In order to create customised build of BlinkID SDK, you will need following tools:
+
+- XCode and latest iOS SDK
+- CMake - you can install it from Homebrew with `brew install cmake`, or you can download it from [official page](https://cmake.org/download/)
+	- please note that command-line version of CMake is required, so if you have downloaded CMake from official page, make sure you install command-line support as well
+
+### Steps for creating customised build
+
+1. Obtain the static distribution of BlinkID SDK by [contacting us](http://help.microblink.com)
+2. Download the zip from link that you will be provided
+3. Unzip the file into an empty folder
+4. Edit the file `enabled-features.cmake`
+	- you should enable only features that you need to use by setting appropriate variables to `ON`. 
+	- the list of all possible feature variables can be found in `features.cmake` 
+		- for each `feature_option` command, first parameter defines the feature variable, and the second is the description of the feature, i.e. what it provides. Other parameters are information for script to work correctly.
+	- you should not edit any file except `enabled-features.cmake` (except if instructed so by our support team) to ensure creation of customised build works well
+5. Open terminal and navigate to folder with zip's contents.
+6. Execute command `./create-custom-build.sh` and select whether you want static or dynamic frameowk.
+	- when asked, enter `s` to build static framework or `d` to build dynamic framework
+7. After several minutes (depedending of CPU speed of your computer), customised build will appear in the `Release` folder. Use that bundle and framework in your app instead of default one.
+
+#### Warning:
+
+Attempt to use feature within your app which was not enabled in customised build will cause a linker error when linking against the customised framework.
+
+### Troubleshooting:
+
+#### Getting `unrecognized selector sent to instance` when using customised static framework, while everything works OK with dynamic framework
+
+This happens when your app has not been linked with `-ObjC` flag against static framework. The problem is related to using Objective C categories within static library which are thrown away by linker. You can see more information in [official Apple documentation](https://developer.apple.com/library/content/qa/qa1490/_index.html).
+
+#### App crashing when scanning starts with log message _Failed to load resource XX. The program will now crash._
+
+This means that a required resource was not packaged into final app. This usually indicates a bug in our script that makes the customised build. Please [contact us](http://help.microblink.com) and send your version of `enabled-features.cmake` and crash log.
+
+#### CMake error while running script.
+
+You probably have a typo in `enabled-features.cmake`. CMake is very sensitive language and will throw an non-understandable error if you have a typo or invoke any of its commands with wrong number of parameters.
+
+#### Linker error while running the script.
+
+This sometimes happens when XCode's link time optimizer runs out of memory. Usually running the script again solves the problem. Please reboot your Mac if this keeps happening.
+
+#### Keeping only `FEATURE_MRTD` creates rather large `MicroBlink.bundle`
+
+`FEATURE_MRTD` marks the _MRTD recognizer_. However, _MRTD recognizer_ can also be used in _Templating API_ mode where non-MRZ data can be scanned. To perform OCR of non-MRZ data, a rather large OCR model must be used, which supports all fonts. If you only plan to scan MRZ part of the document, you can edit the `features.cmake` in following way:
+
+- find the following line:
+
+```
+feature_resources( FEATURE_MRTD model_mrtd model_general_blink_ocr model_micr model_arabic )
+```
+
+- keep only `model_mrtd` in the list, i.e. modify the line so that it will be like this:
+
+```
+feature_resources( FEATURE_MRTD model_mrtd )
+```
+
+This will keep only support for reading MRZ zone in OCR - you will not be able to scan non-MRZ data with such configuration using _MRTD recognizer_, however you will reduce the `MicroBlink.bundle` and then final app size by more than 4MB.
+
+##### More information about OCR models in `FEATURE_MRTD`
+
+- `model_mrtd` is OCR model for performing OCR of MRZ zone
+- `model_arabic` is OCR model for performing OCR of digits used in arabic languages - text scanning is not supported
+- `model_micr` is OCR model for performing OCR of [Magnetic Ink Characters](https://en.wikipedia.org/wiki/Magnetic_ink_character_recognition)
+- `model_general_blink_ocr` is OCR model for performing general-purpose OCR. This model is usually required for performing OCR of non-MRZ text on documents.
 
 # <a name="troubleshoot"></a> Troubleshooting
 

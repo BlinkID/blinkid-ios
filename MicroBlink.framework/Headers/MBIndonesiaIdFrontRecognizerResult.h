@@ -2,134 +2,123 @@
 //  MBIndonesiaIdFrontRecognizerResult.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by juraskrlec on 25/09/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Indonesian ID
+ * Class representing values obtained when scanning front side of the Indonesia Id
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBIndonesiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBIndonesiaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The province of the Indonesian ID owner.
+ * The address of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *province;
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The city of the Indonesian ID owner.
+ * The blood Type of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *city;
+@property (nonatomic, readonly) NSString *bloodType;
 
 /**
- * The document number of the Indonesian ID owner.
+ * The citizenship of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
+@property (nonatomic, readonly) NSString *citizenship;
 
 /**
- * The name of the Indonesian ID owner.
+ * The city of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *name;
+@property (nonatomic, readonly) NSString *city;
 
 /**
- * The place of birth of the Indonesian ID owner.
+ * The date Of Birth of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The date of birth of Indonesian ID owner in DD.MM.yyyy format.
+ * The date Of Expiry of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The date of birth of Indonesian ID owner
+ * The date Of Expiry Permanent of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+@property (nonatomic, readonly, assign) BOOL dateOfExpiryPermanent;
 
 /**
- * The sex of the Indonesian ID owner.
+ * The district of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *sex;
+@property (nonatomic, readonly) NSString *district;
 
 /**
- * The blood type of the Indonesian ID owner.
+ * The document Number of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *bloodType;
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The address of the Indonesian ID owner.
+ * The kel Desa of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *address;
+@property (nonatomic, readonly) NSString *kelDesa;
 
 /**
- * The rt of the Indonesian ID owner.
+ * The marital Status of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *rt;
+@property (nonatomic, readonly) NSString *maritalStatus;
 
 /**
- * The rw of the Indonesian ID owner.
+ * The name of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *rw;
+@property (nonatomic, readonly) NSString *name;
 
 /**
- * The kel desa of the Indonesian ID owner.
+ * The occupation of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *kelDesa;
+@property (nonatomic, readonly) NSString *occupation;
 
 /**
- * The district of the Indonesian ID owner.
+ * The place Of Birth of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *district;
+@property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * The religion of the Indonesian ID owner.
+ * The province of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *religion;
+@property (nonatomic, readonly) NSString *province;
 
 /**
- * The marital status of the Indonesian ID owner.
+ * The religion of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *maritalStatus;
+@property (nonatomic, readonly) NSString *religion;
 
 /**
- * The occupation of the Indonesian ID owner.
+ * The rt of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *occupation;
+@property (nonatomic, readonly) NSString *rt;
 
 /**
- * The occupation of the Indonesian ID owner.
+ * The rw of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *citizenship;
+@property (nonatomic, readonly) NSString *rw;
 
 /**
- * The document date of expiry of the Indonesian ID in DD.MM.yyyy format.
+ * The sex of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly, nullable) NSString *rawValidUntil;
-
-/**
- * The document date of expiry of the Indonesian ID
- */
-@property (nonatomic, readonly, nullable) NSDate *validUntil;
-
-/**
- * Check if date of expiry is permanent on the Indonesian ID.
- */
-@property (nonatomic, readonly) BOOL validUntilPermanent;
-
-/**
- * The document classifier of Indonesian ID
- */
-@property (nonatomic, readonly, nullable) NSString *documentClassifier;
+@property (nonatomic, readonly) NSString *sex;
 
 @end
 

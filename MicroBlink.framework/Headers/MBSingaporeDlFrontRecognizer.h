@@ -15,7 +15,7 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,8 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Singapore Dl Front recognizer is used for scanning front side of the Singapore Driver's license..
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSingaporeDlFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBSingaporeDlFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

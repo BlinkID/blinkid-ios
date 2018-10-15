@@ -15,7 +15,7 @@
 #import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,8 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * United Arab Emirates ID Front recognizer is used for scanning front side of United Arab Emirates ID.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBUnitedArabEmiratesIdFrontRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBGlareDetection>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBUnitedArabEmiratesIdFrontRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

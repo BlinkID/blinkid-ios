@@ -26,6 +26,8 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBEncodeSignatureImage.h"
 
+#import "MBFullDocumentImageExtensionFactors.h"
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -36,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Austrian ID Combined recognizer is used for scanning both front and back side of Austrian ID.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBAustriaCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBFaceImage, MBFaceImageDpi, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature>
+@interface MBAustriaCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBFaceImage, MBFaceImageDpi, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

@@ -1,3 +1,17 @@
+## 4.3.0
+
+- Minor API changes
+    - renamed properties in `MBMalaysiaDlFrontRecognizerResult`:
+        - `state` to `ownerState`
+        - `zipCode` to `zipcode`
+    - renamed properties in `MBIndonesiaIdFrontRecognizerResult`:
+        - `validUntil` to `dateOfExpiry`
+        - `validUntilPermanent` to `dateOfExpiryPermanent`
+    - renamed property in `MBSingaporeIdFrontRecognizerResult`:
+        - `bloodType` to `bloodGroup`
+    - renamed property in `MBSingaporeCombinedRecognizerREsult`:
+        - `bloodType` to `bloodGroup`
+
 ## 4.2.0
 
 - Minor API changes
