@@ -2,78 +2,81 @@
 //  MBMalaysiaDlFrontRecognizerResult.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by juraskrlec on 20/09/2018.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
-#import "MBFullDocumentImageResult.h"
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
+#import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Malaysian DL
+ * Class representing values obtained when scanning front side of the Malaysia Dl
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMalaysiaDlFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
+@interface MBMalaysiaDlFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The Name of the Malaysian DL owner.
+ * The city of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *name;
+@property (nonatomic, readonly) NSString *city;
 
 /**
- * The Identity Number of the Malaysian DL owner.
+ * The dl Class of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *identityNumber;
+@property (nonatomic, readonly) NSString *dlClass;
 
 /**
- * The Nationality of the Malaysian DL owner.
+ * The full Address of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+@property (nonatomic, readonly) NSString *fullAddress;
 
 /**
- * The Class of the Malaysian DL.
+ * The identity Number of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *dlClass;
+@property (nonatomic, readonly) NSString *identityNumber;
 
 /**
- * The Valid From date of the Malaysian DL owner.
+ * The name of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *validFrom;
+@property (nonatomic, readonly) NSString *name;
 
 /**
- * The Valid Until date of the Malaysian DL owner.
+ * The nationality of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSDate *validUntil;
+@property (nonatomic, readonly) NSString *nationality;
 
 /**
- * The Street of the Malaysian DL owner.
+ * The owner State of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *street;
+@property (nonatomic, readonly) NSString *ownerState;
 
 /**
- * The Zip Code of the Malaysian DL owner.
+ * The street of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *zipCode;
+@property (nonatomic, readonly) NSString *street;
 
 /**
- * The City of the Malaysian DL owner.
+ * The valid From of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *city;
+@property (nonatomic, readonly) MBDateResult *validFrom;
 
 /**
- * The State of the Malaysian DL owner.
+ * The valid Until of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *state;
+@property (nonatomic, readonly) MBDateResult *validUntil;
 
 /**
- * The Full Address of the Malaysian DL owner.
+ * The zipcode of the front side of the Malaysia Dl owner.
  */
-@property (nonatomic, readonly, nullable) NSString *fullAddress;
+@property (nonatomic, readonly) NSString *zipcode;
 
 @end
 

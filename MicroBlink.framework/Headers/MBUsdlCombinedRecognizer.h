@@ -62,6 +62,16 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  */
 @property (nonatomic, assign) MBDocumentFaceDetectorType type;
 
+/**
+ * Defines how many times the same document should be detected before the detector
+ * returns this document as a result of the deteciton
+ *
+ * Higher number means more reliable detection, but slower processing
+ *
+ * Default: 6
+ */
+@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+
 MB_INIT
 
 

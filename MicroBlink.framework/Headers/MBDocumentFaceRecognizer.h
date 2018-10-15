@@ -13,7 +13,7 @@
 #import "MBFullDocumentImageDpi.h"
 #import "MBFaceImage.h"
 #import "MBFaceImageDpi.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Document Face Recognizer recognizer is used for scanning documents containing face images.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBDocumentFaceRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi>
+@interface MBDocumentFaceRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -38,6 +38,16 @@ MB_INIT
  * Default: MBDocumentFaceDetectorTypeTD1
  */
 @property (nonatomic, assign) MBDocumentFaceDetectorType detectorType;
+
+/**
+ * Defines how many times the same document should be detected before the detector
+ * returns this document as a result of the deteciton
+ *
+ * Higher number means more reliable detection, but slower processing
+ *
+ * Default: 6
+ */
+@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
 
 @end
 

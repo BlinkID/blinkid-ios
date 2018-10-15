@@ -2,77 +2,77 @@
 //  MBMalaysiaDlFrontRecognizer.h
 //  MicroBlinkDev
 //
-//  Created by Dino Gustin on 22/05/2018.
+//  Created by juraskrlec on 20/09/2018.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBMalaysiaDlFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
-#import "MBFullDocumentImageDpi.h"
 #import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Malaysian DL Front Recognizer.
- *
- * Malaysian DL Front recognizer is used for scanning front side of Malaysian DL.
+ * Recognizer which can scan front side of Malaysian DL cards.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMalaysiaDlFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBGlareDetection, MBFullDocumentImageDpi>
+MB_CLASS_AVAILABLE_IOS(8.0)
+@interface MBMalaysiaDlFrontRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Malaysian DL Front recognizer result
+ * Result of scanning Malaysia Dl Front Recognizer
  */
 @property (nonatomic, strong, readonly) MBMalaysiaDlFrontRecognizerResult *result;
 
 /**
- * Defines if owner's name should be extracted from Malaysian DL
+ * Defines if address of Malaysian DL owner should be extracted.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractAddress;
+
+/**
+ * Defines if vehicle classes of Malaysian DL should be extracted.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractClass;
+
+/**
+ * Defines if name of Malaysian DL owner should be extracted.
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractName;
 
 /**
- * Defines if owner's nationality should be extracted from Malaysian DL
+ * Defines if nationality of Malaysian DL owner should be extracted.
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractNationality;
 
 /**
- * Defines if owner's license class should be extracted from Malaysian DL
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDlClass;
-
-/**
- * Defines if owner's valid from should be extracted from Malaysian DL
+ * Defines if date of issue of Malaysian DL should be extracted.
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractValidFrom;
 
 /**
- * Defines if owner's valid until should be extracted from Malaysian DL
+ * Defines if date of expiry of Malaysian DL should be extracted.
  *
  * Default: YES
  */
 @property (nonatomic, assign) BOOL extractValidUntil;
-
-/**
- * Defines if owner's full address should be extracted from Malaysian DL
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractFullAddress;
 
 @end
 

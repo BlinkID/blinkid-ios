@@ -12,17 +12,21 @@
 
 #import "MBFaceImage.h"
 #import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
 #import "MBFullDocumentImage.h"
 #import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 #import "MBDigitalSignature.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+
 /**
  * Singapore ID Combined Recognizer.
  *
  * Singapore ID Combined recognizer is used for scanning both front and back side of Singapore ID.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBSingaporeCombinedRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFaceImage, MBEncodeFaceImage, MBGlareDetection, MBDigitalSignature>
+@interface MBSingaporeCombinedRecognizer : MBRecognizer <NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBGlareDetection, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
@@ -85,7 +89,7 @@ MB_INIT
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL extractBloodType;
+@property (nonatomic, assign) BOOL extractBloodGroup;
 
 /**
  * Defines if owner's date of issue should be extracted from back side of the Singapore Id

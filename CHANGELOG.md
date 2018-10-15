@@ -1,5 +1,46 @@
 # Release notes
 
+## 4.3.0
+
+- Updates and additions
+    - Added support for reading front side of Ireland Driver's License  - use `MBIrelandDlFrontRecognizer`
+    - Added support for reading front side of Colombia Driver's License - use `MBColombiaDlFrontRecognizer`
+    - Added support for reading front side of Italy Driver's License - use `MBItalyDlFrontRecognizer`
+    - Added standalone recognizer for reading front side of Austria Driver's License - use `MBAustriaDlFrontRecognizer`
+    - Added support for reading front and back side of elite Payment / Debit cards - use `MBElitePaymentCardFrontRecognizer`, `MBElitePaymentCardBackRecognizer` and `MBElitePaymentCardCombinedRecognizer`
+
+- Improvements in ID scanning performance
+    - improved `MBMrtdCombinedRecognizer`:
+        - added option to allow unparsed and unverified MRZ results - use `allowUnparsedResults` and `allowUnverifiedResults`
+    - improved `MBMalaysiaDlFrontRecognizer`:
+        - added support for reading Malaysia Dl for foreigners 
+    - improved `MBUsdlRecogniezr`:
+        - added support for reading dates on Nigerian Driver's licenses
+    - added support for setting full document image extension factors for almost all ID document recognizers, they implement interface `MBFullDocumentImageExtensionFactors`
+    - added support for setting the number of stable detections threshold on `MBDocumentFaceRecognizer` and recognizers which use it internally: `MBMrtdCombinedRecognizer` and `MBUsdlCombinedRecognizer` - use `numStableDetectionsThreshold`. This can help to avoid returning of blurry images.
+    - improved `MBEudlRecognizer`:
+        - better reading accuracy for UK Driver's license
+    - moved these recognizers to DeepOCR engine (improved reading accuracy): `MBSingaporeIdFrontRecognizer`, `MBSingaporeIdBackRecognizer`, `MBCroatiaIdFrontRecognizer`,  `MBCroatiaIdBackRecognizer`
+    - improved DeepOCR accuracy
+
+- Minor API changes
+    - renamed properties in `MBMalaysiaDlFrontRecognizerResult`:
+        - `state` to `ownerState`
+        - `zipCode` to `zipcode`
+    - renamed properties in `MBIndonesiaIdFrontRecognizerResult`:
+        - `validUntil` to `dateOfExpiry`
+        - `validUntilPermanent` to `dateOfExpiryPermanent`
+    - renamed property in `MBSingaporeIdFrontRecognizerResult`:
+        - `bloodType` to `bloodGroup`
+    - renamed property in `MBSingaporeCombinedRecognizerREsult`:
+        - `bloodType` to `bloodGroup`
+
+- Bugfixes
+    - enabled wrapping of combined recogniezrs with `MBSuccessFrameGrabberRecognizer`
+    - fixed bug in `MBEudlRecognizer` which caused that sometimes face image is not returned, even if the recognition was successful
+    - updated overlay view controllers for iPhone X Series
+    - various other bug fixes and improvements
+
 ## 4.2.0
 
 - Updates and additions

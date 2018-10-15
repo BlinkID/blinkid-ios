@@ -15,6 +15,7 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 /**
  * Croatian ID Back Recognizer.
@@ -23,7 +24,7 @@
  * MRZ zone and address of ID holder while extracting other elements is optional.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBCroatiaIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection>
+@interface MBCroatiaIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

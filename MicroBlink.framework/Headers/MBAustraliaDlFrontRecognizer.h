@@ -40,13 +40,6 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if citizenship of Australian DL owner should be extracted
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractLicenceNumber;
-
-/**
  * Defines if date of birth of Australian DL owner should be extracted
  *
  * Default: YES
