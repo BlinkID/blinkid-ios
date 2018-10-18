@@ -1487,6 +1487,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).
