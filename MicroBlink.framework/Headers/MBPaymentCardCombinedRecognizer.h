@@ -53,6 +53,29 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL extractInventoryNumber;
 
+/**
+ * Should anonymize the card number area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeCardNumber;
+
+/**
+ * Should anonymize the owner area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeOwner;
+
+
+/**
+ * Should anonymize the CVV area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeCvv;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

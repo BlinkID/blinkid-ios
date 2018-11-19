@@ -50,6 +50,20 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL extractValidThru;
 
+/**
+ * Should anonymize the CVV area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeCvv;
+
+/**
+ * Should anonymize the card number area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeCardNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -23,6 +23,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Jordan ID Combined Recognizer.
  *
@@ -60,3 +62,5 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractDateOfBirth;
 
 @end
+
+NS_ASSUME_NONNULL_END

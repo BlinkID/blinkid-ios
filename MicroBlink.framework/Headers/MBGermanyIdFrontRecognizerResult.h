@@ -1,75 +1,70 @@
 //
-//  MBGermanyIdFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBGermanyIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 13/11/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of German ID
- */
+* Recognizer which can scan front side of Germany national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBGermanyIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The CAN number of Germany ID.
+*/
+@property (nonatomic, readonly) NSString *canNumber;
 
 /**
- * The last name of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of birth of Germany ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The nationality of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The date of expiry of Germany ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The date of birth of German ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+* The document number of Germany ID.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The date of birth of German ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The given names of Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The place of birth of the German ID
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
+* The nationality of Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
 
 /**
- * The document date of expiry of the German ID in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfExpiry;
+* The place of birth of Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * The document date of expiry of the German ID
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The surname of Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
-/**
- * The document number of the German ID
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
-
-/**
- * The CAN number of the German ID
- */
-@property (nonatomic, readonly, nullable) NSString *canNumber;
 
 @end
 

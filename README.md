@@ -22,7 +22,6 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 * [Requirements](#user-content-requirements)
@@ -115,7 +114,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.3.0'
+pod 'PPBlinkID', '~> 4.1.0'
 ```
 
 - Install the dependencies in your project:
@@ -790,6 +789,10 @@ The [`MBGermanyPassportRecognizer.h`](http://blinkid.github.io/blinkid-ios/Class
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
+The [`MBGermanyDlBackRecognizerResult.h`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyDlBackRecognizerResult.h.html) is recognizer specialised for scanning back side of German Driver's License with B10 support.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
 #### <a name="hongkongBlinkId"></a> Hong Kong
 
 The [`MBHongKongIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBHongKongIdFrontRecognizer.html) is recognizer specialised for scanning front side of Hong Kong ID.
@@ -858,11 +861,17 @@ The [`MBMyKadBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMyK
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyTenteraRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMyTenteraRecognizer.html) is recognizer specialised for scanning MyTentera.
+The [`MBMalaysiaMyTenteraFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyTenteraFrontRecognizer.html) is recognizer specialised for scanning MyTentera.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBiKadRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBiKadRecognizer.html) is recognizer specialised for scanning iKad.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+#### <a name="mexicoBlinkId"></a> Mexico
+
+The [`MBMexicoVoterIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMexicoVoterIdFrontRecognizer.html) is recognizer specialised for scanning front side of Mexican Voter ID card.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
@@ -1488,6 +1497,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

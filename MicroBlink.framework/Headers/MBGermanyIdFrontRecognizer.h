@@ -1,86 +1,89 @@
 //
-//  MBGermanyIdFrontRecognizer.h
-//  MicroBlinkDev
+// MBGermanyIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 13/11/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBGermanyIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBSignatureImage.h"
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBFullDocumentImageExtensionFactors.h"
-
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBEncodeSignatureImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring German ID Front Recognizer.
- *
- * German ID Front recognizer is used for scanning front side of German ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
+* Recognizer which can scan front side of Germany national ID cards.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBGermanyIdFrontRecognizer : MBRecognizer <NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 
 /**
- * German ID Front recognizer result
+ * Result of scanning GermanyIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBGermanyIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's first names should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractGivenNames;
-
-/**
- * Defines if owner's surname should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSurname;
-
-/**
- * Defines if owner's place of birth should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractPlaceOfBirth;
-
-/**
- * Defines if owner's nationality should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNationality;
-
-/**
- * Defines if date of expiry should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfExpiry;
-
-/**
- * Defines if CAN number should be extracted from German ID
- *
- * Default: YES
- */
+* Defines if CAN number of Germany ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractCanNumber;
 
 /**
- * Defines if document number should be extracted from German ID
- *
- * Default: YES
- */
+* Defines if date of expiry of Germany ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+* Defines if document number of Germany ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDocumentNumber;
+
+/**
+* Defines if given names of Germany ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractGivenNames;
+
+/**
+* Defines if nationality  of Germany ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractNationality;
+
+/**
+* Defines if place of birth of Germany ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
+
+/**
+* Defines if surname of Germany ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurname;
+
 
 @end
 

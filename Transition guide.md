@@ -1,3 +1,23 @@
+## 4.4.0
+
+- Minor API changes
+    - renamed `MBMyTenteraRecognizer` to `MBMalaysiaMyTenteraFrontRecognizer`
+    - renamed `MBMyTenteraRecognizerResult` to `MBMalaysiaMyTenteraFrontRecognizerResult` and properties
+        - `nricNumber` to `nric`
+        - `ownerAddress` to `fullAddress`
+        - `ownerAddressCity` to `city`
+        - `ownerAddressState` to `ownerState`
+        - `ownerAddressZipCode` to `zipcode`
+        - `ownerAddressStreet` to `street`
+        - `ownerBirthDate` to `birthDate` and it is now of type `MBDateResult`
+        - `ownerFullName` to `fullName`
+        - `ownerReligion` to `religion`
+        - `ownerSex` to `sex`
+    - renamed properties in `MBGermanyIdFrontRecognizerResult`
+        - `firstName` to `givenNames`
+        - `lastName` to `surname`
+        - `dateOfBirth` adn `dateOfExpiry` are now of type `MBDateResult`
+
 ## 4.3.0
 
 - Minor API changes

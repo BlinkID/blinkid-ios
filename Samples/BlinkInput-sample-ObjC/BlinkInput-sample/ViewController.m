@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomOverlayViewController.h"
 
 #import <MicroBlink/MicroBlink.h>
 
@@ -15,6 +16,9 @@
 @property (nonatomic, strong) MBRawParser *rawParser;
 @property (nonatomic, strong) MBParserGroupProcessor *parserGroupProcessor;
 @property (nonatomic, strong) MBBlinkInputRecognizer *blinkInputRecognizer;
+
+@property (nonatomic, strong) MBBarcodeRecognizer *barcodeRecognizer;
+@property (nonatomic, strong) MBPdf417Recognizer *pdf417Recognizer;
 
 @end
 
@@ -36,6 +40,32 @@
     
     /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
     [self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
+}
+
+- (IBAction)didTapCustomScan:(id)sender {
+    
+    /** Create barcode recognizer */
+    self.barcodeRecognizer = [[MBBarcodeRecognizer alloc] init];
+    self.barcodeRecognizer.scanQrCode = YES;
+    
+    self.pdf417Recognizer = [[MBPdf417Recognizer alloc] init];
+    
+    /** Crate recognizer collection */
+    NSArray *recognizerList = @[self.barcodeRecognizer, self.pdf417Recognizer];
+    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizerList];
+    
+    /** Create your overlay view controller */
+    CustomOverlayViewController *overlayVC = [CustomOverlayViewController initFromStoryBoard];
+    
+    /** This has to be called for custom controller */
+    [overlayVC reconfigureRecognizers:recognizerCollection];
+    
+    /** Create recognizer view controller with wanted overlay view controller */
+    UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
+    
+    /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
+    [self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
+    
 }
 
 #pragma mark - MBBarcodeOverlayViewControllerDelegate

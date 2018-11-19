@@ -52,13 +52,21 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, strong) NSString *secondSideSplashMessage;
 
 /**
+ * Returns/sets splash message that is shown after scanning the document.
+ *
+ * Default: string defined by "photopay_done_splash_verification_document"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *scanningDoneSplashMessage;
+
+/**
  * Returns/sets glare status message that is shown if glare detection is turned on
  * and it is shown if glare is detected.
  *
  * Default: string defined by "photopay_glare_status"
  * key in strings file in Microblink.bundle
  */
-@property(nonatomic, strong) NSString *glareStatusMessage;
+@property(nonatomic, strong) NSString *glareMessage;
 
 /**
  * Returns/sets splash image which is shown below splash message, before scanning the first side of

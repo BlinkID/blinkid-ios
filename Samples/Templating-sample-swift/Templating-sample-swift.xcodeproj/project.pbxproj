@@ -24,7 +24,7 @@
 		A207A48820A45D32002AEDB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A48720A45D32002AEDB0 /* libz.tbd */; };
 		A207A49320A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A49220A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift */; };
 		A207A49520A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A49420A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift */; };
-		A254B52B2174D45F00E720C4 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A254B52A2174D45E00E720C4 /* blinkid-license.txt */; };
+		A28E567421A2D6B2001C3BA9 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28E567321A2D6B2001C3BA9 /* blinkid-license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +60,7 @@
 		A207A48720A45D32002AEDB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A207A49220A45E16002AEDB0 /* MBCroatianIDTemplateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCroatianIDTemplateUtils.swift; sourceTree = "<group>"; };
 		A207A49420A47A67002AEDB0 /* MBCroatianIDFrontTemplateRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCroatianIDFrontTemplateRecognizer.swift; sourceTree = "<group>"; };
-		A254B52A2174D45E00E720C4 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
+		A28E567321A2D6B2001C3BA9 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 		B4A57ADB20F4E774004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				A254B52A2174D45E00E720C4 /* blinkid-license.txt */,
+				A28E567321A2D6B2001C3BA9 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 				184958F120AD917500F27C8D /* MicroBlink.bundle in Resources */,
 				A207A47320A45C7C002AEDB0 /* LaunchScreen.storyboard in Resources */,
 				A207A47020A45C7C002AEDB0 /* Assets.xcassets in Resources */,
-				A254B52B2174D45F00E720C4 /* blinkid-license.txt in Resources */,
+				A28E567421A2D6B2001C3BA9 /* blinkid-license.txt in Resources */,
 				A207A46E20A45C7A002AEDB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

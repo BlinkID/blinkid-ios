@@ -22,7 +22,7 @@
 		310E45E61C206DF600B546BD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 310E45E51C206DF600B546BD /* libc++.tbd */; };
 		3139C9371C32AE72005AC32C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C9361C32AE72005AC32C /* MobileCoreServices.framework */; };
 		31BF2FD41D95498C008816F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF2FD31D95498C008816F3 /* ViewController.swift */; };
-		A254B5232174D2F200E720C4 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A254B5222174D2F100E720C4 /* blinkid-license.txt */; };
+		A28E566C21A2D5B6001C3BA9 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28E566B21A2D5B6001C3BA9 /* blinkid-license.txt */; };
 		A2FE137A1F75097F00C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE13791F75097F00C6F1EA /* libz.tbd */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		310E45E51C206DF600B546BD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3139C9361C32AE72005AC32C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		31BF2FD31D95498C008816F3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A254B5222174D2F100E720C4 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
+		A28E566B21A2D5B6001C3BA9 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A2FE13791F75097F00C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 		B4A57ACF20F4E65B004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				A254B5222174D2F100E720C4 /* blinkid-license.txt */,
+				A28E566B21A2D5B6001C3BA9 /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				184958DC20AD8E8700F27C8D /* MicroBlink.bundle in Resources */,
 				310E45A41C20612300B546BD /* LaunchScreen.storyboard in Resources */,
 				310E45A11C20612300B546BD /* Assets.xcassets in Resources */,
-				A254B5232174D2F200E720C4 /* blinkid-license.txt in Resources */,
+				A28E566C21A2D5B6001C3BA9 /* blinkid-license.txt in Resources */,
 				310E459F1C20612300B546BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
