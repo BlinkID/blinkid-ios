@@ -1,5 +1,60 @@
 # Release notes
 
+## 4.4.0
+
+- Updates and additions
+    - added support for reading back side of German Driver's License with B10 support - use `MBGermanyDlBackRecognizer`
+    - added support for reading front side of Mexican Voter Id card - use `MBMexicoVoterIdFrontRecognizer`
+    - added support for reading  ExpiresOn date on `MBCyprusIdBackRecognizer`
+    - added support for image(s) anonymization on `MBPaymentCardFrontRecognizer`
+        - use `anonymizeCardNumber` and `anonymizeOwner`
+    - added support for image(s) anonymization on `MBPaymentCardBackRecognizer`
+        - use `anonymizeCvv`
+    - added support for image(s) anonymization on `MBPaymentCardCombinedRecognizer`
+        - use `anonymizeCardNumber`, `anonymizeOwner` and `anonymizeCvv`
+    - added support for image(s) anonymization on `MBElitePaymentCardFrontRecognizer`
+        - use `anonymizeOwner`
+    - added support for image(s) anonymization on `MBElitePaymentCardBackRecognizer`
+        - use `anonymizeCvv` and `anonymizeCardNumber`
+    - added support for image(s) anonymization on `MBElitePaymentCardCombinedRecognizer`
+        - use `anonymizeCardNumber`, `anonymizeOwner` and `anonymizeCvv`
+    - added support for full document image extension factors on `MBUsdlCombinedRecognizer`    
+
+- Improvements in ID scanning performance
+    - improved reading of Swiss front side ID cards
+    - improved reading of German front side ID cards
+    - improved `MBMalaysiaMyTenteraFrontRecognizer` with DeepOcr support
+    - improved reading of Singapore front side Driver's Licenses with DeepOcr support
+    - improved reading of Croatian front side ID cards
+    - improved personal number extraction on Slovakian ID cards
+    - improved reading of Indonesian front side ID cards with DeepOcr support
+    - updated image return processor 
+        - the processor now estimates detected (dewarped) document image quality and returns the best quality dewarped image from the best quality detection
+
+- Minor API changes
+    - renamed `MBMyTenteraRecognizer` to `MBMalaysiaMyTenteraFrontRecognizer`
+    - renamed `MBMyTenteraRecognizerResult` to `MBMalaysiaMyTenteraFrontRecognizerResult` and properties
+        - `nricNumber` to `nric`
+        - `ownerAddress` to `fullAddress`
+        - `ownerAddressCity` to `city`
+        - `ownerAddressState` to `ownerState`
+        - `ownerAddressZipCode` to `zipcode`
+        - `ownerAddressStreet` to `street`
+        - `ownerBirthDate` to `birthDate` and it is now of type `MBDateResult`
+        - `ownerFullName` to `fullName`
+        - `ownerReligion` to `religion`
+        - `ownerSex` to `sex`
+    - renamed properties in `MBGermanyIdFrontRecognizerResult`
+        - `firstName` to `givenNames`
+        - `lastName` to `surname`
+        - `dateOfBirth` adn `dateOfExpiry` are now of type `MBDateResult`
+
+- Bugfixes
+    - fix memory issue while using current frame grabber
+    - fix UI bug on `MBDocumentVerificationOverlayViewController` - now showing `Document scanning done` when scanning finish
+    - all combined recognizers are not optional any more in Swift
+
+
 ## 4.3.0
 
 - Updates and additions

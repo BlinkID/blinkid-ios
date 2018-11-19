@@ -26,6 +26,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * MRTD Combined recognizer
  *
@@ -67,3 +69,5 @@ MB_INIT
 @property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
 
 @end
+
+NS_ASSUME_NONNULL_END

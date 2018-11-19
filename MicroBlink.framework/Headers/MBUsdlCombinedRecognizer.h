@@ -21,7 +21,11 @@
 #import "MBEncodeFaceImage.h"
 #import "MBEncodeFullDocumentImage.h"
 
+#import "MBFullDocumentImageExtensionFactors.h"
+
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * USDL Combined Recognizer.
@@ -29,7 +33,7 @@
  * USDL Combined recognizer is used for scanning both front and back side of US Driver's License.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBUsdlCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBDigitalSignature>
+@interface MBUsdlCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBDigitalSignature, MBFullDocumentImageExtensionFactors>
 
 /**
  * Result of scanning both sides of USDL
@@ -74,6 +78,6 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 
 MB_INIT
 
-
-
 @end
+
+NS_ASSUME_NONNULL_END

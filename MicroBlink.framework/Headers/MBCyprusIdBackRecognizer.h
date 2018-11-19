@@ -30,6 +30,13 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBCyprusIdBackRecognizerResult *result;
 
 /**
+ * Defines if the expiry date of Cryprus ID card should be extracted.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL extractExpiresOn;
+
+/**
  * Defines if sex of Cyprus ID card owner should be extracted.
  *
  * Default: YES

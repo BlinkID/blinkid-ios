@@ -21,6 +21,7 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBEncodeSignatureImage.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Slovenian ID Combined Recognizer.
@@ -38,3 +39,5 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBSloveniaCombinedRecognizerResult* result;
 
 @end
+
+NS_ASSUME_NONNULL_END

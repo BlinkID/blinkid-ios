@@ -36,6 +36,13 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL extractInventoryNumber;
 
+/**
+ * Should anonymize the CVV area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeCvv;
+
 @end
 
 NS_ASSUME_NONNULL_END

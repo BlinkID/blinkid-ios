@@ -36,6 +36,13 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL extractOwner;
 
+/**
+ * Should anonymize the owner area (redact image pixels) on the document image result
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL anonymizeOwner;
+
 @end
 
 NS_ASSUME_NONNULL_END

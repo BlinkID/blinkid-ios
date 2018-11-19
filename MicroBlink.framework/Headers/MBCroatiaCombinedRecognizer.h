@@ -25,6 +25,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Croatian ID Combined Recognizer.
  *
@@ -41,3 +43,5 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBCroatiaCombinedRecognizerResult* result;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -79,6 +79,8 @@
 #import "MBGermanyPassportRecognizerResult.h"
 #import "MBGermanyOldIdRecognizer.h"
 #import "MBGermanyOldIdRecognizerResult.h"
+#import "MBGermanyDlBackRecognizer.h"
+#import "MBGermanyDlBackRecognizerResult.h"
 
 // Hong Kong
 #import "MBHongKongIdFrontRecognizer.h"
@@ -117,10 +119,14 @@
 #import "MBMyKadFrontRecognizerResult.h"
 #import "MBIkadRecognizer.h"
 #import "MBIkadRecognizerResult.h"
-#import "MBMyTenteraRecognizer.h"
-#import "MBMyTenteraRecognizerResult.h"
+#import "MBMalaysiaMyTenteraFrontRecognizer.h"
+#import "MBMalaysiaMyTenteraFrontRecognizerResult.h"
 #import "MBMalaysiaDlFrontRecognizer.h"
 #import "MBMalaysiaDlFrontRecognizerResult.h"
+
+// Mexico
+#import "MBMexicoVoterIdFrontRecognizer.h"
+#import "MBMexicoVoterIdFrontRecognizerResult.h"
 
 // Morocco
 #import "MBMoroccoIdFrontRecognizer.h"

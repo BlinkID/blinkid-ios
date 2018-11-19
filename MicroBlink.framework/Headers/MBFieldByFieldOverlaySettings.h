@@ -54,6 +54,24 @@ MB_INIT_UNAVAILABLE;
  */
 @property(nonatomic) UIColor *scanResultViewColor;
 
+/**
+ * Returns/sets next button description text that is shown above next button
+ * when there are still scanning elements left to be scanned
+ *
+ * Default: string defined by "field_by_field_next_button_description"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *nextButtonDescriptionText;
+
+/**
+ * Returns/sets next button description text that is shown above next button
+ * when there are no scanning elements left to be scanned
+ *
+ * Default: string defined by "field_by_field_last_next_button_description"
+ * key in strings file in Microblink.bundle
+ */
+@property(nonatomic, strong) NSString *nextButtonLastDescriptionText;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,50 +1,54 @@
 //
-//  MBSwitzerlandIdFrontRecognizer.h
-//  MicroBlinkDev
+// MBSwitzerlandIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 13/11/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSwitzerlandIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBSignatureImage.h"
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBEncodeSignatureImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Swiss ID Front Recognizer.
- *
- * Swiss ID Front recognizer is used for scanning front side of Swiss ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwitzerlandIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan front side of Switzerland ID.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBSwitzerlandIdFrontRecognizer : MBRecognizer <NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 
 /**
- * Swiss ID Front recognizer result
+ * Result of scanning SwitzerlandIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBSwitzerlandIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's first name should be extracted from Swiss ID
- *
- * Default: YES
- */
+* Defines if given name of Switzerland ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractGivenName;
 
 /**
- * Defines if owner's last name should be extracted from Swiss ID
- *
- * Default: YES
- */
+* Defines if surname of Switzerland ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractSurname;
+
 
 @end
 

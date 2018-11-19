@@ -1,45 +1,45 @@
 //
-//  MBSwitzerlandIdFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBSwitzerlandIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 13/11/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Swiss ID
- */
+* Recognizer which can scan front side of Switzerland ID.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwitzerlandIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBSwitzerlandIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *givenName;
+* The date of birth of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The last name of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The given name of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenName;
 
 /**
- * The date of birth of the Swiss ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+* The surname of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
-/**
- * The date of birth of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
 
 @end
 

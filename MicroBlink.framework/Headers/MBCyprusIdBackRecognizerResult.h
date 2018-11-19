@@ -27,6 +27,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
+ * The expiry date of Cyprus ID card.
+ */
+@property (nonatomic, readonly) MBDateResult *expiresOn;
+
+/**
  * The sex of the back side of the Cyprus Id owner.
  */
 @property (nonatomic, readonly) NSString *sex;
