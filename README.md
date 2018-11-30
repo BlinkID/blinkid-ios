@@ -26,8 +26,8 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 # Table of contents
 
 * [Requirements](#user-content-requirements)
-* [Quick Start](#user-content-quickStart)
-* [Advanced BlinkInput integration instructions](#user-content-advancedIntegration)
+* [Quick Start](#quickStart)
+* [Advanced BlinkInput integration instructions](#advancedIntegration)
     * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#user-content-uiCustomizations)
         * [Built-in overlay view controllers and overlay subviews](#user-content-builtInUIComponents)
     * [Using `MBBarcodeOverlayViewController`](#user-content-mbBarcodeOverlayViewcontroller)
