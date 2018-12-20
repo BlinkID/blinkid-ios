@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer which can scan back side of Kuwait national ID cards.
  */
 PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBKuwaitIdBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
+@interface MBKuwaitIdBackRecognizer : MBRecognizer<NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 

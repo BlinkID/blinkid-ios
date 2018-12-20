@@ -348,6 +348,12 @@
                 <a class="nav-group-task-link" href="../Classes/MBGermanyCombinedRecognizerResult.html">MBGermanyCombinedRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBGermanyDlBackRecognizer.html">MBGermanyDlBackRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBGermanyDlBackRecognizerResult.html">MBGermanyDlBackRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBGermanyIdBackRecognizer.html">MBGermanyIdBackRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -471,6 +477,18 @@
                 <a class="nav-group-task-link" href="../Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMalaysiaMyTenteraFrontRecognizer.html">MBMalaysiaMyTenteraFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMalaysiaMyTenteraFrontRecognizerResult.html">MBMalaysiaMyTenteraFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMexicoVoterIdFrontRecognizer.html">MBMexicoVoterIdFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMexicoVoterIdFrontRecognizerResult.html">MBMexicoVoterIdFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -526,12 +544,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMyKadFrontRecognizerResult.html">MBMyKadFrontRecognizerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMyTenteraRecognizer.html">MBMyTenteraRecognizer</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMyTenteraRecognizerResult.html">MBMyTenteraRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBNewZealandDlFrontRecognizer.html">MBNewZealandDlFrontRecognizer</a>
@@ -1326,15 +1338,15 @@
                 <div class="language">
                   <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBGermanyIdFrontRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="../Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span>
-                          <span class="n"><a href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="../Classes/MBRecognizer.html">MBRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBFaceImageDpi.html">MBFaceImageDpi</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Class for configuring German ID Front Recognizer.</p>
-
-<p>German ID Front recognizer is used for scanning front side of German ID.</p>
+            <p>Recognizer which can scan front side of Germany national ID cards.</p>
 
           </div>
         </section>
@@ -1388,7 +1400,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>German ID Front recognizer result</p>
+                        <p>Result of scanning GermanyIdFrontRecognizer</p>
 
                       </div>
                       <div class="declaration">
@@ -1411,176 +1423,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractGivenNames"></a>
-                    <a name="//apple_ref/objc/Property/extractGivenNames" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractGivenNames">extractGivenNames</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines if owner&rsquo;s first names should be extracted from German ID</p>
-
-<p>Default: YES</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractGivenNames</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractGivenNames</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractSurname"></a>
-                    <a name="//apple_ref/objc/Property/extractSurname" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractSurname">extractSurname</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines if owner&rsquo;s surname should be extracted from German ID</p>
-
-<p>Default: YES</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractSurname</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractSurname</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractPlaceOfBirth"></a>
-                    <a name="//apple_ref/objc/Property/extractPlaceOfBirth" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractPlaceOfBirth">extractPlaceOfBirth</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines if owner&rsquo;s place of birth should be extracted from German ID</p>
-
-<p>Default: YES</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractPlaceOfBirth</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractPlaceOfBirth</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractNationality"></a>
-                    <a name="//apple_ref/objc/Property/extractNationality" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractNationality">extractNationality</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines if owner&rsquo;s nationality should be extracted from German ID</p>
-
-<p>Default: YES</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractNationality</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractNationality</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDateOfExpiry"></a>
-                    <a name="//apple_ref/objc/Property/extractDateOfExpiry" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDateOfExpiry">extractDateOfExpiry</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Defines if date of expiry should be extracted from German ID</p>
-
-<p>Default: YES</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractDateOfExpiry</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractDateOfExpiry</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractCanNumber"></a>
                     <a name="//apple_ref/objc/Property/extractCanNumber" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractCanNumber">extractCanNumber</a>
@@ -1591,7 +1433,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines if CAN number should be extracted from German ID</p>
+                        <p>Defines if CAN number of Germany ID should be extracted.</p>
 
 <p>Default: YES</p>
 
@@ -1615,6 +1457,40 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDateOfExpiry"></a>
+                    <a name="//apple_ref/objc/Property/extractDateOfExpiry" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDateOfExpiry">extractDateOfExpiry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if date of expiry of Germany ID should be extracted.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractDateOfExpiry</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractDateOfExpiry</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDocumentNumber"></a>
                     <a name="//apple_ref/objc/Property/extractDocumentNumber" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractDocumentNumber">extractDocumentNumber</a>
@@ -1625,7 +1501,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines if document number should be extracted from German ID</p>
+                        <p>Defines if document number of Germany ID should be extracted.</p>
 
 <p>Default: YES</p>
 
@@ -1646,6 +1522,142 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractGivenNames"></a>
+                    <a name="//apple_ref/objc/Property/extractGivenNames" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractGivenNames">extractGivenNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if given names of Germany ID owner should be extracted.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractGivenNames</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractGivenNames</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractNationality"></a>
+                    <a name="//apple_ref/objc/Property/extractNationality" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractNationality">extractNationality</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if nationality  of Germany ID owner should be extracted.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractNationality</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractNationality</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractPlaceOfBirth"></a>
+                    <a name="//apple_ref/objc/Property/extractPlaceOfBirth" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractPlaceOfBirth">extractPlaceOfBirth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if place of birth of Germany ID owner should be extracted.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractPlaceOfBirth</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractPlaceOfBirth</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractSurname"></a>
+                    <a name="//apple_ref/objc/Property/extractSurname" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBGermanyIdFrontRecognizer(py)extractSurname">extractSurname</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines if surname of Germany ID owner should be extracted.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">extractSurname</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extractSurname</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1654,7 +1666,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-11-19)</p>
+      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-12-20)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

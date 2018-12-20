@@ -50,10 +50,15 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param frame frame for the view
  * @return initialized view
  */
-- (instancetype)initWithFrame:(CGRect)frame NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithFrame:(CGRect)frame;
 
-// Unavailable initializer
-- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+/**
+ * Initialize the overlay subview with a given coder
+ *
+ * @param aDecoder decoder
+ * @return initialized view
+ */
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder;
 
 @end
 

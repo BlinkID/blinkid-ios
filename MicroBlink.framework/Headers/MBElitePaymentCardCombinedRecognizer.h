@@ -40,13 +40,6 @@ MB_INIT
 @property (nonatomic, assign) BOOL extractOwner;
 
 /**
- * Should extract the card's security code/value
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractCvv;
-
-/**
  * Should extract the card's inventory number
  *
  * Default: YES

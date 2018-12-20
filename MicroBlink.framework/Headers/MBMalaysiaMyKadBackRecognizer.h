@@ -1,12 +1,12 @@
 //
-//  MBMyKadBackRecognizer.h
+//  MBMalaysiaMyKadBackRecognizer.h
 //  MicroBlinkDev
 //
 //  Created by Dino Gustin on 12/06/2018.
 //
 
 #import "MBRecognizer.h"
-#import "MBMyKadBackRecognizerResult.h"
+#import "MBMalaysiaMyKadBackRecognizerResult.h"
 
 #import "MBFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
@@ -23,14 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
  * MyKadBack recognizer is used for scanning back side of MyKad.
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMyKadBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
+@interface MBMalaysiaMyKadBackRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBSignatureImage, MBSignatureImageDpi, MBGlareDetection, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
  * Result of scanning MyKad back side
  */
-@property (nonatomic, strong, readonly) MBMyKadBackRecognizerResult *result;
+@property (nonatomic, strong, readonly) MBMalaysiaMyKadBackRecognizerResult *result;
 
 /**
  * Defines if old NRIC should be extracted from back side of the MyKad

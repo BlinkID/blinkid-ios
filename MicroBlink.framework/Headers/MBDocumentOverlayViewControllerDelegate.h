@@ -45,6 +45,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)documentOverlayViewControllerDidTapClose:(nonnull MBDocumentOverlayViewController *)documentOverlayViewController;
 
+@optional
+/**
+ * Scanning library did output high resolution image
+ *
+ *  @param documentOverlayViewController Scanning view controller responsible for scanning
+ *  @param highResImage High resolution image of finished scan
+ *
+ *
+ * NOTE: This method is called on background processing thread. Make sure that you dispatch all your UI API calls to main thread.
+ */
+- (void)documentOverlayViewControllerDidCaptureHighResolutionImage:(nonnull MBDocumentOverlayViewController *)documentOverlayViewController highResImage:(MBImage *)highResImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

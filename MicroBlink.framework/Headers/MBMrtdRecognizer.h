@@ -14,6 +14,12 @@
 #import "MBGlareDetection.h"
 
 #import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+#import "MBMrzImage.h"
+#import "MBMrzImageDpi.h"
+#import "MBEncodeMrzImage.h"
 
 
 @protocol MBMrzFilter;
@@ -26,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer that can recognizer Machine Readable Zone (MRZ) of the Machine Readable Travel Document (MRTD)
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBGlareDetection>
+@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBMrzImage, MBMrzImageDpi, MBEncodeMrzImage, MBGlareDetection>
 
 MB_INIT
 
@@ -49,21 +55,6 @@ MB_INIT
  * Default: NO
  */
 @property (nonatomic, assign) BOOL allowUnverifiedResults;
-
-/**
- * Whether cropped image of the Machine Readable Zone should be available in result.
- * Note - enabling this feature will degrade performance
- *
- * Default: NO
- */
-@property (nonatomic, assign) BOOL returnMrzImage;
-
-/**
- * Desired DPI for MRZ and full document images (if saving of those is enabled)
- *
- * Default: 250
- */
-@property (nonatomic, assign) NSUInteger saveImageDPI;
 
 /**
  * Sets the mrtd specifications. Mrtd specifications describe the images that should be returned by

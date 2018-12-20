@@ -1,5 +1,67 @@
 # Release notes
 
+## 4.5.0
+
+- Updates and additions
+    - added support for reading front side of Brunei ID - use `MBBruneiIdFrontRecognizer`
+    - added support for reading front and back side of Cyprus ID, issued after 2015.  - use `MBCyprusIdFrontRecognizer` and `MByprusIdBackRecognizer`
+    - added support for reading front side of Malaysian MyKAS - use `MBMalaysiaMyKasFrontRecognizer`
+    - added support for reading front side of Malaysian MyPR - use `MBMalaysiaMyPrFrontRecognizer`
+    - enabled capturing high resolution camera frames:
+        - When custom UI integration is performed, use `- (void)captureHighResImage:(MBCaptureHighResImage)highResoulutionImageCaptured` on `MBRecognizerRunnerViewController`
+        - When using provided scan overlay view controllers, high resolution full camera frames taken at the moment of successful scan are returned if this option is enabled through `MBOverlaySettings`. Concrete `MBDocumentOverlaySettings` and `MBDocumentVerificationOverlaySettings` have property `captureHighResImage` to support this feature and new optional delegate on respective delegates
+
+- Improvements in ID scanning performance
+    - improved reading accuracy for the following recognizers (**DeepOCR** support):
+        - `MBHongKongIdFrontRecognizer`
+        - `MBMalaysiaMyKadFrontRecognizer`
+        - `MBMalaysiaMyKadBackRecognizer`
+        - `MBMalaysiaMyTenteraFrontRecognizer`
+        - `MBMalaysiaDlFrontRecognizer`
+        - `MBNewZealandDlFrontRecognizer`
+    - improved `MBPaymentCard` recognizers:
+        - better OCR and data extraction
+        - added support for reading payment card numbers in 4x6x4 and 4x6x5 format
+    - improveed UAE recognizers:
+        - glare detection is enabled for all images returned from `MBUnitedArabEmiratesDlFrontRecognizer`, `MBUnitedArabEmiratesIdBackRecognizer` and `MBUnitedArabEmiratesIdFrontRecognizer` recognizers
+    - improved `MBMrtdRecognizer`:
+        - added option to set extension factors for full document image: use method `fullDocumentImageExtensionFactors`
+        - added option to encode `fullDocumentImage` and `mrzImage` to JPEG and save them to `MBMrtdRecognizerResult`: use `encodeMrzImage` and `encodeFullDocumentImage` to enable encoding
+
+- Minor API changes
+    - renamed `MBIkadRecognizer` to `MBMalaysiaIkadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `expiryDate` to `dateOfExpiry `
+        - `sex ` to `gender`
+    - renamed `MBMyKadFrontRecogniezer` to `MBMalaysiaMyKadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `ownerFullName ` to `fullName`
+        - `ownerAddress ` to `fullAddress`
+        - `addressStreet ` to `street`
+        - `ownerAddressZipCode ` to `zipcode`
+        - `ownerAddressCity ` to `city `
+        - `ownerAddressState ` to `ownerState`
+        - `ownerBirthDate ` to `birthDate`
+        - `ownerSex ` to `sex`
+        - `ownerReligion ` to `religion`
+        - `nricNumber ` to `nric`
+    - `MBMalaysiaMyKadFrontRecognizer` does not extract `armyNumber` anymore, use `MBMalaysiaMyTenteraFrontRecognizer` for scanning `MyTentera`
+    - `MBMrtdRecognizer`: 
+        - method `saveImageDPI` which has been used to set DPI for full document and MRZ image is replaced with methods `fullDocumentImageDpi` and `mrzImageDpi`
+
+    - renamed methods in `MBSwitzerlandIdBackRecognizer` and its `Result`: 
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+    - renamed methods in `MBSwitzerlandPassportRecognizer` and its `Result`:
+        - `placeOfBirth` to `placeOfOrigin`
+        - `nonMrzDateOfBirth` to `dateOfBirth`
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+
+- Bugfixes
+    - MBDocumentFaceRecognizer now correctly applies DPI settings to returned face and full document images
+    - fixed a crash which happened when scanning region was set before overlay view controller loaded, but after it was initialized
+    - fixed missing `init` in `MBDotsResultSubview` for Swift
+
+
 ## 4.4.0
 
 - Updates and additions

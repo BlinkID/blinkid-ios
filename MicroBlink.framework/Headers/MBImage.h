@@ -86,9 +86,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 + (instancetype)imageWithUIImage:(UIImage *)image;
 
 /**
- * Creates PPImage around CVImageBufferRef.
+ * Creates MBImage around CVImageBufferRef.
  */
 + (instancetype)imageWithCmSampleBuffer:(CMSampleBufferRef)buffer;
+
+/**
+ * Creates MBImage around CVPixelBufferRef.
+ */
++ (instancetype)imageWithCvPixelBuffer:(CVPixelBufferRef)buffer;
 
 @end
 

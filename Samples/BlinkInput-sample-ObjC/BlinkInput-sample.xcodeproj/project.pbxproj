@@ -22,7 +22,7 @@
 		3159A5C31CF4A5F100641A11 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C21CF4A5F100641A11 /* libiconv.tbd */; };
 		3159A5C51CF4A5F400641A11 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C41CF4A5F400641A11 /* Accelerate.framework */; };
 		A211FC1A2195C1E0000332BE /* CustomOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211FC192195C1E0000332BE /* CustomOverlayViewController.m */; };
-		A28E567621A2D6F8001C3BA9 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A28E567521A2D6F8001C3BA9 /* blinkid-license.txt */; };
+		A2C8BF9721CBCD07001A097C /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2C8BF9621CBCD07001A097C /* blinkid-license.txt */; };
 		A2FE135D1F7503A600C6F1EA /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A58A1CF4805D00641A11 /* MicroBlink.framework */; };
 		A2FE135E1F7503A600C6F1EA /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A58A1CF4805D00641A11 /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2FE13611F7503C200C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE13601F7503C200C6F1EA /* libz.tbd */; };
@@ -64,7 +64,7 @@
 		3159A5C41CF4A5F400641A11 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A211FC182195C1E0000332BE /* CustomOverlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomOverlayViewController.h; sourceTree = "<group>"; };
 		A211FC192195C1E0000332BE /* CustomOverlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayViewController.m; sourceTree = "<group>"; };
-		A28E567521A2D6F8001C3BA9 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
+		A2C8BF9621CBCD07001A097C /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A2FE13601F7503C200C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -151,7 +151,7 @@
 		B4A57ACC20F4E61B004AA280 /* License */ = {
 			isa = PBXGroup;
 			children = (
-				A28E567521A2D6F8001C3BA9 /* blinkid-license.txt */,
+				A2C8BF9621CBCD07001A097C /* blinkid-license.txt */,
 			);
 			path = License;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 				187392121AA4B1070031D6C9 /* Main.storyboard in Resources */,
 				187392171AA4B1070031D6C9 /* LaunchScreen.xib in Resources */,
 				186226B71AB1B0A6002D71E5 /* en.strings in Resources */,
-				A28E567621A2D6F8001C3BA9 /* blinkid-license.txt in Resources */,
+				A2C8BF9721CBCD07001A097C /* blinkid-license.txt in Resources */,
 				187392141AA4B1070031D6C9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -92,6 +92,13 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  */
 @property(nonatomic, strong) UIImage *secondSideInstructionsImage;
 
+/**
+ * Gets/sets capturing of high resolution image
+ *
+ * Default: NO
+ */
+@property(nonatomic, assign) BOOL captureHighResImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

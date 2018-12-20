@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class MBDocumentVerificationOverlaySettings;
 @class MBRecognizerCollection;
 
+typedef NS_ENUM(NSUInteger, MBDocumentVerificationHighResImageState) {
+    MBDocumentVerificationHighResImageStateFrontSide,
+    MBDocumentVerificationHighResImageStateBackSideSide
+};
+
 /**
  * Default overlay when using ID card combined recognizers for verification.
  */

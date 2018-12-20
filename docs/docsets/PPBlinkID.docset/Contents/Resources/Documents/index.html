@@ -347,6 +347,12 @@
                 <a class="nav-group-task-link" href="Classes/MBGermanyCombinedRecognizerResult.html">MBGermanyCombinedRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBGermanyDlBackRecognizer.html">MBGermanyDlBackRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBGermanyDlBackRecognizerResult.html">MBGermanyDlBackRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBGermanyIdBackRecognizer.html">MBGermanyIdBackRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -470,6 +476,18 @@
                 <a class="nav-group-task-link" href="Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBMalaysiaMyTenteraFrontRecognizer.html">MBMalaysiaMyTenteraFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBMalaysiaMyTenteraFrontRecognizerResult.html">MBMalaysiaMyTenteraFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBMexicoVoterIdFrontRecognizer.html">MBMexicoVoterIdFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBMexicoVoterIdFrontRecognizerResult.html">MBMexicoVoterIdFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -525,12 +543,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMyKadFrontRecognizerResult.html">MBMyKadFrontRecognizerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBMyTenteraRecognizer.html">MBMyTenteraRecognizer</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBMyTenteraRecognizerResult.html">MBMyTenteraRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBNewZealandDlFrontRecognizer.html">MBNewZealandDlFrontRecognizer</a>
@@ -1350,96 +1362,96 @@
 
 <ul>
 <li><a href="#user-content-requirements">Requirements</a></li>
-<li><a href="#user-content-quickStart">Quick Start</a></li>
-<li><a href="#user-content-advancedIntegration">Advanced BlinkInput integration instructions</a>
+<li><a href="#quickStart">Quick Start</a></li>
+<li><a href="#advancedIntegration">Advanced BlinkInput integration instructions</a>
 
 <ul>
-<li><a href="#user-content-uiCustomizations">UI customizations of built-in <code>MBOverlayViewControllers</code> and <code>MBOverlaySubviews</code></a>
+<li><a href="#uiCustomizations">UI customizations of built-in <code>MBOverlayViewControllers</code> and <code>MBOverlaySubviews</code></a>
 
 <ul>
-<li><a href="#user-content-builtInUIComponents">Built-in overlay view controllers and overlay subviews</a></li>
+<li><a href="#ubuiltInUIComponents">Built-in overlay view controllers and overlay subviews</a></li>
 </ul></li>
-<li><a href="#user-content-mbBarcodeOverlayViewcontroller">Using <code><a href="Classes/MBBarcodeOverlayViewController.html">MBBarcodeOverlayViewController</a></code></a></li>
-<li><a href="#user-content-mbDocumentOverlayViewcontroller">Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a></li>
-<li><a href="#user-content-mbDocumentVerificationOverlayViewcontroller">Using <code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a></li>
-<li><a href="#user-content-recognizerRunnerViewController">Custom overlay view controller</a></li>
-<li><a href="#user-content-directAPI">Direct processing API</a>
+<li><a href="#mbBarcodeOverlayViewcontroller">Using <code><a href="Classes/MBBarcodeOverlayViewController.html">MBBarcodeOverlayViewController</a></code></a></li>
+<li><a href="#mbDocumentOverlayViewcontroller">Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a></li>
+<li><a href="#mbDocumentVerificationOverlayViewcontroller">Using <code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a></li>
+<li><a href="#recognizerRunnerViewController">Custom overlay view controller</a></li>
+<li><a href="#directAPI">Direct processing API</a>
 
 <ul>
-<li><a href="#user-content-directAPI_strings">Using Direct API for <code>NSString</code> recognition (parsing)</a></li>
+<li><a href="#directAPI_strings">Using Direct API for <code>NSString</code> recognition (parsing)</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#user-content-availableRecognizers"><code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> and available recognizers</a>
+<li><a href="#availableRecognizers"><code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> and available recognizers</a>
 
 <ul>
-<li><a href="#user-content-recognizerConcept">The <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> concept</a></li>
-<li><a href="#user-content-recognizerBCollection"><code><a href="Classes/MBRecognizerCollection.html">MBRecognizerCollection</a></code> concept</a></li>
-<li><a href="#user-content-recognizerList">List of available recognizers</a>
+<li><a href="#recognizerConcept">The <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> concept</a></li>
+<li><a href="#recognizerBCollection"><code><a href="Classes/MBRecognizerCollection.html">MBRecognizerCollection</a></code> concept</a></li>
+<li><a href="#recognizerList">List of available recognizers</a>
 
 <ul>
-<li><a href="#user-content-frameGrabberRecognizer">Frame Grabber Recognizer</a></li>
-<li><a href="#user-content-successFrameGrabberRecognizer">Success Frame Grabber Recognizer</a></li>
-<li><a href="#user-content-pdf417Recognizer">PDF417 recognizer</a></li>
-<li><a href="#user-content-barcodeRecognizer">Barcode recognizer</a></li>
-<li><a href="#user-content-blinkInputRecognizer">BlinkInput recognizer</a></li>
-<li><a href="#user-content-detectorRecognizer">Detector recognizer</a></li>
-<li><a href="#user-content-blinkIdRecognizersByCountry">BlinkID recognizers by countries</a></li>
+<li><a href="#frameGrabberRecognizer">Frame Grabber Recognizer</a></li>
+<li><a href="#successFrameGrabberRecognizer">Success Frame Grabber Recognizer</a></li>
+<li><a href="#pdf417Recognizer">PDF417 recognizer</a></li>
+<li><a href="#barcodeRecognizer">Barcode recognizer</a></li>
+<li><a href="#blinkInputRecognizer">BlinkInput recognizer</a></li>
+<li><a href="#detectorRecognizer">Detector recognizer</a></li>
+<li><a href="#blinkIdRecognizersByCountry">BlinkID recognizers by countries</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#user-content-fieldScan"><code>Field by field</code> scanning feature</a>
+<li><a href="#fieldScan"><code>Field by field</code> scanning feature</a>
 
 <ul>
-<li><a href="#user-content-fieldByFieldFeature"><code>Field by field</code> feature</a></li>
+<li><a href="#fieldByFieldFeature"><code>Field by field</code> feature</a></li>
 </ul></li>
-<li><a href="#user-content-processorsAndParsers"><code><a href="Classes/MBProcessor.html">MBProcessor</a></code> and <code><a href="Classes/MBParser.html">MBParser</a></code></a>
+<li><a href="#processorsAndParsers"><code><a href="Classes/MBProcessor.html">MBProcessor</a></code> and <code><a href="Classes/MBParser.html">MBParser</a></code></a>
 
 <ul>
-<li><a href="#user-content-processorConcept">The <code><a href="Classes/MBProcessor.html">MBProcessor</a></code> concept</a></li>
-<li><a href="#user-content-processorList">List of available processors</a>
+<li><a href="#processorConcept">The <code><a href="Classes/MBProcessor.html">MBProcessor</a></code> concept</a></li>
+<li><a href="#processorList">List of available processors</a>
 
 <ul>
-<li><a href="#user-content-imageReturnProcessor">Image Return Processor</a></li>
-<li><a href="#user-content-parserGroupProcessor">Parser Group Processor</a></li>
+<li><a href="#imageReturnProcessor">Image Return Processor</a></li>
+<li><a href="#parserGroupProcessor">Parser Group Processor</a></li>
 </ul></li>
-<li><a href="#user-content-parserConcept">The <code><a href="Classes/MBParser.html">MBParser</a></code> concept</a></li>
-<li><a href="#user-content-parserList">List of available parsers</a>
+<li><a href="#parserConcept">The <code><a href="Classes/MBParser.html">MBParser</a></code> concept</a></li>
+<li><a href="#parserList">List of available parsers</a>
 
 <ul>
-<li><a href="#user-content-amountParser">Amount Parser</a></li>
-<li><a href="#user-content-dateParser">Date Parser</a></li>
-<li><a href="#user-content-emailParser">Email Parser</a></li>
-<li><a href="#user-content-ibanParser">IBAN Parser</a></li>
-<li><a href="#user-content-licensePlatesParser">License Plates Parser</a></li>
-<li><a href="#user-content-rawParser">Raw Parser</a></li>
-<li><a href="#user-content-regexParser">Regex Parser</a></li>
-<li><a href="#user-content-topUpParser">TopUp Parser</a></li>
-<li><a href="#user-content-vinParser">VIN (<em>Vehicle Identification Number</em>) Parser</a></li>
+<li><a href="#amountParser">Amount Parser</a></li>
+<li><a href="#dateParser">Date Parser</a></li>
+<li><a href="#emailParser">Email Parser</a></li>
+<li><a href="#ibanParser">IBAN Parser</a></li>
+<li><a href="#licensePlatesParser">License Plates Parser</a></li>
+<li><a href="#rawParser">Raw Parser</a></li>
+<li><a href="#regexParser">Regex Parser</a></li>
+<li><a href="#topUpParser">TopUp Parser</a></li>
+<li><a href="#vinParser">VIN (<em>Vehicle Identification Number</em>) Parser</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#user-content-detectorTemplating">Scanning generic documents with Templating API</a>
-    * <a href="#user-content-processorGroup">The <code><a href="Classes/MBProcessorGroup.html">MBProcessorGroup</a></code> component</a>
-    * <a href="#user-content-dewarpPolicyList">List of available dewarp policies</a>
-    * <a href="#user-content-templatingClass">The <code><a href="Classes/MBTemplatingClass.html">MBTemplatingClass</a></code> component</a>
-    * <a href="#user-content-implementingTemplatingClassifier">Implementing the <code><a href="Protocols/MBTemplatingClassifier.html">MBTemplatingClassifier</a></code></a></li>
-<li><a href="#user-content-detectorConcept">The <code><a href="Classes/MBDetector.html">MBDetector</a></code> concept</a>
+<li><a href="#detectorTemplating">Scanning generic documents with Templating API</a>
+    * <a href="#processorGroup">The <code><a href="Classes/MBProcessorGroup.html">MBProcessorGroup</a></code> component</a>
+    * <a href="#dewarpPolicyList">List of available dewarp policies</a>
+    * <a href="#templatingClass">The <code><a href="Classes/MBTemplatingClass.html">MBTemplatingClass</a></code> component</a>
+    * <a href="#implementingTemplatingClassifier">Implementing the <code><a href="Protocols/MBTemplatingClassifier.html">MBTemplatingClassifier</a></code></a></li>
+<li><a href="#detectorConcept">The <code><a href="Classes/MBDetector.html">MBDetector</a></code> concept</a>
 
 <ul>
-<li><a href="#user-content-detectorList">List of available detectors</a>
+<li><a href="#detectorList">List of available detectors</a>
 
 <ul>
-<li><a href="#user-content-documentDetector">Document Detector</a></li>
-<li><a href="#user-content-mrtdDetector">MRTD Detector</a></li>
+<li><a href="#documentDetector">Document Detector</a></li>
+<li><a href="#mrtdDetector">MRTD Detector</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#user-content-customizedBuild">Creating customized build of BlinkID SDK</a></li>
-<li><a href="#user-content-troubleshoot">Troubleshooting</a>
+<li><a href="#customizedBuild">Creating customized build of BlinkID SDK</a></li>
+<li><a href="#troubleshoot">Troubleshooting</a>
 
 <ul>
-<li><a href="#user-content-integrationTroubleshoot">Integration problems</a></li>
-<li><a href="#user-content-sdkTroubleshoot">SDK problems</a></li>
-<li><a href="#user-content-faq">Frequently asked questions and known problems</a></li>
+<li><a href="#integrationTroubleshoot">Integration problems</a></li>
+<li><a href="#sdkTroubleshoot">SDK problems</a></li>
+<li><a href="#faq">Frequently asked questions and known problems</a></li>
 </ul></li>
-<li><a href="#user-content-info">Additional info</a></li>
+<li><a href="#info">Additional info</a></li>
 </ul>
 <h1 id='a-name-requirements-a-requirements' class='heading'><a name="requirements"></a> Requirements</h1>
 
@@ -1467,7 +1479,7 @@ git lfs install
 <li><p>Copy and paste the following lines into the TextEdit window:  </p></li>
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
-<span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 4.3.0'</span>
+<span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 4.1.0'</span>
 </code></pre>
 
 <ul>
@@ -2089,6 +2101,10 @@ This recognizer can be used in any overlay view controller, but it works best wi
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBGermanyPassportRecognizer.h.html"><code>MBGermanyPassportRecognizer.h</code></a> is recognizer specialised for scanning German Passports.</p>
 
 <p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBGermanyDlBackRecognizerResult.h.html"><code>MBGermanyDlBackRecognizerResult.h</code></a> is recognizer specialised for scanning back side of German Driver&rsquo;s License with B10 support.</p>
+
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
 <h4 id='a-name-hongkongblinkid-a-hong-kong' class='heading'><a name="hongkongBlinkId"></a> Hong Kong</h4>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBHongKongIdFrontRecognizer.html"><code><a href="Classes/MBHongKongIdFrontRecognizer.html">MBHongKongIdFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Hong Kong ID.</p>
@@ -2150,11 +2166,16 @@ This recognizer can be used in any overlay view controller, but it works best wi
 
 <p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
 
-<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMyTenteraRecognizer.html"><code><a href="Classes/MBMyTenteraRecognizer.html">MBMyTenteraRecognizer</a></code></a> is recognizer specialised for scanning MyTentera.</p>
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyTenteraFrontRecognizer.html"><code><a href="Classes/MBMalaysiaMyTenteraFrontRecognizer.html">MBMalaysiaMyTenteraFrontRecognizer</a></code></a> is recognizer specialised for scanning MyTentera.</p>
 
 <p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBiKadRecognizer.html"><code>MBiKadRecognizer</code></a> is recognizer specialised for scanning iKad.</p>
+
+<p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
+<h4 id='a-name-mexicoblinkid-a-mexico' class='heading'><a name="mexicoBlinkId"></a> Mexico</h4>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMexicoVoterIdFrontRecognizer.html"><code><a href="Classes/MBMexicoVoterIdFrontRecognizer.html">MBMexicoVoterIdFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Mexican Voter ID card.</p>
 
 <p>This recognizer can be used in any overlay view controller, but it works best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for one side document scanning.</p>
 <h4 id='a-name-moroccoblinkid-a-morocco' class='heading'><a name="moroccoBlinkId"></a> Morocco</h4>
@@ -2753,7 +2774,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-11-19)</p>
+      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-12-20)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
