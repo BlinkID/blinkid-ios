@@ -1,75 +1,83 @@
 //
-//  MBSwitzerlandPassportRecognizerResult.h
-//  MicroBlinkDev
+// MBSwitzerlandPassportRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 17/12/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning Swiss Passport
- */
+* Recognizer which can scan Switzerland passport.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwitzerlandPassportRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult>
+@interface MBSwitzerlandPassportRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The surname of the Swiss Passport owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The issuing authority of Switzerland passport.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The name of the Swiss Passport owner.
- */
-@property (nonatomic, readonly, nullable) NSString *givenName;
+* The date of birth of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The place of birth of the Swiss Passport owner
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
-
-
-/**
- * Date of issue in NSDate object
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The date of expiry of Switzerland passport.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * Date of birth, as written on the passport
- */
-@property (nonatomic, readonly, nullable) NSDate *nonMrzDateOfBirth;
+* The date of issue of Switzerland passport.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * Date of expiry, as written on the passport
- */
-@property (nonatomic, readonly, nullable) NSDate *nonMrzDateOfExpiry;
+* The given name of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) NSString *givenName;
 
 /**
- * Issuing authority of the Passport
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The height of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) NSString *height;
 
 /**
- * Number of the Passport
- */
-@property (nonatomic, readonly, nullable) NSString *passportNumber;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * The sex of the Swiss Passport owner
- */
-@property (nonatomic, readonly, nullable) NSString *nonMrzSex;
+* The passport number of Switzerland passport.
+*/
+@property (nonatomic, readonly) NSString *passportNumber;
 
 /**
- * The height of the Swiss Passport owner
- */
-@property (nonatomic, readonly, nullable) NSString *height;
+* The place of origin of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfOrigin;
+
+/**
+* The sex of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The surname of Switzerland passport owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

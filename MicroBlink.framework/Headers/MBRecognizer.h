@@ -19,15 +19,6 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @interface MBRecognizer : MBEntity
 
 /**
- * Property which determines if the recognizer is enabled
- *
- *  If YES, recognizer is enabled, and it peroforms recognition on each video frame.
- *
- * Default: YES
- */
-@property (nonatomic, getter=isEnabled) BOOL enabled;
-
-/**
  * Base recognizer result.
  */
 @property (nonatomic, readonly, weak) MBRecognizerResult *baseResult;

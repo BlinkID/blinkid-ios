@@ -1,3 +1,33 @@
+## 4.5.0
+
+- Minor API changes
+    - renamed `MBIkadRecognizer` to `MBMalaysiaIkadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `expiryDate` to `dateOfExpiry`
+        - `sex ` to `gender`
+    - renamed `MBMyKadFrontRecogniezer` to `MBMalaysiaMyKadFrontRecognizer` and  methods in recognizer and its `Result`:
+        - `ownerFullName ` to `fullName`
+        - `ownerAddress ` to `fullAddress`
+        - `addressStreet ` to `street`
+        - `ownerAddressZipCode ` to `zipcode`
+        - `ownerAddressCity ` to `city`
+        - `ownerAddressState ` to `ownerState`
+        - `ownerBirthDate ` to `birthDate`
+        - `ownerSex ` to `sex`
+        - `ownerReligion ` to `religion`
+        - `nricNumber ` to `nric`
+    - `MBMalaysiaMyKadFrontRecognizer` does not extract `armyNumber` anymore, use `MBMalaysiaMyTenteraFrontRecognizer` for scanning `MyTentera`
+    - `MBMrtdRecognizer`: 
+        - method `saveImageDPI` which has been used to set DPI for full document and MRZ image is replaced with methods `fullDocumentImageDpi` and `mrzImageDpi`
+
+    - renamed methods in `MBSwitzerlandIdBackRecognizer` and its `Result`: 
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+    - renamed methods in `MBSwitzerlandPassportRecognizer` and its `Result`:
+        - `placeOfBirth` to `placeOfOrigin`
+        - `nonMrzDateOfBirth` to `dateOfBirth`
+        - `nonMrzDateOfExpiry` to `dateOfExpiry`
+        - `nonMrzSex` to `sex`
+
 ## 4.4.0
 
 - Minor API changes

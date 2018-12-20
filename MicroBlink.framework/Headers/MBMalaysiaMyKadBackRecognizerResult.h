@@ -1,5 +1,5 @@
 //
-//  MBMyKadBackRecognizerResult.h
+//  MBMalaysiaMyKadBackRecognizerResult.h
 //  MicroBlinkDev
 //
 //  Created by Dino Gustin on 12/06/2018.
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Class representing values obtained when scanning back side of MyKad
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMyKadBackRecognizerResult : MBRecognizerResult<NSCopying, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBMalaysiaMyKadBackRecognizerResult : MBRecognizerResult<NSCopying, MBSignatureImageResult, MBFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 

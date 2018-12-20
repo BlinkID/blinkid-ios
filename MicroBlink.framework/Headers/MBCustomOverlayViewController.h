@@ -45,6 +45,8 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * Defines a portion of the screen in which the scanning will be performed.
  * Given as a CGRect with unit coordinating system:
  *
+ * @warning Should only be set AFTER RecognizerRunnerViewController has been instantiated with this CustomOverlayViewController, or else it will not have any effect.
+ *
  * @example CGRectMake(0.2f, 0.5f, 0.4f, 0.3f) defines a portion of the screen which starts at
  *   20% from the left border
  *   50% from the top

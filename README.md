@@ -22,64 +22,63 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 * [Requirements](#user-content-requirements)
-* [Quick Start](#quickStart)
-* [Advanced BlinkInput integration instructions](#advancedIntegration)
-    * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#uiCustomizations)
-        * [Built-in overlay view controllers and overlay subviews](#ubuiltInUIComponents)
-    * [Using `MBBarcodeOverlayViewController`](#mbBarcodeOverlayViewcontroller)
-    * [Using `MBDocumentOverlayViewController`](#mbDocumentOverlayViewcontroller)
-    * [Using `MBDocumentVerificationOverlayViewController`](#mbDocumentVerificationOverlayViewcontroller)
-    * [Custom overlay view controller](#recognizerRunnerViewController)
-    * [Direct processing API](#directAPI)
-        * [Using Direct API for `NSString` recognition (parsing)](#directAPI_strings)
-* [`MBRecognizer` and available recognizers](#availableRecognizers)
-    * [The `MBRecognizer` concept](#recognizerConcept)
-    * [`MBRecognizerCollection` concept](#recognizerBCollection)
-    * [List of available recognizers](#recognizerList)
-        * [Frame Grabber Recognizer](#frameGrabberRecognizer)
-        * [Success Frame Grabber Recognizer](#successFrameGrabberRecognizer)
-        * [PDF417 recognizer](#pdf417Recognizer)
-        * [Barcode recognizer](#barcodeRecognizer)
-        * [BlinkInput recognizer](#blinkInputRecognizer)
-        * [Detector recognizer](#detectorRecognizer)
-        * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
-* [`Field by field` scanning feature](#fieldScan)
-    * [`Field by field` feature](#fieldByFieldFeature)
-* [`MBProcessor` and `MBParser`](#processorsAndParsers)
-    * [The `MBProcessor` concept](#processorConcept)
-    * [List of available processors](#processorList)
-        * [Image Return Processor](#imageReturnProcessor)
-        * [Parser Group Processor](#parserGroupProcessor)
-    * [The `MBParser` concept](#parserConcept)
-    * [List of available parsers](#parserList)
-        * [Amount Parser](#amountParser)
-        * [Date Parser](#dateParser)
-        * [Email Parser](#emailParser)
-        * [IBAN Parser](#ibanParser)
-        * [License Plates Parser](#licensePlatesParser)
-        * [Raw Parser](#rawParser)
-        * [Regex Parser](#regexParser)
-        * [TopUp Parser](#topUpParser)
-        * [VIN (*Vehicle Identification Number*) Parser](#vinParser)
-* [Scanning generic documents with Templating API](#detectorTemplating)
-        * [The `MBProcessorGroup` component](#processorGroup)
-        * [List of available dewarp policies](#dewarpPolicyList)
-        * [The `MBTemplatingClass` component](#templatingClass)
-        * [Implementing the `MBTemplatingClassifier`](#implementingTemplatingClassifier)
-* [The `MBDetector` concept](#detectorConcept)
-    * [List of available detectors](#detectorList)
-        * [Document Detector](#documentDetector)
-        * [MRTD Detector](#mrtdDetector)
-* [Creating customized build of BlinkID SDK](#customizedBuild)
-* [Troubleshooting](#troubleshoot)
-    * [Integration problems](#integrationTroubleshoot)
-    * [SDK problems](#sdkTroubleshoot)
-    * [Frequently asked questions and known problems](#faq)
-* [Additional info](#info)
+* [Quick Start](#user-content-quickStart)
+* [Advanced BlinkInput integration instructions](#user-content-advancedIntegration)
+    * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#user-content-uiCustomizations)
+        * [Built-in overlay view controllers and overlay subviews](#user-content-builtInUIComponents)
+    * [Using `MBBarcodeOverlayViewController`](#user-content-mbBarcodeOverlayViewcontroller)
+    * [Using `MBDocumentOverlayViewController`](#user-content-mbDocumentOverlayViewcontroller)
+    * [Using `MBDocumentVerificationOverlayViewController`](#user-content-mbDocumentVerificationOverlayViewcontroller)
+    * [Custom overlay view controller](#user-content-recognizerRunnerViewController)
+    * [Direct processing API](#user-content-directAPI)
+        * [Using Direct API for `NSString` recognition (parsing)](#user-content-directAPI_strings)
+* [`MBRecognizer` and available recognizers](#user-content-availableRecognizers)
+    * [The `MBRecognizer` concept](#user-content-recognizerConcept)
+    * [`MBRecognizerCollection` concept](#user-content-recognizerBCollection)
+    * [List of available recognizers](#user-content-recognizerList)
+        * [Frame Grabber Recognizer](#user-content-frameGrabberRecognizer)
+        * [Success Frame Grabber Recognizer](#user-content-successFrameGrabberRecognizer)
+        * [PDF417 recognizer](#user-content-pdf417Recognizer)
+        * [Barcode recognizer](#user-content-barcodeRecognizer)
+        * [BlinkInput recognizer](#user-content-blinkInputRecognizer)
+        * [Detector recognizer](#user-content-detectorRecognizer)
+        * [BlinkID recognizers by countries](#user-content-blinkIdRecognizersByCountry)
+* [`Field by field` scanning feature](#user-content-fieldScan)
+    * [`Field by field` feature](#user-content-fieldByFieldFeature)
+* [`MBProcessor` and `MBParser`](#user-content-processorsAndParsers)
+    * [The `MBProcessor` concept](#user-content-processorConcept)
+    * [List of available processors](#user-content-processorList)
+        * [Image Return Processor](#user-content-imageReturnProcessor)
+        * [Parser Group Processor](#user-content-parserGroupProcessor)
+    * [The `MBParser` concept](#user-content-parserConcept)
+    * [List of available parsers](#user-content-parserList)
+        * [Amount Parser](#user-content-amountParser)
+        * [Date Parser](#user-content-dateParser)
+        * [Email Parser](#user-content-emailParser)
+        * [IBAN Parser](#user-content-ibanParser)
+        * [License Plates Parser](#user-content-licensePlatesParser)
+        * [Raw Parser](#user-content-rawParser)
+        * [Regex Parser](#user-content-regexParser)
+        * [TopUp Parser](#user-content-topUpParser)
+        * [VIN (*Vehicle Identification Number*) Parser](#user-content-vinParser)
+* [Scanning generic documents with Templating API](#user-content-detectorTemplating)
+        * [The `MBProcessorGroup` component](#user-content-processorGroup)
+        * [List of available dewarp policies](#user-content-dewarpPolicyList)
+        * [The `MBTemplatingClass` component](#user-content-templatingClass)
+        * [Implementing the `MBTemplatingClassifier`](#user-content-implementingTemplatingClassifier)
+* [The `MBDetector` concept](#user-content-detectorConcept)
+    * [List of available detectors](#user-content-detectorList)
+        * [Document Detector](#user-content-documentDetector)
+        * [MRTD Detector](#user-content-mrtdDetector)
+* [Creating customized build of BlinkID SDK](#user-content-customizedBuild)
+* [Troubleshooting](#user-content-troubleshoot)
+    * [Integration problems](#user-content-integrationTroubleshoot)
+    * [SDK problems](#user-content-sdkTroubleshoot)
+    * [Frequently asked questions and known problems](#user-content-faq)
+* [Additional info](#user-content-info)
 
 # <a name="requirements"></a> Requirements
 
@@ -703,6 +702,12 @@ The [`MBAustraliaDlBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
+#### <a name="bruneiBlinkId"></a> Brunei
+
+The [`MBBruneiIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
 #### <a name="colombiaBlinkId"></a> Colombia
 
 The [`MBColombiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Colombian ID.
@@ -735,10 +740,17 @@ This recognizer can be used in any overlay view controller, but it works best wi
 
 #### <a name="cyprusBlinkId"></a> Cyprus
 
-The [`MBCyprusIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czprus ID.
+The [`MBCyprusIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdFrontRecognizer.html) is recognizer specialised for scanning front side of Cyprus ID issued after 2015.
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBCyprusIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdBackRecognizer.html) is recognizer specialised for scanning back side of Croatian ID.
+The [`MBCyprusIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdBackRecognizer.html) is recognizer specialised for scanning back side of Cyprus ID issued after 2015.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBCyprusOldIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusOldIdFrontRecognizer.html) is recognizer specialised for scanning front side of Cyprus ID.
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBCyprusOldIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusOldIdFrontRecognizer.html) is recognizer specialised for scanning back side of Cyprus ID.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
@@ -854,11 +866,11 @@ The [`MBMalaysiaDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyKadFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMyKadFrontRecognizer.html) is recognizer specialised for scanning front side of MyKad.
+The [`MBMalaysiaMyKadFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKadFrontRecognizer.html) is recognizer specialised for scanning front side of MyKad.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBMyKadBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMyKadBackRecognizer.html) is recognizer specialised for scanning back side of MyKad.
+The [`MBMalaysiaMyKadBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKadBackRecognizer.html) is recognizer specialised for scanning back side of MyKad.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
@@ -866,7 +878,15 @@ The [`MBMalaysiaMyTenteraFrontRecognizer`](http://blinkid.github.io/blinkid-ios/
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
-The [`MBiKadRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBiKadRecognizer.html) is recognizer specialised for scanning iKad.
+The [`MBMalaysiaIkadFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaIkadFrontRecognizer.html) is recognizer specialised for scanning iKad.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBMalaysiaMyPrFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyPrFrontRecognizer.html) is recognizer specialised for scanning MyPR.
+
+This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+
+The [`MBMalaysiaMyKasFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKasFrontRecognizer.html) is recognizer specialised for scanning MyKAS.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
@@ -1498,6 +1518,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

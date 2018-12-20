@@ -10,6 +10,9 @@
 #import "MBTemplatingRecognizerResult.h"
 #import "MBMrzResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBMrzImageResult.h"
+#import "MBEncodedMrzImageResult.h"
 
 @class MBOcrLayout;
 @class MBImage;
@@ -20,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Result of MBMrtdDetectorRecognizer
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMrtdRecognizerResult : MBTemplatingRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBMrtdRecognizerResult : MBTemplatingRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBMrzImageResult, MBEncodedMrzImageResult>
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -36,11 +39,6 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * your custom MRTD parsing algorithm
  */
 @property (nonatomic, readonly, nullable) MBOcrLayout *rawOcrLayout;
-
-/**
- * Image of the Machine Readable Zone or nil if not available.
- */
-@property (nonatomic, readonly, nullable) MBImage *mrzImage;
 
 @end
 

@@ -11,6 +11,10 @@
 
 @class MBRecognizerCollection;
 @class MBOverlayViewController;
+@class MBImage;
+
+/** Block for returning high resolution MBImage photo with capture or still output */
+typedef void(^MBCaptureHighResImage)(MBImage * _Nullable highResImage);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -104,6 +108,13 @@ NS_ASSUME_NONNULL_BEGIN
 /** @name Settings recofiguration */
 /**-------------------------------*/
 - (void)resetState;
+
+/**
+ * Method with block for getting high resoultion images
+ *
+ * @warning this is returned from background thread
+ */
+- (void)captureHighResImage:(MBCaptureHighResImage)highResoulutionImageCaptured;
 
 @end
 

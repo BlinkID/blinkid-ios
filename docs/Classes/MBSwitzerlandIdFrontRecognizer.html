@@ -348,6 +348,12 @@
                 <a class="nav-group-task-link" href="../Classes/MBGermanyCombinedRecognizerResult.html">MBGermanyCombinedRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBGermanyDlBackRecognizer.html">MBGermanyDlBackRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBGermanyDlBackRecognizerResult.html">MBGermanyDlBackRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBGermanyIdBackRecognizer.html">MBGermanyIdBackRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -471,6 +477,18 @@
                 <a class="nav-group-task-link" href="../Classes/MBMalaysiaDlFrontRecognizerResult.html">MBMalaysiaDlFrontRecognizerResult</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMalaysiaMyTenteraFrontRecognizer.html">MBMalaysiaMyTenteraFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMalaysiaMyTenteraFrontRecognizerResult.html">MBMalaysiaMyTenteraFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMexicoVoterIdFrontRecognizer.html">MBMexicoVoterIdFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBMexicoVoterIdFrontRecognizerResult.html">MBMexicoVoterIdFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
               </li>
               <li class="nav-group-task">
@@ -526,12 +544,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMyKadFrontRecognizerResult.html">MBMyKadFrontRecognizerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMyTenteraRecognizer.html">MBMyTenteraRecognizer</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBMyTenteraRecognizerResult.html">MBMyTenteraRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBNewZealandDlFrontRecognizer.html">MBNewZealandDlFrontRecognizer</a>
@@ -1326,14 +1338,15 @@
                 <div class="language">
                   <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBSwitzerlandIdFrontRecognizer</span>
-    <span class="p">:</span> <span class="nc"><a href="../Classes/MBLegacyRecognizer.html">MBLegacyRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
-                          <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="../Classes/MBRecognizer.html">MBRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="../Protocols/MBGlareDetection.html">MBGlareDetection</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBFaceImageDpi.html">MBFaceImageDpi</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span>
+                    <span class="n"><a href="../Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Class for configuring Swiss ID Front Recognizer.</p>
-
-<p>Swiss ID Front recognizer is used for scanning front side of Swiss ID.</p>
+            <p>Recognizer which can scan front side of Switzerland ID.</p>
 
           </div>
         </section>
@@ -1387,7 +1400,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Swiss ID Front recognizer result</p>
+                        <p>Result of scanning SwitzerlandIdFrontRecognizer</p>
 
                       </div>
                       <div class="declaration">
@@ -1420,7 +1433,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines if owner&rsquo;s first name should be extracted from Swiss ID</p>
+                        <p>Defines if given name of Switzerland ID owner should be extracted.</p>
 
 <p>Default: YES</p>
 
@@ -1454,7 +1467,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines if owner&rsquo;s last name should be extracted from Swiss ID</p>
+                        <p>Defines if surname of Switzerland ID owner should be extracted.</p>
 
 <p>Default: YES</p>
 
@@ -1483,7 +1496,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-11-19)</p>
+      <p>&copy; 2018 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2018-12-20)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

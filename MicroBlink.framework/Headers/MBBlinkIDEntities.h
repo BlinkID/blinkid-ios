@@ -26,6 +26,9 @@
 #import "MBAustriaDlFrontRecognizer.h"
 #import "MBAustriaDlFrontRecognizerResult.h"
 
+#import "MBBruneiIdFrontRecognizer.h"
+#import "MBBruneiIdFrontRecognizerResult.h"
+
 // Colombia
 #import "MBColombiaIdBackRecognizer.h"
 #import "MBColombiaIdBackRecognizerResult.h"
@@ -47,6 +50,10 @@
 #import "MBCyprusIdFrontRecognizerResult.h"
 #import "MBCyprusIdBackRecognizer.h"
 #import "MBCyprusIdBackRecognizerResult.h"
+#import "MBCyprusOldIdFrontRecognizer.h"
+#import "MBCyprusOldIdFrontRecognizerResult.h"
+#import "MBCyprusOldIdBackRecognizer.h"
+#import "MBCyprusOldIdBackRecognizerResult.h"
 
 // Czechia
 #import "MBCzechiaIdBackRecognizer.h"
@@ -113,16 +120,20 @@
 #import "MBJordanCombinedRecognizerResult.h"
 
 // Malaysia
-#import "MBMyKadBackRecognizer.h"
-#import "MBMyKadBackRecognizerResult.h"
-#import "MBMyKadFrontRecognizer.h"
-#import "MBMyKadFrontRecognizerResult.h"
-#import "MBIkadRecognizer.h"
-#import "MBIkadRecognizerResult.h"
+#import "MBMalaysiaMyKadBackRecognizer.h"
+#import "MBMalaysiaMyKadBackRecognizerResult.h"
+#import "MBMalaysiaMyKadFrontRecognizer.h"
+#import "MBMalaysiaMyKadFrontRecognizerResult.h"
+#import "MBMalaysiaIkadFrontRecognizer.h"
+#import "MBMalaysiaIkadFrontRecognizerResult.h"
 #import "MBMalaysiaMyTenteraFrontRecognizer.h"
 #import "MBMalaysiaMyTenteraFrontRecognizerResult.h"
 #import "MBMalaysiaDlFrontRecognizer.h"
 #import "MBMalaysiaDlFrontRecognizerResult.h"
+#import "MBMalaysiaMyPrFrontRecognizer.h"
+#import "MBMalaysiaMyPrFrontRecognizerResult.h"
+#import "MBMalaysiaMyKasFrontRecognizer.h"
+#import "MBMalaysiaMyKasFrontRecognizerResult.h"
 
 // Mexico
 #import "MBMexicoVoterIdFrontRecognizer.h"

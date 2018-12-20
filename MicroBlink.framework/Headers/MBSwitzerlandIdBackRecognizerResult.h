@@ -1,63 +1,61 @@
 //
-//  MBSwitzerlandIdBackRecognizerResult.h
-//  MicroBlinkDev
+// MBSwitzerlandIdBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 17/12/2018
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Swiss ID
- */
+* Recognizer which can scan back side of Switzerland ID.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwitzerlandIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBSwitzerlandIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The address of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfOrigin;
+* The issuing authority of Switzerland ID.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The address of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *height;
+* The date of expiry of Switzerland ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The issuing authority of Swiss ID.
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The date of issue of Switzerland ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The document date of issue of the Swiss ID in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfIssue;
+* The height of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) NSString *height;
 
 /**
- * The document date of issue of the Swiss ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * The document date of issue of the Swiss ID in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfExpiry;
+* The place of origin of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfOrigin;
 
 /**
- * The document date of issue of the Swiss ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *nonMrzDateOfExpiry;
-
-/**
- * The address of the Swiss ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nonMrzSex;
+* The sex of Switzerland ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 @end
 
