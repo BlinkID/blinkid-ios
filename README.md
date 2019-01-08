@@ -665,7 +665,7 @@ The [`MBDetectorRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDete
 
 #### <a name="documentFaceBlinkId"></a> Document Face
 
-The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCzechiaIDFrontRecognizer.html) is recognizer specialised scanning Document Face.
+The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is recognizer specialised scanning Document Face.
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html), which has UI best suited for one side document scanning.
 
