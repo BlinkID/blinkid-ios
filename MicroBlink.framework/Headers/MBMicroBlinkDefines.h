@@ -10,6 +10,7 @@
 
 #import "PPMicroBlinkDefines.h"
 #import "MBMicroBlinkInitialization.h"
+#import "AvailabilityMacros.h"
 
 #if defined(__has_attribute) && __has_attribute(objc_subclassing_restricted)
 # define MB_FINAL __attribute__((objc_subclassing_restricted))
@@ -18,5 +19,7 @@
 #endif
 
 #define MB_CLASS_AVAILABLE_IOS PP_CLASS_AVAILABLE_IOS
+#define MB_CLASS_DEPRECATED_IOS PP_CLASS_DEPRECATED_IOS
+#define MB_PROPERTY_DEPRECATED DEPRECATED_ATTRIBUTE
 
 #endif /* MBMicroblinkDefines_h */

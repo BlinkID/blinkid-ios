@@ -14,19 +14,19 @@
 		</data>
 		<key>Headers/MBAustraliaDlBackRecognizer.h</key>
 		<data>
-		LsImKfvXc/w8nmHuV+6/mGgGx9g=
+		4CJN7eK9I1CdiyhCOmNa61mwjpo=
 		</data>
 		<key>Headers/MBAustraliaDlBackRecognizerResult.h</key>
 		<data>
-		gFg6Uw9i8htX5wOAza+hSmvED3o=
+		LMhpQVdQlqWalhtYlexhfViuFjQ=
 		</data>
 		<key>Headers/MBAustraliaDlFrontRecognizer.h</key>
 		<data>
-		yTS2uVlWbhoKslpxNsHEtwcK+9A=
+		uc1/vi4xiU8/fcfSTD52KOP0FwU=
 		</data>
 		<key>Headers/MBAustraliaDlFrontRecognizerResult.h</key>
 		<data>
-		kSFaehdR8VgOW0mKv5X0rs/tgCw=
+		1BE+M97DpDnkqth2wuiPFrBWgpA=
 		</data>
 		<key>Headers/MBAustriaCombinedRecognizer.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/MBAustriaIdBackRecognizerResult.h</key>
 		<data>
-		rApKXeIzrB6vA9gqXUgCI5QfesI=
+		pRtJepBIwKVf3aELvq9zC9bX5hQ=
 		</data>
 		<key>Headers/MBAustriaIdFrontRecognizer.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/MBAustriaPassportRecognizerResult.h</key>
 		<data>
-		cHCL9WPvCN1gzmGQfFbLoos2UNM=
+		MPW5dq9JInHGNM+49fvwcQO/FcE=
 		</data>
 		<key>Headers/MBBarcodeEntities.h</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Headers/MBBaseOverlaySettings.h</key>
 		<data>
-		WdytmHWrdISiASbJrQVV30k3imM=
+		jA8kzC5IGrSFg8q2Zxl7c1HLpcY=
 		</data>
 		<key>Headers/MBBaseOverlayViewController.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<data>
-		JBbv6i8CLABE480A8u2VtXkgwec=
+		AabSvSmHT2icpy4moOIhpDLcuMo=
 		</data>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
 		<data>
@@ -140,6 +140,14 @@
 		<data>
 		0sXICXO1K1S4MxBYpYBdJ95jNNI=
 		</data>
+		<key>Headers/MBBruneiIdBackRecognizer.h</key>
+		<data>
+		WN5dqr7fQ1go/JdqQctWqPmp7Zs=
+		</data>
+		<key>Headers/MBBruneiIdBackRecognizerResult.h</key>
+		<data>
+		2DyPqcFVzuLLJgduVRRsZZJg6LI=
+		</data>
 		<key>Headers/MBBruneiIdFrontRecognizer.h</key>
 		<data>
 		4QLbfz+FaN55FtY2suG/nORejfM=
@@ -147,6 +155,22 @@
 		<key>Headers/MBBruneiIdFrontRecognizerResult.h</key>
 		<data>
 		jZskcsWz2BkbB8V8dIIc2XnFEAA=
+		</data>
+		<key>Headers/MBBruneiResidencePermitBackRecognizer.h</key>
+		<data>
+		O75ljVa6ZAG51vebLH5z9gzJXKE=
+		</data>
+		<key>Headers/MBBruneiResidencePermitBackRecognizerResult.h</key>
+		<data>
+		qjuXJaPi972F2AQNXNxd2CiU1Fc=
+		</data>
+		<key>Headers/MBBruneiResidencePermitFrontRecognizer.h</key>
+		<data>
+		YZMuC3AsC1tLSwKdhJn7VVxnhoo=
+		</data>
+		<key>Headers/MBBruneiResidencePermitFrontRecognizerResult.h</key>
+		<data>
+		RmJfjnZKPZ62sGdfeosiGZcsPLs=
 		</data>
 		<key>Headers/MBCameraSettings.h</key>
 		<data>
@@ -166,7 +190,7 @@
 		</data>
 		<key>Headers/MBColombiaIdBackRecognizerResult.h</key>
 		<data>
-		Dn1KfDolMVCKqap4XLzCXvqTaTU=
+		N0U8X5u/je2AtxHOsReA4AVKTUE=
 		</data>
 		<key>Headers/MBColombiaIdFrontRecognizer.h</key>
 		<data>
@@ -190,11 +214,11 @@
 		</data>
 		<key>Headers/MBCroatiaCombinedRecognizer.h</key>
 		<data>
-		D5E6qEufhNsZdvFuqvjggGa6s/o=
+		bcPMY1LvcdebV5bJdBf7mCVS6eM=
 		</data>
 		<key>Headers/MBCroatiaCombinedRecognizerResult.h</key>
 		<data>
-		SATTqJwxg7SIh8U/l29Iaxqfdkw=
+		XjoT62UlBQuwIBYzgxIX10g+kFk=
 		</data>
 		<key>Headers/MBCroatiaIdBackRecognizer.h</key>
 		<data>
@@ -258,19 +282,19 @@
 		</data>
 		<key>Headers/MBCzechiaIdBackRecognizer.h</key>
 		<data>
-		RugYUeHgU0bhsJ28aSh3BTqEUhM=
+		iDc0Iv7/BcCRyuQn2dGhFRuAlWo=
 		</data>
 		<key>Headers/MBCzechiaIdBackRecognizerResult.h</key>
 		<data>
-		91UFucnhXAPSmbFfpPrQOXCAgxk=
+		aRm0Gcz0mLXeEif+v4UMqFYx1d8=
 		</data>
 		<key>Headers/MBCzechiaIdFrontRecognizer.h</key>
 		<data>
-		Evn7hobJY/3wf13GvqMCfy/VpxU=
+		7/GrsVBYE+LXiK3JWvgui2FNq0I=
 		</data>
 		<key>Headers/MBCzechiaIdFrontRecognizerResult.h</key>
 		<data>
-		TYnHcVo3kWIcP+aEFP5U2QnlDd0=
+		9MaaL6xJkchWD6KuJsBVjUAjYg4=
 		</data>
 		<key>Headers/MBDPIBasedDewarpPolicy.h</key>
 		<data>
@@ -596,13 +620,21 @@
 		<data>
 		bTGkMRynL4/MGYd1XIYIHQVB/go=
 		</data>
+		<key>Headers/MBGermanyDlFrontRecognizer.h</key>
+		<data>
+		+E6O2nMgtB+G8d1bPn2SYZlCWW0=
+		</data>
+		<key>Headers/MBGermanyDlFrontRecognizerResult.h</key>
+		<data>
+		LcOQ3KSOlW2DrWi37mpgSJ4NwPo=
+		</data>
 		<key>Headers/MBGermanyIdBackRecognizer.h</key>
 		<data>
-		gPRuBnQR0Gr4MV3wruSxCI+bpFc=
+		b45ky+U+l+FJw8U7umLt6yhK4Kw=
 		</data>
 		<key>Headers/MBGermanyIdBackRecognizerResult.h</key>
 		<data>
-		UzSjYxvoVlawlrP69iX+ID9uvUg=
+		dICN1teUAVZUzC/EHNWpQfEEx+0=
 		</data>
 		<key>Headers/MBGermanyIdFrontRecognizer.h</key>
 		<data>
@@ -612,21 +644,21 @@
 		<data>
 		K+q/EOKsCG0ja6m8ktEGw3m06pk=
 		</data>
-		<key>Headers/MBGermanyOldIdRecognizer.h</key>
+		<key>Headers/MBGermanyIdOldRecognizer.h</key>
 		<data>
-		Kx1zmo90SZ1CDwyFxdd7LR0OlS4=
+		nUKmeApHQtsbW3a0m5EyubzC0X4=
 		</data>
-		<key>Headers/MBGermanyOldIdRecognizerResult.h</key>
+		<key>Headers/MBGermanyIdOldRecognizerResult.h</key>
 		<data>
-		V6Z/OrQsl232WlzbDAiKYWv62NM=
+		5DXcOX8c2WDONK0GBTqJqXrW/wQ=
 		</data>
 		<key>Headers/MBGermanyPassportRecognizer.h</key>
 		<data>
-		l+ibCP2lstzG1P4vyWuiNlfbl2k=
+		7BBBPJNr8Dntfxgy5beXZMf76dk=
 		</data>
 		<key>Headers/MBGermanyPassportRecognizerResult.h</key>
 		<data>
-		8KMQPUdMsfSRUiZEnP5PN1KsbMg=
+		7csboRg9ngLYtsiNiAwxhQ69VHM=
 		</data>
 		<key>Headers/MBGlareDetection.h</key>
 		<data>
@@ -650,7 +682,7 @@
 		</data>
 		<key>Headers/MBHongKongIdFrontRecognizerResult.h</key>
 		<data>
-		xIbicFAdtNwRpUO6XOUjYZjTEvM=
+		FV2+gaXPqmwXCrXwV4ak1OcBiKw=
 		</data>
 		<key>Headers/MBIbanParser.h</key>
 		<data>
@@ -686,7 +718,7 @@
 		</data>
 		<key>Headers/MBIndonesiaIdFrontRecognizerResult.h</key>
 		<data>
-		Zlos+PNk8cu/8CcqCEezYHZig/s=
+		e88wzPVxM2tLsIqvaH39PMQbDtw=
 		</data>
 		<key>Headers/MBIrelandDlFrontRecognizer.h</key>
 		<data>
@@ -694,7 +726,7 @@
 		</data>
 		<key>Headers/MBIrelandDlFrontRecognizerResult.h</key>
 		<data>
-		9ROpQkYetnKul2c3APtMp625M0o=
+		1E58AAhilLWy4JcoPzaxPOsi9ic=
 		</data>
 		<key>Headers/MBItalyDlFrontRecognizer.h</key>
 		<data>
@@ -778,15 +810,15 @@
 		</data>
 		<key>Headers/MBMalaysiaIkadFrontRecognizerResult.h</key>
 		<data>
-		vnaHaaVRy2JqX7AqLfFrBz27sgU=
+		MrDYK5faqMebCZp+r1X08Sw9dRE=
 		</data>
 		<key>Headers/MBMalaysiaMyKadBackRecognizer.h</key>
 		<data>
-		HozOZsBy5pBY8Fi4mRGPsnUlpO0=
+		M+CxtBVKxWzeWLYOEhmOpoKPDkg=
 		</data>
 		<key>Headers/MBMalaysiaMyKadBackRecognizerResult.h</key>
 		<data>
-		TpR2IFA0ka8J+rMlysk0lCCjc18=
+		haUnRijxdCt/jg06OVNW28eTR6s=
 		</data>
 		<key>Headers/MBMalaysiaMyKadFrontRecognizer.h</key>
 		<data>
@@ -826,11 +858,11 @@
 		</data>
 		<key>Headers/MBMexicoVoterIdFrontRecognizerResult.h</key>
 		<data>
-		NGuKyQDL5FneUYpDltkP6uRcgw4=
+		9cpOEO80NsDNxSW6K0jjctIAh1s=
 		</data>
 		<key>Headers/MBMicroBlinkDefines.h</key>
 		<data>
-		O/HBCk52leRQ1YV8XDCUpkN1NFw=
+		OWHpHD6ny0mcPvOHuL2Z71zFPUA=
 		</data>
 		<key>Headers/MBMicroBlinkInitialization.h</key>
 		<data>
@@ -854,7 +886,7 @@
 		</data>
 		<key>Headers/MBMoroccoIdBackRecognizerResult.h</key>
 		<data>
-		hPBdP9LxhiCq3TX3JJPkTM8AUF8=
+		4zteMLtVZsqqj23FcoQKzFcoJYI=
 		</data>
 		<key>Headers/MBMoroccoIdFrontRecognizer.h</key>
 		<data>
@@ -866,11 +898,11 @@
 		</data>
 		<key>Headers/MBMrtdCombinedRecognizer.h</key>
 		<data>
-		ltWfOpWwiXxo6kh6MPUFGEDxPb0=
+		5wJSA58qmUMUXKCkaOG5pR8m7ms=
 		</data>
 		<key>Headers/MBMrtdCombinedRecognizerResult.h</key>
 		<data>
-		km1PhLzWlwNCkIOg9mk52RzTKVQ=
+		6W5gzEI1MfqCUaTy5svz2spmNiQ=
 		</data>
 		<key>Headers/MBMrtdDetector.h</key>
 		<data>
@@ -918,7 +950,7 @@
 		</data>
 		<key>Headers/MBNewZealandDlFrontRecognizerResult.h</key>
 		<data>
-		cEpndK9Ijjy7xWEchnOTfACpwqg=
+		cWrQ0mba0ZQj8OTAuPlTOa6JD2g=
 		</data>
 		<key>Headers/MBNoUpScalingDewarpPolicy.h</key>
 		<data>
@@ -990,7 +1022,7 @@
 		</data>
 		<key>Headers/MBPaymentCardCombinedRecognizer.h</key>
 		<data>
-		1wz7gHPembHCETXffQK9eGSsqZc=
+		h9vg6Ueo+OI3an6VJ8iUnaouLX4=
 		</data>
 		<key>Headers/MBPaymentCardCombinedRecognizerResult.h</key>
 		<data>
@@ -998,7 +1030,7 @@
 		</data>
 		<key>Headers/MBPaymentCardFrontRecognizer.h</key>
 		<data>
-		yZz15nCPUPOvhEgAvh6n5EcaFDA=
+		5zOV9qarJeMzx3EEp46JexJpTtw=
 		</data>
 		<key>Headers/MBPaymentCardFrontRecognizerResult.h</key>
 		<data>
@@ -1038,7 +1070,7 @@
 		</data>
 		<key>Headers/MBPolandIdFrontRecognizerResult.h</key>
 		<data>
-		C9x/S6NF+903XG3CMjj1jxTtg+A=
+		9P0ZeUq3wvEVteXjOOI8wXQZaek=
 		</data>
 		<key>Headers/MBProcessor.h</key>
 		<data>
@@ -1134,7 +1166,7 @@
 		</data>
 		<key>Headers/MBRomaniaIdFrontRecognizerResult.h</key>
 		<data>
-		wDJ32tYEBmPIEuC7AS2BNuqGX7A=
+		yx3dSBpkWZqNESxFG6R81aP+nRM=
 		</data>
 		<key>Headers/MBScanElement.h</key>
 		<data>
@@ -1150,27 +1182,27 @@
 		</data>
 		<key>Headers/MBSerbiaCombinedRecognizer.h</key>
 		<data>
-		b1nUYtOmtPwxHwFc2OYPsYLikl8=
+		dxYeWAjNAdLTtaqk6wgfQPt6uQA=
 		</data>
 		<key>Headers/MBSerbiaCombinedRecognizerResult.h</key>
 		<data>
-		7DKLYsNd70Ku3/I2KqxVpoKUKvg=
+		CtSkMMHec62P4DSNVyCYqR6rk70=
 		</data>
 		<key>Headers/MBSerbiaIdBackRecognizer.h</key>
 		<data>
-		vK2tRNvAZ6fTcJiNrdJwd5sd3Kg=
+		P1hBk9vzNlq71OULo31vxxq2/44=
 		</data>
 		<key>Headers/MBSerbiaIdBackRecognizerResult.h</key>
 		<data>
-		RXibHS3A58KdWIa5x6IOrcaVeH8=
+		Mdl0GpNlU5raYdBJP7Ku2vROmJc=
 		</data>
 		<key>Headers/MBSerbiaIdFrontRecognizer.h</key>
 		<data>
-		MdjsQn4Qv1ApXo15PYCMXG7SI+8=
+		Fgr/Hp9TQ+I1S4k1zzbqnAsRxwU=
 		</data>
 		<key>Headers/MBSerbiaIdFrontRecognizerResult.h</key>
 		<data>
-		LQCvimgnBUO3DcfGIUbZfuNvf1A=
+		6dr39vsepxD+wLe+hjhz6i6EvyI=
 		</data>
 		<key>Headers/MBSignatureImage.h</key>
 		<data>
@@ -1222,7 +1254,7 @@
 		</data>
 		<key>Headers/MBSingaporeIdBackRecognizerResult.h</key>
 		<data>
-		cctkdsPnCorOK7/HVcRodF/Xfi4=
+		8h6SILotFw7Ny90NkmeqY1zZMnI=
 		</data>
 		<key>Headers/MBSingaporeIdFrontRecognizer.h</key>
 		<data>
@@ -1242,19 +1274,19 @@
 		</data>
 		<key>Headers/MBSlovakiaIdBackRecognizer.h</key>
 		<data>
-		NcvcoaF+9uqT5lIVHXH/QNhRC5I=
+		mJpeseKgYoHKcDARkSB6BkvzQGk=
 		</data>
 		<key>Headers/MBSlovakiaIdBackRecognizerResult.h</key>
 		<data>
-		zJUPIO7hVSyp9wC/+CApH0Ol6Y4=
+		9A2DGHzCQ0b2VPnPYkH/8zASO0U=
 		</data>
 		<key>Headers/MBSlovakiaIdFrontRecognizer.h</key>
 		<data>
-		DP6GjBY/kYcJkn6KvmuX52NKf5s=
+		ge4RvEA2Rl3Q9TnO59aFiUwiJLQ=
 		</data>
 		<key>Headers/MBSlovakiaIdFrontRecognizerResult.h</key>
 		<data>
-		Aihw42PqPiaJplFKM/mEQVPj8To=
+		MzoAzTDASkB3rieVI+hzCc+XtRs=
 		</data>
 		<key>Headers/MBSloveniaCombinedRecognizer.h</key>
 		<data>
@@ -1310,7 +1342,7 @@
 		</data>
 		<key>Headers/MBSwedenDlFrontRecognizerResult.h</key>
 		<data>
-		52hBvGyN+1DlWtszXIQkCesn8KM=
+		GxpdGQiutWUK1CevATD7uHnis3c=
 		</data>
 		<key>Headers/MBSwitzerlandDlFrontRecognizer.h</key>
 		<data>
@@ -1326,7 +1358,7 @@
 		</data>
 		<key>Headers/MBSwitzerlandIdBackRecognizerResult.h</key>
 		<data>
-		emqbsevS2pN01I8EhG2AK3cn/nM=
+		caSOMy9SQmWtNUm1yL8sD1zWgrc=
 		</data>
 		<key>Headers/MBSwitzerlandIdFrontRecognizer.h</key>
 		<data>
@@ -1342,7 +1374,7 @@
 		</data>
 		<key>Headers/MBSwitzerlandPassportRecognizerResult.h</key>
 		<data>
-		RNPvXlfm35C+BHsGkaTqSZnKyRQ=
+		PzWHP1l60oJmK4XArRG8AmPREII=
 		</data>
 		<key>Headers/MBTapToFocusSubview.h</key>
 		<data>
@@ -1446,7 +1478,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		n+V1Exor5mQcnbHRWlEkhBrv/vg=
+		I+D35hyGSuO8RvtWni+0oZh7he4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1481,44 +1513,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LsImKfvXc/w8nmHuV+6/mGgGx9g=
+			4CJN7eK9I1CdiyhCOmNa61mwjpo=
 			</data>
 			<key>hash2</key>
 			<data>
-			IRKmWtcvDWBWNRV3sR9xdwZJmEkPts17KwjVvk5Ji9Q=
+			9yDxKzkTuwfm4NRwXxBgXBxbdlk2yClQ1n5+EDNu+Hc=
 			</data>
 		</dict>
 		<key>Headers/MBAustraliaDlBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gFg6Uw9i8htX5wOAza+hSmvED3o=
+			LMhpQVdQlqWalhtYlexhfViuFjQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			8IqgeDlPkvwBMYC07lQewpY4fsecU12cCf1SwVH5h5A=
+			PNlAnYzhaUQuBcmaa52CraegRx2bEyui0VXaD/1MPyQ=
 			</data>
 		</dict>
 		<key>Headers/MBAustraliaDlFrontRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yTS2uVlWbhoKslpxNsHEtwcK+9A=
+			uc1/vi4xiU8/fcfSTD52KOP0FwU=
 			</data>
 			<key>hash2</key>
 			<data>
-			qibUhBknT0Fv3XKhJOL5dOJe/1NG7zB4Mgt42gKFokA=
+			QzJu6gkt96jatZqMJtI2pLnqURGmFKRQHwE2n6VJmtc=
 			</data>
 		</dict>
 		<key>Headers/MBAustraliaDlFrontRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kSFaehdR8VgOW0mKv5X0rs/tgCw=
+			1BE+M97DpDnkqth2wuiPFrBWgpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iEJ10acnNFEAuG0Wa1uNs7eunH58M47sQIqiLFWbwnE=
+			qbVKyj2mpb68cCha2vo3pIQKw4BNlmWXz4oc/lx6EnQ=
 			</data>
 		</dict>
 		<key>Headers/MBAustriaCombinedRecognizer.h</key>
@@ -1580,11 +1612,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rApKXeIzrB6vA9gqXUgCI5QfesI=
+			pRtJepBIwKVf3aELvq9zC9bX5hQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			En8tJNJeRdJCG1a0Vjo3JGcze6tbh8w7vjXyWTKS/IY=
+			ZWP6t4uvR86J/iHMQCsOQ2N2J9m+DuowlWjjSK6oTIE=
 			</data>
 		</dict>
 		<key>Headers/MBAustriaIdFrontRecognizer.h</key>
@@ -1624,11 +1656,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cHCL9WPvCN1gzmGQfFbLoos2UNM=
+			MPW5dq9JInHGNM+49fvwcQO/FcE=
 			</data>
 			<key>hash2</key>
 			<data>
-			14TFjhydG+02QZKkNg/Y9J1wFnNmoBdW87o9jhySKMc=
+			i/5osPhP0fl6GW/0hOzso73swrvQuUU/kUZioErTvmE=
 			</data>
 		</dict>
 		<key>Headers/MBBarcodeEntities.h</key>
@@ -1745,11 +1777,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WdytmHWrdISiASbJrQVV30k3imM=
+			jA8kzC5IGrSFg8q2Zxl7c1HLpcY=
 			</data>
 			<key>hash2</key>
 			<data>
-			2EnLHr1C1krv7eHq9g/xAqSt6qaMOFAA9SuQNWpbZus=
+			cEMNZP89YEYrQa0I+IK3Fk80VcIz2UIHuXV8WsvmJBo=
 			</data>
 		</dict>
 		<key>Headers/MBBaseOverlayViewController.h</key>
@@ -1767,11 +1799,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JBbv6i8CLABE480A8u2VtXkgwec=
+			AabSvSmHT2icpy4moOIhpDLcuMo=
 			</data>
 			<key>hash2</key>
 			<data>
-			qBoMmYWxTUh50xr3KyEN88FiJxxzIvAnZ4ZuZuLmpk8=
+			NgCMN0j7Snwuzik3K1P6REgxAcHAj3tmZ3ZVlQPh9aA=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
@@ -1829,6 +1861,28 @@
 			csLthSB0CsJBszvTWC2zkpF7h5SjXN1AHjk2mRAnmW0=
 			</data>
 		</dict>
+		<key>Headers/MBBruneiIdBackRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WN5dqr7fQ1go/JdqQctWqPmp7Zs=
+			</data>
+			<key>hash2</key>
+			<data>
+			F/U4ALVE5bNztXXSeZEWRbbEW4YtG2rvqWrxjTMs9Lk=
+			</data>
+		</dict>
+		<key>Headers/MBBruneiIdBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2DyPqcFVzuLLJgduVRRsZZJg6LI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Zn325F9jdzdNJxg++J1AW51nyNsK+9A2t2Hig5hKoTU=
+			</data>
+		</dict>
 		<key>Headers/MBBruneiIdFrontRecognizer.h</key>
 		<dict>
 			<key>hash</key>
@@ -1849,6 +1903,50 @@
 			<key>hash2</key>
 			<data>
 			GaMYlGSvyqjf7CIr5wdrLNR7ytShFg2idV5ebK/Uej4=
+			</data>
+		</dict>
+		<key>Headers/MBBruneiResidencePermitBackRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			O75ljVa6ZAG51vebLH5z9gzJXKE=
+			</data>
+			<key>hash2</key>
+			<data>
+			DYCzGXFd15C/d5LA51rPoK3Dk2/+7yZ81tr9xhYqq54=
+			</data>
+		</dict>
+		<key>Headers/MBBruneiResidencePermitBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qjuXJaPi972F2AQNXNxd2CiU1Fc=
+			</data>
+			<key>hash2</key>
+			<data>
+			yjjF/70mWf2rPvFPwLRf7RAfe6EbfISOmTfDC3o5QFM=
+			</data>
+		</dict>
+		<key>Headers/MBBruneiResidencePermitFrontRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YZMuC3AsC1tLSwKdhJn7VVxnhoo=
+			</data>
+			<key>hash2</key>
+			<data>
+			CLp9wqliLRcq6+ZFFzzznSXHlJbM3zIsOeYXMd5cHxM=
+			</data>
+		</dict>
+		<key>Headers/MBBruneiResidencePermitFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RmJfjnZKPZ62sGdfeosiGZcsPLs=
+			</data>
+			<key>hash2</key>
+			<data>
+			NDnYe3cPw6yp9e/nRf/sIxDqg1r8NMJXjbKZaK2bVcs=
 			</data>
 		</dict>
 		<key>Headers/MBCameraSettings.h</key>
@@ -1899,11 +1997,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Dn1KfDolMVCKqap4XLzCXvqTaTU=
+			N0U8X5u/je2AtxHOsReA4AVKTUE=
 			</data>
 			<key>hash2</key>
 			<data>
-			26lmYbGz+5wTjF18pdlMU8x8M9AIPIvlyo+eiU6e6mE=
+			TAuPQimoVO59qiP58okTy4FZBGuiv3eTwNFzR2OyHvY=
 			</data>
 		</dict>
 		<key>Headers/MBColombiaIdFrontRecognizer.h</key>
@@ -1965,22 +2063,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D5E6qEufhNsZdvFuqvjggGa6s/o=
+			bcPMY1LvcdebV5bJdBf7mCVS6eM=
 			</data>
 			<key>hash2</key>
 			<data>
-			uqtTlrzqFFsCVSgYJxwKdMv7ZpuFDGVNxBqcd6rvoUc=
+			a0Q5mc2tK703/hyapjXJn5xA0IXX91yI8DSiuqbM+4I=
 			</data>
 		</dict>
 		<key>Headers/MBCroatiaCombinedRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SATTqJwxg7SIh8U/l29Iaxqfdkw=
+			XjoT62UlBQuwIBYzgxIX10g+kFk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fugp0mOjtcH3T7slTFONAt7WMoZ8vQ78JYQwWrHk4ok=
+			KwQ5C+MN7i28w9o6RwANse8kAjvZN3HONBeZTYYtojg=
 			</data>
 		</dict>
 		<key>Headers/MBCroatiaIdBackRecognizer.h</key>
@@ -2152,44 +2250,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RugYUeHgU0bhsJ28aSh3BTqEUhM=
+			iDc0Iv7/BcCRyuQn2dGhFRuAlWo=
 			</data>
 			<key>hash2</key>
 			<data>
-			jEl3OuvL4/hUKx79G0f/2nYELjZ4D9J1wQdms9aQ7MA=
+			zDpYlcsldwL+2Uf/oV0B7wPkFe5UobKFbuIzUYKX5B4=
 			</data>
 		</dict>
 		<key>Headers/MBCzechiaIdBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			91UFucnhXAPSmbFfpPrQOXCAgxk=
+			aRm0Gcz0mLXeEif+v4UMqFYx1d8=
 			</data>
 			<key>hash2</key>
 			<data>
-			caOdFJEwE6skUYIaZBHyf+hx3R5qaj7Wc+bv5LAPI8k=
+			8xhytqLQd7jEgDT/n0/EAUhGHEsrU8FacpBoQQKWUwE=
 			</data>
 		</dict>
 		<key>Headers/MBCzechiaIdFrontRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Evn7hobJY/3wf13GvqMCfy/VpxU=
+			7/GrsVBYE+LXiK3JWvgui2FNq0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			OdxW+NBn8hPhP/dsygDOynavDR2PMbq07F7mgOBtEkM=
+			oXYycj4UKcrMX8OvMMzjin8gvYZGWYM0ZWEumioUPMM=
 			</data>
 		</dict>
 		<key>Headers/MBCzechiaIdFrontRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TYnHcVo3kWIcP+aEFP5U2QnlDd0=
+			9MaaL6xJkchWD6KuJsBVjUAjYg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			csE6ZOs60SJjKPImLY+NZF7ASv+1URASo7sDAU15QHI=
+			r1NhiZKTffp6m8giU69qmZJP7H5MQV8egJjogUD0Kxc=
 			</data>
 		</dict>
 		<key>Headers/MBDPIBasedDewarpPolicy.h</key>
@@ -3083,26 +3181,48 @@
 			AidqCEQswv4kbCkGZkUwAIGIwfJ0kA3WfTZtP3aqo3o=
 			</data>
 		</dict>
+		<key>Headers/MBGermanyDlFrontRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+E6O2nMgtB+G8d1bPn2SYZlCWW0=
+			</data>
+			<key>hash2</key>
+			<data>
+			j5ANOrZQNvzbrXd68DHUe7bWOGFEMBZfAAm79AkTSEM=
+			</data>
+		</dict>
+		<key>Headers/MBGermanyDlFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LcOQ3KSOlW2DrWi37mpgSJ4NwPo=
+			</data>
+			<key>hash2</key>
+			<data>
+			MvgK2YKuukKetgP3cEDQke3dieRLbR/O3XVCLXnpYNg=
+			</data>
+		</dict>
 		<key>Headers/MBGermanyIdBackRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gPRuBnQR0Gr4MV3wruSxCI+bpFc=
+			b45ky+U+l+FJw8U7umLt6yhK4Kw=
 			</data>
 			<key>hash2</key>
 			<data>
-			2xigd2fVCMlC3nh8EbhkFnv3jOrDJFHkzyUWQH9CFyQ=
+			VBzgC+OCqvRaxT2pDW/2zNjulPs+mD7DE0z+xBWceTM=
 			</data>
 		</dict>
 		<key>Headers/MBGermanyIdBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UzSjYxvoVlawlrP69iX+ID9uvUg=
+			dICN1teUAVZUzC/EHNWpQfEEx+0=
 			</data>
 			<key>hash2</key>
 			<data>
-			EuhU9PEv8wxktxlIbtL5b+SVeKIsfsJP1UYwcJhcIkI=
+			9H5iTlrj5W5qaZ671sVBzEoNSgYoVaGWWSj7x/vVvHM=
 			</data>
 		</dict>
 		<key>Headers/MBGermanyIdFrontRecognizer.h</key>
@@ -3127,48 +3247,48 @@
 			xwNj7mHBhYQta5LEp3wKy8hvkZjJ1Ta5kZrB2y3R5UA=
 			</data>
 		</dict>
-		<key>Headers/MBGermanyOldIdRecognizer.h</key>
+		<key>Headers/MBGermanyIdOldRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kx1zmo90SZ1CDwyFxdd7LR0OlS4=
+			nUKmeApHQtsbW3a0m5EyubzC0X4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NOqSqATtwgmJjhjdqgk3wS4oZn56uhaLGbkYAVLilak=
+			R15t67Vz5IAcBihnZ4w/Q0pP5BciXqtCxcYuNANl4TI=
 			</data>
 		</dict>
-		<key>Headers/MBGermanyOldIdRecognizerResult.h</key>
+		<key>Headers/MBGermanyIdOldRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V6Z/OrQsl232WlzbDAiKYWv62NM=
+			5DXcOX8c2WDONK0GBTqJqXrW/wQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			EfGKJIIhZIx2qZiMO31sC3TQS8Mq58UtE3VYclNsWU8=
+			lC4NxDa9F3LjJ5V3idYscP2lWc91hLfZxrMQDVdyEpo=
 			</data>
 		</dict>
 		<key>Headers/MBGermanyPassportRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l+ibCP2lstzG1P4vyWuiNlfbl2k=
+			7BBBPJNr8Dntfxgy5beXZMf76dk=
 			</data>
 			<key>hash2</key>
 			<data>
-			2GWdlQlbXAIfockZ1iVafXqE6sXsp9vwtnBe9KX3lkE=
+			khorZkUtJnqyu9lMxVL/1QHeBzuNAQDO8tCVUlWw2ms=
 			</data>
 		</dict>
 		<key>Headers/MBGermanyPassportRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8KMQPUdMsfSRUiZEnP5PN1KsbMg=
+			7csboRg9ngLYtsiNiAwxhQ69VHM=
 			</data>
 			<key>hash2</key>
 			<data>
-			QMrUCMH+v1K3tDKML0c03WGHHLyTGpmKXFKSB5hyed0=
+			PW5g0DoJ2FOa+OHE6i0aNZW6COK4PRSX99B27VkKIFY=
 			</data>
 		</dict>
 		<key>Headers/MBGlareDetection.h</key>
@@ -3230,11 +3350,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xIbicFAdtNwRpUO6XOUjYZjTEvM=
+			FV2+gaXPqmwXCrXwV4ak1OcBiKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			njGC/taS5udkLJwEPFdChjwiGSSm4Bs3b4YisdnLzJ4=
+			H3A8AqlQyWf2ktyOjbPylwwhLlb0O5ZTKDBqw+nWyZE=
 			</data>
 		</dict>
 		<key>Headers/MBIbanParser.h</key>
@@ -3329,11 +3449,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Zlos+PNk8cu/8CcqCEezYHZig/s=
+			e88wzPVxM2tLsIqvaH39PMQbDtw=
 			</data>
 			<key>hash2</key>
 			<data>
-			TosKGn/chMG24SBfM4YWE7apqGysHXPm0S0yuSH6tQA=
+			QKJKM5Ppa118gQiEBLygRF5Dpe+TG3pkvbhHvieW56M=
 			</data>
 		</dict>
 		<key>Headers/MBIrelandDlFrontRecognizer.h</key>
@@ -3351,11 +3471,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9ROpQkYetnKul2c3APtMp625M0o=
+			1E58AAhilLWy4JcoPzaxPOsi9ic=
 			</data>
 			<key>hash2</key>
 			<data>
-			vqXE4GCWCpNunUSOKy01Kl0Hbt6rWDckP3BPAMLQsyU=
+			2qS7MmV9ZplPjcMUz9YySVaw/1sosvpctKB7Lz4k8rI=
 			</data>
 		</dict>
 		<key>Headers/MBItalyDlFrontRecognizer.h</key>
@@ -3582,33 +3702,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vnaHaaVRy2JqX7AqLfFrBz27sgU=
+			MrDYK5faqMebCZp+r1X08Sw9dRE=
 			</data>
 			<key>hash2</key>
 			<data>
-			+PZJUUspppF83qwTg6EJfIKkIHw5a50VZ7plCSldyI4=
+			SFNUUMus1Qbf05O+HpS3F/Rp4gL2KLTz69tTJ2nSwoE=
 			</data>
 		</dict>
 		<key>Headers/MBMalaysiaMyKadBackRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HozOZsBy5pBY8Fi4mRGPsnUlpO0=
+			M+CxtBVKxWzeWLYOEhmOpoKPDkg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Xao/bBvrogzd21hbB+4dKzGL9ztnNKFgeNCQTHk9R+0=
+			y2XyAYSLB4byJCQaVyau53Xi0ic+gPIVuE5TgG4rvcc=
 			</data>
 		</dict>
 		<key>Headers/MBMalaysiaMyKadBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TpR2IFA0ka8J+rMlysk0lCCjc18=
+			haUnRijxdCt/jg06OVNW28eTR6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gv/vzCI7NHtZtzkByfexikEJhAC3XxEy36z0AR996uU=
+			R5Nss4qxYr5pEfMLkiq3qPDjvHBSyjzSR2OdFJvpSIo=
 			</data>
 		</dict>
 		<key>Headers/MBMalaysiaMyKadFrontRecognizer.h</key>
@@ -3714,22 +3834,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NGuKyQDL5FneUYpDltkP6uRcgw4=
+			9cpOEO80NsDNxSW6K0jjctIAh1s=
 			</data>
 			<key>hash2</key>
 			<data>
-			zZeVQZE3IOzYY+8lqvlA1JoiHGbvOVyuzAnZpnTgeyA=
+			f3SapJoUOtJw0r0l290FosKEXM+jna+lUaHfVcgYkQc=
 			</data>
 		</dict>
 		<key>Headers/MBMicroBlinkDefines.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O/HBCk52leRQ1YV8XDCUpkN1NFw=
+			OWHpHD6ny0mcPvOHuL2Z71zFPUA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3kWNnUVoSBM+NluR0k1s4d6/gyBNn/hcM3r1DBWPwGQ=
+			q2v+fUAF3IN93fDFZ6xAteOFmMJRm9YCL60X5UIa3dQ=
 			</data>
 		</dict>
 		<key>Headers/MBMicroBlinkInitialization.h</key>
@@ -3791,11 +3911,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hPBdP9LxhiCq3TX3JJPkTM8AUF8=
+			4zteMLtVZsqqj23FcoQKzFcoJYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			jbivtBqzLoUhPDL4A2ErMZJ5G1YmdRXuGZsdZUVSZy8=
+			zNIZ9GMvBcBdr6GVi1Pg9j86+vs93biqkIuyw+tLrTM=
 			</data>
 		</dict>
 		<key>Headers/MBMoroccoIdFrontRecognizer.h</key>
@@ -3824,22 +3944,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ltWfOpWwiXxo6kh6MPUFGEDxPb0=
+			5wJSA58qmUMUXKCkaOG5pR8m7ms=
 			</data>
 			<key>hash2</key>
 			<data>
-			V2dOXMNJjd4mU/m3sEMDCeQ2oGYT6W/FFKC1uFBlm0U=
+			4fpwYlLv5AqTUWrLsY/mEbli46oVle2LJhmIJB5mzrA=
 			</data>
 		</dict>
 		<key>Headers/MBMrtdCombinedRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			km1PhLzWlwNCkIOg9mk52RzTKVQ=
+			6W5gzEI1MfqCUaTy5svz2spmNiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			hb/8QKHV90DFZVcMXhd5Wu8Hz5u+bE8n1Ha18rZXCbw=
+			eCHK4bcsaWaarbzGHJ1YiU60RGYOQaLowcKtfSYSKSk=
 			</data>
 		</dict>
 		<key>Headers/MBMrtdDetector.h</key>
@@ -3967,11 +4087,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cEpndK9Ijjy7xWEchnOTfACpwqg=
+			cWrQ0mba0ZQj8OTAuPlTOa6JD2g=
 			</data>
 			<key>hash2</key>
 			<data>
-			QVuxb4v7gZXheqthRCVRTkeo+sKri68ydHR1vwX348o=
+			sOThmq7i02GbZB5BiOShK8NKlu6yVJOI1EHBChLJd/o=
 			</data>
 		</dict>
 		<key>Headers/MBNoUpScalingDewarpPolicy.h</key>
@@ -4165,11 +4285,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1wz7gHPembHCETXffQK9eGSsqZc=
+			h9vg6Ueo+OI3an6VJ8iUnaouLX4=
 			</data>
 			<key>hash2</key>
 			<data>
-			SsCcxrzYVSMxXufXhBUj9/UaQ8WZcmeQu7iqLCFsT5w=
+			vROiuaCyKWtaUBFe2DybK3uym/+G5Hkuz7dtg3ZzMVU=
 			</data>
 		</dict>
 		<key>Headers/MBPaymentCardCombinedRecognizerResult.h</key>
@@ -4187,11 +4307,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yZz15nCPUPOvhEgAvh6n5EcaFDA=
+			5zOV9qarJeMzx3EEp46JexJpTtw=
 			</data>
 			<key>hash2</key>
 			<data>
-			vT7TK6Rrs/WVexpsWsd1/skrlUUQrMRx0m1GEFBZ+bs=
+			AFFK2i+vMcquCZ9f9FdtNRowJs12vzmztmJTiiVr/80=
 			</data>
 		</dict>
 		<key>Headers/MBPaymentCardFrontRecognizerResult.h</key>
@@ -4297,11 +4417,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			C9x/S6NF+903XG3CMjj1jxTtg+A=
+			9P0ZeUq3wvEVteXjOOI8wXQZaek=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z5A3RdZD45+VXj/rIa4sOvN0iDJR2fpyM0+rBX7hcFo=
+			blUk4XFawuXwUrTiGY9V8NbKYJVGaUK6VZLwPAXwxNU=
 			</data>
 		</dict>
 		<key>Headers/MBProcessor.h</key>
@@ -4561,11 +4681,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wDJ32tYEBmPIEuC7AS2BNuqGX7A=
+			yx3dSBpkWZqNESxFG6R81aP+nRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			o6uQ8xt9jmEce7dnI/IiRg06esdoeKDdCRdzsXgoXVo=
+			ytu+u9Xnt+B+AniGr9Yujk1yK0qwJQzkF4K7AJY/6nY=
 			</data>
 		</dict>
 		<key>Headers/MBScanElement.h</key>
@@ -4605,66 +4725,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			b1nUYtOmtPwxHwFc2OYPsYLikl8=
+			dxYeWAjNAdLTtaqk6wgfQPt6uQA=
 			</data>
 			<key>hash2</key>
 			<data>
-			K5pfqMqsKHAT9t1jfpzTtS5VVn57yxKkCtVqlK/L4mQ=
+			Lp8DMNsEAnCzmeIjAljz9K/jilJIt5EVaW5EL9vEOnc=
 			</data>
 		</dict>
 		<key>Headers/MBSerbiaCombinedRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7DKLYsNd70Ku3/I2KqxVpoKUKvg=
+			CtSkMMHec62P4DSNVyCYqR6rk70=
 			</data>
 			<key>hash2</key>
 			<data>
-			STF6C5UvaY61QN7yo9+V1dfM+KRYKnmKIBuExaKMTRA=
+			MfesyKoTa03DNWzofW9F42zghX1tIdtwGwAxmZAuLDg=
 			</data>
 		</dict>
 		<key>Headers/MBSerbiaIdBackRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vK2tRNvAZ6fTcJiNrdJwd5sd3Kg=
+			P1hBk9vzNlq71OULo31vxxq2/44=
 			</data>
 			<key>hash2</key>
 			<data>
-			bS7R6tcoj5avyJzNhwcURCbfhCoYV1TLTRcz3MHGnZ0=
+			KkveHWNWmeq96s6FZPNKBpDXX5kpGRgfuPvPbjSIDK4=
 			</data>
 		</dict>
 		<key>Headers/MBSerbiaIdBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RXibHS3A58KdWIa5x6IOrcaVeH8=
+			Mdl0GpNlU5raYdBJP7Ku2vROmJc=
 			</data>
 			<key>hash2</key>
 			<data>
-			VW+cV/cmZBnzw17LWZS5Sk2xjxtWNOATftxRFzQxiyI=
+			c1Vd9E3O4plgEUEiblZmshsBBq6wni3CEk1nogVtCU0=
 			</data>
 		</dict>
 		<key>Headers/MBSerbiaIdFrontRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MdjsQn4Qv1ApXo15PYCMXG7SI+8=
+			Fgr/Hp9TQ+I1S4k1zzbqnAsRxwU=
 			</data>
 			<key>hash2</key>
 			<data>
-			pCojpSKP50JI3Eu+jb5AyWu0EFIt9er+/gkzrdp3KO8=
+			hsD3zlyE5t5bAOkfruaP4DgAI+rFU3PtF9CwIgnlvyo=
 			</data>
 		</dict>
 		<key>Headers/MBSerbiaIdFrontRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LQCvimgnBUO3DcfGIUbZfuNvf1A=
+			6dr39vsepxD+wLe+hjhz6i6EvyI=
 			</data>
 			<key>hash2</key>
 			<data>
-			PtXwpytiwY2TwadoyVK5bPr3nOkrpz8GBlqS1HXJhY4=
+			evFPbSF9aR5shHVHTLW5YyTm+etI8VETtib7B0mRkMw=
 			</data>
 		</dict>
 		<key>Headers/MBSignatureImage.h</key>
@@ -4803,11 +4923,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cctkdsPnCorOK7/HVcRodF/Xfi4=
+			8h6SILotFw7Ny90NkmeqY1zZMnI=
 			</data>
 			<key>hash2</key>
 			<data>
-			raXyRn+jemZ7oJlQDcDOCK6j7Fw/Jsr+rhYeFCKGs30=
+			2fIjYpthRTfEQ6G4zT2tLx+KvEp/C/6CMa+096ZTqj0=
 			</data>
 		</dict>
 		<key>Headers/MBSingaporeIdFrontRecognizer.h</key>
@@ -4858,44 +4978,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NcvcoaF+9uqT5lIVHXH/QNhRC5I=
+			mJpeseKgYoHKcDARkSB6BkvzQGk=
 			</data>
 			<key>hash2</key>
 			<data>
-			66CtcowdHOzjhlxT8kbJ2L+6EtmmtvvK9efnQICuFKI=
+			JQ6tWieyivfSBspLXiALYT5I5rbPE/gh7Hi+CQzwul4=
 			</data>
 		</dict>
 		<key>Headers/MBSlovakiaIdBackRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zJUPIO7hVSyp9wC/+CApH0Ol6Y4=
+			9A2DGHzCQ0b2VPnPYkH/8zASO0U=
 			</data>
 			<key>hash2</key>
 			<data>
-			R3kUXuHnK3OITrvAQUoilyY0Fiev0peiKkDP2THx1IE=
+			rZvlFzRPAYtkEAbKnkrVxZQouw5mDF4eV7RsEhaESNU=
 			</data>
 		</dict>
 		<key>Headers/MBSlovakiaIdFrontRecognizer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DP6GjBY/kYcJkn6KvmuX52NKf5s=
+			ge4RvEA2Rl3Q9TnO59aFiUwiJLQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			4iN7SNj60Yuvnczu9vXFaxFLb0IwTjnxqUJ4NRvTe80=
+			cuPPVAutdxfDf2wkvDlXDCe1vtDNgubD0lK67oMP6R0=
 			</data>
 		</dict>
 		<key>Headers/MBSlovakiaIdFrontRecognizerResult.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Aihw42PqPiaJplFKM/mEQVPj8To=
+			MzoAzTDASkB3rieVI+hzCc+XtRs=
 			</data>
 			<key>hash2</key>
 			<data>
-			uDudYEYeIYRECyq3efXqLyIdBQ5tpE5Hm2Cvd4fF7HA=
+			qRgT5yME5ZBreJuDAcdPNytDQDsVnUpbyFfs1ifjxys=
 			</data>
 		</dict>
 		<key>Headers/MBSloveniaCombinedRecognizer.h</key>
@@ -5045,11 +5165,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			52hBvGyN+1DlWtszXIQkCesn8KM=
+			GxpdGQiutWUK1CevATD7uHnis3c=
 			</data>
 			<key>hash2</key>
 			<data>
-			B5p6VxuchbJU7iATzNkisNdWfOiK5hVIoalI/mOwa7M=
+			BV1GfL7q2y29kjPKKYQQIcaipVZ0qrhrcKsOQyeMGjs=
 			</data>
 		</dict>
 		<key>Headers/MBSwitzerlandDlFrontRecognizer.h</key>
@@ -5089,11 +5209,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			emqbsevS2pN01I8EhG2AK3cn/nM=
+			caSOMy9SQmWtNUm1yL8sD1zWgrc=
 			</data>
 			<key>hash2</key>
 			<data>
-			xty8GoKwcS05IRhrzLuOo8/tqzW4GC+RQQB2MiywEbE=
+			VhE+u1+xbDzFy5r1kszfuZG7O1mCNF0P1r5ieJskMbw=
 			</data>
 		</dict>
 		<key>Headers/MBSwitzerlandIdFrontRecognizer.h</key>
@@ -5133,11 +5253,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RNPvXlfm35C+BHsGkaTqSZnKyRQ=
+			PzWHP1l60oJmK4XArRG8AmPREII=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y/f1WcxGcd4kvPEDFoqYIXFgGkB//HpXNtDGudCggVc=
+			KgPObE9rWWKYUoV5KEk0M/MRcN7/CrPffIJ81nf/zBo=
 			</data>
 		</dict>
 		<key>Headers/MBTapToFocusSubview.h</key>

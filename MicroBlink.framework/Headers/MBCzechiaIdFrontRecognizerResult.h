@@ -1,80 +1,70 @@
 //
-//  MBCzechiaIdFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBCzechiaIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Cz ID
- */
+* Recognizer which can scan the front side of Czech IDs.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCzechiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBCzechiaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The ID card number of the Czech ID.
- */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+* The date of birth of Czech ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The first name of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The date of expiry of Czech ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The last name of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of issue of Czech ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The date of birth of the Czech ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+* The document number of Czech ID.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The date of birth of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The given names of Czech ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The date of issue of the Czech ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+* The place of birth of Czech ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * The date of issue of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The sex of Czech ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 /**
- * The date of expiry of the Czech ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfExpiry;
+* The surname of Czech ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
-/**
- * The date of expiry of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
-
-/**
- * The sex of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
-
-/**
- * The place of birth of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
 
 @end
 

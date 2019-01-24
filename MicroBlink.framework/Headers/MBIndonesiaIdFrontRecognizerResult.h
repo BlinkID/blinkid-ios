@@ -33,7 +33,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The blood Type of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly) NSString *bloodType;
+@property (nonatomic, readonly) NSString *bloodType MB_PROPERTY_DEPRECATED;
 
 /**
  * The citizenship of the front side of the Indonesia Id owner.
@@ -63,7 +63,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The district of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly) NSString *district;
+@property (nonatomic, readonly) NSString *district MB_PROPERTY_DEPRECATED;
 
 /**
  * The document Number of the front side of the Indonesia Id owner.
@@ -73,7 +73,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The kel Desa of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly) NSString *kelDesa;
+@property (nonatomic, readonly) NSString *kelDesa MB_PROPERTY_DEPRECATED;
 
 /**
  * The marital Status of the front side of the Indonesia Id owner.
@@ -108,12 +108,12 @@ MB_INIT_UNAVAILABLE
 /**
  * The rt of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly) NSString *rt;
+@property (nonatomic, readonly) NSString *rt MB_PROPERTY_DEPRECATED;
 
 /**
  * The rw of the front side of the Indonesia Id owner.
  */
-@property (nonatomic, readonly) NSString *rw;
+@property (nonatomic, readonly) NSString *rw MB_PROPERTY_DEPRECATED;
 
 /**
  * The sex of the front side of the Indonesia Id owner.

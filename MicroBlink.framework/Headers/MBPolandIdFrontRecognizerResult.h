@@ -33,12 +33,12 @@ MB_INIT_UNAVAILABLE
 /**
  * The family name of Polish ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *familyName;
+@property (nonatomic, readonly, nullable) NSString *familyName MB_PROPERTY_DEPRECATED;
 
 /**
  * The parents name of Polish ID owner.
  */
-@property (nonatomic, readonly, nullable) NSString *parentsGivenNames;
+@property (nonatomic, readonly, nullable) NSString *parentsGivenNames MB_PROPERTY_DEPRECATED;
 
 /**
  * The sex of the Polish ID owner.

@@ -1,90 +1,80 @@
 //
-//  MBSlovakiaIdFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBSlovakiaIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Slovak ID
- */
+* Recognizer which can scan front side of Slovak national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSlovakiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBSlovakiaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The date of birth of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The last name of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of expiry of the Slovak ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The sex of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of issue of the Slovak ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The nationality of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The document number of the Slovak ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The date of birth of the Slovakian ID owner in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+* The first name of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *firstName;
 
 /**
- * The date of birth of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The issuing authority of the Slovak ID card.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
 
 /**
- * The date of expiry of the Slovakian ID in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfExpiry;
+* The last name of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *lastName;
 
 /**
- * The date of expiry of the Slovakian ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The nationality of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
 
 /**
- * The date of issue of the Slovakian ID in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+* The personal number of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *personalNumber;
 
 /**
- * The date of issue of the Slovakian ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
-
-/**
- * The issuing authority of the ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuedBy;
-
-/**
- * The personal number of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalNumber;
-
-/**
- * The document number of the Slovakian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
+* The sex of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 @end
 

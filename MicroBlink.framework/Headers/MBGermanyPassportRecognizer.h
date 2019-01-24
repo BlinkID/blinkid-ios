@@ -1,79 +1,81 @@
 //
-//  MBGermanyPassportRecognizer.h
-//  MicroBlinkDev
+// MBGermanyPassportRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBGermanyPassportRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBSignatureImage.h"
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
 #import "MBFullDocumentImageExtensionFactors.h"
-
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBEncodeSignatureImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring German Passport Recognizer.
- *
- * German Passport recognizer is used for scanning German Passport.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyPassportRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection, MBFullDocumentImageExtensionFactors>
+* Recognizer which can scan German passport.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBGermanyPassportRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 
 /**
- * German Passport recognizer result
+ * Result of scanning GermanyPassportRecognizer
  */
 @property (nonatomic, strong, readonly) MBGermanyPassportRecognizerResult *result;
 
 /**
- * Defines if owner's surname should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSurname;
+* Defines if issuing authority of German passport should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractAuthority;
 
 /**
- * Defines if owner's name should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractName;
-
-/**
- * Defines if owner's nationality should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNationality;
-
-/**
- * Defines if owner's place of birth should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractPlaceOfBirth;
-
-/**
- * Defines if date of issue should be extracted from German ID
- *
- * Default: YES
- */
+* Defines if date of issue of German passport should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDateOfIssue;
 
 /**
- * Defines if authority should be extracted from German ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractAuthority;
+* Defines if given name of German passport owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractGivenName;
+
+/**
+* Defines if nationality of German passport owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractNationality;
+
+/**
+* Defines if place of birth of German passport owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
+
+/**
+* Defines if surname of German passport owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurname;
 
 @end
 

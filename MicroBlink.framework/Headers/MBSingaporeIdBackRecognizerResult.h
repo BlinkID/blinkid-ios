@@ -36,7 +36,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The blood Type of the back side of the Singapore Id owner.
  */
-@property (nonatomic, readonly) NSString *bloodGroup;
+@property (nonatomic, readonly) NSString *bloodGroup MB_PROPERTY_DEPRECATED;
 
 /**
  * The card Number of the back side of the Singapore Id owner.

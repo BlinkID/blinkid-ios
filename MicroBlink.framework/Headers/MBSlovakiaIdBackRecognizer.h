@@ -1,55 +1,61 @@
 //
-//  MBSlovakiaIdBackRecognizer.h
-//  MicroBlinkDev
+// MBSlovakiaIdBackRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSlovakiaIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Slovak ID Back Recognizer.
- *
- * Slovak ID Back recognizer is used for scanning back side of Slovak ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSlovakiaIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan back side of Slovak ID cards.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBSlovakiaIdBackRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Slovak ID Back recognizer result
+ * Result of scanning SlovakiaIdBackRecognizer
  */
 @property (nonatomic, strong, readonly) MBSlovakiaIdBackRecognizerResult *result;
 
 /**
- * Defines if owner's surname at birth should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSurnameAtBirth;
+* Defines if address of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if owner's place of birth should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if place of birth of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractPlaceOfBirth;
 
 /**
- * Defines if owner's special remarks should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if special remarks of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractSpecialRemarks;
+
+/**
+* Defines if surname at birth of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurnameAtBirth;
 
 @end
 

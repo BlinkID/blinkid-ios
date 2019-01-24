@@ -1,54 +1,53 @@
 //
-//  MBCzechiaIdBackRecognizer.h
-//  MicroBlinkDev
+// MBCzechiaIdBackRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBCzechiaIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Cz ID Back Recognizer.
- *
- * Cz ID Back recognizer is used for scanning back side of Cz ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCzechiaIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan the back side of Czech IDs.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBCzechiaIdBackRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Cz ID Back recognizer result
+ * Result of scanning CzechiaIdBackRecognizer
  */
 @property (nonatomic, strong, readonly) MBCzechiaIdBackRecognizerResult *result;
 
 /**
- * Defines if citizenship of Czech ID authority should be extracted
- *
- * Default: YES
- */
+* Defines if Czech ID's issuing authority should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractAuthority;
 
 /**
- * Defines if address of Czech ID owner should be extracted
- *
- * Default: YES
- */
+* Defines if Czech ID owner's permanent address should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractPermanentStay;
 
 /**
- * Defines if personal number should be extracted from Czech ID
- *
- * Default: YES
- */
+* Defines if Czech ID owner's personal number should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractPersonalNumber;
 
 @end

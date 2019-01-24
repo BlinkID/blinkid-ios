@@ -31,7 +31,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The blood Group of the Colombia Id owner.
  */
-@property (nonatomic, readonly) NSString *bloodGroup;
+@property (nonatomic, readonly) NSString *bloodGroup MB_PROPERTY_DEPRECATED;
 
 /**
  * The document Number Colombia Id owner.

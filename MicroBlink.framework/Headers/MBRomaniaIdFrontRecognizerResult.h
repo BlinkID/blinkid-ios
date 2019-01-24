@@ -48,7 +48,7 @@ MB_INIT_UNAVAILABLE
 /**
  * Parent names - missing if nationality exists
  */
-@property (nonatomic, strong, readonly, nullable) NSString *parentNames;
+@property (nonatomic, strong, readonly, nullable) NSString *parentNames MB_PROPERTY_DEPRECATED;
 
 /**
  * Nationality - missing if parent names exists

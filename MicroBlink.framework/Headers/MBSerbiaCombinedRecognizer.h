@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Serbian ID Combined recognizer is used for scanning both front and back side of Serbian ID.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_DEPRECATED_IOS(1.0.0, 4.6.0, "Recognizer is deprecated")
 @interface MBSerbiaCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBSignatureImage, MBFaceImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature>
 
 MB_INIT

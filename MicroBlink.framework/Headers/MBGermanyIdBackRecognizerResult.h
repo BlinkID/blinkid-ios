@@ -1,73 +1,77 @@
 //
-//  MBGermanyIdBackRecognizerResult.h
-//  MicroBlinkDev
+// MBGermanyIdBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of German ID
- */
+* Recognizer which can scan back side of German ID.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBGermanyIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * Eye colour
- */
-@property (nonatomic, readonly, nullable) NSString *eyeColour;
+* The city of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *addressCity;
 
 /**
- * Height in cm
- */
-@property (nonatomic, readonly, nullable) NSString *height;
+* The house number of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *addressHouseNumber;
 
 /**
- * Raw date of issue, as written on the ID
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+* The street of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *addressStreet;
 
 /**
- * Date of issue
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The zip code of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *addressZipCode;
 
 /**
- * Issuing authority of the ID
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The issuing authority of German ID.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * Full address
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The colour of eyes of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *colourOfEyes MB_PROPERTY_DEPRECATED;
 
 /**
- * ZIP code
- */
-@property (nonatomic, readonly, nullable) NSString *addressZipCode;
+* The date of issue of German ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * City
- */
-@property (nonatomic, readonly, nullable) NSString *addressCity;
+* The full address of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *fullAddress;
 
 /**
- * Stret name in single line
- */
-@property (nonatomic, readonly, nullable) NSString *addressStreet;
+* The height of German ID owner.
+*/
+@property (nonatomic, readonly) NSString *height MB_PROPERTY_DEPRECATED;
 
 /**
- * House number
- */
-@property (nonatomic, readonly, nullable) NSString *addressHouseNumber;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
+
 
 @end
 

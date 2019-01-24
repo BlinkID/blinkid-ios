@@ -1,3 +1,72 @@
+## 4.6.0
+
+- Minor API changes
+    - removed `sex` and `signatureImage` properties from `MBMalaysiaMyKadBackRecognizer`
+    - renamed properties in `MBCroatiaCombinedRecognizerResult`:
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `residence`
+        - `issuingAuthority` to `issuedBy`
+        - `personalIdentificationNumber` to `oib`
+        - `nonResident` to `documentForNonResident`
+    - removed `mrzImage` from `MBMrtdCombinedRecognizer` and `MBMrtdCombinedRecognizerResult`
+    - renamed properties in `MBAustraliaDlFrontRecognizerResult`:
+        - `name` to `fullName`
+        - `dateOfExpiry` to `licenceExpiry`
+    - renamed `eyeColour` to `colourOfEyes` in `MBGermanyIdBackRecognizerResult`
+    - recognizers that are deprecated:
+        - `MBSerbiaIdBackRecognizer` and `MBSerbiaIdBackRecognizerResult`
+        - `MBSerbiaIdFrontRecognizer` and `MBSerbiaIdFrontRecognizerResult`
+        - `MBSerbiaCombinedRecognizer` and `MBSerbiaCombinedRecognizerResult`
+    - all properties that are deprecated for recognizers:
+        - `MBHongKongIdFrontRecognizerResult`:
+            - `commercialCode`
+        - `MBIndonesiaIdFrontRecognizerResult`:
+            - `bloodType`
+            - `district`
+            - `kelDesa`
+            - `rt`
+            - `rw`
+        - `MBNewZealandDlFrontRecognizerResult`:
+            - `donorIndicator`
+            - `cardVersion`
+        - `MBMalaysiaMyKadBackRecognizerResult`:
+            - `extendedNric`
+        - `MBMexicoVoterIdFrontRecognizerResult`:
+            - `electorKey`
+        - `MBIrelandDlFrontRecognizerResult`:
+            - `driverNumber`
+        - `MBSwedenDlFrontRecognizerResult`:
+            - `referenceNumber`
+        - `MBMalaysiaIkadFrontRecognizerResult`:
+            - `passportNumber`    
+        - `MBAustriaIdBackRecognizerResult`:
+            - `principalResidence`
+            - `height`
+            - `eyeColour`
+        - `MBAustriaPassportRecognizerResult`:
+            - `height`
+         - `MBGermanyIdBackRecognizerResult`:
+            - `colourOfEyes`
+            - `height`
+        - `MBSwitzerlandIdBackRecognizerResult`:
+            - `height`
+        - `MBSwitzerlandPassportRecognizerResult`:
+            - `height`
+         - `MBSingaporeIdBackRecognizerResult`:
+            - `bloodGroup`
+        - `MBColombiaIdBackRecognizerResult`:
+            - `bloodGroup`
+        - `MBSwitzerlandPassportRecognizerResult`:
+            - `height`
+        - `MBPolandIdFrontRecognizerResult`:
+            - `familyName`
+            - `parentsGivenNames`
+        - `MBMoroccoIdBackRecognizerResult`:
+            - `fathersName`
+            - `mothersName`
+        - `MBRomaniaIdFrontRecognizerResult`:
+            - `parentNames`
+
 ## 4.5.0
 
 - Minor API changes

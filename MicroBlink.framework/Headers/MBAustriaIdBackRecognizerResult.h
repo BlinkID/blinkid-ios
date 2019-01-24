@@ -44,12 +44,12 @@ MB_INIT_UNAVAILABLE
 /**
  * The Principal Residence of Austrian ID owner.
  */
-@property (nonatomic, readonly) NSString *principalResidence;
+@property (nonatomic, readonly) NSString *principalResidence MB_PROPERTY_DEPRECATED;
 
 /**
  * The Height of Austrian ID owner.
  */
-@property (nonatomic, readonly) NSString *height;
+@property (nonatomic, readonly) NSString *height MB_PROPERTY_DEPRECATED;
 
 /**
  * The Date Of Issuance of Austrian ID.
@@ -59,7 +59,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The Eye Colour of Austrian ID owner.
  */
-@property (nonatomic, readonly) NSString *eyeColour;
+@property (nonatomic, readonly) NSString *eyeColour MB_PROPERTY_DEPRECATED;
 
 @end
 

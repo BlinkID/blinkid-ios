@@ -155,6 +155,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBruneiIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBBruneiIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBBruneiIdFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBBruneiIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBColombiaDlFrontRecognizer.h",
       "line": 28,
       "symbol": "MBColombiaDlFrontRecognizer.-init",
@@ -317,15 +331,43 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusIdFrontRecognizer.h",
-      "line": 28,
+      "line": 31,
       "symbol": "MBCyprusIdFrontRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusIdFrontRecognizerResult.h",
-      "line": 24,
+      "line": 26,
       "symbol": "MBCyprusIdFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusOldIdBackRecognizer.h",
+      "line": 25,
+      "symbol": "MBCyprusOldIdBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusOldIdBackRecognizerResult.h",
+      "line": 22,
+      "symbol": "MBCyprusOldIdBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusOldIdFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBCyprusOldIdFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBCyprusOldIdFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBCyprusOldIdFrontRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -652,13 +694,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentSubview.h",
-      "line": 56,
-      "symbol": "MBDocumentSubview.-initWithCoder:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationInstructionsSubview.h",
       "line": 13,
       "symbol": "MBDocumentVerificationInstructionsSubview",
@@ -677,6 +712,34 @@
       "line": 17,
       "symbol": "MBDocumentVerificationInstructionsSubview.instructionsImageView",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationOverlayViewController.h",
+      "line": 18,
+      "symbol": "MBDocumentVerificationHighResImageState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationOverlayViewController.h",
+      "line": 18,
+      "symbol": "MBDocumentVerificationHighResImageState",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationOverlayViewController.h",
+      "line": 19,
+      "symbol": "MBDocumentVerificationHighResImageState.MBDocumentVerificationHighResImageStateFrontSide",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDocumentVerificationOverlayViewController.h",
+      "line": 20,
+      "symbol": "MBDocumentVerificationHighResImageState.MBDocumentVerificationHighResImageStateBackSideSide",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
@@ -739,6 +802,13 @@
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDotsSubview.h",
       "line": 42,
       "symbol": "MBDotsSubview.-initWithCoder:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBDotsSubview.h",
+      "line": 44,
+      "symbol": "MBDotsSubview.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -1471,20 +1541,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIkadRecognizer.h",
-      "line": 28,
-      "symbol": "MBIkadRecognizer.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBIkadRecognizerResult.h",
-      "line": 21,
-      "symbol": "MBIkadRecognizerResult.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBImageExtensionFactors.h",
       "line": 13,
       "symbol": "MBImageExtensionFactors",
@@ -1751,6 +1807,76 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaIkadFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaIkadFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaIkadFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBMalaysiaIkadFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKadBackRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaMyKadBackRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKadBackRecognizerResult.h",
+      "line": 23,
+      "symbol": "MBMalaysiaMyKadBackRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKadFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaMyKadFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKadFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBMalaysiaMyKadFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKasFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaMyKasFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyKasFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBMalaysiaMyKasFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyPrFrontRecognizer.h",
+      "line": 28,
+      "symbol": "MBMalaysiaMyPrFrontRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyPrFrontRecognizerResult.h",
+      "line": 24,
+      "symbol": "MBMalaysiaMyPrFrontRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMalaysiaMyTenteraFrontRecognizer.h",
       "line": 28,
       "symbol": "MBMalaysiaMyTenteraFrontRecognizer.-init",
@@ -1857,21 +1983,21 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizer.h",
-      "line": 31,
+      "line": 37,
       "symbol": "MBMrtdRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizer.h",
-      "line": 89,
+      "line": 80,
       "symbol": "MBMrzFilter",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrtdRecognizerResult.h",
-      "line": 25,
+      "line": 28,
       "symbol": "MBMrtdRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1887,6 +2013,13 @@
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzImage.h",
       "line": 11,
       "symbol": "MBMrzImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzImageDpi.h",
+      "line": 11,
+      "symbol": "MBMrzImageDpi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
@@ -1915,34 +2048,6 @@
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMrzResult.h",
       "line": 38,
       "symbol": "MBMrzResult.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadBackRecognizer.h",
-      "line": 28,
-      "symbol": "MBMyKadBackRecognizer.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadBackRecognizerResult.h",
-      "line": 23,
-      "symbol": "MBMyKadBackRecognizerResult.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadFrontRecognizer.h",
-      "line": 27,
-      "symbol": "MBMyKadFrontRecognizer.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBMyKadFrontRecognizerResult.h",
-      "line": 21,
-      "symbol": "MBMyKadFrontRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -2214,7 +2319,7 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBRecognizer.h",
-      "line": 35,
+      "line": 26,
       "symbol": "MBRecognizer.-getOptimalHudOrientation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2711,14 +2816,14 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdBackRecognizer.h",
-      "line": 26,
+      "line": 25,
       "symbol": "MBSwitzerlandIdBackRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandIdBackRecognizerResult.h",
-      "line": 20,
+      "line": 23,
       "symbol": "MBSwitzerlandIdBackRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2739,14 +2844,14 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandPassportRecognizer.h",
-      "line": 27,
+      "line": 28,
       "symbol": "MBSwitzerlandPassportRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/MicroBlink.framework/Headers/MBSwitzerlandPassportRecognizerResult.h",
-      "line": 21,
+      "line": 25,
       "symbol": "MBSwitzerlandPassportRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

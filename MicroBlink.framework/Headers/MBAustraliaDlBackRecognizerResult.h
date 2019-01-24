@@ -1,48 +1,46 @@
 //
-//  MBAustraliaDlBackRecognizerResult.h
-//  MicroBlinkDev
+// MBAustraliaDlBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Australia DL
- */
+* Recognizer which can scan the back side of Australian driver's licences
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustraliaDlBackRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBAustraliaDlBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The last name of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The address of the Australia DL owner
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The licence number of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *licenceNumber;
+* The last name of the Australia DL owner
+*/
+@property (nonatomic, readonly) NSString *lastName;
 
 /**
- * The address of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The date of expiry of the Australia DL
+*/
+@property (nonatomic, readonly) MBDateResult *licenceExpiry;
 
 /**
- * The document date of expiry of the Australian DL in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfExpiry;
-
-/**
- * The document date of expiry of the Australian DL
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The licence number of the Australia DL
+*/
+@property (nonatomic, readonly) NSString *licenceNumber;
 
 @end
 

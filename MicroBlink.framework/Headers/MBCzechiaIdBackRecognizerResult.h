@@ -1,38 +1,46 @@
 //
-//  MBCzechiaIdBackRecognizerResult.h
-//  MicroBlinkDev
+// MBCzechiaIdBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Cz ID
- */
+* Recognizer which can scan the back side of Czech IDs.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCzechiaIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBCzechiaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The issuing authority of the Czech ID.
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The Czech ID's issuing authority.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The address of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *permanentStay;
+* The data extracted from Czech ID's machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * The personal number of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalNumber;
+* The Czech ID owner's permanent address.
+*/
+@property (nonatomic, readonly) NSString *permanentStay;
+
+/**
+* The Czech ID owner's personal number.
+*/
+@property (nonatomic, readonly) NSString *personalNumber;
 
 @end
 

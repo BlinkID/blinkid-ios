@@ -54,7 +54,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The Reference Number of the Sweden DL.
  */
-@property (nonatomic, readonly, nullable) NSString *referenceNumber;
+@property (nonatomic, readonly, nullable) NSString *referenceNumber MB_PROPERTY_DEPRECATED;
 
 /**
  * The Licence Categories of the Sweden DL.

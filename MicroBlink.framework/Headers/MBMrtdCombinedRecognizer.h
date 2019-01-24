@@ -5,26 +5,26 @@
 //  Created by Jura Skrlec on 13/06/2018.
 //
 
+#import <Foundation/Foundation.h>
 #import "MBMicroBlinkDefines.h"
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBMicroBlinkInitialization.h"
 #import "MBMrtdCombinedRecognizerResult.h"
 
 #import "MBCombinedRecognizer.h"
 
-#import "MBFullDocumentImage.h"
-#import "MBSignatureImage.h"
-#import "MBFaceImage.h"
-#import "MBMrzImage.h"
-
+#import "MBGlareDetection.h"
 #import "MBDigitalSignature.h"
 
-#import "MBEncodeFaceImage.h"
-#import "MBEncodeFullDocumentImage.h"
-#import "MBEncodeSignatureImage.h"
-#import "MBEncodeMrzImage.h"
+#import "MBDocumentFaceDetectorType.h"
 
-#import <Foundation/Foundation.h>
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  * MRTD Combined recognizer is used for scanning both front and back side of generic IDs.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBFullDocumentImage, MBFaceImage, MBMrzImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBDigitalSignature>
+@interface MBMrtdCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBGlareDetection>
 
 MB_INIT
 
@@ -67,6 +67,13 @@ MB_INIT
  * Default: 6
  */
 @property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+
+/**
+ * Type of document this recognizer will scan.
+ *
+ * Default: MBDocumentFaceDetectorTypeTD1
+ */
+@property (nonatomic, assign) MBDocumentFaceDetectorType detectorType;
 
 @end
 

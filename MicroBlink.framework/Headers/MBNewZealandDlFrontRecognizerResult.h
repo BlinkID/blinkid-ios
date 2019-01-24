@@ -53,7 +53,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The last name of the New Zealand Driver License owner.
  */
-@property (nonatomic, readonly, assign) BOOL donorIndicator;
+@property (nonatomic, readonly, assign) BOOL donorIndicator MB_PROPERTY_DEPRECATED;
 
 /**
  * The last name of the New Zealand Driver License owner.
@@ -68,7 +68,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The card version of the New Zealand Driver License.
  */
-@property (nonatomic, readonly, nullable) NSString *cardVersion;
+@property (nonatomic, readonly, nullable) NSString *cardVersion MB_PROPERTY_DEPRECATED;
 
 @end
 

@@ -57,7 +57,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The height of the Austrian Passport owner.
  */
-@property (nonatomic, readonly) NSString *height;
+@property (nonatomic, readonly) NSString *height MB_PROPERTY_DEPRECATED;
 
 /**
  * The sex of the Austrian Passport owner.

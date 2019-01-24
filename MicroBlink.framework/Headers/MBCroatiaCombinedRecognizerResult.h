@@ -1,111 +1,107 @@
 //
-//  MBCroatiaCombinedRecognizerResult.h
-//  BarDecoder
+// MBCroatiaCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBMicroBlinkDefines.h"
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
-#import "MBEncodedSignatureImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
-
-#import <Foundation/Foundation.h>
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Croatian ID.
- */
+* Recognizer which can front and back side of Croatian national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCroatiaCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBCroatiaCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The citizenship of the Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *citizenship;
 
 /**
- * The last name of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of birth of the Croatian ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The identity card number of Croatian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+* The date of expiry of the Croatian ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The sex of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
-
-/**
- * The citizenship of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *citizenship;
-
-/**
- * The date of birth of Croatian ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
-
-/**
- * The document date of expiry of the Croatian ID
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
-
-/**
- * Check if date of expiry is permanent on the Croatian ID.
- */
+* Determines if date of expiry of the Croatian ID is permanent.
+*/
 @property (nonatomic, readonly) BOOL dateOfExpiryPermanent;
 
 /**
- * The address of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The date of issue of Croatian ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The issuing authority of Croatian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
-
-/**
- * The document date of issue of the Croatian ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
-
-/**
- * The OIB (PIN) of the Croatian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalIdentificationNumber;
-
-/**
- * YES if the person is non Croatian resident
- */
-@property (nonatomic, readonly) BOOL nonResident;
-
-/**
- * YES if the document is bilingual
- */
+* Determines if Croatian ID is bilingual.
+*/
 @property (nonatomic, readonly) BOOL documentBilingual;
 
 /**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if Croatian ID is issued for non resident.
+*/
+@property (nonatomic, readonly) BOOL documentForNonResident;
+
+/**
+* The document number of the Croatian ID.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
+
+/**
+* The first name of the Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *firstName;
+
+/**
+* The issuer of Croatian ID.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
+
+/**
+* The last name of the Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *lastName;
+
+/**
+* Determines if all check digits inside MRZ are correct.
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The OIB of Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *oib;
+
+/**
+* The residence of Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *residence;
+
+/**
+* The sex of the Croatian ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 @end
 

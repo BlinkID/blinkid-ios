@@ -35,7 +35,7 @@ MB_INIT
 /**
  * Should extract the card owner information
  *
- * Default: YES
+ * Default: NO
  */
 @property (nonatomic, assign) BOOL extractOwner;
 
