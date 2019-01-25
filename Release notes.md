@@ -16,6 +16,7 @@
 
 - Minor API changes
     - removed `sex` and `signatureImage` properties from `MBMalaysiaMyKadBackRecognizer`
+    - renmaed `MBGermanyOldIdRecognizer` to `MBGermanyIdOldRecognizer`
     - renamed properties in `MBCroatiaCombinedRecognizerResult`:
         - `identityCardNumber` to `documentNumber`
         - `address` to `residence`
