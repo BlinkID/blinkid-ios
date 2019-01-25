@@ -31,8 +31,7 @@ Pod::Spec.new do |s|
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v4.6.0/blinkid-ios_v4.6.0.tar.gz', 
-        :tag => 'v4.6.0'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v4.6.0/blinkid-ios_v4.6.0.tar.gz'
   }
 
   s.platform     = :ios
