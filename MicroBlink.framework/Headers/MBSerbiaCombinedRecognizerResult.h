@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class representing values obtained when scanning both front and back side of Czech ID.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_DEPRECATED_IOS(1.0.0, 4.6.0, "Recognizer is deprecated")
 @interface MBSerbiaCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE

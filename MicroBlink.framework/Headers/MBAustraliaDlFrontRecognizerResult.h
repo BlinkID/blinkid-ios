@@ -1,65 +1,60 @@
 //
-//  MBAustraliaDlFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBAustraliaDlFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Australia DL
- */
+* Recognizer which can scan the front side of Australian driver's licences.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBAustraliaDlFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBAustraliaDlFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *name;
+* The address of the Australian DL owner
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The licence type of Australian DL.
- */
-@property (nonatomic, readonly, nullable) NSString *licenceType;
+* The date of birth of the Australian DL owner
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The licence number of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *licenceNumber;
+* The full name of the Australian DL owner
+*/
+@property (nonatomic, readonly) NSString *fullName;
 
 /**
- * The address of the Australian DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The date of expiry of the Australian DL
+*/
+@property (nonatomic, readonly) MBDateResult *licenceExpiry;
 
 /**
- * The date of birth of Australian DL owner in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
+* The licence number of the Australian DL
+*/
+@property (nonatomic, readonly) NSString *licenceNumber;
 
 /**
- * The date of birth of Australian DL owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
-
-/**
- * The document date of expiry of the Australian DL in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDocumentDateOfExpiry;
-
-/**
- * The document date of expiry of the Australian DL
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The licence type of the Australian DL
+*/
+@property (nonatomic, readonly) NSString *licenceType;
 
 @end
 

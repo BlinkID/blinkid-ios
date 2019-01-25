@@ -1,55 +1,65 @@
 //
-//  MBGermanyPassportRecognizerResult.h
-//  MicroBlinkDev
+// MBGermanyPassportRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning German Passport
- */
+* Recognizer which can scan German passport.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyPassportRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
+@interface MBGermanyPassportRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The surname of the German Passport owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The issuing authority of German passport.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The name of the German Passport owner.
- */
-@property (nonatomic, readonly, nullable) NSString *name;
+* The date of issue of German passport.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The place of birth of the German Passport owner
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
+* The given name of German passport owner.
+*/
+@property (nonatomic, readonly) NSString *givenName;
 
 /**
- * Raw date of issue, as written on the passport
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * Date of issue in NSDate object
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The nationality of German passport owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
 
 /**
- * Issuing authority of the Passport
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The place of birth of German passport owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
+
+/**
+* The surname of German passport owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

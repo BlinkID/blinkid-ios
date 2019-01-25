@@ -34,12 +34,12 @@ MB_INIT_UNAVAILABLE
 /**
  * The father's name of the Morocco ID owner.
  */
-@property (nonatomic, readonly) NSString *fathersName;
+@property (nonatomic, readonly) NSString *fathersName MB_PROPERTY_DEPRECATED;
 
 /**
  * The mother's name of the Morocco ID owner.
  */
-@property (nonatomic, readonly) NSString *mothersName;
+@property (nonatomic, readonly) NSString *mothersName MB_PROPERTY_DEPRECATED;
 
 /**
  * The sex of the Morocco ID owner.

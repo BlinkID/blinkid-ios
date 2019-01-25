@@ -52,7 +52,7 @@ MB_INIT_UNAVAILABLE
 /**
 * The height of Switzerland passport owner.
 */
-@property (nonatomic, readonly) NSString *height;
+@property (nonatomic, readonly) NSString *height MB_PROPERTY_DEPRECATED;
 
 /**
 * The data extracted from the machine readable zone.

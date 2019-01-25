@@ -1,43 +1,51 @@
 //
-//  MBSlovakiaIdBackRecognizerResult.h
-//  MicroBlinkDev
+// MBSlovakiaIdBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 21/01/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Slovak ID
- */
+* Recognizer which can scan back side of Slovak ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSlovakiaIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBSlovakiaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The address of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The address of Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The surname at birth of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surnameAtBirth;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * The place of birth of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
+* The place of birth of Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * The special remarks of the Slovakian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *specialRemarks;
+* The special remarks of Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *specialRemarks MB_PROPERTY_DEPRECATED;
+
+/**
+* The surname at birth of Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *surnameAtBirth MB_PROPERTY_DEPRECATED;
 
 @end
 

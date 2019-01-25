@@ -66,7 +66,7 @@ MB_INIT_UNAVAILABLE
 /**
 * The passport number of Malaysian iKad owners passport.
 */
-@property (nonatomic, readonly) NSString *passportNumber;
+@property (nonatomic, readonly) NSString *passportNumber MB_PROPERTY_DEPRECATED;
 
 /**
 * Sector in which Malaysian iKad owner works.

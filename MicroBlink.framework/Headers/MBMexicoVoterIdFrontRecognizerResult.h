@@ -43,7 +43,7 @@ MB_INIT_UNAVAILABLE
 /**
 * The elector key of Mexico Voter ID owner.
 */
-@property (nonatomic, readonly) NSString *electorKey;
+@property (nonatomic, readonly) NSString *electorKey MB_PROPERTY_DEPRECATED;
 
 /**
 * The full name of Mexico Voter ID owner.

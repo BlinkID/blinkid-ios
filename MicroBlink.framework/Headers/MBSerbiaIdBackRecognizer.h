@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Serbian ID Back recognizer is used for scanning back side of Serbian ID.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_DEPRECATED_IOS(1.0.0, 4.6.0, "Recognizer is deprecated")
 @interface MBSerbiaIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
 
 MB_INIT

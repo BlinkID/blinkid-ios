@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Serbian ID Front recognizer is used for scanning front side of Serbian ID.
  */
-PP_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_DEPRECATED_IOS(1.0.0, 4.6.0, "Recognizer is deprecated")
 @interface MBSerbiaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
 
 MB_INIT

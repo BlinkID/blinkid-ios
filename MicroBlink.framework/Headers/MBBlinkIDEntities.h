@@ -26,8 +26,15 @@
 #import "MBAustriaDlFrontRecognizer.h"
 #import "MBAustriaDlFrontRecognizerResult.h"
 
+// Brunei
 #import "MBBruneiIdFrontRecognizer.h"
 #import "MBBruneiIdFrontRecognizerResult.h"
+#import "MBBruneiIdBackRecognizer.h"
+#import "MBBruneiIdBackRecognizerResult.h"
+#import "MBBruneiResidencePermitFrontRecognizer.h"
+#import "MBBruneiResidencePermitFrontRecognizerResult.h"
+#import "MBBruneiResidencePermitBackRecognizer.h"
+#import "MBBruneiResidencePermitBackRecognizerResult.h"
 
 // Colombia
 #import "MBColombiaIdBackRecognizer.h"
@@ -84,10 +91,12 @@
 #import "MBGermanyCombinedRecognizerResult.h"
 #import "MBGermanyPassportRecognizer.h"
 #import "MBGermanyPassportRecognizerResult.h"
-#import "MBGermanyOldIdRecognizer.h"
-#import "MBGermanyOldIdRecognizerResult.h"
+#import "MBGermanyIdOldRecognizer.h"
+#import "MBGermanyIdOldRecognizerResult.h"
 #import "MBGermanyDlBackRecognizer.h"
 #import "MBGermanyDlBackRecognizerResult.h"
+#import "MBGermanyDlFrontRecognizer.h"
+#import "MBGermanyDlFrontRecognizerResult.h"
 
 // Hong Kong
 #import "MBHongKongIdFrontRecognizer.h"

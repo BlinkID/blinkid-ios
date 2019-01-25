@@ -39,14 +39,56 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 * [`MBRecognizer` and available recognizers](#availableRecognizers)
     * [The `MBRecognizer` concept](#recognizerConcept)
     * [`MBRecognizerCollection` concept](#recognizerBCollection)
-    * [List of available recognizers](#recognizerList)
-        * [Frame Grabber Recognizer](#frameGrabberRecognizer)
-        * [Success Frame Grabber Recognizer](#successFrameGrabberRecognizer)
-        * [PDF417 recognizer](#pdf417Recognizer)
-        * [Barcode recognizer](#barcodeRecognizer)
-        * [BlinkInput recognizer](#blinkInputRecognizer)
-        * [Detector recognizer](#detectorRecognizer)
-        * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
+* [List of available recognizers](#recognizerList)
+    * [Frame Grabber Recognizer](#frameGrabberRecognizer)
+    * [Success Frame Grabber Recognizer](#successFrameGrabberRecognizer)
+    * [PDF417 recognizer](#pdf417Recognizer)
+    * [Barcode recognizer](#barcodeRecognizer)
+    * [BlinkInput recognizer](#blinkInputRecognizer)
+    * [Detector recognizer](#detectorRecognizer)
+    * [BlinkID recognizers](#blinkid_recognizers)
+        * [Machine Readable Travel Document recognizer](#mrtdRecognizer)
+        * [Machine Readable Travel Document combined recognizer](#mrtd_combined_recognizer)
+        * [US / Canada driver's license barcode recognizer](#us_dl_recognizer)
+        * [US / Canada driver's license combined recognizer](#us_dl_combined_recognizer)
+        * [EU Driver's License recognizer](#eudlRecognizer)
+        * [Payment / Debit card recognizers ](#payment_card_recognizers)
+        * [Document face recognizer](#documentFaceRecognizer)
+    * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
+        * [Austria](#austriaBlinkId)
+        * [Australia](#australiaBlinkId)
+        * [Brunei](#bruneiBlinkId)
+        * [Colombia](#colombiaBlinkId)
+        * [Croatia](#croatiaBlinkId)
+        * [Cyprus](#cyprusBlinkId)
+        * [Czechia](#czechiaBlinkId)
+        * [European Driver License](#eudlBlinkId)
+        * [Egypt](#egyptBlinkId)
+        * [Germany](#croatiaBlinkId)
+        * [Hong Kong](#hongkongBlinkId)
+        * [Indonesia](#indonesiaBlinkId)
+        * [Ireland](#irelandBlinkId)
+        * [Ireland](#irelandBlinkId)
+        * [Italy](#italyBlinkId)
+        * [Jordan](#jordanBlinkId)
+        * [Kuwait](#kuwaitBlinkId)
+        * [Malaysia](#malaysiaBlinkId)
+        * [Mexico](#mexicoBlinkId)
+        * [Morocco](#moroccoBlinkId)
+        * [New Zealand](#newZealandBlinkId)
+        * [Elite Payment Card](#elitePaymentCardBlinkId)
+        * [Payment Card](#paymentCardBlinkId)
+        * [Poland](#polandBlinkId)
+        * [Romania](#romaniaBlinkId)
+        * [Serbia](#serbiaBlinkId)
+        * [Singapore](#singaporeBlinkId)
+        * [Slovakia](#slovakiaBlinkId)
+        * [Slovenia](#sloveniaBlinkId)
+        * [Spain](#spainBlinkId)
+        * [Sweden](#swedenBlinkId)
+        * [Switzerland](#switzerlandBlinkId)
+        * [United Arab Emirates](#uaeBlinkId)
+        * [United States](#unitedStatesBlinkId)
 * [`Field by field` scanning feature](#fieldScan)
     * [`Field by field` feature](#fieldByFieldFeature)
 * [`MBProcessor` and `MBParser`](#processorsAndParsers)
@@ -115,7 +157,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.5.0'
+pod 'PPBlinkID', '~> 4.6.0'
 ```
 
 - Install the dependencies in your project:
@@ -619,17 +661,17 @@ The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRe
 
 You cannot change the order of the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects within the chain - no matter the order in which you give [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects to [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html), they are internally ordered in a way that provides best possible performance and accuracy. Also, in order for SDK to be able to order [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects in recognition chain in a best way possible, it is not allowed to have multiple instances of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects of the same type within the chain. Attempting to do so will crash your application.
 
-## <a name="recognizerList"></a> List of available recognizers
+# <a name="recognizerList"></a> List of available recognizers
 
 This section will give a list of all [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that are available within PDF417.mobi SDK, their purpose and recommendations how they should be used to get best performance and user experience.
 
-### <a name="frameGrabberRecognizer"></a> Frame Grabber Recognizer
+## <a name="frameGrabberRecognizer"></a> Frame Grabber Recognizer
 
 The [`MBFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBFrameGrabberRecognizer.html) is the simplest recognizer in SDK, as it does not perform any processing on the given image, instead it just returns that image back to its `onFrameAvailable`. Its result never changes state from empty.
 
 This recognizer is best for easy capturing of camera frames with `MBRecognizerRunnerViewController`. Note that [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) sent to `onFrameAvailable` are temporary and their internal buffers all valid only until the `onFrameAvailable` method is executing - as soon as method ends, all internal buffers of [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object are disposed. If you need to store [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object for later use, you must create a copy of it by calling `copy`.
 
-### <a name="successFrameGrabberRecognizer"></a> Success Frame Grabber Recognizer
+## <a name="successFrameGrabberRecognizer"></a> Success Frame Grabber Recognizer
 
 The [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) is a special `MBecognizer` that wraps some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) and impersonates it while processing the image. However, when the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) being impersonated changes its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) into `Valid` state, the [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) captures the image and saves it into its own [`MBSuccessFrameGrabberRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizerResult.html) object.
 
@@ -637,13 +679,13 @@ Since [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/C
 
 This recognizer is best for use cases when you need to capture the exact image that was being processed by some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object at the time its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) became `Valid`. When that happens, `MBSuccessFrameGrabberRecognizer's` `MBSuccessFrameGrabberRecognizerResult` will also become `Valid` and will contain described image.
 
-### <a name="pdf417Recognizer"></a> PDF417 recognizer
+## <a name="pdf417Recognizer"></a> PDF417 recognizer
 
 The [`MBPdf417Recognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPdf417Recognizer.html) is recognizer specialised for scanning [PDF417 2D barcodes](https://en.wikipedia.org/wiki/PDF417). This recognizer can recognize only PDF417 2D barcodes - for recognition of other barcodes, please refer to [BarcodeRecognizer](#barcodeRecognizer).
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html), which has UI best suited for barcode scanning.
 
-### <a name="barcodeRecognizer"></a> Barcode recognizer
+## <a name="barcodeRecognizer"></a> Barcode recognizer
 
 The [`MBBarcodeRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeRecognizer.html) is recognizer specialised for scanning various types of barcodes. This recognizer should be your first choice when scanning barcodes as it supports lots of barcode symbologies, including the [PDF417 2D barcodes](https://en.wikipedia.org/wiki/PDF417), thus making [PDF417 recognizer](#pdf417Recognizer) possibly redundant, which was kept only for its simplicity.
 
@@ -651,7 +693,7 @@ You can enable multiple barcode symbologies within this recognizer, however keep
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html), which has UI best suited for barcode scanning.
 
-### <a name="blinkInputRecognizer"></a> BlinkInput recognizer
+## <a name="blinkInputRecognizer"></a> BlinkInput recognizer
 
 The [`MBBlinkInputRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkInputRecognizer.html) is generic OCR recognizer used for scanning segments which enables specifying `MBProcessors` that will be used for scanning. Most commonly used `MBProcessor` within this recognizer is [`MBParserGroupProcessor`](http://blinkid.github.io/blinkid-ios/Classes/MBParserGroupProcessor.html)) that activates all `MBParsers` in the group to extract data of interest from the OCR result.
 
@@ -659,425 +701,319 @@ This recognizer can be used in any context. It is used internally in the impleme
 
 `MBProcessors` are explained in [The Processor concept](#processorConcept) section and you can find more about `MBParsers` in [The Parser concept](#parserConcept) section.
 
-### <a name="detectorRecognizer"></a> Detector recognizer
+## <a name="detectorRecognizer"></a> Detector recognizer
 
 The [`MBDetectorRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDetectorRecognizer.html) is recognizer for scanning generic documents using custom `MBDetector`. You can find more about `Detector` in [The Detector concept](#detectorConcept) section. `MBDetectorRecognizer` can be used simply for document detection and obtaining its image. The more interesting use case is data extraction from the custom document type. `MBDetectorRecognizer` performs document detection and can be configured to extract fields of interest from the scanned document by using **Templating API**. You can find more about Templating API in [this](#detectorTemplating) section.
+## <a name="blinkid_recognizers"></a> BlinkID recognizers
 
-#### <a name="documentFaceBlinkId"></a> Document Face
+Unless stated otherwise for concrete recognizer, **single side BlinkID recognizes** from this list can be used in any context, but they work best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for document scanning. 
 
-The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is recognizer specialised scanning Document Face.
+**Combined recognizers** should be used with [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html), which has UI best suited for one side document scanning.
+### <a name="mrtdRecognizer"></a> Machine Readable Travel Document recognizer
+The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MrzFilter`](http://blinkid.github.io/blinkid-ios/Classes/MrzFilter.html).
 
-### <a name="blinkIdRecognizersByCountry"></a> BlinkID recognizers by countries
+The `MBMrtdRecognizer` can also be configured to extract additional fields of interest from the scanned document, which are not part of the Machine Readable Zone, by using **Templating API**. You can find more about Templating API in [this](#mrtdTemplating) section.
 
-#### <a name="austriaBlinkId"></a> Austria
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="mrtd_combined_recognizer"></a> Machine Readable Travel Document combined recognizer
+The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html) scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses [MBDocumentFaceRecognizer](#documentFaceRecognizer) for obtaining full document image and face image as the first step and then [MBMrtdRecognizer](#mrtdRecognizer) for scanning the MRZ.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="us_dl_recognizer"></a> US / Canada driver's license barcode recognizer
+The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from the US / Canada driver's license.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="us_dl_combined_recognizer"></a> US / Canada driver's license combined recognizer
+The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) scans PDF417 barcode from the back side of US / Canada driver's license after scanning the full document image and face image from the front side. Internally, it uses [MBDocumentFaceRecognizer](#documentFaceRecognizer) for obtaining full document image and face image as the first step and then [MBUsdlRecognizer](#us_dl_recognizer) for scanning the PDF417 barcode.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="eudlRecognizer"></a> EU Driver's License recognizer
+The [`MBEudlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEudlRecognizer.html) is used for scanning front side of European Union driver's licenses. Currently, driver's licenses from these countries are supported:
+
+- Austria
+- Germany
+- United Kingdom
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+
+### <a name="payment_card_recognizers"></a> Payment / Debit card recognizers 
+
+For all recognizers, you can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+#### <a name="payment_card_single"></a> Payment / Debit card front and back side recognizers
+The [`MBPaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardFrontRecognizer.html) and [`MBPaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) are used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
+
+#### <a name="payment_card_combined"></a> Payment / Debit card combined recognizer
+The [`MBPaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) scans back side of Payment / Debit card after scanning the front side and combines data from both sides.
+
+#### <a name="elite_payment_card_single"></a> Elite Payment / Debit card front and back side recognizers
+The [`MBElitePaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardFrontRecognizer.html) and [`MBElitePaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardBackRecognizer.html) are used for scanning the front and back side of elite Payment / Debit card.
+
+#### <a name="elite_payment_card_combined"></a> Elite Payment / Debit card combined recognizer
+The [`MBElitePaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
+
+
+### <a name="documentFaceRecognizer"></a> Document face recognizer
+The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+## <a name="blinkIdRecognizersByCountry"></a> BlinkID recognizers by countries
+
+### <a name="austriaBlinkId"></a> Austria
 
 The [`MBAustriaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Austrian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBAustriaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaIdBackRecognizer.html) is recognizer specialised for scanning back side of Austrian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBAustriaPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaPassportRecognizer.html) is recognizer specialised for scanning Austrian Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBAustriaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Austrian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 
 The [`MBAustriaDlFrontRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaDlFrontRecognizerResult.html) is recognizer specialised for scanning front side of Austrian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="australiaBlinkId"></a> Australia
+### <a name="australiaBlinkId"></a> Australia
 
 The [`MBAustraliaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBAustraliaDlBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlBackRecognizer.html) is recognizer specialised for scanning back side of Australian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="bruneiBlinkId"></a> Brunei
+### <a name="bruneiBlinkId"></a> Brunei
 
 The [`MBBruneiIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+The [`MBBruneiIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdBackRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
-#### <a name="colombiaBlinkId"></a> Colombia
+The [`MBBruneResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+### <a name="colombiaBlinkId"></a> Colombia
 
 The [`MBColombiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Colombian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBColombiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Colombian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBColombiaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaDlFrontRecognizer.html) is recognizer specialised for scanning front side Colombian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="croatiaBlinkId"></a> Croatia
+### <a name="croatiaBlinkId"></a> Croatia
 
 The [`MBCroatiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCroatiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Croatian ID. It always extracts
 identity card number, first and last name of ID holder while extracting other elements is optional.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBCroatiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCroatiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Croatian ID. It always extracts
 MRZ zone and address of ID holder while extracting other elements is optional.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBCroatiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCroatiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Croatian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="cyprusBlinkId"></a> Cyprus
+### <a name="cyprusBlinkId"></a> Cyprus
 
 The [`MBCyprusIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdFrontRecognizer.html) is recognizer specialised for scanning front side of Cyprus ID issued after 2015.
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBCyprusIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdBackRecognizer.html) is recognizer specialised for scanning back side of Cyprus ID issued after 2015.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBCyprusOldIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusOldIdFrontRecognizer.html) is recognizer specialised for scanning front side of Cyprus ID.
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBCyprusOldIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusOldIdFrontRecognizer.html) is recognizer specialised for scanning back side of Cyprus ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="czechiaBlinkId"></a> Czechia
+### <a name="czechiaBlinkId"></a> Czechia
 
 The [`MBCzechiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCzechiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czech ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBCzechiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBackIdBackRecognizer.html) is recognizer specialised for scanning back side of Czech ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBCzechiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCzechiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Czech ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="eudlBlinkId"></a> European Driver License
+### <a name="eudlBlinkId"></a> European Driver License
 
 The [`MBEudlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEudlRecognizer.html) is recognizer specialised for scanning EU Driver License. Supported countries are Austria, Germany, United Kingdom and any (generic) EU driver license. List can be found in [`MBEudlCountry`](http://blinkid.github.io/blinkid-ios/Enums/MBEudlCountry.html)
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="egyptBlinkId"></a> Egypt
+### <a name="egyptBlinkId"></a> Egypt
 
 The [`MBEgyptIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEgyptIdFrontRecognizer.html) is recognizer specialised for scanning front side of Egypt ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="croatiaBlinkId"></a> Germany
+### <a name="croatiaBlinkId"></a> Germany
 
 The [`MBGermanyIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyIdFrontRecognizer.html) is recognizer specialised for scanning front side of German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBGermanyIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyIdBackRecognizer.html) is recognizer specialised for scanning back side of German ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBGermanyCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of German ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
 The [`MBGermanOldIDRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanOldIDRecognizer.html) is recognizer specialised for scanning old German ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBGermanyPassportRecognizer.h`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyPassportRecognizer.h.html) is recognizer specialised for scanning German Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
+The [`MBGermanyDlFrontRecognizerResult.h`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyDlFrontRecognizerResult.h.html) is recognizer specialised for scanning back side of German Driver's License with B10 support.
 
 The [`MBGermanyDlBackRecognizerResult.h`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyDlBackRecognizerResult.h.html) is recognizer specialised for scanning back side of German Driver's License with B10 support.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="hongkongBlinkId"></a> Hong Kong
+### <a name="hongkongBlinkId"></a> Hong Kong
 
 The [`MBHongKongIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBHongKongIdFrontRecognizer.html) is recognizer specialised for scanning front side of Hong Kong ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="indonesiaBlinkId"></a> Indonesia
+### <a name="indonesiaBlinkId"></a> Indonesia
 
 The [`MBIndonesiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIndonesiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Indonesian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="irelandBlinkId"></a> Ireland
+### <a name="irelandBlinkId"></a> Ireland
 
 The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="irelandBlinkId"></a> Ireland
+### <a name="irelandBlinkId"></a> Ireland
 
 The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="italyBlinkId"></a> Italy
+### <a name="italyBlinkId"></a> Italy
 
 The [`MBItalyDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBItalyDlFrontRecognizer.html) is recognizer specialised for scanning front side of Italian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="jordanBlinkId"></a> Jordan
+### <a name="jordanBlinkId"></a> Jordan
 
 The [`MBJordanIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanIdFrontRecognizer.html) is recognizer specialised for scanning front side of Jordan ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBJordanIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanIdBackRecognizer.html) is recognizer specialised for scanning back side of Jordan ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBJordanCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Jordan ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="kuwaitBlinkId"></a> Kuwait
+### <a name="kuwaitBlinkId"></a> Kuwait
 
 The [`MBKuwaitIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBKuwaitIdFrontRecognizer.html) is recognizer specialised for scanning front side of Kuwait ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBKuwaitIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBKuwaitIdBackRecognizer.html) is recognizer specialised for scanning back side of Kuwait ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="malaysiaBlinkId"></a> Malaysia
+### <a name="malaysiaBlinkId"></a> Malaysia
 
 The [`MBMalaysiaDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaDLFrontRecognizer.html) is recognizer specialised for scanning Malaysian Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBMalaysiaMyKadFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKadFrontRecognizer.html) is recognizer specialised for scanning front side of MyKad.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBMalaysiaMyKadBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKadBackRecognizer.html) is recognizer specialised for scanning back side of MyKad.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBMalaysiaMyTenteraFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyTenteraFrontRecognizer.html) is recognizer specialised for scanning MyTentera.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBMalaysiaIkadFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaIkadFrontRecognizer.html) is recognizer specialised for scanning iKad.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBMalaysiaMyPrFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyPrFrontRecognizer.html) is recognizer specialised for scanning MyPR.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBMalaysiaMyKasFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKasFrontRecognizer.html) is recognizer specialised for scanning MyKAS.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="mexicoBlinkId"></a> Mexico
+### <a name="mexicoBlinkId"></a> Mexico
 
 The [`MBMexicoVoterIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMexicoVoterIdFrontRecognizer.html) is recognizer specialised for scanning front side of Mexican Voter ID card.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="moroccoBlinkId"></a> Morocco
+### <a name="moroccoBlinkId"></a> Morocco
 
 The [`MBMoroccoIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMoroccoIdFrontRecognizer.html) is recognizer specialised for scanning front side of Morocco ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBMoroccoIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMoroccoIdBackRecognizer.html) is recognizer specialised for scanning back side of Morocco ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="newZealandBlinkId"></a> New Zealand
+### <a name="newZealandBlinkId"></a> New Zealand
 
 The [`MBNewZealandDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBNewZealandDLFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="elitePaymentCardBlinkId"></a> Elite Payment Card
+### <a name="elitePaymentCardBlinkId"></a> Elite Payment Card
 
 The [`MBElitePaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Elite Payment Card.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBElitePaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardBackRecognizer.html) is recognizer specialised for scanning back side of Elite Payment Card.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBElitePaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Elite Payment Card.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="paymentCardBlinkId"></a> Payment Card
+### <a name="paymentCardBlinkId"></a> Payment Card
 
 The [`MBPaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Payment Card.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBPaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) is recognizer specialised for scanning back side of Payment Card.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBPaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Payment Card.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="polandBlinkId"></a> Poland
+### <a name="polandBlinkId"></a> Poland
 
 The [`MBPolandIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPolandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Polish ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBPolandIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPolandIdBackRecognizer.html) is recognizer specialised for scanning back side of Polish ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBPolandCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPolandCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Polish ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="romaniaBlinkId"></a> Romania
+### <a name="romaniaBlinkId"></a> Romania
 
 The [`MBRomaniaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRomaniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Romanian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="serbiaBlinkId"></a> Serbia
+### <a name="serbiaBlinkId"></a> Serbia
 
 The [`MBSerbiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSerbiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Serbian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSerbiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSerbiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Serbian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSerbiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSerbiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Serbian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="singaporeBlinkId"></a> Singapore
+### <a name="singaporeBlinkId"></a> Singapore
 
 The [`MBSingaporeIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeIdFrontRecognizer.html) is recognizer specialised for scanning front side of Singapore ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSingaporeIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeIdBackRecognizer.html) is recognizer specialised for scanning back side of Singapore ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSingaporeCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Singapore ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
 The [`MBSingaporeDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeDlFrontRecognizer.html) is recognizer specialised for scanning front side Singapore Driver's License.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSingaporeChangiEmployeeIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeChangiEmployeeIdRecognizer.html) is recognizer specialised for scanning Singapore Changi Employee ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="slovakiaBlinkId"></a> Slovakia
+### <a name="slovakiaBlinkId"></a> Slovakia
 
 The [`MBSlovakiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSlovakiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovakian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSlovakiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSlovakiaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovakian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSlovakiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSlovakiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovakian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="sloveniaBlinkId"></a> Slovenia
+### <a name="sloveniaBlinkId"></a> Slovenia
 
 The [`MBSloveniaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSloveniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovenian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSloveniaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSloveniaIdBackRecognizer.html) is recognizer specialised for scanning back side of Slovenian ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSloveniaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSloveniaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovenian ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
-
-#### <a name="spainBlinkId"></a> Spain
+### <a name="spainBlinkId"></a> Spain
 
 The [`MBSpainDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSpainDlFrontRecognizer.html) is recognizer specialised for scanning front side Spanish Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="swedenBlinkId"></a> Sweden
+### <a name="swedenBlinkId"></a> Sweden
 
 The [`MBSwedenDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwedenDlFrontRecognizer.html) is recognizer specialised for scanning front side Swedish Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="switzerlandBlinkId"></a> Switzerland
+### <a name="switzerlandBlinkId"></a> Switzerland
 
 The [`MBSwitzerlandIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Swiss ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSwitzerlandIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning back side of Swiss ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBSwitzerlandPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandIdBackRecognizer.html) is recognizer specialised for scanning of Swiss Passports.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBSwitzerlandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandDlFrontRecognizer.html) is recognizer specialised for scanning front side Swiss Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="uaeBlinkId"></a> United Arab Emirates
+### <a name="uaeBlinkId"></a> United Arab Emirates
 
 The [`MBUnitedArabEmiratesIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdFrontRecognizer.html) is recognizer specialised for scanning front side of UAE ID.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBUnitedArabEmiratesIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdBackRecognizer.html) is recognizer specialised for scanning back side of UAE ID.
-
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
 
 The [`MBUnitedArabEmiratesDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesDlFrontRecognizer.html) is recognizer specialised for scanning front side UAE Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
-#### <a name="unitedStatesBlinkId"></a> United States
+### <a name="unitedStatesBlinkId"></a> United States
 
 The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is recognizer specialised for scanning back side of US Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for one side document scanning.
-
 The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
 
-This recognizer can be used in any overlay view controller, but it works best with the [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), which has UI best suited for both side document scanning.
 # <a name="fieldScan"></a> `Field by field` scanning feature
 
 [`Field by field`](#fieldByFieldFeature) scanning feature is designed for scanning small text fields which are called scan elements. For each scan element, specific [`MBParser`](#parserConcept) that will extract structured data of interest from the OCR result is defined. Focusing on the small text fields which are scanned one by one enables implementing support for the **free-form documents** because field detection is not required. The user is responsible for positioning the field of interest inside the scanning window and the scanning process guides him. When implementing support for the custom document, only fields of interest has to be defined.
@@ -1519,6 +1455,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

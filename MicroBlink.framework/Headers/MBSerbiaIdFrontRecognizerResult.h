@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class representing values obtained when scanning front side of Serbian ID
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_DEPRECATED_IOS(1.0.0, 4.6.0, "Recognizer is deprecated")
 @interface MBSerbiaIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBSignatureImageResult, MBFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
