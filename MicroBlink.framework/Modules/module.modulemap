@@ -1,6 +1,0 @@
-framework module MicroBlink {
-    umbrella header "MicroBlink.h"
-
-    export *
-    module * { export * }
-}

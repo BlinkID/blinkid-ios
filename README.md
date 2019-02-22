@@ -22,106 +22,105 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 * [Requirements](#user-content-requirements)
-* [Quick Start](#quickStart)
-* [Advanced BlinkInput integration instructions](#advancedIntegration)
-    * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#uiCustomizations)
-        * [Built-in overlay view controllers and overlay subviews](#builtInUIComponents)
-    * [Using `MBBarcodeOverlayViewController`](#mbBarcodeOverlayViewcontroller)
-    * [Using `MBDocumentOverlayViewController`](#mbDocumentOverlayViewcontroller)
-    * [Using `MBDocumentVerificationOverlayViewController`](#mbDocumentVerificationOverlayViewcontroller)
-    * [Custom overlay view controller](#recognizerRunnerViewController)
-    * [Direct processing API](#directAPI)
-        * [Using Direct API for `NSString` recognition (parsing)](#directAPI_strings)
-* [`MBRecognizer` and available recognizers](#availableRecognizers)
-    * [The `MBRecognizer` concept](#recognizerConcept)
-    * [`MBRecognizerCollection` concept](#recognizerBCollection)
-* [List of available recognizers](#recognizerList)
-    * [Frame Grabber Recognizer](#frameGrabberRecognizer)
-    * [Success Frame Grabber Recognizer](#successFrameGrabberRecognizer)
-    * [PDF417 recognizer](#pdf417Recognizer)
-    * [Barcode recognizer](#barcodeRecognizer)
-    * [BlinkInput recognizer](#blinkInputRecognizer)
-    * [Detector recognizer](#detectorRecognizer)
-    * [BlinkID recognizers](#blinkid_recognizers)
-        * [Machine Readable Travel Document recognizer](#mrtdRecognizer)
-        * [Machine Readable Travel Document combined recognizer](#mrtd_combined_recognizer)
-        * [US / Canada driver's license barcode recognizer](#us_dl_recognizer)
-        * [US / Canada driver's license combined recognizer](#us_dl_combined_recognizer)
-        * [EU Driver's License recognizer](#eudlRecognizer)
-        * [Payment / Debit card recognizers ](#payment_card_recognizers)
-        * [Document face recognizer](#documentFaceRecognizer)
-    * [BlinkID recognizers by countries](#blinkIdRecognizersByCountry)
-        * [Austria](#austriaBlinkId)
-        * [Australia](#australiaBlinkId)
-        * [Brunei](#bruneiBlinkId)
-        * [Colombia](#colombiaBlinkId)
-        * [Croatia](#croatiaBlinkId)
-        * [Cyprus](#cyprusBlinkId)
-        * [Czechia](#czechiaBlinkId)
-        * [European Driver License](#eudlBlinkId)
-        * [Egypt](#egyptBlinkId)
-        * [Germany](#croatiaBlinkId)
-        * [Hong Kong](#hongkongBlinkId)
-        * [Indonesia](#indonesiaBlinkId)
-        * [Ireland](#irelandBlinkId)
-        * [Ireland](#irelandBlinkId)
-        * [Italy](#italyBlinkId)
-        * [Jordan](#jordanBlinkId)
-        * [Kuwait](#kuwaitBlinkId)
-        * [Malaysia](#malaysiaBlinkId)
-        * [Mexico](#mexicoBlinkId)
-        * [Morocco](#moroccoBlinkId)
-        * [New Zealand](#newZealandBlinkId)
-        * [Elite Payment Card](#elitePaymentCardBlinkId)
-        * [Payment Card](#paymentCardBlinkId)
-        * [Poland](#polandBlinkId)
-        * [Romania](#romaniaBlinkId)
-        * [Serbia](#serbiaBlinkId)
-        * [Singapore](#singaporeBlinkId)
-        * [Slovakia](#slovakiaBlinkId)
-        * [Slovenia](#sloveniaBlinkId)
-        * [Spain](#spainBlinkId)
-        * [Sweden](#swedenBlinkId)
-        * [Switzerland](#switzerlandBlinkId)
-        * [United Arab Emirates](#uaeBlinkId)
-        * [United States](#unitedStatesBlinkId)
-* [`Field by field` scanning feature](#fieldScan)
-    * [`Field by field` feature](#fieldByFieldFeature)
-* [`MBProcessor` and `MBParser`](#processorsAndParsers)
-    * [The `MBProcessor` concept](#processorConcept)
-    * [List of available processors](#processorList)
-        * [Image Return Processor](#imageReturnProcessor)
-        * [Parser Group Processor](#parserGroupProcessor)
-    * [The `MBParser` concept](#parserConcept)
-    * [List of available parsers](#parserList)
-        * [Amount Parser](#amountParser)
-        * [Date Parser](#dateParser)
-        * [Email Parser](#emailParser)
-        * [IBAN Parser](#ibanParser)
-        * [License Plates Parser](#licensePlatesParser)
-        * [Raw Parser](#rawParser)
-        * [Regex Parser](#regexParser)
-        * [TopUp Parser](#topUpParser)
-        * [VIN (*Vehicle Identification Number*) Parser](#vinParser)
-* [Scanning generic documents with Templating API](#detectorTemplating)
-        * [The `MBProcessorGroup` component](#processorGroup)
-        * [List of available dewarp policies](#dewarpPolicyList)
-        * [The `MBTemplatingClass` component](#templatingClass)
-        * [Implementing the `MBTemplatingClassifier`](#implementingTemplatingClassifier)
-* [The `MBDetector` concept](#detectorConcept)
-    * [List of available detectors](#detectorList)
-        * [Document Detector](#documentDetector)
-        * [MRTD Detector](#mrtdDetector)
-* [Creating customized build of BlinkID SDK](#customizedBuild)
-* [Troubleshooting](#troubleshoot)
-    * [Integration problems](#integrationTroubleshoot)
-    * [SDK problems](#sdkTroubleshoot)
-    * [Frequently asked questions and known problems](#faq)
-* [Additional info](#info)
+* [Quick Start](#user-content-quickStart)
+* [Advanced BlinkInput integration instructions](#user-content-advancedIntegration)
+    * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#user-content-uiCustomizations)
+        * [Built-in overlay view controllers and overlay subviews](#user-content-builtInUIComponents)
+    * [Using `MBBarcodeOverlayViewController`](#user-content-mbBarcodeOverlayViewcontroller)
+    * [Using `MBDocumentOverlayViewController`](#user-content-mbDocumentOverlayViewcontroller)
+    * [Using `MBDocumentVerificationOverlayViewController`](#user-content-mbDocumentVerificationOverlayViewcontroller)
+    * [Custom overlay view controller](#user-content-recognizerRunnerViewController)
+    * [Direct processing API](#user-content-directAPI)
+        * [Using Direct API for `NSString` recognition (parsing)](#user-content-directAPI_strings)
+* [`MBRecognizer` and available recognizers](#user-content-availableRecognizers)
+    * [The `MBRecognizer` concept](#user-content-recognizerConcept)
+    * [`MBRecognizerCollection` concept](#user-content-recognizerBCollection)
+* [List of available recognizers](#user-content-recognizerList)
+    * [Frame Grabber Recognizer](#user-content-frameGrabberRecognizer)
+    * [Success Frame Grabber Recognizer](#user-content-successFrameGrabberRecognizer)
+    * [PDF417 recognizer](#user-content-pdf417Recognizer)
+    * [Barcode recognizer](#user-content-barcodeRecognizer)
+    * [BlinkInput recognizer](#user-content-blinkInputRecognizer)
+    * [Detector recognizer](#user-content-detectorRecognizer)
+    * [BlinkID recognizers](#user-content-blinkid_recognizers)
+        * [Machine Readable Travel Document recognizer](#user-content-mrtdRecognizer)
+        * [Machine Readable Travel Document combined recognizer](#user-content-mrtd_combined_recognizer)
+        * [US / Canada driver's license barcode recognizer](#user-content-us_dl_recognizer)
+        * [US / Canada driver's license combined recognizer](#user-content-us_dl_combined_recognizer)
+        * [EU Driver's License recognizer](#user-content-eudlRecognizer)
+        * [Payment / Debit card recognizers ](#user-content-payment_card_recognizers)
+        * [Document face recognizer](#user-content-documentFaceRecognizer)
+    * [BlinkID recognizers by countries](#user-content-blinkIdRecognizersByCountry)
+        * [Austria](#user-content-austriaBlinkId)
+        * [Australia](#user-content-australiaBlinkId)
+        * [Brunei](#user-content-bruneiBlinkId)
+        * [Colombia](#user-content-colombiaBlinkId)
+        * [Croatia](#user-content-croatiaBlinkId)
+        * [Cyprus](#user-content-cyprusBlinkId)
+        * [Czechia](#user-content-czechiaBlinkId)
+        * [European Driver License](#user-content-eudlBlinkId)
+        * [Egypt](#user-content-egyptBlinkId)
+        * [Germany](#user-content-croatiaBlinkId)
+        * [Hong Kong](#user-content-hongkongBlinkId)
+        * [Indonesia](#user-content-indonesiaBlinkId)
+        * [Ireland](#user-content-irelandBlinkId)
+        * [Ireland](#user-content-irelandBlinkId)
+        * [Italy](#user-content-italyBlinkId)
+        * [Jordan](#user-content-jordanBlinkId)
+        * [Kuwait](#user-content-kuwaitBlinkId)
+        * [Malaysia](#user-content-malaysiaBlinkId)
+        * [Mexico](#user-content-mexicoBlinkId)
+        * [Morocco](#user-content-moroccoBlinkId)
+        * [New Zealand](#user-content-newZealandBlinkId)
+        * [Elite Payment Card](#user-content-elitePaymentCardBlinkId)
+        * [Payment Card](#user-content-paymentCardBlinkId)
+        * [Poland](#user-content-polandBlinkId)
+        * [Romania](#user-content-romaniaBlinkId)
+        * [Serbia](#user-content-serbiaBlinkId)
+        * [Singapore](#user-content-singaporeBlinkId)
+        * [Slovakia](#user-content-slovakiaBlinkId)
+        * [Slovenia](#user-content-sloveniaBlinkId)
+        * [Spain](#user-content-spainBlinkId)
+        * [Sweden](#user-content-swedenBlinkId)
+        * [Switzerland](#user-content-switzerlandBlinkId)
+        * [United Arab Emirates](#user-content-uaeBlinkId)
+        * [United States](#user-content-unitedStatesBlinkId)
+* [`Field by field` scanning feature](#user-content-fieldScan)
+    * [`Field by field` feature](#user-content-fieldByFieldFeature)
+* [`MBProcessor` and `MBParser`](#user-content-processorsAndParsers)
+    * [The `MBProcessor` concept](#user-content-processorConcept)
+    * [List of available processors](#user-content-processorList)
+        * [Image Return Processor](#user-content-imageReturnProcessor)
+        * [Parser Group Processor](#user-content-parserGroupProcessor)
+    * [The `MBParser` concept](#user-content-parserConcept)
+    * [List of available parsers](#user-content-parserList)
+        * [Amount Parser](#user-content-amountParser)
+        * [Date Parser](#user-content-dateParser)
+        * [Email Parser](#user-content-emailParser)
+        * [IBAN Parser](#user-content-ibanParser)
+        * [License Plates Parser](#user-content-licensePlatesParser)
+        * [Raw Parser](#user-content-rawParser)
+        * [Regex Parser](#user-content-regexParser)
+        * [TopUp Parser](#user-content-topUpParser)
+        * [VIN (*Vehicle Identification Number*) Parser](#user-content-vinParser)
+* [Scanning generic documents with Templating API](#user-content-detectorTemplating)
+        * [The `MBProcessorGroup` component](#user-content-processorGroup)
+        * [List of available dewarp policies](#user-content-dewarpPolicyList)
+        * [The `MBTemplatingClass` component](#user-content-templatingClass)
+        * [Implementing the `MBTemplatingClassifier`](#user-content-implementingTemplatingClassifier)
+* [The `MBDetector` concept](#user-content-detectorConcept)
+    * [List of available detectors](#user-content-detectorList)
+        * [Document Detector](#user-content-documentDetector)
+        * [MRTD Detector](#user-content-mrtdDetector)
+* [Creating customized build of BlinkID SDK](#user-content-customizedBuild)
+* [Troubleshooting](#user-content-troubleshoot)
+    * [Integration problems](#user-content-integrationTroubleshoot)
+    * [SDK problems](#user-content-sdkTroubleshoot)
+    * [Frequently asked questions and known problems](#user-content-faq)
+* [Additional info](#user-content-info)
 
 # <a name="requirements"></a> Requirements
 
@@ -157,7 +156,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.6.0'
+pod 'PPBlinkID', '~> 4.1.0'
 ```
 
 - Install the dependencies in your project:
@@ -746,17 +745,11 @@ You can find information about usage context at the beginning of [this section](
 
 For all recognizers, you can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-#### <a name="payment_card_single"></a> Payment / Debit card front and back side recognizers
-The [`MBPaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardFrontRecognizer.html) and [`MBPaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) are used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
-
-#### <a name="payment_card_combined"></a> Payment / Debit card combined recognizer
-The [`MBPaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardBackRecognizer.html) scans back side of Payment / Debit card after scanning the front side and combines data from both sides.
-
-#### <a name="elite_payment_card_single"></a> Elite Payment / Debit card front and back side recognizers
-The [`MBElitePaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardFrontRecognizer.html) and [`MBElitePaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardBackRecognizer.html) are used for scanning the front and back side of elite Payment / Debit card.
+#### <a name="payment_card_combined"></a> Payment / Debit card front and back side recognizers
+The [`MBBlinkCardRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardRecognizer.html)is used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
 
 #### <a name="elite_payment_card_combined"></a> Elite Payment / Debit card combined recognizer
-The [`MBElitePaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
+The [`MBBlinkCardEliteRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardEliteRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
 
 
 ### <a name="documentFaceRecognizer"></a> Document face recognizer
@@ -790,9 +783,13 @@ The [`MBBruneiIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/M
 
 The [`MBBruneiIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdBackRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
-The [`MBBruneResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+The [`MBBruneiResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
 
-The [`MBBruneResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+The [`MBBruneiResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiTemporaryResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiTemporaryResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
 
 ### <a name="colombiaBlinkId"></a> Colombia
 
