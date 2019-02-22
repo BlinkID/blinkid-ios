@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184958EC20AD90F000F27C8D /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 184958EA20AD90F000F27C8D /* MicroBlink.bundle */; };
 		3139C81B1C22B2AC005AC32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C81A1C22B2AC005AC32C /* AppDelegate.swift */; };
 		3139C81D1C22B2AC005AC32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139C81C1C22B2AC005AC32C /* ViewController.swift */; };
 		3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3139C81E1C22B2AC005AC32C /* Main.storyboard */; };
@@ -20,10 +19,11 @@
 		3139C8361C22B338005AC32C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8351C22B338005AC32C /* libc++.tbd */; };
 		3139C8381C22B33E005AC32C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8371C22B33E005AC32C /* libiconv.tbd */; };
 		A288D47B2073B5F20042A45F /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A288D47A2073B5F20042A45F /* CustomOverlay.swift */; };
-		A2AD639720D93B2D00739244 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* MicroBlink.framework */; };
-		A2AD639820D93B2D00739244 /* MicroBlink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* MicroBlink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2AD639720D93B2D00739244 /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* Microblink.framework */; };
+		A2AD639820D93B2D00739244 /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 184958EB20AD90F000F27C8D /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2C8BF9F21CBCD96001A097C /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2C8BF9E21CBCD95001A097C /* blinkid-license.txt */; };
 		A2FE137F1F75106F00C6F1EA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A2FE137E1F75106F00C6F1EA /* libz.tbd */; };
+		BE3F43312220341900281B50 /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE3F43302220341900281B50 /* Microblink.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A2AD639820D93B2D00739244 /* MicroBlink.framework in Embed Frameworks */,
+				A2AD639820D93B2D00739244 /* Microblink.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		184958EA20AD90F000F27C8D /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroBlink.bundle; path = ../../MicroBlink.bundle; sourceTree = "<group>"; };
-		184958EB20AD90F000F27C8D /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
+		184958EB20AD90F000F27C8D /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = ../../Microblink.framework; sourceTree = "<group>"; };
 		3139C8171C22B2AC005AC32C /* pdf417-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pdf417-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3139C81A1C22B2AC005AC32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3139C81C1C22B2AC005AC32C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		A288D47A2073B5F20042A45F /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		A2C8BF9E21CBCD95001A097C /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A2FE137E1F75106F00C6F1EA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BE3F43302220341900281B50 /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = ../../Microblink.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			files = (
 				A2FE137F1F75106F00C6F1EA /* libz.tbd in Frameworks */,
 				3139C8381C22B33E005AC32C /* libiconv.tbd in Frameworks */,
-				A2AD639720D93B2D00739244 /* MicroBlink.framework in Frameworks */,
+				A2AD639720D93B2D00739244 /* Microblink.framework in Frameworks */,
 				3139C8361C22B338005AC32C /* libc++.tbd in Frameworks */,
 				3139C8341C22B333005AC32C /* AudioToolbox.framework in Frameworks */,
 				3139C8321C22B324005AC32C /* CoreMedia.framework in Frameworks */,
@@ -118,8 +118,8 @@
 				A2FE137E1F75106F00C6F1EA /* libz.tbd */,
 				3139C8371C22B33E005AC32C /* libiconv.tbd */,
 				3139C8351C22B338005AC32C /* libc++.tbd */,
-				184958EA20AD90F000F27C8D /* MicroBlink.bundle */,
-				184958EB20AD90F000F27C8D /* MicroBlink.framework */,
+				BE3F43302220341900281B50 /* Microblink.bundle */,
+				184958EB20AD90F000F27C8D /* Microblink.framework */,
 				3139C8331C22B333005AC32C /* AudioToolbox.framework */,
 				3139C8311C22B324005AC32C /* CoreMedia.framework */,
 				3139C82F1C22B31D005AC32C /* AVFoundation.framework */,
@@ -198,10 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184958EC20AD90F000F27C8D /* MicroBlink.bundle in Resources */,
 				3139C8251C22B2AC005AC32C /* LaunchScreen.storyboard in Resources */,
 				3139C8221C22B2AC005AC32C /* Assets.xcassets in Resources */,
 				A2C8BF9F21CBCD96001A097C /* blinkid-license.txt in Resources */,
+				BE3F43312220341900281B50 /* Microblink.bundle in Resources */,
 				3139C8201C22B2AC005AC32C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
