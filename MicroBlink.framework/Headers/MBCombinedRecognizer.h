@@ -1,6 +1,6 @@
 //
 //  MBCombinedRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 17/05/2018.
 //

@@ -1,12 +1,12 @@
 //
 //  MBDisplayablePointsDetection.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 19/12/2017.
 //
 
 #import "MBDisplayableDetection.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

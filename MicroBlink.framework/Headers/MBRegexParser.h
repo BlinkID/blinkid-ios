@@ -1,16 +1,16 @@
 //
 //  MBRegexParser.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 15/03/2018.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBParser.h"
 #import "MBRegexParserResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 #import "MBBaseOcrEngineOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN

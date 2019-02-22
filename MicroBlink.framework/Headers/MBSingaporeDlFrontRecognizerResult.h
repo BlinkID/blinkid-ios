@@ -1,6 +1,6 @@
 //
 //  MBSingaporeDlFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by dodo on 25/07/2018.
 //

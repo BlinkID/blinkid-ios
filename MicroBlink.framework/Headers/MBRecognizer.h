@@ -1,12 +1,12 @@
 //
 //  MBRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 21/11/2017.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBEntity.h"
 #import "MBRecognizerResult.h"
 

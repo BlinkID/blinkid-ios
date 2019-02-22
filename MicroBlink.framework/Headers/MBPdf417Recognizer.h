@@ -1,16 +1,16 @@
 //
 //  MBPdf417Recognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 27/11/2017.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizer.h"
 #import "MBPdf417RecognizerResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

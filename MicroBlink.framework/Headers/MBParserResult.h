@@ -1,12 +1,12 @@
 //
 //  MBParserResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 06/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 /**
  * Enumeration of posibble parser result state

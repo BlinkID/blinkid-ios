@@ -1,6 +1,6 @@
 //
 //  MBImageReturnProcessor.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 23/03/2018.
 //
@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "MBProcessor.h"
 #import "MBImageReturnProcessorResult.h"
-#import "MBMicroBlinkDefines.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkDefines.h"
+#import "MBMicroblinkInitialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -1,6 +1,6 @@
 //
 //  MBSingaporeIdBackRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by dinogustin on 27/07/2018.
 //

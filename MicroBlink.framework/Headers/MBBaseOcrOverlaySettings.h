@@ -1,6 +1,6 @@
 //
 //  MBBaseOcrOverlaySettings.h
-//  MicroBlink
+//  Microblink
 //
 //  Created by Dino Gustin on 04/05/2018.
 //

@@ -1,12 +1,12 @@
 //
 //  MBCustomOverlayViewController.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 25/04/2018.
 //
 
 #import "MBOverlayViewController.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 
 #import "MBBaseOverlaySettings.h"
 #import "MBRecognizerRunnerViewControllerMetadataDelegates.h"

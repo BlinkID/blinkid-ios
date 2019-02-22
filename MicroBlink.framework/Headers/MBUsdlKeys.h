@@ -1,6 +1,6 @@
 //
 //  MBUsdlKeys.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 03/01/2018.
 //

@@ -1,6 +1,6 @@
 //
 //  MBParserGroupProcessor.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 02/03/2018.
 //
@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "MBProcessor.h"
 #import "MBParserGroupProcessorResult.h"
-#import "MBMicroBlinkDefines.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkDefines.h"
+#import "MBMicroblinkInitialization.h"
 
 @class MBParser;
 

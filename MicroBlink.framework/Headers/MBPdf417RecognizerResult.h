@@ -1,13 +1,13 @@
 //
 //  MBPdf417RecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 27/11/2017.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizerResult.h"
 #import "MBBarcodeResult.h"
 

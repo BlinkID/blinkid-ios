@@ -3,11 +3,11 @@
 //  BlinkIdFramework
 //
 //  Created by Jura on 07/01/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

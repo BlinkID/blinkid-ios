@@ -1,6 +1,6 @@
 //
 //  MBJordanIdBackRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 22/05/2018.
 //

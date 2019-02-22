@@ -1,6 +1,6 @@
 //
 //  MBUnitedArabEmiratesIdFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 28/05/2018.
 //

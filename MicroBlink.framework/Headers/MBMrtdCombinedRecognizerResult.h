@@ -1,11 +1,11 @@
 //
 //  MBMrtdCombinedRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 13/06/2018.
 //
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizerResult.h"
 
 #import "MBCombinedRecognizerResult.h"

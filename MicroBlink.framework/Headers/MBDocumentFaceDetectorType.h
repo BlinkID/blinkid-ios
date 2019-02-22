@@ -1,9 +1,12 @@
 //
 //  MBDocumentFaceRecognizerRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 18/06/2018.
 //
+
+#ifndef MBDocumentFaceDetectorType_h
+#define MBDocumentFaceDetectorType_h
 
 /**
  * Enumeration of all supported document types for MBDocumentFaceRecognizer
@@ -19,3 +22,5 @@ typedef NS_ENUM(NSUInteger, MBDocumentFaceDetectorType) {
     /** Uses MRTD detector for detecting documents with MRZ */
     MBDocumentFaceDetectorTypePassportsAndVisas,
 };
+
+#endif // MBDocumentFaceDetectorType_h

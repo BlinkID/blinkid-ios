@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MBParser.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 #import "MBImage.h"
 
 NS_ASSUME_NONNULL_BEGIN

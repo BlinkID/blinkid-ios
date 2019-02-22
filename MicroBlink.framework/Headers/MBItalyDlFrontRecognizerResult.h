@@ -1,6 +1,6 @@
 //
 //  MBItalyDlFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by juraskrlec on 09/10/2018.
 //

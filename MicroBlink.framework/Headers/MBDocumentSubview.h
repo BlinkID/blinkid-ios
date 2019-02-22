@@ -3,7 +3,7 @@
 //  PhotoPayFramework
 //
 //  Created by Jura on 04/02/2017.
-//  Copyright © 2017 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2017 Microblink Ltd. All rights reserved.
 //
 
 #import "MBSubview.h"

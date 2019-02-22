@@ -1,6 +1,6 @@
 //
 //  MBAustriaIdBackRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 11/06/2018.
 //

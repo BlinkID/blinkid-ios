@@ -1,6 +1,6 @@
 //
 //  MBLegacyRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 05/04/2018.
 //
@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizer.h"
 
 NS_ASSUME_NONNULL_BEGIN

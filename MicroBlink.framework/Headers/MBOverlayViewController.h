@@ -3,14 +3,14 @@
 //  PhotoPayFramework
 //
 //  Created by Jurica Cerovec on 5/28/13.
-//  Copyright (c) 2013 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2013 Microblink Ltd. All rights reserved.
 //
 
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
 #import "MBRecognizerRunnerViewController.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBOverlayContainerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN

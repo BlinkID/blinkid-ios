@@ -1,6 +1,6 @@
 //
 //  MBDocumentOverlayViewControllerDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 25/05/2018.
 //

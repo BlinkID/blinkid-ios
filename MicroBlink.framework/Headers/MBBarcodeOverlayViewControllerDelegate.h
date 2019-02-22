@@ -1,6 +1,6 @@
 //
 //  MBBarcodeOverlayViewControllerDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 17/01/2018.
 //

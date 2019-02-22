@@ -3,7 +3,7 @@
 //  BlinkIdFramework
 //
 //  Created by DoDo on 07/11/2016.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
 #ifndef PPResult_h

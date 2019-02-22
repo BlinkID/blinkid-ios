@@ -1,6 +1,6 @@
 //
 //  MBGlareRecognizerRunnerViewControllerDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 24/04/2018.
 //

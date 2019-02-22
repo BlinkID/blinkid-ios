@@ -10,7 +10,7 @@
 #import "MBGlareRecognizerRunnerViewControllerDelegate.h"
 #import "MBFirstSideFinishedRecognizerRunnerViewControllerDelegate.h"
  
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import <Foundation/Foundation.h>
  
 /**

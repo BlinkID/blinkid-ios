@@ -1,6 +1,6 @@
 //
 //  MBOcrRecognizerRunnerDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 20/12/2017.
 //

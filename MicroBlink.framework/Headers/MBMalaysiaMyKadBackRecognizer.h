@@ -1,6 +1,6 @@
 //
 //  MBMalaysiaMyKadBackRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 12/06/2018.
 //

@@ -1,6 +1,6 @@
 //
 //  MBLegacyRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 05/04/2018.
 //
@@ -8,7 +8,7 @@
 #ifndef MBLegacyRecognizerResult_h
 #define MBLegacyRecognizerResult_h
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizerResult.h"
 
 #import <Foundation/Foundation.h>

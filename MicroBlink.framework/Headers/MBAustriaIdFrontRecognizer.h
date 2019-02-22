@@ -1,6 +1,6 @@
 //
 //  MBAustriaIdFrontRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 22/05/2018.
 //
@@ -20,8 +20,8 @@
 #import "MBFullDocumentImageDpi.h"
 #import "MBGlareDetection.h"
 #import "MBRecognizer.h"
-#import "MBMicroBlinkInitialization.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkInitialization.h"
+#import "MBMicroblinkDefines.h"
 #import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN

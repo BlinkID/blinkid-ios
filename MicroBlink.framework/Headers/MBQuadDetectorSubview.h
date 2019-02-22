@@ -1,6 +1,6 @@
 //
 //  MBQuadDetectorSubview.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 02/05/2018.
 //

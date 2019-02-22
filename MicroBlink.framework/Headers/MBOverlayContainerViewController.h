@@ -3,7 +3,7 @@
 //  PhotoMathFramework
 //
 //  Created by Marko Mihovilić on 30/03/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
 #import "MBRecognizerRunnerViewController.h"

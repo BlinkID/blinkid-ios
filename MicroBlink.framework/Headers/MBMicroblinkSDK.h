@@ -1,12 +1,12 @@
 //
 //  MBMicroblinkSDK.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 14/11/2017.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBCameraSettings.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -31,7 +31,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * is equal to Microblink.bundle located in Main app bundle.
  *
  * i.e, this is by default initialized to:
- *   [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"MicroBlink" ofType:@"bundle"];
+ *   [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Microblink" ofType:@"bundle"];
  *
  */
 @property (nonatomic, strong) NSBundle *resourcesBundle;

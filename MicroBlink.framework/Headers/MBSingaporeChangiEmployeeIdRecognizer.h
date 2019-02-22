@@ -1,6 +1,6 @@
 //
 //  MBSingaporeChangiEmployeeIdRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 07/08/2018.
 //

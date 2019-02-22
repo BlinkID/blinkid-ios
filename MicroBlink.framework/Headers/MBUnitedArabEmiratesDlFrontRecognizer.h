@@ -1,6 +1,6 @@
 //
 //  MBUnitedArabEmiratesDlFrontRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by juraskrlec on 21/08/2018.
 //

@@ -3,7 +3,7 @@
 //  BarcodeFramework
 //
 //  Created by Jura on 22/12/13.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
 #import "MBBaseOverlayViewController.h"

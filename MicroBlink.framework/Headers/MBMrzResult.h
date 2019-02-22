@@ -1,11 +1,11 @@
 //
 //  MBMrzResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 02/05/2018.
 //
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBDateResult.h"
 
 #import <Foundation/Foundation.h>

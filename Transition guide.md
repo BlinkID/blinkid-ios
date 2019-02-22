@@ -1,3 +1,15 @@
+## 4.7.0
+
+- Minor API changes:
+    - `MBPolandIdBackRecognizerResult` has property `mrzResult` that contains the results
+    - removed mrz image extraction from `MBMrtdRecognizer` and `mrzImage` property in `MBMrtdRecognizerResult`
+    - removed mrz image extraction from `MBMrtdCombinedRecognizer` and `mrzImage` property in `MBMrtdCombinedRecognizerResult`
+    - removed glare detection from `MBMrtdCombinedRecognizer`
+    - `MBPaymentCardFrontRecognizer`, `MBPaymentCardBackRecognizer` and `MBPaymentCardCombinedRecognizer` have been replaced with `MBBlinkCardRecognizer`
+        - `MBBlinkCardRecognizer` is equivalent to `MBPaymentCardCombinedRecognizer`, to scan only front side set `extractCVV` to `false`
+    - `MBElitePaymentCardFrontRecognizer`, `MBElitePaymentCardBackRecognizer` and `MBElitePaymentCardCombinedRecognizer` have been replaced with `MBBlinkCardEliteRecognizer`
+        - `MBBlinkCardEliteRecognizer` is equivalent to `MBElitePaymentCardCombinedRecognizer`
+
 ## 4.6.0
 
 - Minor API changes

@@ -1,6 +1,6 @@
 //
 //  MBColombiaIdBackRecognizerRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by dodo on 24/07/2018.
 //

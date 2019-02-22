@@ -1,12 +1,12 @@
 //
 //  MBDetectionStatus.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 08/12/2017.
 //
 
 /**
- * Status of the object detection in MicroBlink SDK
+ * Status of the object detection in Microblink SDK
  */
 typedef NS_OPTIONS(NSInteger, MBDetectionStatus) {
     

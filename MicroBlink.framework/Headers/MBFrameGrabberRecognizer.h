@@ -1,12 +1,12 @@
 //
 //  MBFrameGrabberRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 02/01/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizer.h"
 
 @protocol MBFrameGrabberRecognizerDelegate;

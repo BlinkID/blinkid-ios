@@ -1,6 +1,6 @@
 //
 //  MBCroatiaIdFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 11/04/2018.
 //

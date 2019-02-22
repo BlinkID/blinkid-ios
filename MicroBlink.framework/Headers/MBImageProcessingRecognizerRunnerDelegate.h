@@ -1,6 +1,6 @@
 //
 //  MBImageProcessingDelegate.h
-//  MicroBlink
+//  Microblink
 //
 //  Created by DoDo on 07/05/2018.
 //

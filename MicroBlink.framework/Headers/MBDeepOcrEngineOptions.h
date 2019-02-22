@@ -8,7 +8,7 @@
 
 #import <CoreGraphics/CGBase.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBBaseOcrEngineOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN

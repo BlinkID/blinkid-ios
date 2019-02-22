@@ -1,6 +1,6 @@
 //
 //  MBFullDocumentImageExtensionFactors.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino on 19/06/2018.
 //

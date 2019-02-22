@@ -1,6 +1,6 @@
 //
 //  MBDocumentVerificationInstructionsSubview.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 29/05/2018.
 //

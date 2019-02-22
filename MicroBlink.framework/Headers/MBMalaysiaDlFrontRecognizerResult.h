@@ -1,6 +1,6 @@
 //
 //  MBMalaysiaDlFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by juraskrlec on 20/09/2018.
 //

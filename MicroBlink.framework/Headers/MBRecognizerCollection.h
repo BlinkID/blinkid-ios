@@ -1,6 +1,6 @@
 //
 //  MBScanSettings.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 24/11/2017.
 //

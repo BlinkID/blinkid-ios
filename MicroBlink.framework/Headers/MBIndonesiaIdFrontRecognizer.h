@@ -1,6 +1,6 @@
 //
 //  MBIndonesiaIdFrontRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by juraskrlec on 25/09/2018.
 //

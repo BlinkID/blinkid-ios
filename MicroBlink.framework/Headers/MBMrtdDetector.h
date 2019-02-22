@@ -1,15 +1,15 @@
 //
 //  MBMrtdDetector.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 20/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBQuadWithSizeDetector.h"
 #import "MBMrtdDetectorResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 #import "MBMrtdSpecification.h"
 
 NS_ASSUME_NONNULL_BEGIN

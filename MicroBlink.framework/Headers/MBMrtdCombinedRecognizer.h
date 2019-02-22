@@ -1,14 +1,14 @@
 //
 //  MBMrtdCombinedRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 13/06/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizer.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 #import "MBMrtdCombinedRecognizerResult.h"
 
 #import "MBCombinedRecognizer.h"
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  * MRTD Combined recognizer is used for scanning both front and back side of generic IDs.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBGlareDetection>
+@interface MBMrtdCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi>
 
 MB_INIT
 
@@ -57,6 +57,13 @@ MB_INIT
  * Default: NO
  */
 @property (nonatomic, assign) BOOL allowUnverifiedResults;
+
+/**
+ * Whether special characters are allowed
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowSpecialCharacters;
 
 /**
  * Defines how many times the same document should be detected before the detector

@@ -1,6 +1,6 @@
 //
 //  MBKuwaitIdBackRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by juraskrlec on 30/08/2018.
 //

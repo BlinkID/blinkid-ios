@@ -1,13 +1,13 @@
 //
-//  PPMicroBlinkDefines.h
+//  PPMicroblinkDefines.h
 //  BlinkIdFramework
 //
 //  Created by Jura on 04/01/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
-#ifndef PPMicroBlinkDefines_h
-#define PPMicroBlinkDefines_h
+#ifndef PPMicroblinkDefines_h
+#define PPMicroblinkDefines_h
 
 /**
  * Define your macros for accessing localization tables.
@@ -56,4 +56,4 @@ return MB_LOCALIZED(key);                               \
 
 #define PP_INIT_UNAVAILABLE - (instancetype)init NS_UNAVAILABLE;
 
-#endif /* PPMicroBlinkDefines_h */
+#endif /* PPMicroblinkDefines_h */

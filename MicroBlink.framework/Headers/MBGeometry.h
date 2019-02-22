@@ -3,7 +3,7 @@
 //  BarcodeFramework
 //
 //  Created by Jura on 03/08/14.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
 #import "TargetConditionals.h"
@@ -15,7 +15,7 @@
 #import <ApplicationServices/ApplicationServices.h>
 #endif
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 #define NULL_NUMBER INFINITY
 #define NULL_POINT CGPointMake(NULL_NUMBER, NULL_NUMBER)

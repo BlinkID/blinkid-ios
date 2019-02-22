@@ -1,15 +1,15 @@
 //
 //  MBVinRecognizer.h
-//  MicroBlink
+//  Microblink
 //
 //  Created by Dino Gustin on 23/04/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizer.h"
 #import "MBVinRecognizerResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

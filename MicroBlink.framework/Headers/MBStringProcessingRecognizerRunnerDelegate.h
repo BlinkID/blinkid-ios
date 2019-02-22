@@ -1,6 +1,6 @@
 //
 //  MBStringProcessingRecognizerRunnerDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 18/06/2018.
 //

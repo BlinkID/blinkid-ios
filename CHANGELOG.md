@@ -1,5 +1,30 @@
 # Release notes
 
+
+## 4.7.0
+
+- Updates and additions:
+    - added support for reading front side of Brunei Temporary Residence Permit - use `MBBruneiTemporaryResidencePermitFrontRecognizer`
+    - added support for reading back side of Brunei Temporary Residence Permit- use `MBBruneiTemporaryResidencePermitBackRecognizer`
+    - added `MBBlinkCardOverlayViewController` to be used with BlinkCard recognizers
+
+- Improvements in ID scanning performance:
+    - improved reading accuracy for `MBSingaporeIdBackRecognizer` with stickers
+    - enabled reading year-only dates of birth on *Kuwait IDs*
+    - all recognizers now reset their results on shake, except Combined recognizers
+
+- Minor API changes:
+    - `MBPolandIdBackRecognizerResult` has property `mrzResult` containing the results
+    - removed mrz image extraction from `MBMrtdRecognizer` and `mrzImage` property in `MBMrtdRecognizerResult`
+    - removed mrz image extraction from `MBMrtdCombinedRecognizer` and `mrzImage` property in `MBMrtdCombinedRecognizerResult`
+    - removed glare detection from `MBMrtdCombinedRecognizer`
+    - `MBPaymentCardFrontRecognizer`, `MBPaymentCardBackRecognizer` and `MBPaymentCardCombinedRecognizer` have been replaced with `MBBlinkCardRecognizer`
+    - `MBElitePaymentCardFrontRecognizer`, `MBElitePaymentCardBackRecognizer` and `MBElitePaymentCardCombinedRecognizer` have been replaced with `MBBlinkCardEliteRecognizer`
+
+- Bugfixes:
+    - `MBMrtdRecognizer` result state is now properly invalidated after detection fails
+    - templating recognizers no longer execute callbacks with `valid` state once they are `valid` on every frame even if nothing is 'detected'
+
 ## 4.6.0
 
 - Updates and additions

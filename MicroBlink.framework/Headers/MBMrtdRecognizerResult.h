@@ -1,12 +1,12 @@
 //
 //  MBMrtdDetectorRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 28/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBTemplatingRecognizerResult.h"
 #import "MBMrzResult.h"
 #import "MBFullDocumentImageResult.h"
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Result of MBMrtdDetectorRecognizer
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBMrtdRecognizerResult : MBTemplatingRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBMrzImageResult, MBEncodedMrzImageResult>
+@interface MBMrtdRecognizerResult : MBTemplatingRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 - (instancetype)init NS_UNAVAILABLE;
 

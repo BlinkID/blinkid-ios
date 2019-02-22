@@ -1,6 +1,6 @@
 //
 //  MBSwedenDlFrontRecognizerResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 16/06/2018.
 //

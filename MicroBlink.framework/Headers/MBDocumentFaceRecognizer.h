@@ -1,6 +1,6 @@
 //
 //  MBDocumentFaceRecognizerRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Dino Gustin on 18/06/2018.
 //

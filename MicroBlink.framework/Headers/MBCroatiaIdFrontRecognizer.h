@@ -3,7 +3,7 @@
 //  Showcase
 //
 //  Created by DoDo on 09/04/2018.
-//  Copyright © 2018 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2018 Microblink Ltd. All rights reserved.
 //
 
 #ifndef MBCroatiaIdFrontRecognizer_h

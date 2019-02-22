@@ -1,13 +1,13 @@
 //
 //  MBDateParserResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 12/03/2018.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBParserResult.h"
 #import "MBDateResult.h"
 

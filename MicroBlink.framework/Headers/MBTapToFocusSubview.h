@@ -3,7 +3,7 @@
 //  BlinkOcrFramework
 //
 //  Created by Jura on 18/09/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
 #import "MBSubview.h"

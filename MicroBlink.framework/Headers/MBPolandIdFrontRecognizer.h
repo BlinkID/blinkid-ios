@@ -1,77 +1,79 @@
 //
-//  MBPolandIdFrontRecognizer.h
-//  MicroBlinkDev
+// MBPolandIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by jcular on 20/02/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBPolandIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBFullDocumentImage.h"
-#import "MBGlareDetection.h"
 
+#import "MBGlareDetection.h"
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Polish ID Front Recognizer.
- *
- * Polish ID Front recognizer is used for scanning front side of Polish ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBPolandIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan front side of Poland ID cards.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBPolandIdFrontRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Polish ID Front recognizer result
+ * Result of scanning PolandIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBPolandIdFrontRecognizerResult *result;
 
 /**
- *  Defines if sex of Polish ID owner should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic, assign) BOOL extractSex;
+* Defines if date of birth of Poland ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfBirth;
 
 /**
- * Defines if citizenship of Polish ID owner should be extracted
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSurname;
-
-/**
- * Defines if date of birth of Polish ID owner should be extracted
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractGivenNames;
-
-/**
- * Defines if date of expiry should be extracted from Polish ID
- *
- * Default: YES
- */
+* Defines if family name of Poland ID owner should be extracted.
+*
+* Default: 'false'
+*/
 @property (nonatomic, assign) BOOL extractFamilyName;
 
 /**
- * Defines if date of expiry should be extracted from Polish ID
- *
- * Default: YES
- */
+* Defines if given names of Poland ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractGivenNames;
+
+/**
+* Defines if parents given names of Poland ID owner should be extracted.
+*
+* Default: 'false'
+*/
 @property (nonatomic, assign) BOOL extractParentsGivenNames;
 
 /**
- * Defines if date of expiry should be extracted from Polish ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfBirth;
+* Defines if sex of Poland ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSex;
+
+/**
+* Defines if surname of Poland ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurname;
 
 @end
 

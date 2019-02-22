@@ -1,6 +1,6 @@
 //
 //  MBEncodedMrzImageResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 13/06/2018.
 //

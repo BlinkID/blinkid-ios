@@ -3,13 +3,13 @@
 //  BlinkOcrFramework
 //
 //  Created by Jura on 30/04/15.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 #import "MBOcrFont.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBBaseOcrEngineOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN

@@ -1,11 +1,11 @@
 //
 //  MBParser.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 06/03/2018.
 //
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBEntity.h"
 #import "MBParserResult.h"
 

@@ -1,6 +1,6 @@
 //
 //  MBBarcodeResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 28/11/2017.
 //

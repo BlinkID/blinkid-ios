@@ -1,6 +1,6 @@
 //
 //  MBGlareStatusSubview.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 14/09/2017.
 //

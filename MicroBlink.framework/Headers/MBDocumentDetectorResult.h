@@ -1,13 +1,13 @@
 //
 //  MBDocumentDetectorResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 20/03/2018.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBQuadWithSizeDetectorResult.h"
 #import "MBDocumentSpecification.h"
 

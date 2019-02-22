@@ -1,9 +1,9 @@
 //
-//  MicroBlink.h
-//  MicroBlinkFramework
+//  Microblink.h
+//  MicroblinkFramework
 //
 //  Created by Dino Gustin on 06/06/18.
-//  Copyright (c) 2012 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2012 Microblink Ltd. All rights reserved.
 //
 
 #import "MBBlinkInputEntities.h"
@@ -35,6 +35,10 @@
 #import "MBBruneiResidencePermitFrontRecognizerResult.h"
 #import "MBBruneiResidencePermitBackRecognizer.h"
 #import "MBBruneiResidencePermitBackRecognizerResult.h"
+#import "MBBruneiTemporaryResidencePermitFrontRecognizer.h"
+#import "MBBruneiTemporaryResidencePermitFrontRecognizerResult.h"
+#import "MBBruneiTemporaryResidencePermitBackRecognizer.h"
+#import "MBBruneiTemporaryResidencePermitBackRecognizerResult.h"
 
 // Colombia
 #import "MBColombiaIdBackRecognizer.h"
@@ -164,19 +168,12 @@
 #import "MBNewZealandDlFrontRecognizer.h"
 #import "MBNewZealandDlFrontRecognizerResult.h"
 
-// Payment Card
-#import "MBPaymentCardBackRecognizer.h"
-#import "MBPaymentCardBackRecognizerResult.h"
-#import "MBPaymentCardFrontRecognizer.h"
-#import "MBPaymentCardFrontRecognizerResult.h"
-#import "MBPaymentCardCombinedRecognizer.h"
-#import "MBPaymentCardCombinedRecognizerResult.h"
-#import "MBElitePaymentCardBackRecognizer.h"
-#import "MBElitePaymentCardBackRecognizerResult.h"
-#import "MBElitePaymentCardFrontRecognizer.h"
-#import "MBElitePaymentCardFrontRecognizerResult.h"
-#import "MBElitePaymentCardCombinedRecognizer.h"
-#import "MBElitePaymentCardCombinedRecognizerResult.h"
+// BlinkCard
+#import "MBBlinkCardRecognizer.h"
+#import "MBBlinkCardRecognizerResult.h"
+
+#import "MBBlinkCardEliteRecognizer.h"
+#import "MBBlinkCardEliteRecognizerResult.h"
 
 // Poland
 #import "MBPolandIdBackRecognizer.h"

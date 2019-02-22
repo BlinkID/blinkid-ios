@@ -1,6 +1,6 @@
 //
 //  MBDocumentVerificationOverlaySettings.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 28/05/2018.
 //

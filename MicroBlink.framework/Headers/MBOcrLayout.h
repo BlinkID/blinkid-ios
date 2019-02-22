@@ -1,9 +1,9 @@
 //
 //  MBOcrLayout.h
-//  MicroBlinkFramework
+//  MicroblinkFramework
 //
 //  Created by Jura on 01/02/14.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,7 @@
 
 #import "MBOcrFont.h"
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 @class MBOcrBlock;
 @class MBOcrLine;

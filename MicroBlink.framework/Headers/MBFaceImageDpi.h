@@ -1,6 +1,6 @@
 //
 //  MBFaceImageDpi.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 19/06/2018.
 //

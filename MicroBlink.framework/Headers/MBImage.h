@@ -3,12 +3,12 @@
 //  BlinkIdFramework
 //
 //  Created by Dino on 25/02/16.
-//  Copyright © 2016 MicroBlink Ltd. All rights reserved.
+//  Copyright © 2016 Microblink Ltd. All rights reserved.
 //
 
 #import "Foundation/Foundation.h"
 #import "CoreMedia/CoreMedia.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

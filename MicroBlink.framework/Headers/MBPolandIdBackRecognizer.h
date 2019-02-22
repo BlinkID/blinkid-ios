@@ -1,36 +1,34 @@
 //
-//  MBPolandIdBackRecognizer.h
-//  MicroBlinkDev
+// MBPolandIdBackRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by jcular on 20/02/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBPolandIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
-#import "MBGlareDetection.h"
 
+#import "MBGlareDetection.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Polish ID Back Recognizer.
- *
- * Polish ID Back recognizer is used for scanning back side of Polish ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBPolandIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan back side of Poland ID cards.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBPolandIdBackRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Polish ID Back recognizer result
+ * Result of scanning PolandIdBackRecognizer
  */
 @property (nonatomic, strong, readonly) MBPolandIdBackRecognizerResult *result;
-
-
 
 @end
 

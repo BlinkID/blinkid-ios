@@ -1,59 +1,58 @@
 //
-//  MBPolandIdFrontRecognizerResult.h
-//  MicroBlinkDev
+// MBPolandIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by jcular on 20/02/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+
 
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Polish ID
- */
+* Recognizer which can scan front side of Poland ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBPolandIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult>
+@interface MBPolandIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *givenNames;
+* The date of birth of the Poland ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The last name of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The family name of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *familyName MB_PROPERTY_DEPRECATED;
 
 /**
- * The family name of Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *familyName MB_PROPERTY_DEPRECATED;
+* The given names of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The parents name of Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *parentsGivenNames MB_PROPERTY_DEPRECATED;
+* The parents given names of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *parentsGivenNames MB_PROPERTY_DEPRECATED;
 
 /**
- * The sex of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The sex of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 /**
- * The date of birth of Polish ID owner in DD.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfBirth;
-
-/**
- * The date of birth of Polish ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The surname of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

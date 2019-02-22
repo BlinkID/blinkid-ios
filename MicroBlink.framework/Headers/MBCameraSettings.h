@@ -3,13 +3,13 @@
 //  PhotoPayFramework
 //
 //  Created by Jura on 23/02/15.
-//  Copyright (c) 2015 MicroBlink Ltd. All rights reserved.
+//  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 
 /**
  * Camera resolution preset

@@ -1,12 +1,12 @@
 //
 //  MBQuadDetectorResult.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 19/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBDetectorResult.h"
 #import "MBQuadrangle.h"
 

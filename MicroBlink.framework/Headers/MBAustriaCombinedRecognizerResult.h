@@ -5,7 +5,7 @@
 //  Created by DoDo on 17/05/2018.
 //
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizerResult.h"
 
 #import "MBCombinedRecognizerResult.h"

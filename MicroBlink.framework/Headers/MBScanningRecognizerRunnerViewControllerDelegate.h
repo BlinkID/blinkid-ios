@@ -1,6 +1,6 @@
 //
 //  MBRecognizerRunnerViewDelegate.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 13/12/2017.
 //

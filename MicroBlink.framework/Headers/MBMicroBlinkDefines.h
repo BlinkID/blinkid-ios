@@ -1,6 +1,6 @@
 //
 //  MBMicroblinkDefines.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 12/04/2018.
 //
@@ -8,8 +8,8 @@
 #ifndef MBMicroblinkDefines_h
 #define MBMicroblinkDefines_h
 
-#import "PPMicroBlinkDefines.h"
-#import "MBMicroBlinkInitialization.h"
+#import "PPMicroblinkDefines.h"
+#import "MBMicroblinkInitialization.h"
 #import "AvailabilityMacros.h"
 
 #if defined(__has_attribute) && __has_attribute(objc_subclassing_restricted)

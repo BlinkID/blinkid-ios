@@ -1,11 +1,11 @@
 //
 //  MBViewControllerFactory.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 15/12/2017.
 //
 
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBRecognizerRunnerViewController.h"
 #import "MBOverlayViewController.h"
 

@@ -1,6 +1,6 @@
 //
 //  MBBaseOverlaySettings.h
-//  MicroBlink
+//  Microblink
 //
 //  Created by Dino Gustin on 04/05/2018.
 //
@@ -26,7 +26,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * If YES, default camera overlay will display Status bar.
  * Usually, if camera is displayed inside Navigation View Controler, this is reasonable to set to YES.
  *
- * Default: NO.
+ * Default: YES on iPhones with notch, NO otherwise.
  */
 @property (nonatomic, assign) BOOL showStatusBar;
 

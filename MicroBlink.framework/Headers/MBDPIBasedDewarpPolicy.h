@@ -1,12 +1,12 @@
 //
 //  MBDPIBasedDewarpPolicy.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 21/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBDewarpPolicy.h"
 
 NS_ASSUME_NONNULL_BEGIN

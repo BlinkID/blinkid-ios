@@ -1,15 +1,15 @@
 //
 //  MBMrtdDetectorRecognizer.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 28/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBTemplatingRecognizer.h"
 #import "MBMrtdRecognizerResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 #import "MBMrtdSpecification.h"
 #import "MBGlareDetection.h"
 
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer that can recognizer Machine Readable Zone (MRZ) of the Machine Readable Travel Document (MRTD)
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBMrzImage, MBMrzImageDpi, MBEncodeMrzImage, MBGlareDetection>
+@interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBGlareDetection>
 
 MB_INIT
 
@@ -55,6 +55,13 @@ MB_INIT
  * Default: NO
  */
 @property (nonatomic, assign) BOOL allowUnverifiedResults;
+
+/**
+ * Whether special characters are allowed
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowSpecialCharacters;
 
 /**
  * Sets the mrtd specifications. Mrtd specifications describe the images that should be returned by

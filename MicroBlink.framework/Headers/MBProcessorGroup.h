@@ -1,13 +1,13 @@
 //
 //  MBProcessorGroup.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 21/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkInitialization.h"
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkInitialization.h"
+#import "MBMicroblinkDefines.h"
 
 @class MBDewarpPolicy;
 @class MBProcessor;

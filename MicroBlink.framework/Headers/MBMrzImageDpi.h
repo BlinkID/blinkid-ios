@@ -1,6 +1,6 @@
 //
 //  MBMrzImageDpi.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 17/12/2018.
 //

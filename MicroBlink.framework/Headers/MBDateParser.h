@@ -1,15 +1,15 @@
 //
 //  MBDateParser.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by Jura Skrlec on 12/03/2018.
 //
 
 #import <Foundation/Foundation.h>
-#import "MBMicroBlinkDefines.h"
+#import "MBMicroblinkDefines.h"
 #import "MBParser.h"
 #import "MBDateParserResult.h"
-#import "MBMicroBlinkInitialization.h"
+#import "MBMicroblinkInitialization.h"
 
 /**
  * Available date formats for date parser. To activate parsing of dates with month names in

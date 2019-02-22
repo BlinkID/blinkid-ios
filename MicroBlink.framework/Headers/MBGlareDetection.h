@@ -1,6 +1,6 @@
 //
 //  MBGlareDetection.h
-//  MicroBlinkDev
+//  MicroblinkDev
 //
 //  Created by DoDo on 16/04/2018.
 //
