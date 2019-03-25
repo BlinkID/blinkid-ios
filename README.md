@@ -22,6 +22,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
+
 # Table of contents
 
 * [Requirements](#user-content-requirements)
@@ -156,7 +157,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.1.0'
+pod 'PPBlinkID', '~> 4.8.0'
 ```
 
 - Install the dependencies in your project:
