@@ -1,64 +1,74 @@
 //
-//  MBSloveniaIdFrontRecognizer.h
-//  MicroblinkDev
+// MBSloveniaIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 19/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSloveniaIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBSignatureImage.h"
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBEncodeSignatureImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Slovenian ID Front Recognizer.
- *
- * Slovenian ID Front recognizer is used for scanning front side of Slovenian ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSloveniaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBSignatureImage, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan front side of Slovenia ID.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBSloveniaIdFrontRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 
 /**
- * Slovenian ID Front recognizer result
+ * Result of scanning SloveniaIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBSloveniaIdFrontRecognizerResult *result;
 
 /**
- *  Defines if sex of Slovenian ID owner should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractSex;
+* Defines if date of expiry of Slovenian ID card should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
 
 /**
- *  Defines if nationality of Slovenian ID owner should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractNationality;
+* Defines if given names of Slovenian ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractGivenNames;
 
 /**
- *  Defines if date of birth of Slovenian ID owner should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractDateOfBirth;
+* Defines if nationality of Slovenian ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractNationality;
 
 /**
- *  Defines if date of expiry of Slovenian ID should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractDateOfExpiry;
+* Defines if sex of Slovenian ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSex;
+
+/**
+* Defines if surname of Slovenian ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurname;
 
 @end
 

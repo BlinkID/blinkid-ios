@@ -147,6 +147,26 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, assign, readonly) BOOL isVerified;
 
+/**
+ * Sanitized field opt1
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedOpt1;
+
+/**
+ * Sanitized field opt2
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedOpt2;
+
+/**
+ * Sanitized field nationality
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedNationality;
+
+/**
+ * Sanitized field issuer
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedIssuer;
+
 @end
 
 NS_ASSUME_NONNULL_END

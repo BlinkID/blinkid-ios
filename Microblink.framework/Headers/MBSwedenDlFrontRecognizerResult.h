@@ -1,70 +1,76 @@
 //
-//  MBSwedenDlFrontRecognizerResult.h
-//  MicroblinkDev
+// MBSwedenDlFrontRecognizerResult.h
 //
-//  Created by DoDo on 16/06/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
-#import "MBFullDocumentImageResult.h"
+
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
+#import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 #import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Sweden Dl
- */
+* Recognizer which can scan front side of Sweden DL.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSwedenDlFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult, MBSignatureImageResult>
+@interface MBSwedenDlFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The Surname of the Sweden DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The date of birth of Sweden DL owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The Name of the Sweden DL owner.
- */
-@property (nonatomic, readonly, nullable) NSString *name;
+* The date of expiry of Sweden DL.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The Date Of Birth of the Sweden DL owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The date of issue of Sweden DL.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The Date Of Issue of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The issuing agency of Sweden DL.
+*/
+@property (nonatomic, readonly) NSString *issuingAgency;
 
 /**
- * The Date Of Expiry of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The licence categories of Sweden DL.
+*/
+@property (nonatomic, readonly) NSString *licenceCategories;
 
 /**
- * The Issuing Agency of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAgency;
+* The licence number of Sweden DL.
+*/
+@property (nonatomic, readonly) NSString *licenceNumber;
 
 /**
- * The Reference Number of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSString *referenceNumber MB_PROPERTY_DEPRECATED;
+* The name of Sweden DL owner.
+*/
+@property (nonatomic, readonly) NSString *name;
 
 /**
- * The Licence Categories of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSString *licenceCategories;
+* The reference number of Sweden DL.
+*/
+@property (nonatomic, readonly) NSString *referenceNumber MB_PROPERTY_DEPRECATED;
 
 /**
- * The Licence Numer of the Sweden DL.
- */
-@property (nonatomic, readonly, nullable) NSString *licenceNumber;
+* The surname of Sweden DL owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
+
 
 @end
 

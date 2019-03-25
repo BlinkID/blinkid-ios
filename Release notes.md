@@ -1,11 +1,104 @@
 # Release notes
 
+## 4.8.0
+
+*Important notice on MRTD recognizer in the latest BlinkID SDK release (v 4.8.0.)*
+
+Please note that we have significantly improved accuracy for MRZ/MRTD scanning because now we switched to the newest OCR technology based on machine learning.
+To be more precise, we measured and compared existing vs. new MRTD scanning. The new OCR system based on machine learning achieves 99.9% accuracy on the character level, which results with a 50% reduction in the error rate in MRZ extraction.
+
+In order to use new *MrtdRecognizer* or *MrtdCombinedRecognizer* or to continue using any additional *Recognizer for scanning any ID with the MRZ (machine readable zone)* within the latest BlinkID SDK update, you *must* have a new license key. Before updating to the SDK version 4.8.0, please contact your account manager or send an email to support@microblink.com to obtain the *new production license key*.
+
+Important notes:
+- The MRTD scanning with the older BlinkID SDK versions (v 4.7.0 and below) will continue to work without any problems - until you decide to update.
+- If you upgrade to the SDK version 4.8.0 *without* a new license key scanning of MRTD/MRZ documents will *not* work.
+- Contact us at support@microblink.com to obtain a new license key if you plan to update your app with the latest release.
+
+For any questions, you might have, we stand at your service.
+
+- Updates and additions:
+    - added support for reading front side of Brunei Military ID - use `MBBruneiMilitaryIdFrontRecognizer`
+    - added support for reading back side of Brunei Military ID - use `MBBruneiMilitaryIdBackRecognizer`
+
+- Minor API changes:
+    - all recognizers for Serbia have been removed from this version
+    - fields that are *not* deprecated anymore:
+        - Sweden DL - reference number
+        - Ireland DL - driver number
+        - Malaysia iKad - passport number
+        - Hong Kong ID - commercial code
+    - deprecated recocgnizer methods (they have been replaced with properties):
+        - `MBUsdlRecognizerResult`:
+            - `getField:(MBUsdlKeys)usdlKey`
+            - `optionalElements`
+    - added new recognizer properties:
+        - `MBUsdlRecognizerResult`:
+            - `firstName`
+            - `lastName`
+            - `fullName`
+            - `address`
+            - `dateOfBirth`
+            - `dateOfIssue`
+            - `dateOfExpiry`
+            - `documentNumber`
+            - `sex`
+            - `restrictions`
+            - `endorsements`
+            - `vehicleClass`
+        - `MBMrzResult`:
+            - `sanitizedOpt1`
+            - `sanitizedOpt2`
+            - `sanitizedNationality`
+            - `sanitizedIssuer`
+    - renamed properties in `MBCzechiaCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `permanentStay`
+        - `issuingAuthority` to `autohority`
+        - `personalIdentificationNumber` to `personalNumber`
+    - renamed properties in `MBGermanyCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `issuingAuthority` to `autohority`
+        - `eyeColour` to `colourOfEyes`
+    - renamed properties in `MBJordanCombinedRecognizerResult`:
+        - `issuer` to `issuedBy`
+    - renamed properties in `MBSlovakiaCombinedRecognizerResult`:
+        - `identityCardNumber` to `documentNumber`
+        - `issuingAuthority` to `issuedBy`
+        - `personalIdentificationNumber` to `personalNumber`
+    - renamed properties in `MBRomaniaIdFrontRecognizerResult`:
+        - `lastName` to `surname`
+        - `identityCardNumber` to `documentNumber`
+        - `nonMrzNationality` to `nationality`
+        - `nonMrzSex` to `sex`
+        - `validFrom` to `dateOfIssue`
+        - `validUntil` to `dateOfExpiry`
+        - `cardNumber` is now part of `MrzResult` as `documentNumber`
+    - renamed properties in `MBSloveniaCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `permanentStay`
+        - `issuingAuthority` to `administrativeUnit`
+        - `personalIdentificationNumber` to `pin`
+        - `citizenship` to `nationality`
+    - renamed properties in `MBSloveniaIdBackRecognizerResult`:
+        - `issuingAuthority` to `administrativeUnit`
+    - renamed properties in `MBPolandCombinedRecognizerResult`:
+        - `issuer` to `issuedBy`
+    - removed properties in `MBRomaniaIdFrontRecognizer`:
+        - `idSeries`
+        - `cnp`
+
 
 ## 4.7.0
 
 - Updates and additions:
     - added support for reading front side of Brunei Temporary Residence Permit - use `MBBruneiTemporaryResidencePermitFrontRecognizer`
-    - added support for reading back side of Brunei Temporary Residence Permit- use `MBBruneiTemporaryResidencePermitBackRecognizer`
+    - added support for reading back side of Brunei Temporary Residence Permit - use `MBBruneiTemporaryResidencePermitBackRecognizer`
     - added `MBBlinkCardOverlayViewController` to be used with BlinkCard recognizers
 
 - Improvements in ID scanning performance:

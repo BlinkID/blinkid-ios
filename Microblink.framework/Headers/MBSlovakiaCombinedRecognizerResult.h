@@ -1,110 +1,108 @@
 //
-//  MBSlovakiaCombinedRecognizerResult.h
-//  BarDecoder
+// MBSlovakiaCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
-#import "MBEncodedSignatureImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
-
-#import <Foundation/Foundation.h>
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Slovak ID.
- */
+* Recognizer which can scan front and back side of Slovakia national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSlovakiaCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBSlovakiaCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The address of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The last name of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of birth of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The identity card number of Slovak ID.
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
+* The date of expiry of the Slovak ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The sex of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of issue of the Slovak ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The nationality of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The document number of the Slovak ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The PIN of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalIdentificationNumber;
+* The first name of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *firstName;
 
 /**
- * The date of birth of Slovak ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The issuing authority of the Slovak ID card.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
 
 /**
- * The date of expiry of Slovak ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The last name of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *lastName;
 
 /**
- * The address of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
-
-/**
- * The issuing authority of Slovak ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
-
-/**
- * The date of issue of Slovak ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
-
-/**
- * The surname at birth of Slovak ID.
- */
-@property (nonatomic, readonly, nullable) NSString *surnameAtBirth;
-
-/**
- * The special remarks of Slovak ID.
- */
-@property (nonatomic, readonly, nullable) NSString *specialRemarks;
-
-/**
- * The place of birth of the Slovak ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The nationality of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The personal number of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *personalNumber;
+
+/**
+* The place of birth of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
+
+/**
+* The sex of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The special remarks of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *specialRemarks;
+
+/**
+* The surname at birth of the Slovak ID owner.
+*/
+@property (nonatomic, readonly) NSString *surnameAtBirth;
+
 
 @end
 

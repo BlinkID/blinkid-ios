@@ -22,6 +22,7 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
+
 # Table of contents
 
 * [Requirements](#user-content-requirements)
@@ -156,7 +157,7 @@ git lfs install
 
 ```ruby
 platform :ios, '9.0'
-pod 'PPBlinkID', '~> 4.1.0'
+pod 'PPBlinkID', '~> 4.8.0'
 ```
 
 - Install the dependencies in your project:
@@ -790,6 +791,10 @@ The [`MBBruneiResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-i
 The [`MBBruneiTemporaryResidencePermitFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
 
 The [`MBBruneiTemporaryResidencePermitBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiTemporaryResidencePermitBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Residence Permit.
+
+The [`MBBruneiMilitaryIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiMilitaryIdBackRecognizer.html) is recognizer specialised for scanning back side of Brunei Military ID.
+
+The [`MBBruneiMilitaryIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiMilitaryIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei Military ID.
 
 ### <a name="colombiaBlinkId"></a> Colombia
 
@@ -1452,6 +1457,6 @@ done
 
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/docs/index.html). 
 
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

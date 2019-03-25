@@ -1,92 +1,91 @@
 //
-//  MBRomaniaIdFrontRecognizer.h
-//  MicroblinkDev
+// MBRomaniaIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBRomaniaIdFrontRecognizerResult.h"
-
-#import <Foundation/Foundation.h>
-#import "MBFaceImage.h"
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Romanian ID Front Recognizer.
- *
- * Romanian ID Front recognizer is used for scanning front side of Romanian ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBRomaniaIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFaceImage, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan front side of Romania ID.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBRomaniaIdFrontRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Romanian ID Front recognizer result
+ * Result of scanning RomaniaIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBRomaniaIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's first name should be extracted from the ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractFirstName;
-
-/**
- * Defines if owner's last name should be extracted from the ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractLastName;
-
-/**
- * Defines if the place of birth should be extracted from the ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractPlaceOfBirth;
-
-/**
- * Defines if the owner's address should be extracted from the ID
- *
- * Default: YES
- */
+* Defines if address of Romania ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if the issued ny data should be extracted from the ID
- *
- * Default: YES
- */
+* Defines if date of expiry of Romania ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfExpiry;
+
+/**
+* Defines if date of issue of Romania ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfIssue;
+
+/**
+* Defines if first name of Romania ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractFirstName;
+
+/**
+* Defines if issuing authority of Romania ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractIssuedBy;
 
 /**
- * Defines if the valid from date should be extracted from the ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractValidFrom;
+* Defines if place of birth of Romania ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractPlaceOfBirth;
 
 /**
- * Defines if the valid until date should be extracted from the ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractValidUntil;
+* Defines if sex of Romania ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSex;
 
 /**
- * Defines if the owner's sex information should be extracted from the ID
- * from non-MRZ part of the ID.
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNonMRZSex;
+* Defines if surname of Romania ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurname;
 
 @end
 

@@ -1,114 +1,133 @@
 //
-//  MBSlovakiaCombinedRecognizer.h
-//  BarDecoder
+// MBSlovakiaCombinedRecognizer.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSlovakiaCombinedRecognizerResult.h"
 
 #import "MBCombinedRecognizer.h"
-
-#import "MBGlareDetection.h"
-#import "MBFullDocumentImage.h"
-#import "MBSignatureImage.h"
-#import "MBFaceImage.h"
-
 #import "MBDigitalSignature.h"
 
+#import "MBGlareDetection.h"
+#import "MBFaceImage.h"
 #import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
 #import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
 #import "MBEncodeSignatureImage.h"
-
-#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Slovak ID Combined Recognizer.
- *
- * Slovak ID Combined recognizer is used for scanning both front and back side of Slovak ID.
- */
+* Recognizer which can scan front and back side of Slovakia national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBSlovakiaCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBSignatureImage, MBFaceImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBEncodeSignatureImage, MBDigitalSignature>
+@interface MBSlovakiaCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 
 /**
- * Slovak ID Combined recognizer result
+ * Result of scanning SlovakiaCombinedRecognizer
  */
-@property (nonatomic, strong, readonly) MBSlovakiaCombinedRecognizerResult* result;
+@property (nonatomic, strong, readonly) MBSlovakiaCombinedRecognizerResult *result;
 
 /**
- * Defines if owner's sex should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSex;
+* Defines if address of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractAddress;
 
 /**
- * Defines if owner's nationality should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractNationality;
-
-/**
- * Defines if owner's date of birth should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if date of birth of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDateOfBirth;
 
 /**
- * Defines if ID's date of expiry should be extracted
- *
- * Default: YES
- */
+* Defines if date of expiry of Slovak ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDateOfExpiry;
 
 /**
- * Defines if ID's date of issue should be extracted
- *
- * Default: YES
- */
+* Defines if date of issue of Slovak ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDateOfIssue;
 
 /**
- * Defines if issuing authority should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractIssuedBy;
-
-/**
- * Defines if issuing document number should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if document number of Slovak ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractDocumentNumber;
 
 /**
- * Defines if owner's surname at birth should be extracted from Slovakian ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractSurnameAtBirth;
+* Defines if first name of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractFirstName;
 
 /**
- * Defines if owner's place of birth should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if issuing authority of Slovak ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractIssuedBy;
+
+/**
+* Defines if last name of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractLastName;
+
+/**
+* Defines if nationality of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractNationality;
+
+/**
+* Defines if place of birth of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractPlaceOfBirth;
 
 /**
- * Defines if owner's special remarks should be extracted from Slovakian ID
- *
- * Default: YES
- */
+* Defines if sex of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSex;
+
+/**
+* Defines if special remarks of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractSpecialRemarks;
+
+/**
+* Defines if surname at birth of Slovak ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractSurnameAtBirth;
 
 @end
 

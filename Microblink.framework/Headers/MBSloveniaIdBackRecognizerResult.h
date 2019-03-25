@@ -1,43 +1,45 @@
 //
-//  MBSloveniaIdBackRecognizerResult.h
-//  MicroblinkDev
+// MBSloveniaIdBackRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 19/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
-
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning back side of Slovenian ID
- */
+* Recognizer which can scan back side of Slovenia ID.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSloveniaIdBackRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFullDocumentImageResult>
+@interface MBSloveniaIdBackRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The address of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The address of Slovenian ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The authority of the Slovenian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *authority;
+* The issuing administrative unit of Slovenian ID.
+*/
+@property (nonatomic, readonly) NSString *administrativeUnit;
 
 /**
- * Date of issue of the Slovenian ID in dd.MM.yyyy format.
- */
-@property (nonatomic, readonly, nullable) NSString *rawDateOfIssue;
+* The date of issue of Slovenian ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * Date of issue of the Slovenian ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 @end
 

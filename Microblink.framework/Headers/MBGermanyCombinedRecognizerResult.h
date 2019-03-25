@@ -1,108 +1,108 @@
 //
-//  MBGermanyCombinedRecognizerResult.h
-//  BarDecoder
+// MBGermanyCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 19/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
-#import "MBEncodedSignatureImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of German ID.
- */
+* Recognizer which can scan front and back side of German national ID cards,
+ front side of German old ID card and front side of German Passport.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBGermanyCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBGermanyCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The address of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The last name of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The issuing authority of the Germany ID card.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The nationality of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The CAN number of the Germany ID card.
+*/
+@property (nonatomic, readonly) NSString *canNumber;
 
 /**
- * The place of birth of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
+* The colour of eyes of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *colourOfEyes;
 
 /**
- * The sex of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of birth of the Germany ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The date of birth of German ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The date of expiry of the Germany ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The date of issue of German ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
+* The date of issue of the Germany ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The date of expiry of German ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The document number of the Germany ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The identity card number of German ID.
- */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+* The given names of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The address of the German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
+* The height of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *height;
 
 /**
- * The issuing authority of German ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
-
-/**
- * The height of German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *height;
-
-/**
- * The eye color of German ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *eyeColor;
-
-/**
- * The CAN number of German ID.
- */
-@property (nonatomic, readonly, nullable) NSString *canNumber;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The nationality of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The place of birth of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
+
+/**
+* The sex of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The surname of the Germany ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

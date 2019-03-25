@@ -39,6 +39,10 @@
 #import "MBBruneiTemporaryResidencePermitFrontRecognizerResult.h"
 #import "MBBruneiTemporaryResidencePermitBackRecognizer.h"
 #import "MBBruneiTemporaryResidencePermitBackRecognizerResult.h"
+#import "MBBruneiMilitaryIdBackRecognizer.h"
+#import "MBBruneiMilitaryIdBackRecognizerResult.h"
+#import "MBBruneiMilitaryIdFrontRecognizer.h"
+#import "MBBruneiMilitaryIdFrontRecognizerResult.h"
 
 // Colombia
 #import "MBColombiaIdBackRecognizer.h"
@@ -186,14 +190,6 @@
 // Romania
 #import "MBRomaniaIdFrontRecognizer.h"
 #import "MBRomaniaIdFrontRecognizerResult.h"
-
-// Serbia
-#import "MBSerbiaIdBackRecognizer.h"
-#import "MBSerbiaIdBackRecognizerResult.h"
-#import "MBSerbiaIdFrontRecognizer.h"
-#import "MBSerbiaIdFrontRecognizerResult.h"
-#import "MBSerbiaCombinedRecognizer.h"
-#import "MBSerbiaCombinedRecognizerResult.h"
 
 // Singapore
 #import "MBSingaporeIdBackRecognizer.h"

@@ -1,101 +1,98 @@
 //
-//  MBCroatiaCombinedRecognizerResult.h
-//  BarDecoder
+// MBCzechiaCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBMicroblinkDefines.h"
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
-#import "MBEncodedSignatureImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
-
-#import <Foundation/Foundation.h>
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Czech ID.
- */
+* Recognizer which can scan front and back side of Czechia national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBCzechiaCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBCzechiaCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The issuing authority of the Czechia ID card.
+*/
+@property (nonatomic, readonly) NSString *authority;
 
 /**
- * The last name of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The date of birth of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The document number of the Czech ID.
- */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+* The date of expiry of the Czechia ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The sex of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of issue of the Czechia ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The nationality of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The document number of the Czechia ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The date of birth of Czech ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The given names of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The date of expiry of Czech ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
-
-/**
- * The place of birth of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *placeOfBirth;
-
-/**
- * The full address of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
-
-/**
- * The issuing authority of Czech ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
-
-/**
- * The date of issue of Czech ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
-
-/**
- * The personal identification number of the Czech ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalIdentificationNumber;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The nationality of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The permanent stay address of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *permanentStay;
+
+/**
+* The personal number of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *personalNumber;
+
+/**
+* The place of birth of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
+
+/**
+* The sex of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The surname of the Czechia ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
+
 
 @end
 

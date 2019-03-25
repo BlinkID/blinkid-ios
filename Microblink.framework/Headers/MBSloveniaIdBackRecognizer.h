@@ -1,48 +1,54 @@
 //
-//  MBSloveniaIdBackRecognizer.h
-//  MicroblinkDev
+// MBSloveniaIdBackRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 19/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBSloveniaIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Slovenian ID Back Recognizer.
- *
- * Slovenian ID Back recognizer is used for scanning back side of Slovenian ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSloveniaIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan back side of Slovenia ID.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBSloveniaIdBackRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Slovenian ID Back recognizer result
+ * Result of scanning SloveniaIdBackRecognizer
  */
 @property (nonatomic, strong, readonly) MBSloveniaIdBackRecognizerResult *result;
 
 /**
- *  Defines if issuing authority of Slovenian ID should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractAuthority;
+* Defines if address of Slovenian ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractAddress;
 
 /**
- *  Defines if date of issue of Slovenian ID should be extracted
- *
- *  Default: YES
- */
-@property (nonatomic) BOOL extractDateOfIssue;
+* Defines if issuing administrative unit of Slovenian ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractAdministrativeUnit;
+
+/**
+* Defines if date of issue of Slovenian ID should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfIssue;
 
 @end
 

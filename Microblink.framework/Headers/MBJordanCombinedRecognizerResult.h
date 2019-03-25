@@ -1,78 +1,76 @@
 //
-//  MBCroatiaCombinedRecognizerResult.h
-//  BarDecoder
+// MBJordanCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
-
-#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Czech ID.
- */
+* Recognizer which can scan front and back side of Jordan national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBJordanCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBJordanCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The Name of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *name;
+* The date of birth of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The Sex of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of expiry of the Jordan ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The Date Of Birth of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The document number of the Jordan ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The Document Number of the Jordan ID.
- */
-@property (nonatomic, readonly, nullable) NSString *nationalNumber;
+* The issuing authority of the Jordan ID card.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
 
 /**
- * The nationality of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
-
-/**
- * The issuer of the Jordan ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuer;
-
-/**
- * The Document Number of the Jordan ID.
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
-
-/**
- * The Date of expiry of the Jordan ID.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The name of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) NSString *name;
+
+/**
+* The national number of the Jordan ID card.
+*/
+@property (nonatomic, readonly) NSString *nationalNumber;
+
+/**
+* The nationality of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The sex of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
 
 @end
 

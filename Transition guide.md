@@ -1,3 +1,78 @@
+## 4.8.0
+
+- Minor API changes:
+    - all recognizers for Serbia have been removed from this version
+    - fields that are *not* deprecated anymore:
+        - Sweden DL - reference number
+        - Ireland DL - driver number
+        - Malaysia iKad - passport number
+        - Hong Kong ID - commercial code
+    - deprecated recocgnizer methods (they have been replaced with properties):
+        - `MBUsdlRecognizerResult`:
+            - `getField:(MBUsdlKeys)usdlKey`
+            - `optionalElements`
+    - added new recognizer properties:
+        - `MBUsdlRecognizerResult`:
+            - `firstName`
+            - `lastName`
+            - `fullName`
+            - `address`
+            - `dateOfBirth`
+            - `dateOfIssue`
+            - `dateOfExpiry`
+            - `documentNumber`
+            - `sex`
+            - `restrictions`
+            - `endorsements`
+            - `vehicleClass`
+        - `MBMrzResult`:
+            - `sanitizedOpt1`
+            - `sanitizedOpt2`
+            - `sanitizedNationality`
+            - `sanitizedIssuer`
+    - renamed properties in `MBCzechiaCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `permanentStay`
+        - `issuingAuthority` to `autohority`
+        - `personalIdentificationNumber` to `personalNumber`
+    - renamed properties in `MBGermanyCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `issuingAuthority` to `autohority`
+        - `eyeColour` to `colourOfEyes`
+    - renamed properties in `MBJordanCombinedRecognizerResult`:
+        - `issuer` to `issuedBy`
+    - renamed properties in `MBSlovakiaCombinedRecognizerResult`:
+        - `identityCardNumber` to `documentNumber`
+        - `issuingAuthority` to `issuedBy`
+        - `personalIdentificationNumber` to `personalNumber`
+    - renamed properties in `MBRomaniaIdFrontRecognizerResult`:
+        - `lastName` to `surname`
+        - `identityCardNumber` to `documentNumber`
+        - `nonMrzNationality` to `nationality`
+        - `nonMrzSex` to `sex`
+        - `validFrom` to `dateOfIssue`
+        - `validUntil` to `dateOfExpiry`
+        - `cardNumber` is now part of `MrzResult` as `documentNumber`
+    - renamed properties in `MBSloveniaCombinedRecognizerResult`:
+        - `lastName` to `surname`
+        - `firstName` to `givenNames`
+        - `identityCardNumber` to `documentNumber`
+        - `address` to `permanentStay`
+        - `issuingAuthority` to `administrativeUnit`
+        - `personalIdentificationNumber` to `pin`
+        - `citizenship` to `nationality`
+    - renamed properties in `MBSloveniaIdBackRecognizerResult`:
+        - `issuingAuthority` to `administrativeUnit`
+    - renamed properties in `MBPolandCombinedRecognizerResult`:
+        - `issuer` to `issuedBy`
+    - removed properties in `MBRomaniaIdFrontRecognizer`:
+        - `idSeries`
+        - `cnp`
+        
 ## 4.7.0
 
 - Minor API changes:
