@@ -31,7 +31,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The commerical Code of the Hong Kong ID.
  */
-@property (nonatomic, readonly, nullable) NSString *commercialCode MB_PROPERTY_DEPRECATED;
+@property (nonatomic, readonly, nullable) NSString *commercialCode;
 
 /**
  * The date of birth of the Hong Kong ID ownder.

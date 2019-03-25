@@ -1,41 +1,42 @@
 //
-//  MBEgyptIdFrontRecognizer.h
-//  MicroblinkDev
+// MBEgyptIdFrontRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBEgyptIdFrontRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
-#import "MBFaceImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFaceImage.h"
+#import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Egypt ID Front Recognizer.
- *
- * Egypt ID Front recognizer is used for scanning front side of Egypt ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBEgyptIdFrontRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBFaceImage, MBGlareDetection>
+* Recognizer which can scan front side of Egypt ID.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBEgyptIdFrontRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Egypt ID Front recognizer result
+ * Result of scanning EgyptIdFrontRecognizer
  */
 @property (nonatomic, strong, readonly) MBEgyptIdFrontRecognizerResult *result;
 
 /**
- * Defines if owner's national number should be extracted from Egypt ID
- *
- * Default: YES
- */
+* Defines if national number of Egypt ID should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractNationalNumber;
 
 @end

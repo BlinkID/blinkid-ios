@@ -1,99 +1,82 @@
 //
-//  MBRomaniaIdFrontRecognizerResult.h
-//  MicroblinkDev
+// MBRomaniaIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyMRTDRecognizerResult.h"
-
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
+#import "MBMrzResult.h"
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
 #import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Romanian ID
- */
+* Recognizer which can scan front side of Romania ID.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBRomaniaIdFrontRecognizerResult : MBLegacyMRTDRecognizerResult<NSCopying, MBFaceImageResult, MBFullDocumentImageResult>
+@interface MBRomaniaIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * Last name
- */
-@property (nonatomic, strong, readonly, nullable) NSString *lastName;
+* The address of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * First name
- */
-@property (nonatomic, strong, readonly, nullable) NSString *firstName;
+* The date of expiry of Romania ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * Card number
- */
-@property (nonatomic, strong, readonly, nullable) NSString *cardNumber;
+* The date of issue of Romania ID.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * ID series
- */
-@property (nonatomic, strong, readonly, nullable) NSString *idSeries;
+* The first name of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *firstName;
 
 /**
- * CNP
- */
-@property (nonatomic, strong, readonly, nullable) NSString *cnp;
+* The issuing authority of Romania ID.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
 
 /**
- * Parent names - missing if nationality exists
- */
-@property (nonatomic, strong, readonly, nullable) NSString *parentNames MB_PROPERTY_DEPRECATED;
+* The data extracted from the machine readable zone.
+*/
+@property (nonatomic, readonly) MBMrzResult *mrzResult;
 
 /**
- * Nationality - missing if parent names exists
- */
-@property (nonatomic, strong, readonly, nullable) NSString *nonMRZNationality;
+* The nationality of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
 
 /**
- * Place of birth
- */
-@property (nonatomic, strong, readonly, nullable) NSString *placeOfBirth;
+* The parent name of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *parentName MB_PROPERTY_DEPRECATED;
 
 /**
- * Address
- */
-@property (nonatomic, strong, readonly, nullable) NSString *address;
+* The place of birth of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *placeOfBirth;
 
 /**
- * Issued by
- */
-@property (nonatomic, strong, readonly, nullable) NSString *issuedBy;
+* The sex of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
 
 /**
- * Sex
- */
-@property (nonatomic, strong, readonly, nullable) NSString *nonMRZSex;
-
-/**
- * Valid from
- */
-@property (nonatomic, strong, readonly, nullable) NSDate *validFrom;
-
-/**
- * Valid from date in format DD.MM.YYYY.
- */
-@property (nonatomic, readonly, nullable) NSString *rawValidFrom;
-
-/**
- * Valid until
- */
-@property (nonatomic, strong, readonly, nullable) NSDate *validUntil;
-
-/**
- * Valid until date in format DD.MM.YYYY.
- */
-@property (nonatomic, readonly, nullable) NSString *rawValidUntil;
+* The surname of Romania ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

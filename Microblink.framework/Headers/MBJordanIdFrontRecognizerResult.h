@@ -1,44 +1,49 @@
 //
-//  MBJordanIdFrontRecognizerResult.h
-//  MicroblinkDev
+// MBJordanIdFrontRecognizerResult.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
-#import "MBFullDocumentImageResult.h"
+
 #import "MBFaceImageResult.h"
+#import "MBEncodedFaceImageResult.h"
+#import "MBFullDocumentImageResult.h"
+#import "MBEncodedFullDocumentImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning front side of Jordan ID
- */
+* Recognizer which can scan front side of Jordan national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBJordanIdFrontRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
+@interface MBJordanIdFrontRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The Name of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *name;
+* The date of birth of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The Sex of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The name of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) NSString *name;
 
 /**
- * The Date Of Birth of the Jordan ID owner.
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The national number of the Jordan ID.
+*/
+@property (nonatomic, readonly) NSString *nationalNumber;
 
 /**
- * The National Number of the Jordan ID.
- */
-@property (nonatomic, readonly, nullable) NSString *nationalNumber;
+* The sex of the Jordan ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
 
 @end
 

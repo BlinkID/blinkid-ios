@@ -1,36 +1,40 @@
 //
-//  MBJordanIdBackRecognizer.h
-//  MicroblinkDev
+// MBJordanIdBackRecognizer.h
 //
-//  Created by Dino Gustin on 22/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizer.h"
+#import "MBRecognizer.h"
 #import "MBJordanIdBackRecognizerResult.h"
 
-#import <Foundation/Foundation.h>
-#import "MBFullDocumentImage.h"
 #import "MBGlareDetection.h"
-
+#import "MBFullDocumentImage.h"
+#import "MBEncodeFullDocumentImage.h"
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class for configuring Jordan ID Back Recognizer.
- *
- * Jordan ID Back recognizer is used for scanning back side of Jordan ID.
- */
-PP_CLASS_AVAILABLE_IOS(8.0)
-@interface MBJordanIdBackRecognizer : MBLegacyRecognizer <NSCopying, MBFullDocumentImage, MBGlareDetection>
+* Recognizer which can scan back side of Jordan ID cards.
+*/
+MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+@interface MBJordanIdBackRecognizer : MBRecognizer<NSCopying, MBGlareDetection, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Jordan ID Back recognizer result
+ * Result of scanning JordanIdBackRecognizer
  */
 @property (nonatomic, strong, readonly) MBJordanIdBackRecognizerResult *result;
 
-
+/**
+* Defines if full name of the Jordan ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractFullName;
 
 @end
 

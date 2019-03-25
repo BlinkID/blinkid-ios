@@ -1,93 +1,92 @@
 //
-//  MBSloveniaCombinedRecognizerResult.h
-//  BarDecoder
+// MBSloveniaCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 19/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBSignatureImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
-#import "MBEncodedSignatureImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
+#import "MBSignatureImageResult.h"
+#import "MBEncodedSignatureImageResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Slovenian ID.
- */
+* Recognizer which can scan front and back side of Slovenia national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBSloveniaCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBSignatureImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedSignatureImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBSloveniaCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult, MBSignatureImageResult, MBEncodedSignatureImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *firstName;
+* The address of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *address;
 
 /**
- * The last name of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *lastName;
+* The administrative unit of the Slovenia ID card.
+*/
+@property (nonatomic, readonly) NSString *administrativeUnit;
 
 /**
- * The identity card number of Slovenian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *identityCardNumber;
+* The date of birth of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The sex of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The date of expiry of the Slovenia ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The nationality of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *citizenship;
+* The date of issue of the Slovenia ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfIssue;
 
 /**
- * The date of birth of Slovenian ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
+* The document number of the Slovenia ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The date of expiry of Slovenian ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
+* The given names of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The address of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *address;
-
-/**
- * The PIN of the Slovenian ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *personalIdentificationNumber;
-
-/**
- * The issuing authority of Slovenian ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuingAuthority;
-
-/**
- * The date of issue of Slovenian ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfIssue;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The nationality of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The pin of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *pin;
+
+/**
+* The sex of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The surname of the Slovenia ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
 
 @end
 

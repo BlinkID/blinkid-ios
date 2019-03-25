@@ -1,92 +1,91 @@
 //
-//  MBPolandCombinedRecognizerResult.h
-//  BarDecoder
+// MBPolandCombinedRecognizerResult.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBLegacyRecognizerResult.h"
+#import "MBRecognizerResult.h"
+#import "MBDateResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
-#import "MBDigitalSignatureResult.h"
-#import "MBCombinedFullDocumentImageResult.h"
-
 #import "MBEncodedFaceImageResult.h"
+#import "MBCombinedFullDocumentImageResult.h"
 #import "MBEncodedCombinedFullDocumentImageResult.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Class representing values obtained when scanning both front and back side of Czech ID.
- */
+* Recognizer which can scan front and back side of Poland national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBPolandCombinedRecognizerResult : MBLegacyRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBCombinedFullDocumentImageResult, MBDigitalSignatureResult, MBEncodedFaceImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBPolandCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
 /**
- * The first name of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *givenNames;
+* The date of birth of the Poland ID owner.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfBirth;
 
 /**
- * The last name of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *surname;
+* The date of expiry of the Poland ID card.
+*/
+@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
 
 /**
- * The family name of Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *familyName;
+* The document number of the Poland ID card.
+*/
+@property (nonatomic, readonly) NSString *documentNumber;
 
 /**
- * The parents name of Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *parentsGivenNames;
+* The family name of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *familyName;
 
 /**
- * The sex of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *sex;
+* The given names of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *givenNames;
 
 /**
- * The nationality of the Polish ID owner.
- */
-@property (nonatomic, readonly, nullable) NSString *nationality;
+* The issuing authority of the Poland ID card.
+*/
+@property (nonatomic, readonly) NSString *issuedBy;
 
 /**
- * The issuer of Polish ID.
- */
-@property (nonatomic, readonly, nullable) NSString *issuer;
-
-/**
- * The document number on Polish ID.
- */
-@property (nonatomic, readonly, nullable) NSString *documentNumber;
-
-/**
- * The personal number of Polish ID.
- */
-@property (nonatomic, readonly, nullable) NSString *personalNumber;
-
-/**
- * The date of birth of Polish ID owner
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfBirth;
-
-/**
- * The document date of expiry of the Polish ID
- */
-@property (nonatomic, readonly, nullable) NSDate *dateOfExpiry;
-
-/**
- * YES if all check digits inside MRZ are correct, NO otherwise.
- * More specifically, YES if MRZ complies with ICAO Document 9303 standard, NO otherwise.
- */
+* Determines if all check digits inside MRZ are correct
+*/
 @property (nonatomic, readonly) BOOL mrzVerified;
+
+/**
+* The nationality of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *nationality;
+
+/**
+* The parents given names of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *parentsGivenNames;
+
+/**
+* The personal number of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *personalNumber;
+
+/**
+* The sex of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *sex;
+
+/**
+* The surname of the Poland ID owner.
+*/
+@property (nonatomic, readonly) NSString *surname;
+
 
 @end
 

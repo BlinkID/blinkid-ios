@@ -49,7 +49,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The driver Number of the front side of the Ireland Dl owner.
  */
-@property (nonatomic, readonly) NSString *driverNumber MB_PROPERTY_DEPRECATED;
+@property (nonatomic, readonly) NSString *driverNumber;
 
 /**
  * The first Name of the front side of the Ireland Dl owner.

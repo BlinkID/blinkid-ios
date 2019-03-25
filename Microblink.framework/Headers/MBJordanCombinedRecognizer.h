@@ -1,65 +1,67 @@
 //
-//  MBJordanCombinedRecognizer.h
-//  BarDecoder
+// MBJordanCombinedRecognizer.h
 //
-//  Created by DoDo on 17/05/2018.
+// Created by juraskrlec on 18/03/2019
+// Copyright © Microblink Ltd. All rights reserved.
 //
 
-#import "MBMicroblinkDefines.h"
-#import "MBLegacyRecognizer.h"
-#import "MBMicroblinkInitialization.h"
+#import "MBRecognizer.h"
 #import "MBJordanCombinedRecognizerResult.h"
 
 #import "MBCombinedRecognizer.h"
-
-#import "MBGlareDetection.h"
-#import "MBFullDocumentImage.h"
-#import "MBFaceImage.h"
-
 #import "MBDigitalSignature.h"
 
+#import "MBGlareDetection.h"
+#import "MBFaceImage.h"
 #import "MBEncodeFaceImage.h"
+#import "MBFaceImageDpi.h"
+#import "MBFullDocumentImage.h"
 #import "MBEncodeFullDocumentImage.h"
-
-#import <Foundation/Foundation.h>
+#import "MBFullDocumentImageDpi.h"
+#import "MBFullDocumentImageExtensionFactors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Jordan ID Combined Recognizer.
- *
- * Jordan ID Combined recognizer is used for scanning both front and back side of Jordan ID.
- */
+* Recognizer which can scan front and back side of Jordan national ID cards.
+*/
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBJordanCombinedRecognizer : MBLegacyRecognizer<NSCopying, MBCombinedRecognizer, MBGlareDetection, MBFullDocumentImage, MBFaceImage, MBEncodeFaceImage, MBEncodeFullDocumentImage, MBDigitalSignature>
+@interface MBJordanCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBGlareDetection, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT
 
 /**
- * Jordan ID Combined recognizer result
+ * Result of scanning JordanCombinedRecognizer
  */
-@property (nonatomic, strong, readonly) MBJordanCombinedRecognizerResult* result;
+@property (nonatomic, strong, readonly) MBJordanCombinedRecognizerResult *result;
 
 /**
- * Defines if owner's name should be extracted from Jordan ID
- *
- * Default: YES
- */
+* Defines if date of birth of Jordan ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractDateOfBirth;
+
+/**
+* Defines if full name of the Jordan ID owner should be extracted.
+*
+* Default: YES
+*/
+@property (nonatomic, assign) BOOL extractFullName;
+
+/**
+* Defines if name of Jordan ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractName;
 
 /**
- * Defines if owner's sex should be extracted from Jordan ID
- *
- * Default: YES
- */
+* Defines if sex of Jordan ID owner should be extracted.
+*
+* Default: YES
+*/
 @property (nonatomic, assign) BOOL extractSex;
-
-/**
- * Defines if owner's date of birth should be extracted from Jordan ID
- *
- * Default: YES
- */
-@property (nonatomic, assign) BOOL extractDateOfBirth;
 
 @end
 
