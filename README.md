@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/BlinkID/blinkid-ios.png)](https://travis-ci.org/BlinkID/blinkid-ios.png)
 [![Pod Version](http://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](http://cocoadocs.org/docsets/PPBlinkID/)
 
+<!-- ommit in toc -->
 # BlinkID SDK for ID scanning
 
 BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with [MicroBlink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
@@ -23,113 +24,151 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
   </a>
 </p>
 
+<!-- ommit in toc -->
 # Table of contents
+- [BlinkID SDK for ID scanning](#blinkid-sdk-for-id-scanning)
+- [Table of contents](#table-of-contents)
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+  - [Getting started with BlinkID SDK](#getting-started-with-blinkid-sdk)
+    - [1. Initial integration steps](#1-initial-integration-steps)
+      - [Using CocoaPods](#using-cocoapods)
+      - [Integration without CocoaPods](#integration-without-cocoapods)
+    - [2. Referencing header file](#2-referencing-header-file)
+    - [3. Initiating the scanning process](#3-initiating-the-scanning-process)
+    - [4. Registering for scanning events](#4-registering-for-scanning-events)
+- [Advanced BlinkInput integration instructions](#advanced-blinkinput-integration-instructions)
+  - [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#ui-customizations-of-built-in-mboverlayviewcontrollers-and-mboverlaysubviews)
+    - [Built-in overlay view controllers and overlay subviews](#built-in-overlay-view-controllers-and-overlay-subviews)
+      - [`MBBarcodeOverlayViewController`](#mbbarcodeoverlayviewcontroller)
+      - [`MBDocumentOverlayViewController`](#mbdocumentoverlayviewcontroller)
+      - [`MBDocumentVerificationOverlayViewController`](#mbdocumentverificationoverlayviewcontroller)
+  - [Using `MBBarcodeOverlayViewController`](#using-mbbarcodeoverlayviewcontroller)
+  - [Using `MBDocumentOverlayViewController`](#using-mbdocumentoverlayviewcontroller)
+  - [Using `MBDocumentVerificationOverlayViewController`](#using-mbdocumentverificationoverlayviewcontroller)
+  - [Custom overlay view controller](#custom-overlay-view-controller)
+    - [1. Initialization](#1-initialization)
+    - [2. Protocols](#2-protocols)
+    - [3. Overlay subviews](#3-overlay-subviews)
+    - [4. Initialization](#4-initialization)
+  - [Direct processing API](#direct-processing-api)
+    - [Using Direct API for `NSString` recognition (parsing)](#using-direct-api-for-nsstring-recognition-parsing)
+- [`MBRecognizer` and available recognizers](#mbrecognizer-and-available-recognizers)
+  - [The `MBRecognizer` concept](#the-mbrecognizer-concept)
+  - [`MBRecognizerCollection` concept](#mbrecognizercollection-concept)
+- [List of available recognizers](#list-of-available-recognizers)
+  - [Frame Grabber Recognizer](#frame-grabber-recognizer)
+  - [Success Frame Grabber Recognizer](#success-frame-grabber-recognizer)
+  - [PDF417 recognizer](#pdf417-recognizer)
+  - [Barcode recognizer](#barcode-recognizer)
+  - [BlinkInput recognizer](#blinkinput-recognizer)
+  - [Detector recognizer](#detector-recognizer)
+  - [BlinkID recognizers](#blinkid-recognizers)
+    - [Machine Readable Travel Document recognizer](#machine-readable-travel-document-recognizer)
+    - [Machine Readable Travel Document combined recognizer](#machine-readable-travel-document-combined-recognizer)
+    - [US / Canada driver's license barcode recognizer](#us--canada-drivers-license-barcode-recognizer)
+    - [US / Canada driver's license combined recognizer](#us--canada-drivers-license-combined-recognizer)
+    - [EU Driver's License recognizer](#eu-drivers-license-recognizer)
+    - [Payment / Debit card recognizers](#payment--debit-card-recognizers)
+      - [Payment / Debit card front and back side recognizers](#payment--debit-card-front-and-back-side-recognizers)
+      - [Elite Payment / Debit card combined recognizer](#elite-payment--debit-card-combined-recognizer)
+    - [Document face recognizer](#document-face-recognizer)
+  - [BlinkID recognizers by countries](#blinkid-recognizers-by-countries)
+    - [Austria](#austria)
+    - [Australia](#australia)
+    - [Brunei](#brunei)
+    - [Colombia](#colombia)
+    - [Croatia](#croatia)
+    - [Cyprus](#cyprus)
+    - [Czechia](#czechia)
+    - [European Driver License](#european-driver-license)
+    - [Egypt](#egypt)
+    - [Germany](#germany)
+    - [Hong Kong](#hong-kong)
+    - [Indonesia](#indonesia)
+    - [Ireland](#ireland)
+    - [Ireland](#ireland-1)
+    - [Italy](#italy)
+    - [Jordan](#jordan)
+    - [Kuwait](#kuwait)
+    - [Malaysia](#malaysia)
+    - [Mexico](#mexico)
+    - [Morocco](#morocco)
+    - [New Zealand](#new-zealand)
+    - [Elite Payment Card](#elite-payment-card)
+    - [Payment Card](#payment-card)
+    - [Poland](#poland)
+    - [Romania](#romania)
+    - [Serbia](#serbia)
+    - [Singapore](#singapore)
+    - [Slovakia](#slovakia)
+    - [Slovenia](#slovenia)
+    - [Spain](#spain)
+    - [Sweden](#sweden)
+    - [Switzerland](#switzerland)
+    - [United Arab Emirates](#united-arab-emirates)
+    - [United States](#united-states)
+- [`Field by field` scanning feature](#field-by-field-scanning-feature)
+  - [`Field by field` feature](#field-by-field-feature)
+- [`MBProcessor` and `MBParser`](#mbprocessor-and-mbparser)
+  - [The `MBProcessor` concept](#the-mbprocessor-concept)
+  - [List of available processors](#list-of-available-processors)
+    - [Image Return Processor](#image-return-processor)
+    - [Parser Group Processor](#parser-group-processor)
+  - [The `MBParser` concept](#the-mbparser-concept)
+  - [List of available parsers](#list-of-available-parsers)
+    - [Amount Parser](#amount-parser)
+    - [Date Parser](#date-parser)
+    - [Email Parser](#email-parser)
+    - [IBAN Parser](#iban-parser)
+    - [License Plates Parser](#license-plates-parser)
+    - [Raw Parser](#raw-parser)
+    - [Regex Parser](#regex-parser)
+    - [TopUp Parser](#topup-parser)
+    - [VIN (*Vehicle Identification Number*) Parser](#vin-vehicle-identification-number-parser)
+- [Scanning generic documents with Templating API](#scanning-generic-documents-with-templating-api)
+  - [Defining how document should be detected](#defining-how-document-should-be-detected)
+  - [Defining how fields of interest should be extracted](#defining-how-fields-of-interest-should-be-extracted)
+    - [The `MBProcessorGroup` component](#the-mbprocessorgroup-component)
+    - [List of available dewarp policies](#list-of-available-dewarp-policies)
+    - [The `MBTemplatingClass` component](#the-mbtemplatingclass-component)
+    - [Implementing the `MBTemplatingClassifier`](#implementing-the-mbtemplatingclassifier)
+  - [Obtaining recognition results](#obtaining-recognition-results)
+- [The `MBDetector` concept](#the-mbdetector-concept)
+  - [List of available detectors](#list-of-available-detectors)
+    - [Document Detector](#document-detector)
+    - [MRTD Detector](#mrtd-detector)
+- [Creating customized build of BlinkID SDK](#creating-customized-build-of-blinkid-sdk)
+    - [Prerequisites for creating customised build](#prerequisites-for-creating-customised-build)
+    - [Steps for creating customised build](#steps-for-creating-customised-build)
+      - [Warning:](#warning)
+    - [Troubleshooting customised build:](#troubleshooting-customised-build)
+      - [Getting `unrecognized selector sent to instance` when using customised static framework, while everything works OK with dynamic framework](#getting-unrecognized-selector-sent-to-instance-when-using-customised-static-framework-while-everything-works-ok-with-dynamic-framework)
+      - [App crashing when scanning starts with log message _Failed to load resource XX. The program will now crash._](#app-crashing-when-scanning-starts-with-log-message-_failed-to-load-resource-xx-the-program-will-now-crash_)
+      - [CMake error while running script.](#cmake-error-while-running-script)
+      - [Linker error while running the script.](#linker-error-while-running-the-script)
+      - [Keeping only `FEATURE_MRTD` creates rather large `MicroBlink.bundle`](#keeping-only-feature_mrtd-creates-rather-large-microblinkbundle)
+        - [More information about OCR models in `FEATURE_MRTD`](#more-information-about-ocr-models-in-feature_mrtd)
+- [Troubleshooting](#troubleshooting)
+  - [Integration problems](#integration-problems)
+  - [SDK problems](#sdk-problems)
+    - [Licencing problems](#licencing-problems)
+    - [Other problems](#other-problems)
+  - [Frequently asked questions and known problems](#frequently-asked-questions-and-known-problems)
+      - [In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific `MBRecognizer` object](#in-demo-everything-worked-but-after-switching-to-production-license-i-get-nserror-with-mbmicroblinksdkrecognizererrordomain-and-mbrecognizerfailedtoinitalize-code-as-soon-as-i-construct-specific-mbrecognizer-object)
+      - [I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code with trial license key](#i-get-nserror-with-mbmicroblinksdkrecognizererrordomain-and-mbrecognizerfailedtoinitalize-code-with-trial-license-key)
+      - [Undefined Symbols on Architecture armv7](#undefined-symbols-on-architecture-armv7)
+      - [In my `didFinish` callback I have the result inside my `MBRecognizer`, but when scanning activity finishes, the result is gone](#in-my-didfinish-callback-i-have-the-result-inside-my-mbrecognizer-but-when-scanning-activity-finishes-the-result-is-gone)
+      - [Unsupported architectures when submitting app to App Store](#unsupported-architectures-when-submitting-app-to-app-store)
+- [Additional info](#additional-info)
 
-* [Requirements](#user-content-requirements)
-* [Quick Start](#user-content-quickStart)
-* [Advanced BlinkInput integration instructions](#user-content-advancedIntegration)
-    * [UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`](#user-content-uiCustomizations)
-        * [Built-in overlay view controllers and overlay subviews](#user-content-builtInUIComponents)
-    * [Using `MBBarcodeOverlayViewController`](#user-content-mbBarcodeOverlayViewcontroller)
-    * [Using `MBDocumentOverlayViewController`](#user-content-mbDocumentOverlayViewcontroller)
-    * [Using `MBDocumentVerificationOverlayViewController`](#user-content-mbDocumentVerificationOverlayViewcontroller)
-    * [Custom overlay view controller](#user-content-recognizerRunnerViewController)
-    * [Direct processing API](#user-content-directAPI)
-        * [Using Direct API for `NSString` recognition (parsing)](#user-content-directAPI_strings)
-* [`MBRecognizer` and available recognizers](#user-content-availableRecognizers)
-    * [The `MBRecognizer` concept](#user-content-recognizerConcept)
-    * [`MBRecognizerCollection` concept](#user-content-recognizerBCollection)
-* [List of available recognizers](#user-content-recognizerList)
-    * [Frame Grabber Recognizer](#user-content-frameGrabberRecognizer)
-    * [Success Frame Grabber Recognizer](#user-content-successFrameGrabberRecognizer)
-    * [PDF417 recognizer](#user-content-pdf417Recognizer)
-    * [Barcode recognizer](#user-content-barcodeRecognizer)
-    * [BlinkInput recognizer](#user-content-blinkInputRecognizer)
-    * [Detector recognizer](#user-content-detectorRecognizer)
-    * [BlinkID recognizers](#user-content-blinkid_recognizers)
-        * [Machine Readable Travel Document recognizer](#user-content-mrtdRecognizer)
-        * [Machine Readable Travel Document combined recognizer](#user-content-mrtd_combined_recognizer)
-        * [US / Canada driver's license barcode recognizer](#user-content-us_dl_recognizer)
-        * [US / Canada driver's license combined recognizer](#user-content-us_dl_combined_recognizer)
-        * [EU Driver's License recognizer](#user-content-eudlRecognizer)
-        * [Payment / Debit card recognizers ](#user-content-payment_card_recognizers)
-        * [Document face recognizer](#user-content-documentFaceRecognizer)
-    * [BlinkID recognizers by countries](#user-content-blinkIdRecognizersByCountry)
-        * [Austria](#user-content-austriaBlinkId)
-        * [Australia](#user-content-australiaBlinkId)
-        * [Brunei](#user-content-bruneiBlinkId)
-        * [Colombia](#user-content-colombiaBlinkId)
-        * [Croatia](#user-content-croatiaBlinkId)
-        * [Cyprus](#user-content-cyprusBlinkId)
-        * [Czechia](#user-content-czechiaBlinkId)
-        * [European Driver License](#user-content-eudlBlinkId)
-        * [Egypt](#user-content-egyptBlinkId)
-        * [Germany](#user-content-croatiaBlinkId)
-        * [Hong Kong](#user-content-hongkongBlinkId)
-        * [Indonesia](#user-content-indonesiaBlinkId)
-        * [Ireland](#user-content-irelandBlinkId)
-        * [Ireland](#user-content-irelandBlinkId)
-        * [Italy](#user-content-italyBlinkId)
-        * [Jordan](#user-content-jordanBlinkId)
-        * [Kuwait](#user-content-kuwaitBlinkId)
-        * [Malaysia](#user-content-malaysiaBlinkId)
-        * [Mexico](#user-content-mexicoBlinkId)
-        * [Morocco](#user-content-moroccoBlinkId)
-        * [New Zealand](#user-content-newZealandBlinkId)
-        * [Elite Payment Card](#user-content-elitePaymentCardBlinkId)
-        * [Payment Card](#user-content-paymentCardBlinkId)
-        * [Poland](#user-content-polandBlinkId)
-        * [Romania](#user-content-romaniaBlinkId)
-        * [Serbia](#user-content-serbiaBlinkId)
-        * [Singapore](#user-content-singaporeBlinkId)
-        * [Slovakia](#user-content-slovakiaBlinkId)
-        * [Slovenia](#user-content-sloveniaBlinkId)
-        * [Spain](#user-content-spainBlinkId)
-        * [Sweden](#user-content-swedenBlinkId)
-        * [Switzerland](#user-content-switzerlandBlinkId)
-        * [United Arab Emirates](#user-content-uaeBlinkId)
-        * [United States](#user-content-unitedStatesBlinkId)
-* [`Field by field` scanning feature](#user-content-fieldScan)
-    * [`Field by field` feature](#user-content-fieldByFieldFeature)
-* [`MBProcessor` and `MBParser`](#user-content-processorsAndParsers)
-    * [The `MBProcessor` concept](#user-content-processorConcept)
-    * [List of available processors](#user-content-processorList)
-        * [Image Return Processor](#user-content-imageReturnProcessor)
-        * [Parser Group Processor](#user-content-parserGroupProcessor)
-    * [The `MBParser` concept](#user-content-parserConcept)
-    * [List of available parsers](#user-content-parserList)
-        * [Amount Parser](#user-content-amountParser)
-        * [Date Parser](#user-content-dateParser)
-        * [Email Parser](#user-content-emailParser)
-        * [IBAN Parser](#user-content-ibanParser)
-        * [License Plates Parser](#user-content-licensePlatesParser)
-        * [Raw Parser](#user-content-rawParser)
-        * [Regex Parser](#user-content-regexParser)
-        * [TopUp Parser](#user-content-topUpParser)
-        * [VIN (*Vehicle Identification Number*) Parser](#user-content-vinParser)
-* [Scanning generic documents with Templating API](#user-content-detectorTemplating)
-        * [The `MBProcessorGroup` component](#user-content-processorGroup)
-        * [List of available dewarp policies](#user-content-dewarpPolicyList)
-        * [The `MBTemplatingClass` component](#user-content-templatingClass)
-        * [Implementing the `MBTemplatingClassifier`](#user-content-implementingTemplatingClassifier)
-* [The `MBDetector` concept](#user-content-detectorConcept)
-    * [List of available detectors](#user-content-detectorList)
-        * [Document Detector](#user-content-documentDetector)
-        * [MRTD Detector](#user-content-mrtdDetector)
-* [Creating customized build of BlinkID SDK](#user-content-customizedBuild)
-* [Troubleshooting](#user-content-troubleshoot)
-    * [Integration problems](#user-content-integrationTroubleshoot)
-    * [SDK problems](#user-content-sdkTroubleshoot)
-    * [Frequently asked questions and known problems](#user-content-faq)
-* [Additional info](#user-content-info)
-
-# <a name="requirements"></a> Requirements
+#  Requirements
 
 SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in iOS 8.0 or later, iPhone 4S or newer and iPad 2 or newer.
 
 SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
 
-# <a name="quickStart"></a> Quick Start
+#  Quick Start
 
 ## Getting started with BlinkID SDK
 
@@ -355,7 +394,7 @@ func documentOverlayViewControllerDidTapClose(_ documentOverlayViewController: M
 }
 ```
 
-# <a name="advancedIntegration"></a> Advanced BlinkInput integration instructions
+#  Advanced BlinkInput integration instructions
 This section covers more advanced details of BlinkInput integration.
 
 1. [First part](#uiCustomizations) will cover the possible customizations when using UI provided by the SDK.
@@ -363,9 +402,9 @@ This section covers more advanced details of BlinkInput integration.
 3. [Third part](#directAPI) will describe how to use the [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html) (Direct API) for recognition directly from `UIImage` without the need of camera or to recognize camera frames that are obtained by custom camera management.
 4. [Fourth part](#availableRecognizers) will describe recognizer concept and available recognizers.
 
-## <a name="uiCustomizations"></a> UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`
+##  UI customizations of built-in `MBOverlayViewControllers` and `MBOverlaySubviews`
 
-### <a name="builtInUIComponents"></a> Built-in overlay view controllers and overlay subviews
+###  Built-in overlay view controllers and overlay subviews
 
 Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning.
 
@@ -381,7 +420,7 @@ Within BlinkID SDK there are several built-in overlay view controllers and scann
 
 [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) is overlay view controller best suited for performing scanning of various document for both front and back side. It has [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) delegate which can be used out of the box to perform scanning using the default UI.
 
-## <a name="mbBarcodeOverlayViewcontroller"></a> Using `MBBarcodeOverlayViewController`
+##  Using `MBBarcodeOverlayViewController`
 
 [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html) is built-in overlay view controller which is best suited to use while scanning various barcodes. Here is an example how to use and initialize [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html):
 
@@ -409,7 +448,7 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 As you can see, when initializing [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBBarcodeOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBBarcodeOverlayViewControllerDelegate.html) protocol.
 
 
-## <a name="mbDocumentOverlayViewcontroller"></a> Using `MBDocumentOverlayViewController`
+##  Using `MBDocumentOverlayViewController`
 
 [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html) is built-in overlay view controller which is best suited to use while scanning one side of a document. As you have seen in [Quick Start](#quickStart), [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html) has [`MBDocumentOverlaySettings`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlaySettings.html). Here is an example how to use and initialize [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html):
 
@@ -437,7 +476,7 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 As you can see, when initializing [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html) protocol.
 
 
-## <a name="mbDocumentVerificationOverlayViewcontroller"></a> Using `MBDocumentVerificationOverlayViewController`
+##  Using `MBDocumentVerificationOverlayViewController`
 
 [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) is built-in overlay view controller which is best suited to use while scanning both sides of a document. Here is an example how to use and initialize [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html):
 
@@ -465,7 +504,7 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 As you can see, when initializing [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) protocol.
 
 
-## <a name="recognizerRunnerViewController"></a> Custom overlay view controller
+##  Custom overlay view controller
 
 Please check our pdf417-sample-Swift for custom implementation of overlay view controller.
 
@@ -536,7 +575,7 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 ```
 
 
-## <a name="directAPI"></a> Direct processing API
+##  Direct processing API
 
 This guide will in short present you how to process UIImage objects with PDF417.mobi SDK, without starting the camera video capture.
 
@@ -631,15 +670,15 @@ In essence, this API consists of two steps:
 - Call of `- (void)processImage:(MBImage *)image;` method for each UIImage or CMSampleBufferRef you have.
 
 
-### <a name="directAPI_strings"></a> Using Direct API for `NSString` recognition (parsing)
+###  Using Direct API for `NSString` recognition (parsing)
 
 Some recognizers support recognition from `NSString`. They can be used through Direct API to parse given `NSString` and return data just like when they are used on an input image. When recognition is performed on `NSString`, there is no need for the OCR. Input `NSString` is used in the same way as the OCR output is used when image is being recognized. 
 Recognition from `String` can be performed in the same way as recognition from image. 
 The only difference is that user should call `- (void)processString:(NSString *)string;` on [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html).
 
-# <a name="availableRecognizers"></a> `MBRecognizer` and available recognizers
+#  `MBRecognizer` and available recognizers
 
-## <a name="recognizerConcept"></a> The `MBRecognizer` concept
+##  The `MBRecognizer` concept
 
 The [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) is the basic unit of processing within the SDK. Its main purpose is to process the image and extract meaningful information from it. As you will see [later](#recognizerList), the SDK has lots of different [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that have various purposes.
 
@@ -651,7 +690,7 @@ As soon as one [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBR
 
 As soon as `onScanningFinished` method ends, the `MBRecognizerRunnerViewController` will continue processing new camera frames with same [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects, unless `paused`. Continuation of processing or `reset` recognition will modify or reset all [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html). When using built-in activities, as soon as `onScanningFinished` is invoked, built-in activity pauses the `MBRecognizerRunnerViewController` and starts finishing the activity, while saving the [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) with active [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html).
 
-## <a name="recognizerBCollection"></a> `MBRecognizerCollection` concept
+##  `MBRecognizerCollection` concept
 
 The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) is is wrapper around [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that has array of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that can be used to give [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects to `MBRecognizerRunner` or `MBRecognizerRunnerViewController` for processing.
 
@@ -661,17 +700,17 @@ The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRe
 
 You cannot change the order of the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects within the chain - no matter the order in which you give [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects to [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html), they are internally ordered in a way that provides best possible performance and accuracy. Also, in order for SDK to be able to order [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects in recognition chain in a best way possible, it is not allowed to have multiple instances of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects of the same type within the chain. Attempting to do so will crash your application.
 
-# <a name="recognizerList"></a> List of available recognizers
+#  List of available recognizers
 
 This section will give a list of all [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that are available within PDF417.mobi SDK, their purpose and recommendations how they should be used to get best performance and user experience.
 
-## <a name="frameGrabberRecognizer"></a> Frame Grabber Recognizer
+##  Frame Grabber Recognizer
 
 The [`MBFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBFrameGrabberRecognizer.html) is the simplest recognizer in SDK, as it does not perform any processing on the given image, instead it just returns that image back to its `onFrameAvailable`. Its result never changes state from empty.
 
 This recognizer is best for easy capturing of camera frames with `MBRecognizerRunnerViewController`. Note that [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) sent to `onFrameAvailable` are temporary and their internal buffers all valid only until the `onFrameAvailable` method is executing - as soon as method ends, all internal buffers of [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object are disposed. If you need to store [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object for later use, you must create a copy of it by calling `copy`.
 
-## <a name="successFrameGrabberRecognizer"></a> Success Frame Grabber Recognizer
+##  Success Frame Grabber Recognizer
 
 The [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) is a special `MBecognizer` that wraps some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) and impersonates it while processing the image. However, when the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) being impersonated changes its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) into `Valid` state, the [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) captures the image and saves it into its own [`MBSuccessFrameGrabberRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizerResult.html) object.
 
@@ -679,13 +718,13 @@ Since [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/C
 
 This recognizer is best for use cases when you need to capture the exact image that was being processed by some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object at the time its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) became `Valid`. When that happens, `MBSuccessFrameGrabberRecognizer's` `MBSuccessFrameGrabberRecognizerResult` will also become `Valid` and will contain described image.
 
-## <a name="pdf417Recognizer"></a> PDF417 recognizer
+##  PDF417 recognizer
 
 The [`MBPdf417Recognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPdf417Recognizer.html) is recognizer specialised for scanning [PDF417 2D barcodes](https://en.wikipedia.org/wiki/PDF417). This recognizer can recognize only PDF417 2D barcodes - for recognition of other barcodes, please refer to [BarcodeRecognizer](#barcodeRecognizer).
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html), which has UI best suited for barcode scanning.
 
-## <a name="barcodeRecognizer"></a> Barcode recognizer
+##  Barcode recognizer
 
 The [`MBBarcodeRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeRecognizer.html) is recognizer specialised for scanning various types of barcodes. This recognizer should be your first choice when scanning barcodes as it supports lots of barcode symbologies, including the [PDF417 2D barcodes](https://en.wikipedia.org/wiki/PDF417), thus making [PDF417 recognizer](#pdf417Recognizer) possibly redundant, which was kept only for its simplicity.
 
@@ -693,7 +732,7 @@ You can enable multiple barcode symbologies within this recognizer, however keep
 
 This recognizer can be used in any overlay view controller, but it works best with the [`MBBarcodeOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBarcodeOverlayViewController.html), which has UI best suited for barcode scanning.
 
-## <a name="blinkInputRecognizer"></a> BlinkInput recognizer
+##  BlinkInput recognizer
 
 The [`MBBlinkInputRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkInputRecognizer.html) is generic OCR recognizer used for scanning segments which enables specifying `MBProcessors` that will be used for scanning. Most commonly used `MBProcessor` within this recognizer is [`MBParserGroupProcessor`](http://blinkid.github.io/blinkid-ios/Classes/MBParserGroupProcessor.html)) that activates all `MBParsers` in the group to extract data of interest from the OCR result.
 
@@ -701,38 +740,38 @@ This recognizer can be used in any context. It is used internally in the impleme
 
 `MBProcessors` are explained in [The Processor concept](#processorConcept) section and you can find more about `MBParsers` in [The Parser concept](#parserConcept) section.
 
-## <a name="detectorRecognizer"></a> Detector recognizer
+##  Detector recognizer
 
 The [`MBDetectorRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDetectorRecognizer.html) is recognizer for scanning generic documents using custom `MBDetector`. You can find more about `Detector` in [The Detector concept](#detectorConcept) section. `MBDetectorRecognizer` can be used simply for document detection and obtaining its image. The more interesting use case is data extraction from the custom document type. `MBDetectorRecognizer` performs document detection and can be configured to extract fields of interest from the scanned document by using **Templating API**. You can find more about Templating API in [this](#detectorTemplating) section.
-## <a name="blinkid_recognizers"></a> BlinkID recognizers
+##  BlinkID recognizers
 
 Unless stated otherwise for concrete recognizer, **single side BlinkID recognizes** from this list can be used in any context, but they work best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for document scanning. 
 
 **Combined recognizers** should be used with [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.
 
-### <a name="mrtdRecognizer"></a> Machine Readable Travel Document recognizer
+###  Machine Readable Travel Document recognizer
 The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MrzFilter`](http://blinkid.github.io/blinkid-ios/Classes/MrzFilter.html).
 
 The `MBMrtdRecognizer` can also be configured to extract additional fields of interest from the scanned document, which are not part of the Machine Readable Zone, by using **Templating API**. You can find more about Templating API in [this](#mrtdTemplating) section.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-### <a name="mrtd_combined_recognizer"></a> Machine Readable Travel Document combined recognizer
+###  Machine Readable Travel Document combined recognizer
 The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html) scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses [MBDocumentFaceRecognizer](#documentFaceRecognizer) for obtaining full document image and face image as the first step and then [MBMrtdRecognizer](#mrtdRecognizer) for scanning the MRZ.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-### <a name="us_dl_recognizer"></a> US / Canada driver's license barcode recognizer
+###  US / Canada driver's license barcode recognizer
 The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from the US / Canada driver's license.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-### <a name="us_dl_combined_recognizer"></a> US / Canada driver's license combined recognizer
+###  US / Canada driver's license combined recognizer
 The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) scans PDF417 barcode from the back side of US / Canada driver's license after scanning the full document image and face image from the front side. Internally, it uses [MBDocumentFaceRecognizer](#documentFaceRecognizer) for obtaining full document image and face image as the first step and then [MBUsdlRecognizer](#us_dl_recognizer) for scanning the PDF417 barcode.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-### <a name="eudlRecognizer"></a> EU Driver's License recognizer
+###  EU Driver's License recognizer
 The [`MBEudlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEudlRecognizer.html) is used for scanning front side of European Union driver's licenses. Currently, driver's licenses from these countries are supported:
 
 - Austria
@@ -742,25 +781,25 @@ The [`MBEudlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEudlReco
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
 
-### <a name="payment_card_recognizers"></a> Payment / Debit card recognizers 
+###  Payment / Debit card recognizers 
 
 For all recognizers, you can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-#### <a name="payment_card_combined"></a> Payment / Debit card front and back side recognizers
+####  Payment / Debit card front and back side recognizers
 The [`MBBlinkCardRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardRecognizer.html)is used for scanning the [front and back side of Payment / Debit card](https://en.wikipedia.org/wiki/Payment_card).
 
-#### <a name="elite_payment_card_combined"></a> Elite Payment / Debit card combined recognizer
+####  Elite Payment / Debit card combined recognizer
 The [`MBBlinkCardEliteRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkCardEliteRecognizer.html) scans back side of elite Payment / Debit card after scanning the front side and combines data from both sides.
 
 
-### <a name="documentFaceRecognizer"></a> Document face recognizer
+###  Document face recognizer
 The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
-## <a name="blinkIdRecognizersByCountry"></a> BlinkID recognizers by countries
+##  BlinkID recognizers by countries
 
-### <a name="austriaBlinkId"></a> Austria
+###  Austria
 
 The [`MBAustriaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Austrian ID.
 
@@ -772,13 +811,13 @@ The [`MBAustriaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 
 The [`MBAustriaDlFrontRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBAustriaDlFrontRecognizerResult.html) is recognizer specialised for scanning front side of Austrian Driver's License.
 
-### <a name="australiaBlinkId"></a> Australia
+###  Australia
 
 The [`MBAustraliaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
 
 The [`MBAustraliaDlBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlBackRecognizer.html) is recognizer specialised for scanning back side of Australian Driver's License.
 
-### <a name="bruneiBlinkId"></a> Brunei
+###  Brunei
 
 The [`MBBruneiIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei ID.
 
@@ -796,7 +835,7 @@ The [`MBBruneiMilitaryIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Cl
 
 The [`MBBruneiMilitaryIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBruneiMilitaryIdFrontRecognizer.html) is recognizer specialised for scanning front side of Brunei Military ID.
 
-### <a name="colombiaBlinkId"></a> Colombia
+###  Colombia
 
 The [`MBColombiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Colombian ID.
 
@@ -804,7 +843,7 @@ The [`MBColombiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/
 
 The [`MBColombiaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBColombiaDlFrontRecognizer.html) is recognizer specialised for scanning front side Colombian Driver's License.
 
-### <a name="croatiaBlinkId"></a> Croatia
+###  Croatia
 
 The [`MBCroatiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCroatiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Croatian ID. It always extracts
 identity card number, first and last name of ID holder while extracting other elements is optional.
@@ -814,7 +853,7 @@ MRZ zone and address of ID holder while extracting other elements is optional.
 
 The [`MBCroatiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCroatiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Croatian ID.
 
-### <a name="cyprusBlinkId"></a> Cyprus
+###  Cyprus
 
 The [`MBCyprusIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusIdFrontRecognizer.html) is recognizer specialised for scanning front side of Cyprus ID issued after 2015.
 
@@ -824,7 +863,7 @@ The [`MBCyprusOldIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classe
 
 The [`MBCyprusOldIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCyprusOldIdFrontRecognizer.html) is recognizer specialised for scanning back side of Cyprus ID.
 
-### <a name="czechiaBlinkId"></a> Czechia
+###  Czechia
 
 The [`MBCzechiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCzechiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Czech ID.
 
@@ -832,15 +871,15 @@ The [`MBCzechiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/M
 
 The [`MBCzechiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBCzechiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Czech ID.
 
-### <a name="eudlBlinkId"></a> European Driver License
+###  European Driver License
 
 The [`MBEudlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEudlRecognizer.html) is recognizer specialised for scanning EU Driver License. Supported countries are Austria, Germany, United Kingdom and any (generic) EU driver license. List can be found in [`MBEudlCountry`](http://blinkid.github.io/blinkid-ios/Enums/MBEudlCountry.html)
 
-### <a name="egyptBlinkId"></a> Egypt
+###  Egypt
 
 The [`MBEgyptIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBEgyptIdFrontRecognizer.html) is recognizer specialised for scanning front side of Egypt ID.
 
-### <a name="croatiaBlinkId"></a> Germany
+###  Germany
 
 The [`MBGermanyIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyIdFrontRecognizer.html) is recognizer specialised for scanning front side of German ID.
 
@@ -856,27 +895,27 @@ The [`MBGermanyDlFrontRecognizerResult.h`](http://blinkid.github.io/blinkid-ios/
 
 The [`MBGermanyDlBackRecognizerResult.h`](http://blinkid.github.io/blinkid-ios/Classes/MBGermanyDlBackRecognizerResult.h.html) is recognizer specialised for scanning back side of German Driver's License with B10 support.
 
-### <a name="hongkongBlinkId"></a> Hong Kong
+###  Hong Kong
 
 The [`MBHongKongIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBHongKongIdFrontRecognizer.html) is recognizer specialised for scanning front side of Hong Kong ID.
 
-### <a name="indonesiaBlinkId"></a> Indonesia
+###  Indonesia
 
 The [`MBIndonesiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIndonesiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Indonesian ID.
 
-### <a name="irelandBlinkId"></a> Ireland
+###  Ireland
 
 The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
 
-### <a name="irelandBlinkId"></a> Ireland
+###  Ireland
 
 The [`MBIrelandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIrelandDlFrontRecognizer.html) is recognizer specialised for scanning front side of Irish Driver's License.
 
-### <a name="italyBlinkId"></a> Italy
+###  Italy
 
 The [`MBItalyDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBItalyDlFrontRecognizer.html) is recognizer specialised for scanning front side of Italian Driver's License.
 
-### <a name="jordanBlinkId"></a> Jordan
+###  Jordan
 
 The [`MBJordanIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanIdFrontRecognizer.html) is recognizer specialised for scanning front side of Jordan ID.
 
@@ -884,13 +923,13 @@ The [`MBJordanIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MB
 
 The [`MBJordanCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBJordanCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Jordan ID.
 
-### <a name="kuwaitBlinkId"></a> Kuwait
+###  Kuwait
 
 The [`MBKuwaitIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBKuwaitIdFrontRecognizer.html) is recognizer specialised for scanning front side of Kuwait ID.
 
 The [`MBKuwaitIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBKuwaitIdBackRecognizer.html) is recognizer specialised for scanning back side of Kuwait ID.
 
-### <a name="malaysiaBlinkId"></a> Malaysia
+###  Malaysia
 
 The [`MBMalaysiaDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaDLFrontRecognizer.html) is recognizer specialised for scanning Malaysian Driver's License.
 
@@ -906,21 +945,21 @@ The [`MBMalaysiaMyPrFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Class
 
 The [`MBMalaysiaMyKasFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMalaysiaMyKasFrontRecognizer.html) is recognizer specialised for scanning MyKAS.
 
-### <a name="mexicoBlinkId"></a> Mexico
+###  Mexico
 
 The [`MBMexicoVoterIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMexicoVoterIdFrontRecognizer.html) is recognizer specialised for scanning front side of Mexican Voter ID card.
 
-### <a name="moroccoBlinkId"></a> Morocco
+###  Morocco
 
 The [`MBMoroccoIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMoroccoIdFrontRecognizer.html) is recognizer specialised for scanning front side of Morocco ID.
 
 The [`MBMoroccoIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMoroccoIdBackRecognizer.html) is recognizer specialised for scanning back side of Morocco ID.
 
-### <a name="newZealandBlinkId"></a> New Zealand
+###  New Zealand
 
 The [`MBNewZealandDLFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBNewZealandDLFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
 
-### <a name="elitePaymentCardBlinkId"></a> Elite Payment Card
+###  Elite Payment Card
 
 The [`MBElitePaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Elite Payment Card.
 
@@ -928,7 +967,7 @@ The [`MBElitePaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Cl
 
 The [`MBElitePaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBElitePaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Elite Payment Card.
 
-### <a name="paymentCardBlinkId"></a> Payment Card
+###  Payment Card
 
 The [`MBPaymentCardFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardFrontRecognizer.html) is recognizer specialised for scanning front side of Payment Card.
 
@@ -936,7 +975,7 @@ The [`MBPaymentCardBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes
 
 The [`MBPaymentCardCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPaymentCardCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Payment Card.
 
-### <a name="polandBlinkId"></a> Poland
+###  Poland
 
 The [`MBPolandIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPolandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Polish ID.
 
@@ -944,11 +983,11 @@ The [`MBPolandIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MB
 
 The [`MBPolandCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPolandCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Polish ID.
 
-### <a name="romaniaBlinkId"></a> Romania
+###  Romania
 
 The [`MBRomaniaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRomaniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Romanian ID.
 
-### <a name="serbiaBlinkId"></a> Serbia
+###  Serbia
 
 The [`MBSerbiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSerbiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Serbian ID.
 
@@ -956,7 +995,7 @@ The [`MBSerbiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MB
 
 The [`MBSerbiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSerbiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Serbian ID.
 
-### <a name="singaporeBlinkId"></a> Singapore
+###  Singapore
 
 The [`MBSingaporeIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeIdFrontRecognizer.html) is recognizer specialised for scanning front side of Singapore ID.
 
@@ -968,7 +1007,7 @@ The [`MBSingaporeDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classe
 
 The [`MBSingaporeChangiEmployeeIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSingaporeChangiEmployeeIdRecognizer.html) is recognizer specialised for scanning Singapore Changi Employee ID.
 
-### <a name="slovakiaBlinkId"></a> Slovakia
+###  Slovakia
 
 The [`MBSlovakiaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSlovakiaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovakian ID.
 
@@ -976,7 +1015,7 @@ The [`MBSlovakiaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/
 
 The [`MBSlovakiaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSlovakiaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovakian ID.
 
-### <a name="sloveniaBlinkId"></a> Slovenia
+###  Slovenia
 
 The [`MBSloveniaIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSloveniaIdFrontRecognizer.html) is recognizer specialised for scanning front side of Slovenian ID.
 
@@ -984,15 +1023,15 @@ The [`MBSloveniaIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/
 
 The [`MBSloveniaCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSloveniaCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Slovenian ID.
 
-### <a name="spainBlinkId"></a> Spain
+###  Spain
 
 The [`MBSpainDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSpainDlFrontRecognizer.html) is recognizer specialised for scanning front side Spanish Driver's License.
 
-### <a name="swedenBlinkId"></a> Sweden
+###  Sweden
 
 The [`MBSwedenDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwedenDlFrontRecognizer.html) is recognizer specialised for scanning front side Swedish Driver's License.
 
-### <a name="switzerlandBlinkId"></a> Switzerland
+###  Switzerland
 
 The [`MBSwitzerlandIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandIdFrontRecognizer.html) is recognizer specialised for scanning front side of Swiss ID.
 
@@ -1002,7 +1041,7 @@ The [`MBSwitzerlandPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Cla
 
 The [`MBSwitzerlandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSwitzerlandDlFrontRecognizer.html) is recognizer specialised for scanning front side Swiss Driver's License.
 
-### <a name="uaeBlinkId"></a> United Arab Emirates
+###  United Arab Emirates
 
 The [`MBUnitedArabEmiratesIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesIdFrontRecognizer.html) is recognizer specialised for scanning front side of UAE ID.
 
@@ -1010,19 +1049,19 @@ The [`MBUnitedArabEmiratesIdBackRecognizer`](http://blinkid.github.io/blinkid-io
 
 The [`MBUnitedArabEmiratesDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUnitedArabEmiratesDlFrontRecognizer.html) is recognizer specialised for scanning front side UAE Driver's License.
 
-### <a name="unitedStatesBlinkId"></a> United States
+###  United States
 
 The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is recognizer specialised for scanning back side of US Driver's License.
 
 The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of US Driver's License.
 
-# <a name="fieldScan"></a> `Field by field` scanning feature
+#  `Field by field` scanning feature
 
 [`Field by field`](#fieldByFieldFeature) scanning feature is designed for scanning small text fields which are called scan elements. For each scan element, specific [`MBParser`](#parserConcept) that will extract structured data of interest from the OCR result is defined. Focusing on the small text fields which are scanned one by one enables implementing support for the **free-form documents** because field detection is not required. The user is responsible for positioning the field of interest inside the scanning window and the scanning process guides him. When implementing support for the custom document, only fields of interest has to be defined.
 
 [`Field by field`](#fieldByFieldFeature) approaches are described in the following sections.
 
-## <a name="fieldByFieldFeature"></a> `Field by field` feature
+##  `Field by field` feature
 
 `Field by field` feature is designed for scanning small text fields in the predefined order by using [`MBFieldByFieldViewController`](#fieldByFieldUiComponent).
 
@@ -1067,11 +1106,11 @@ Objective-C
 	}
 ```
 
-# <a name="processorsAndParsers"></a> `MBProcessor` and `MBParser`
+#  `MBProcessor` and `MBParser`
 
 The `MBProcessors` and `MBParsers` are standard processing units within *BlinkID* SDK used for data extraction from the input images. Unlike the [`MBRecognizer`](#recognizerConcept), `MBProcessor` and `MBParser` are not stand-alone processing units. `MBProcessor` is always used within `MBRecognizer` and `MBParser` is used within appropriate `MBProcessor` to extract data from the OCR result.
 
-## <a name="processorConcept"></a> The `MBProcessor` concept
+##  The `MBProcessor` concept
 
 `MBProcessor` is a processing unit used within some `Recognizer` which supports processors. It process the input image prepared by the enclosing `Recognizer` in the way that is characteristic to the implementation of the concrete `MBProcessor`.
 
@@ -1081,11 +1120,11 @@ It also has its internal state and while it is in the *working state* during rec
 
 To support common use cases, there are several different `MBProcessor` implementations available. They are listed in the next section.
 
-## <a name="processorList"></a> List of available processors
+##  List of available processors
 
 This section will give a list of `MBProcessor` types that are available within *BlinkID* SDK and their purpose.
 
-### <a name="imageReturnProcessor"></a> Image Return Processor
+###  Image Return Processor
 
 The [`MBImageReturnProcessor`](http://blinkid.github.io/blinkid-ios/Classes/MBImageReturnProcessor.html) is used for obtaining input images. It simply saves the input image and makes it available after the scanning is done.
 
@@ -1093,7 +1132,7 @@ The appearance of the input image depends on the context in which `MBImageReturn
  
 The image is returned as the raw [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) type. Also, processor can be configured to [encode saved image to JPEG](http://blinkid.github.io/blinkid-ios/Classes/MBImageReturnProcessor.html).
 
-### <a name="parserGroupProcessor"></a> Parser Group Processor
+###  Parser Group Processor
 
 
 The [`MBParserGroupProcessor`](http://blinkid.github.io/blinkid-ios/Classes/MBParserGroupProcessor.html) is the type of the processor that performs the OCR (*Optical Character Recognition*) on the input image and lets all the parsers within the group to extract data from the OCR result. The concept of `MBParser` is described in [the next](#parserConcept) section.
@@ -1112,7 +1151,7 @@ If we put `MBAmountParser` in one `MBParserGroupProcessor` and `MBEmailParser` i
 
 Take note that `MBOcrLayout` is available only if it is allowed by the *BlinkID* SDK license key. `MBOcrLayout` structure contains information about all recognized characters and their positions on the image. To prevent someone to abuse that, obtaining of the `MBOcrLayout` structure is allowed only by the premium license keys.
 
-## <a name="parserConcept"></a> The `MBParser` concept
+##  The `MBParser` concept
 
 `MBParser` is a class of objects that are used to extract structured data from the raw OCR result. It must be used within `MBParserGroupProcessor` which is responsible for performing the OCR, so `MBParser` is not stand-alone processing unit.
 
@@ -1122,45 +1161,45 @@ It also has its internal state and while it is in the *working state* during rec
 
 There are a lot of different `MBParsers` for extracting most common fields which appear on various documents. Also, most of them can be adjusted for specific use cases. For all other custom data fields, there is `RegexParser` available which can be configured with the arbitrary regular expression.
 
-## <a name="parserList"></a> List of available parsers
+##  List of available parsers
 
-### <a name="amountParser"></a> Amount Parser
+###  Amount Parser
 
 [`MBAmountParser`](http://blinkid.github.io/blinkid-ios/Classes/MBAmountParser.html) is used for extracting amounts from the OCR result.
 
-### <a name="dateParser"></a> Date Parser
+###  Date Parser
 
 [`MBDateParser`](http://blinkid.github.io/blinkid-ios/Classes/MBDateParser.html) is used for extracting dates in various formats from the OCR result.
 
-### <a name="emailParser"></a> Email Parser
+###  Email Parser
 
 [`MBEmailParser`](http://blinkid.github.io/blinkid-ios/Classes/MBEmailParser.html) is used for extracting e-mail addresses from the OCR result.
 
-### <a name="ibanParser"></a> IBAN Parser
+###  IBAN Parser
 
 [`MBIbanParser`](http://blinkid.github.io/blinkid-ios/Classes/MBIbanParser.html) is used for extracting IBAN (*International Bank Account Number*) from the OCR result.
 
-### <a name="licensePlatesParser"></a> License Plates Parser
+###  License Plates Parser
 
 [`MBLicensePlatesParser`](http://blinkid.github.io/blinkid-ios/Classes/MBLicensePlatesParser.html) is used for extracting license plate content from the OCR result.
 
-### <a name="rawParser"></a> Raw Parser
+###  Raw Parser
 
 [`MBRawParser`](http://blinkid.github.io/blinkid-ios/Classes/MBRawParser.html) is used for obtaining string version of raw OCR result, without performing any smart parsing operations.
 
-### <a name="regexParser"></a> Regex Parser
+###  Regex Parser
 
 [`MBRegexParser`](http://blinkid.github.io/blinkid-ios/Classes/MBRegexParser.html) is used for extracting OCR result content which is in accordance with the given regular expression. Regular expression parsing is not performed with java's regex engine. Instead, it is performed with custom regular expression engine.
 
-### <a name="topUpParser"></a> TopUp Parser
+###  TopUp Parser
 
 [`MBTopUpParser`](http://blinkid.github.io/blinkid-ios/Classes/MBTopUpParser.html) is used for extracting TopUp (mobile phone coupon) codes from the OCR result. There exists [`TopUpPreset`](http://blinkid.github.io/blinkid-ios/Enums/MBTopUpPreset.html) enum with presets for most common vendors. Method `- (void)setTopUpPreset:(MBTopUpPreset)topUpPreset` can be used to configure parser to only return codes with the appropriate format defined by the used preset. 
 
-### <a name="vinParser"></a> VIN (*Vehicle Identification Number*) Parser
+###  VIN (*Vehicle Identification Number*) Parser
 
 [`MBVinParser`](http://blinkid.github.io/blinkid-ios/Classes/MBVinParser.html) is used for extracting VIN (*Vehicle Identification Number*) from the OCR result.
 
-# <a name="detectorTemplating"></a> Scanning generic documents with Templating API
+#  Scanning generic documents with Templating API
 
 This section discusses the setting up of `MBDetectorRecognizer` for scanning templated documents. Please check `Templating-sample` sample app for source code examples.
 
@@ -1188,7 +1227,7 @@ There may be one or more variants of the same document type, for example for som
 
 3. If the `MBTemplatingClassifier` has decided that currently scanned document belongs to the current class, non-classification `MBProcessorGroups` are run to extract other fields of interest.
 
-### <a name="processorGroup"></a> The `MBProcessorGroup` component
+###  The `MBProcessorGroup` component
 
 In templating API [`MBProcessorGroup`](http://blinkid.github.io/blinkid-ios/Classes/MBProcessorGroup.html) is used to define the location of the field of interest on the detected document and how that location should be processed by setting following parameters in its constructor:
 
@@ -1198,7 +1237,7 @@ In templating API [`MBProcessorGroup`](http://blinkid.github.io/blinkid-ios/Clas
 
 3. Collection of processors that will be executed on the prepared chunk of the image for current document location. You can find more information about processors in [The Processor concept](#processorConcept) section.
 
-### <a name="dewarpPolicyList"></a> List of available dewarp policies
+###  List of available dewarp policies
 
 Concrete `MBDewarpPolicy` defines how specific location of interest should be dewarped (cropped and rotated). It determines the height and width of the resulting dewarped image in pixels. Here is the list of available dewarp policies with linked doc for more information:
 
@@ -1217,7 +1256,7 @@ Concrete `MBDewarpPolicy` defines how specific location of interest should be de
     - if the height of the resulting image is larger than maximal allowed, then the maximal allowed height will be used as actual height, which effectively scales down the image
     - **usually the best policy for processors that use neural networks, for example,  DEEP OCR, hologram detection or NN-based classification**
 
-### <a name="templatingClass"></a> The `MBTemplatingClass` component
+###  The `MBTemplatingClass` component
 
 [`MBTemplatingClass`](http://blinkid.github.io/blinkid-ios/Classes/MBTemplatingClass.html) enables implementing support for a specific class of documents that should be scanned with templating API. Final implementation of the templating recognizer consists of one or more templating classes, one class for each version of the document.
 
@@ -1231,7 +1270,7 @@ The two collections of processor groups within `MBTemplatingClass` are:
 
 A component which decides whether the scanned document belongs to the current class is [`MBTemplatingClass`](http://blinkid.github.io/blinkid-ios/Classes/MBTemplatingClass.html). It can be set by using the `- (void)setTemplatingClassifier:(nullable id<MBTemplatingClassifier>)templatingClassifier` method. If it is not set, non-classification processor groups will not be executed. Instructions for implementing the `MBTemplatingClassifier` are given in the [next section](#implementingTemplatingClassifier).
 
-### <a name="implementingTemplatingClassifier"></a> Implementing the `MBTemplatingClassifier`
+###  Implementing the `MBTemplatingClassifier`
 
 Each concrete templating classifier implements the [`MBTemplatingClassifier`](http://blinkid.github.io/blinkid-ios/Protocols/MBTemplatingClassifier.html) interface, which requires to implement its `classify` method that is invoked while evaluating associated `MBTemplatingClass`.
 
@@ -1243,7 +1282,7 @@ To be able to retrieve results from the various processing units that are needed
 
 When recognition is done, results can be obtained through processing units instances, such as: `MBProcessors`, `MBParsers`, etc. which are used for configuring the `MBTemplatingRecognizer` and later for processing the input image.
 
-# <a name="detectorConcept"></a> The `MBDetector` concept
+#  The `MBDetector` concept
 
 [`MBDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBDetector.html) is a processing unit used within some `MBRecognizer` which supports detectors, such as [`MBDetectorRecognizer`](#detectorRecognizer). Concrete `MBDetector` knows how to find the certain object on the input image. `MBRecognizer` can use it to perform object detection prior to performing further recognition of detected object's contents.
 
@@ -1262,9 +1301,9 @@ When detection is performed on the input image, each `MBDetector` in its associa
 
 To support common use cases, there are several different `MBDetector` implementations available. They are listed in the next section.
 
-## <a name="detectorList"></a> List of available detectors
+##  List of available detectors
 
-### <a name="documentDetector"></a> Document Detector
+###  Document Detector
 
 [`MBDocumentDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentDetector.html) is used to detect card documents, cheques, A4-sized documents, receipts and much more.
 
@@ -1275,7 +1314,7 @@ For the most commonly used document formats, there is a helper method  `+ (insta
 For the list of all available configuration methods see [`MBDocumentDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentDetector.html) doc, and for available result content see [`MBDocumentDetectorResult`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentDetectorResult.html) doc.
 
 
-### <a name="mrtdDetector"></a> MRTD Detector
+###  MRTD Detector
 
 [`MBMrtdDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdDetector.html) is used to perform detection of *Machine Readable Travel Documents (MRTD)*.
 
@@ -1285,7 +1324,7 @@ If `MBMrtdSpecifications` are not set, all supported MRTD formats will be detect
 
 For the list of all available configuration methods see [`MBMrtdDetector`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdDetector.html) doc, and for available result content see [`MBMrtdDetectorResult`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdDetectorResult.html) doc.
 
-# <a name="customizedBuild"></a> Creating customized build of BlinkID SDK
+#  Creating customized build of BlinkID SDK
 
 If your final app size is too large, you can create a customised build of _MicroBlink.framework_ and _MicroBlink.bundle_ which will contain only features and resources that you really need.
 
@@ -1316,11 +1355,12 @@ In order to create customised build of BlinkID SDK, you will need following tool
 	- when asked, enter `s` to build static framework or `d` to build dynamic framework
 7. After several minutes (depedending of CPU speed of your computer), customised build will appear in the `Release` folder. Use that bundle and framework in your app instead of default one.
 
+<!-- ommit in toc -->
 #### Warning:
 
 Attempt to use feature within your app which was not enabled in customised build will cause a linker error when linking against the customised framework.
 
-### Troubleshooting:
+### Troubleshooting customised build:
 
 #### Getting `unrecognized selector sent to instance` when using customised static framework, while everything works OK with dynamic framework
 
@@ -1363,15 +1403,15 @@ This will keep only support for reading MRZ zone in OCR - you will not be able t
 - `model_micr` is OCR model for performing OCR of [Magnetic Ink Characters](https://en.wikipedia.org/wiki/Magnetic_ink_character_recognition)
 - `model_general_blink_ocr` is OCR model for performing general-purpose OCR. This model is usually required for performing OCR of non-MRZ text on documents.
 
-# <a name="troubleshoot"></a> Troubleshooting
+#  Troubleshooting
 
-## <a name="integrationTroubleshoot"></a> Integration problems
+##  Integration problems
 
 In case of problems with integration of the SDK, first make sure that you have tried integrating it into XCode by following [integration instructions](#quickStart).
 
 If you have followed [XCode integration instructions](#quickStart) and are still having integration problems, please contact us at [help.microblink.com](http://help.microblink.com).
 
-## <a name="sdkTroubleshoot"></a> SDK problems
+##  SDK problems
 
 In case of problems with using the SDK, you should do as follows:
 
@@ -1396,27 +1436,27 @@ If you are having problems with scanning certain items, undesired behaviour on s
 	* information about device that you are using
 	* please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK
 
-## <a name="faq"></a> Frequently asked questions and known problems
+##  Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.
 
-#### <a name="featureNotSupportedByLicenseKey"></a> In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizer.html) object
+####  In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizer.html) object
 
 Each license key contains information about which features are allowed to use and which are not. This `NSError` indicates that your production license does not allow using of specific `MBRecognizer` object. You should contact [support](http://help.microblink.com) to check if provided licence is OK and that it really contains all features that you have purchased.
 
-#### <a name="invalidLicenseKey"></a> I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code with trial license key
+####  I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code with trial license key
 
 Whenever you construct any [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizer.html) object or, a check whether license allows using that object will be performed. If license is not set prior constructing that object, you will get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code. We recommend setting license as early as possible in your app.
 
-#### <a name="undefinedSymbols"></a> Undefined Symbols on Architecture armv7
+####  Undefined Symbols on Architecture armv7
 
 Make sure you link your app with iconv and Accelerate frameworks as shown in [Quick start](#quickStart). 
 If you are using Cocoapods, please be sure that you've installed `git-lfs` prior to installing pods. If you are still getting this error, go to project folder and execute command `git-lfs pull`.
 
-#### <a name="statefulRecognizer"></a> In my `didFinish` callback I have the result inside my `MBRecognizer`, but when scanning activity finishes, the result is gone
+####  In my `didFinish` callback I have the result inside my `MBRecognizer`, but when scanning activity finishes, the result is gone
 
 This usually happens when using [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizerRunnerViewController.html) and forgetting to pause the [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizerRunnerViewController.html) in your `didFinish` callback. Then, as soon as `didFinish` happens, the result is mutated or reset by additional processing that `MBRecognizer` performs in the time between end of your `didFinish` callback and actual finishing of the scanning activity. For more information about statefulness of the `MBRecognizer` objects, check [this section](#recognizerConcept).
 
-#### <a name="unsupportedArchitecture"></a> Unsupported architectures when submitting app to App Store
+####  Unsupported architectures when submitting app to App Store
 
 Microblink.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures. 
 
@@ -1455,7 +1495,7 @@ mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
 done
 ```
 
-# <a name="info"></a> Additional info
+#  Additional info
 
 Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
 
