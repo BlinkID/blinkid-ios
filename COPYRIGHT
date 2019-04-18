@@ -1,1 +1,0 @@
-Copyright (c) 2016. Microblink LLC
