@@ -7,6 +7,7 @@
 //
 
 #import "MBBlinkInputEntities.h"
+#import "MBBlinkCardEntities.h"
 
 // Australia
 #import "MBAustraliaDlFrontRecognizer.h"
@@ -172,12 +173,9 @@
 #import "MBNewZealandDlFrontRecognizer.h"
 #import "MBNewZealandDlFrontRecognizerResult.h"
 
-// BlinkCard
-#import "MBBlinkCardRecognizer.h"
-#import "MBBlinkCardRecognizerResult.h"
-
-#import "MBBlinkCardEliteRecognizer.h"
-#import "MBBlinkCardEliteRecognizerResult.h"
+// Passport
+#import "MBPassportRecognizer.h"
+#import "MBPassportRecognizerResult.h"
 
 // Poland
 #import "MBPolandIdBackRecognizer.h"

@@ -1,5 +1,27 @@
 # Release notes
 
+## 4.9.0
+
+- Updates and additions:
+    - added support for reading all passports with MRZ - use `MBPassportRecognizer`
+    - added setting on `MBDocumentFaceRecognizer` for control over face image processor - use `tryBothOrientations`
+    - added result property on `MBGermanyCombinedRecognizerResult` to get full mrz string result - use `rawMrzString`
+
+- Improvements in ID scanning performance:
+    - added support for reading commercial code in two rows for `MBHongKongIdFrontRecognizer`
+    - added support for `MBHongKongIdFrontRecognizer` 2018 version
+    - improved reading accuracy for the following recognizers (**DeepOCR** support):
+        - `MBMalaysiaIKadFrontRecognizer`
+    - improved scanning time of all Malaysian ID front recognizers: MyKad, MyKAS, MyPR, MyTentera
+
+- Minor API changes:
+    - `partialRecognitionTimeout` in `MBRecognizerCollection` default value has been changed to **0** which means no timeout will be reported in which partial scanning results will be returned to the user
+
+- Bugfixes:
+    - fixed issue with combining surnames in `MBGermanyCombinedRecognizer`'s logic
+    - fixed a validation issue for the gender field in `MBSloveniaCombinedRecognizer`
+    - fixed DPI options on images are now correctly applied to dewarped image results in `MBDocumentFaceRecognizer`
+
 ## 4.8.0
 
 *Important notice on MRTD recognizer in the latest BlinkID SDK release (v 4.8.0.)*

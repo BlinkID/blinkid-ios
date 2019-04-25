@@ -1,3 +1,8 @@
+## 4.9.0
+
+- Minor API changes:
+    - `partialRecognitionTimeout` in `MBRecognizerCollection` default value has been changed to **0** which means no timeout will be reported in which partial scanning results will be returned to the user
+
 ## 4.8.0
 
 - Minor API changes:
