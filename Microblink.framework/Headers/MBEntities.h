@@ -7,6 +7,7 @@
 //
 
 #import "MBBlinkIDEntities.h"
+#import "MBBlinkCardEntities.h"
 #import "MBBlinkInputEntities.h"
 #import "MBBarcodeEntities.h"
 

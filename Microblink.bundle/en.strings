@@ -12,6 +12,9 @@
 "photopay_camera_permission_denied" = "{font:@Medium}%@{/font} does not have permission to use the camera.\n\nPlease go to:\n• {font:@Medium}Settings{/font}\n• {font:@Medium}%@{/font}\n• Make sure that {font:@Medium}Camera{/font} is enabled";
 "photopay_id_position_tooltip" = "Position ID card in this Frame";
 "photopay_glare_status" = "Slightly move ID to eliminate glare.";
+"blink_card_front_message" = "Scan the front side.";
+"blink_card_back_message" = "Scan the back side.";
+"blink_card_done_message" = "Done scanning.";
 
 "photopay_front_verification_document" = "Place the front side of the document in the frame and wait for automatic scan.";
 "photopay_back_verification_document" = "Place the back side of the document in the frame and wait for automatic scan.";

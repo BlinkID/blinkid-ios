@@ -71,10 +71,10 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic) BOOL allowMultipleResults;
 
 /**
- * Timeout interval in which the partial scanning results in PhotoPay will be returned to the user.
+ * Timeout interval in which the partial scanning results will be returned to the user.
  * If <= 0.0, no timeout event will be reported.
  *
- * Default: 12 seconds in BlinkID and PhotoPay, 7.0 for PDF417, 0 for others.
+ * Default: 0 seconds, which means no timeout will be reported.
  */
 @property (nonatomic) NSTimeInterval partialRecognitionTimeout;
 

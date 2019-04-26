@@ -124,9 +124,13 @@
 		<data>
 		SpSCzBVQESc1+1dqKoSTz5w5Mi0=
 		</data>
+		<key>Headers/MBBlinkCardEntities.h</key>
+		<data>
+		89FILVUWqIfhv/f2BlteXsvfGqc=
+		</data>
 		<key>Headers/MBBlinkCardOverlaySettings.h</key>
 		<data>
-		5u4kGQ9RlZ7BgXZCIKOpnronZCo=
+		kT2Rv9TVaYnE7reTuAXNlVK8VRk=
 		</data>
 		<key>Headers/MBBlinkCardOverlayViewController.h</key>
 		<data>
@@ -140,13 +144,17 @@
 		<data>
 		QdH4ZfZXwSdfcEnzwZCjrOhGNaI=
 		</data>
+		<key>Headers/MBBlinkCardUIComponents.h</key>
+		<data>
+		BOwNkMu9LC3AS3iEOcqGFonk85k=
+		</data>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<data>
-		vLU8ua2aE2kOdjZSkxgwZ8nL+04=
+		AdT0/0YBByewcH9uF7DoaLfknXk=
 		</data>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
 		<data>
-		/aQRenVeYZrJBG1lZY05P+3JnW0=
+		MloZiSueR/roLZijACo3J548Gg4=
 		</data>
 		<key>Headers/MBBlinkInputEntities.h</key>
 		<data>
@@ -454,7 +462,7 @@
 		</data>
 		<key>Headers/MBDocumentFaceRecognizer.h</key>
 		<data>
-		bb7ev8vg2zUGBAlrIM3CAn0PYro=
+		rdMYXbV20WVPUS/FWTAgibUpcc0=
 		</data>
 		<key>Headers/MBDocumentFaceRecognizerResult.h</key>
 		<data>
@@ -562,7 +570,7 @@
 		</data>
 		<key>Headers/MBEntities.h</key>
 		<data>
-		r8LEkB2XFMfBC4sv68Nx4qOHlHw=
+		GogUH7Hf2r1VEmxQKRKhxYOHPQc=
 		</data>
 		<key>Headers/MBEntity.h</key>
 		<data>
@@ -646,7 +654,7 @@
 		</data>
 		<key>Headers/MBGermanyCombinedRecognizerResult.h</key>
 		<data>
-		SvNw3jhO3oiPMwHdDZlzBwp+zws=
+		ZFOQdERThiIm9OTZgjOA+BhUtdM=
 		</data>
 		<key>Headers/MBGermanyDlBackRecognizer.h</key>
 		<data>
@@ -1044,6 +1052,14 @@
 		<data>
 		+wWChQ3XdlBh33AaIxsS4b32rQM=
 		</data>
+		<key>Headers/MBPassportRecognizer.h</key>
+		<data>
+		dzUUDrSIv873UAelTHZgqSttSSU=
+		</data>
+		<key>Headers/MBPassportRecognizerResult.h</key>
+		<data>
+		sHBTxIVyNn9Q2prAsPVLaFzt34A=
+		</data>
 		<key>Headers/MBPdf417Recognizer.h</key>
 		<data>
 		IdFvoMhzbc57CMGsOo1p6ufMqeg=
@@ -1130,7 +1146,7 @@
 		</data>
 		<key>Headers/MBRecognizerCollection.h</key>
 		<data>
-		u9Gv2n7IGxquOOAnzegwPFDjNWY=
+		6ILx2hstxB7QHXsurNAmcyIGZ4o=
 		</data>
 		<key>Headers/MBRecognizerResult.h</key>
 		<data>
@@ -1466,7 +1482,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mWDHNT0W3p8EKbJS19IDK0vo+bY=
+		Q3doE3mR7fFbQivMVmMEXQMXP3E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1805,15 +1821,26 @@
 			ktRBhWqaD2KhgKbwPW8Gni09P2IE4C/lJgZeqZmrdpQ=
 			</data>
 		</dict>
+		<key>Headers/MBBlinkCardEntities.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			89FILVUWqIfhv/f2BlteXsvfGqc=
+			</data>
+			<key>hash2</key>
+			<data>
+			VmecLkS3dcsL10KYRBr61SGJqBAaXMYQDnuIi1MqXaA=
+			</data>
+		</dict>
 		<key>Headers/MBBlinkCardOverlaySettings.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5u4kGQ9RlZ7BgXZCIKOpnronZCo=
+			kT2Rv9TVaYnE7reTuAXNlVK8VRk=
 			</data>
 			<key>hash2</key>
 			<data>
-			D0XGnDBne0BQhtUdgWlS/w4TJ/CBqAHSrVHHUxjMH6k=
+			Q5PWxu49dKBmFOg4ZFaj32aRmRJAcRpDCHsvaQuABc0=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkCardOverlayViewController.h</key>
@@ -1849,26 +1876,37 @@
 			AJhw4CqRT8j3+h5Ug3VKGN81yQi2wzx7FOceXVfakRE=
 			</data>
 		</dict>
+		<key>Headers/MBBlinkCardUIComponents.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BOwNkMu9LC3AS3iEOcqGFonk85k=
+			</data>
+			<key>hash2</key>
+			<data>
+			cBpIJhLC2v4Gav0PQe2jY6JpMPbQ9TYS7FjHxNd1I8w=
+			</data>
+		</dict>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vLU8ua2aE2kOdjZSkxgwZ8nL+04=
+			AdT0/0YBByewcH9uF7DoaLfknXk=
 			</data>
 			<key>hash2</key>
 			<data>
-			/PLSYVC3uPkSKcOL0vQbFGpE110+EukZ2j4Um6Ge1gU=
+			zH9ncUGqmMnU/xP2A8JhYk0zFi+eq5d4euoz4FLsZFo=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/aQRenVeYZrJBG1lZY05P+3JnW0=
+			MloZiSueR/roLZijACo3J548Gg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			kRynroLwgl4b7s/kKI8FxwuLfyc1pT2jSRRuBPpT8nM=
+			5RTNOPges2yBmFA1cOYpNUtWcn9TpnQAhQSohbAbzzc=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkInputEntities.h</key>
@@ -2711,11 +2749,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bb7ev8vg2zUGBAlrIM3CAn0PYro=
+			rdMYXbV20WVPUS/FWTAgibUpcc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Is6cU1ylMXQ/KCcx3UW3kyHLO9HWaU0379Jihjm4nfM=
+			GBfF7/QzDYgO7SdyT1WOmNJYImCeeTzXmD5iL9OKuBw=
 			</data>
 		</dict>
 		<key>Headers/MBDocumentFaceRecognizerResult.h</key>
@@ -3008,11 +3046,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r8LEkB2XFMfBC4sv68Nx4qOHlHw=
+			GogUH7Hf2r1VEmxQKRKhxYOHPQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vtsgBGohfZV0Hm0tgo8tWyCJkivBikuKzZo9YVQ25KQ=
+			kJ4GqgNVWVC43ZbBQyU90d0AZfncBEilZlttgzcd1f4=
 			</data>
 		</dict>
 		<key>Headers/MBEntity.h</key>
@@ -3239,11 +3277,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SvNw3jhO3oiPMwHdDZlzBwp+zws=
+			ZFOQdERThiIm9OTZgjOA+BhUtdM=
 			</data>
 			<key>hash2</key>
 			<data>
-			BlGkQjBjiCYG2NlQE5U2iQFOHmmp4bqp5pkYNw5PcjA=
+			WKwjiKLMlOdY62pg5MP0r9WG1/J45tXZ3RZiEkVYvnY=
 			</data>
 		</dict>
 		<key>Headers/MBGermanyDlBackRecognizer.h</key>
@@ -4335,6 +4373,28 @@
 			iXUvL7hqjqgZEOS2n3m2bDs/hoAmlOFTDNMJayvatvE=
 			</data>
 		</dict>
+		<key>Headers/MBPassportRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dzUUDrSIv873UAelTHZgqSttSSU=
+			</data>
+			<key>hash2</key>
+			<data>
+			WAG09ZQPNu43kWgCC3TpX7mriEa1I1aAkE9DXDWqfWU=
+			</data>
+		</dict>
+		<key>Headers/MBPassportRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sHBTxIVyNn9Q2prAsPVLaFzt34A=
+			</data>
+			<key>hash2</key>
+			<data>
+			zjOYUfrgxiUvqZWXgrdOUhF2ZNFSWDjYM2r/36dsxWk=
+			</data>
+		</dict>
 		<key>Headers/MBPdf417Recognizer.h</key>
 		<dict>
 			<key>hash</key>
@@ -4570,11 +4630,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u9Gv2n7IGxquOOAnzegwPFDjNWY=
+			6ILx2hstxB7QHXsurNAmcyIGZ4o=
 			</data>
 			<key>hash2</key>
 			<data>
-			5u83W1E2BYQNJnxqE9Q62RZUcXFxFSdsBzkvcqklVgA=
+			oyhgSxjeIVg1kB3xaach5Az2lEz+X1LorkaEz3Hd8QM=
 			</data>
 		</dict>
 		<key>Headers/MBRecognizerResult.h</key>

@@ -97,9 +97,9 @@ extension ViewController: MBBarcodeOverlayViewControllerDelegate {
         DispatchQueue.main.async {
             // present the alert view with scanned results
             
-            let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
             
-            let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default,
+            let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertAction.Style.default,
                                                              handler: { (action) -> Void in
                                                                 self.dismiss(animated: true, completion: nil)
             })

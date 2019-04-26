@@ -7,6 +7,7 @@
 //
 
 #import "MBBlinkInputUIComponents.h"
+#import "MBBlinkCardUIComponents.h"
 
 // Overlay delegates
 #import "MBDocumentOverlayViewControllerDelegate.h"
@@ -17,11 +18,8 @@
 #import "MBDocumentOverlaySettings.h"
 #import "MBDocumentVerificationOverlayViewController.h"
 #import "MBDocumentVerificationOverlaySettings.h"
-#import "MBBlinkCardOverlayViewController.h"
-#import "MBBlinkCardOverlaySettings.h"
 
 // Overlay subviews
 #import "MBDocumentSubview.h"
-#import "MBRectDocumentSubview.h"
 #import "MBDocumentVerificationSubview.h"
 #import "MBDocumentVerificationInstructionsSubview.h"
