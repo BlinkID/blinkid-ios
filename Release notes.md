@@ -1,5 +1,10 @@
 # Release notes
 
+## 4.9.1
+
+- Bugfixes:
+    - fixed bug in `MBDocumentFaceRecognizer` which caused that DPI settings has not been applied to dewarped image
+
 ## 4.9.0
 
 - Updates and additions:

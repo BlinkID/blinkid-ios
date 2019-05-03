@@ -22,7 +22,6 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 - [Requirements](#requirements)
@@ -157,7 +156,7 @@ pod init
 ```ruby
 platform :ios, '9.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 4.9.0'
+    pod 'PPBlinkID', '~> 4.9.1'
 end
 ```
 
