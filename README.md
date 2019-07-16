@@ -557,11 +557,13 @@ As you can see, when initializing [`MBDocumentVerificationOverlayViewController`
 ### <a name="using-blinkid-overlay-viewcontroller"></a> New: Using `MBBlinkIdOverlayViewController`
 
 [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
-	* clear indication for searching phase, when BlinkID is searching for an ID document
-	* clear progress indication, when BlinkID is busy with OCR and data extraction
-	* clear message when the document is not supported
-	* visual indications when the user needs to place the document closer to the camera
-	* when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
+
+- clear indication for searching phase, when BlinkID is searching for an ID document
+- clear progress indication, when BlinkID is busy with OCR and data extraction
+- clear message when the document is not supported
+- visual indications when the user needs to place the document closer to the camera
+- when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
+
 The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher. 
 To force the UI in landscape mode, use the following instructions:
 
