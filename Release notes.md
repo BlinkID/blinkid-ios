@@ -1,5 +1,37 @@
 # Release notes
 
+## 4.10.0
+
+- Updates and additions:
+    - added `MBBlinkIdRecognizer` for scanning front side of ID cards and `MBBlinkIdCombinedRecognizer` for combined scanning of front and back side of ID cards
+        - for now, these recognizers classify and extract data from **87** different classes of **United States driver's licenses** (front and back side)
+        - in the upcoming releases, we are planning to add support for more document types from different countries
+    - completely new UX for scanning ID cards with scan overlay view controller: `MBBlinkIdOverlayViewController`:
+        -  best suited for scanning with `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+        - other single side and combined document recognizers are also supported
+- added support for reading back side of Nigerian Voter ID card - use `MBNigeriaVoterIdBackRecognizer`
+
+- Improvements in ID scanning performance:
+    - improved `MBRomaniaIdFrontRecognizer`
+        - now extracts `CNP` number
+    - improved `MBSloveniaIdFrontRecognizer` and `MBloveniaCombinedRecognizer`:
+        - return boolean flag which indicates whether **date of expiry** is permanent - use `dateOfExpiryPermanent`
+    - improved `MBGermanyPassportRecognizer`:
+        - better passport classification
+    - improved `MBColombiaIdFrontRecognizer`:
+        - support for document number in format 1-3-3
+    - improved `MBSlovakiaIdFrontRecognizer`:
+        - support for German letters
+    - Malaysia:
+        - `MBMalaysiaMyTenteraFrontRecognizer` supports 6-digit army number
+        - `MBMalaysiaIkadFrontRecognizer` - better extraction of the following fields (DeepOCR support): date of birth, sector, employer, address and date of expiry
+    - United Arab Emirates:
+        - glare detection is disabled by default for `MBUnitedArabEmiratesIdFrontRecognizer` and `MBUnitedArabEmiratesIdBackRecognizer` 
+        - `MBUnitedArabEmiratesIdBackRecognizer` - optimized detection for black backgrounds
+
+- Bugfixes:
+    - fixed bug in `MBBlinkCardOverlayViewController` which caused memory issues
+
 ## 4.9.1
 
 - Bugfixes:

@@ -5,7 +5,6 @@
 //  Created by Dino Gustin on 22/05/2018.
 //
 
-#import "MBLegacyRecognizer.h"
 #import "MBAustriaIdFrontRecognizerResult.h"
 
 #import <Foundation/Foundation.h>
