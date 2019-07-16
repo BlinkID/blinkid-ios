@@ -56,6 +56,11 @@ MB_INIT_UNAVAILABLE
 */
 @property (nonatomic, readonly) NSString *surname;
 
+/**
+ * Determines if date of expiry of Slovenian ID card is permanent.
+ */
+@property (nonatomic, readonly) BOOL dateOfExpiryPermanent;
+
 
 @end
 

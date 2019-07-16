@@ -33,7 +33,8 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 		- [Using `MBFieldByFieldOverlayViewController`](#using-fieldbyfield-overlay-viewcontroller)
 		- [Using `MBBlinkCardOverlayViewController`](#using-blinkcard-overlay-viewcontroller)
 		- [Using `MBDocumentOverlayViewController`](#using-blinkinput-overlay-viewcontroller)
-		- [Using `MBDocumentVerificationOverlayViewController`](#using-blinkid-overlay-viewcontroller)
+		- [Using `MBDocumentVerificationOverlayViewController`](#using-document-verification-overlay-viewcontroller)
+		- [New: Using `MBBlinkIdOverlayViewController`](#using-blinkid-overlay-viewcontroller)
 		- [Custom overlay view controller](#using-custom-overlay-viewcontroller)
 	- [Direct processing API](#direct-api-processing)
 		- [Using Direct API for `NSString` recognition (parsing)](#direct-api-string-processing)
@@ -51,6 +52,8 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 	- [BlinkID recognizers](#blinkid-recognizers)
 		- [Machine Readable Travel Document recognizer](#mrtd-recognizer)
 		- [Document face recognizer](#document-face-recognizers)
+		- [BlinkID Recognizer](#blink-id-recognizers)
+		- [BlinkID Combined Recognizer](#blink-id-combined-recognizers)
 		- [Austria](#austria)
 		- [Australia](#australia)
 		- [Brunei](#brunei)
@@ -155,9 +158,9 @@ pod init
 - Copy and paste the following lines into the TextEdit window:  
 
 ```ruby
-platform :ios, '9.0'
+platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 4.9.1'
+    pod 'PPBlinkID', '~> 4.10.0'
 end
 ```
 
@@ -244,9 +247,8 @@ Swift
 ```swift
 class ViewController: UIViewController, MBDocumentOverlayViewControllerDelegate  {
     
-    var rawParser: MBRawParser?
-    var parserGroupProcessor: MBParserGroupProcessor?
-    var blinkInputRecognizer: MBBlinkInputRecognizer?
+    var mrtdRecognizer : MBMrtdRecognizer?
+    var usdlRecognizer : MBUsdlRecognizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -254,22 +256,29 @@ class ViewController: UIViewController, MBDocumentOverlayViewControllerDelegate 
 
     @IBAction func didTapScan(_ sender: AnyObject) {
         
-        let settings = MBDocumentOverlaySettings()
-        rawParser = MBRawParser()
-        parserGroupProcessor = MBParserGroupProcessor(parsers: [rawParser!])
-        blinkInputRecognizer = MBBlinkInputRecognizer(processors: [parserGroupProcessor!])
+        // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
+        self.mrtdRecognizer = MBMrtdRecognizer()
+        self.mrtdRecognizer?.returnFullDocumentImage = true;
+        self.mrtdRecognizer?.allowUnverifiedResults = true;
         
-        let recognizerList = [self.blinkInputRecognizer!]
-        let recognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
+        /** Create usdl recognizer */
+        self.usdlRecognizer = MBUsdlRecognizer()
+        
+        /** Create barcode settings */
+        let settings : MBDocumentOverlaySettings = MBDocumentOverlaySettings()
+        
+        /** Crate recognizer collection */
+        let recognizerList = [self.mrtdRecognizer!, self.usdlRecognizer!]
+        let recognizerCollection : MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
         
         /** Create your overlay view controller */
-        let documentOverlayViewController = MBDocumentOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
+        let barcodeOverlayViewController : MBDocumentOverlayViewController = MBDocumentOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
         
         /** Create recognizer view controller with wanted overlay view controller */
-        let recognizerRunnerViewController: UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: documentOverlayViewController)
+        let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: barcodeOverlayViewController)
         
         /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-        present(recognizerRunnerViewController!, animated: true, completion: nil)
+        self.present(recognizerRunneViewController, animated: true, completion: nil)
     }
 }
 ```
@@ -279,9 +288,8 @@ Objective-C
 ```objective-c
 @interface ViewController () <MBDocumentOverlayViewControllerDelegate>
 
-@property (nonatomic, strong) MBRawParser *rawParser;
-@property (nonatomic, strong) MBParserGroupProcessor *parserGroupProcessor;
-@property (nonatomic, strong) MBBlinkInputRecognizer *blinkInputRecognizer;
+@property (nonatomic, strong) MBMrtdRecognizer *mrtdRecognizer;
+@property (nonatomic, strong) MBUsdlRecognizer *usdlRecognizer;
 
 @end
 
@@ -296,12 +304,11 @@ Objective-C
     
     MBDocumentOverlaySettings* settings = [[MBDocumentOverlaySettings alloc] init];
 
-    self.rawParser = [[MBRawParser alloc] init];
-    self.parserGroupProcessor = [[MBParserGroupProcessor alloc] initWithParsers:@[self.rawParser]];
-    self.blinkInputRecognizer = [[MBBlinkInputRecognizer alloc] initWithProcessors:@[self.parserGroupProcessor]];
+    self.mrtdRecognizer = [[MBMrtdRecognizer alloc] init];
+    self.usdlRecognizer = [[MBUsdlRecognizer alloc] init];
 
     /** Create recognizer collection */
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.blinkInputRecognizer]];
+    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.mrtdRecognizer, self.usdlRecognizer]];
     
     MBDocumentOverlayViewController *overlayVC = [[MBDocumentOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
     UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
@@ -520,7 +527,7 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 
 As you can see, when initializing [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html) protocol.
 
-### <a name="using-blinkid-overlay-viewcontroller"></a> Using `MBDocumentVerificationOverlayViewController`
+### <a name="using-document-verification-overlay-viewcontroller"></a> Using `MBDocumentVerificationOverlayViewController`
 
 [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) is overlay view controller best suited for performing scanning of various document for both front and back side. It has [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html):
 
@@ -546,6 +553,57 @@ UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewControll
 ```
 
 As you can see, when initializing [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) protocol.
+
+### <a name="using-blinkid-overlay-viewcontroller"></a> New: Using `MBBlinkIdOverlayViewController`
+
+[`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
+	* clear indication for searching phase, when BlinkID is searching for an ID document
+	* clear progress indication, when BlinkID is busy with OCR and data extraction
+	* clear message when the document is not supported
+	* visual indications when the user needs to place the document closer to the camera
+	* when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
+The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher. 
+To force the UI in landscape mode, use the following instructions:
+
+Swift
+```swift
+let settings = MBBlinkIdOverlaySettings()
+settings.autorotateOverlay = true
+settings.supportedOrientations = UIInterfaceOrientationMask.landscape
+```
+
+Objective-C
+```objective-c
+MBBlinkIdOverlaySettings *settings = [[MBBlinkIdOverlaySettings alloc] init];
+settings.autorotateOverlay = YES;
+settings.supportedOrientations = UIInterfaceOrientationMaskLandscape;
+```
+
+It has [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html):
+
+Swift
+```swift
+/** Create your overlay view controller */
+let blinkIdOverlayViewController : MBBlinkIdOverlayViewController = MBBlinkIdOverlayViewController(settings: blinkIdSettings, recognizerCollection: recognizerCollection, delegate: self)
+
+/** Create recognizer view controller with wanted overlay view controller */
+let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
+
+/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
+self.present(recognizerRunneViewController, animated: true, completion: nil)
+```
+
+Objective-C
+```objective-c
+MBBlinkIdOverlayViewController *overlayVC = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
+UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
+
+/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
+[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
+```
+
+As you can see, when initializing [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html) protocol.
+
 ### <a name="using-custom-overlay-viewcontroller"></a> Custom overlay view controller
 
 Please check our pdf417-sample-Swift for custom implementation of overlay view controller.
@@ -851,6 +909,16 @@ You can find information about usage context at the beginning of [this section](
 The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="blink-id-recognizers"></a> BlinkID Recognizer
+The [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the US driver license or ID. 
+You can find the list of the currently supported US documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
+We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
+
+### <a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer
+Use [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) for scanning both sides of the US driver license and ID. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
+You can find the list of the currently supported US documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
+We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
 
 ## BlinkID recognizers by countries
 

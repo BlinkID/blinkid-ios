@@ -112,7 +112,7 @@ MB_INIT_UNAVAILABLE
  *
  *  @return value for a given key
  */
-- (NSString *_Nullable)getField:(MBUsdlKeys)usdlKey MB_ATTRIBUTE_DEPRECATED;
+- (NSString *_Nullable)getField:(MBUsdlKeys)usdlKey;
 
 /**
  * Array of elements that are not part of AAMVA standard and are specific to each US state.

@@ -78,6 +78,11 @@ MB_INIT_UNAVAILABLE
 */
 @property (nonatomic, readonly) NSString *surname;
 
+/**
+ * The CNP number of Romania ID owner.
+ */
+@property (nonatomic, readonly) NSString *cnpNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

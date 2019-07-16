@@ -91,6 +91,12 @@
 #import "MBEudlRecognizer.h"
 #import "MBEudlRecognizerResult.h"
 
+// Generic
+#import "MBBlinkIdRecognizer.h"
+#import "MBBlinkIdRecognizerResult.h"
+#import "MBBlinkIdCombinedRecognizer.h"
+#import "MBBlinkIdCombinedRecognizerResult.h"
+
 // Germany
 #import "MBGermanyIdBackRecognizer.h"
 #import "MBGermanyIdBackRecognizerResult.h"
@@ -172,6 +178,10 @@
 // New Zealand
 #import "MBNewZealandDlFrontRecognizer.h"
 #import "MBNewZealandDlFrontRecognizerResult.h"
+
+// Nigeria
+#import "MBNigeriaVoterIdBackRecognizer.h"
+#import "MBNigeriaVoterIdBackRecognizerResult.h"
 
 // Passport
 #import "MBPassportRecognizer.h"

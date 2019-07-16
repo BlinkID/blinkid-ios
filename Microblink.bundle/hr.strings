@@ -1,0 +1,39 @@
+/* 
+  en.strings
+  BlinkOCR
+
+  Created by Jura on 12/03/15.
+  Copyright (c) 2015 MicroBlink. All rights reserved.
+*/
+
+"photopay_close" = "Cancel";
+"photopay_light_on" = "Light";
+"photopay_light_off" = "Light";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} does not have permission to use the camera.\n\nPlease go to:\n• {font:@Medium}Settings{/font}\n• {font:@Medium}%@{/font}\n• Make sure that {font:@Medium}Camera{/font} is enabled";
+"photopay_id_position_tooltip" = "Position ID card in this Frame";
+"photopay_glare_status" = "Slightly move ID to eliminate glare.";
+"blink_card_front_message" = "Scan the front side.";
+"blink_card_back_message" = "Scan the back side.";
+"blink_card_done_message" = "Done scanning.";
+
+"photopay_front_verification_document" = "Place the front side of the document in the frame and wait for automatic scan.";
+"photopay_back_verification_document" = "Place the back side of the document in the frame and wait for automatic scan.";
+"photopay_front_splash_verification_document" = "Document front side";
+"photopay_back_splash_verification_document" = "Document back side";
+"photopay_done_splash_verification_document" = "Document scanning done";
+
+"blinkid_generic_message" = "Skenirajte prednju stranu dokumenta";
+"blinkid_not_supported_title" = "Nepoznat dokument";
+"blinkid_not_supported_message" = "Ponovite skeniranje prednje strane podržanog dokumenta.";
+"blinkid_not_supported_action" = "U redu";
+
+"blinkid_sides_dont_match_title" = "Podaci se ne podudaraju";
+"blinkid_sides_dont_match_message" = "Molimo ponovno skenirajte prednju i stražnju stranu istog dokumenta.";
+
+"blinkid_first_side_scanned_message" = "Okrenite dokument";
+
+"blinkid_too_near_error_message" = "Udaljite dokument";
+"blinkid_too_far_error_message" = "Približite dokument";
+"blinkid_scan_unsuccessful_error_title" = "Skeniranje nije uspjelo";
+"blinkid_scan_unsuccessful_error_message" = "Dokument nije moguće očitati. Molimo pokušajte ponovno.";
+
