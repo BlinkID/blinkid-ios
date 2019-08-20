@@ -22,7 +22,6 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 - [Requirements](#requirements)
@@ -51,11 +50,14 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 		- [Elite Payment / Debit card combined recognizer](#elite-payment-card-recognizers)
 	- [BlinkID recognizers](#blinkid-recognizers)
 		- [Machine Readable Travel Document recognizer](#mrtd-recognizer)
+		- [Passport recognizer](#passport-recognizer)
+		- [Visa recognizer](#visa-recognizer)
 		- [Document face recognizer](#document-face-recognizers)
 		- [BlinkID Recognizer](#blink-id-recognizers)
 		- [BlinkID Combined Recognizer](#blink-id-combined-recognizers)
 		- [Austria](#austria)
 		- [Australia](#australia)
+		- [Belgium](#belgium)
 		- [Brunei](#brunei)
 		- [Colombia](#colombia)
 		- [Croatia](#croatia)
@@ -74,7 +76,6 @@ BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microbl
 		- [Mexico](#mexico)
 		- [Morocco](#morocco)
 		- [New Zealand](#new-zealand)
-		- [Passport](#passport)
 		- [Poland](#poland)
 		- [Romania](#romania)
 		- [Serbia](#serbia)
@@ -160,7 +161,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 4.10.0'
+    pod 'PPBlinkID', '~> 4.11.0'
 end
 ```
 
@@ -557,13 +558,11 @@ As you can see, when initializing [`MBDocumentVerificationOverlayViewController`
 ### <a name="using-blinkid-overlay-viewcontroller"></a> New: Using `MBBlinkIdOverlayViewController`
 
 [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
-
-- clear indication for searching phase, when BlinkID is searching for an ID document
-- clear progress indication, when BlinkID is busy with OCR and data extraction
-- clear message when the document is not supported
-- visual indications when the user needs to place the document closer to the camera
-- when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
-
+	* clear indication for searching phase, when BlinkID is searching for an ID document
+	* clear progress indication, when BlinkID is busy with OCR and data extraction
+	* clear message when the document is not supported
+	* visual indications when the user needs to place the document closer to the camera
+	* when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
 The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher. 
 To force the UI in landscape mode, use the following instructions:
 
@@ -888,6 +887,16 @@ The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MB
 
 You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
 
+### <a name="passport-recognizer"></a> Passport recognizer
+The [`MBPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
+### <a name="visa-recognizer"></a> Visa recognizer
+The [`MBVisaRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.
+
+You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+
 ### US / Canada driver's license barcode recognizer
 The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from the US / Canada driver's license.
 
@@ -941,6 +950,14 @@ The [`MBAustriaDlFrontRecognizerResult`](http://blinkid.github.io/blinkid-ios/Cl
 The [`MBAustraliaDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html) is recognizer specialised for scanning front side of Australian Driver's License.
 
 The [`MBAustraliaDlBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlBackRecognizer.html) is recognizer specialised for scanning back side of Australian Driver's License.
+
+### <a name="belgium"></a> Belgium
+
+The [`MBBelgiumIdFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumIdFrontRecognizer.html) is recognizer specialised for scanning front side of Belgian ID.
+
+The [`MBBelgiumIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumIdFrontRecognizer.html) is recognizer specialised for scanning back side of Belgian ID.
+
+The [`MBBelgiumCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumCombinedRecognizer.html) is recognizer specialised for scanning both front and back side of Belgian ID.
 
 ### <a name="brunei"></a> Brunei
 
@@ -1079,10 +1096,6 @@ The [`MBMoroccoIdBackRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/M
 ### <a name="new-zealand"></a> New Zealand
 
 The [`MBNewZealandDlFrontRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBNewZealandDlFrontRecognizer.html) is recognizer specialised for scanning front side of New Zealand Driver's License.
-
-### <a name="passport"></a> Passport
-
-The [`MBPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html) is recognizer which can scan all passports with MRZ.
 
 ### <a name="poland"></a> Poland
 

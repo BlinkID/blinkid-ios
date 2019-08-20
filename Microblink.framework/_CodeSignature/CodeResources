@@ -116,6 +116,30 @@
 		<data>
 		otfzYXKPVH5ABzmn28HSSw30IkY=
 		</data>
+		<key>Headers/MBBelgiumCombinedRecognizer.h</key>
+		<data>
+		l9QJ02sqXNkwjxe1Zerki6BQBow=
+		</data>
+		<key>Headers/MBBelgiumCombinedRecognizerResult.h</key>
+		<data>
+		yER2/ZuA+4UsI7MInXRb5DhW2/k=
+		</data>
+		<key>Headers/MBBelgiumIdBackRecognizer.h</key>
+		<data>
+		5atwDxNk3x5dQ5cULO+jUlLh20U=
+		</data>
+		<key>Headers/MBBelgiumIdBackRecognizerResult.h</key>
+		<data>
+		DIAw4esIvv3e3KKUbJi24jYJQ/Q=
+		</data>
+		<key>Headers/MBBelgiumIdFrontRecognizer.h</key>
+		<data>
+		fQmhKvSSYhZP2501VwOFBCGfZ3I=
+		</data>
+		<key>Headers/MBBelgiumIdFrontRecognizerResult.h</key>
+		<data>
+		85PuPtxqHAaVSYDH93h3XckhRn0=
+		</data>
 		<key>Headers/MBBlinkCardEliteRecognizer.h</key>
 		<data>
 		X26XJS+Pc7g8j8/X7QwwS4qDB9Y=
@@ -150,7 +174,7 @@
 		</data>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<data>
-		IaDoKU51raax3GhUvvHll5X/uME=
+		JjdMXX9Sv7V9kNuro7F3zmjszBU=
 		</data>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
 		<data>
@@ -494,7 +518,7 @@
 		</data>
 		<key>Headers/MBDocumentFaceRecognizer.h</key>
 		<data>
-		rdMYXbV20WVPUS/FWTAgibUpcc0=
+		Elqz6UqmNnZaJmVSm925F/tERGM=
 		</data>
 		<key>Headers/MBDocumentFaceRecognizerResult.h</key>
 		<data>
@@ -1512,6 +1536,14 @@
 		<data>
 		LYIkphjyYxTDBAwNqI+BOxAci/4=
 		</data>
+		<key>Headers/MBVisaRecognizer.h</key>
+		<data>
+		0gP5DMsVjwLE4rpdSWFeCxtccmM=
+		</data>
+		<key>Headers/MBVisaRecognizerResult.h</key>
+		<data>
+		nas6zfmBaClaV1dT+3vXJdu8EHQ=
+		</data>
 		<key>Headers/Microblink.h</key>
 		<data>
 		krbCl/D8oTkmR/MZil7tIC+y7W0=
@@ -1522,7 +1554,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Vb9CXsWEMg0Nv6KuqNQQmF/4PRU=
+		qzkPyV3/28eZvvzWWv1+B94xi3Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1839,6 +1871,72 @@
 			vx6bqXrd3LON7cGbL//BPX1/79sVYOdnISMU5znMgng=
 			</data>
 		</dict>
+		<key>Headers/MBBelgiumCombinedRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l9QJ02sqXNkwjxe1Zerki6BQBow=
+			</data>
+			<key>hash2</key>
+			<data>
+			hsKwJI2/MK7yuFNhuCv1N//i0qslLWyFeC/HALwtXVE=
+			</data>
+		</dict>
+		<key>Headers/MBBelgiumCombinedRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yER2/ZuA+4UsI7MInXRb5DhW2/k=
+			</data>
+			<key>hash2</key>
+			<data>
+			aisVMdSoLhyVyLji9Sw5JzvXksj0RRivvhETLRQgTTM=
+			</data>
+		</dict>
+		<key>Headers/MBBelgiumIdBackRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5atwDxNk3x5dQ5cULO+jUlLh20U=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ijb9h8M+85g1B86XMOqwMDKmW6R49vpU2kbHIeJfNiU=
+			</data>
+		</dict>
+		<key>Headers/MBBelgiumIdBackRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DIAw4esIvv3e3KKUbJi24jYJQ/Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			E8WAt3H7xubH+BiYWeTXCSyF5Vwx93c4q5RFqeKC3Jc=
+			</data>
+		</dict>
+		<key>Headers/MBBelgiumIdFrontRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fQmhKvSSYhZP2501VwOFBCGfZ3I=
+			</data>
+			<key>hash2</key>
+			<data>
+			Wn14Czs+UlXe6Jl0HjNx8XE4rqlDqNLC6jMECTEA4XE=
+			</data>
+		</dict>
+		<key>Headers/MBBelgiumIdFrontRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			85PuPtxqHAaVSYDH93h3XckhRn0=
+			</data>
+			<key>hash2</key>
+			<data>
+			1tNZDMu/Rr7mKe4mdgmhI2MdxrLFv4o2qhP7ncD8Xtg=
+			</data>
+		</dict>
 		<key>Headers/MBBlinkCardEliteRecognizer.h</key>
 		<dict>
 			<key>hash</key>
@@ -1931,11 +2029,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IaDoKU51raax3GhUvvHll5X/uME=
+			JjdMXX9Sv7V9kNuro7F3zmjszBU=
 			</data>
 			<key>hash2</key>
 			<data>
-			QWRkprOoSzlDckxQVAvp3bbZ/uf5FzI8BXSff/PhLjY=
+			DTrx6s4bHD7Ypk4OIpJRPZbIy4OHVssTYMqi6OzOG2g=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
@@ -2877,11 +2975,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rdMYXbV20WVPUS/FWTAgibUpcc0=
+			Elqz6UqmNnZaJmVSm925F/tERGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			GBfF7/QzDYgO7SdyT1WOmNJYImCeeTzXmD5iL9OKuBw=
+			vzyigL/i1NRNQcQG2r/D++EwSh/z6YSof25Wa/NJfOg=
 			</data>
 		</dict>
 		<key>Headers/MBDocumentFaceRecognizerResult.h</key>
@@ -5676,6 +5774,28 @@
 			<key>hash2</key>
 			<data>
 			aspjOwl55lToJg43jjbI1aUUxvUWM3JMZsldixmanIU=
+			</data>
+		</dict>
+		<key>Headers/MBVisaRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0gP5DMsVjwLE4rpdSWFeCxtccmM=
+			</data>
+			<key>hash2</key>
+			<data>
+			FFqd28NdT+z4+pyw1MBP4huzCp2qJdOta8YvsA62kNM=
+			</data>
+		</dict>
+		<key>Headers/MBVisaRecognizerResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nas6zfmBaClaV1dT+3vXJdu8EHQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			6O9WTRPfdsAPg1H7yfDhl62eLnxsk10cPzUdvxifHpo=
 			</data>
 		</dict>
 		<key>Headers/Microblink.h</key>

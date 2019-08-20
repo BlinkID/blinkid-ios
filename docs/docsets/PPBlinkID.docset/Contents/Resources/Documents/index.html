@@ -125,6 +125,24 @@
                 <a class="nav-group-task-link" href="Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumCombinedRecognizer.html">MBBelgiumCombinedRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumCombinedRecognizerResult.html">MBBelgiumCombinedRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumIdBackRecognizer.html">MBBelgiumIdBackRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumIdBackRecognizerResult.html">MBBelgiumIdBackRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumIdFrontRecognizer.html">MBBelgiumIdFrontRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBelgiumIdFrontRecognizerResult.html">MBBelgiumIdFrontRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBlinkCardEliteRecognizer.html">MBBlinkCardEliteRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -973,6 +991,12 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBVinRecognizerResult.html">MBVinRecognizerResult</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVisaRecognizer.html">MBVisaRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVisaRecognizerResult.html">MBVisaRecognizerResult</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -1502,11 +1526,14 @@
 
 <ul>
 <li><a href="#mrtd-recognizer">Machine Readable Travel Document recognizer</a></li>
+<li><a href="#passport-recognizer">Passport recognizer</a></li>
+<li><a href="#visa-recognizer">Visa recognizer</a></li>
 <li><a href="#document-face-recognizers">Document face recognizer</a></li>
 <li><a href="#blink-id-recognizers">BlinkID Recognizer</a></li>
 <li><a href="#blink-id-combined-recognizers">BlinkID Combined Recognizer</a></li>
 <li><a href="#austria">Austria</a></li>
 <li><a href="#australia">Australia</a></li>
+<li><a href="#belgium">Belgium</a></li>
 <li><a href="#brunei">Brunei</a></li>
 <li><a href="#colombia">Colombia</a></li>
 <li><a href="#croatia">Croatia</a></li>
@@ -1525,7 +1552,6 @@
 <li><a href="#mexico">Mexico</a></li>
 <li><a href="#morocco">Morocco</a></li>
 <li><a href="#new-zealand">New Zealand</a></li>
-<li><a href="#passport">Passport</a></li>
 <li><a href="#poland">Poland</a></li>
 <li><a href="#romania">Romania</a></li>
 <li><a href="#serbia">Serbia</a></li>
@@ -1630,7 +1656,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 4.10.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 4.11.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -2302,6 +2328,16 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html"><code><a href="Classes/MBMrtdCombinedRecognizer.html">MBMrtdCombinedRecognizer</a></code></a> scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses <a href="#document-face-recognizer">MBDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="#mrtd-recognizer">MBMrtdRecognizer</a> for scanning the MRZ.</p>
 
 <p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<h3 id='a-name-passport-recognizer-a-passport-recognizer' class='heading'><a name="passport-recognizer"></a> Passport recognizer</h3>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html"><code><a href="Classes/MBPassportRecognizer.html">MBPassportRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.</p>
+
+<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<h3 id='a-name-visa-recognizer-a-visa-recognizer' class='heading'><a name="visa-recognizer"></a> Visa recognizer</h3>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html"><code><a href="Classes/MBVisaRecognizer.html">MBVisaRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.</p>
+
+<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
 <h3 id='us-canada-driver-39-s-license-barcode-recognizer' class='heading'>US / Canada driver&rsquo;s license barcode recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html"><code><a href="Classes/MBUsdlRecognizer.html">MBUsdlRecognizer</a></code></a> is used for scanning PDF417 barcode from the US / Canada driver&rsquo;s license.</p>
@@ -2355,6 +2391,13 @@ We will continue expanding this recognizer by adding support for new document ty
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlFrontRecognizer.html"><code><a href="Classes/MBAustraliaDlFrontRecognizer.html">MBAustraliaDlFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Australian Driver&rsquo;s License.</p>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBAustraliaDlBackRecognizer.html"><code><a href="Classes/MBAustraliaDlBackRecognizer.html">MBAustraliaDlBackRecognizer</a></code></a> is recognizer specialised for scanning back side of Australian Driver&rsquo;s License.</p>
+<h3 id='a-name-belgium-a-belgium' class='heading'><a name="belgium"></a> Belgium</h3>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumIdFrontRecognizer.html"><code><a href="Classes/MBBelgiumIdFrontRecognizer.html">MBBelgiumIdFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Belgian ID.</p>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumIdFrontRecognizer.html"><code><a href="Classes/MBBelgiumIdBackRecognizer.html">MBBelgiumIdBackRecognizer</a></code></a> is recognizer specialised for scanning back side of Belgian ID.</p>
+
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBelgiumCombinedRecognizer.html"><code><a href="Classes/MBBelgiumCombinedRecognizer.html">MBBelgiumCombinedRecognizer</a></code></a> is recognizer specialised for scanning both front and back side of Belgian ID.</p>
 <h3 id='a-name-brunei-a-brunei' class='heading'><a name="brunei"></a> Brunei</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBruneiIdFrontRecognizer.html"><code><a href="Classes/MBBruneiIdFrontRecognizer.html">MBBruneiIdFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Brunei ID.</p>
@@ -2475,9 +2518,6 @@ MRZ zone and address of ID holder while extracting other elements is optional.</
 <h3 id='a-name-new-zealand-a-new-zealand' class='heading'><a name="new-zealand"></a> New Zealand</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBNewZealandDlFrontRecognizer.html"><code><a href="Classes/MBNewZealandDlFrontRecognizer.html">MBNewZealandDlFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of New Zealand Driver&rsquo;s License.</p>
-<h3 id='a-name-passport-a-passport' class='heading'><a name="passport"></a> Passport</h3>
-
-<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html"><code><a href="Classes/MBPassportRecognizer.html">MBPassportRecognizer</a></code></a> is recognizer which can scan all passports with MRZ.</p>
 <h3 id='a-name-poland-a-poland' class='heading'><a name="poland"></a> Poland</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBPolandIdFrontRecognizer.html"><code><a href="Classes/MBPolandIdFrontRecognizer.html">MBPolandIdFrontRecognizer</a></code></a> is recognizer specialised for scanning front side of Polish ID.</p>
@@ -2929,7 +2969,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2019-07-16)</p>
+      <p>&copy; 2019 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2019-08-20)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

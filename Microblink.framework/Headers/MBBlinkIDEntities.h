@@ -27,6 +27,14 @@
 #import "MBAustriaDlFrontRecognizer.h"
 #import "MBAustriaDlFrontRecognizerResult.h"
 
+// Belgium
+#import "MBBelgiumIdBackRecognizer.h"
+#import "MBBelgiumIdBackRecognizerResult.h"
+#import "MBBelgiumIdFrontRecognizer.h"
+#import "MBBelgiumIdFrontRecognizerResult.h"
+#import "MBBelgiumCombinedRecognizer.h"
+#import "MBBelgiumCombinedRecognizerResult.h"
+
 // Brunei
 #import "MBBruneiIdFrontRecognizer.h"
 #import "MBBruneiIdFrontRecognizerResult.h"
@@ -244,6 +252,10 @@
 #import "MBSwitzerlandPassportRecognizerResult.h"
 #import "MBSwitzerlandDlFrontRecognizer.h"
 #import "MBSwitzerlandDlFrontRecognizerResult.h"
+
+// Visa
+#import "MBVisaRecognizer.h"
+#import "MBVisaRecognizerResult.h"
 
 // United Arab Emirates
 #import "MBUnitedArabEmiratesIdBackRecognizer.h"
