@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     /** First, set license key as soon as possible */
-    // Valid until: 2019-10-10
+    // Valid until: 2019-11-28
     [[MBMicroblinkSDK sharedInstance] setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
     return YES;
 }
