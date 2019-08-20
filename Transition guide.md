@@ -1,3 +1,8 @@
+## 4.11.0
+
+- Minor API changes:
+    - `MBDocumentFaceRecognizer` - removed the `tryBothOrientations` option (improved scan in all directions is enabled by default)
+
 ## 4.10.0
 
 - No changes

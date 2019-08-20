@@ -49,12 +49,6 @@ MB_INIT
  */
 @property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
     
-/**
- * Setting for control over FaceImageCropProcessor's tryBothOrientations option
- *
- * Default: true
- */
-@property (nonatomic, assign) BOOL tryBothOrientations;
 
 @end
 

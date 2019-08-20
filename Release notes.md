@@ -1,5 +1,20 @@
 # Release notes
 
+## 4.11.0
+
+- Updates and additions:
+    - added support for reading front and back side of Belgium ID - use `MBBelgiumIdFrontRecognizer`, `MBBelgiumIdBackRecognizer` and `MBelgiumCombinedRecognizer`
+    - added support for reading all visa documents containing Machine Readable Zone - use `MBVisaRecognizer`
+
+- Improvements in ID scanning performance:
+    - improved `MBMrtdRecognizer`: 
+        - added support for documents with non-binary gender specification (symbol X)
+    - improved `MBDocumentFaceRecognizer`:
+        - improved scanning time (faster scan)
+        - added support for vertical IDs
+        - removed the `tryBothOrientations` option (improved scan in all directions is enabled by default)
+    - improved scanning time (faster scan) for `MBPassportRecognizer`
+
 ## 4.10.0
 
 - Updates and additions:
