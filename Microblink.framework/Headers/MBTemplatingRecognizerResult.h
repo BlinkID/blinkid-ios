@@ -9,7 +9,6 @@
 
 #import "MBMicroblinkDefines.h"
 #import "MBRecognizerResult.h"
-#import "MBBarcodeResult.h"
 
 @class MBTemplatingClass;
 
