@@ -6,7 +6,7 @@
 //  Copyright © 2018 Dino. All rights reserved.
 //
 
-import MicroBlink
+import Microblink
 
 class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate {
     
@@ -32,15 +32,10 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
                 
                 for recognizer in self.recognizerCollection.recognizerList {
                     if ( recognizer.baseResult?.resultState == MBRecognizerResultState.valid ) {
-                        if recognizer is MBBarcodeRecognizer {
-                            let barcodeRecognizer = recognizer as? MBBarcodeRecognizer
-                            title = "QR Code"
-                            message = (barcodeRecognizer?.result.stringData!)!
-                        }
-                        else if recognizer is MBPdf417Recognizer {
-                            let pdf417Recognizer = recognizer as? MBPdf417Recognizer
-                            title = "PDF417"
-                            message = (pdf417Recognizer?.result.stringData!)!
+                        if recognizer is MBBlinkIdRecognizer {
+                            let blinkIdRecognizer = recognizer as? MBBlinkIdRecognizer
+                            title = "BlinkID"
+                            message = (blinkIdRecognizer?.result.description)!
                         }
                     }
                 }
