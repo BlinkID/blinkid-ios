@@ -1,5 +1,75 @@
 # Release notes
 
+## 5.0.0
+
+### **BlinkID v5 Release Announcement**
+
+We are very proud to announce BlinkID v5, the latest upgrade of our most popular product. BlinkID v5 is our first product powered entirely by machine learning.
+
+#### Highlights in the BlinkID v5 Release
+
+BlinkID v5 introduces improvements in the speed and accuracy of scanning and data extraction, and you will find:
+
+- Best-in-class card detection.
+- Automatic classification of different document types (no need to preselect the country or document type). 
+- Innovative and seamless UX with real-time instructions for the users.
+- Data matching – we match the expiry date, DOB, date of issue, and document number captured from the front side with the data from the barcode or MRZ on the back.
+
+Besides the new features listed above, we have worked on the improved performance of several other document components:
+
+- Scanning of all documents with MRZ (IDs, passports, travel visas), or PDF417 barcodes.
+- Scanning and data extraction of the front side of US driver’s licenses and IDs (horizontal).
+- Capturing cropped face image supported even on vertical documents, passports and travel visas.
+- Capturing document image.
+
+#### Integration improvements
+
+One of the main benefits that BlinkID v5 will bring is scalability and faster support for new document types.
+
+- The integration of the mobile SDK will be significantly easier and faster.
+- Mobile SDK build size will be much smaller.
+
+#### How to get started and plan your upgrade?
+
+BlinkID v5 mobile SDK release is currently available for native platforms.
+
+- It’s advisable to get familiar with the range of supported document types. We will keep adding support for new documents and regularly update [the list on Github](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md).
+- If currently supported document types are not yet supported in BlinkID v5 please follow future releases.
+- To upgrade to BlinkID v5, you will need to obtain a new license key specifically for the document types that you require.
+- Already licensed production keys will continue to work as usual, until you decide to upgrade.
+- What if you require document types supported in the previous version (and not yet added in BlinkID v5) and another document type supported in BlinkID v5? That’s manageable, and in that case, we will create a custom build for you.
+
+We strongly recommend checking the [list of supported document types](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md) regularly. Please star and watch this repository, and take the time to test BlinkID v5 as much as possible.
+
+Your opinion, especially on the performance and redesigned UX is very important for future developments. We would appreciate your feedback at blinkid@microblink.com.
+
+### Major API changes:
+    - removed all country specific recognizers
+    - `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer` are recognizers that classify and extract data from all country specific recognizers available in 4.x.x versions
+    - available recognizers are:
+        - `BlinkIdRecognizer`
+        - `BlinkIdCombinedRecognizer`
+        - `MBPassportRecognizer`
+        - `MBVisaRecognizer`
+        - `MBDocumentFaceRecognizer`
+        - `MBMrtdRecognizer`
+        - `MBMrtdCombinedRecognizer`
+        - `MBUsdlRecognizer`
+        - `MBUsdlCombinedRecognizer`
+    - parsers and detectors are removed from this version onward
+    - Templating API is no longer supported
+    - `field by field` scanning feature is no longer supported
+    - Swift Module has been renamed from `MicroBlink` to `Microblink`
+        - this will cause Swift project to crash at compile time so please do `import Microblink` from now on
+
+### New features:
+    - updated `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer` with new document types for different countries
+        - you can check [list of supported document types](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md)
+
+### Minor API changes:
+    - in combined recognizers results, `documentDataMatch` value is now returned as `MBDataMatchResult` enum with three possible values: `NotPerformed`,  `Failed` and `Success`
+
+
 ## 4.11.0
 
 - Updates and additions:

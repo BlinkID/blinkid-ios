@@ -1,3 +1,20 @@
+## 5.0.0
+
+- Major API changes:
+    - removed all country specific recognizers
+    - `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer` are recognizers that classify and extract data from all country specific recognizers available in 4.x.x versions
+    - not country specific recognizers that are staying are:
+        - `MBPassportRecognizer`
+        - `MBVisaRecognizer`
+        - `MBDocumentFaceRecognizer`
+        - `MBMrtdRecognizer`
+        - `MBMrtdCombinedRecognizer`
+        - `MBUsdlRecognizer`
+        - `MBUsdlCombinedRecognizer`
+    - parsers and detectors are removed from this version onward
+    - Swift Module has been renamed from `MicroBlink` to `Microblink`
+        - this will cause Swift project to crash at compile time so please do `import Microblink` from now on
+
 ## 4.11.0
 
 - Minor API changes:

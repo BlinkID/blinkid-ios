@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MicroBlink
+import Microblink
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

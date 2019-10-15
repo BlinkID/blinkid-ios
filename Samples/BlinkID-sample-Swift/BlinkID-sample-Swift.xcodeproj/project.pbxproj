@@ -20,6 +20,7 @@
 		3139C8B01C294FCE005AC32C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8AF1C294FCE005AC32C /* libc++.tbd */; };
 		3139C8B21C294FDB005AC32C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3139C8B11C294FDB005AC32C /* libiconv.tbd */; };
 		3155321E1D9418DA001B9440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155321D1D9418DA001B9440 /* ViewController.swift */; };
+		A20B43E3235616A2001AA65D /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B43E2235616A2001AA65D /* CustomOverlay.swift */; };
 		A2351A2A1EDF002000C1271E /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* Microblink.framework */; };
 		A2351A2B1EDF002000C1271E /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2C8BF9521CBCC80001A097C /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2C8BF9421CBCC80001A097C /* blinkid-license.txt */; };
@@ -58,6 +59,7 @@
 		3155321D1D9418DA001B9440 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		315532231D94241C001B9440 /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = ../../Microblink.bundle; sourceTree = "<group>"; };
 		315532241D94241C001B9440 /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = ../../Microblink.framework; sourceTree = "<group>"; };
+		A20B43E2235616A2001AA65D /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		A2C8BF9421CBCC80001A097C /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				B466BA2420F4E587003108A7 /* License */,
 				3139C8941C294F2C005AC32C /* AppDelegate.swift */,
 				3155321D1D9418DA001B9440 /* ViewController.swift */,
+				A20B43E2235616A2001AA65D /* CustomOverlay.swift */,
 				3139C8981C294F2C005AC32C /* Main.storyboard */,
 				3139C89B1C294F2C005AC32C /* Assets.xcassets */,
 				3139C89D1C294F2C005AC32C /* LaunchScreen.storyboard */,
@@ -165,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = Dino;
 				TargetAttributes = {
 					3139C8901C294F2C005AC32C = {
@@ -178,10 +181,9 @@
 			};
 			buildConfigurationList = 3139C88C1C294F2C005AC32C /* Build configuration list for PBXProject "BlinkID-sample-Swift" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -217,6 +219,7 @@
 			files = (
 				3155321E1D9418DA001B9440 /* ViewController.swift in Sources */,
 				3139C8951C294F2C005AC32C /* AppDelegate.swift in Sources */,
+				A20B43E3235616A2001AA65D /* CustomOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -303,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

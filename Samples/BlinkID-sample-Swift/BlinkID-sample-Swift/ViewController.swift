@@ -7,102 +7,99 @@
 //
 
 import UIKit
-import MicroBlink
+import Microblink
 
 class ViewController: UIViewController {
     
-    var mrtdRecognizer : MBMrtdRecognizer?
-    var usdlRecognizer : MBUsdlRecognizer?
-    var eudlRecognizer : MBEudlRecognizer?
+    var blinkIdRecognizer : MBBlinkIdRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Valid until: 2019-11-28
+        // Valid until: 2020-01-23
         MBMicroblinkSDK.sharedInstance().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
         
-        // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-        self.mrtdRecognizer = MBMrtdRecognizer()
-        self.mrtdRecognizer?.returnFullDocumentImage = true;
-        self.mrtdRecognizer?.allowUnverifiedResults = true;
-        
-        /** Create usdl recognizer */
-        self.usdlRecognizer = MBUsdlRecognizer()
-
-        /** Create eudl recognizer */
-        self.eudlRecognizer = MBEudlRecognizer()
-        self.eudlRecognizer?.returnFullDocumentImage = true
+        /** Create BlinkID recognizer */
+        self.blinkIdRecognizer = MBBlinkIdRecognizer()
+        self.blinkIdRecognizer?.returnFullDocumentImage = true;
         
         /** Create settings */
-        let settings : MBDocumentOverlaySettings = MBDocumentOverlaySettings()
+        let settings : MBBlinkIdOverlaySettings = MBBlinkIdOverlaySettings()
         
         /** Crate recognizer collection */
-        let recognizerList = [self.mrtdRecognizer!, self.usdlRecognizer!, self.eudlRecognizer!]
+        let recognizerList = [self.blinkIdRecognizer!]
         let recognizerCollection : MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
         
         /** Create your overlay view controller */
-        let barcodeOverlayViewController : MBDocumentOverlayViewController = MBDocumentOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
+        let blinkIdOverlayViewController : MBBlinkIdOverlayViewController = MBBlinkIdOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
         
         /** Create recognizer view controller with wanted overlay view controller */
-        let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: barcodeOverlayViewController)
+        let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
         
+        /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
+        self.present(recognizerRunneViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapCustomUI(_ sender: Any) {
+
+        /** Create BlinkID recognizer */
+        self.blinkIdRecognizer = MBBlinkIdRecognizer()
+
+        /** Crate recognizer collection */
+        let recognizerList = [self.blinkIdRecognizer!]
+        let recognizerCollection : MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
+
+        /** Create your overlay view controller */
+        let customOverlayViewController : CustomOverlay = CustomOverlay.initFromStoryboardWith()
+
+        /** This has to be called for custom controller */
+        customOverlayViewController.reconfigureRecognizers(recognizerCollection)
+
+        /** Create recognizer view controller with wanted overlay view controller */
+        let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: customOverlayViewController)
+
         /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
         self.present(recognizerRunneViewController, animated: true, completion: nil)
     }
 }
 
-extension ViewController: MBDocumentOverlayViewControllerDelegate {
+extension ViewController: MBBlinkIdOverlayViewControllerDelegate {
     
-    func documentOverlayViewControllerDidFinishScanning(_ documentOverlayViewController: MBDocumentOverlayViewController, state: MBRecognizerResultState) {
+    func blinkIdOverlayViewControllerDidFinishScanning(_ blinkIdOverlayViewController: MBBlinkIdOverlayViewController, state: MBRecognizerResultState) {
         /** This is done on background thread */
-        documentOverlayViewController.recognizerRunnerViewController?.pauseScanning()
+        blinkIdOverlayViewController.recognizerRunnerViewController?.pauseScanning()
         
         var message: String = ""
         var title: String = ""
         
-        if (self.mrtdRecognizer?.result.resultState == MBRecognizerResultState.valid) {
-            title = "MRTD"
+        if (self.blinkIdRecognizer?.result.resultState == MBRecognizerResultState.uncertain) {
+            title = "BlinkID"
             
-            let fullDocumentImage: UIImage! = self.mrtdRecognizer?.result.fullDocumentImage?.image
-            print("Got MRTD image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
-            
-            // Save the string representation of the code
-            message = self.mrtdRecognizer!.result.description
-        }
-        else if (self.usdlRecognizer?.result.resultState == MBRecognizerResultState.valid) {
-            title = "USDL"                        
+            let fullDocumentImage: UIImage! = self.blinkIdRecognizer?.result.fullDocumentImage?.image
+            print("Got BlinkID image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
             
             // Save the string representation of the code
-            message = (self.usdlRecognizer?.result.description)!
-        }
-        else if (self.eudlRecognizer?.result.resultState == MBRecognizerResultState.valid) {
-            title = "EUDL"
+            message = self.blinkIdRecognizer!.result.description
             
-            let fullDocumentImage: UIImage! = self.eudlRecognizer?.result.fullDocumentImage?.image
-            print("Got EUDL image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
-            
-            // Save the string representation of the code
-            message = (self.eudlRecognizer?.result.description)!
-        }
-        
-        /** Needs to be called on main thread beacuse everything prior is on background thread */
-        DispatchQueue.main.async {
-            // present the alert view with scanned results
-            
-            let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            
-            let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertAction.Style.default,
-                                                             handler: { (action) -> Void in
-                                                                self.dismiss(animated: true, completion: nil)
-            })
-            alertController.addAction(okAction)
-            documentOverlayViewController.present(alertController, animated: true, completion: nil)
+            /** Needs to be called on main thread beacuse everything prior is on background thread */
+            DispatchQueue.main.async {
+                // present the alert view with scanned results
+                
+                let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+                
+                let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertAction.Style.default,
+                                                                 handler: { (action) -> Void in
+                                                                    self.dismiss(animated: true, completion: nil)
+                })
+                alertController.addAction(okAction)
+                blinkIdOverlayViewController.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     
-    func documentOverlayViewControllerDidTapClose(_ documentOverlayViewController: MBDocumentOverlayViewController) {
+    func blinkIdOverlayViewControllerDidTapClose(_ blinkIdOverlayViewController: MBBlinkIdOverlayViewController) {
         self.dismiss(animated: true, completion: nil)
     }
 }
