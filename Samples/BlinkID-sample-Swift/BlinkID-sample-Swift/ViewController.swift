@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         
         /** Create recognizer view controller with wanted overlay view controller */
         let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
+        recognizerRunneViewController.modalPresentationStyle = .fullScreen
         
         /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
         self.present(recognizerRunneViewController, animated: true, completion: nil)
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
 
         /** Create recognizer view controller with wanted overlay view controller */
         let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: customOverlayViewController)
+        recognizerRunneViewController.modalPresentationStyle = .fullScreen
 
         /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
         self.present(recognizerRunneViewController, animated: true, completion: nil)
@@ -74,7 +76,7 @@ extension ViewController: MBBlinkIdOverlayViewControllerDelegate {
         var message: String = ""
         var title: String = ""
         
-        if (self.blinkIdRecognizer?.result.resultState == MBRecognizerResultState.uncertain) {
+        if (self.blinkIdRecognizer?.result.resultState == MBRecognizerResultState.valid) {
             title = "BlinkID"
             
             let fullDocumentImage: UIImage! = self.blinkIdRecognizer?.result.fullDocumentImage?.image

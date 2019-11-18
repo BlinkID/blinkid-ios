@@ -93,7 +93,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.0.0'
+    pod 'PPBlinkID', '~> 5.0.1'
 end
 ```
 
@@ -657,18 +657,18 @@ When you have determine what is the licence-relate problem or you simply do not 
 
 * exact Bundle ID of your app (from your `info.plist` file)
 * licence that is causing problems
-* please stress out that you are reporting problem related to iOS version of BlinkID SDK
+* please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK
 * if unsure about the problem, you should also provide excerpt from console containing licence error
 
 ### <a name="troubleshooting-other-problems"></a> Other problems
 
-If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside BlinkID SDK or anything unmentioned, please do as follows:
+If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside PDF417.mobi SDK or anything unmentioned, please do as follows:
 	
 * Contact us at [help.microblink.com](http://help.microblink.com) describing your problem and provide following information:
 	* log file obtained in previous step
 	* high resolution scan/photo of the item that you are trying to scan
 	* information about device that you are using
-	* please stress out that you are reporting problem related to iOS version of BlinkID SDK
+	* please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK
 
 ## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.

@@ -1,5 +1,12 @@
 # Release notes
 
+## 5.0.1
+
+- Updates and fixes:
+    - Added missing option to remove Microblink branding on `MBBlinkIdOverlayViewController` - contact [help.microblink.com](help.microblink.com). 
+    - Fixed turning on flashlight in our overlay view controllers on iOS 13.1.3 
+
+
 ## 5.0.0
 
 ### **BlinkID v5 Release Announcement**

@@ -52,3 +52,13 @@
 
 // Templating class
 #import "MBTemplatingClass.h"
+
+// Dewarp policies
+// Fixed policy
+#import "MBFixedDewarpPolicy.h"
+
+// DPI Based policy
+#import "MBDPIBasedDewarpPolicy.h"
+
+// No Up Scaling policy
+#import "MBNoUpScalingDewarpPolicy.h"
