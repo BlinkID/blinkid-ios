@@ -141,6 +141,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBDewarpPolicy.h",
+      "line": 19,
+      "symbol": "MBDewarpPolicy.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBDigitalSignature.h",
       "line": 11,
       "symbol": "MBDigitalSignature",
