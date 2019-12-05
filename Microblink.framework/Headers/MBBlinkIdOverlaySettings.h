@@ -23,6 +23,20 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, assign) BOOL requireDocumentSidesDataMatch;
 
 /**
+ * Defines whether Document Not Supported dialog will be displayed in UI.
+ *
+ * Default: YES
+*/
+@property(nonatomic, assign) BOOL showNotSupportedDialog;
+
+/**
+ * Option to configure back side scanning timeout.
+ *
+ * Default: 17.0
+*/
+@property(nonatomic, assign) NSTimeInterval backSideScanningTimeout;
+
+/**
  * Designated initializer. Initializes the object with default settings.
  *
  *  @return object initialized with default values.

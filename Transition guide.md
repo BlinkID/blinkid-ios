@@ -1,3 +1,9 @@
+## 5.0.2
+
+- Minor API changes:
+    - methods `pauseScanning` and `resumeScanningAndResetState` in `MBRecognizerRunnerViewController` do not return anymore `BOOL`
+        - use `isScanningPaused` to check if scanning is paused
+
 ## 5.0.1
 
 - No changes

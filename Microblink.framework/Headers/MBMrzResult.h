@@ -167,6 +167,16 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, strong, readonly) NSString *sanitizedIssuer;
 
+/**
+ * Sanitized document code
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedDocumentCode;
+
+/**
+ * Sanitized document number
+ */
+@property (nonatomic, strong, readonly) NSString *sanitizedDocumentNumber;
+
 @end
 
 NS_ASSUME_NONNULL_END

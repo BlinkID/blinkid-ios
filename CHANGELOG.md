@@ -1,5 +1,20 @@
 # Release notes
 
+## 5.0.2
+
+- Updates and additions:
+    - new options in `MBBlinkIdOverlaySettings`:
+        - option to disable displaying of "Document Not Supported" dialog when `MBBlinkIdRecognizer` or `MBBlinkIdCombinedRecognizer` is used in combination with other recognizers - use method `showNotSupportedDialog`
+        - option to configure back side scanning timeout - use `backSideScanningTimeout`
+
+- Minor API changes:
+    - methods `pauseScanning` and `resumeScanningAndResetState` in `MBRecognizerRunnerViewController` do not return anymore `BOOL`
+        - use `isScanningPaused` to check if scanning is paused
+
+- Bugfixes:
+    - fixed issue where recognizer's result state would not be the same as recognizer's runner state after finished scanning
+    - fixed issue when pressing immediately close button on overlay view controllers would freeze for couple of seconds SDK
+
 ## 5.0.1
 
 - Updates and fixes:

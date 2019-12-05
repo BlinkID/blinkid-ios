@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/MBBlinkIdOverlaySettings.h</key>
 		<data>
-		xuIHm97h/vojlkGoyx+S+FwuLl4=
+		enaRN0zaxemq+tT0rN83398GcKA=
 		</data>
 		<key>Headers/MBBlinkIdOverlayViewController.h</key>
 		<data>
@@ -174,7 +174,7 @@
 		</data>
 		<key>Headers/MBDocumentVerificationOverlayViewControllerDelegate.h</key>
 		<data>
-		73iekx4eflJ5OQsDdfYmHI9YXaA=
+		V/629kxJpEVvtkdlvD2ei0Eanpg=
 		</data>
 		<key>Headers/MBDocumentVerificationSubview.h</key>
 		<data>
@@ -378,7 +378,7 @@
 		</data>
 		<key>Headers/MBMrzResult.h</key>
 		<data>
-		pwpaDkyugdxgg+WqL2i2++4v/Eg=
+		B7vDJXl2S4bI+H7g8acJxeDY7uI=
 		</data>
 		<key>Headers/MBNativeResult.h</key>
 		<data>
@@ -478,7 +478,7 @@
 		</data>
 		<key>Headers/MBRecognizerRunnerViewController.h</key>
 		<data>
-		0wMD+YY1DaqbdYaAkw2vu0g/cAQ=
+		S+XfENfcwL0BDYnLAUgWkh8VBYc=
 		</data>
 		<key>Headers/MBRecognizerRunnerViewControllerDelegate.h</key>
 		<data>
@@ -590,7 +590,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EZR6zrYu/2C+6D2EhALI79Xsxbk=
+		q/+7/Cwj266VqnQHnVUDQrcwpzg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -680,11 +680,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xuIHm97h/vojlkGoyx+S+FwuLl4=
+			enaRN0zaxemq+tT0rN83398GcKA=
 			</data>
 			<key>hash2</key>
 			<data>
-			pFwkLBQiJ6Gvpzc1TLSTwpND+7SJQRRMADoFiKnyon8=
+			0YShpqBKIhXrLy5IV1cUIVaSqFubjRTSfSj5YDef/uk=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdOverlayViewController.h</key>
@@ -1065,11 +1065,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			73iekx4eflJ5OQsDdfYmHI9YXaA=
+			V/629kxJpEVvtkdlvD2ei0Eanpg=
 			</data>
 			<key>hash2</key>
 			<data>
-			TRkuJPZalOZTS4fewLmuYmU6gH2GaJechhHwneJqno8=
+			N6KT2wHITIBJhQGcOJnPiQWkL+I2bCslKipO+KI6pI4=
 			</data>
 		</dict>
 		<key>Headers/MBDocumentVerificationSubview.h</key>
@@ -1626,11 +1626,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pwpaDkyugdxgg+WqL2i2++4v/Eg=
+			B7vDJXl2S4bI+H7g8acJxeDY7uI=
 			</data>
 			<key>hash2</key>
 			<data>
-			nS3ubC7jM3t067e0xJQwg1I1lvnOWmG52H/XYfCE1kY=
+			xWzAYgeu2TzfvpCpauxAC2u4Jjrfcq9bbAqIjCgmpyc=
 			</data>
 		</dict>
 		<key>Headers/MBNativeResult.h</key>
@@ -1901,11 +1901,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0wMD+YY1DaqbdYaAkw2vu0g/cAQ=
+			S+XfENfcwL0BDYnLAUgWkh8VBYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			DP+uWLQldXHEE8Id9cKjSm7vh7bCemPp2merj8vtkDY=
+			tttaRmakbTlIKiunc7IQcGpsYU8TQjzbhYb1kxIDHbo=
 			</data>
 		</dict>
 		<key>Headers/MBRecognizerRunnerViewControllerDelegate.h</key>
