@@ -22,6 +22,7 @@ BlinkID is a part of family of SDKs developed by [Microblink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-v5.gif" alt="BlinkID SDK">
   </a>
 </p>
+
 # Table of contents
 
 - [Requirements](#requirements)
