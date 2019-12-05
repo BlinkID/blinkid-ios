@@ -45,16 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
  * If there is camera frame being processed at a time, the processing will finish, but the results of processing
  * will not be returned.
  *
- * @warning must be called from Main thread to ensure thread synchronization
+ * Ideally, this method should be called from the background thread that returns the scan result.
  */
-- (BOOL)pauseScanning;
+- (void)pauseScanning;
 
 /**
  * Retrieve the current state of scanning.
  *
  *  @return YES if scanning is paused. NO if it's in progress
- *
- *  @warning must be called from Main thread to ensure thread synchronization
  */
 - (BOOL)isScanningPaused;
 
@@ -70,10 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
  * state provides better scanning results.
  *
  *  @param resetState YES if state should be reset.
- *
- *  @warning must be called from Main thread to ensure thread synchronization
  */
-- (BOOL)resumeScanningAndResetState:(BOOL)resetState;
+- (void)resumeScanningAndResetState:(BOOL)resetState;
 
 /**
  * Resumes camera session. This method is automatically called in viewWillAppear when ScanningViewController enters screen.

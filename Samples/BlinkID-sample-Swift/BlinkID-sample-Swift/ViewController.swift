@@ -11,7 +11,7 @@ import Microblink
 
 class ViewController: UIViewController {
     
-    var blinkIdRecognizer : MBBlinkIdRecognizer?
+    var blinkIdRecognizer : MBBlinkIdCombinedRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBAction func didTapScan(_ sender: AnyObject) {
         
         /** Create BlinkID recognizer */
-        self.blinkIdRecognizer = MBBlinkIdRecognizer()
+        self.blinkIdRecognizer = MBBlinkIdCombinedRecognizer()
         self.blinkIdRecognizer?.returnFullDocumentImage = true;
         
         /** Create settings */
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func didTapCustomUI(_ sender: Any) {
 
         /** Create BlinkID recognizer */
-        self.blinkIdRecognizer = MBBlinkIdRecognizer()
+        self.blinkIdRecognizer = MBBlinkIdCombinedRecognizer()
 
         /** Crate recognizer collection */
         let recognizerList = [self.blinkIdRecognizer!]
@@ -79,7 +79,7 @@ extension ViewController: MBBlinkIdOverlayViewControllerDelegate {
         if (self.blinkIdRecognizer?.result.resultState == MBRecognizerResultState.valid) {
             title = "BlinkID"
             
-            let fullDocumentImage: UIImage! = self.blinkIdRecognizer?.result.fullDocumentImage?.image
+            let fullDocumentImage: UIImage! = self.blinkIdRecognizer?.result.fullDocumentFrontImage?.image
             print("Got BlinkID image with width: \(fullDocumentImage.size.width), height: \(fullDocumentImage.size.height)")
             
             // Save the string representation of the code
