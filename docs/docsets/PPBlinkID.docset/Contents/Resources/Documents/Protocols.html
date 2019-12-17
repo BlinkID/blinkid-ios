@@ -111,6 +111,9 @@
                 <a class="nav-group-task-link" href="Classes/MBDisplayablePointsDetection.html">MBDisplayablePointsDetection</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBDisplayableQuadDetection.html">MBDisplayableQuadDetection</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBDocumentFaceRecognizer.html">MBDocumentFaceRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -441,6 +444,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBEncodeMrzImage.html">MBEncodeMrzImage</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a>
               </li>
               <li class="nav-group-task">
@@ -525,6 +531,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBPointDetectorSubview.html">MBPointDetectorSubview</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBQuadDetectorSubview.html">MBQuadDetectorSubview</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a>
               </li>
               <li class="nav-group-task">
@@ -538,6 +547,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBScanningRecognizerRunnerViewControllerDelegate.html">MBScanningRecognizerRunnerViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBSignatureImage.html">MBSignatureImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBSignatureImageResult.html">MBSignatureImageResult</a>
@@ -1459,6 +1474,54 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBEncodeMrzImage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)MBEncodeSignatureImage"></a>
+                    <a name="//apple_ref/objc/Protocol/MBEncodeSignatureImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBEncodeSignatureImage">MBEncodeSignatureImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/MBEncodeSignatureImage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBEncodeSignatureImage</span>
+
+<span class="err">@required</span>
+
+<span class="cm">/**
+ * Sets whether image of signature on document should be extracted and JPEG-encoded.
+ *
+ * Default: NO
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">encodeSignatureImage</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBEncodeSignatureImage</span></code></pre>
 
                         </div>
                       </div>
@@ -2755,6 +2818,43 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)MBQuadDetectorSubview"></a>
+                    <a name="//apple_ref/objc/Protocol/MBQuadDetectorSubview" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBQuadDetectorSubview">MBQuadDetectorSubview</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protocol for processing MBDisplayableQuadDetection. Subviews implementing this protocol process and draw quad on the screen (e.g. viewfinder drawing document outlining)</p>
+
+                        <a href="Protocols/MBQuadDetectorSubview.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBQuadDetectorSubview</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBQuadDetectorSubview</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)MBRecognizerRunnerViewController"></a>
                     <a name="//apple_ref/objc/Protocol/MBRecognizerRunnerViewController" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)MBRecognizerRunnerViewController">MBRecognizerRunnerViewController</a>
@@ -2940,6 +3040,103 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)MBSignatureImage"></a>
+                    <a name="//apple_ref/objc/Protocol/MBSignatureImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBSignatureImage">MBSignatureImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/MBSignatureImage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBSignatureImage</span>
+
+<span class="err">@required</span>
+
+<span class="cm">/**
+ * Sets whether signature image from ID card should be extracted.
+ *
+ * Default: NO
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">returnSignatureImage</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBSignatureImage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)MBSignatureImageDpi"></a>
+                    <a name="//apple_ref/objc/Protocol/MBSignatureImageDpi" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBSignatureImageDpi">MBSignatureImageDpi</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/MBSignatureImageDpi.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBSignatureImageDpi</span>
+
+<span class="err">@required</span>
+
+<span class="cm">/**
+ * Property for setting DPI for signature images
+ * Valid ranges are [100,400]. Setting DPI out of valid ranges throws an exception
+ *
+ * Default: 250
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">signatureImageDpi</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBSignatureImageDpi</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)MBSignatureImageResult"></a>
                     <a name="//apple_ref/objc/Protocol/MBSignatureImageResult" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)MBSignatureImageResult">MBSignatureImageResult</a>
@@ -3111,7 +3308,7 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2019-12-05)</p>
+      <p>&copy; 2019 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2019-12-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -62,3 +62,12 @@
 
 // No Up Scaling policy
 #import "MBNoUpScalingDewarpPolicy.h"
+
+// Displayable Quad
+#import "MBDisplayableQuadDetection.h"
+
+// Protocols
+#import "MBSignatureImage.h"
+#import "MBEncodeSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBQuadDetectorSubview.h"

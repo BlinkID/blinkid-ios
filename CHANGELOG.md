@@ -1,5 +1,21 @@
 # Release notes
 
+## 5.1.0
+
+- Updates and additions:
+    - added 38 new documents for `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`. Please check out complete list of supported documents [here](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md)
+
+- Improvements in ID scanning performance:
+    - **reduced overall size impact on application for approximately 50%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
+    - new fields in `MBMrzResult`:
+        - `sanitizedDocumentCode`
+        - `sanitizedDocumentNumber`
+    - improved `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`:
+        - introduced blur filter that discards blurred frames and prevents reading data from them, this option is enabled by default, it can be turned off by setting `allowBlurFilter` to `NO/false`
+
+- Bugfixes:
+    - fixed bug when scanning would not resume after doment sides would not match on `MBBlinkIdOverlayViewController`
+
 ## 5.0.2
 
 - Updates and additions:
