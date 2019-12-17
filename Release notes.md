@@ -8,7 +8,7 @@
     - details on each new document and the complete list of the supported documents is [here](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md)
 
 - Improvements in ID scanning performance:
-    - **reduced overall size impact on application for approximately 50%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
+    - **reduced overall size impact on application for approximately 40%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
     - new fields in `MBMrzResult`:
         - `sanitizedDocumentCode`
         - `sanitizedDocumentNumber`
