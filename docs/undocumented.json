@@ -9,21 +9,21 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 50,
+      "line": 57,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 52,
+      "line": 59,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedImageAvailable:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 53,
+      "line": 60,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedDocumentSupportStatus:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -44,21 +44,21 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 48,
+      "line": 55,
       "symbol": "MBBlinkIdRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 50,
+      "line": 57,
       "symbol": "MBBlinkIdRecognizerDelegate.-onImageAvailable:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 51,
+      "line": 58,
       "symbol": "MBBlinkIdRecognizerDelegate.-onDocumentSupportStatus:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -326,6 +326,13 @@
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBEncodeMrzImage.h",
       "line": 11,
       "symbol": "MBEncodeMrzImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBEncodeSignatureImage.h",
+      "line": 11,
+      "symbol": "MBEncodeSignatureImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
@@ -1272,6 +1279,20 @@
       "line": 26,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.firstSideFinishedRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBSignatureImage.h",
+      "line": 11,
+      "symbol": "MBSignatureImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBSignatureImageDpi.h",
+      "line": 11,
+      "symbol": "MBSignatureImageDpi",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {

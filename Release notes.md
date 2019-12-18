@@ -1,5 +1,23 @@
 # Release notes
 
+## 5.1.0
+
+- Updates and additions:
+    - added 38 new documents for `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+        - Algeria ID, Argentina DL, Australia Victoria DL, Australia Queensland DL, Australia Western Australia DL, Belgium Resident ID, Canada British Columbia DL, Canada Ontario DL, Canada Quebec DL, Cyprus ID, Czechia DL, Czechia ID, Egypt ID, Greece DL, India ID, India Pan Card, Israel DL, Malaysia MyKid, Malaysia MyTentera, Maldives ID, Morocco ID, Nigeria DL, Paraguay ID, Portugal DL, Puerto Rico DL, Qatar DL, Russia DL, Singapore Fin Card, Singapore Resident ID, Slovakia DL, Slovenia DL, South Africa DL, South Africa ID, Thailand ID, Tunisia ID, UAE DL, Uganda ID, Vietnam ID
+    - details on each new document and the complete list of the supported documents is [here](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md)
+
+- Improvements in ID scanning performance:
+    - **reduced overall size impact on application for approximately 40%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
+    - new fields in `MBMrzResult`:
+        - `sanitizedDocumentCode`
+        - `sanitizedDocumentNumber`
+    - improved `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`:
+        - introduced blur filter that discards blurred frames and prevents reading data from them, this option is enabled by default, it can be disabled by setting `allowBlurFilter` to `NO/false`
+
+- Bugfixes:
+    - fixed bug when scanning would not resume after doment sides would not match on `MBBlinkIdOverlayViewController`
+
 ## 5.0.2
 
 - Updates and additions:

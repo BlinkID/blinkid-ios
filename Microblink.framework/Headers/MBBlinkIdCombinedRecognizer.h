@@ -45,6 +45,13 @@ MB_INIT
  */
 - (void)setClassifierDelegate:(nullable id<MBBlinkIdCombinedRecognizerDelegate>)delegate;
 
+/**
+ * Defines whether blured frames filtering is allowed
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL allowBlurFilter;
+
 @end
 
 @protocol MBBlinkIdCombinedRecognizerDelegate <NSObject>
