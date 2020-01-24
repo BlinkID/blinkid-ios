@@ -77,10 +77,10 @@ MB_INIT
 @property (nonatomic, nullable, strong, readonly) NSArray<__kindof MBMrtdSpecification *> *mrtdSpecifications;
 
 /**
- * Filter for MRTDs (Machine Readable Travel Documents) that is used to determine which documents
- * will be processed. If document is filtered out by this filter, its data cannot be returned as recognition result.
- */
-- (void)setMrzFilter:(nullable id<MBMrzFilter>)mrzFilter;
+* Filter for MRTDs (Machine Readable Travel Documents) that is used to determine which documents
+* will be processed. If document is filtered out by this filter, its data cannot be returned as recognition result.
+*/
+@property (nonatomic, nullable, weak) id<MBMrzFilter> mrzFilterDelegate;
 
 @end
 

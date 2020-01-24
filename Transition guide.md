@@ -1,3 +1,9 @@
+## 5.1.1
+
+- Minor API changes:
+    - `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+        - methods `setDewarpedImageDelegate` and `setClassifierDelegate` are now properties `dewarpedImageDelegate` and `classifierDelegate`
+
 ## 5.1.0
 
 - No changes
