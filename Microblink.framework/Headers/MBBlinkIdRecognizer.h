@@ -34,14 +34,14 @@ MB_INIT
 @property (nonatomic, strong, readonly) MBBlinkIdRecognizerResult *result;
 
 /**
- * Called with dewarped full document image
- */
-- (void)setDewarpedImageDelegate:(nullable id<MBBlinkIdRecognizerDelegate>)delegate;
+* Full document dewarped imagedelegate
+*/
+@property (nonatomic, nullable, weak) id<MBBlinkIdRecognizerDelegate> dewarpedImageDelegate;
 
 /**
- * Called when document is not supported
- */
-- (void)setClassifierDelegate:(nullable id<MBBlinkIdRecognizerDelegate>)delegate;
+* Document not supported classifier delegate
+*/
+@property (nonatomic, nullable, weak) id<MBBlinkIdRecognizerDelegate> classifierDelegate;
 
 /**
  * Defines whether blured frames filtering is allowed

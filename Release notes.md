@@ -1,5 +1,14 @@
 # Release notes
 
+## 5.1.1
+
+- Bugfixes:
+    - fixed memory leaks that could cause crashes in some cases
+
+- Minor API changes:
+    - `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+        - methods `setDewarpedImageDelegate` and `setClassifierDelegate` are now properties `dewarpedImageDelegate` and `classifierDelegate`
+
 ## 5.1.0
 
 - Updates and additions:
@@ -8,7 +17,7 @@
     - details on each new document and the complete list of the supported documents is [here](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md)
 
 - Improvements in ID scanning performance:
-    - **reduced overall size impact on application for approximately 40%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
+    - **reduced overall size impact on application for approximately 50%** when BlinkID SDK v5.1 is used, relative to size impact of the previous version (v5.0)
     - new fields in `MBMrzResult`:
         - `sanitizedDocumentCode`
         - `sanitizedDocumentNumber`

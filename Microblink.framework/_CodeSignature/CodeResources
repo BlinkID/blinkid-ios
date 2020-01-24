@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/MBBlinkIdCombinedRecognizer.h</key>
 		<data>
-		B86XWMAnSlk3tm44Q6ZLQ1Fei+s=
+		XAts11eIuz+mrcM3eqgrSK1jA2E=
 		</data>
 		<key>Headers/MBBlinkIdCombinedRecognizerResult.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/MBBlinkIdRecognizer.h</key>
 		<data>
-		QhR0enDESM5l7c9oeYGgGvNg7Mg=
+		P/TtGtuuBxHVOhzIQocTH4iESug=
 		</data>
 		<key>Headers/MBBlinkIdRecognizerResult.h</key>
 		<data>
@@ -354,7 +354,7 @@
 		</data>
 		<key>Headers/MBMrtdRecognizer.h</key>
 		<data>
-		UGAziX6rNXp98vf3KkQW9J40J0Y=
+		V7ilwFYwjV+Eid7xQASSOrYYoh0=
 		</data>
 		<key>Headers/MBMrtdRecognizerResult.h</key>
 		<data>
@@ -590,7 +590,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KWitnZyXizDqKc0sEf7xcKy8PEs=
+		p6jaJjlT+5n47tGHwYbjKdt5z7Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -658,11 +658,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			B86XWMAnSlk3tm44Q6ZLQ1Fei+s=
+			XAts11eIuz+mrcM3eqgrSK1jA2E=
 			</data>
 			<key>hash2</key>
 			<data>
-			wX1C9+GfNTL0e0oWrJN1A+bcpNkw5t8epe9rupH/Nxg=
+			LSCwMFkKPcH//GO+Kkl0WwBeESuTjluPeeh/Tj0EKH0=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdCombinedRecognizerResult.h</key>
@@ -713,11 +713,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QhR0enDESM5l7c9oeYGgGvNg7Mg=
+			P/TtGtuuBxHVOhzIQocTH4iESug=
 			</data>
 			<key>hash2</key>
 			<data>
-			JH85AwzUPuV2L8ULDS67DqZnv72bfQj6O/xrBy7GvU8=
+			Ne+MYgmx4XbFz7ZE0tK0TggQi8hFrnfrNOWWe5wF3rI=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdRecognizerResult.h</key>
@@ -1560,11 +1560,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UGAziX6rNXp98vf3KkQW9J40J0Y=
+			V7ilwFYwjV+Eid7xQASSOrYYoh0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2Qv94t75GZiW9Kl0h0Wug0Xb1xgrGEkPbhiS1pm5miY=
+			QhY+zfOV/PGaoZSuPlYuqmhmPXc0V37hs9wPL3715VI=
 			</data>
 		</dict>
 		<key>Headers/MBMrtdRecognizerResult.h</key>
