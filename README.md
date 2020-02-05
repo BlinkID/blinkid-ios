@@ -22,7 +22,6 @@ BlinkID is a part of family of SDKs developed by [Microblink](http://www.microbl
     <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-v5.gif" alt="BlinkID SDK">
   </a>
 </p>
-
 # Table of contents
 
 - [Requirements](#requirements)
@@ -93,7 +92,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.1.1'
+    pod 'PPBlinkID', '~> 5.2.0'
 end
 ```
 
@@ -593,39 +592,40 @@ Unless stated otherwise for concrete recognizer, **single side BlinkID recognize
 **Combined recognizers** should be used with [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.
 
 ### <a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer
-The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MrzFilter`](http://blinkid.github.io/blinkid-ios/Classes/MrzFilter.html).
+The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MBMrzFilter`](http://blinkid.github.io/blinkid-ios/Classes/MBMrzFilter.html).
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
 ### Machine Readable Travel Document combined recognizer
 The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html) scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBMrtdRecognizer](#mrtd-recognizer) for scanning the MRZ.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
 ### <a name="passport-recognizer"></a> Passport recognizer
 The [`MBPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
 ### <a name="visa-recognizer"></a> Visa recognizer
 The [`MBVisaRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
-### US / Canada driver's license barcode recognizer
-The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from the US / Canada driver's license.
+### AAMVA standard barcode recognizer (USA, Canada, Nigeria)
+The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
-### US / Canada driver's license combined recognizer
-The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) scans PDF417 barcode from the back side of US / Canada driver's license after scanning the full document image and face image from the front side. Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBUsdlRecognizer](#us) for scanning the PDF417 barcode.
+### AAMVA standard combined recognizer (USA, Canada, Nigeria)
+The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) first scans the front side of the document to obtain the full document image and face image. It then scans PDF417 barcode from the back side of AAMVA standard documents. This includes USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.
+Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBUsdlRecognizer](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) for scanning the PDF417 barcode.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
 ### <a name="document-face-recognizers"></a> Document face recognizer
 The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
 
-You can find information about usage context at the beginning of [this section](#blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
 ### <a name="blink-id-recognizers"></a> BlinkID Recognizer
 The [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document. 

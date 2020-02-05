@@ -72,6 +72,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *sex;
 
 /**
+ * The localized name of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *localizedName;
+
+/**
  * The additional name information of the document owner.
  */
 @property (nonatomic, readonly, nullable) NSString *additionalNameInformation;

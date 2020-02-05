@@ -1,5 +1,28 @@
 # Release notes
 
+## 5.2.0
+
+- Improvements in ID scanning performance:
+    - **overall size impact on application reduced for almost 4MB** when BlinkID SDK v5.2 is used, relative to size impact of the previous v5.1
+
+- Updates and additions:
+    - added Canada Alberta DL support for `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+    - enabled scanning back sides of 6 documents for `MBBlinkIdCombinedRecognizer`:
+        - Czechia ID
+        - Egypt ID
+        - Germany ID
+        - Italy ID
+        - Pakistan Consular ID
+        - Pakistan ID
+    - enabled digital signing of `MBBlinkIdCombinedRecognizerResult`
+    - enabled setting `MBMrzCombinedFilter` on `MBMrtdCombinedRecognizer`:
+        - determines whether document should be processed or it is filtered out, based on its MRZ (Machine Readable Zone)
+    - added property `localizedName` to `MBBlinkIdRecognizerResult` and `MBBlinkIdCombinedRecognizerResult` (CCC to chinese alphabet conversion for Hong Kong ID)
+    - added setting `anonymizeNetherlandsMrz` on `MBPassportRecognizer`
+
+- Bugfixes:
+    - `MBBlinkIDCombinedRecognizer` - fixed issue when the front side of a document was accepted as a back side
+
 ## 5.1.1
 
 - Bugfixes:

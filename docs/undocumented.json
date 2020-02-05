@@ -2,35 +2,35 @@
   "warnings": [
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 31,
+      "line": 32,
       "symbol": "MBBlinkIdCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 57,
+      "line": 58,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 59,
+      "line": 60,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedImageAvailable:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 60,
+      "line": 61,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedDocumentSupportStatus:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizerResult.h",
-      "line": 29,
+      "line": 30,
       "symbol": "MBBlinkIdCombinedRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -926,9 +926,16 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBMrtdCombinedRecognizer.h",
-      "line": 39,
+      "line": 41,
       "symbol": "MBMrtdCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBMrtdCombinedRecognizer.h",
+      "line": 95,
+      "symbol": "MBMrzCombinedFilter",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
