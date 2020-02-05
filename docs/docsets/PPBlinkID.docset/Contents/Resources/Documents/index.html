@@ -503,6 +503,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBImageProcessingRecognizerRunnerDelegate.html">MBImageProcessingRecognizerRunnerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBMrzCombinedFilter.html">MBMrzCombinedFilter</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBMrzFilter.html">MBMrzFilter</a>
               </li>
               <li class="nav-group-task">
@@ -801,7 +804,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.1.1'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.2.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -1261,39 +1264,40 @@ self.viewfinderSubview.moveable = YES;
 <p><strong>Combined recognizers</strong> should be used with <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html"><code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a> which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.</p>
 <h3 id='a-name-mrtd-recognizer-a-machine-readable-travel-document-recognizer' class='heading'><a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer</h3>
 
-<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html"><code><a href="Classes/MBMrtdRecognizer.html">MBMrtdRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the <a href="http://blinkid.github.io/blinkid-ios/Classes/MrzFilter.html"><code>MrzFilter</code></a>.</p>
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html"><code><a href="Classes/MBMrtdRecognizer.html">MBMrtdRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrzFilter.html"><code><a href="Protocols/MBMrzFilter.html">MBMrzFilter</a></code></a>.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
 <h3 id='machine-readable-travel-document-combined-recognizer' class='heading'>Machine Readable Travel Document combined recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html"><code><a href="Classes/MBMrtdCombinedRecognizer.html">MBMrtdCombinedRecognizer</a></code></a> scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses <a href="#document-face-recognizer">MBDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="#mrtd-recognizer">MBMrtdRecognizer</a> for scanning the MRZ.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
 <h3 id='a-name-passport-recognizer-a-passport-recognizer' class='heading'><a name="passport-recognizer"></a> Passport recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html"><code><a href="Classes/MBPassportRecognizer.html">MBPassportRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
 <h3 id='a-name-visa-recognizer-a-visa-recognizer' class='heading'><a name="visa-recognizer"></a> Visa recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html"><code><a href="Classes/MBVisaRecognizer.html">MBVisaRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
-<h3 id='us-canada-driver-39-s-license-barcode-recognizer' class='heading'>US / Canada driver&rsquo;s license barcode recognizer</h3>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<h3 id='aamva-standard-barcode-recognizer-usa-canada-nigeria' class='heading'>AAMVA standard barcode recognizer (USA, Canada, Nigeria)</h3>
 
-<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html"><code><a href="Classes/MBUsdlRecognizer.html">MBUsdlRecognizer</a></code></a> is used for scanning PDF417 barcode from the US / Canada driver&rsquo;s license.</p>
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html"><code><a href="Classes/MBUsdlRecognizer.html">MBUsdlRecognizer</a></code></a> is used for scanning PDF417 barcode from USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
-<h3 id='us-canada-driver-39-s-license-combined-recognizer' class='heading'>US / Canada driver&rsquo;s license combined recognizer</h3>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<h3 id='aamva-standard-combined-recognizer-usa-canada-nigeria' class='heading'>AAMVA standard combined recognizer (USA, Canada, Nigeria)</h3>
 
-<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html"><code><a href="Classes/MBUsdlCombinedRecognizer.html">MBUsdlCombinedRecognizer</a></code></a> scans PDF417 barcode from the back side of US / Canada driver&rsquo;s license after scanning the full document image and face image from the front side. Internally, it uses <a href="#document-face-recognizer">MBDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="#us">MBUsdlRecognizer</a> for scanning the PDF417 barcode.</p>
+<p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html"><code><a href="Classes/MBUsdlCombinedRecognizer.html">MBUsdlCombinedRecognizer</a></code></a> first scans the front side of the document to obtain the full document image and face image. It then scans PDF417 barcode from the back side of AAMVA standard documents. This includes USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.
+Internally, it uses <a href="#document-face-recognizer">MBDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html">MBUsdlRecognizer</a> for scanning the PDF417 barcode.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
 <h3 id='a-name-document-face-recognizers-a-document-face-recognizer' class='heading'><a name="document-face-recognizers"></a> Document face recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html"><code><a href="Classes/MBDocumentFaceRecognizer.html">MBDocumentFaceRecognizer</a></code></a> is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
 <h3 id='a-name-blink-id-recognizers-a-blinkid-recognizer' class='heading'><a name="blink-id-recognizers"></a> BlinkID Recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html"><code><a href="Classes/MBBlinkIdRecognizer.html">MBBlinkIdRecognizer</a></code></a> scans and extracts data from the front side of the supported document. 
@@ -1404,7 +1408,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-01-24)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-02-05)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

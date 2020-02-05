@@ -10,6 +10,7 @@
 #import "MBMrzResult.h"
 
 #import "MBCombinedRecognizerResult.h"
+#import "MBDigitalSignatureResult.h"
 
 #import "MBFaceImageResult.h"
 #import "MBEncodedFaceImageResult.h"
@@ -24,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer which can scan front and back side of the United States driver license.
  */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkIdCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
+@interface MBBlinkIdCombinedRecognizerResult : MBRecognizerResult<NSCopying, MBCombinedRecognizerResult, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBCombinedFullDocumentImageResult, MBEncodedCombinedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -72,6 +73,11 @@ MB_INIT_UNAVAILABLE
  * The sex of the document owner.
  */
 @property (nonatomic, readonly, nullable) NSString *sex;
+
+/**
+ * The localized name of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *localizedName;
 
 /**
  * The additional name information of the document owner.

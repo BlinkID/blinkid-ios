@@ -32,6 +32,12 @@ MB_INIT
  */
 @property (nonatomic, strong, readonly) MBPassportRecognizerResult *result;
 
+/**
+ * Defines whether to anonymize Netherlands MRZ
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL anonymizeNetherlandsMrz;
 
 @end
 

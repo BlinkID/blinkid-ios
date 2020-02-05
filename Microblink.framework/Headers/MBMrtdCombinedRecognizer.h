@@ -26,6 +26,8 @@
 #import "MBEncodeFaceImage.h"
 #import "MBFaceImageDpi.h"
 
+@protocol MBMrzCombinedFilter;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -82,6 +84,22 @@ MB_INIT
  */
 @property (nonatomic, assign) MBDocumentFaceDetectorType detectorType;
 
+/**
+* Filter for MRTDs (Machine Readable Travel Documents) that is used to determine which documents
+* will be processed. If document is filtered out by this filter, its data cannot be returned as recognition result.
+*/
+@property (nonatomic, nullable, weak) id<MBMrzCombinedFilter> mrzCombinedFilterDelegate;
+
+@end
+
+@protocol MBMrzCombinedFilter <NSObject>
+@required
+/**
+ * Determines whether document should be processed or it is filtered out.
+ * @return YES if the document with the given MRZ should be processed, NO if the document
+ * should be filtered out.
+ */
+- (BOOL)mrzCombinedFilter;
 @end
 
 NS_ASSUME_NONNULL_END

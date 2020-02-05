@@ -36,3 +36,6 @@
 "blinkid_too_far_error_message" = "Move closer";
 "blinkid_scan_unsuccessful_error_title" = "Scan unsuccessful";
 "blinkid_scan_unsuccessful_error_message" = "Unable to read the document. Please try again.";
+
+"document_capture_too_far_message" = "Move closer";
+"document_capture_detected" = "Hold steady";
