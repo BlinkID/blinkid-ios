@@ -8,8 +8,10 @@
 
 import Microblink
 
-class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate {
+class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate, MBFirstSideFinishedRecognizerRunnerViewControllerDelegate {
     
+    @IBOutlet weak var tooltipLabel: UILabel!
+
     static func initFromStoryboardWith() -> CustomOverlay {
         let customOverlay: CustomOverlay = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomOverlay") as! CustomOverlay
         return customOverlay
@@ -17,13 +19,16 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.scanningRecognizerRunnerViewControllerDelegate = self;
+        super.scanningRecognizerRunnerViewControllerDelegate = self
+        super.metadataDelegates.firstSideFinishedRecognizerRunnerViewControllerDelegate = self
+
+        self.tooltipLabel.text = "Scan Front Side"
     }
     
     func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController, didFinishScanningWith state: MBRecognizerResultState) {
         /** This is done on background thread */
         if state == MBRecognizerResultState.valid {
-            recognizerRunnerViewController.pauseScanning();
+            recognizerRunnerViewController.pauseScanning()
             
             DispatchQueue.main.async {
                 
@@ -35,6 +40,11 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
                         if recognizer is MBBlinkIdRecognizer {
                             let blinkIdRecognizer = recognizer as? MBBlinkIdRecognizer
                             title = "BlinkID"
+                            message = (blinkIdRecognizer?.result.description)!
+                        }
+                        if recognizer is MBBlinkIdCombinedRecognizer {
+                            let blinkIdRecognizer = recognizer as? MBBlinkIdCombinedRecognizer
+                            title = "BlinkID Combined"
                             message = (blinkIdRecognizer?.result.description)!
                         }
                     }
@@ -52,9 +62,16 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
         }
     }
 
+    func recognizerRunnerViewControllerDidFinishRecognition(ofFirstSide recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController) {
+
+        DispatchQueue.main.async {
+            self.tooltipLabel.text = "Scan Back Side"
+        }
+    }
+
     @IBAction func didTapClose(_ sender: Any) {
-        self.recognizerRunnerViewController?.overlayViewControllerWillCloseCamera(self);
-        self.dismiss(animated: true, completion: nil);
+        self.recognizerRunnerViewController?.overlayViewControllerWillCloseCamera(self)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
