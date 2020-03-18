@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID Docs
+          PPBlinkID v5.3.0 Docs
         </a>
          (80% documented)
       </p>
@@ -164,6 +164,12 @@
                 <a class="nav-group-task-link" href="Classes/MBGlareStatusSubview.html">MBGlareStatusSubview</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizer.html">MBIdBarcodeRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizerResult.html">MBIdBarcodeRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
               </li>
               <li class="nav-group-task">
@@ -171,6 +177,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBLogger.html">MBLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
@@ -336,6 +345,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBCameraAutofocusRestriction.html">MBCameraAutofocusRestriction</a>
               </li>
               <li class="nav-group-task">
@@ -358,6 +370,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBFrameQualityEstimationMode.html">MBFrameQualityEstimationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBLogLevel.html">MBLogLevel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBMrtdDocumentType.html">MBMrtdDocumentType</a>
@@ -503,6 +521,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBImageProcessingRecognizerRunnerDelegate.html">MBImageProcessingRecognizerRunnerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBLoggerDelegate.html">MBLoggerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBMrzCombinedFilter.html">MBMrzCombinedFilter</a>
               </li>
               <li class="nav-group-task">
@@ -571,22 +592,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Type Definitions.html">Type Definitions</a>
+            <a class="nav-group-name-link" href="Type%20Definitions.html">Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/CGLine.html">CGLine</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/CGLine.html">CGLine</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
             </ul>
           </li>
@@ -698,7 +719,7 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             
             <p align="center" >
   <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
@@ -736,10 +757,15 @@
 <li><a href="#ui-customizations">Built-in overlay view controllers and overlay subviews</a>
 
 <ul>
-<li><a href="#using-blinkinput-overlay-viewcontroller">Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a></li>
+<li><a href="#using-document-overlay-viewcontroller">Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a></li>
 <li><a href="#using-document-verification-overlay-viewcontroller">Using <code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a></li>
 <li><a href="#using-blinkid-overlay-viewcontroller">New: Using <code><a href="Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a></code></a></li>
 <li><a href="#using-custom-overlay-viewcontroller">Custom overlay view controller</a></li>
+</ul></li>
+<li><a href="#direct-api-processing">Direct processing API</a>
+
+<ul>
+<li><a href="#direct-api-string-processing">Using Direct API for <code>NSString</code> recognition (parsing)</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#recognizer"><code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> and available recognizers</a></li>
@@ -804,7 +830,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.2.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.3.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -840,7 +866,7 @@ git lfs install
 
 <ul>
 <li><p>Copy Microblink.framework and Microblink.bundle to your project folder.</p></li>
-<li><p>In your Xcode project, open the Project navigator. Drag the Microblink.framework and Microblink.bundle files to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose <q>Create groups</q>, instead of the <q>Create folder references</q> option.</p></li>
+<li><p>In your Xcode project, open the Project navigator. Drag the Microblink.framework and Microblink.bundle files to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose &ldquo;Create groups&rdquo;, instead of the &ldquo;Create folder references&rdquo; option.</p></li>
 </ul>
 
 <p><img src="https://user-images.githubusercontent.com/26868155/65599668-a35b3080-df9e-11e9-9c08-21cb1d663421.png" alt="Adding Microblink.embedded framework to your project"></p>
@@ -853,7 +879,7 @@ git lfs install
 <p><img src="https://user-images.githubusercontent.com/26868155/65599818-faf99c00-df9e-11e9-85f5-f425b1609beb.png" alt="Adding Microblink.framework to embedded binaries">)</p>
 
 <ul>
-<li><p>Include the additional frameworks and libraries into your project in the <q>Linked frameworks and libraries</q> section of your target settings. </p>
+<li><p>Include the additional frameworks and libraries into your project in the &ldquo;Linked frameworks and libraries&rdquo; section of your target settings. </p>
 
 <ul>
 <li>AudioToolbox.framework</li>
@@ -1033,14 +1059,14 @@ git lfs install
 
 <ol>
 <li><a href="#ui-customizations">First part</a> will cover the possible customizations when using UI provided by the SDK.</li>
-<li><a href="#custom-overyal-view-controller">Second part</a> will describe how to embed <a href="http://blinkid.github.io/blinkid-ios/Protocols.html"><code>MBRecognizerRunnerViewController&#39;s delegates</code></a> into your <code>UIViewController</code> with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.</li>
-<li><a href="#direct-processing-api">Third part</a> will describe how to use the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html"><code><a href="Classes/MBRecognizerRunner.html">MBRecognizerRunner</a></code></a> (Direct API) for recognition directly from <code>UIImage</code> without the need of camera or to recognize camera frames that are obtained by custom camera management.</li>
+<li><a href="#using-document-overlay-viewcontroller">Second part</a> will describe how to embed <a href="http://blinkid.github.io/blinkid-ios/Protocols.html"><code>MBRecognizerRunnerViewController&#39;s delegates</code></a> into your <code>UIViewController</code> with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.</li>
+<li><a href="#direct-api-processing">Third part</a> will describe how to use the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html"><code><a href="Classes/MBRecognizerRunner.html">MBRecognizerRunner</a></code></a> (Direct API) for recognition directly from <code>UIImage</code> without the need of camera or to recognize camera frames that are obtained by custom camera management.</li>
 <li><a href="#recognizer">Fourth part</a> will describe recognizer concept and available recognizers.</li>
 </ol>
 <h2 id='a-name-ui-customizations-a-built-in-overlay-view-controllers-and-overlay-subviews' class='heading'><a name="ui-customizations"></a> Built-in overlay view controllers and overlay subviews</h2>
 
 <p>Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. </p>
-<h3 id='a-name-using-blinkinput-overlay-viewcontroller-a-using-code-mbdocumentoverlayviewcontroller-code' class='heading'><a name="using-blinkinput-overlay-viewcontroller"></a> Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></h3>
+<h3 id='a-name-using-document-overlay-viewcontroller-a-using-code-mbdocumentoverlayviewcontroller-code' class='heading'><a name="using-document-overlay-viewcontroller"></a> Using <code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></h3>
 
 <p><a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a> is overlay view controller best suited for performing scanning of various document cards. It has <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html"><code><a href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a></code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>:</p>
 
@@ -1148,9 +1174,9 @@ UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewCo
 <p>Typical actions which need to be allowed to the user are:</p>
 
 <ul>
-<li>intuitive and meaniningful way to guide the user through scanning process. This is usually done by presenting a <q>viewfinder</q> in which the user need to place the scanned object</li>
-<li>a way to cancel the scanning, typically with a <q>cancel</q> or <q>back</q> button</li>
-<li>a way to power on and off the light (i.e. <q>torch</q>) button</li>
+<li>intuitive and meaniningful way to guide the user through scanning process. This is usually done by presenting a &ldquo;viewfinder&rdquo; in which the user need to place the scanned object</li>
+<li>a way to cancel the scanning, typically with a &ldquo;cancel&rdquo; or &ldquo;back&rdquo; button</li>
+<li>a way to power on and off the light (i.e. &ldquo;torch&rdquo;) button</li>
 </ul>
 
 <p>BlinkID SDK always provides it&rsquo;s own default implementation of the Overlay View Controller for every specific use. Your implementation should closely mimic the default implementation as it&rsquo;s the result of thorough testing with end users. Also, it closely matches the underlying scanning technology. </p>
@@ -1221,6 +1247,105 @@ self.viewfinderSubview.moveable = YES;
 <p>Objective-C</p>
 <pre class="highlight plaintext"><code>UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:CustomOverlayViewController];
 </code></pre>
+<h2 id='a-name-direct-api-processing-a-direct-processing-api' class='heading'><a name="direct-api-processing"></a> Direct processing API</h2>
+
+<p>This guide will in short present you how to process UIImage objects with BlinkID SDK, without starting the camera video capture.</p>
+
+<p>With this feature you can solve various use cases like:
+    - recognizing text on images in Camera roll
+    - taking full resolution photo and sending it to processing
+    - scanning barcodes on images in e-mail etc.</p>
+
+<p>DirectAPI-sample demo app here will present UIImagePickerController for taking full resolution photos, and then process it with Microblink SDK to get scanning results using Direct processing API.</p>
+
+<p>Direct processing API is handled with <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html"><code><a href="Classes/MBRecognizerRunner.html">MBRecognizerRunner</a></code></a>. That is a class that handles processing of images. It also has protocols as <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunnerViewController.html"><code><a href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></code></a>.
+Developer can choose which protocol to conform:</p>
+
+<ul>
+<li><a href="http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html"><code><a href="Protocols/MBScanningRecognizerRunnerDelegate.html">MBScanningRecognizerRunnerDelegate</a></code></a></li>
+<li><a href="http://blinkid.github.io/blinkid-ios/Protocols/MBDetectionRecognizerRunnerDelegate.html"><code><a href="Protocols/MBDetectionRecognizerRunnerDelegate.html">MBDetectionRecognizerRunnerDelegate</a></code></a></li>
+<li><a href="http://blinkid.github.io/blinkid-ios/Protocols/MBDebugRecognizerRunnerDelegate.html"><code><a href="Protocols/MBDebugRecognizerRunnerDelegate.html">MBDebugRecognizerRunnerDelegate</a></code></a></li>
+<li><a href="http://blinkid.github.io/blinkid-ios/Protocols/MBOcrRecognizerRunnerDelegate.html"><code><a href="Protocols/MBOcrRecognizerRunnerDelegate.html">MBOcrRecognizerRunnerDelegate</a></code></a></li>
+</ul>
+
+<p>In example, we are conforming to <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html"><code><a href="Protocols/MBScanningRecognizerRunnerDelegate.html">MBScanningRecognizerRunnerDelegate</a></code></a> protocol.</p>
+
+<p>To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we&rsquo;re listing the initialization code as it looks in a touch handler method.</p>
+
+<p>Swift</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupRecognizerRunner</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">recognizers</span> <span class="o">=</span> <span class="p">[</span><span class="kt">MBRecognizer</span><span class="p">]()</span>
+    <span class="n">pdf417Recognizer</span> <span class="o">=</span> <span class="kt">MBPdf417Recognizer</span><span class="p">()</span>
+    <span class="n">recognizers</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">pdf417Recognizer</span><span class="o">!</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">recognizerCollection</span> <span class="o">=</span> <span class="kt">MBRecognizerCollection</span><span class="p">(</span><span class="nv">recognizers</span><span class="p">:</span> <span class="n">recognizers</span><span class="p">)</span>
+    <span class="n">recognizerRunner</span> <span class="o">=</span> <span class="kt">MBRecognizerRunner</span><span class="p">(</span><span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">)</span>
+    <span class="n">recognizerRunner</span><span class="p">?</span><span class="o">.</span><span class="n">scanningRecognizerRunnerDelegate</span> <span class="o">=</span> <span class="k">self</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">processImageRunner</span><span class="p">(</span><span class="n">_</span> <span class="nv">originalImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">MBImage</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">anImage</span> <span class="o">=</span> <span class="n">originalImage</span> <span class="p">{</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="kt">MBImage</span><span class="p">(</span><span class="nv">uiImage</span><span class="p">:</span> <span class="n">anImage</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">image</span><span class="p">?</span><span class="o">.</span><span class="n">cameraFrame</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="n">image</span><span class="p">?</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="kt">MBProcessingOrientation</span><span class="o">.</span><span class="n">left</span>
+    <span class="k">let</span> <span class="nv">_serialQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="p">(</span><span class="nv">label</span><span class="p">:</span> <span class="s">"com.microblink.DirectAPI-sample-swift"</span><span class="p">)</span>
+    <span class="n">_serialQueue</span><span class="o">.</span><span class="nf">async</span><span class="p">(</span><span class="nv">execute</span><span class="p">:</span> <span class="p">{()</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">recognizerRunner</span><span class="p">?</span><span class="o">.</span><span class="nf">processImage</span><span class="p">(</span><span class="n">image</span><span class="o">!</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">recognizerRunner</span><span class="p">(</span><span class="n">_</span> <span class="nv">recognizerRunner</span><span class="p">:</span> <span class="kt">MBRecognizerRunner</span><span class="p">,</span> <span class="n">didFinishScanningWith</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">MBRecognizerResultState</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">blinkInputRecognizer</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">resultState</span> <span class="o">==</span> <span class="kt">MBRecognizerResultStateValid</span> <span class="p">{</span>
+        <span class="c1">// Handle result</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Objective-C</p>
+<pre class="highlight plaintext"><code>- (void)setupRecognizerRunner {
+    NSMutableArray&lt;MBRecognizer *&gt; *recognizers = [[NSMutableArray alloc] init];
+
+    self.pdf417Recognizer = [[MBPdf417Recognizer alloc] init];
+
+    [recognizers addObject: self.pdf417Recognizer];
+
+    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
+
+    self.recognizerRunner = [[MBRecognizerRunner alloc] initWithRecognizerCollection:recognizerCollection];
+    self.recognizerRunner.scanningRecognizerRunnerDelegate = self;
+}
+
+- (void)processImageRunner:(UIImage *)originalImage {
+    MBImage *image = [MBImage imageWithUIImage:originalImage];
+    image.cameraFrame = YES;
+    image.orientation = MBProcessingOrientationLeft;
+    dispatch_queue_t _serialQueue = dispatch_queue_create("com.microblink.DirectAPI-sample", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(_serialQueue, ^{
+        [self.recognizerRunner processImage:image];
+    });
+}
+
+- (void)recognizerRunner:(nonnull MBRecognizerRunner *)recognizerRunner didFinishScanningWithState:(MBRecognizerResultState)state {
+    if (self.blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid) {
+        // Handle result
+    }
+}
+</code></pre>
+
+<p>Now you&rsquo;ve seen how to implement the Direct processing API.</p>
+
+<p>In essence, this API consists of two steps:</p>
+
+<ul>
+<li>Initialization of the scanner.</li>
+<li>Call of <code>- (void)processImage:(MBImage *)image;</code> method for each UIImage or CMSampleBufferRef you have.</li>
+</ul>
+<h3 id='a-name-direct-api-string-processing-a-using-direct-api-for-code-nsstring-code-recognition-parsing' class='heading'><a name="direct-api-string-processing"></a> Using Direct API for <code>NSString</code> recognition (parsing)</h3>
+
+<p>Some recognizers support recognition from <code>NSString</code>. They can be used through Direct API to parse given <code>NSString</code> and return data just like when they are used on an input image. When recognition is performed on <code>NSString</code>, there is no need for the OCR. Input <code>NSString</code> is used in the same way as the OCR output is used when image is being recognized. 
+Recognition from <code>String</code> can be performed in the same way as recognition from image. 
+The only difference is that user should call <code>- (void)processString:(NSString *)string;</code> on <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html"><code><a href="Classes/MBRecognizerRunner.html">MBRecognizerRunner</a></code></a>.</p>
 <h1 id='a-name-recognizer-a-code-mbrecognizer-code-and-available-recognizers' class='heading'><a name="recognizer"></a> <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> and available recognizers</h1>
 <h2 id='the-code-mbrecognizer-code-concept' class='heading'>The <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> concept</h2>
 
@@ -1319,7 +1444,7 @@ We will continue expanding this recognizer by adding support for new document ty
 <p>In case of problems with using the SDK, you should do as follows:</p>
 <h3 id='a-name-troubleshooting-licensing-problems-a-licencing-problems' class='heading'><a name="troubleshooting-licensing-problems"></a> Licencing problems</h3>
 
-<p>If you are getting <q>invalid licence key</q> error or having other licence-related problems (e.g. some feature is not enabled that should be or there is a watermark on top of camera), first check the console. All licence-related problems are logged to error log so it is easy to determine what went wrong.</p>
+<p>If you are getting &ldquo;invalid licence key&rdquo; error or having other licence-related problems (e.g. some feature is not enabled that should be or there is a watermark on top of camera), first check the console. All licence-related problems are logged to error log so it is easy to determine what went wrong.</p>
 
 <p>When you have determine what is the licence-relate problem or you simply do not understand the log, you should contact us <a href="http://help.microblink.com">help.microblink.com</a>. When contacting us, please make sure you provide following information:</p>
 
@@ -1408,8 +1533,8 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-02-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

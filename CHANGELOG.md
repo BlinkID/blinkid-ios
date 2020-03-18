@@ -1,5 +1,35 @@
 # Release notes
 
+## 5.3.0
+
+### New features:
+
+- We added a new recognizer specialized for scanning and parsing barcodes on various identity cards - `MBIdBarcodeRecognizer`.  Supported document types are:
+    - AAMVA compliant (US DL, Canada DL, etc.)
+    - Argentina ID and driver license
+    - Panama ID
+    - Colombia ID and driver license
+    - South Africa ID
+    - Nigeria Voter ID and driver license
+
+- We added the option to disable Microblink logs in the console output. Use `MBLogger` class and conform to `MBLoggerDelegate` in `AppDelegate`. To disable logs, implement delegate method `- (void)log:(MBLogLevel)level format:(const char *)format arguments:(va_list)arguments`. Be careful with this option. We need full log outputs from the application for support purposes. In case of having problems with scanning certain items, undesired behavior on the specific device(s), crashes inside SDK or anything unmentioned, we will need a full log from your side. If you disable Microblink logging, you won't be able to provide us this information. Hence support might be limited.
+
+### Improvements for existing features:
+
+- We added new result fields in `MBMrzResult`, returned by all recognizers which scan MRZ (Machine Readable Zone):
+    - `issuerName`
+    - `nationalityName`
+- Improvements in `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer`:
+    - new recognizer options: `allowUnparsedMrzResults` and `allowUnverifiedMrzResults`
+    - new result field: `dateOfExpiryPermanent`
+    - support for 14 new document types: `South Australia DL`, `Bosnia and Herzegovina DL`, `Canada Ontario ID`, `Costa Rica DL`, `Denmark DL`, `Estonia DL`, `Finland DL`, `Kenya ID`, `Lithuania DL`, `Malaysia MyPR`, `Malta DL`, `Mexico Consular ID`, `Nigeria Voter ID`, `Philippines Professional ID`
+    - improved support for: `USA Hawaii DL`, `Colombia DL`, `Costa Rica ID`, `France ID`, `India ID`, `Kazakhstan ID`, `Kuwait Resident ID`, `Israel DL`, `Kuwait DL`, `Thailand ID`
+
+### Bug fixes:
+
+- Fixed `Torch` activation for all iOS versions
+- Fixed OpenGL code which was fragile and sensitive to crashes if used from multiple threads
+
 ## 5.2.0
 
 - Improvements in ID scanning performance:

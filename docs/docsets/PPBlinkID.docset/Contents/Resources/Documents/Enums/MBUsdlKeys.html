@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID Docs
+          PPBlinkID v5.3.0 Docs
         </a>
          (80% documented)
       </p>
@@ -165,6 +165,12 @@
                 <a class="nav-group-task-link" href="../Classes/MBGlareStatusSubview.html">MBGlareStatusSubview</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBIdBarcodeRecognizer.html">MBIdBarcodeRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBIdBarcodeRecognizerResult.html">MBIdBarcodeRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBImage.html">MBImage</a>
               </li>
               <li class="nav-group-task">
@@ -172,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBLogger.html">MBLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
@@ -337,6 +346,9 @@
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBBarcodeType.html">MBBarcodeType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBCameraAutofocusRestriction.html">MBCameraAutofocusRestriction</a>
               </li>
               <li class="nav-group-task">
@@ -359,6 +371,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBFrameQualityEstimationMode.html">MBFrameQualityEstimationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBLogLevel.html">MBLogLevel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBMrtdDocumentType.html">MBMrtdDocumentType</a>
@@ -504,6 +522,9 @@
                 <a class="nav-group-task-link" href="../Protocols/MBImageProcessingRecognizerRunnerDelegate.html">MBImageProcessingRecognizerRunnerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBLoggerDelegate.html">MBLoggerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/MBMrzCombinedFilter.html">MBMrzCombinedFilter</a>
               </li>
               <li class="nav-group-task">
@@ -572,22 +593,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Type Definitions.html">Type Definitions</a>
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions/CGLine.html">CGLine</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions/CGLine.html">CGLine</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
             </ul>
           </li>
@@ -699,7 +720,7 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>MBUsdlKeys</h1>
               <div class="declaration">
                 <div class="language">
@@ -731,11 +752,11 @@
                       <div class="abstract">
                         <p>Mandatory on all driver&rsquo;s licenses. All barcodes which are using 3-track magnetic
 stripe encoding used in the interest of smoothing a transition from legacy documents
-shall be designated as <q>Magnetic</q>. All barcodes which are using compact encoding
-compliant with ISO/IEC 18013-2 shall be designated as <q>Compact</q>. All barcodes (majority)
+shall be designated as &ldquo;Magnetic&rdquo;. All barcodes which are using compact encoding
+compliant with ISO/IEC 18013-2 shall be designated as &ldquo;Compact&rdquo;. All barcodes (majority)
 compliant with Mandatory PDF417 Bar Code of the American Association of Motor Vehicle
 Administrators (AAMVA) Card Design Standard from AAMVA DL/ID-2000 standard to DL/ID-2013
-shall be designated as <q>AAMVA</q>.</p>
+shall be designated as &ldquo;AAMVA&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -765,24 +786,24 @@ shall be designated as <q>AAMVA</q>.</p>
                         <p>Mandatory on all driver&rsquo;s licenses.</p>
 
 <p>AAMVA Version Number: This is a decimal value between 0 and 99 that
-specifies the version level of the PDF417 bar code format. Version <q>0</q> and <q>00</q>
+specifies the version level of the PDF417 bar code format. Version &ldquo;0&rdquo; and &ldquo;00&rdquo;
 is reserved for bar codes printed to the specification of the American Association
 of Motor Vehicle Administrators (AAMVA) prior to the adoption of the AAMVA DL/ID-2000
 standard. All bar codes compliant with the AAMVA DL/ID-2000 standard are designated
-Version <q>01.</q> All barcodes compliant with AAMVA Card Design Specification version
-1.0, dated 09-2003 shall be designated Version <q>02.</q> All barcodes compliant with
+Version &ldquo;01.&rdquo; All barcodes compliant with AAMVA Card Design Specification version
+1.0, dated 09-2003 shall be designated Version &ldquo;02.&rdquo; All barcodes compliant with
 AAMVA Card Design Specification version 2.0, dated 03-2005 shall be designated
-Version <q>03.</q> All barcodes compliant with AAMVA Card Design Standard version 1.0,
-dated 07-2009 shall be designated Version <q>04.</q> All barcodes compliant with AAMVA
-Card Design Standard version 1.0, dated 07-2010 shall be designated Version <q>05.</q>
+Version &ldquo;03.&rdquo; All barcodes compliant with AAMVA Card Design Standard version 1.0,
+dated 07-2009 shall be designated Version &ldquo;04.&rdquo; All barcodes compliant with AAMVA
+Card Design Standard version 1.0, dated 07-2010 shall be designated Version &ldquo;05.&rdquo;
 All barcodes compliant with AAMVA Card Design Standard version 1.0, dated 07- 2011
-shall be designated Version <q>06</q>. All barcodes compliant with AAMVA Card Design
-Standard version 1.0, dated 06-2012 shall be designated Version <q>07</q>. All barcodes
-compliant with this current AAMVA standard shall be designated <q>08</q>. Should a need
+shall be designated Version &ldquo;06&rdquo;. All barcodes compliant with AAMVA Card Design
+Standard version 1.0, dated 06-2012 shall be designated Version &ldquo;07&rdquo;. All barcodes
+compliant with this current AAMVA standard shall be designated &ldquo;08&rdquo;. Should a need
 arise requiring major revision to the format, this field provides the means to
 accommodate additional revision.</p>
 
-<p>If document type is not <q>AAMVA</q>, this field defines version number of the
+<p>If document type is not &ldquo;AAMVA&rdquo;, this field defines version number of the
 given document type&rsquo;s standard.</p>
 
                       </div>
@@ -812,7 +833,7 @@ given document type&rsquo;s standard.</p>
                       <div class="abstract">
                         <p>Mandatory on all AAMVA, Magnetic and Compact barcodes.</p>
 
-<p>Family name of the cardholder. (Family name is sometimes also called <q>last name</q> or <q>surname.</q>)
+<p>Family name of the cardholder. (Family name is sometimes also called &ldquo;last name&rdquo; or &ldquo;surname.&rdquo;)
 Collect full name for record, print as many characters as possible on portrait side of DL/ID.</p>
 
                       </div>
@@ -873,7 +894,7 @@ Collect full name for record, print as many characters as possible on portrait s
 
 <p>Full name of the individual holding the Driver License or ID.</p>
 
-<p>The Name field contains up to four portions, separated with the <q>,</q> delimiter:
+<p>The Name field contains up to four portions, separated with the &ldquo;,&rdquo; delimiter:
 Last Name (required)
 , (required)
 First Name (required)
@@ -1144,7 +1165,7 @@ Optional on Compact barcodes.</p>
 
 <p>Full address of the individual holding the Driver License or ID.</p>
 
-<p>The full address field contains up to four portions, separated with the <q>,</q> delimiter:
+<p>The full address field contains up to four portions, separated with the &ldquo;,&rdquo; delimiter:
 Street Address (required)
 , (required if other address portions follow, otherwise optional)
 City (optional)
@@ -1183,11 +1204,11 @@ Optional on AAMVA 01 and Magnetic barcodes.</p>
 
 <p>Height of cardholder, either in Inches or in Centimeters.</p>
 
-<p>Inches (in): number of inches followed by <q>in</q>
-example: 6&#39;1&rsquo;&lsquo; = <q>73 in</q></p>
+<p>Inches (in): number of inches followed by &ldquo; in&rdquo;
+example: 6&#39;1&rsquo;&lsquo; = &ldquo;73 in&rdquo;</p>
 
-<p>Centimeters (cm): number of centimeters followed by <q>cm</q>
-example: 181 centimeters = <q>181 cm</q></p>
+<p>Centimeters (cm): number of centimeters followed by &ldquo; cm&rdquo;
+example: 181 centimeters = &ldquo;181 cm&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -1218,7 +1239,7 @@ example: 181 centimeters = <q>181 cm</q></p>
 Optional on AAMVA 01 and Magnetic barcodes.</p>
 
 <p>Height of cardholder in Inches.
-Example: 5&#39;9&rsquo;&lsquo; = <q>69</q>.</p>
+Example: 5&#39;9&rsquo;&lsquo; = &ldquo;69&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -1249,7 +1270,7 @@ Example: 5&#39;9&rsquo;&lsquo; = <q>69</q>.</p>
 Optional on AAMVA 01 and Magnetic barcodes.</p>
 
 <p>Height of cardholder in Centimeters.
-Example: 180 Centimeters = <q>180</q>.</p>
+Example: 180 Centimeters = &ldquo;180&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -1399,7 +1420,7 @@ the suffix must be collected and displayed on the DL/ID and in the MRT).</p>
 <p>Other name by which cardholder is known. ALTERNATIVE NAME(S) of the individual
 holding the Driver License or ID.</p>
 
-<p>The Name field contains up to four portions, separated with the <q>,</q> delimiter:
+<p>The Name field contains up to four portions, separated with the &ldquo;,&rdquo; delimiter:
 AKA Last Name (required)
 , (required)
 AKA First Name (required)
@@ -1580,7 +1601,7 @@ Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p>
                         <p>Mandatory on AAMVA 02 barcodes.
 Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p>
 
-<p>Cardholder weight in pounds Example: 185 lb = <q>185</q></p>
+<p>Cardholder weight in pounds Example: 185 lb = &ldquo;185&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -1610,7 +1631,7 @@ Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p>
                         <p>Mandatory on AAMVA 02 barcodes.
 Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p>
 
-<p>Cardholder weight in kilograms Example: 84 kg = <q>084</q></p>
+<p>Cardholder weight in kilograms Example: 84 kg = &ldquo;084&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -2073,7 +2094,7 @@ U      Unknown</p>
 
 <p>Full residence address of the individual holding the Driver License or ID.</p>
 
-<p>The full address field contains up to four portions, separated with the <q>,</q> delimiter:
+<p>The full address field contains up to four portions, separated with the &ldquo;,&rdquo; delimiter:
 Residence Street Address (required)
 , (required if other address portions follow, otherwise optional)
 Residence City (optional)
@@ -2225,7 +2246,7 @@ Residence ZIP - Residence Postal Code (optional)</p>
                       <div class="abstract">
                         <p>Optional on AAMVA version 01.</p>
 
-<p>Driver <q>AKA</q> Social Security Number. FORMAT SAME AS DRIVER SOC SEC NUM. ALTERNATIVE NUMBERS(S) used as SS NUM.</p>
+<p>Driver &ldquo;AKA&rdquo; Social Security Number. FORMAT SAME AS DRIVER SOC SEC NUM. ALTERNATIVE NUMBERS(S) used as SS NUM.</p>
 
                       </div>
                       <div class="declaration">
@@ -2314,7 +2335,7 @@ use of special symbols</p>
                       <div class="abstract">
                         <p>Optional on AAMVA 01, 06, 07, 08</p>
 
-<p>Field that indicates that the cardholder is an organ donor = <q>1</q>.</p>
+<p>Field that indicates that the cardholder is an organ donor = &ldquo;1&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -2343,7 +2364,7 @@ use of special symbols</p>
                       <div class="abstract">
                         <p>Optional on AAMVA 07, 08</p>
 
-<p>Field that indicates that the cardholder is a veteran = <q>1</q></p>
+<p>Field that indicates that the cardholder is a veteran = &ldquo;1&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -2431,7 +2452,7 @@ be obtained by contacting the ISO Issuing Authority (AAMVA)</p>
                       <div class="abstract">
                         <p>Mandatory on all AAMVA, Magnetic and Compact barcodes.</p>
 
-<p>If document is non expiring than <q>Non expiring</q> is written in this field.</p>
+<p>If document is non expiring than &ldquo;Non expiring&rdquo; is written in this field.</p>
 
 <p>Date on which the driving and identification privileges granted by the document are
 no longer valid. (MMDDCCYY format)</p>
@@ -2624,7 +2645,7 @@ passengers, hazardous materials, operation of motorcycles, etc.).</p>
 
 <p>Federally established codes for vehicle categories, endorsements, and restrictions
 that are generally applicable to commercial motor vehicles. If the vehicle is not a
-commercial vehicle, <q>NONE</q> is to be entered.</p>
+commercial vehicle, &ldquo;NONE&rdquo; is to be entered.</p>
 
                       </div>
                       <div class="declaration">
@@ -2656,8 +2677,8 @@ Mandatory on Compact barcodes.</p>
 
 <p>Jurisdictions may define a subfile to contain jurisdiction-specific information.
 These subfiles are designated with the first character of “Z” and the second
-character is the first letter of the jurisdiction&rsquo;s name. For example, <q>ZC</q> would
-be the designator for a California or Colorado jurisdiction-defined subfile, <q>ZQ</q>
+character is the first letter of the jurisdiction&rsquo;s name. For example, &ldquo;ZC&rdquo; would
+be the designator for a California or Colorado jurisdiction-defined subfile, &ldquo;ZQ&rdquo;
 would be the designator for a Quebec jurisdiction-defined subfile. In the case of
 a jurisdiction-defined subfile that has a first letter that could be more than
 one jurisdiction (e.g. California, Colorado, Connecticut) then other data, like
@@ -3029,7 +3050,7 @@ purposes of document discrimination, audit information number, and/or inventory 
                       <div class="abstract">
                         <p>Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes</p>
 
-<p>DHS required field that indicates that the cardholder has temporary lawful status = <q>1</q>.</p>
+<p>DHS required field that indicates that the cardholder has temporary lawful status = &ldquo;1&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -3089,8 +3110,8 @@ must be included in the driver record.</p>
                       <div class="abstract">
                         <p>Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes</p>
 
-<p>DHS required field that indicates compliance: <q>M</q> = materially compliant,
-<q>F</q> = fully compliant, and, <q>N</q> = non-compliant.</p>
+<p>DHS required field that indicates compliance: &ldquo;M&rdquo; = materially compliant,
+&ldquo;F&rdquo; = fully compliant, and, &ldquo;N&rdquo; = non-compliant.</p>
 
                       </div>
                       <div class="declaration">
@@ -3295,7 +3316,7 @@ no longer valid. (MMDDCCYY format)</p>
                         <p>Optional on AAMVA version 01.</p>
 
 <p>Medical Indicator/Codes.
-STATE SPECIFIC. Freeform, Standard <q>TBD</q></p>
+STATE SPECIFIC. Freeform, Standard &ldquo;TBD&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -3324,7 +3345,7 @@ STATE SPECIFIC. Freeform, Standard <q>TBD</q></p>
                       <div class="abstract">
                         <p>Optional on AAMVA version 01.</p>
 
-<p>Non-Resident Indicator. <q>Y</q>. Used by some jurisdictions to indicate holder of the document is a non-resident.</p>
+<p>Non-Resident Indicator. &ldquo;Y&rdquo;. Used by some jurisdictions to indicate holder of the document is a non-resident.</p>
 
                       </div>
                       <div class="declaration">
@@ -3353,7 +3374,7 @@ STATE SPECIFIC. Freeform, Standard <q>TBD</q></p>
                       <div class="abstract">
                         <p>Optional on AAMVA version 01.</p>
 
-<p>A number or alphanumeric string used by some jurisdictions to identify a <q>customer</q> across multiple data bases.</p>
+<p>A number or alphanumeric string used by some jurisdictions to identify a &ldquo;customer&rdquo; across multiple data bases.</p>
 
                       </div>
                       <div class="declaration">
@@ -3442,7 +3463,7 @@ no longer valid. (MMYY format)</p>
                         <p>Optional on Magnetic barcodes.</p>
 
 <p>Field that indicates that the driving and identification privileges granted by the
-document are nonexpiring = <q>1</q>.</p>
+document are nonexpiring = &ldquo;1&rdquo;.</p>
 
                       </div>
                       <div class="declaration">
@@ -3493,8 +3514,8 @@ document are nonexpiring = <q>1</q>.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-02-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

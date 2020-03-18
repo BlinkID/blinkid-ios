@@ -23,7 +23,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, assign) BOOL requireDocumentSidesDataMatch;
 
 /**
- * Defines whether Document Not Supported dialog will be displayed in UI.
+ * Defines whether Document Not Supported dialog will be displayed in UI. ni bnhju
  *
  * Default: YES
 */
@@ -35,6 +35,74 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * Default: 17.0
 */
 @property(nonatomic, assign) NSTimeInterval backSideScanningTimeout;
+
+/**
+* Message that is shown while scanning first side of the document.
+* Default: Scan the front side of a document
+*/
+@property(nonatomic, strong) NSString *firstSideInstructionsText;
+
+/**
+* Instructions to flip document, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Flip the card
+*/
+@property(nonatomic, strong) NSString *flipInstructions;
+
+/**
+* Instructions for the user to move the document closer.
+* Default: Move closer
+*/
+@property(nonatomic, strong) NSString *errorMoveCloser;
+
+/**
+* Instructions for the user to move the document farther.
+* Default: Move farther
+*/
+@property(nonatomic, strong) NSString *errorMoveFarther;
+
+/**
+* Title of the dialog, which is shown when scanned document sides are not from the same document.
+* Default: Sides don't match
+*/
+@property(nonatomic, strong) NSString *sidesNotMatchingTitle;
+
+/**
+* Message inside dialog, which is shown when scanned document sides are not from the same document.
+* Default: Please start the scanning process over.
+*/
+@property(nonatomic, strong) NSString *sidesNotMatchingMessage;
+
+/**
+* Title of the dialog, which is shown when scanned document sides are not from the same document.
+* Default: Document not recognized
+*/
+@property(nonatomic, strong) NSString *unsupportedDocumentTitle;
+
+/**
+* Message inside dialog, which is shown when unsupported document is scanned.
+* Default: Scan the front side of a supported document.
+*/
+@property(nonatomic, strong) NSString *unsupportedDocumentMessage;
+
+/**
+* Title of the dialog, which is shown on timeout when scanning is stuck on the back document side.
+* Default: Scan unsuccessful
+*/
+@property(nonatomic, strong) NSString *recognitionTimeoutTitle;
+
+/**
+* Message inside dialog, which is shown on timeout when scanning is stuck on the back document side.
+* Default: Unable to read the document. Please try again.
+*/
+@property(nonatomic, strong) NSString *recognitionTimeoutMessage;
+
+/**
+* Text of the "retry" button inside dialog, which is shown on timeout when scanning is stuck on the back
+* document side.
+* Default: Retry
+*/
+@property(nonatomic, strong) NSString *retryButtonText;
 
 /**
  * Designated initializer. Initializes the object with default settings.

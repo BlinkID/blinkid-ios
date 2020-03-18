@@ -16,6 +16,10 @@
 #import "MBBlinkIdCombinedRecognizer.h"
 #import "MBBlinkIdCombinedRecognizerResult.h"
 
+// ID Barcode Recognizer
+#import "MBIdBarcodeRecognizer.h"
+#import "MBIdBarcodeRecognizerResult.h"
+
 // Mrtd
 #import "MBMrtdRecognizer.h"
 #import "MBMrtdRecognizerResult.h"
