@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID Docs
+          PPBlinkID v5.3.0 Docs
         </a>
          (80% documented)
       </p>
@@ -165,6 +165,12 @@
                 <a class="nav-group-task-link" href="Classes/MBGlareStatusSubview.html">MBGlareStatusSubview</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizer.html">MBIdBarcodeRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizerResult.html">MBIdBarcodeRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
               </li>
               <li class="nav-group-task">
@@ -172,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBLogger.html">MBLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
@@ -337,6 +346,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBCameraAutofocusRestriction.html">MBCameraAutofocusRestriction</a>
               </li>
               <li class="nav-group-task">
@@ -359,6 +371,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBFrameQualityEstimationMode.html">MBFrameQualityEstimationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBLogLevel.html">MBLogLevel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBMrtdDocumentType.html">MBMrtdDocumentType</a>
@@ -504,6 +522,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBImageProcessingRecognizerRunnerDelegate.html">MBImageProcessingRecognizerRunnerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBLoggerDelegate.html">MBLoggerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBMrzCombinedFilter.html">MBMrzCombinedFilter</a>
               </li>
               <li class="nav-group-task">
@@ -572,22 +593,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Type Definitions.html">Type Definitions</a>
+            <a class="nav-group-name-link" href="Type%20Definitions.html">Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/CGLine.html">CGLine</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/CGLine.html">CGLine</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
             </ul>
           </li>
@@ -699,7 +720,7 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Classes</h1>
             <p>The following classes are available globally.</p>
 
@@ -744,10 +765,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -782,10 +799,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -820,10 +833,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -862,10 +871,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -905,10 +910,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -943,10 +944,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -981,10 +978,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1022,10 +1015,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1063,10 +1052,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1102,10 +1087,6 @@ the system is active but has not detected an object yet.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1140,10 +1121,6 @@ the system is active but has not detected an object yet.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1179,10 +1156,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1222,10 +1195,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1263,10 +1232,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1301,10 +1266,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1339,10 +1300,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1377,10 +1334,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1415,10 +1368,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1453,10 +1402,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1496,10 +1441,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1536,10 +1477,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1574,10 +1511,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1612,10 +1545,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1657,10 +1586,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1695,10 +1620,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1733,10 +1654,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1772,10 +1689,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1810,10 +1723,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1848,10 +1757,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1888,10 +1793,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1944,10 +1845,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1981,10 +1878,6 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2019,10 +1912,6 @@ the system is active and has detected object.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2059,10 +1948,6 @@ the system is active and has detected object.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2097,10 +1982,6 @@ the system is active and has detected object.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2136,10 +2017,74 @@ The subview is presented as translucent view with detection status label in the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBIdBarcodeRecognizer"></a>
+                    <a name="//apple_ref/objc/Class/MBIdBarcodeRecognizer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBIdBarcodeRecognizer">MBIdBarcodeRecognizer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID Barcode Recognizer is used for scanning ID Barcode.</p>
+
+                        <a href="Classes/MBIdBarcodeRecognizer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">MBIdBarcodeRecognizer</span> <span class="p">:</span> <span class="nc"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIdBarcodeRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBIdBarcodeRecognizerResult"></a>
+                    <a name="//apple_ref/objc/Class/MBIdBarcodeRecognizerResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBIdBarcodeRecognizerResult">MBIdBarcodeRecognizerResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID Barcode Recognizer is used for scanning ID Barcode.</p>
+
+                        <a href="Classes/MBIdBarcodeRecognizerResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">MBIdBarcodeRecognizerResult</span> <span class="p">:</span> <span class="nc"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIdBarcodeRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -2174,10 +2119,6 @@ The subview is presented as translucent view with detection status label in the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2212,10 +2153,6 @@ The subview is presented as translucent view with detection status label in the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2250,10 +2187,45 @@ The subview is presented as translucent view with detection status label in the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBLogger"></a>
+                    <a name="//apple_ref/objc/Class/MBLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBLogger">MBLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/MBLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">MBLogger</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/MBLoggerDelegate.html">MBLoggerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span>
+
+<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">instance</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBLogger</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -2329,10 +2301,6 @@ The subview is presented as translucent view with detection status label in the 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2368,10 +2336,6 @@ optimisation of passing data.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2412,10 +2376,6 @@ optimisation of passing data.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2454,10 +2414,6 @@ optimisation of passing data.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2496,10 +2452,6 @@ optimisation of passing data.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2536,10 +2488,6 @@ optimisation of passing data.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2575,10 +2523,6 @@ We encurage users to create specifications with one of our presets, if possible.
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2625,6 +2569,11 @@ We encurage users to create specifications with one of our presets, if possible.
  * codes are based on Aplha-2 codes for entities specified in ISO 3166-1, with extensions for certain States.
  */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">issuer</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Returns issuer name
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">issuerName</span><span class="p">;</span>
 
 <span class="cm">/**
  * Returns holder's date of birth
@@ -2744,6 +2693,11 @@ We encurage users to create specifications with one of our presets, if possible.
  */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">sanitizedDocumentNumber</span><span class="p">;</span>
 
+<span class="cm">/**
+ * Returns name of nationality 
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">nationalityName</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -2756,10 +2710,6 @@ We encurage users to create specifications with one of our presets, if possible.
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2801,10 +2751,6 @@ We encurage users to create specifications with one of our presets, if possible.
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -2829,13 +2775,11 @@ We encurage users to create specifications with one of our presets, if possible.
     <p class="aside-title">See</p>
     MBOcrBlock
 
-</div>
-<div class="aside aside-see">
+</div><div class="aside aside-see">
     <p class="aside-title">See</p>
     MBOcrLine
 
-</div>
-<div class="aside aside-see">
+</div><div class="aside aside-see">
     <p class="aside-title">See</p>
     MBOcrChar
 
@@ -3070,10 +3014,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3108,10 +3048,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3133,9 +3069,9 @@ sides aligned to the sides of the image.</p>
 
 <ul>
 <li>intuitive and meaniningful way to guide the user through scanning process. This is usually done by presenting a
-<q>viewfinder</q> in which the user need to place the scanned object</li>
-<li>a way to cancel the scanining, typically with a <q>cancel</q> or <q>back</q> button</li>
-<li>a way to power on and off the light (i.e. <q>torch</q>) button</li>
+&ldquo;viewfinder&rdquo; in which the user need to place the scanned object</li>
+<li>a way to cancel the scanining, typically with a &ldquo;cancel&rdquo; or &ldquo;back&rdquo; button</li>
+<li>a way to power on and off the light (i.e. &ldquo;torch&rdquo;) button</li>
 </ul>
 
                         <a href="Classes/MBOverlayViewController.html" class="slightly-smaller">See more</a>
@@ -3157,10 +3093,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3195,10 +3127,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3233,10 +3161,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3275,10 +3199,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3316,10 +3236,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3354,10 +3270,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3392,10 +3304,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3430,10 +3338,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3468,10 +3372,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3506,10 +3406,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3544,10 +3440,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3582,10 +3474,6 @@ sides aligned to the sides of the image.</p>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3621,10 +3509,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3659,10 +3543,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3697,10 +3577,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3735,10 +3611,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3773,10 +3645,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3812,10 +3680,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3850,10 +3714,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3888,10 +3748,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3926,10 +3782,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -3964,10 +3816,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4008,10 +3856,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4050,10 +3894,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4088,10 +3928,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4126,10 +3962,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4165,10 +3997,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4207,10 +4035,6 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -4256,8 +4080,8 @@ Camera view controllers created this way will be managed internally by the SDK, 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-02-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID Docs
+          PPBlinkID v5.3.0 Docs
         </a>
          (80% documented)
       </p>
@@ -165,6 +165,12 @@
                 <a class="nav-group-task-link" href="Classes/MBGlareStatusSubview.html">MBGlareStatusSubview</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizer.html">MBIdBarcodeRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBIdBarcodeRecognizerResult.html">MBIdBarcodeRecognizerResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
               </li>
               <li class="nav-group-task">
@@ -172,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBLogger.html">MBLogger</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a>
@@ -337,6 +346,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBCameraAutofocusRestriction.html">MBCameraAutofocusRestriction</a>
               </li>
               <li class="nav-group-task">
@@ -359,6 +371,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBFrameQualityEstimationMode.html">MBFrameQualityEstimationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBLogLevel.html">MBLogLevel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBMrtdDocumentType.html">MBMrtdDocumentType</a>
@@ -504,6 +522,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBImageProcessingRecognizerRunnerDelegate.html">MBImageProcessingRecognizerRunnerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBLoggerDelegate.html">MBLoggerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBMrzCombinedFilter.html">MBMrzCombinedFilter</a>
               </li>
               <li class="nav-group-task">
@@ -572,22 +593,22 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Type Definitions.html">Type Definitions</a>
+            <a class="nav-group-name-link" href="Type%20Definitions.html">Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/CGLine.html">CGLine</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/CGLine.html">CGLine</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBException.h@T@MBExceptionName">MBExceptionName</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
+                <a class="nav-group-task-link" href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
             </ul>
           </li>
@@ -699,7 +720,7 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Functions</h1>
             <p>The following functions are available globally.</p>
 
@@ -712,9 +733,11 @@
               <div class="task-name-container">
                 <a name="/Points"></a>
                 <a name="//apple_ref/objc/Section/Points" class="dashAnchor"></a>
-                <a href="#/Points">
-                  <h3 class="section-name">Points</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Points"></a>
+                  <h3 class="section-name"><p>Points</p>
+</h3>
+                </div>
               </div>
               <ul class="item-container">
                 <li class="item">
@@ -737,12 +760,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">CGDeltaMake</span><span class="p">(</span><span class="n">CGFloat</span> <span class="n">deltaX</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">deltaY</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">CGDeltaMake</span><span class="p">(</span><span class="n">CGFloat</span> <span class="n">deltaX</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">deltaY</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGDeltaMake</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaX</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">_</span> <span class="nv">deltaY</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGDeltaMake</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaX</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">_</span> <span class="nv">deltaY</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span></code></pre>
 
                         </div>
                       </div>
@@ -769,12 +792,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGPointWithDelta</span><span class="p">(</span><span class="n">CGPoint</span> <span class="n">point</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">delta</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGPointWithDelta</span><span class="p">(</span><span class="n">CGPoint</span> <span class="n">point</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">delta</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGPointWithDelta</span><span class="p">(</span><span class="n">_</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">_</span> <span class="nv">delta</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGPointWithDelta</span><span class="p">(</span><span class="n">_</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">_</span> <span class="nv">delta</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
 
                         </div>
                       </div>
@@ -833,12 +856,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGPointAlongLine</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">distance</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGPointAlongLine</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">distance</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGPointAlongLine</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGPointAlongLine</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
 
                         </div>
                       </div>
@@ -883,9 +906,11 @@
               <div class="task-name-container">
                 <a name="/Lines"></a>
                 <a name="//apple_ref/objc/Section/Lines" class="dashAnchor"></a>
-                <a href="#/Lines">
-                  <h3 class="section-name">Lines</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Lines"></a>
+                  <h3 class="section-name"><p>Lines</p>
+</h3>
+                </div>
               </div>
               <ul class="item-container">
                 <li class="item">
@@ -908,12 +933,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineMake</span><span class="p">(</span><span class="n">CGPoint</span> <span class="n">point1</span><span class="p">,</span> <span class="n">CGPoint</span> <span class="n">point2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineMake</span><span class="p">(</span><span class="n">CGPoint</span> <span class="n">point1</span><span class="p">,</span> <span class="n">CGPoint</span> <span class="n">point2</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineMake</span><span class="p">(</span><span class="n">_</span> <span class="nv">point1</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">_</span> <span class="nv">point2</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineMake</span><span class="p">(</span><span class="n">_</span> <span class="nv">point1</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">_</span> <span class="nv">point2</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span></code></pre>
 
                         </div>
                       </div>
@@ -940,12 +965,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">bool</span> <span class="n">CGLineEqualToLine</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">bool</span> <span class="n">CGLineEqualToLine</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineEqualToLine</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineEqualToLine</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -972,12 +997,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLineMidPoint</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLineMidPoint</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineMidPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineMidPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
 
                         </div>
                       </div>
@@ -1004,12 +1029,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLineDirection</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLineDirection</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineDirection</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineDirection</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
                       </div>
@@ -1036,12 +1061,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLinesAngle</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLinesAngle</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesAngle</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesAngle</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
                       </div>
@@ -1068,12 +1093,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLinesIntersectAtPoint</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLinesIntersectAtPoint</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesIntersectAtPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesIntersectAtPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
 
                         </div>
                       </div>
@@ -1100,12 +1125,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLineLength</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGFloat</span> <span class="n">CGLineLength</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineLength</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineLength</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
                       </div>
@@ -1132,12 +1157,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineScale</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineScale</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineScale</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineScale</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1164,12 +1189,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineTranslate</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">delta</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineTranslate</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">delta</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineTranslate</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">delta</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineTranslate</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">delta</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1196,12 +1221,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineScaleOnMidPoint</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">CGLineScaleOnMidPoint</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">scale</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineScaleOnMidPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineScaleOnMidPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1228,12 +1253,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">CGLineDelta</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span> <span class="n">CGLineDelta</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineDelta</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineDelta</span><span class="p">(</span><span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Type%20Definitions.html#/c:MBGeometry.h@T@CGDelta">CGDelta</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1260,12 +1285,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">bool</span> <span class="n">CGLinesAreParallel</span><span class="p">(</span><span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">bool</span> <span class="n">CGLinesAreParallel</span><span class="p">(</span><span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line1</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line2</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesAreParallel</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLinesAreParallel</span><span class="p">(</span><span class="n">_</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1278,9 +1303,11 @@
               <div class="task-name-container">
                 <a name="/Rectangles"></a>
                 <a name="//apple_ref/objc/Section/Rectangles" class="dashAnchor"></a>
-                <a href="#/Rectangles">
-                  <h3 class="section-name">Rectangles</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Rectangles"></a>
+                  <h3 class="section-name"><p>Rectangles</p>
+</h3>
+                </div>
               </div>
               <ul class="item-container">
                 <li class="item">
@@ -1595,12 +1622,12 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLineIntersectsRectAtPoint</span><span class="p">(</span><span class="n">CGRect</span> <span class="n">rect</span><span class="p">,</span> <span class="n"><a href="Type Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">CGPoint</span> <span class="n">CGLineIntersectsRectAtPoint</span><span class="p">(</span><span class="n">CGRect</span> <span class="n">rect</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions/CGLine.html">CGLine</a></span> <span class="n">line</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineIntersectsRectAtPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">CGLineIntersectsRectAtPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt"><a href="Type%20Definitions/CGLine.html">CGLine</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
 
                         </div>
                       </div>
@@ -1613,9 +1640,11 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
               <div class="task-name-container">
                 <a name="/Arcs"></a>
                 <a name="//apple_ref/objc/Section/Arcs" class="dashAnchor"></a>
-                <a href="#/Arcs">
-                  <h3 class="section-name">Arcs</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Arcs"></a>
+                  <h3 class="section-name"><p>Arcs</p>
+</h3>
+                </div>
               </div>
               <ul class="item-container">
                 <li class="item">
@@ -1657,9 +1686,11 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
               <div class="task-name-container">
                 <a name="/ScanningRegion"></a>
                 <a name="//apple_ref/objc/Section/ScanningRegion" class="dashAnchor"></a>
-                <a href="#/ScanningRegion">
-                  <h3 class="section-name">ScanningRegion</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ScanningRegion"></a>
+                  <h3 class="section-name"><p>ScanningRegion</p>
+</h3>
+                </div>
               </div>
               <ul class="item-container">
                 <li class="item">
@@ -1694,10 +1725,6 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1718,7 +1745,7 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">static</span> <span class="kr">inline</span> <span class="n"><a href="Type Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a></span>
+                          <pre class="highlight objective_c"><code><span class="k">static</span> <span class="kr">inline</span> <span class="n"><a href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a></span>
 <span class="n">MBMakeImageExtensionFactors</span><span class="p">(</span><span class="n">CGFloat</span> <span class="n">top</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">right</span><span class="p">,</span> <span class="n">CGFloat</span> <span class="n">bottom</span><span class="p">,</span>
                             <span class="n">CGFloat</span> <span class="n">left</span><span class="p">)</span></code></pre>
 
@@ -1735,8 +1762,8 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-02-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

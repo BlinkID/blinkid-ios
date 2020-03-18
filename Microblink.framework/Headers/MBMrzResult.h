@@ -60,6 +60,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, strong, readonly) NSString *issuer;
 
 /**
+ * Returns issuer name
+*/
+@property (nonatomic, strong, readonly) NSString *issuerName;
+
+/**
  * Returns holder's date of birth
  */
 @property (nonatomic, strong, readonly) MBDateResult *dateOfBirth;
@@ -176,6 +181,11 @@ MB_INIT_UNAVAILABLE
  * Sanitized document number
  */
 @property (nonatomic, strong, readonly) NSString *sanitizedDocumentNumber;
+
+/**
+ * Returns name of nationality 
+*/
+@property (nonatomic, strong, readonly) NSString *nationalityName;
 
 @end
 

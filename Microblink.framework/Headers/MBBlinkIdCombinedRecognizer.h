@@ -53,6 +53,21 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL allowBlurFilter;
 
+/**
+ * Defines whether returning of unparsed MRZ (Machine Readable Zone) results is allowed
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowUnparsedMrzResults;
+
+/**
+ * Defines whether returning unverified MRZ (Machine Readable Zone) results is allowed
+ * Unverified MRZ is parsed, but check digits are incorrect
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL allowUnverifiedMrzResults;
+
 @end
 
 @protocol MBBlinkIdCombinedRecognizerDelegate <NSObject>

@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBarcodeResult.h",
+      "line": 12,
+      "symbol": "MBBarcodeType.MBBarcodeNone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
       "line": 32,
       "symbol": "MBBlinkIdCombinedRecognizer.-init",
@@ -9,21 +16,21 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 58,
+      "line": 73,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 60,
+      "line": 75,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedImageAvailable:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 61,
+      "line": 76,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate.-onCombinedDocumentSupportStatus:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -44,21 +51,21 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 55,
+      "line": 70,
       "symbol": "MBBlinkIdRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 57,
+      "line": 72,
       "symbol": "MBBlinkIdRecognizerDelegate.-onImageAvailable:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 58,
+      "line": 73,
       "symbol": "MBBlinkIdRecognizerDelegate.-onDocumentSupportStatus:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -820,6 +827,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBIdBarcodeDocumentType.h",
+      "line": 12,
+      "symbol": "MBIdBarcodeDocumentType.MBIdBarcodeDocumentTypeNone",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBIdBarcodeRecognizer.h",
+      "line": 19,
+      "symbol": "MBIdBarcodeRecognizer.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBIdBarcodeRecognizerResult.h",
+      "line": 21,
+      "symbol": "MBIdBarcodeRecognizerResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBImageExtensionFactors.h",
       "line": 13,
       "symbol": "MBImageExtensionFactors",
@@ -901,6 +929,97 @@
       "line": 22,
       "symbol": "MBImageReturnProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 13,
+      "symbol": "MBLogLevel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 13,
+      "symbol": "MBLogLevel",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 14,
+      "symbol": "MBLogLevel.MBLogLevelError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 15,
+      "symbol": "MBLogLevel.MBLogLevelWarning",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 16,
+      "symbol": "MBLogLevel.MBLogLevelInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 17,
+      "symbol": "MBLogLevel.MBLogLevelDebug",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 18,
+      "symbol": "MBLogLevel.MBLogLevelVerbose",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 21,
+      "symbol": "MBLoggerDelegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 25,
+      "symbol": "MBLoggerDelegate.-log:message:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 26,
+      "symbol": "MBLoggerDelegate.-log:format:arguments:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 30,
+      "symbol": "MBLogger",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 32,
+      "symbol": "MBLogger.delegate",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/blinkid-ios-framework/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
+      "line": 34,
+      "symbol": "MBLogger.+instance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {

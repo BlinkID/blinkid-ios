@@ -29,10 +29,12 @@ BlinkID is a part of family of SDKs developed by [Microblink](http://www.microbl
 - [Quick Start](#quick-start)
 - [Advanced BlinkID integration instructions](#advanced-integration)
 	- [Built-in overlay view controllers and overlay subviews](#ui-customizations)
-		- [Using `MBDocumentOverlayViewController`](#using-blinkinput-overlay-viewcontroller)
+		- [Using `MBDocumentOverlayViewController`](#using-document-overlay-viewcontroller)
 		- [Using `MBDocumentVerificationOverlayViewController`](#using-document-verification-overlay-viewcontroller)
 		- [New: Using `MBBlinkIdOverlayViewController`](#using-blinkid-overlay-viewcontroller)
 		- [Custom overlay view controller](#using-custom-overlay-viewcontroller)
+	- [Direct processing API](#direct-api-processing)
+		- [Using Direct API for `NSString` recognition (parsing)](#direct-api-string-processing)
 - [`MBRecognizer` and available recognizers](#recognizer)
 - [List of available recognizers](#available-recognizers)
 	- [Frame Grabber Recognizer](#frame-grabber-recognizer)
@@ -93,7 +95,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.2.0'
+    pod 'PPBlinkID', '~> 5.3.0'
 end
 ```
 
@@ -342,15 +344,15 @@ Objective-C
 This section covers more advanced details of BlinkInput integration.
 
 1. [First part](#ui-customizations) will cover the possible customizations when using UI provided by the SDK.
-2. [Second part](#custom-overyal-view-controller) will describe how to embed [`MBRecognizerRunnerViewController's delegates`](http://blinkid.github.io/blinkid-ios/Protocols.html) into your `UIViewController` with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.
-3. [Third part](#direct-processing-api) will describe how to use the [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html) (Direct API) for recognition directly from `UIImage` without the need of camera or to recognize camera frames that are obtained by custom camera management.
+2. [Second part](#using-document-overlay-viewcontroller) will describe how to embed [`MBRecognizerRunnerViewController's delegates`](http://blinkid.github.io/blinkid-ios/Protocols.html) into your `UIViewController` with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.
+3. [Third part](#direct-api-processing) will describe how to use the [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html) (Direct API) for recognition directly from `UIImage` without the need of camera or to recognize camera frames that are obtained by custom camera management.
 4. [Fourth part](#recognizer) will describe recognizer concept and available recognizers.
 
 
 ## <a name="ui-customizations"></a> Built-in overlay view controllers and overlay subviews
 
 Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. 
-### <a name="using-blinkinput-overlay-viewcontroller"></a> Using `MBDocumentOverlayViewController`
+### <a name="using-document-overlay-viewcontroller"></a> Using `MBDocumentOverlayViewController`
 
 [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html) is overlay view controller best suited for performing scanning of various document cards. It has [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html):
 
@@ -543,6 +545,106 @@ Objective-C
 UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:CustomOverlayViewController];
 ```
 
+
+## <a name="direct-api-processing"></a> Direct processing API
+
+This guide will in short present you how to process UIImage objects with BlinkID SDK, without starting the camera video capture.
+
+With this feature you can solve various use cases like:
+	- recognizing text on images in Camera roll
+	- taking full resolution photo and sending it to processing
+	- scanning barcodes on images in e-mail etc.
+
+DirectAPI-sample demo app here will present UIImagePickerController for taking full resolution photos, and then process it with Microblink SDK to get scanning results using Direct processing API.
+
+Direct processing API is handled with [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html). That is a class that handles processing of images. It also has protocols as [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunnerViewController.html).
+Developer can choose which protocol to conform:
+
+- [`MBScanningRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html)
+- [`MBDetectionRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDetectionRecognizerRunnerDelegate.html)
+- [`MBDebugRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDebugRecognizerRunnerDelegate.html)
+- [`MBOcrRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBOcrRecognizerRunnerDelegate.html)
+
+In example, we are conforming to [`MBScanningRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html) protocol.
+
+To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we're listing the initialization code as it looks in a touch handler method.
+
+Swift
+```swift
+func setupRecognizerRunner() {
+    var recognizers = [MBRecognizer]()
+    pdf417Recognizer = MBPdf417Recognizer()
+    recognizers.append(pdf417Recognizer!)
+    let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
+    recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
+    recognizerRunner?.scanningRecognizerRunnerDelegate = self
+}
+
+func processImageRunner(_ originalImage: UIImage) {
+    var image: MBImage? = nil
+    if let anImage = originalImage {
+        image = MBImage(uiImage: anImage)
+    }
+    image?.cameraFrame = true
+    image?.orientation = MBProcessingOrientation.left
+    let _serialQueue = DispatchQueue(label: "com.microblink.DirectAPI-sample-swift")
+    _serialQueue.async(execute: {() -> Void in
+        self.recognizerRunner?.processImage(image!)
+    })
+}
+
+func recognizerRunner(_ recognizerRunner: MBRecognizerRunner, didFinishScanningWith state: MBRecognizerResultState) {
+    if blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid {
+        // Handle result
+    }
+}
+```
+
+Objective-C
+```objective-c
+- (void)setupRecognizerRunner {
+    NSMutableArray<MBRecognizer *> *recognizers = [[NSMutableArray alloc] init];
+    
+    self.pdf417Recognizer = [[MBPdf417Recognizer alloc] init];
+    
+    [recognizers addObject: self.pdf417Recognizer];
+    
+    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
+    
+    self.recognizerRunner = [[MBRecognizerRunner alloc] initWithRecognizerCollection:recognizerCollection];
+    self.recognizerRunner.scanningRecognizerRunnerDelegate = self;
+}
+
+- (void)processImageRunner:(UIImage *)originalImage {
+    MBImage *image = [MBImage imageWithUIImage:originalImage];
+    image.cameraFrame = YES;
+    image.orientation = MBProcessingOrientationLeft;
+    dispatch_queue_t _serialQueue = dispatch_queue_create("com.microblink.DirectAPI-sample", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(_serialQueue, ^{
+        [self.recognizerRunner processImage:image];
+    });
+}
+
+- (void)recognizerRunner:(nonnull MBRecognizerRunner *)recognizerRunner didFinishScanningWithState:(MBRecognizerResultState)state {
+    if (self.blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid) {
+        // Handle result
+    }
+}
+```
+
+Now you've seen how to implement the Direct processing API.
+
+In essence, this API consists of two steps:
+
+- Initialization of the scanner.
+- Call of `- (void)processImage:(MBImage *)image;` method for each UIImage or CMSampleBufferRef you have.
+
+
+### <a name="direct-api-string-processing"></a> Using Direct API for `NSString` recognition (parsing)
+
+Some recognizers support recognition from `NSString`. They can be used through Direct API to parse given `NSString` and return data just like when they are used on an input image. When recognition is performed on `NSString`, there is no need for the OCR. Input `NSString` is used in the same way as the OCR output is used when image is being recognized. 
+Recognition from `String` can be performed in the same way as recognition from image. 
+The only difference is that user should call `- (void)processString:(NSString *)string;` on [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html).
 
 # <a name="recognizer"></a> `MBRecognizer` and available recognizers
 

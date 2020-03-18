@@ -50,6 +50,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBDateResult *dateOfIssue;
 
 /**
+ * Determines if date of expiry is permanent.
+ */
+@property (nonatomic, readonly) BOOL dateOfExpiryPermanent;
+
+/**
  * The document number.
  */
 @property (nonatomic, readonly, nullable) NSString *documentNumber;
