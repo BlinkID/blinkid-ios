@@ -6,9 +6,9 @@
 
 - We added a new recognizer specialized for scanning and parsing barcodes on various identity cards - `MBIdBarcodeRecognizer`.  Supported document types are:
     - AAMVA compliant (US DL, Canada DL, etc.)
-    - Argentina ID and driver license
+    - Argentina ID
     - Panama ID
-    - Colombia ID and driver license
+    - Colombia ID
     - South Africa ID
     - Nigeria Voter ID and driver license
 
