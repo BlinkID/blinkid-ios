@@ -1,14 +1,78 @@
 # Release notes
 
+## 5.4.0
+
+### New features:
+
+- Introducing support for new framework format - XCFramework:
+	- it contains all the necessary device and simulator architecture slices
+	- no neeed to remove simulator slices before distributing your app to the App Store as described [here](https://github.com/BlinkID/blinkid-ios#unsupported-architectures-when-submitting-app-to-app-store)
+	- for now, only available from this repo, **not available on Cocoapods**
+- We added age verification feature:
+    - Now you can more easily obtain the age of the document owner in years and check whether it is above some age limit
+	- available on `MBMrzResult`, `MBBlinkIdRecognizerResult`, `MBBlinkIdCombinedRecognizerResult`, `MBUsdlRecognizerResult`, `MBUsdlCombinedRecognizerResult` and `MBIdBarcodeRecognizerResult`
+- Added presets for camera - Preset1080p, and 4K; Optimal always chooses the highest quality
+
+### Improvements for existing features:
+
+- We added support for new document types in `MBBlinkIdCombinedRecognizer` and `MBBlinkIdRecognizer`:
+	- Australia - Australian Capital Territory - Driving Licence / front only
+	- Australia - Northern Territory - Driving Licence / BETA
+	- Australia - Tasmania - Driving Licence / front only / BETA
+	- Canada - Alberta - ID Card / BETA
+	- Canada - British Columbia - Driver License/Public Services Card (Combined) 
+	- Canada - British Columbia - ID Card / BETA
+	- Canada - British Columbia - Public Services Card
+	- Canada - New Brunswick - Driving Licence
+	- Canada - Nova Scotia - Driving Licence / BETA
+	- Canada - Yukon - Driving Licence / BETA
+	- Panama - Driving Licence / front only / BETA
+	- Panama - ID Card / front only
+	- Singapore - Work Permit / BETA
+	- Taiwan - ID Card / front only / BETA
+	- USA - Alabama - ID Card
+	- USA - Alaska - ID Card / BETA
+	- USA - District Of Columbia - Driver License / BETA
+	- USA - Idaho - ID Card / BETA
+	- USA - Indiana - ID Card / BETA
+	- USA - Kentucky - ID Card / BETA
+	- USA - Massachusetts - ID Card
+	- USA - Oregon - ID Card
+	- USA - Washington - ID Card
+	- Back side supported:
+		- Australia - Western Australia - Driving Licence
+		- Mexico - Voter ID
+		- Netherlands - Driving Licence
+
+- Additional improvements in `BlinkIdCombinedRecognizer` and `BlinkIdRecognizer`:
+    - When the back side of the document is not fully supported by the `MBBlinkIdCombinedRecognizer`, we will capture and return the back side image without performing data extraction. You can disable this behaviour by using `skipUnsupportedBack`.
+    - We are now returning color status for the scanned document (black and white or color) in the following result fields:
+        - `documentImageColorStatus` in `MBBlinkIdRecognizerResult`.
+        - `documentFrontImageColorStatus` and `documentBackImageColorStatus` in `MBBlinkIdCombinedRecognizerResult`
+    - We are now returning `ClassInfo` which holds the following information about the scanned document: `Country`, `Region`, and `Type` of the document. Use  `classInfo`
+    - We introduced `ClassFilter` which determines whether a document should be processed or is filtered out, based on its `ClassInfo`. Use  `classFilter`
+    - To improve the scanning performance, we added additional feedback for users that ensures a detected document is entirely inside the frame. When a document is too close to the edge of the camera frame, we will display an appropriate message to the user in `MBBlinkIdOverlayController`. You can configure the minimum distance from the edge of the frame by using the `paddingEdge` settings method
+
+- Improvements in `MBBlinkIdOverlayViewController `:
+    - When a document is too close to the edge of the camera frame, we display *`Move the document from the edge`* message.
+    - We added better user instructions when barcodes are being scanned in `MBUsdlCombinedRecognizer`. We display *`Scan the barcode`* message.
+- We are now delivering the complete list of open source dependencies used in the SDK. Please check the `open-source-software-used` directory
+- We improved document detection with `MBDocumentCaptureRecognizer`
+
+### Bug fixes:
+
+- Fixed animation on back side scanning on `MBBlinkIdOverlayViewController` when recognizer is wrapped in `MBSuccessFrameGrabberRecognizer`
+- Large memory consumption introduced in v5.3.0 is due to 4K video session on all 4K eligible iPhones; we introduced new camera presets 1080p and 4K, so to reduce your app memory consumption set camera preset on 1080p or 720p
+
 ## 5.3.0
 
 ### New features:
 
 - We added a new recognizer specialized for scanning and parsing barcodes on various identity cards - `MBIdBarcodeRecognizer`.  Supported document types are:
     - AAMVA compliant (US DL, Canada DL, etc.)
-    - Argentina ID
+    - Argentina ID and driver license
     - Panama ID
-    - Colombia ID
+    - Colombia ID and driver license
     - South Africa ID
     - Nigeria Voter ID and driver license
 

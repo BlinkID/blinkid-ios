@@ -1,0 +1,118 @@
+[
+   {
+      "url" : "https://bitbucket.org/microblink/boost",
+      "package" : "Boost/1.72.0@microblink/stable",
+      "license" : "Boost Software license"
+   },
+   {
+      "license" : "MIT",
+      "package" : "ConfigEx/1.0.4@microblink/stable",
+      "url" : "https://github.com/microblink/config_ex"
+   },
+   {
+      "url" : "https://github.com/microblink/eigen-git-mirror",
+      "package" : "Eigen/3.3.7.7@microblink/stable",
+      "license" : "Mozilla Public License Version 2.0"
+   },
+   {
+      "license" : "Boost Software License",
+      "package" : "Err/1.0.10@microblink/stable",
+      "url" : "https://github.com/microblink/err"
+   },
+   {
+      "license" : "Boost Software License, Version 1.0",
+      "url" : "https://github.com/microblink/functionoid",
+      "package" : "Functionoid/1.1.6@microblink/stable"
+   },
+   {
+      "url" : "https://github.com/microblink/hash-library",
+      "package" : "Hash/7.0.1@microblink/stable",
+      "license" : "zlib"
+   },
+   {
+      "license" : "Boost Software License",
+      "package" : "MMap/0.2.0@microblink/stable",
+      "url" : "https://github.com/microblink/mmap"
+   },
+   {
+      "url" : "https://github.com/microblink/micro-ecc",
+      "package" : "MicroECC/2.0.0@microblink/stable",
+      "license" : "BSD 2-Clause \"Simplified\" License"
+   },
+   {
+      "license" : "https://github.com/microblink/ADVobfuscator#copyright-and-license",
+      "url" : "https://github.com/microblink/ADVobfuscator",
+      "package" : "Obfuscation/0.1.0@microblink/stable"
+   },
+   {
+      "license" : "MIT",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
+      "package" : "OpenCV/3.2.0.7@microblink/stable"
+   },
+   {
+      "license" : "MIT",
+      "package" : "OpenCVAnalysis/3.2.0.7@microblink/stable",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src"
+   },
+   {
+      "license" : "MIT",
+      "package" : "OpenCVCore/3.2.0.7@microblink/stable",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src"
+   },
+   {
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
+      "package" : "OpenCVImageIO/3.2.0.7@microblink/stable",
+      "license" : "MIT"
+   },
+   {
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
+      "package" : "OpenCVProcessing/3.2.0.7@microblink/stable",
+      "license" : "MIT"
+   },
+   {
+      "license" : "BSD 2-Clause \"Simplified\" License",
+      "url" : "https://github.com/microblink/pimpl",
+      "package" : "Pimpl/1.0.2@microblink/stable"
+   },
+   {
+      "package" : "RapidJSON/1.1.2@microblink/stable",
+      "url" : "https://bitbucket.org/microblink/core-rapidjson",
+      "license" : "BSD"
+   },
+   {
+      "license" : "MIT",
+      "url" : "https://github.com/microblink/sweater",
+      "package" : "Sweater/3.2.6@microblink/stable"
+   },
+   {
+      "package" : "UTFCpp/3.1.1@microblink/stable",
+      "url" : "https://github.com/microblink/utfcpp",
+      "license" : "Boost Software License 1.0"
+   },
+   {
+      "license" : "Apache License 2.0",
+      "package" : "ZXing/2.2.1@microblink/stable",
+      "url" : "https://github.com/microblink/zxing"
+   },
+   {
+      "package" : "Zlib/1.2.8.7@microblink/stable",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
+      "license" : "MIT"
+   },
+   {
+      "package" : "cpuinfo/2.0.0@microblink/stable",
+      "url" : "https://github.com/microblink/cpuinfo",
+      "license" : "BSD 2-Clause \"Simplified\" License"
+   },
+   {
+      "license" : "Boost Software License - Version 1.0 - August 17th, 2003",
+      "url" : "https://github.com/ericniebler/range-v3",
+      "package" : "range-v3/0.10.0@microblink/stable"
+   },
+   {
+      "license" : "Zlib",
+      "url" : "https://github.com/microblink/tinyxml2",
+      "package" : "tinyxml2/2.2.0@microblink/stable"
+   }
+]
+

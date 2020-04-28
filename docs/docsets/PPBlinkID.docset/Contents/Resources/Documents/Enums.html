@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.3.0 Docs
+          PPBlinkID v5.4.0 Docs
         </a>
-         (80% documented)
+         (69% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -88,6 +88,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBCharWithVariants.html">MBCharWithVariants</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBClassInfo.html">MBClassInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBCustomOverlayViewController.html">MBCustomOverlayViewController</a>
@@ -346,6 +349,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
               </li>
               <li class="nav-group-task">
@@ -358,6 +364,9 @@
                 <a class="nav-group-task-link" href="Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBCountry.html">MBCountry</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDataMatchResult.html">MBDataMatchResult</a>
               </li>
               <li class="nav-group-task">
@@ -365,6 +374,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDocumentFaceDetectorType.html">MBDocumentFaceDetectorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDocumentVerificationHighResImageState.html">MBDocumentVerificationHighResImageState</a>
@@ -400,6 +412,12 @@
                 <a class="nav-group-task-link" href="Enums/MBRecognizerResultState.html">MBRecognizerResultState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBRegion.html">MBRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBType.html">MBType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBUsdlKeys.html">MBUsdlKeys</a>
               </li>
             </ul>
@@ -407,6 +425,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBAgeResult.html">MBAgeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBBlinkIdCombinedRecognizerDelegate.html">MBBlinkIdCombinedRecognizerDelegate</a>
               </li>
@@ -734,6 +755,44 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@E@MBAgeLimitStatus"></a>
+                    <a name="//apple_ref/objc/Enum/MBAgeLimitStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBAgeLimitStatus">MBAgeLimitStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/MBAgeLimitStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBAgeLimitStatus</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="cm">/** Status cannot be determined. When date of birth is not known. */</span>
+    <span class="n">MBAgeLimitStatusNotAvailable</span><span class="p">,</span>
+
+    <span class="cm">/** Document owner age is less than the given age limit. */</span>
+    <span class="n">MBAgeLimitStatusBelowAgeLimit</span><span class="p">,</span>
+
+    <span class="cm">/** Document owner age is greater than the given age limit. */</span>
+    <span class="n">MBAgeLimitStatusOverAgeLimit</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@E@MBBarcodeType"></a>
                     <a name="//apple_ref/objc/Enum/MBBarcodeType" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@MBBarcodeType">MBBarcodeType</a>
@@ -861,6 +920,267 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@E@MBCountry"></a>
+                    <a name="//apple_ref/objc/Enum/MBCountry" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBCountry">MBCountry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/MBCountry.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBCountry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MBCountryNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">MBCountryAlbania</span><span class="p">,</span>
+    <span class="n">MBCountryAlgeria</span><span class="p">,</span>
+    <span class="n">MBCountryArgentina</span><span class="p">,</span>
+    <span class="n">MBCountryAustralia</span><span class="p">,</span>
+    <span class="n">MBCountryAustria</span><span class="p">,</span>
+    <span class="n">MBCountryAzerbaijan</span><span class="p">,</span>
+    <span class="n">MBCountryBahrain</span><span class="p">,</span>
+    <span class="n">MBCountryBangladesh</span><span class="p">,</span>
+    <span class="n">MBCountryBelgium</span><span class="p">,</span>
+    <span class="n">MBCountryBosniaAndHerzegovina</span><span class="p">,</span>
+    <span class="n">MBCountryBrunei</span><span class="p">,</span>
+    <span class="n">MBCountryBulgaria</span><span class="p">,</span>
+    <span class="n">MBCountryCambodia</span><span class="p">,</span>
+    <span class="n">MBCountryCanada</span><span class="p">,</span>
+    <span class="n">MBCountryChile</span><span class="p">,</span>
+    <span class="n">MBCountryColombia</span><span class="p">,</span>
+    <span class="n">MBCountryCostaRica</span><span class="p">,</span>
+    <span class="n">MBCountryCroatia</span><span class="p">,</span>
+    <span class="n">MBCountryCyprus</span><span class="p">,</span>
+    <span class="n">MBCountryCzechia</span><span class="p">,</span>
+    <span class="n">MBCountryDenmark</span><span class="p">,</span>
+    <span class="n">MBCountryDominicanRepublic</span><span class="p">,</span>
+    <span class="n">MBCountryEgypt</span><span class="p">,</span>
+    <span class="n">MBCountryEstonia</span><span class="p">,</span>
+    <span class="n">MBCountryFinland</span><span class="p">,</span>
+    <span class="n">MBCountryFrance</span><span class="p">,</span>
+    <span class="n">MBCountryGeorgia</span><span class="p">,</span>
+    <span class="n">MBCountryGermany</span><span class="p">,</span>
+    <span class="n">MBCountryGhana</span><span class="p">,</span>
+    <span class="n">MBCountryGreece</span><span class="p">,</span>
+    <span class="n">MBCountryGuatemala</span><span class="p">,</span>
+    <span class="n">MBCountryHongKong</span><span class="p">,</span>
+    <span class="n">MBCountryHungary</span><span class="p">,</span>
+    <span class="n">MBCountryIndia</span><span class="p">,</span>
+    <span class="n">MBCountryIndonesia</span><span class="p">,</span>
+    <span class="n">MBCountryIreland</span><span class="p">,</span>
+    <span class="n">MBCountryIsrael</span><span class="p">,</span>
+    <span class="n">MBCountryItaly</span><span class="p">,</span>
+    <span class="n">MBCountryJordan</span><span class="p">,</span>
+    <span class="n">MBCountryKazakhstan</span><span class="p">,</span>
+    <span class="n">MBCountryKenya</span><span class="p">,</span>
+    <span class="n">MBCountryKosovo</span><span class="p">,</span>
+    <span class="n">MBCountryKuwait</span><span class="p">,</span>
+    <span class="n">MBCountryLatvia</span><span class="p">,</span>
+    <span class="n">MBCountryLithuania</span><span class="p">,</span>
+    <span class="n">MBCountryMalaysia</span><span class="p">,</span>
+    <span class="n">MBCountryMaldives</span><span class="p">,</span>
+    <span class="n">MBCountryMalta</span><span class="p">,</span>
+    <span class="n">MBCountryMauritius</span><span class="p">,</span>
+    <span class="n">MBCountryMexico</span><span class="p">,</span>
+    <span class="n">MBCountryMorocco</span><span class="p">,</span>
+    <span class="n">MBCountryNetherlands</span><span class="p">,</span>
+    <span class="n">MBCountryNewZealand</span><span class="p">,</span>
+    <span class="n">MBCountryNigeria</span><span class="p">,</span>
+    <span class="n">MBCountryPakistan</span><span class="p">,</span>
+    <span class="n">MBCountryPanama</span><span class="p">,</span>
+    <span class="n">MBCountryParaguay</span><span class="p">,</span>
+    <span class="n">MBCountryPhilippines</span><span class="p">,</span>
+    <span class="n">MBCountryPoland</span><span class="p">,</span>
+    <span class="n">MBCountryPortugal</span><span class="p">,</span>
+    <span class="n">MBCountryPuertoRico</span><span class="p">,</span>
+    <span class="n">MBCountryQatar</span><span class="p">,</span>
+    <span class="n">MBCountryRomania</span><span class="p">,</span>
+    <span class="n">MBCountryRussia</span><span class="p">,</span>
+    <span class="n">MBCountrySaudiArabia</span><span class="p">,</span>
+    <span class="n">MBCountrySerbia</span><span class="p">,</span>
+    <span class="n">MBCountrySingapore</span><span class="p">,</span>
+    <span class="n">MBCountrySlovakia</span><span class="p">,</span>
+    <span class="n">MBCountrySlovenia</span><span class="p">,</span>
+    <span class="n">MBCountrySouthAfrica</span><span class="p">,</span>
+    <span class="n">MBCountrySpain</span><span class="p">,</span>
+    <span class="n">MBCountrySweden</span><span class="p">,</span>
+    <span class="n">MBCountrySwitzerland</span><span class="p">,</span>
+    <span class="n">MBCountryTaiwan</span><span class="p">,</span>
+    <span class="n">MBCountryThailand</span><span class="p">,</span>
+    <span class="n">MBCountryTunisia</span><span class="p">,</span>
+    <span class="n">MBCountryTurkey</span><span class="p">,</span>
+    <span class="n">MBCountryUAE</span><span class="p">,</span>
+    <span class="n">MBCountryUganda</span><span class="p">,</span>
+    <span class="n">MBCountryUK</span><span class="p">,</span>
+    <span class="n">MBCountryUkraine</span><span class="p">,</span>
+    <span class="n">MBCountryUsa</span><span class="p">,</span>
+    <span class="n">MBCountryVietnam</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBRegion"></a>
+                    <a name="//apple_ref/objc/Enum/MBRegion" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRegion">MBRegion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/MBRegion.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBRegion</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MBRegionNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">MBRegionAlabama</span><span class="p">,</span>
+    <span class="n">MBRegionAlaska</span><span class="p">,</span>
+    <span class="n">MBRegionAlberta</span><span class="p">,</span>
+    <span class="n">MBRegionArizona</span><span class="p">,</span>
+    <span class="n">MBRegionArkansas</span><span class="p">,</span>
+    <span class="n">MBRegionAustralianCapitalTerritory</span><span class="p">,</span>
+    <span class="n">MBRegionBritishColumbia</span><span class="p">,</span>
+    <span class="n">MBRegionCalifornia</span><span class="p">,</span>
+    <span class="n">MBRegionColorado</span><span class="p">,</span>
+    <span class="n">MBRegionConnecticut</span><span class="p">,</span>
+    <span class="n">MBRegionDelaware</span><span class="p">,</span>
+    <span class="n">MBRegionDistrictOfColumbia</span><span class="p">,</span>
+    <span class="n">MBRegionFlorida</span><span class="p">,</span>
+    <span class="n">MBRegionGeorgia</span><span class="p">,</span>
+    <span class="n">MBRegionHawaii</span><span class="p">,</span>
+    <span class="n">MBRegionIdaho</span><span class="p">,</span>
+    <span class="n">MBRegionIllinois</span><span class="p">,</span>
+    <span class="n">MBRegionIndiana</span><span class="p">,</span>
+    <span class="n">MBRegionIowa</span><span class="p">,</span>
+    <span class="n">MBRegionKansas</span><span class="p">,</span>
+    <span class="n">MBRegionKentucky</span><span class="p">,</span>
+    <span class="n">MBRegionLouisiana</span><span class="p">,</span>
+    <span class="n">MBRegionMaine</span><span class="p">,</span>
+    <span class="n">MBRegionManitoba</span><span class="p">,</span>
+    <span class="n">MBRegionMaryland</span><span class="p">,</span>
+    <span class="n">MBRegionMassachusetts</span><span class="p">,</span>
+    <span class="n">MBRegionMichigan</span><span class="p">,</span>
+    <span class="n">MBRegionMinnesota</span><span class="p">,</span>
+    <span class="n">MBRegionMississippi</span><span class="p">,</span>
+    <span class="n">MBRegionMissouri</span><span class="p">,</span>
+    <span class="n">MBRegionMontana</span><span class="p">,</span>
+    <span class="n">MBRegionNebraska</span><span class="p">,</span>
+    <span class="n">MBRegionNevada</span><span class="p">,</span>
+    <span class="n">MBRegionNewBrunswick</span><span class="p">,</span>
+    <span class="n">MBRegionNewHampshire</span><span class="p">,</span>
+    <span class="n">MBRegionNewJersey</span><span class="p">,</span>
+    <span class="n">MBRegionNewMexico</span><span class="p">,</span>
+    <span class="n">MBRegionNewSouthWales</span><span class="p">,</span>
+    <span class="n">MBRegionNewYork</span><span class="p">,</span>
+    <span class="n">MBRegionNorthernTerritory</span><span class="p">,</span>
+    <span class="n">MBRegionNorthCarolina</span><span class="p">,</span>
+    <span class="n">MBRegionNorthDakota</span><span class="p">,</span>
+    <span class="n">MBRegionNovaScotia</span><span class="p">,</span>
+    <span class="n">MBRegionOhio</span><span class="p">,</span>
+    <span class="n">MBRegionOklahoma</span><span class="p">,</span>
+    <span class="n">MBRegionOntario</span><span class="p">,</span>
+    <span class="n">MBRegionOregon</span><span class="p">,</span>
+    <span class="n">MBRegionPennsylvania</span><span class="p">,</span>
+    <span class="n">MBRegionQuebec</span><span class="p">,</span>
+    <span class="n">MBRegionQueensland</span><span class="p">,</span>
+    <span class="n">MBRegionRhodeIsland</span><span class="p">,</span>
+    <span class="n">MBRegionSaskatchewan</span><span class="p">,</span>
+    <span class="n">MBRegionSouthAustralia</span><span class="p">,</span>
+    <span class="n">MBRegionSouthCarolina</span><span class="p">,</span>
+    <span class="n">MBRegionSouthDakota</span><span class="p">,</span>
+    <span class="n">MBRegionTasmania</span><span class="p">,</span>
+    <span class="n">MBRegionTennessee</span><span class="p">,</span>
+    <span class="n">MBRegionTexas</span><span class="p">,</span>
+    <span class="n">MBRegionUtah</span><span class="p">,</span>
+    <span class="n">MBRegionVermont</span><span class="p">,</span>
+    <span class="n">MBRegionVictoria</span><span class="p">,</span>
+    <span class="n">MBRegionVirginia</span><span class="p">,</span>
+    <span class="n">MBRegionWashington</span><span class="p">,</span>
+    <span class="n">MBRegionWesternAustralia</span><span class="p">,</span>
+    <span class="n">MBRegionWestVirginia</span><span class="p">,</span>
+    <span class="n">MBRegionWisconsin</span><span class="p">,</span>
+    <span class="n">MBRegionWyoming</span><span class="p">,</span>
+    <span class="n">MBRegionYukon</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBType"></a>
+                    <a name="//apple_ref/objc/Enum/MBType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBType">MBType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Enums/MBType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MBTypeNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">MBTypeConsularId</span><span class="p">,</span>
+    <span class="n">MBTypeDl</span><span class="p">,</span>
+    <span class="n">MBTypeDlPublicServicesCard</span><span class="p">,</span>
+    <span class="n">MBTypeFinCard</span><span class="p">,</span>
+    <span class="n">MBTypeEmploymentPass</span><span class="p">,</span>
+    <span class="n">MBTypeGreenCard</span><span class="p">,</span>
+    <span class="n">MBTypeId</span><span class="p">,</span>
+    <span class="n">MBTypeMultipurposeId</span><span class="p">,</span>
+    <span class="n">MBTypeMyKad</span><span class="p">,</span>
+    <span class="n">MBTypeMyKid</span><span class="p">,</span>
+    <span class="n">MBTypeMyTentera</span><span class="p">,</span>
+    <span class="n">MBTypePanCard</span><span class="p">,</span>
+    <span class="n">MBTypeProfessionalId</span><span class="p">,</span>
+    <span class="n">MBTypePublicServicesCard</span><span class="p">,</span>
+    <span class="n">MBTypeResidencePermit</span><span class="p">,</span>
+    <span class="n">MBTypeResidentId</span><span class="p">,</span>
+    <span class="n">MBTypeTemporaryResidencePermit</span><span class="p">,</span>
+    <span class="n">MBTypeVoterId</span><span class="p">,</span>
+    <span class="n">MBTypeWorkPermit</span><span class="p">,</span>
+    <span class="n">MBTypeiKad</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@E@MBDataMatchResult"></a>
                     <a name="//apple_ref/objc/Enum/MBDataMatchResult" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@MBDataMatchResult">MBDataMatchResult</a>
@@ -936,6 +1256,34 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBDocumentFaceDetectorType</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBDocumentImageColorStatus"></a>
+                    <a name="//apple_ref/objc/Enum/MBDocumentImageColorStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBDocumentImageColorStatus">MBDocumentImageColorStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>DocumentImageColorStatus enum defines possible color statuses determined from scanned image.</p>
+
+                        <a href="Enums/MBDocumentImageColorStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBDocumentImageColorStatus</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -1340,7 +1688,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-04-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

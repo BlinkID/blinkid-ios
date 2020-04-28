@@ -31,12 +31,21 @@
 "blinkid_sides_dont_match_message" = "Please start the scanning process over.";
 
 "blinkid_first_side_scanned_message" = "Flip the card";
+"blinkid_first_side_USDL_scanned_message" = "Scan the barcode";
 
 "blinkid_too_near_error_message" = "Move farther";
 "blinkid_too_far_error_message" = "Move closer";
 "blinkid_scan_unsuccessful_error_title" = "Scan unsuccessful";
 "blinkid_scan_unsuccessful_error_message" = "Unable to read the document. Please try again.";
+"blinkid_document_too_close_to_edge_message" = "Move the document from the edge";
 
 "document_capture_too_far_message" = "Move closer";
 "document_capture_detected" = "Hold still";
 "document_capture_sensing" = "Looking for documents...";
+
+"liveness_face_not_detected" = "Position your face\n inside the circle";
+"liveness_blinking" = "Close eyes for a\n second";
+"liveness_smiling" = "Smile while\n showing teeth";
+"liveness_face_too_far_message" = "Get closer to the\n camera";
+"liveness_face_too_close_message" = "Increase distance\n from the camera";
+"liveness_face_not_aligned_message" = "Align device with\n the face";
