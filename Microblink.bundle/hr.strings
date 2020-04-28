@@ -31,9 +31,11 @@
 "blinkid_sides_dont_match_message" = "Molimo ponovno skenirajte prednju i stražnju stranu istog dokumenta.";
 
 "blinkid_first_side_scanned_message" = "Okrenite dokument";
+"blinkid_first_side_USDL_scanned_message" = "Skenirajte barkod";
 
 "blinkid_too_near_error_message" = "Udaljite dokument";
 "blinkid_too_far_error_message" = "Približite dokument";
 "blinkid_scan_unsuccessful_error_title" = "Skeniranje nije uspjelo";
 "blinkid_scan_unsuccessful_error_message" = "Dokument nije moguće očitati. Molimo pokušajte ponovno.";
+"blinkid_document_too_close_to_edge_message" = "Odmaknite dokument od ruba";
 

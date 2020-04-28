@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.3.0 Docs
+          PPBlinkID v5.4.0 Docs
         </a>
-         (80% documented)
+         (69% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -88,6 +88,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCharWithVariants.html">MBCharWithVariants</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBClassInfo.html">MBClassInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCustomOverlayViewController.html">MBCustomOverlayViewController</a>
@@ -346,6 +349,9 @@
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBBarcodeType.html">MBBarcodeType</a>
               </li>
               <li class="nav-group-task">
@@ -358,6 +364,9 @@
                 <a class="nav-group-task-link" href="../Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBCountry.html">MBCountry</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDataMatchResult.html">MBDataMatchResult</a>
               </li>
               <li class="nav-group-task">
@@ -365,6 +374,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDocumentFaceDetectorType.html">MBDocumentFaceDetectorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDocumentVerificationHighResImageState.html">MBDocumentVerificationHighResImageState</a>
@@ -400,6 +412,12 @@
                 <a class="nav-group-task-link" href="../Enums/MBRecognizerResultState.html">MBRecognizerResultState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBRegion.html">MBRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBType.html">MBType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBUsdlKeys.html">MBUsdlKeys</a>
               </li>
             </ul>
@@ -407,6 +425,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MBAgeResult.html">MBAgeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/MBBlinkIdCombinedRecognizerDelegate.html">MBBlinkIdCombinedRecognizerDelegate</a>
               </li>
@@ -875,6 +896,39 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)MBBlinkIdRecognizer(py)classFilterDelegate"></a>
+                    <a name="//apple_ref/objc/Property/classFilterDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdRecognizer(py)classFilterDelegate">classFilterDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class filter delegate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/MBBlinkIdRecognizerDelegate.html">MBBlinkIdRecognizerDelegate</a></span><span class="o">&gt;</span>
+    <span class="n">classFilterDelegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">classFilterDelegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MBBlinkIdRecognizerDelegate.html">MBBlinkIdRecognizerDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)MBBlinkIdRecognizer(py)allowBlurFilter"></a>
                     <a name="//apple_ref/objc/Property/allowBlurFilter" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MBBlinkIdRecognizer(py)allowBlurFilter">allowBlurFilter</a>
@@ -975,6 +1029,42 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdRecognizer(py)paddingEdge"></a>
+                    <a name="//apple_ref/objc/Property/paddingEdge" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdRecognizer(py)paddingEdge">paddingEdge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pading is a minimum distance from the edge of the frame and is defined as a percentage of the frame width. Default value is 0.0f and in that case
+ padding edge and image edge are the same.
+ Recommended value is 0.02f.</p>
+
+<p>Default: 0.0f</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">paddingEdge</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">paddingEdge</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -983,7 +1073,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-04-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

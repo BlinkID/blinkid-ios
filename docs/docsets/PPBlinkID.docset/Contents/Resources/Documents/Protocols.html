@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.3.0 Docs
+          PPBlinkID v5.4.0 Docs
         </a>
-         (80% documented)
+         (69% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -88,6 +88,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBCharWithVariants.html">MBCharWithVariants</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBClassInfo.html">MBClassInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBCustomOverlayViewController.html">MBCustomOverlayViewController</a>
@@ -346,6 +349,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
               </li>
               <li class="nav-group-task">
@@ -358,6 +364,9 @@
                 <a class="nav-group-task-link" href="Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBCountry.html">MBCountry</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDataMatchResult.html">MBDataMatchResult</a>
               </li>
               <li class="nav-group-task">
@@ -365,6 +374,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDocumentFaceDetectorType.html">MBDocumentFaceDetectorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDocumentVerificationHighResImageState.html">MBDocumentVerificationHighResImageState</a>
@@ -400,6 +412,12 @@
                 <a class="nav-group-task-link" href="Enums/MBRecognizerResultState.html">MBRecognizerResultState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBRegion.html">MBRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBType.html">MBType</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBUsdlKeys.html">MBUsdlKeys</a>
               </li>
             </ul>
@@ -407,6 +425,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBAgeResult.html">MBAgeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBBlinkIdCombinedRecognizerDelegate.html">MBBlinkIdCombinedRecognizerDelegate</a>
               </li>
@@ -734,6 +755,58 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)MBAgeResult"></a>
+                    <a name="//apple_ref/objc/Protocol/MBAgeResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBAgeResult">MBAgeResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/MBAgeResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBAgeResult</span>
+
+<span class="err">@required</span>
+
+<span class="cm">/**
+ * The current age of the document owner in years. It is calculated difference
+ * between now and date of birth. Now is current time on the device.
+ * @return current age of the document owner in years or -1 if date of birth is unknown.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">age</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Calculates whether the document owner is older than the given ageLimit in years or not.
+ * Status is calculated by using the date of birth and the current time on the device.
+ * @param ageLimit age limit in years
+ * @return age limit status for the document owner
+*/</span>
+<span class="k">-</span> <span class="p">(</span><span class="n"><a href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a></span><span class="p">)</span><span class="nf">getAgeLimitStatusFor</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">ageLimit</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBAgeResult</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)MBBlinkIdCombinedRecognizerDelegate"></a>
                     <a name="//apple_ref/objc/Protocol/MBBlinkIdCombinedRecognizerDelegate" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)MBBlinkIdCombinedRecognizerDelegate">MBBlinkIdCombinedRecognizerDelegate</a>
@@ -754,8 +827,25 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBBlinkIdCombinedRecognizerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
 <span class="k">@optional</span>
+
+<span class="cm">/**
+ * Called when dewarped full document image is available
+*/</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onCombinedImageAvailable</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="Classes/MBImage.html">MBImage</a></span> <span class="o">*</span><span class="p">)</span><span class="n">dewarpedImage</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Called when recognizer classifies document.
+ *  @param isDocumentSupported - true if supported, false otherwise
+*/</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onCombinedDocumentSupportStatus</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isDocumentSupported</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Called when recognizer classifies document as a supported class.
+ * Enables filtering based on class.
+ * @param classInfo - classInfo of the document
+*/</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">combinedClassInfoFilter</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Classes/MBClassInfo.html">MBClassInfo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">classInfo</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -824,8 +914,25 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBBlinkIdRecognizerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
 <span class="k">@optional</span>
+
+<span class="cm">/**
+ * Called when dewarped full document image is available
+*/</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">onImageAvailable</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="Classes/MBImage.html">MBImage</a></span> <span class="o">*</span><span class="p">)</span><span class="n">dewarpedImage</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Called when recognizer classifies document.
+ *  @param isDocumentSupported - true if supported, false otherwise
+*/</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onDocumentSupportStatus</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isDocumentSupported</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Called when recognizer classifies document as a supported class.
+ * Enables filtering based on class.
+ * @param classInfo - classInfo of the document
+*/</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">classInfoFilter</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="Classes/MBClassInfo.html">MBClassInfo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">classInfo</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -3181,7 +3288,7 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-03-18)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-04-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
