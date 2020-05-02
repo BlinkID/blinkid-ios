@@ -8,15 +8,22 @@
 
 import Microblink
 
-class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate, MBFirstSideFinishedRecognizerRunnerViewControllerDelegate {
-    
+class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate,
+        MBFirstSideFinishedRecognizerRunnerViewControllerDelegate {
+
     @IBOutlet weak var tooltipLabel: UILabel!
 
-    static func initFromStoryboardWith() -> CustomOverlay {
-        let customOverlay: CustomOverlay = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomOverlay") as! CustomOverlay
+    static func initFromStoryboard() -> CustomOverlay {
+
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomOverlay")
+
+        guard let customOverlay = viewController as? CustomOverlay else {
+            fatalError("CustomOverlay should always be an instance of \(CustomOverlay.self) here because we instantiate it from the Storyboard")
+        }
+
         return customOverlay
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         super.scanningRecognizerRunnerViewControllerDelegate = self
@@ -24,36 +31,38 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
 
         self.tooltipLabel.text = "Scan Front Side"
     }
-    
-    func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController, didFinishScanningWith state: MBRecognizerResultState) {
-        /** This is done on background thread */
+
+    func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController,
+                                        didFinishScanningWith state: MBRecognizerResultState) {
+
+        // This is done on background thread
         if state == MBRecognizerResultState.valid {
             recognizerRunnerViewController.pauseScanning()
-            
+
             DispatchQueue.main.async {
-                
+
                 var message: String = ""
                 var title: String = ""
-                
-                for recognizer in self.recognizerCollection.recognizerList {
-                    if ( recognizer.baseResult?.resultState == MBRecognizerResultState.valid ) {
-                        if recognizer is MBBlinkIdRecognizer {
-                            let blinkIdRecognizer = recognizer as? MBBlinkIdRecognizer
-                            title = "BlinkID"
-                            message = (blinkIdRecognizer?.result.description)!
-                        }
-                        if recognizer is MBBlinkIdCombinedRecognizer {
-                            let blinkIdRecognizer = recognizer as? MBBlinkIdCombinedRecognizer
-                            title = "BlinkID Combined"
-                            message = (blinkIdRecognizer?.result.description)!
-                        }
+
+                for recognizer in self.recognizerCollection.recognizerList where
+                    recognizer.baseResult?.resultState == MBRecognizerResultState.valid {
+
+                    if recognizer is MBBlinkIdRecognizer {
+                        let blinkIdRecognizer = recognizer as? MBBlinkIdRecognizer
+                        title = "BlinkID"
+                        message = (blinkIdRecognizer?.result.description)!
+                    }
+                    if recognizer is MBBlinkIdCombinedRecognizer {
+                        let blinkIdRecognizer = recognizer as? MBBlinkIdCombinedRecognizer
+                        title = "BlinkID Combined"
+                        message = (blinkIdRecognizer?.result.description)!
                     }
                 }
-                
+
                 let alertController: UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-                
+
                 let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertAction.Style.default,
-                                                                 handler: { (action) -> Void in
+                                                                 handler: { (_) -> Void in
                                                                     self.dismiss(animated: true, completion: nil)
                 })
                 alertController.addAction(okAction)
@@ -73,5 +82,5 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
         self.recognizerRunnerViewController?.overlayViewControllerWillCloseCamera(self)
         self.dismiss(animated: true, completion: nil)
     }
-    
+
 }
