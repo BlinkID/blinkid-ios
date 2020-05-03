@@ -2,6 +2,7 @@
   <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d228d9c20b774f7aba8d5e9bd3072c6c)](https://app.codacy.com/gh/BlinkID/blinkid-ios?utm_source=github.com&utm_medium=referral&utm_content=BlinkID/blinkid-ios&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/BlinkID/blinkid-ios.png)](https://travis-ci.org/BlinkID/blinkid-ios.png)
 [![Pod Version](http://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](http://cocoadocs.org/docsets/PPBlinkID/)
 [![Platform](https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat)](https://github.com/BlinkID/blinkid-ios#)
