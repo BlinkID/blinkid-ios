@@ -3,7 +3,7 @@
 </p>
 
 [![Travis](https://img.shields.io/travis/BlinkID/blinkid-ios/master.svg?style=flat)](https://travis-ci.org/BlinkID/blinkid-ios)
-[![Pod Version](http://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](http://cocoadocs.org/docsets/PPBlinkID/)
+[![Pod Version](https://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](https://cocoapods.org/pods/PPBlinkID)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0b7aa9b6c254e75829a7b4b223ae60f)](https://www.codacy.com/gh/BlinkID/blinkid-ios?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BlinkID/blinkid-ios&amp;utm_campaign=Badge_Grade)
 [![Platform](https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat)](https://github.com/BlinkID/blinkid-ios#)
 
