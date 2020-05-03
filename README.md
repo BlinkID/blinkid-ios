@@ -7,17 +7,21 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0b7aa9b6c254e75829a7b4b223ae60f)](https://www.codacy.com/gh/BlinkID/blinkid-ios?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BlinkID/blinkid-ios&amp;utm_campaign=Badge_Grade)
 [![Platform](https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat)](https://github.com/BlinkID/blinkid-ios#)
 
-# BlinkID SDK for ID scanning
+# BlinkID SDK for iOS
 
-BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with [Microblink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
+BlinkID SDK enables scanning of over 500 international identity documents, including driving licenses, national identity cards, passports, and others. SDK includes:
 
-- integrated camera management
-- layered API, allowing everything from simple integration to complex UX customizations.
-- lightweight and no internet connection required
-- enteprise-level security standards
-- data parsing from ID barcode standards
+- Real-time data and document photo extraction using on-device Machine Learning
+- Offline, on-device processing for maximum security and privacy
+- Front and back side data capture and comparison
+- A beautiful and frictionless scanning UX
+- Layered API, allowing everything from simple integration to complex UX customizations. 
 
-BlinkID is a part of family of SDKs developed by [Microblink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning and many others. 
+To quickly integrate the SDK into your app, follow our [Quick Start](#quick-start) guide.
+
+If you'd like to try BlinkID without coding, simply download the free Microblink Vision demo app:
+
+[![Vision App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
 
 <p align="center" >
   <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
