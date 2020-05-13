@@ -1,5 +1,11 @@
 # Release notes
 
+## 5.4.1
+
+### Bug fixes:
+
+- Fixed returning of `MBType` on `MBClassInfo` object in `MBBlinkIdRecognizer` and `MBBlinkIdCombinedRecognizer`
+
 ## 5.4.0
 
 ### New features:

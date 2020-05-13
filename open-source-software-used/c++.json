@@ -1,48 +1,48 @@
 [
    {
-      "url" : "https://bitbucket.org/microblink/boost",
       "package" : "Boost/1.72.0@microblink/stable",
-      "license" : "Boost Software license"
+      "license" : "Boost Software license",
+      "url" : "https://bitbucket.org/microblink/boost"
    },
    {
-      "license" : "MIT",
       "package" : "ConfigEx/1.0.4@microblink/stable",
+      "license" : "MIT",
       "url" : "https://github.com/microblink/config_ex"
    },
    {
       "url" : "https://github.com/microblink/eigen-git-mirror",
-      "package" : "Eigen/3.3.7.7@microblink/stable",
-      "license" : "Mozilla Public License Version 2.0"
+      "license" : "Mozilla Public License Version 2.0",
+      "package" : "Eigen/3.3.7.7@microblink/stable"
    },
    {
-      "license" : "Boost Software License",
       "package" : "Err/1.0.10@microblink/stable",
+      "license" : "Boost Software License",
       "url" : "https://github.com/microblink/err"
    },
    {
-      "license" : "Boost Software License, Version 1.0",
+      "package" : "Functionoid/1.1.6@microblink/stable",
       "url" : "https://github.com/microblink/functionoid",
-      "package" : "Functionoid/1.1.6@microblink/stable"
+      "license" : "Boost Software License, Version 1.0"
    },
    {
       "url" : "https://github.com/microblink/hash-library",
-      "package" : "Hash/7.0.1@microblink/stable",
-      "license" : "zlib"
+      "license" : "zlib",
+      "package" : "Hash/7.0.1@microblink/stable"
    },
    {
       "license" : "Boost Software License",
-      "package" : "MMap/0.2.0@microblink/stable",
-      "url" : "https://github.com/microblink/mmap"
+      "url" : "https://github.com/microblink/mmap",
+      "package" : "MMap/0.2.0@microblink/stable"
    },
    {
+      "license" : "BSD 2-Clause \"Simplified\" License",
       "url" : "https://github.com/microblink/micro-ecc",
-      "package" : "MicroECC/2.0.0@microblink/stable",
-      "license" : "BSD 2-Clause \"Simplified\" License"
+      "package" : "MicroECC/2.0.0@microblink/stable"
    },
    {
+      "package" : "Obfuscation/0.1.0@microblink/stable",
       "license" : "https://github.com/microblink/ADVobfuscator#copyright-and-license",
-      "url" : "https://github.com/microblink/ADVobfuscator",
-      "package" : "Obfuscation/0.1.0@microblink/stable"
+      "url" : "https://github.com/microblink/ADVobfuscator"
    },
    {
       "license" : "MIT",
@@ -51,23 +51,23 @@
    },
    {
       "license" : "MIT",
-      "package" : "OpenCVAnalysis/3.2.0.7@microblink/stable",
-      "url" : "https://bitbucket.org/microblink/opencvfork/src"
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
+      "package" : "OpenCVAnalysis/3.2.0.7@microblink/stable"
    },
    {
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
       "license" : "MIT",
-      "package" : "OpenCVCore/3.2.0.7@microblink/stable",
+      "package" : "OpenCVCore/3.2.0.7@microblink/stable"
+   },
+   {
+      "package" : "OpenCVImageIO/3.2.0.7@microblink/stable",
+      "license" : "MIT",
       "url" : "https://bitbucket.org/microblink/opencvfork/src"
    },
    {
       "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "package" : "OpenCVImageIO/3.2.0.7@microblink/stable",
-      "license" : "MIT"
-   },
-   {
-      "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "package" : "OpenCVProcessing/3.2.0.7@microblink/stable",
-      "license" : "MIT"
+      "license" : "MIT",
+      "package" : "OpenCVProcessing/3.2.0.7@microblink/stable"
    },
    {
       "license" : "BSD 2-Clause \"Simplified\" License",
@@ -75,29 +75,29 @@
       "package" : "Pimpl/1.0.2@microblink/stable"
    },
    {
-      "package" : "RapidJSON/1.1.2@microblink/stable",
+      "license" : "BSD",
       "url" : "https://bitbucket.org/microblink/core-rapidjson",
-      "license" : "BSD"
+      "package" : "RapidJSON/1.1.2@microblink/stable"
    },
    {
+      "package" : "Sweater/3.2.6@microblink/stable",
       "license" : "MIT",
-      "url" : "https://github.com/microblink/sweater",
-      "package" : "Sweater/3.2.6@microblink/stable"
+      "url" : "https://github.com/microblink/sweater"
    },
    {
-      "package" : "UTFCpp/3.1.1@microblink/stable",
+      "license" : "Boost Software License 1.0",
       "url" : "https://github.com/microblink/utfcpp",
-      "license" : "Boost Software License 1.0"
+      "package" : "UTFCpp/3.1.1@microblink/stable"
    },
    {
-      "license" : "Apache License 2.0",
       "package" : "ZXing/2.2.1@microblink/stable",
+      "license" : "Apache License 2.0",
       "url" : "https://github.com/microblink/zxing"
    },
    {
       "package" : "Zlib/1.2.8.7@microblink/stable",
-      "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "license" : "MIT"
+      "license" : "MIT",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src"
    },
    {
       "package" : "cpuinfo/2.0.0@microblink/stable",

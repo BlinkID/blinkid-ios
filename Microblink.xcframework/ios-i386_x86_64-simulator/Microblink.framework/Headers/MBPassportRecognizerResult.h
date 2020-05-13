@@ -7,6 +7,8 @@
 
 #import "MBRecognizerResult.h"
 
+#import "MBDigitalSignatureResult.h"
+
 #import "MBMrzResult.h"
 #import "MBFaceImageResult.h"
 #import "MBEncodedFaceImageResult.h"
@@ -19,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 * Recognizer which can scan all passports with MRZ.
 */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBPassportRecognizerResult : MBRecognizerResult<NSCopying, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
+@interface MBPassportRecognizerResult : MBRecognizerResult<NSCopying, MBDigitalSignatureResult, MBFaceImageResult, MBEncodedFaceImageResult, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult>
 
 MB_INIT_UNAVAILABLE
 
