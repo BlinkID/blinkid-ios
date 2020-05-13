@@ -1228,49 +1228,49 @@
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 175,
-      "symbol": "MBType.MBTypeFinCard",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 176,
       "symbol": "MBType.MBTypeEmploymentPass",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 177,
-      "symbol": "MBType.MBTypeGreenCard",
+      "line": 176,
+      "symbol": "MBType.MBTypeFinCard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 178,
+      "line": 177,
       "symbol": "MBType.MBTypeId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 179,
+      "line": 178,
       "symbol": "MBType.MBTypeMultipurposeId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 180,
+      "line": 179,
       "symbol": "MBType.MBTypeMyKad",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 181,
+      "line": 180,
       "symbol": "MBType.MBTypeMyKid",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 181,
+      "symbol": "MBType.MBTypeMyPR",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
@@ -2501,14 +2501,14 @@
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBPassportRecognizer.h",
-      "line": 28,
+      "line": 30,
       "symbol": "MBPassportRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBPassportRecognizerResult.h",
-      "line": 24,
+      "line": 26,
       "symbol": "MBPassportRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
