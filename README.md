@@ -261,7 +261,7 @@ Objective-C
     
 ### 4. License key
 
-A valid license key is required to initalize scanning. You can generate a free demo license key, after you register, at [Microblink developer dashboard](https://microblink.com/login).
+A valid license key is required to initalize scanning. You can generate a free trial license key, after you register, at [Microblink developer dashboard](https://microblink.com/login).
 
 You can include the license key in your app by passing a string or a file with license key. 
 **Note** that you need to set the license key before intializing scanning. Ideally in `AppDelegate` or `viewDidLoad` before initializing any recognizers.
