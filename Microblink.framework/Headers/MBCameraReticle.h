@@ -37,12 +37,6 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 /** Stops animating the detection spinner. Does nothing if the detection is not animating. */
 - (void)stopDetecting;
 
-/** Starts animating the confirmation expanding ring. Does nothing if the detection is already animating. */
-- (void)startConfirming;
-
-/** Stops animating the confirmation expanding ring. Does nothing if the detection is not animating. */
-- (void)stopConfirming;
-
 /** Stops all animations and remove all layers to reset state to beginning */
 - (void)resetAll;
 

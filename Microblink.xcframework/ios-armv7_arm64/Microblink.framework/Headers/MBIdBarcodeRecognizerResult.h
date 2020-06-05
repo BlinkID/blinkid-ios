@@ -162,6 +162,21 @@ MB_INIT_UNAVAILABLE
  */
 @property(nonatomic, assign, readonly) MBIdBarcodeDocumentType documentType;
 
+/**
+* The restrictions to driving privileges for the driver license owner.
+*/
+@property (nonatomic, readonly) NSString *restrictions;
+
+/**
+* The additional privileges granted to the driver license owner.
+*/
+@property (nonatomic, readonly) NSString *endorsements;
+
+/**
+* The type of vehicle the driver license owner has privilege to drive.
+*/
+@property (nonatomic, readonly) NSString *vehicleClass;
+
 @end
 
 NS_ASSUME_NONNULL_END

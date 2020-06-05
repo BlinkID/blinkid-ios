@@ -17,6 +17,7 @@
 
 #import "MBDriverLicenseDetailedInfo.h"
 #import "MBDocumentImageColorStatus.h"
+#import "MBDocumentImageMoireStatus.h"
 
 #import "MBAgeResult.h"
 
@@ -174,6 +175,11 @@ MB_INIT_UNAVAILABLE
  * Defines possible color statuses determined from scanned image.
  */
 @property (nonatomic, readonly) MBDocumentImageColorStatus documentImageColorStatus;
+
+/**
+ * Defines possible moire statuses determined from scanned image.
+ */
+@property (nonatomic, readonly) MBDocumentImageMoireStatus documentImageMoireStatus;
 
 @end
 
