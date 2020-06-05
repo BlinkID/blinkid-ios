@@ -101,7 +101,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.4.1'
+    pod 'PPBlinkID', '~> 5.5.0'
 end
 ```
 
@@ -168,13 +168,13 @@ In files in which you want to use scanning functionality place import directive.
 Swift
 
 ```swift
-import MicroBlink
+import Microblink
 ```
 
 Objective-C
 
 ```objective-c
-#import <MicroBlink/MicroBlink.h>
+#import <Microblink/Microblink.h>
 ```
     
 ### 3. Initiating the scanning process
@@ -347,7 +347,7 @@ Objective-C
 ```
 
 # <a name="advanced-integration"></a> Advanced BlinkID integration instructions
-This section covers more advanced details of BlinkInput integration.
+This section covers more advanced details of BlinkID integration.
 
 1. [First part](#ui-customizations) will cover the possible customizations when using UI provided by the SDK.
 2. [Second part](#using-document-overlay-viewcontroller) will describe how to embed [`MBRecognizerRunnerViewController's delegates`](http://blinkid.github.io/blinkid-ios/Protocols.html) into your `UIViewController` with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.

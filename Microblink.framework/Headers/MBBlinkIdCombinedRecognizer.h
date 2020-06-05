@@ -53,6 +53,11 @@ MB_INIT
 @property (nonatomic, nullable, weak) id<MBBlinkIdCombinedRecognizerDelegate> classFilterDelegate;
 
 /**
+ * Barcode started scanning delegate
+ */
+@property (nonatomic, nullable, weak) id<MBBlinkIdCombinedRecognizerDelegate> barcodeScanningStartedDelegate;
+
+/**
  * Defines whether blured frames filtering is allowed
  *
  * Default: YES
@@ -90,6 +95,22 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL skipUnsupportedBack;
 
+/**
+ * Defines whether result characters validatation is performed.
+ * If a result member contains invalid character, the result state cannot be valid
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL validateResultCharacters;
+
+/**
+ * Defines whether sensitive data should be anonymized in full document image result.
+ * The setting only applies to certain documents
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL anonymizeImage;
+
 @end
 
 @protocol MBBlinkIdCombinedRecognizerDelegate <NSObject>
@@ -112,6 +133,11 @@ MB_INIT
  * @param classInfo - classInfo of the document
 */
 - (BOOL)combinedClassInfoFilter:(nullable MBClassInfo *)classInfo;
+
+/**
+ * Called when barcode scanning step starts.
+ */
+- (void)onCombinedBarcodeScanningStarted;
 
 @end
 
