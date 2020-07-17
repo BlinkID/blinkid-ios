@@ -44,6 +44,13 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL allowNullQuietZone;
 
+/**
+ * Set this to YES to enable compact parser.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL enableCompactParser;
+
 @end
 
 NS_ASSUME_NONNULL_END

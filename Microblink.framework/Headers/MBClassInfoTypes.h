@@ -8,7 +8,7 @@
 #ifndef MBClassInfoTypes_h
 #define MBClassInfoTypes_h
 
-typedef NS_ENUM(NSUInteger, MBCountry) {
+typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountryNone = 0,
     MBCountryAlbania,
     MBCountryAlgeria,
@@ -95,10 +95,13 @@ typedef NS_ENUM(NSUInteger, MBCountry) {
     MBCountryVietnam,
     MBCountryBrazil,
     MBCountryNorway,
-    MBCountryOman
+    MBCountryOman,
+    MBCountryEcuador,
+    MBCountryElSalvador,
+    MBCountrySriLanka
 };
 
-typedef NS_ENUM(NSUInteger, MBRegion) {
+typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionNone = 0,
     MBRegionAlabama,
     MBRegionAlaska,
@@ -170,7 +173,7 @@ typedef NS_ENUM(NSUInteger, MBRegion) {
     MBRegionYukon
 };
 
-typedef NS_ENUM(NSUInteger, MBType) {
+typedef NS_ENUM(NSInteger, MBType) {
     MBTypeNone = 0,
     MBTypeConsularId,
     MBTypeDl,
@@ -194,7 +197,8 @@ typedef NS_ENUM(NSUInteger, MBType) {
     MBTypeiKad,
     MBTypeMilitaryId,
     MBTypeMyKas,
-    MBTypeSocialSecurityCard
+    MBTypeSocialSecurityCard,
+    MBTypeHealthInsuranceCard
 };
 
 #endif /* MBClassInfoTypes_h */

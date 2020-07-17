@@ -14,7 +14,7 @@
 /**
  * Camera resolution preset
  */
-typedef NS_ENUM(NSUInteger, MBCameraPreset) {
+typedef NS_ENUM(NSInteger, MBCameraPreset) {
 
     /** 480p video will always be used */
     MBCameraPreset480p,
@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, MBCameraPreset) {
 /**
  * Camera type
  */
-typedef NS_ENUM(NSUInteger, MBCameraType) {
+typedef NS_ENUM(NSInteger, MBCameraType) {
 
     /** Back facing camera */
     MBCameraTypeBack,
@@ -53,7 +53,7 @@ typedef NS_ENUM(NSUInteger, MBCameraType) {
 /**
  * Camera autofocus restricion mode
  */
-typedef NS_ENUM(NSUInteger, MBCameraAutofocusRestriction) {
+typedef NS_ENUM(NSInteger, MBCameraAutofocusRestriction) {
 
     /** Default. Indicates that the autofocus system should not restrict the focus range. */
     MBCameraAutofocusRestrictionNone,

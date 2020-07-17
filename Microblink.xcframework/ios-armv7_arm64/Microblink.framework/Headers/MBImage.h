@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Enum which describes text orientation on an image.
  */
-typedef NS_ENUM(NSUInteger, MBProcessingOrientation) {
+typedef NS_ENUM(NSInteger, MBProcessingOrientation) {
     /** Text oriented same as picture */
     MBProcessingOrientationUp,
     /** Text is rotated 90 degrees clockwise */

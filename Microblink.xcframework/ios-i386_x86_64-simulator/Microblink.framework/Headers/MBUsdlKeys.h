@@ -8,7 +8,7 @@
 /**
 * Possible keys that can be used for obtaining USDL result elements.
 */
-typedef NS_ENUM(NSUInteger, MBUsdlKeys) {
+typedef NS_ENUM(NSInteger, MBUsdlKeys) {
     //==============================================================/
     //============== 1. DETERMINING BARCODE VERSION ================/
     //==============================================================/

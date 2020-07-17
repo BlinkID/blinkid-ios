@@ -80,9 +80,20 @@
 #import "MBAgeLimitStatus.h"
 #import "MBAgeResult.h"
 
+// Expiration document
+#import "MBDocumentExpirationCheckResult.h"
+
+// Barcode
+#import "MBBarcodeResult.h"
+
+// VIZ
+#import "MBVizResult.h"
+
 // Generic
 #import "MBDriverLicenseDetailedInfo.h"
 #import "MBClassInfo.h"
 #import "MBClassInfoTypes.h"
+#import "MBImageAnalysisResult.h"
 #import "MBDocumentImageColorStatus.h"
 #import "MBDocumentImageMoireStatus.h"
+#import "MBAnonymizationMode.h"

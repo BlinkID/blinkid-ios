@@ -9,6 +9,8 @@
 #import "MBDateResult.h"
 #import "MBMrzResult.h"
 #import "MBClassInfo.h"
+#import "MBBarcodeResult.h"
+#import "MBVizResult.h"
 
 #import "MBFullDocumentImageResult.h"
 #import "MBEncodedFullDocumentImageResult.h"
@@ -16,10 +18,10 @@
 #import "MBEncodedFaceImageResult.h"
 
 #import "MBDriverLicenseDetailedInfo.h"
-#import "MBDocumentImageColorStatus.h"
-#import "MBDocumentImageMoireStatus.h"
+#import "MBImageAnalysisResult.h"
 
 #import "MBAgeResult.h"
+#import "MBDocumentExpirationCheckResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 * The Blink ID Recognizer is used for scanning Blink ID.
 */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBBlinkIdRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult, MBAgeResult>
+@interface MBBlinkIdRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBEncodedFullDocumentImageResult, MBFaceImageResult, MBEncodedFaceImageResult, MBAgeResult, MBDocumentExpirationCheckResult>
 
 MB_INIT_UNAVAILABLE
 
@@ -172,14 +174,19 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBClassInfo *classInfo;
 
 /**
- * Defines possible color statuses determined from scanned image.
+ * Defines possible color and moire statuses determined from scanned image.
  */
-@property (nonatomic, readonly) MBDocumentImageColorStatus documentImageColorStatus;
+@property (nonatomic, readonly, nullable) MBImageAnalysisResult *imageAnalysisResult;
 
 /**
- * Defines possible moire statuses determined from scanned image.
+ * Defines the data extracted from the barcode.
  */
-@property (nonatomic, readonly) MBDocumentImageMoireStatus documentImageMoireStatus;
+@property (nonatomic, readonly, nullable) MBBarcodeResult *barcodeResult;
+
+/**
+ * Defines the data extracted from the visual inspection zone
+ */
+@property (nonatomic, readonly, nullable) MBVizResult *vizResult;
 
 @end
 

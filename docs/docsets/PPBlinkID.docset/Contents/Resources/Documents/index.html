@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.5.0 Docs
+          PPBlinkID v5.6.0 Docs
         </a>
-         (69% documented)
+         (70% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -52,6 +52,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
@@ -174,6 +177,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBImageAnalysisResult.html">MBImageAnalysisResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessor.html">MBImageReturnProcessor</a>
@@ -316,6 +322,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBVisaRecognizerResult.html">MBVisaRecognizerResult</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVizResult.html">MBVizResult</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -349,6 +358,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -465,6 +477,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
@@ -726,6 +741,12 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED">MB_LOCALIZED</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@scanningRegionForFrameInBounds">scanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -780,6 +801,7 @@
 
 <ul>
 <li><a href="#requirements">Requirements</a></li>
+<li><a href="#size-report">Size Report</a></li>
 <li><a href="#quick-start">Quick Start</a></li>
 <li><a href="#advanced-integration">Advanced BlinkID integration instructions</a>
 
@@ -834,6 +856,9 @@
 <p>SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in iOS 8.0 or later, iPhone 4S or newer and iPad 2 or newer.</p>
 
 <p>SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which <a href="http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536">don&rsquo;t have camera with autofocus</a>. </p>
+<h1 id='a-name-size-report-a-size-report' class='heading'><a name="size-report"></a> Size Report</h1>
+
+<p>We are delivering complete size report of our BlinkID SDK based on out BlinkID-sample-Swift sample project. You can check that <a href="https://github.com/BlinkID/blinkid-ios/tree/master/size-report">here</a>. </p>
 <h1 id='a-name-quick-start-a-quick-start' class='heading'><a name="quick-start"></a> Quick Start</h1>
 <h2 id='getting-started-with-blinkid-sdk' class='heading'>Getting started with BlinkID SDK</h2>
 
@@ -860,7 +885,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.5.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.6.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -1305,8 +1330,8 @@ Developer can choose which protocol to conform:</p>
 <p>Swift</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupRecognizerRunner</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">recognizers</span> <span class="o">=</span> <span class="p">[</span><span class="kt">MBRecognizer</span><span class="p">]()</span>
-    <span class="n">pdf417Recognizer</span> <span class="o">=</span> <span class="kt">MBPdf417Recognizer</span><span class="p">()</span>
-    <span class="n">recognizers</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">pdf417Recognizer</span><span class="o">!</span><span class="p">)</span>
+    <span class="n">recognizer</span> <span class="o">=</span> <span class="kt">MBBlinkIdRecognizer</span><span class="p">()</span>
+    <span class="n">recognizers</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">recognizer</span><span class="o">!</span><span class="p">)</span>
     <span class="k">let</span> <span class="nv">recognizerCollection</span> <span class="o">=</span> <span class="kt">MBRecognizerCollection</span><span class="p">(</span><span class="nv">recognizers</span><span class="p">:</span> <span class="n">recognizers</span><span class="p">)</span>
     <span class="n">recognizerRunner</span> <span class="o">=</span> <span class="kt">MBRecognizerRunner</span><span class="p">(</span><span class="nv">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span><span class="p">)</span>
     <span class="n">recognizerRunner</span><span class="p">?</span><span class="o">.</span><span class="n">scanningRecognizerRunnerDelegate</span> <span class="o">=</span> <span class="k">self</span>
@@ -1336,9 +1361,9 @@ Developer can choose which protocol to conform:</p>
 <pre class="highlight plaintext"><code>- (void)setupRecognizerRunner {
     NSMutableArray&lt;MBRecognizer *&gt; *recognizers = [[NSMutableArray alloc] init];
 
-    self.pdf417Recognizer = [[MBPdf417Recognizer alloc] init];
+    self.recognizer = [[MBBlinkIdRecognizer alloc] init];
 
-    [recognizers addObject: self.pdf417Recognizer];
+    [recognizers addObject: self.recognizer];
 
     MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
 
@@ -1481,12 +1506,12 @@ We will continue expanding this recognizer by adding support for new document ty
 <ul>
 <li>exact Bundle ID of your app (from your <code>info.plist</code> file)</li>
 <li>licence that is causing problems</li>
-<li>please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK</li>
+<li>please stress out that you are reporting problem related to iOS version of BlinkID SDK</li>
 <li>if unsure about the problem, you should also provide excerpt from console containing licence error</li>
 </ul>
 <h3 id='a-name-troubleshooting-other-problems-a-other-problems' class='heading'><a name="troubleshooting-other-problems"></a> Other problems</h3>
 
-<p>If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside PDF417.mobi SDK or anything unmentioned, please do as follows:</p>
+<p>If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside BlinkID SDK or anything unmentioned, please do as follows:</p>
 
 <ul>
 <li>Contact us at <a href="http://help.microblink.com">help.microblink.com</a> describing your problem and provide following information:
@@ -1495,7 +1520,7 @@ We will continue expanding this recognizer by adding support for new document ty
 <li>log file obtained in previous step</li>
 <li>high resolution scan/photo of the item that you are trying to scan</li>
 <li>information about device that you are using</li>
-<li>please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK</li>
+<li>please stress out that you are reporting problem related to iOS version of BlinkID SDK</li>
 </ul></li>
 </ul>
 <h2 id='a-name-troubleshooting-faq-a-frequently-asked-questions-and-known-problems' class='heading'><a name="troubleshooting-faq"></a> Frequently asked questions and known problems</h2>
@@ -1563,7 +1588,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-06-05)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -11,7 +11,7 @@
 /**
  * Enumeration of all supported document types for MBDocumentFaceRecognizer
  */
-typedef NS_ENUM(NSUInteger, MBDocumentFaceDetectorType) {
+typedef NS_ENUM(NSInteger, MBDocumentFaceDetectorType) {
     
     /** Uses document detector for TD1 size identity cards */
     MBDocumentFaceDetectorTypeTD1 = 0,

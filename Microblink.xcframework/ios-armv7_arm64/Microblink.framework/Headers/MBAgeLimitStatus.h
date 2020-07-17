@@ -8,7 +8,7 @@
 #ifndef MBAgeLimitStatus_h
 #define MBAgeLimitStatus_h
 
-typedef NS_ENUM(NSUInteger, MBAgeLimitStatus) {
+typedef NS_ENUM(NSInteger, MBAgeLimitStatus) {
 
     /** Status cannot be determined. When date of birth is not known. */
     MBAgeLimitStatusNotAvailable,

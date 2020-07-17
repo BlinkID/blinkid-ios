@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.5.0 Docs
+          PPBlinkID v5.6.0 Docs
         </a>
-         (69% documented)
+         (70% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
@@ -175,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBImageAnalysisResult.html">MBImageAnalysisResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessor.html">MBImageReturnProcessor</a>
@@ -317,6 +323,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBVisaRecognizerResult.html">MBVisaRecognizerResult</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVizResult.html">MBVizResult</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -350,6 +359,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -466,6 +478,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
@@ -725,6 +740,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED">MB_LOCALIZED</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@scanningRegionForFrameInBounds">scanningRegionForFrameInBounds</a>
@@ -1778,6 +1799,86 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING"></a>
+                    <a name="//apple_ref/objc/Function/MB_LOCALIZED_DEFAULT_STRING" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">static</span> <span class="kr">inline</span> <span class="n">NSString</span> <span class="o">*</span> <span class="nf">MB_LOCALIZED_DEFAULT_STRING</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">([</span><span class="n">NSString</span> <span class="nf">stringWithFormat</span><span class="p">:</span><span class="s">@"[[%@]]"</span><span class="p">,</span> <span class="n">key</span><span class="p">]);</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">MB_LOCALIZED_DEFAULT_STRING</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MBMicroblinkApp.h@F@MB_LOCALIZED"></a>
+                    <a name="//apple_ref/objc/Function/MB_LOCALIZED" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MBMicroblinkApp.h@F@MB_LOCALIZED">MB_LOCALIZED</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">static</span> <span class="kr">inline</span> <span class="n">NSString</span> <span class="o">*</span> <span class="nf">MB_LOCALIZED</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">localizationFileName</span> <span class="o">=</span> <span class="n"><a href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a></span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">customLocalizationFileName</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">localizationFileName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">NSString</span> <span class="o">*</span><span class="n">overridenStringFromCustomLocalizationFile</span> <span class="o">=</span> <span class="n">NSLocalizedStringWithDefaultValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">localizationFileName</span><span class="p">,</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">],</span> <span class="s">@""</span><span class="p">,</span> <span class="s">@""</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">overridenStringFromCustomLocalizationFile</span> <span class="nf">isEqualToString</span><span class="p">:</span><span class="n">key</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">overridenStringFromCustomLocalizationFile</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">NSLocalizedStringWithDefaultValue</span><span class="p">(</span><span class="n">key</span><span class="p">,</span>
+                                             <span class="n"><a href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a></span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">language</span><span class="p">,</span>
+                                             <span class="p">[[</span><span class="n"><a href="Classes/MBMicroblinkApp.html">MBMicroblinkApp</a></span> <span class="nf">instance</span><span class="p">]</span> <span class="nf">resourcesBundle</span><span class="p">],</span>
+                                             <span class="n"><a href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a></span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="nb">nil</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">MB_LOCALIZED</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1786,7 +1887,7 @@ then by row. <code>reverse</code> will cause them to be stacked counter-clockwis
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-06-05)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

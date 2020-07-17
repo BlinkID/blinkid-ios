@@ -85,6 +85,26 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *vehicleClass;
 
 /**
+ * The street address portion of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *street;
+
+/**
+ * The postal code address portion of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *postalCode;
+
+/**
+ * The city address portion of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *city;
+
+/**
+ * The jurisdiction code address portion of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *jurisdiction;
+
+/**
  * Byte array with result of the scan
  */
 - (NSData *_Nullable)data;

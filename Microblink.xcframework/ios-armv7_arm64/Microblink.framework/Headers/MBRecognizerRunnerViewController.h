@@ -45,12 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
  * If there is camera frame being processed at a time, the processing will finish, but the results of processing
  * will not be returned.
  *
- * Ideally, this method should be called from the background thread that returns the scan result.
+ * NOTE: This method must be called from the background thread
  */
 - (void)pauseScanning;
 
 /**
  * Retrieve the current state of scanning.
+ *
+ * NOTE: This method is always returned on the background thread.
  *
  *  @return YES if scanning is paused. NO if it's in progress
  */
@@ -66,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Internal state is used to use the fact that the same object exists on multiple consecutive frames, and using internal
  * state provides better scanning results.
+ *
+ * NOTE: This method must be called on the background thread.
  *
  *  @param resetState YES if state should be reset.
  */
@@ -100,9 +104,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)willSetTorchOn:(BOOL)torchOn;
 
-/**-------------------------------*/
-/** @name Settings recofiguration */
-/**-------------------------------*/
+/**
+ * Settings recofiguration
+ *
+ * NOTE: This method must be called on the background thread.
+ */
 - (void)resetState;
 
 /**

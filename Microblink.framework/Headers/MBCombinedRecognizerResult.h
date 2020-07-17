@@ -11,7 +11,7 @@
 /**
 * Result of the data matching algorithm for scanned parts/sides of the document.
 **/
-typedef NS_ENUM(NSUInteger, MBDataMatchResult) {
+typedef NS_ENUM(NSInteger, MBDataMatchResult) {
     /** Data matching has not been performed. */
     MBDataMatchResultNotPerformed = 0,
     /** Data does not match. */

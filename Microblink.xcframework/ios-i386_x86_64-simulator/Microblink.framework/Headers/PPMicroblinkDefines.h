@@ -15,35 +15,6 @@
  * based on [[MBMicroblinkApp instance] language] property
  */
 
-#ifndef MB_LOCALIZED_DEFAULT_STRING
-#define MB_LOCALIZED_DEFAULT_STRING(key) ([NSString stringWithFormat:@"[[%@]]", key])
-#endif
-
-#ifndef MB_LOCALIZED
-// note - this might return nil if frameworkBundle is nil!
-#define MB_LOCALIZED(key)                                                                                   \
-NSLocalizedStringWithDefaultValue(key, [[MBMicroblinkApp instance] language], [[MBMicroblinkApp instance] resourcesBundle], \
-MB_LOCALIZED_DEFAULT_STRING(key), nil)
-#endif
-
-#ifndef MB_LOCALIZED_FORMAT
-// note - this might return nil if frameworkBundle is nil!
-#define MB_LOCALIZED_FORMAT(key, ...)                                                                                                  \
-[NSString stringWithFormat:NSLocalizedStringWithDefaultValue(key, [[MBMicroblinkApp instance] language], [[MBMicroblinkApp instance] resourcesBundle], \
-MB_LOCALIZED_DEFAULT_STRING(key), nil),                               \
-##__VA_ARGS__]
-#endif
-
-#ifndef MB_LOCALIZED_PROPERTY_GETTER
-// note - this might return nil if frameworkBundle is nil!
-#define MB_LOCALIZED_PROPERTY_GETTER(propertyName, key) \
-if (propertyName) {                                     \
-return propertyName;                                    \
-} else {                                                \
-return MB_LOCALIZED(key);                               \
-}
-#endif
-
 #ifdef __cplusplus
 #define PP_EXTERN extern "C" __attribute__((visibility("default")))
 #else

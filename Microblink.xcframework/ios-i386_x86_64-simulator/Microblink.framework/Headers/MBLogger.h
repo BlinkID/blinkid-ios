@@ -10,7 +10,7 @@
 
 #import "MBMicroblinkDefines.h"
 
-typedef NS_ENUM(NSUInteger, MBLogLevel) {
+typedef NS_ENUM(NSInteger, MBLogLevel) {
     MBLogLevelError,
     MBLogLevelWarning,
     MBLogLevelInfo,

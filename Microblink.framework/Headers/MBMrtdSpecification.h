@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /** Presets which can be used to instantiate mrtd specification for a specific mrtd format */
-typedef NS_ENUM(NSUInteger, MBMrtdSpecificationPreset) {
+typedef NS_ENUM(NSInteger, MBMrtdSpecificationPreset) {
     
     /** Preset for detecting TD1 cards */
     MBMrtdSpecificationTd1,

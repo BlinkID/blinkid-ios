@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class MBDocumentVerificationOverlaySettings;
 @class MBRecognizerCollection;
 
-typedef NS_ENUM(NSUInteger, MBDocumentVerificationHighResImageState) {
+typedef NS_ENUM(NSInteger, MBDocumentVerificationHighResImageState) {
     MBDocumentVerificationHighResImageStateFrontSide,
     MBDocumentVerificationHighResImageStateBackSideSide
 };

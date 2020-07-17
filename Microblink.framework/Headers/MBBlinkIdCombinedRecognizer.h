@@ -19,6 +19,7 @@
 #import "MBEncodeFullDocumentImage.h"
 #import "MBFullDocumentImageDpi.h"
 #import "MBFullDocumentImageExtensionFactors.h"
+#import "MBAnonymizationMode.h"
 
 @protocol MBBlinkIdCombinedRecognizerDelegate;
 
@@ -104,12 +105,12 @@ MB_INIT
 @property (nonatomic, assign) BOOL validateResultCharacters;
 
 /**
- * Defines whether sensitive data should be anonymized in full document image result.
+ * Defines whether sensitive data should be removed from images, result fields or both.
  * The setting only applies to certain documents
  *
- * Default: YES
+ * Default: MBAnonymizationModeFullResult
  */
-@property (nonatomic, assign) BOOL anonymizeImage;
+@property (nonatomic, assign) MBAnonymizationMode anonymizationMode;
 
 @end
 

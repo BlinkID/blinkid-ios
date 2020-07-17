@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Supported MRTD document types
  */
-typedef NS_ENUM(NSUInteger, MBMrtdDocumentType) {
+typedef NS_ENUM(NSInteger, MBMrtdDocumentType) {
     MBMrtdTypeUnknown,
 
     /** Identity card */

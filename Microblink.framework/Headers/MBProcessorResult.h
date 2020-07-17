@@ -11,7 +11,7 @@
 /**
  * Enumeration of posibble processor result state
  */
-typedef NS_ENUM(NSUInteger, MBProcessorResultState) {
+typedef NS_ENUM(NSInteger, MBProcessorResultState) {
     
     /**
      *  Empty

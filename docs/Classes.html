@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.5.0 Docs
+          PPBlinkID v5.6.0 Docs
         </a>
-         (69% documented)
+         (70% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
@@ -175,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBImageAnalysisResult.html">MBImageAnalysisResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessor.html">MBImageReturnProcessor</a>
@@ -317,6 +323,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBVisaRecognizerResult.html">MBVisaRecognizerResult</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVizResult.html">MBVizResult</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -350,6 +359,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -466,6 +478,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
@@ -727,6 +742,12 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED">MB_LOCALIZED</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@scanningRegionForFrameInBounds">scanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -755,6 +776,202 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBarcodeResult"></a>
+                    <a name="//apple_ref/objc/Class/MBBarcodeResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBarcodeResult">MBBarcodeResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/MBBarcodeResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">MBBarcodeResult</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="n">MB_INIT_UNAVAILABLE</span>
+
+<span class="cm">/**
+ * Byte array with result of the scan
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSData</span><span class="o">*</span> <span class="n">rawData</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Retrieves string content of scanned data
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">stringData</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Flag indicating uncertain scanning data
+ * E.g obtained from damaged barcode.
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">uncertain</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Type of the barcode scanned
+ *
+ *  @return Type of the barcode
+ */</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/MBBarcodeType.html">MBBarcodeType</a></span> <span class="n">barcodeType</span><span class="p">;</span>
+
+
+<span class="cm">/**
+* The first name of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">firstName</span><span class="p">;</span>
+
+<span class="cm">/**
+* The last name of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">lastName</span><span class="p">;</span>
+
+<span class="cm">/**
+* The full name of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">fullName</span><span class="p">;</span>
+
+<span class="cm">/**
+* The additional name information of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">additionalNameInformation</span><span class="p">;</span>
+
+<span class="cm">/**
+* The address of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">address</span><span class="p">;</span>
+
+<span class="cm">/**
+* The place of birth of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">placeOfBirth</span><span class="p">;</span>
+
+<span class="cm">/**
+* The nationality of the documet owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">nationality</span><span class="p">;</span>
+
+<span class="cm">/**
+* The race of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">race</span><span class="p">;</span>
+
+<span class="cm">/**
+* The religion of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">religion</span><span class="p">;</span>
+
+<span class="cm">/**
+* The profession of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">profession</span><span class="p">;</span>
+
+<span class="cm">/**
+* The marital status of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">maritalStatus</span><span class="p">;</span>
+
+<span class="cm">/**
+* The residential stauts of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">residentialStatus</span><span class="p">;</span>
+
+<span class="cm">/**
+* The employer of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">employer</span><span class="p">;</span>
+
+<span class="cm">/**
+* The sex of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">sex</span><span class="p">;</span>
+
+<span class="cm">/**
+* The date of birth of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfBirth</span><span class="p">;</span>
+
+<span class="cm">/**
+* The date of issue of the document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfIssue</span><span class="p">;</span>
+
+<span class="cm">/**
+* The date of expiry of the document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfExpiry</span><span class="p">;</span>
+
+<span class="cm">/**
+* The document number.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">documentNumber</span><span class="p">;</span>
+
+<span class="cm">/**
+* The personal identification number.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">personalIdNumber</span><span class="p">;</span>
+
+<span class="cm">/**
+* The additional number of the document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">documentAdditionalNumber</span><span class="p">;</span>
+
+<span class="cm">/**
+* The issuing authority of the document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">issuingAuthority</span><span class="p">;</span>
+
+<span class="cm">/**
+* The street address portion of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">street</span><span class="p">;</span>
+
+<span class="cm">/**
+* The postal code address portion of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">postalCode</span><span class="p">;</span>
+
+<span class="cm">/**
+* The city address portion of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">city</span><span class="p">;</span>
+
+<span class="cm">/**
+* The jurisdiction code address portion of the document owner.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">jurisdiction</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The driver license detailed info.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Classes/MBDriverLicenseDetailedInfo.html">MBDriverLicenseDetailedInfo</a></span> <span class="o">*</span><span class="n">driverLicenseDetailedInfo</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Flag that indicates if barcode result is empty
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">empty</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBarcodeResult</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -922,12 +1139,13 @@
                           <span class="n"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1064,12 +1282,13 @@
 <span class="k">@interface</span> <span class="nc">MBBlinkIdRecognizerResult</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span>
                           <span class="n"><a href="Protocols/MBEncodedFullDocumentImageResult.html">MBEncodedFullDocumentImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span>
-                          <span class="n"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="o">&gt;</span></code></pre>
+                          <span class="n"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFullDocumentImageResult.html">MBEncodedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFullDocumentImageResult.html">MBEncodedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2150,12 +2369,13 @@ The subview is presented as translucent view with detection status label in the 
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBIdBarcodeRecognizerResult</span>
-    <span class="p">:</span> <span class="nc"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="o">&gt;</span></code></pre>
+    <span class="p">:</span> <span class="nc"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span>
+                          <span class="n"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIdBarcodeRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIdBarcodeRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2190,6 +2410,58 @@ The subview is presented as translucent view with detection status label in the 
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBImage</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBImageAnalysisResult"></a>
+                    <a name="//apple_ref/objc/Class/MBImageAnalysisResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBImageAnalysisResult">MBImageAnalysisResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/MBImageAnalysisResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">MBImageAnalysisResult</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="n">MB_INIT_UNAVAILABLE</span>
+
+<span class="cm">/**
+ * Whether the image is blurred.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">blurred</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The color status determined from scanned image.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a></span> <span class="n">documentImageColorStatus</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The Moire pattern detection status determined from the scanned image.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/MBDocumentImageMoireStatus.html">MBDocumentImageMoireStatus</a></span> <span class="n">documentImageMoireStatus</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBImageAnalysisResult</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
@@ -2330,6 +2602,9 @@ The subview is presented as translucent view with detection status label in the 
 
 <span class="cm">/** Bundle with resources used in framework */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSBundle</span> <span class="o">*</span><span class="n">resourcesBundle</span><span class="p">;</span>
+
+<span class="cm">/** Localization file in main bundle used for overrideing framework's localizations */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">customLocalizationFileName</span><span class="p">;</span>
 
 <span class="cm">/** Obtain the shared instance */</span>
 <span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">instance</span><span class="p">;</span>
@@ -4150,6 +4425,40 @@ Camera view controllers created this way will be managed internally by the SDK, 
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBVizResult"></a>
+                    <a name="//apple_ref/objc/Class/MBVizResult" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBVizResult">MBVizResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MBVizResult contains data extracted from the Visual Inspection Zone.</p>
+
+                        <a href="Classes/MBVizResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">MBVizResult</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBVizResult</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -4158,7 +4467,7 @@ Camera view controllers created this way will be managed internally by the SDK, 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-06-05)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
