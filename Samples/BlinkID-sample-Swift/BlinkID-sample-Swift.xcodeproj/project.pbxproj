@@ -23,7 +23,6 @@
 		A2351A2A1EDF002000C1271E /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* Microblink.framework */; };
 		A2351A2B1EDF002000C1271E /* Microblink.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 315532241D94241C001B9440 /* Microblink.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2C8BF9521CBCC80001A097C /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2C8BF9421CBCC80001A097C /* blinkid-license.txt */; };
-		BE3F432E222032C100281B50 /* Microblink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 315532231D94241C001B9440 /* Microblink.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +55,6 @@
 		3139C8AF1C294FCE005AC32C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3139C8B11C294FDB005AC32C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		3155321D1D9418DA001B9440 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		315532231D94241C001B9440 /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = ../../Microblink.bundle; sourceTree = "<group>"; };
 		315532241D94241C001B9440 /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = ../../Microblink.framework; sourceTree = "<group>"; };
 		A20B43E2235616A2001AA65D /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
 		A2C8BF9421CBCC80001A097C /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 		3139C8A61C294FAA005AC32C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				315532231D94241C001B9440 /* Microblink.bundle */,
 				315532241D94241C001B9440 /* Microblink.framework */,
 				3139C8A71C294FB4005AC32C /* Accelerate.framework */,
 				3139C8AD1C294FC7005AC32C /* AudioToolbox.framework */,
@@ -206,7 +203,6 @@
 				3139C89C1C294F2C005AC32C /* Assets.xcassets in Resources */,
 				3139C89A1C294F2C005AC32C /* Main.storyboard in Resources */,
 				A2C8BF9521CBCC80001A097C /* blinkid-license.txt in Resources */,
-				BE3F432E222032C100281B50 /* Microblink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
