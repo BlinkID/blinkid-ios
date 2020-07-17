@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.5.0 Docs
+          PPBlinkID v5.6.0 Docs
         </a>
-         (69% documented)
+         (70% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
@@ -175,6 +178,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImage.html">MBImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBImageAnalysisResult.html">MBImageAnalysisResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessor.html">MBImageReturnProcessor</a>
@@ -317,6 +323,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBVisaRecognizerResult.html">MBVisaRecognizerResult</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBVizResult.html">MBVizResult</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -350,6 +359,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAgeLimitStatus.html">MBAgeLimitStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -466,6 +478,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBDocumentExpirationCheckResult.html">MBDocumentExpirationCheckResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
@@ -727,6 +742,12 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBImageExtensionFactors.h@F@MBMakeImageExtensionFactors">MBMakeImageExtensionFactors</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED">MB_LOCALIZED</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@scanningRegionForFrameInBounds">scanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -776,7 +797,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBAgeLimitStatus</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBAgeLimitStatus</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="cm">/** Status cannot be determined. When date of birth is not known. */</span>
     <span class="n">MBAgeLimitStatusNotAvailable</span><span class="p">,</span>
@@ -787,6 +808,34 @@
     <span class="cm">/** Document owner age is greater than the given age limit. */</span>
     <span class="n">MBAgeLimitStatusOverAgeLimit</span>
 <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBAnonymizationMode"></a>
+                    <a name="//apple_ref/objc/Enum/MBAnonymizationMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBAnonymizationMode">MBAnonymizationMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MBAnonymizationMode is used to define level of anonymization performed on recognizer result.</p>
+
+                        <a href="Enums/MBAnonymizationMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBAnonymizationMode</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -847,7 +896,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraPreset</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraPreset</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -880,7 +929,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraType</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -913,7 +962,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraAutofocusRestriction</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBCameraAutofocusRestriction</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -941,7 +990,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBCountry</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBCountry</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">MBCountryNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">MBCountryAlbania</span><span class="p">,</span>
     <span class="n">MBCountryAlgeria</span><span class="p">,</span>
@@ -1028,7 +1077,10 @@
     <span class="n">MBCountryVietnam</span><span class="p">,</span>
     <span class="n">MBCountryBrazil</span><span class="p">,</span>
     <span class="n">MBCountryNorway</span><span class="p">,</span>
-    <span class="n">MBCountryOman</span>
+    <span class="n">MBCountryOman</span><span class="p">,</span>
+    <span class="n">MBCountryEcuador</span><span class="p">,</span>
+    <span class="n">MBCountryElSalvador</span><span class="p">,</span>
+    <span class="n">MBCountrySriLanka</span>
 <span class="p">}</span></code></pre>
 
                         </div>
@@ -1057,7 +1109,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBRegion</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBRegion</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">MBRegionNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">MBRegionAlabama</span><span class="p">,</span>
     <span class="n">MBRegionAlaska</span><span class="p">,</span>
@@ -1155,7 +1207,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBType</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBType</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">MBTypeNone</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">MBTypeConsularId</span><span class="p">,</span>
     <span class="n">MBTypeDl</span><span class="p">,</span>
@@ -1179,7 +1231,8 @@
     <span class="n">MBTypeiKad</span><span class="p">,</span>
     <span class="n">MBTypeMilitaryId</span><span class="p">,</span>
     <span class="n">MBTypeMyKas</span><span class="p">,</span>
-    <span class="n">MBTypeSocialSecurityCard</span>
+    <span class="n">MBTypeSocialSecurityCard</span><span class="p">,</span>
+    <span class="n">MBTypeHealthInsuranceCard</span>
 <span class="p">}</span></code></pre>
 
                         </div>
@@ -1348,7 +1401,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBDocumentVerificationHighResImageState</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBDocumentVerificationHighResImageState</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">MBDocumentVerificationHighResImageStateFrontSide</span><span class="p">,</span>
     <span class="n">MBDocumentVerificationHighResImageStateBackSideSide</span>
 <span class="p">}</span></code></pre>
@@ -1356,7 +1409,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBDocumentVerificationHighResImageState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBDocumentVerificationHighResImageState</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1417,7 +1470,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBProcessingOrientation</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBProcessingOrientation</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1445,7 +1498,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">MBLogLevel</span><span class="p">)</span> <span class="p">{</span>
+                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">MBLogLevel</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">MBLogLevelError</span><span class="p">,</span>
     <span class="n">MBLogLevelWarning</span><span class="p">,</span>
     <span class="n">MBLogLevelInfo</span><span class="p">,</span>
@@ -1456,7 +1509,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBLogLevel</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBLogLevel</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1489,7 +1542,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBMrtdSpecificationPreset</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBMrtdSpecificationPreset</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1522,7 +1575,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBMrtdDocumentType</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBMrtdDocumentType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1583,7 +1636,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBProcessorResultState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBProcessorResultState</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1616,7 +1669,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognitionMode</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognitionMode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1649,7 +1702,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBFrameQualityEstimationMode</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBFrameQualityEstimationMode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1682,7 +1735,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognizerResultState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognizerResultState</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1725,7 +1778,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-06-05)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

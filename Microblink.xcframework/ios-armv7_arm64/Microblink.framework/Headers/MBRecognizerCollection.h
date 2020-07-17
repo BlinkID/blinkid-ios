@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Denotes the mode in which Recognizers performs recognition
  */
-typedef NS_ENUM(NSUInteger, MBRecognitionMode) {
+typedef NS_ENUM(NSInteger, MBRecognitionMode) {
     
     /** Classic, production mode. Results are returned after first valid scanning */
     MBRecognitionModeDefault,
@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, MBRecognitionMode) {
 /**
  *  Denotes the mode in which FrameQuality estimation works
  */
-typedef NS_ENUM(NSUInteger, MBFrameQualityEstimationMode) {
+typedef NS_ENUM(NSInteger, MBFrameQualityEstimationMode) {
     
     /** Default. Frame quality estimation is ON if enabled recognizers require it by default.*/
     MBFrameQualityEstimationModeDefault,

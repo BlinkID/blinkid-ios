@@ -8,7 +8,7 @@
 /**
  * Enumeration of possible barcode formats
  */
-typedef NS_ENUM(NSUInteger, MBIdBarcodeDocumentType) {
+typedef NS_ENUM(NSInteger, MBIdBarcodeDocumentType) {
     MBIdBarcodeDocumentTypeNone = 0,
     /** AAMVACompliant */
     MBIdBarcodeDocumentTypeAAMVACompliant,

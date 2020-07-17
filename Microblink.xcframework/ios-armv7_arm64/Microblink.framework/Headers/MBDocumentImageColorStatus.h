@@ -11,7 +11,7 @@
 /**
 * DocumentImageColorStatus enum defines possible color statuses determined from scanned image.
 */
-typedef NS_ENUM(NSUInteger, MBDocumentImageColorStatus) {
+typedef NS_ENUM(NSInteger, MBDocumentImageColorStatus) {
 
     // Determining image color status was not performed
     MBDocumentImageColorStatusNotAvailable = 0,

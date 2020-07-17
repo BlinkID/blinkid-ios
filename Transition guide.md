@@ -1,3 +1,8 @@
+## 5.6.0
+
+- We moved `MBBlinkIdRecognizerResult` members `colorStatus` and `moireStatus` to the result's `imageAnalysisResult` (`frontImageAnalysisResult` and `backImageAnalysisResult` in `MBBlinkIDCombinedRecognizerResult`).
+- We moved all resources inside framework, we are not shipping `Microblink.bundle` anymore
+
 ## 5.5.0
 
 - No changes

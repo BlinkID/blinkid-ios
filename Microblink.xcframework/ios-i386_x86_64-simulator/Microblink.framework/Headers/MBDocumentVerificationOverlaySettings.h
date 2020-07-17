@@ -63,7 +63,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * Returns/sets glare status message that is shown if glare detection is turned on
  * and it is shown if glare is detected.
  *
- * Default: string defined by "photopay_glare_status"
+ * Default: string defined by "mb_tooltip_glare"
  * key in strings file in Microblink.bundle
  */
 @property(nonatomic, strong) NSString *glareMessage;

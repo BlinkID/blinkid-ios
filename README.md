@@ -32,6 +32,7 @@ If you'd like to try BlinkID without coding, simply download the free Microblink
 # Table of contents
 
 - [Requirements](#requirements)
+- [Size Report](#size-report)
 - [Quick Start](#quick-start)
 - [Advanced BlinkID integration instructions](#advanced-integration)
 	- [Built-in overlay view controllers and overlay subviews](#ui-customizations)
@@ -66,7 +67,10 @@ If you'd like to try BlinkID without coding, simply download the free Microblink
 SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in iOS 8.0 or later, iPhone 4S or newer and iPad 2 or newer.
 
 SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
- 
+
+# <a name="size-report"></a> Size Report
+
+We are delivering complete size report of our BlinkID SDK based on out BlinkID-sample-Swift sample project. You can check that [here](https://github.com/BlinkID/blinkid-ios/tree/master/size-report). 
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with BlinkID SDK
@@ -101,7 +105,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.5.0'
+    pod 'PPBlinkID', '~> 5.6.0'
 end
 ```
 
@@ -579,8 +583,8 @@ Swift
 ```swift
 func setupRecognizerRunner() {
     var recognizers = [MBRecognizer]()
-    pdf417Recognizer = MBPdf417Recognizer()
-    recognizers.append(pdf417Recognizer!)
+    recognizer = MBBlinkIdRecognizer()
+    recognizers.append(recognizer!)
     let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
     recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
     recognizerRunner?.scanningRecognizerRunnerDelegate = self
@@ -611,9 +615,9 @@ Objective-C
 - (void)setupRecognizerRunner {
     NSMutableArray<MBRecognizer *> *recognizers = [[NSMutableArray alloc] init];
     
-    self.pdf417Recognizer = [[MBPdf417Recognizer alloc] init];
+    self.recognizer = [[MBBlinkIdRecognizer alloc] init];
     
-    [recognizers addObject: self.pdf417Recognizer];
+    [recognizers addObject: self.recognizer];
     
     MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
     
@@ -766,18 +770,18 @@ When you have determine what is the licence-relate problem or you simply do not 
 
 * exact Bundle ID of your app (from your `info.plist` file)
 * licence that is causing problems
-* please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK
+* please stress out that you are reporting problem related to iOS version of BlinkID SDK
 * if unsure about the problem, you should also provide excerpt from console containing licence error
 
 ### <a name="troubleshooting-other-problems"></a> Other problems
 
-If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside PDF417.mobi SDK or anything unmentioned, please do as follows:
+If you are having problems with scanning certain items, undesired behaviour on specific device(s), crashes inside BlinkID SDK or anything unmentioned, please do as follows:
 	
 * Contact us at [help.microblink.com](http://help.microblink.com) describing your problem and provide following information:
 	* log file obtained in previous step
 	* high resolution scan/photo of the item that you are trying to scan
 	* information about device that you are using
-	* please stress out that you are reporting problem related to iOS version of PDF417.mobi SDK
+	* please stress out that you are reporting problem related to iOS version of BlinkID SDK
 
 ## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.

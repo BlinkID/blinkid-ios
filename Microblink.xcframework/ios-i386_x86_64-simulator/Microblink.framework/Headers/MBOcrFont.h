@@ -12,7 +12,7 @@
 /**
  * A list of fonts supported by BlinkOCR
  */
-typedef NS_ENUM(NSUInteger, MBOcrFont) {
+typedef NS_ENUM(NSInteger, MBOcrFont) {
 
     /** Akzidenz Grotesk font
      @see http://www.identifont.com/samples2/berthold/AkzidenzGrotesk.gif

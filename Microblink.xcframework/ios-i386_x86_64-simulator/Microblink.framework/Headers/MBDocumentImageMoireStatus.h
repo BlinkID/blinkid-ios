@@ -11,7 +11,7 @@
 /**
 * DocumentImageMoireStatus enum defines possible states of Moire pattern detection.
 */
-typedef NS_ENUM(NSUInteger, MBDocumentImageMoireStatus) {
+typedef NS_ENUM(NSInteger, MBDocumentImageMoireStatus) {
 
     // Detection of Moire patterns was not performed
     MBDocumentImageMoireStatusNotAvailable = 0,

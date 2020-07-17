@@ -11,7 +11,7 @@
 /**
  * Enumeration of posibble recognizer result state
  */
-typedef NS_ENUM(NSUInteger, MBRecognizerResultState) {
+typedef NS_ENUM(NSInteger, MBRecognizerResultState) {
     
     /**
      *  Empty

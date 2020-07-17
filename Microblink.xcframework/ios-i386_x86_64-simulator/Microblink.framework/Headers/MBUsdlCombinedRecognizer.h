@@ -60,6 +60,13 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 @property (nonatomic, assign) BOOL allowNullQuietZone;
 
 /**
+ * Set this to YES to enable compact parser.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL enableCompactParser;
+
+/**
  * Type of document this recognizer will scan.
  *
  * Default: MBDocumentFaceDetectorTypeTD1

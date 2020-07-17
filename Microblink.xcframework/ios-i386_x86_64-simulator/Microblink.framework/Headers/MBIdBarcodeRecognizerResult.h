@@ -7,10 +7,11 @@
 
 #import "MBRecognizerResult.h"
 #import "MBDateResult.h"
-#import "MBBarcodeResult.h"
+#import "MBBarcodeType.h"
 #import "MBIdBarcodeDocumentType.h"
 
 #import "MBAgeResult.h"
+#import "MBDocumentExpirationCheckResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,14 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 * The ID Barcode Recognizer is used for scanning ID Barcode.
 */
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBIdBarcodeRecognizerResult : MBRecognizerResult<NSCopying, MBAgeResult>
+@interface MBIdBarcodeRecognizerResult : MBRecognizerResult<NSCopying, MBAgeResult, MBDocumentExpirationCheckResult>
 
 MB_INIT_UNAVAILABLE
-
-/**
-* THe additional address information of the document owner.
-*/
-@property (nonatomic, readonly) NSString *additionalAddressInformation;
 
 /**
 * The additional name information of the document owner.
@@ -176,6 +172,27 @@ MB_INIT_UNAVAILABLE
 * The type of vehicle the driver license owner has privilege to drive.
 */
 @property (nonatomic, readonly) NSString *vehicleClass;
+
+/**
+* The street address portion of the document owner.
+*/
+@property (nonatomic, readonly) NSString *street;
+
+/**
+* The postal code address portion of the document owner.
+*/
+@property (nonatomic, readonly) NSString *postalCode;
+
+/**
+* The city address portion of the document owner.
+*/
+@property (nonatomic, readonly) NSString *city;
+
+/**
+* The jurisdiction code address portion of the document owner.
+*/
+@property (nonatomic, readonly) NSString *jurisdiction;
+
 
 @end
 
