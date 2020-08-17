@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 MB_CLASS_AVAILABLE_IOS(8.0)
 @interface MBMicroblinkSDK : NSObject
 
-+ (instancetype)sharedInstance;
++ (instancetype)sharedInstance NS_SWIFT_NAME(shared());
 
 /**
  * If YES, tooltip limited license key warning messages will appear on screen

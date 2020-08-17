@@ -20,6 +20,7 @@
 #import "MBFullDocumentImageDpi.h"
 #import "MBFullDocumentImageExtensionFactors.h"
 #import "MBAnonymizationMode.h"
+#import "MBRecognitionModeFilter.h"
 
 @protocol MBBlinkIdCombinedRecognizerDelegate;
 
@@ -111,6 +112,13 @@ MB_INIT
  * Default: MBAnonymizationModeFullResult
  */
 @property (nonatomic, assign) MBAnonymizationMode anonymizationMode;
+
+/**
+ * Enable or disable recognition of specific document groups supported by the current license.
+ *
+ * Default: all modes are enabled
+ */
+@property (nonatomic, strong) MBRecognitionModeFilter *recognitionModeFilter;
 
 @end
 

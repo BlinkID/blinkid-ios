@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, MBLogLevel) {
 @optional
 
 - (void)log:(MBLogLevel)level message:(const char *)message;
-- (void)log:(MBLogLevel)level format:(const char *)format arguments:(va_list)arguments;
+- (void)log:(MBLogLevel)level format:(const char *)format arguments:(const char *)arguments;
 
 @end
 
@@ -31,6 +31,8 @@ MB_CLASS_AVAILABLE_IOS(8.0) @interface MBLogger : NSObject
 
 @property (nonatomic) id<MBLoggerDelegate> delegate;
 
-+ (instancetype)instance;
++ (instancetype)sharedInstance NS_SWIFT_NAME(shared());
+
+- (void)disableMicroblinkLogging;
 
 @end

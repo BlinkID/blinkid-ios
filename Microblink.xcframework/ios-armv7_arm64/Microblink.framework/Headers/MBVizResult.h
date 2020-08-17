@@ -146,11 +146,6 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBDriverLicenseDetailedInfo *driverLicenseDetailedInfo;
 
 /**
-* The driver license conditions.
-*/
-@property (nonatomic, readonly) NSString *conditions;
-
-/**
  * Flag that indicates if barcode result is empty
 */
 @property (nonatomic, readonly, assign) BOOL empty;

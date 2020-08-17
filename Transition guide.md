@@ -1,3 +1,15 @@
+## 5.7.0
+
+### Minor API changes:
+
+- We have made some changes to the **MBBlinkIdRecognizer** and **MBBlinkIdCombinedRecognizer**:
+	- We renamed `MBDocumentImageMoireStatus` to `MBImageAnalysisDetectionStatus`.
+	- We grouped the `conditions` member from the results with the `MBDriverLicenseDetailedInfo` structure.
+- We renamed `MBRecogitionMode` to `MBRecognitionDebugMode` in `MBRecognizerCollection`.
+- Swift:
+	- We renamed all `sharedInstance` to `shared`.
+	- All enums are now `Int`.
+
 ## 5.6.0
 
 - We moved `MBBlinkIdRecognizerResult` members `colorStatus` and `moireStatus` to the result's `imageAnalysisResult` (`frontImageAnalysisResult` and `backImageAnalysisResult` in `MBBlinkIDCombinedRecognizerResult`).

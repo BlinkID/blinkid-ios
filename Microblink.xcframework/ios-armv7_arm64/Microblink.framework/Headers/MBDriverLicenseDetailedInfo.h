@@ -30,6 +30,11 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  */
 @property (nonatomic, readonly, nullable) NSString *vehicleClass;
 
+/**
+ * The driver license conditions.
+ */
+@property (nonatomic, readonly, nullable) NSString *conditions;
+
 @end
 
 NS_ASSUME_NONNULL_END

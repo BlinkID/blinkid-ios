@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "MBMicroblinkDefines.h"
 #import "MBDocumentImageColorStatus.h"
-#import "MBDocumentImageMoireStatus.h"
+#import "MBImageAnalysisDetectionStatus.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,7 +30,22 @@ MB_INIT_UNAVAILABLE
 /**
  * The Moire pattern detection status determined from the scanned image.
  */
-@property (nonatomic, readonly, assign) MBDocumentImageMoireStatus documentImageMoireStatus;
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus documentImageMoireStatus;
+
+/**
+ * Face detection status determined from the scanned image.
+ */
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus faceDetectionStatus;
+
+/**
+ * Mrz detection status determined from the scanned image.
+ */
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus mrzDetectionStatus;
+
+/**
+ * Barcode detection status determined from the scanned image.
+ */
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus barcodeDetectionStatus;
 
 @end
 

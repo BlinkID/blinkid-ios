@@ -14,16 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Denotes the mode in which Recognizers performs recognition
  */
-typedef NS_ENUM(NSInteger, MBRecognitionMode) {
+typedef NS_ENUM(NSInteger, MBRecognitionDebugMode) {
     
     /** Classic, production mode. Results are returned after first valid scanning */
-    MBRecognitionModeDefault,
+    MBRecognitionDebugModeDefault,
     
     /** Recognition Test. Results are never returned, recognition is performed repeatedly */
-    MBRecognitionModeTest,
+    MBRecognitionDebugModeTest,
     
     /** Recognition Test. Results are never returned, only detection is performed repeatedly */
-    MBRecognitionModeDetectionTest
+    MBRecognitionDebugModeDetectionTest
 };
 
 /**
@@ -79,11 +79,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic) NSTimeInterval partialRecognitionTimeout;
 
 /**
- * Recognition mode.
+ * Recognition debug mode.
  *
- * Default: MBRecognitionModeDefault
+ * This method is for debugging and testing purposes only. Please do not use it because calling it with
+ * wrong parameter might cause scanning loop to never terminate.
+ *
+ * Default: MBRecognitionDebugModeDefault
  */
-@property (nonatomic) MBRecognitionMode recognitionMode;
+@property (nonatomic) MBRecognitionDebugMode recognitionDebugMode;
 
 /**
  * Frame quality estimation mode. If frame quality estimation is on, some video frames will be skipped, if
