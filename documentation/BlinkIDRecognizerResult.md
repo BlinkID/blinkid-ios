@@ -1,5 +1,5 @@
 <p align="justify">
-The tables below represent scanning results for each document in each country supported in BlinkID v5. The fields marked as "Always" present are mandatory on all document versions and will always be a part of the result set. The ones marked as "Sometimes" present will be returned only if they exist on the specific document being scanned. For barcode-only document sides, the "Pending" stands for those fields for which it's not certain whether or not they're present on all document versions. For US documents, all information concerns both horizontal and vertical supported documents.
+The tables below represent scanning results for each document in each country supported in BlinkID v5. The fields marked as "Always" present are mandatory on all document versions and will always be a part of the result set. The ones marked as "Sometimes" present will be returned only if they exist on the specific document being scanned. For barcode-only document sides, the "Pending" stands for those fields for which it's not certain whether or not they're present on all document versions.
 <br>
 <br>
 Other than documents listed here, BlinkID(Combined)Recognizer also scans the <strong>Machine Readable Zone (MRZ)</strong> on standard (ISO/IEC 7501 compliant) <strong>Machine Readable Travel Documents (MRTD)</strong>. This includes <strong>passports, visas</strong> and other identification documents.
@@ -38,7 +38,8 @@ Protected fields are:
 <li>Document number on Singapore DL, ID, Fin Card, Resident ID</li>
 <li>Personal ID number on Singapore Employment Pass</li>
 <li>Document number and personal ID number on Singapore Work Permit</li>
-<li>MRZ on Singapore passports.</li>
+<li>MRZ on Singapore passports</li>
+<li>MRZ on the China Mainland Travel Permit for Hong Kong and Macao residents</li>
 </ul>
 <br>
 <table><tr>

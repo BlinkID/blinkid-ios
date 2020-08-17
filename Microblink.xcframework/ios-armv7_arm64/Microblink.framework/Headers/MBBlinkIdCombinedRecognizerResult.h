@@ -10,6 +10,8 @@
 #import "MBMrzResult.h"
 #import "MBBarcodeResult.h"
 #import "MBVizResult.h"
+#import "MBProcessingStatus.h"
+#import "MBRecognitionMode.h"
 
 #import "MBCombinedRecognizerResult.h"
 #import "MBDigitalSignatureResult.h"
@@ -167,11 +169,6 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBDriverLicenseDetailedInfo *driverLicenseDetailedInfo;
 
 /**
- * The driver license conditions.
- */
-@property (nonatomic, readonly, nullable) NSString *conditions;
-
-/**
  * The classification information.
  */
 @property (nonatomic, readonly, nullable) MBClassInfo *classInfo;
@@ -200,6 +197,16 @@ MB_INIT_UNAVAILABLE
  * Defines the data extracted from the back side visual inspection zone.
  */
 @property (nonatomic, readonly, nullable) MBVizResult *backVizResult;
+
+/**
+ * Defines status of the last recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus processingStatus;
+
+/**
+ * Recognition mode used to scan current document.
+ */
+@property (nonatomic, readonly, assign) MBRecognitionMode recognitionMode;
 
 @end
 

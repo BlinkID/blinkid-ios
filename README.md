@@ -32,16 +32,16 @@ If you'd like to try BlinkID without coding, simply download the free Microblink
 # Table of contents
 
 - [Requirements](#requirements)
-- [Size Report](#size-report)
 - [Quick Start](#quick-start)
 - [Advanced BlinkID integration instructions](#advanced-integration)
 	- [Built-in overlay view controllers and overlay subviews](#ui-customizations)
-		- [Using `MBDocumentOverlayViewController`](#using-document-overlay-viewcontroller)
-		- [Using `MBDocumentVerificationOverlayViewController`](#using-document-verification-overlay-viewcontroller)
-		- [New: Using `MBBlinkIdOverlayViewController`](#using-blinkid-overlay-viewcontroller)
+		- [Using `MBBlinkIdOverlayViewController`](#using-blinkid-overlay-viewcontroller)
 		- [Custom overlay view controller](#using-custom-overlay-viewcontroller)
 	- [Direct processing API](#direct-api-processing)
 		- [Using Direct API for `NSString` recognition (parsing)](#direct-api-string-processing)
+		- [Understanding DirectAPI's state machine](#understanding-direct-api-state-machine)
+		- [Using DirectAPI while `RecognizerRunnerView` is active](#using-direct-api-while-recognizerrunnerview-active)
+		- [Using Direct API with combined recognizers](#using-direct-api-with-combined-recognizers)
 - [`MBRecognizer` and available recognizers](#recognizer)
 - [List of available recognizers](#available-recognizers)
 	- [Frame Grabber Recognizer](#frame-grabber-recognizer)
@@ -53,12 +53,14 @@ If you'd like to try BlinkID without coding, simply download the free Microblink
 		- [Document face recognizer](#document-face-recognizers)
 		- [BlinkID Recognizer](#blink-id-recognizers)
 		- [BlinkID Combined Recognizer](#blink-id-combined-recognizers)
+- [Localization](#localization)
 - [Troubleshooting](#troubleshooting)
 	- [Integration problems](#troubleshooting-integration-problems)
 	- [SDK problems](#troubleshooting-sdk-problems)
 		- [Licencing problems](#troubleshooting-licensing-problems)
 		- [Other problems](#troubleshooting-other-problems)
 	- [Frequently asked questions and known problems](#troubleshooting-faq)
+- [Size Report](#size-report)
 - [Additional info](#info)
 
 
@@ -66,18 +68,14 @@ If you'd like to try BlinkID without coding, simply download the free Microblink
 
 SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in iOS 8.0 or later, iPhone 4S or newer and iPad 2 or newer.
 
-SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
-
-# <a name="size-report"></a> Size Report
-
-We are delivering complete size report of our BlinkID SDK based on out BlinkID-sample-Swift sample project. You can check that [here](https://github.com/BlinkID/blinkid-ios/tree/master/size-report). 
+SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536).  
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with BlinkID SDK
 
 This Quick Start guide will get you up and performing OCR scanning as quickly as possible. All steps described in this guide are required for the integration.
 
-This guide sets up basic Raw OCR parsing and price parsing at the same time. It closely follows the BlinkOCR-sample app. We highly recommend you try to run the sample app. The sample app should compile and run on your device, and in the iOS Simulator. 
+This guide closely follows the BlinkID-Sample app in the Samples folder of this repository. We highly recommend you try to run the sample app. The sample app should compile and run on your device, and in the iOS Simulator. 
 
 The source code of the sample app can be used as the reference during the integration.
 
@@ -85,7 +83,7 @@ The source code of the sample app can be used as the reference during the integr
 
 #### Using CocoaPods
 
-- If you wish to use version v1.2.0 or above, you need to install [Git Large File Storage](https://git-lfs.github.com) by running these comamnds:
+- Since the libraries are stored on [Git Large File Storage](https://git-lfs.github.com), you need to install git-lfs by running these commands:
 ```shell
 brew install git-lfs
 git lfs install
@@ -105,7 +103,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.6.0'
+    pod 'PPBlinkID', '~> 5.7.0'
 end
 ```
 
@@ -130,7 +128,7 @@ OR
 
 Clone this git repository:
 
-- If you wish to clone version v1.4.0 or above, you need to install [Git Large File Storage](https://git-lfs.github.com) by running these comamnds:
+- Since the libraries are stored on [Git Large File Storage](https://git-lfs.github.com), you need to install git-lfs by running these commands:
 ```shell
 brew install git-lfs
 git lfs install
@@ -144,21 +142,18 @@ git lfs install
 git clone git@github.com:BlinkID/blinkid-ios.git
 ```
 
-- Copy Microblink.framework and Microblink.bundle to your project folder.
+- Copy Microblink.xcframework to your project folder.
 
-- In your Xcode project, open the Project navigator. Drag the Microblink.framework and Microblink.bundle files to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
+- In your Xcode project, open the Project navigator. Drag the Microblink.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
 
-![Adding Microblink.embedded framework to your project](https://user-images.githubusercontent.com/26868155/65599668-a35b3080-df9e-11e9-9c08-21cb1d663421.png)
+![Adding Microblink.xcframework to your project](https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png)
 
-- Since Microblink.framework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
+- Since Microblink.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
 
-![Adding Microblink.framework to embedded binaries](https://user-images.githubusercontent.com/26868155/65599818-faf99c00-df9e-11e9-85f5-f425b1609beb.png))
+![Adding Microblink.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png)
 
 - Include the additional frameworks and libraries into your project in the "Linked frameworks and libraries" section of your target settings. 
 
-    - AudioToolbox.framework
-    - AVFoundation.framework
-    - CoreMedia.framework
     - libc++.tbd
     - libiconv.tbd
     - libz.tbd
@@ -185,8 +180,6 @@ Objective-C
     
 To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we're listing the initialization code as it looks in a touch handler method.
 
-Also, for initialization purposes, the ViewController which initiates the scan have private properties for [`MBRawParser`](http://blinkid.github.io/blinkid-ios/Classes/MBRawParser.html), [`MBParserGroupProcessor`](http://blinkid.github.io/blinkid-ios//Classes/MBParserGroupProcessor.html) and [`MBBlinkInputRecognizer`](http://blinkid.github.io/blinkid-ios//Classes/MBBlinkInputRecognizer.html), so we know how to obtain result.
-
 Swift
 
 ```swift
@@ -196,6 +189,8 @@ class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
@@ -235,6 +230,8 @@ Objective-C
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main];
 }
 
 
@@ -276,7 +273,7 @@ You can pass the license key as a string, the following way:
 Swift
 
 ```swift
-MBMicroblinkSDK.sharedInstance().setLicenseKey("LICENSE-KEY")
+MBMicroblinkSDK.shared().setLicenseKey("LICENSE-KEY")
 ```
 
 Objective-C
@@ -291,7 +288,7 @@ Or you can include the license key, with the code below. Please make sure that t
 Swift
 
 ```swift
-MBMicroblinkSDK.sharedInstance().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main)
+MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main)
 ```
 
 Objective-C
@@ -300,9 +297,11 @@ Objective-C
 [[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
 ```
 
+If the licence is invalid or expired then the methods above will throw an **exception**.
+
 ### 5. Registering for scanning events
     
-In the previous step, you instantiated [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios//Classes/MBDocumentOverlayViewController.html) object with a delegate object. This object gets notified on certain events in scanning lifecycle. In this example we set it to `self`. The protocol which the delegate has to implement is [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios//Protocols/MBDocumentOverlayViewControllerDelegate.html) protocol. It is necessary to conform to that protocol. We will discuss more about protocols in [Advanced integration section](#advanced-integration). You can use the following default implementation of the protocol to get you started.
+In the previous step, you instantiated [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios//Classes/MBBlinkIdOverlayViewController.html) object with a delegate object. This object gets notified on certain events in scanning lifecycle. In this example we set it to `self`. The protocol which the delegate has to implement is [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios//Protocols/MBBlinkIdOverlayViewControllerDelegate.html) protocol. It is necessary to conform to that protocol. We will discuss more about protocols in [Advanced integration section](#advanced-integration). You can use the following default implementation of the protocol to get you started.
 
 Swift
 
@@ -362,61 +361,7 @@ This section covers more advanced details of BlinkID integration.
 ## <a name="ui-customizations"></a> Built-in overlay view controllers and overlay subviews
 
 Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. 
-### <a name="using-document-overlay-viewcontroller"></a> Using `MBDocumentOverlayViewController`
-
-[`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html) is overlay view controller best suited for performing scanning of various document cards. It has [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html):
-
-Swift
-```swift
-/** Create your overlay view controller */
-let documentOverlayViewController : MBDocumentOverlayViewController = MBDocumentOverlayViewController(settings: documentSettings, recognizerCollection: recognizerCollection, delegate: self)
-
-/** Create recognizer view controller with wanted overlay view controller */
-let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: documentOverlayViewController)
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-self.present(recognizerRunneViewController, animated: true, completion: nil)
-```
-
-Objective-C
-```objective-c
-MBDocumentOverlayViewController *overlayVC = [[MBDocumentOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-```
-
-As you can see, when initializing [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentOverlayViewControllerDelegate.html) protocol.
-
-### <a name="using-document-verification-overlay-viewcontroller"></a> Using `MBDocumentVerificationOverlayViewController`
-
-[`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) is overlay view controller best suited for performing scanning of various document for both front and back side. It has [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html):
-
-Swift
-```swift
-/** Create your overlay view controller */
-let documentOverlayViewController : MBDocumentVerificationOverlayViewController = MBDocumentVerificationOverlayViewController(settings: documentVerificationSettings, recognizerCollection: recognizerCollection, delegate: self)
-
-/** Create recognizer view controller with wanted overlay view controller */
-let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: documentOverlayViewController)
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-self.present(recognizerRunneViewController, animated: true, completion: nil)
-```
-
-Objective-C
-```objective-c
-MBDocumentVerificationOverlayViewController *overlayVC = [[MBDocumentVerificationOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-```
-
-As you can see, when initializing [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBDocumentVerificationOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html) protocol.
-
-### <a name="using-blinkid-overlay-viewcontroller"></a> New: Using `MBBlinkIdOverlayViewController`
+### <a name="using-blinkid-overlay-viewcontroller"></a> Using `MBBlinkIdOverlayViewController`
 
 [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
 * clear indication for searching phase, when BlinkID is searching for an ID document
@@ -485,7 +430,7 @@ BlinkID SDK always provides it's own default implementation of the Overlay View 
 
 For example, the scanning technology usually gives results very fast after the user places the device's camera in the expected way above the scanned object. This means a progress bar for the scan is not particularly useful to the user. The majority of time the user spends on positioning the device's camera correctly. That's just an example which demonstrates careful decision making behind default camera overlay view.
 
-### 1. Initialization
+### 1. Subclassing
  
 To use your custom overlay with Microblink's camera view, you must first subclass [`MBCustomOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBCustomOverlayViewController.html) and implement the overlay behaviour conforming wanted protocols.
 
@@ -507,42 +452,7 @@ Swift and Objective-C
 self.scanningRecognizerRunnerViewControllerDelegate = self;
 ```
 
-### 3. Overlay subviews
-The SDK contains various subviews you can use to notify users of the state of scanning. If you want to use built-in implementation we recommend to use [`MBModernViewfinderSubview`](http://blinkid.github.io/blinkid-ios/Classes/MBModernViewfinderSubview.html). In can be initialized in `viewDidLoad` method:
-
-Swift
-```swift
-viewfinderSubview = MBModernViewfinderSubview()
-viewfinderSubview.frame = view.frame
-viewfinderSubview.moveable = true
-view.addSubview(viewfinderSubview)
-```
-
-Objective-C
-```objective-c
-self.viewfinderSubview = [[MBModernViewfinderSubview alloc] init];
-self.viewfinderSubview.frame = self.view.frame;
-self.viewfinderSubview.delegate = self.overlaySubviewsDelegate;
-self.viewfinderSubview.moveable = YES;
-[self.view addSubview:self.viewfinderSubview];
-```
-
-To use this subview you'll need to implement `MBDetectionRecognizerRunnerViewControllerDelegate`(http://blinkid.github.io/blinkid-ios/Protocols/MBDetectionRecognizerRunnerViewControllerDelegate.html) then in the `-recognizerRunnerViewController:didFinishDetectionWithDisplayableQuad:` notify subview of detection changes.
-
-Swift
-```swift
-func recognizerRunnerViewController(_ recognizerRunnerViewController: Any!, didFinishDetectionWithDisplayableQuad displayableQuad: MBDisplayableQuadDetection) {
-    viewfinderSubview.detectionFinished(withDisplayableQuad: displayableQuad)
-}
-```
-Objective-C
-```objective-c
-- (void)recognizerRunnerViewController: (nonnull UIViewController<MBRecognizerRunnerViewController> *) recognizerRunnerViewController didFinishDetectionWithDisplayableQuad: (nonnull MBDisplayableQuadDetection *)displayableQuad {
-    [self.viewfinderSubview detectionFinishedWithDisplayableQuad:displayableQuad];
-}
-```
-
-### 4. Initialization
+### 3. Initialization
 In [Quick Start](#quick-start) guide it is shown how to use a default overlay view controller. You can now swap default view controller with your implementation of `CustomOverlayViewController`
 
 Swift
@@ -554,7 +464,6 @@ Objective-C
 ```objective-c
 UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:CustomOverlayViewController];
 ```
-
 
 ## <a name="direct-api-processing"></a> Direct processing API
 
@@ -583,7 +492,7 @@ Swift
 ```swift
 func setupRecognizerRunner() {
     var recognizers = [MBRecognizer]()
-    recognizer = MBBlinkIdRecognizer()
+    recognizer = MBBlinkIdCombinedRecognizer()
     recognizers.append(recognizer!)
     let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
     recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
@@ -615,7 +524,7 @@ Objective-C
 - (void)setupRecognizerRunner {
     NSMutableArray<MBRecognizer *> *recognizers = [[NSMutableArray alloc] init];
     
-    self.recognizer = [[MBBlinkIdRecognizer alloc] init];
+    self.recognizer = [[MBBlinkIdCombinedRecognizer alloc] init];
     
     [recognizers addObject: self.recognizer];
     
@@ -656,13 +565,34 @@ Some recognizers support recognition from `NSString`. They can be used through D
 Recognition from `String` can be performed in the same way as recognition from image. 
 The only difference is that user should call `- (void)processString:(NSString *)string;` on [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html).
 
+
+### <a name="understanding-direct-api-state-machine"></a> Understanding DirectAPI's state machine
+
+DirectAPI's `RecognizerRunner` singleton is a state machine that can be in one of 3 states: `OFFLINE`, `READY` and `WORKING`.
+
+- When you obtain the reference to `RecognizerRunner` singleton, it will be in `OFFLINE` state.
+- You can initialize `RecognizerRunner` by calling [`init`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html#/c:objc(cs)MBRecognizerRunner(im)initWithRecognizerCollection:) method. If you call `initialize` method while `RecognizerRunner` is not in `OFFLINE` state, you will get `IllegalStateException`.
+- After successful initialization, `RecognizerRunner` will move to `READY` state. Now you can call any of the `recognize*` methods.
+- When starting recognition with any of the `recognize*` methods, `RecognizerRunner` will move to `WORKING` state. If you attempt to call these methods while `RecognizerRunner` is not in `READY` state, you will get `IllegalStateException`
+- Recognition is performed on background thread so it is safe to call all `RecognizerRunner's` methods from UI thread
+- When recognition is finished, `RecognizerRunner` first moves back to `READY` state and then calls the `recognizerRunner(_ :, didFinishScanningWith:)` method of the provided `MBScanningRecognizerRunnerDelegate`.
+- Please note that `MBScanningRecognizerRunnerDelegate's` `recognizerRunner(_ :, didFinishScanningWith:)` method will be called on background processing thread, so make sure you do not perform UI operations in this callback. Also note that until the `recognizerRunner(_ :, didFinishScanningWith:)` method completes, `RecognizerRunner` will not perform recognition of another image or string, even if any of the `recognize*` methods have been called just after transitioning to `READY` state. This is to ensure that results of the recognizers associated with `RecognizerRunner` are not modified while possibly being used within `recognizerRunner(_ :, didFinishScanningWith:)` method.
+- By calling `resetState` method, `RecognizerRunner` singleton will release all its internal resources. Note that even after calling `resetState` you might receive `recognizerRunner(_ :, didFinishScanningWith:)` event if there was work in progress when `resetState` was called.
+- `resetState` method can be called from any `RecognizerRunner` singleton's state
+
+
+### <a name="using-direct-api-while-recognizerrunnerview-active"></a> Using DirectAPI while `RecognizerRunnerView` is active
+Both `RecognizerRunnerView` and `RecognizerRunner` use the same internal singleton that manages native code. This singleton handles initialization and termination of native library and propagating recognizers to native library. It is possible to use `RecognizerRunnerView` and `RecognizerRunner` together, as internal singleton will make sure correct synchronization and correct recognition settings are used. If you run into problems while using `RecognizerRunner` in combination with `RecognizerRunnerView`, let us know!
+
+### <a name="using-direct-api-with-combined-recognizers"></a> Using Direct API with combined recognizers
+When you are using combined recognizer and images of both document sides are required, you need to call `RecognizerRunner.recognize*` multiple times. Call it first with the images of the first side of the document, until it is read, and then with the images of the second side. The combined recognizer automatically switches to second side scanning, after it has successfully read the first side. To be notified when the first side scanning is completed, you have to set the `MBFirstSideFinishedRecognizerRunnerDelegate` through `MBRecognizerRunnerMetadataDelegates`. If you don't need that information, e.g. when you have only one image for each document side, don't set the `MBFirstSideFinishedRecognizerRunnerDelegate` and check the RecognitionSuccessType in `MBScanningRecognizerRunnerDelegate.recognizerRunner(_ :, didFinishScanningWith:)`, after the second side image has been processed.
 # <a name="recognizer"></a> `MBRecognizer` and available recognizers
 
 ## The `MBRecognizer` concept
 
 The [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) is the basic unit of processing within the SDK. Its main purpose is to process the image and extract meaningful information from it. As you will see [later](#available-recognizers), the SDK has lots of different [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that have various purposes.
 
-Each [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) has a [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) object, which contains the data that was extracted from the image. The [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) object is a member of corresponding [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object its lifetime is bound to the lifetime of its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object. If you need your `MBRecognizerRecognizer` object to outlive its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object, you must make a copy of it by calling its method `copy`.
+Each [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) has a [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) object, which contains the data that was extracted from the image. The [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) object is a member of corresponding [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object its lifetime is bound to the lifetime of its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object. If you need your `MBRecognizerResult` object to outlive its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object, you must make a copy of it by calling its method `copy`.
 
 While [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object works, it changes its internal state and its result. The [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) always starts in `Empty` state. When corresponding [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object performs the recognition of given image, its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult.html) can either stay in `Empty` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html)failed to perform recognition), move to `Uncertain` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) performed the recognition, but not all mandatory information was extracted) or move to `Valid` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) performed recognition and all mandatory information was successfully extracted from the image).
 
@@ -749,6 +679,21 @@ We will continue expanding this recognizer by adding support for new document ty
 Use [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
 You can find the list of the currently supported documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
+
+# <a name="localization"></a> Localization
+
+The SDK is localized on following languages: Arabic, Chinese simplified, Chinese traditional, Croatian, Czech, Dutch, Filipino, French, German, Hebrew, Hungarian, Indonesian, Italian, Malay, Portuguese, Romanian, Slovak, Slovenian, Spanish, Thai, Vietnamese.
+
+If you would like us to support additional languages or report incorrect translation, please contact us at [help.microblink.com](http://help.microblink.com).
+
+If you want to add additional languages yourself or change existing translations, you need to set `customLocalizationFileName` property on [`MBMicroblinkApp`](http://blinkid.github.io/blinkid-ios/Classes/MBMicroblinkApp.html) object to your strings file name.
+
+For example, let's say that we want to change text "Scan the front side of a document" to "Scan the front side" in BlinkID sample project. This would be the steps:
+* Find the translation key in en.strings file inside Microblink.framework
+* Add a new file MyTranslations.strings to the project by using "Strings File" template
+* With MyTranslations.string open, in File inspector tap "Localize..." button and select English
+* Add the translation key "blinkid_generic_message" and the value "Scan the front side" to MyTranslations.strings
+* Finally in AppDelegate.swift in method `application(_:, didFinishLaunchingWithOptions:)` add `MBMicroblinkApp.instance()?.customLocalizationFileName = "MyTranslations"`
 
 # <a name="troubleshooting"></a> Troubleshooting
 
@@ -842,6 +787,12 @@ mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
 done
 ```
 
+### Disable logging
+
+Logging can be disabled by calling `disableMicroblinkLogging` method on [`MBLogger`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBLogger.html) instance.
+# <a name="size-report"></a> Size Report
+
+We are delivering complete size report of our BlinkID SDK based on our BlinkID-sample-Swift sample project. You can check that [here](https://github.com/BlinkID/blinkid-ios/tree/master/size-report).
 # <a name="info"></a> Additional info
 
 Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 

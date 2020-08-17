@@ -11,6 +11,8 @@
 #import "MBClassInfo.h"
 #import "MBBarcodeResult.h"
 #import "MBVizResult.h"
+#import "MBProcessingStatus.h"
+#import "MBRecognitionMode.h"
 
 #import "MBFullDocumentImageResult.h"
 #import "MBEncodedFullDocumentImageResult.h"
@@ -164,11 +166,6 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBDriverLicenseDetailedInfo *driverLicenseDetailedInfo;
 
 /**
- * The driver license conditions.
- */
-@property (nonatomic, readonly, nullable) NSString *conditions;
-
-/**
  * The classification information.
  */
 @property (nonatomic, readonly, nullable) MBClassInfo *classInfo;
@@ -187,6 +184,17 @@ MB_INIT_UNAVAILABLE
  * Defines the data extracted from the visual inspection zone
  */
 @property (nonatomic, readonly, nullable) MBVizResult *vizResult;
+
+/**
+ * Defines status of the last recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus processingStatus;
+
+/**
+ * Recognition mode used to scan current document.
+ */
+@property (nonatomic, readonly, assign) MBRecognitionMode recognitionMode;
+
 
 @end
 

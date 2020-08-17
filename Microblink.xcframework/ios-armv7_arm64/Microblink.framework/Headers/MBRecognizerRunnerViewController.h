@@ -76,9 +76,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)resumeScanningAndResetState:(BOOL)resetState;
 
 /**
- * Resumes camera session. This method is automatically called in viewWillAppear when ScanningViewController enters screen.
+ * Resumes camera session asynchronously on camera queue. This method is automatically called in viewWillAppear when ScanningViewController enters screen.
+ * @param completion block is executed on main queue after camera is resummed
  */
-- (BOOL)resumeCamera;
+- (void)resumeCamera:(void(^_Nullable)(void))completion;
 
 /**
  * Pauses camera session. This method is automatically called in viewDidDissapear when ScanningViewController exits screen.

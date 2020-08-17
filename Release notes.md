@@ -1,5 +1,57 @@
 # Release notes
 
+## 5.7.0
+
+### New features:
+
+- We translated complete SDK to the following additional languages:: **Malay**, **Dutch**, **Hungarian**, **Indonesian**, **Arabic(UAE)**, **Romanian**, **Chinese traditional**, **Chinese simplified**, **Thai**, **Hewbrew** and **Vietnamese**.
+
+### Improvements to existing features:
+
+- We have improved parsing of **MRZ** formats deviating from the ISO/IEC 7501 standard:
+	- Document discriminator was in place of the document number on driver licenses and IDs from:
+		- **New York** 
+		- **Michigan** 
+		- **Canada**
+	- Different check digit calculation for **Mexico** (Consular) ID
+	- Recognition of the unofficial `XCT` country code for Northern **Cyprus** ID
+	- Recognition of different country codes and check digit calculation on **China** Mainland Travel Permit for Hong Kong and Macao Residents
+- We added **anonymization** support for:
+	- MRZ on the Mainland Travel Permit for Hong Kong and Macao Residents
+- We have made some changes to the **MBBlinkIdRecognizer** and **MBBlinkIdCombinedRecognizer**
+	- You can now see `MBProcessingStatus` in the results to inspect potential processing errors, such as when barcode detection fails, a mandatory field is missing, etc. 
+	- You can now also see a more detailed `MBImageAnalysisResult` showing you when: 
+		- Face image is detected
+		- MRZ is detected
+		- Barcode is detected
+	- We added a `MBRecognitionModeFilter` settings group. You can toggle flags on this object to control the recognition mode of the recognizer:
+		- `enableMrzId` lets you scan MRZ on all identity documents except visas and passports.
+		- `enableMrzVisa` lets you scan MRZ on visa documents.
+		- `enableMrzPassport` lets you scan MRZ on passports.
+		- `enablePhotoId` lets you scan photo IDs. Use it to enable or disable document and face image extraction on unsupported documents.
+		- `enableFullRecognition` lets you scan all data from our [supported](https://github.com/BlinkID/blinkid-ios/blob/master/documentation/BlinkIDRecognizer.md) documents.
+		- Your license key still controls which of the above recognition modes are allowed.
+	- We have added a `MBRecognitionMode` result member describing which recognition mode was used to produce the results.
+	-  We are now retrieving sex and nationality fields from the MRZ in cases where those two fields cannot be found in the document’s VIZ. Previously, we only used to do this for dates, name fields and document numbers. 
+	- We are now preserving the original string (raw data) of the dates we couldn’t parse.
+- We have improved the thresholds for card detection feedback messages ("move closer" and "move farther"). This will improve the UX when scanning in landscape mode as the document can now be closer to the camera.
+- We added `disableMicroblinkLogging` method to `MBLogger` for easier implementation
+	- This also enables disabling Microblink logging in Swift. 
+
+### Minor API changes:
+
+- We have made some changes to the **MBBlinkIdRecognizer** and **MBBlinkIdCombinedRecognizer**:
+	- We renamed `MBDocumentImageMoireStatus` to `MBImageAnalysisDetectionStatus`.
+	- We grouped the `conditions` member from the results with the `MBDriverLicenseDetailedInfo` structure.
+- We renamed `MBRecogitionMode` to `MBRecognitionDebugMode` in `MBRecognizerCollection`.
+- Swift:
+	- We renamed all `sharedInstance` to `shared`.
+	- All enums are now `Int`.
+
+### Bug fixes:
+
+- We added a `nullable` attribute to the `recognizerRunnerViewControllerWithOverlayViewController` to fix a force unwrapping issue in Swift that could occur if the camera is broken or not working.
+
 ## 5.6.0
 
 ### New features:

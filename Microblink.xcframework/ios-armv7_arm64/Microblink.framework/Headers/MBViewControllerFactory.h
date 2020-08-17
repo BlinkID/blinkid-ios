@@ -9,8 +9,6 @@
 #import "MBRecognizerRunnerViewController.h"
 #import "MBOverlayViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  * Factory class containing static methods for creating camera view controllers.
  * Camera view controllers created this way will be managed internally by the SDK, and input frames will be processed.
@@ -34,8 +32,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  *  @return Scanning view controller fully initialized for presenting on screen.
  */
-+ (UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewControllerWithOverlayViewController:(MBOverlayViewController *)overlayViewController NS_SWIFT_NAME(recognizerRunnerViewController(withOverlayViewController:));
++ (nullable UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewControllerWithOverlayViewController:(nonnull MBOverlayViewController *)overlayViewController NS_SWIFT_NAME(recognizerRunnerViewController(withOverlayViewController:));
 
 @end
 
-NS_ASSUME_NONNULL_END

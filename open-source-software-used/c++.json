@@ -1,61 +1,61 @@
 [
    {
-      "license" : "Boost Software license",
       "description" : "Free peer-reviewed portable C++ source libraries.",
+      "license" : "Boost Software license",
       "url" : "https://bitbucket.org/microblink/boost",
       "package" : "Boost/1.72.0@microblink/stable"
    },
    {
-      "url" : "https://github.com/microblink/config_ex",
-      "package" : "ConfigEx/1.0.4@microblink/stable",
+      "description" : "Additions to boost/config for additional compiler-specific codegen tweaking macros",
       "license" : "MIT",
-      "description" : "Additions to boost/config for additional compiler-specific codegen tweaking macros"
+      "url" : "https://github.com/microblink/config_ex",
+      "package" : "ConfigEx/1.0.4@microblink/stable"
    },
    {
+      "package" : "Eigen/3.3.7.7@microblink/stable",
       "description" : "Eigen is a C++ template library for linear algebra: vectors, matrices, and related algorithms. It is versatile, fast, elegant and works on many platforms (OS/Compilers).",
       "license" : "Mozilla Public License Version 2.0",
-      "package" : "Eigen/3.3.7.7@microblink/stable",
       "url" : "https://github.com/microblink/eigen-git-mirror"
    },
    {
-      "description" : "err - yet another take on C++ error handling",
-      "license" : "Boost Software License",
       "url" : "https://github.com/microblink/err",
-      "package" : "Err/1.0.12@microblink/stable"
+      "license" : "Boost Software License",
+      "description" : "err - yet another take on C++ error handling",
+      "package" : "Err/1.1.0@microblink/stable"
    },
    {
-      "url" : "https://github.com/microblink/functionoid",
-      "package" : "Functionoid/1.1.6@microblink/stable",
+      "package" : "Functionoid/1.1.7@microblink/stable",
       "license" : "Boost Software License, Version 1.0",
+      "url" : "https://github.com/microblink/functionoid",
       "description" : "a complete C++17 rewrite of boost/std::function"
    },
    {
-      "license" : "zlib",
       "description" : "Portable C++ Hashing Library",
-      "package" : "Hash/7.0.1@microblink/stable",
-      "url" : "https://github.com/microblink/hash-library"
+      "license" : "zlib",
+      "url" : "https://github.com/microblink/hash-library",
+      "package" : "Hash/8.0.0@microblink/stable"
    },
    {
+      "package" : "MMap/0.2.0@microblink/stable",
       "license" : "Boost Software License",
-      "description" : "portable, lightweight, powerful, near-zero-overhead memory mapping and virtual memory management",
       "url" : "https://github.com/microblink/mmap",
-      "package" : "MMap/0.2.0@microblink/stable"
+      "description" : "portable, lightweight, powerful, near-zero-overhead memory mapping and virtual memory management"
    },
    {
-      "url" : "https://github.com/microblink/micro-ecc",
       "package" : "MicroECC/2.0.0@microblink/stable",
+      "url" : "https://github.com/microblink/micro-ecc",
       "license" : "BSD 2-Clause \"Simplified\" License",
       "description" : "A small and fast ECDH and ECDSA implementation for 8-bit, 32-bit, and 64-bit processors."
    },
    {
-      "license" : "https://github.com/microblink/ADVobfuscator#copyright-and-license",
+      "package" : "Obfuscation/0.1.1@microblink/stable",
       "description" : "Obfuscation library based on C++11/14 and metaprogramming",
-      "url" : "https://github.com/microblink/ADVobfuscator",
-      "package" : "Obfuscation/0.1.0@microblink/stable"
+      "license" : "https://github.com/microblink/ADVobfuscator#copyright-and-license",
+      "url" : "https://github.com/microblink/ADVobfuscator"
    },
    {
-      "url" : "https://bitbucket.org/microblink/opencvfork/src",
       "package" : "OpenCV/3.2.0.7@microblink/stable",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src",
       "license" : "MIT",
       "description" : "Microblink's fork of OpenCV"
    },
@@ -65,70 +65,70 @@
       "license" : "MIT"
    },
    {
-      "license" : "MIT",
+      "package" : "OpenCVCore/3.2.0.7@microblink/stable",
       "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "package" : "OpenCVCore/3.2.0.7@microblink/stable"
+      "license" : "MIT"
    },
    {
-      "license" : "MIT",
+      "package" : "OpenCVImageIO/3.2.0.7@microblink/stable",
       "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "package" : "OpenCVImageIO/3.2.0.7@microblink/stable"
+      "license" : "MIT"
    },
    {
-      "url" : "https://bitbucket.org/microblink/opencvfork/src",
       "package" : "OpenCVProcessing/3.2.0.7@microblink/stable",
-      "license" : "MIT"
-   },
-   {
-      "package" : "Pimpl/1.0.2@microblink/stable",
-      "url" : "https://github.com/microblink/pimpl",
-      "description" : "Proving pimpls do not require heap, exceptions or runtime polymorphism.",
-      "license" : "BSD 2-Clause \"Simplified\" License"
-   },
-   {
-      "url" : "https://bitbucket.org/microblink/core-rapidjson",
-      "package" : "RapidJSON/1.1.4@microblink/stable",
-      "license" : "BSD",
-      "description" : "A fast JSON parser/generator for C++ with both SAX/DOM style API"
-   },
-   {
-      "description" : "Humble Outed Dispatch",
       "license" : "MIT",
+      "url" : "https://bitbucket.org/microblink/opencvfork/src"
+   },
+   {
+      "description" : "Proving pimpls do not require heap, exceptions or runtime polymorphism.",
+      "license" : "BSD 2-Clause \"Simplified\" License",
+      "url" : "https://github.com/microblink/pimpl",
+      "package" : "Pimpl/1.0.2@microblink/stable"
+   },
+   {
+      "description" : "A fast JSON parser/generator for C++ with both SAX/DOM style API",
+      "license" : "BSD",
+      "url" : "https://bitbucket.org/microblink/core-rapidjson",
+      "package" : "RapidJSON/1.1.5@microblink/stable"
+   },
+   {
+      "package" : "Sweater/3.2.6@microblink/stable",
       "url" : "https://github.com/microblink/sweater",
-      "package" : "Sweater/3.2.6@microblink/stable"
+      "license" : "MIT",
+      "description" : "Humble Outed Dispatch"
    },
    {
-      "description" : "UTF-8 with C++ in a Portable Way",
-      "license" : "Boost Software License 1.0",
       "package" : "UTFCpp/3.1.1@microblink/stable",
-      "url" : "https://github.com/microblink/utfcpp"
+      "description" : "UTF-8 with C++ in a Portable Way",
+      "url" : "https://github.com/microblink/utfcpp",
+      "license" : "Boost Software License 1.0"
    },
    {
-      "package" : "ZXing/2.2.1@microblink/stable",
       "url" : "https://github.com/microblink/zxing",
+      "license" : "Apache License 2.0",
       "description" : "ZXing (\"Zebra Crossing\") barcode scanning library for Java, Android",
-      "license" : "Apache License 2.0"
+      "package" : "ZXing/2.2.2@microblink/stable"
    },
    {
       "url" : "https://bitbucket.org/microblink/opencvfork/src",
-      "package" : "Zlib/1.2.8.7@microblink/stable",
-      "license" : "MIT"
+      "license" : "MIT",
+      "package" : "Zlib/1.2.8.7@microblink/stable"
    },
    {
-      "description" : "cpuinfo is a library to detect essential for performance optimization information about host CPU",
+      "package" : "cpuinfo/2.1.0@microblink/stable",
       "license" : "BSD 2-Clause \"Simplified\" License",
-      "package" : "cpuinfo/2.0.0@microblink/stable",
-      "url" : "https://github.com/microblink/cpuinfo"
+      "url" : "https://github.com/microblink/cpuinfo",
+      "description" : "cpuinfo is a library to detect essential for performance optimization information about host CPU"
    },
    {
       "package" : "range-v3/0.10.0@microblink/stable",
       "url" : "https://github.com/ericniebler/range-v3",
-      "description" : "Experimental range library for C++11/14/17",
-      "license" : "Boost Software License - Version 1.0 - August 17th, 2003"
+      "license" : "Boost Software License - Version 1.0 - August 17th, 2003",
+      "description" : "Experimental range library for C++11/14/17"
    },
    {
-      "license" : "Zlib",
       "description" : "a simple, small, efficient, C++ XML parser",
+      "license" : "Zlib",
       "url" : "https://github.com/microblink/tinyxml2",
       "package" : "tinyxml2/2.2.0@microblink/stable"
    }

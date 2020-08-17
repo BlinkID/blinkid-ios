@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7B9113E824E546F4005E4FBD /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9113E624E546F1005E4FBD /* Microblink.xcframework */; };
 		7B9113E924E546F4005E4FBD /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9113E624E546F1005E4FBD /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		7B9113EC24E547BF005E4FBD /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B9113EB24E547BF005E4FBD /* blinkid-license.txt */; };
 		A207A4A320A485DF002AEDB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4A220A485DF002AEDB0 /* AppDelegate.swift */; };
 		A207A4A520A485DF002AEDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4A420A485DF002AEDB0 /* ViewController.swift */; };
 		A207A4A820A485DF002AEDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A207A4A620A485DF002AEDB0 /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		A207A4C020A48633002AEDB0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A4BF20A48633002AEDB0 /* libc++.tbd */; };
 		A207A4C220A4863E002AEDB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A207A4C120A4863E002AEDB0 /* libz.tbd */; };
 		A207A4CF20A49237002AEDB0 /* MBCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */; };
+		A240AD2D24EA94C1004B2F77 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A240AD2C24EA94C1004B2F77 /* blinkid-license.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		7B9113E624E546F1005E4FBD /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = ../../Microblink.xcframework; sourceTree = "<group>"; };
-		7B9113EB24E547BF005E4FBD /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 		A207A49F20A485DF002AEDB0 /* DirectAPI-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirectAPI-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A207A4A220A485DF002AEDB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A207A4A420A485DF002AEDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		A207A4BF20A48633002AEDB0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A207A4C120A4863E002AEDB0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCameraViewController.swift; sourceTree = "<group>"; };
+		A240AD2C24EA94C1004B2F77 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B9113EA24E547BF005E4FBD /* License */ = {
-			isa = PBXGroup;
-			children = (
-				7B9113EB24E547BF005E4FBD /* blinkid-license.txt */,
-			);
-			path = License;
-			sourceTree = "<group>";
-		};
 		A207A49620A485DF002AEDB0 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +86,7 @@
 		A207A4A120A485DF002AEDB0 /* DirectAPI-sample-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				7B9113EA24E547BF005E4FBD /* License */,
+				A240AD2B24EA94C1004B2F77 /* License */,
 				A207A4A220A485DF002AEDB0 /* AppDelegate.swift */,
 				A207A4A420A485DF002AEDB0 /* ViewController.swift */,
 				A207A4CE20A49237002AEDB0 /* MBCameraViewController.swift */,
@@ -115,6 +107,15 @@
 				A207A4BD20A4862D002AEDB0 /* libiconv.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A240AD2B24EA94C1004B2F77 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				A240AD2C24EA94C1004B2F77 /* blinkid-license.txt */,
+			);
+			name = License;
+			path = ../../License;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +180,7 @@
 			files = (
 				A207A4AD20A485E0002AEDB0 /* LaunchScreen.storyboard in Resources */,
 				A207A4AA20A485E0002AEDB0 /* Assets.xcassets in Resources */,
-				7B9113EC24E547BF005E4FBD /* blinkid-license.txt in Resources */,
+				A240AD2D24EA94C1004B2F77 /* blinkid-license.txt in Resources */,
 				A207A4A820A485DF002AEDB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

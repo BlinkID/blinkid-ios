@@ -23,4 +23,6 @@
 #define MB_PROPERTY_DEPRECATED DEPRECATED_ATTRIBUTE
 #define MB_ATTRIBUTE_DEPRECATED DEPRECATED_ATTRIBUTE
 
+typedef void(^MBBlock)(void);
+
 #endif /* MBMicroblinkDefines_h */

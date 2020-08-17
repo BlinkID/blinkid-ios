@@ -31,6 +31,15 @@ typedef NS_ENUM(NSInteger, MBMrtdDocumentType) {
 
     /** US Green Card */
     MBMrtdTypeGreenCard,
+    
+    /** Malaysian PASS type IMM13P */
+    MBMrtdTypeMysPassIMM13P,
+    
+    /** One liner ISO DL */
+    MBMrtdTypeDl,
+    
+    /** China mainland travel permit */
+    MBMrtdTypeInternalTravelDocument
 
 };
 

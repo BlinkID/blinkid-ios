@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.6.0 Docs
+          PPBlinkID v5.7.0 Docs
         </a>
-         (70% documented)
+         (71% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -264,6 +264,9 @@
                 <a class="nav-group-task-link" href="Classes/MBQuadrangle.html">MBQuadrangle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBRecognitionModeFilter.html">MBRecognitionModeFilter</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBRecognizer.html">MBRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -391,9 +394,6 @@
                 <a class="nav-group-task-link" href="Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/MBDocumentImageMoireStatus.html">MBDocumentImageMoireStatus</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBDocumentVerificationHighResImageState.html">MBDocumentVerificationHighResImageState</a>
               </li>
               <li class="nav-group-task">
@@ -401,6 +401,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBImageAnalysisDetectionStatus.html">MBImageAnalysisDetectionStatus</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBLogLevel.html">MBLogLevel</a>
@@ -418,7 +421,13 @@
                 <a class="nav-group-task-link" href="Enums/MBProcessingOrientation.html">MBProcessingOrientation</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBProcessingStatus.html">MBProcessingStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBProcessorResultState.html">MBProcessorResultState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBRecognitionDebugMode.html">MBRecognitionDebugMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBRecognitionMode.html">MBRecognitionMode</a>
@@ -639,6 +648,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions/CGLine.html">CGLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBMicroblinkDefines.h@T@MBBlock">MBBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
@@ -1355,34 +1367,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@MBDocumentImageMoireStatus"></a>
-                    <a name="//apple_ref/objc/Enum/MBDocumentImageMoireStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@MBDocumentImageMoireStatus">MBDocumentImageMoireStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>DocumentImageMoireStatus enum defines possible states of Moire pattern detection.</p>
-
-                        <a href="Enums/MBDocumentImageMoireStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBDocumentImageMoireStatus</span> <span class="p">{}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:@E@MBDocumentVerificationHighResImageState"></a>
                     <a name="//apple_ref/objc/Enum/MBDocumentVerificationHighResImageState" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@MBDocumentVerificationHighResImageState">MBDocumentVerificationHighResImageState</a>
@@ -1471,6 +1455,34 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBProcessingOrientation</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBImageAnalysisDetectionStatus"></a>
+                    <a name="//apple_ref/objc/Enum/MBImageAnalysisDetectionStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBImageAnalysisDetectionStatus">MBImageAnalysisDetectionStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MBImageAnalysisDetectionStatus  enum defines possible states of detection.</p>
+
+                        <a href="Enums/MBImageAnalysisDetectionStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBImageAnalysisDetectionStatus</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -1613,6 +1625,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@E@MBProcessingStatus"></a>
+                    <a name="//apple_ref/objc/Enum/MBProcessingStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBProcessingStatus">MBProcessingStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MBProcessingStatus enum defines status of the last recognition process.</p>
+
+                        <a href="Enums/MBProcessingStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBProcessingStatus</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@E@MBProcessorResultState"></a>
                     <a name="//apple_ref/objc/Enum/MBProcessorResultState" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@MBProcessorResultState">MBProcessorResultState</a>
@@ -1656,7 +1696,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Denotes the mode in which Recognizers performs recognition</p>
+                        <p>MBRecognitionMode enum defines possible recognition modes by BlinkID(Combined)Recognizer.</p>
 
                         <a href="Enums/MBRecognitionMode.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1667,9 +1707,37 @@
                           <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBRecognitionMode</span> <span class="p">{}</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBRecognitionDebugMode"></a>
+                    <a name="//apple_ref/objc/Enum/MBRecognitionDebugMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionDebugMode">MBRecognitionDebugMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Denotes the mode in which Recognizers performs recognition</p>
+
+                        <a href="Enums/MBRecognitionDebugMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">MBRecognitionDebugMode</span> <span class="p">{}</span></code></pre>
+
+                        </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognitionMode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MBRecognitionDebugMode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1778,7 +1846,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-08-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

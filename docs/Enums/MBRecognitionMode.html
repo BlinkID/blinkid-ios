@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.6.0 Docs
+          PPBlinkID v5.7.0 Docs
         </a>
-         (70% documented)
+         (71% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -264,6 +264,9 @@
                 <a class="nav-group-task-link" href="../Classes/MBQuadrangle.html">MBQuadrangle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBRecognitionModeFilter.html">MBRecognitionModeFilter</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBRecognizer.html">MBRecognizer</a>
               </li>
               <li class="nav-group-task">
@@ -391,9 +394,6 @@
                 <a class="nav-group-task-link" href="../Enums/MBDocumentImageColorStatus.html">MBDocumentImageColorStatus</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/MBDocumentImageMoireStatus.html">MBDocumentImageMoireStatus</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDocumentVerificationHighResImageState.html">MBDocumentVerificationHighResImageState</a>
               </li>
               <li class="nav-group-task">
@@ -401,6 +401,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBIdBarcodeDocumentType.html">MBIdBarcodeDocumentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBImageAnalysisDetectionStatus.html">MBImageAnalysisDetectionStatus</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBLogLevel.html">MBLogLevel</a>
@@ -418,7 +421,13 @@
                 <a class="nav-group-task-link" href="../Enums/MBProcessingOrientation.html">MBProcessingOrientation</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBProcessingStatus.html">MBProcessingStatus</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBProcessorResultState.html">MBProcessorResultState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBRecognitionDebugMode.html">MBRecognitionDebugMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBRecognitionMode.html">MBRecognitionMode</a>
@@ -641,6 +650,9 @@
                 <a class="nav-group-task-link" href="../Type%20Definitions/CGLine.html">CGLine</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:MBMicroblinkDefines.h@T@MBBlock">MBBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:MBRecognizerRunnerViewController.h@T@MBCaptureHighResImage">MBCaptureHighResImage</a>
               </li>
               <li class="nav-group-task">
@@ -773,7 +785,7 @@
 
                 </div>
               </div>
-            <p>Denotes the mode in which Recognizers performs recognition</p>
+            <p>MBRecognitionMode enum defines possible recognition modes by BlinkID(Combined)Recognizer.</p>
 
           </div>
         </section>
@@ -785,9 +797,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeDefault"></a>
-                    <a name="//apple_ref/objc/Case/MBRecognitionModeDefault" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeDefault">MBRecognitionModeDefault</a>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeNone"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModeNone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeNone">MBRecognitionModeNone</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -795,19 +807,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Classic, production mode. Results are returned after first valid scanning</p>
+                        <p>No recognition performed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeDefault</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeNone</span></code></pre>
 
                         </div>
                       </div>
@@ -817,9 +824,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeTest"></a>
-                    <a name="//apple_ref/objc/Case/MBRecognitionModeTest" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeTest">MBRecognitionModeTest</a>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeMrzId"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModeMrzId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeMrzId">MBRecognitionModeMrzId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -827,19 +834,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Recognition Test. Results are never returned, recognition is performed repeatedly</p>
+                        <p>Recognition of mrz document (does not include visa and passport)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeTest</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeMrzId</span></code></pre>
 
                         </div>
                       </div>
@@ -849,9 +851,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeDetectionTest"></a>
-                    <a name="//apple_ref/objc/Case/MBRecognitionModeDetectionTest" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeDetectionTest">MBRecognitionModeDetectionTest</a>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeMrzVisa"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModeMrzVisa" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeMrzVisa">MBRecognitionModeMrzVisa</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -859,19 +861,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Recognition Test. Results are never returned, only detection is performed repeatedly</p>
+                        <p>Recognition of visa mrz.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeDetectionTest</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeMrzVisa</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeMrzPassport"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModeMrzPassport" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeMrzPassport">MBRecognitionModeMrzPassport</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Recognition of passport mrz.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">detectionTest</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeMrzPassport</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModePhotoId"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModePhotoId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModePhotoId">MBRecognitionModePhotoId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Recognition of documents that have face photo on the front.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModePhotoId</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MBRecognitionMode@MBRecognitionModeFullRecognition"></a>
+                    <a name="//apple_ref/objc/Case/MBRecognitionModeFullRecognition" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MBRecognitionMode@MBRecognitionModeFullRecognition">MBRecognitionModeFullRecognition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Detailed document recognition.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">MBRecognitionModeFullRecognition</span></code></pre>
 
                         </div>
                       </div>
@@ -886,7 +964,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-07-17)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-08-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
