@@ -190,7 +190,7 @@ class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MBMicroblinkSDK.sharedInstance().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
+        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
@@ -273,7 +273,7 @@ You can pass the license key as a string, the following way:
 Swift
 
 ```swift
-MBMicroblinkSDK.sharedInstance().setLicenseKey("LICENSE-KEY")
+MBMicroblinkSDK.shared().setLicenseKey("LICENSE-KEY")
 ```
 
 Objective-C
@@ -288,7 +288,7 @@ Or you can include the license key, with the code below. Please make sure that t
 Swift
 
 ```swift
-MBMicroblinkSDK.sharedInstance().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main)
+MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main)
 ```
 
 Objective-C

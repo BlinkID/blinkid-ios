@@ -15,8 +15,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Valid until: 2020-10-15
-        MBMicroblinkSDK.sharedInstance().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
+        // Valid until: 2020-11-15
+        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
@@ -37,8 +37,10 @@ class ViewController: UIViewController {
             MBBlinkIdOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
 
         /** Create recognizer view controller with wanted overlay view controller */
-        let recognizerRunneViewController: UIViewController =
-            MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
+        guard let recognizerRunneViewController: UIViewController =
+            MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController) else {
+                return
+        }
         recognizerRunneViewController.modalPresentationStyle = .fullScreen
 
         /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
@@ -61,8 +63,10 @@ class ViewController: UIViewController {
         customOverlayViewController.reconfigureRecognizers(recognizerCollection)
 
         /** Create recognizer view controller with wanted overlay view controller */
-        let recognizerRunneViewController: UIViewController =
-            MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: customOverlayViewController)
+        guard let recognizerRunneViewController: UIViewController =
+            MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: customOverlayViewController) else {
+                return
+        }
 
         recognizerRunneViewController.modalPresentationStyle = .fullScreen
 

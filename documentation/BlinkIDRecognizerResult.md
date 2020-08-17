@@ -38,7 +38,8 @@ Protected fields are:
 <li>Document number on Singapore DL, ID, Fin Card, Resident ID</li>
 <li>Personal ID number on Singapore Employment Pass</li>
 <li>Document number and personal ID number on Singapore Work Permit</li>
-<li>MRZ on Singapore passports.</li>
+<li>MRZ on Singapore passports</li>
+<li>MRZ on the China Mainland Travel Permit for Hong Kong and Macao residents</li>
 </ul>
 <br>
 <table><tr>
