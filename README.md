@@ -103,7 +103,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.7.0'
+    pod 'PPBlinkID', '~> 5.7.1'
 end
 ```
 
