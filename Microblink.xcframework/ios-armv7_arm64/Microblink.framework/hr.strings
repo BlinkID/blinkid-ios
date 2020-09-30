@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Približite dokument";
 "mb_blinkid_camera_near" = "Udaljite dokument";
 "mb_blinkid_document_too_close_to_edge" = "Odmaknite dokument od ruba";
+"mb_check_internet_connection" = "Provjeri internetsku vezu";
+"mb_close" = "Zatvori";
 "mb_data_not_match_msg" = "Molimo ponovno skenirajte prednju i stražnju stranu istog dokumenta.";
 "mb_data_not_match_retry_button" = "U redu";
 "mb_data_not_match_title" = "Podaci se ne podudaraju";
+"mb_flashlight_glare_tooltip" = "Smanji odsjaj bljeskalice laganim pomicanjem dokumenta.";
+"mb_network_error" = "Greška u povezivanju";
 "mb_recognition_timeout_dialog_message" = "Dokument nije moguće očitati. Molimo pokušajte ponovo.";
 "mb_recognition_timeout_dialog_title" = "Skeniranje nije uspjelo";
+"mb_scanning_not_available" = "Skeniranje nije dostupno";
 "mb_tooltip_glare" = "Smanjite odsjaj laganim pomicanjem dokumenta.";
 "mb_unsupported_document_message" = "Ponovite skeniranje prednje strane podržanog dokumenta.";
 "mb_unsupported_document_title" = "Nepoznat dokument";

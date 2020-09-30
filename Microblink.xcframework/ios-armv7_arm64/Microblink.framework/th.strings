@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "เลื่อนเข้าใกล้";
 "mb_blinkid_camera_near" = "เลื่อนออกห่าง";
 "mb_blinkid_document_too_close_to_edge" = "เลื่อนเอกสารออกจากขอบ";
+"mb_check_internet_connection" = "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต";
+"mb_close" = "ปิด";
 "mb_data_not_match_msg" = "โปรดเริ่มขั้นตอนการสแกนใหม่อีกครั้ง";
 "mb_data_not_match_retry_button" = "ลองอีกครั้ง";
 "mb_data_not_match_title" = "ด้านข้างไม่ตรงกัน";
+"mb_flashlight_glare_tooltip" = "ระวังแสงจ้าจากไฟฉาย\nค่อย ๆ เลื่อนบัตรประชาชนของคุณไปรอบ ๆ เพื่อหลีกเลี่ยง";
+"mb_network_error" = "เครือข่ายเกิดข้อผิดพลาด";
 "mb_recognition_timeout_dialog_message" = "ไม่สามารถอ่านเอกสาร โปรดลองอีกครั้ง";
 "mb_recognition_timeout_dialog_title" = "สแกนไม่สำเร็จ";
+"mb_scanning_not_available" = "ไม่สามารถสแกนได้\n\n\n\n\n\n";
 "mb_tooltip_glare" = "เลื่อนบัตรประชาชนเล็กน้อยเพื่อกำจัดแสงสะท้อน";
 "mb_unsupported_document_message" = "สแกนด้านหน้าของเอกสารที่ได้รับการรองรับ";
 "mb_unsupported_document_title" = "ระบบไม่รู้จำเอกสาร";

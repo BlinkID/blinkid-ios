@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Kousek blíž";
 "mb_blinkid_camera_near" = "Kousek dál";
 "mb_blinkid_document_too_close_to_edge" = "Přesunout dokument dál od kraje";
+"mb_check_internet_connection" = "Zkontrolujte připojení k internetu";
+"mb_close" = "Zavřít";
 "mb_data_not_match_msg" = "Spusťte proces skenování znovu.";
 "mb_data_not_match_retry_button" = "Opakovat";
 "mb_data_not_match_title" = "Strany neodpovídají";
+"mb_flashlight_glare_tooltip" = "Dejte pozor na odlesky způsobené bleskem.\nVyhnete se jim lehkým posunutím vašeho průkazu.";
+"mb_network_error" = "Chyba sítě";
 "mb_recognition_timeout_dialog_message" = "Dokument se nepodařilo přečíst. Zkuste to znovu.";
 "mb_recognition_timeout_dialog_title" = "Skenování neúspěšné";
+"mb_scanning_not_available" = "Skenování není k dispozici";
 "mb_tooltip_glare" = "Upravte pozici průkazu totožnosti, aby nedocházelo k odleskům.";
 "mb_unsupported_document_message" = "Naskenujte přední stranu podporovaného dokumentu.";
 "mb_unsupported_document_title" = "Dokument se nepodařilo rozpoznat";

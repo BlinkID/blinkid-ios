@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "MBMicroblinkDefines.h"
 #import "MBCameraSettings.h"
+#import "MBLicenseError.h"
 
 NS_ASSUME_NONNULL_BEGIN
 /**
@@ -39,8 +40,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Set license buffer and unlock the SDK. Application package will be used to validate the license.
  * @param licenseBuffer Byte array containing the license.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer;
+- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license buffer and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -49,14 +51,16 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * single license within multiple application packages.
  * @param licenseBuffer Byte array containing the license.
  * @param licensee Licensee to which license is given to.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer andLicensee:(NSString * _Nonnull)licensee;
+- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer andLicensee:(NSString * _Nonnull)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license key and unlock the SDK. Application package will be used to validate the license.
  * @param base64LicenseKey License file encoded as base64 string.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey;
+- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license key and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -65,8 +69,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * single license within multiple application packages.
  * @param base64LicenseKey Byte array containing the license.
  * @param licensee Licensee to which license is given to.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey andLicensee:(NSString * _Nonnull)licensee;
+- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey andLicensee:(NSString * _Nonnull)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set the license file and unlock the SDK. Application package will be used to validate the license.
@@ -74,8 +79,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param extension The filename extension of the file (etc. txt). If you specify an empty string or nil, the extension is assumed not to exist and the file URL is the first file encountered that exactly matches name.
  * @param subdirectory The valid path of top-level directory in which file is located inside bundle (etc. licenseFiles/). If you specify an empty string or nil, root direcotry of bundle will be searched.
  * @param bundle NSBundle bundle required to access file.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle;
+- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set the license file and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -87,8 +93,9 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param subdirectory The valid path of top-level directory in which file is located inside bundle (etc. licenseFiles/). If you specify an empty string or nil, root direcotry of bundle will be searched.
  * @param bundle NSBundle bundle required to access file.
  * @param licensee Licensee to which license is given to.
+ * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle andLicensee:(NSString *)licensee;
+- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle andLicensee:(NSString *)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
 
 /**
  * Returns the string that contains the library build version

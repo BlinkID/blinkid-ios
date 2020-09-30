@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Dekatkan lagi";
 "mb_blinkid_camera_near" = "Jauhkan lagi";
 "mb_blinkid_document_too_close_to_edge" = "Alihkan fokumen dari tepi";
+"mb_check_internet_connection" = "Periksa sambungan Internet";
+"mb_close" = "Tutup";
 "mb_data_not_match_msg" = "Sila mulakan proses pengimbasan dari awal.";
 "mb_data_not_match_retry_button" = "Cuba semula";
 "mb_data_not_match_title" = "Bahagian hadapan dan belakang tidak sepadan";
+"mb_flashlight_glare_tooltip" = "Berhati-hati dengan silau lampu suluh.\nGerakkan ID anda dengan perlahan keliling untuk menjauhinya.";
+"mb_network_error" = "Ralat rangkaian";
 "mb_recognition_timeout_dialog_message" = "Tidak dapat membaca dokumen. Sila cuba semula.";
 "mb_recognition_timeout_dialog_title" = "Pengimbasan tidak berjaya";
+"mb_scanning_not_available" = "Pengimbasan tidak tersedia";
 "mb_tooltip_glare" = "Gerakkan sedikit ID untuk menghilangkan silau.";
 "mb_unsupported_document_message" = "Imbas bahagian hadapan dokumen yang disokong.";
 "mb_unsupported_document_title" = "Dokumen tidak dikenal pasti";

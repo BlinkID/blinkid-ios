@@ -98,7 +98,9 @@ typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountryOman,
     MBCountryEcuador,
     MBCountryElSalvador,
-    MBCountrySriLanka
+    MBCountrySriLanka,
+    MBCountryPeru,
+    MBCountryUruguay
 };
 
 typedef NS_ENUM(NSInteger, MBRegion) {
@@ -170,7 +172,11 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionWestVirginia,
     MBRegionWisconsin,
     MBRegionWyoming,
-    MBRegionYukon
+    MBRegionYukon,
+    MBRegionCiudadDeMexico,
+    MBRegionJalisco,
+    MBRegionNewfoundlandAndLabrador,
+    MBRegionNuevoLeon
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -198,7 +204,9 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeMilitaryId,
     MBTypeMyKas,
     MBTypeSocialSecurityCard,
-    MBTypeHealthInsuranceCard
+    MBTypeHealthInsuranceCard,
+    MBTypePassport,
+    MBTypeSPass
 };
 
 #endif /* MBClassInfoTypes_h */

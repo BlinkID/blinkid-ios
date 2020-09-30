@@ -1,3 +1,20 @@
+## 5.8.0
+
+### Deprecated recognizers
+* We have deprecated following recognizers:
+	* `MBDocumentFaceRecognizer`
+	* `MBMrtdRecognizer`
+		* **Use `MBBlinkIdRecognizer` instead**
+	* `MBMrtdCombinedRecognizer`
+	* `MBPassportRecognizer`
+	* `MBVisaRecognizer`
+		* **Use `MBBlinkIdRecognizer` or `MBBlinkIdCombinedRecongizer` instead**
+	* `MBUsdlRecognizer`
+		* **Use `MBIdBarcodeRecognizer` instead**
+
+### Major API change:
+* We added `errorCallback` on `MBMicroblinkSDK` methods which needs to be implemented for properly setting up the license key.
+
 ## 5.7.1
 
 - No changes

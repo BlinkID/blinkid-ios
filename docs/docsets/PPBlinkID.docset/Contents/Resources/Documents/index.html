@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.7.1 Docs
+          PPBlinkID v5.8.0 Docs
         </a>
-         (71% documented)
+         (70% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -72,6 +72,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBlinkIdOverlaySettings.html">MBBlinkIdOverlaySettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBlinkIdOverlayTheme.html">MBBlinkIdOverlayTheme</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a>
@@ -158,7 +161,7 @@
                 <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)MBEntity">MBEntity</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)MBErrorReticle">MBErrorReticle</a>
+                <a class="nav-group-task-link" href="Classes/MBErrorReticle.html">MBErrorReticle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBFixedDewarpPolicy.html">MBFixedDewarpPolicy</a>
@@ -352,6 +355,9 @@
                 <a class="nav-group-task-link" href="Constants.html#/c:@MBInvalidLicenseeKeyException">MBInvalidLicenseeKeyException</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@MBLicenseErrorNotification">MBLicenseErrorNotification</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@MBMissingSettingsException">MBMissingSettingsException</a>
               </li>
             </ul>
@@ -403,6 +409,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBImageAnalysisDetectionStatus.html">MBImageAnalysisDetectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBLicenseError.html">MBLicenseError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBLogLevel.html">MBLogLevel</a>
@@ -660,6 +669,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:MBLicenseError.h@T@MBLicenseErrorBlock">MBLicenseErrorBlock</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -788,27 +800,32 @@
 <a href="https://github.com/BlinkID/blinkid-ios#"><img src="https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat" alt="Platform"></a></p>
 <h1 id='blinkid-sdk-for-ios' class='heading'>BlinkID SDK for iOS</h1>
 
-<p>BlinkID SDK enables scanning of over 500 international identity documents, including driving licenses, national identity cards, passports, and others. SDK includes:</p>
+<p>Reimagine the way your users fill in their information with BlinkID iOS SDK. Fast, accurate and secure identity document scanning of more than 180 countries worldwide.</p>
+
+<p>BlinkID is:</p>
 
 <ul>
-<li>Real-time data and document photo extraction using on-device Machine Learning</li>
-<li>Offline, on-device processing for maximum security and privacy</li>
-<li>Front and back side data capture and comparison</li>
-<li>A beautiful and frictionless scanning UX</li>
-<li>Layered API, allowing everything from simple integration to complex UX customizations.</li>
+<li><strong>Fast.</strong> Real-time data extraction in less than 400ms. Way better than minutes-long form-filling.</li>
+<li><strong>Secure.</strong> Privacy first, always. Scanning works even if the user’s iPhone is in airplane mode, meaning personal information never touches a third-party server.</li>
+<li><strong>Intelligent.</strong> Machine learning models, optimized to read and parse virtually any identity document in the world, be it a Malaysian MyTentera or a Californian driver license.<br></li>
+<li><strong>Lightweight.</strong> Designed to increase your app’s usability, not weight.<br></li>
+<li><strong>What you make of it.</strong> Customize and rebrand the default UI or leave it as it is. It’s up to you.</li>
+<li><strong>More than just a powerful ID scanner.</strong> Powerful data extraction, coupled with powerful perks. Get a cropped document image back, spot printed identity documents or data match both sides of the ID for parity.</li>
 </ul>
-
-<p>To quickly integrate the SDK into your app, follow our <a href="#quick-start">Quick Start</a> guide.</p>
-
-<p>If you&rsquo;d like to try BlinkID without coding, simply download the free Microblink Vision demo app:</p>
-
-<p><a href="https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="Vision App"></a></p>
 
 <p align="center" >
   <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
-    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-v5.gif" alt="BlinkID SDK">
+    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/BlinkID-new.gif" alt="BlinkID SDK">
   </a>
 </p>
+
+<p>To see all of these features at work, download our free demo app:</p>
+
+<p><a href="https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png" alt="Vision App"></a></p>
+
+<p>Feeling ready to get going with the integration? First, make sure we support your document type ➡️ <a href="https://microblink.com/blog/full-list-of-identity-documents-you-can-scan-with-blinkid">full list</a>. And then carefully follow the guidelines below.</p>
+
+<p><em>Updating to a newer version of the SDK? Go to our 📚 <a href="https://github.com/BlinkID/blinkid-ios/blob/master/CHANGELOG.md">release notes</a> to see what’s changed.</em></p>
 <h1 id='table-of-contents' class='heading'>Table of contents</h1>
 
 <ul>
@@ -898,7 +915,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.7.1'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.8.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -1568,7 +1585,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-08-20)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-09-30)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

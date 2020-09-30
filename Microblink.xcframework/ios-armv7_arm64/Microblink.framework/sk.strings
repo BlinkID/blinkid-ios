@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Posuňte sa bližšie";
 "mb_blinkid_camera_near" = "Posuňte sa ďalej";
 "mb_blinkid_document_too_close_to_edge" = "Presunúť dokument od okraja";
+"mb_check_internet_connection" = "Skontrolujte internetové pripojenie";
+"mb_close" = "Zavrieť";
 "mb_data_not_match_msg" = "Spustite proces skenovania znova.";
 "mb_data_not_match_retry_button" = "Skúsiť znova";
 "mb_data_not_match_title" = "Strany sa nezhodujú";
+"mb_flashlight_glare_tooltip" = "Dajte si pozor na oslnenie baterkou.\nJemne posuňte svoje ID, aby ste sa tomu vyhli.";
+"mb_network_error" = "Chyba siete";
 "mb_recognition_timeout_dialog_message" = "Dokument sa nepodarilo prečítať. Prosím, skúste znova.";
 "mb_recognition_timeout_dialog_title" = "Skenovanie neúspešné";
+"mb_scanning_not_available" = "Skenovanie nie je dostupné";
 "mb_tooltip_glare" = "Mierne posuňte preukaz, aby ste eliminovali oslnenie.";
 "mb_unsupported_document_message" = "Naskenujte prednú stranu podporovaného dokumentu.";
 "mb_unsupported_document_title" = "Dokument nebol rozpoznaný";

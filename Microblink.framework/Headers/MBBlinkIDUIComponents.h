@@ -34,3 +34,6 @@
 
 // Logger
 #import "MBLogger.h"
+
+// Theme
+#import "MBBlinkIdOverlayTheme.h"

@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Kommen Sie näher";
 "mb_blinkid_camera_near" = "Bewegen Sie sich weiter weg";
 "mb_blinkid_document_too_close_to_edge" = "Verschieben des Dokuments vom Rand aus";
+"mb_check_internet_connection" = "Internetverbindung prüfen";
+"mb_close" = "Schließen";
 "mb_data_not_match_msg" = "Bitte starten Sie den Scanvorgang erneut.";
 "mb_data_not_match_retry_button" = "Wiederholen";
 "mb_data_not_match_title" = "Seiten passen nicht zusammen";
+"mb_flashlight_glare_tooltip" = "Achten Sie auf eine Blendung durch Blitzlicht.\n Bewegen Sie Ihren Ausweis vorsichtig umher, um dies zu vermeiden. ";
+"mb_network_error" = "Netzwerkfehler";
 "mb_recognition_timeout_dialog_message" = "Das Dokument kann nicht gelesen werden. Bitte versuchen Sie es erneut.";
 "mb_recognition_timeout_dialog_title" = "Scan nicht erfolgreich";
+"mb_scanning_not_available" = "Scannen nicht verfügbar";
 "mb_tooltip_glare" = "Bewegen Sie den Ausweis leicht, um Blendung zu vermeiden.";
 "mb_unsupported_document_message" = "Scannen Sie die Vorderseite eines unterstützten Dokuments.";
 "mb_unsupported_document_title" = "Dokument nicht erkannt";

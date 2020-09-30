@@ -40,6 +40,9 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 /** Stops all animations and remove all layers to reset state to beginning */
 - (void)resetAll;
 
+/** Starts animating the reticle. Does nothing if the reticle is already animating. */
+- (void)animateArcRotation;
+
 @end
 
 NS_ASSUME_NONNULL_END

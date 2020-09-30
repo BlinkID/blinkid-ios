@@ -23,11 +23,18 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, assign) BOOL requireDocumentSidesDataMatch;
 
 /**
- * Defines whether Document Not Supported dialog will be displayed in UI. ni bnhju
+ * Defines whether Document Not Supported dialog will be displayed in UI.
  *
  * Default: YES
 */
 @property(nonatomic, assign) BOOL showNotSupportedDialog;
+
+/**
+ * Defines whether glare warning will be displayed when user turn on a flashlight
+ *
+ * Default: YES
+*/
+@property(nonatomic, assign) BOOL showFlashlightWarning;
 
 /**
  * Option to configure back side scanning timeout.

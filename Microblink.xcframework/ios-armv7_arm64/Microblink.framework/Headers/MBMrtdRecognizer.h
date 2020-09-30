@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Recognizer that can recognizer Machine Readable Zone (MRZ) of the Machine Readable Travel Document (MRTD)
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("MBMrtdRecognizer is deprecated. Use MBBlinkIdRecognizer with mrz_id, mrz_visa, mrz_passport rights.") MB_FINAL
 @interface MBMrtdRecognizer : MBTemplatingRecognizer<NSCopying, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBGlareDetection>
 
 MB_INIT

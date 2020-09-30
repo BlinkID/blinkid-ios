@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Move closer";
 "mb_blinkid_camera_near" = "Move farther";
 "mb_blinkid_document_too_close_to_edge" = "Move the document from the edge";
+"mb_check_internet_connection" = "Check internet connection";
+"mb_close" = "Close";
 "mb_data_not_match_msg" = "Please start the scanning process over.";
 "mb_data_not_match_retry_button" = "Retry";
 "mb_data_not_match_title" = "Sides don’t match";
+"mb_flashlight_glare_tooltip" = "Watch out for flashlight glare.\nGently move your ID around to avoid it.";
+"mb_network_error" = "Network error";
 "mb_recognition_timeout_dialog_message" = "Unable to read the document. Please try again.";
 "mb_recognition_timeout_dialog_title" = "Scan unsuccessful";
+"mb_scanning_not_available" = "Scanning not available";
 "mb_tooltip_glare" = "Slightly move ID to eliminate glare.";
 "mb_unsupported_document_message" = "Scan the front side of a supported document.";
 "mb_unsupported_document_title" = "Document not recognized";

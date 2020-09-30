@@ -44,42 +44,63 @@
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 35,
+      "line": 38,
       "symbol": "MBBlinkIdCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 125,
+      "line": 128,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdCombinedRecognizerResult.h",
-      "line": 39,
+      "line": 41,
       "symbol": "MBBlinkIdCombinedRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdOverlayTheme.h",
+      "line": 14,
+      "symbol": "MBBlinkIdOverlayTheme",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdOverlayTheme.h",
+      "line": 16,
+      "symbol": "MBBlinkIdOverlayTheme.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdOverlayTheme.h",
+      "line": 17,
+      "symbol": "MBBlinkIdOverlayTheme.+sharedInstance",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 32,
+      "line": 35,
       "symbol": "MBBlinkIdRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 115,
+      "line": 118,
       "symbol": "MBBlinkIdRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBBlinkIdRecognizerResult.h",
-      "line": 36,
+      "line": 38,
       "symbol": "MBBlinkIdRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -744,497 +765,511 @@
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 104,
-      "symbol": "MBRegion",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "line": 102,
+      "symbol": "MBCountry.MBCountryPeru",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 104,
-      "symbol": "MBRegion",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 105,
-      "symbol": "MBRegion.MBRegionNone",
+      "line": 103,
+      "symbol": "MBCountry.MBCountryUruguay",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 106,
-      "symbol": "MBRegion.MBRegionAlabama",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "symbol": "MBRegion",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 106,
+      "symbol": "MBRegion",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 107,
-      "symbol": "MBRegion.MBRegionAlaska",
+      "symbol": "MBRegion.MBRegionNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 108,
-      "symbol": "MBRegion.MBRegionAlberta",
+      "symbol": "MBRegion.MBRegionAlabama",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 109,
-      "symbol": "MBRegion.MBRegionArizona",
+      "symbol": "MBRegion.MBRegionAlaska",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 110,
-      "symbol": "MBRegion.MBRegionArkansas",
+      "symbol": "MBRegion.MBRegionAlberta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 111,
-      "symbol": "MBRegion.MBRegionAustralianCapitalTerritory",
+      "symbol": "MBRegion.MBRegionArizona",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 112,
-      "symbol": "MBRegion.MBRegionBritishColumbia",
+      "symbol": "MBRegion.MBRegionArkansas",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 113,
-      "symbol": "MBRegion.MBRegionCalifornia",
+      "symbol": "MBRegion.MBRegionAustralianCapitalTerritory",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 114,
-      "symbol": "MBRegion.MBRegionColorado",
+      "symbol": "MBRegion.MBRegionBritishColumbia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 115,
-      "symbol": "MBRegion.MBRegionConnecticut",
+      "symbol": "MBRegion.MBRegionCalifornia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 116,
-      "symbol": "MBRegion.MBRegionDelaware",
+      "symbol": "MBRegion.MBRegionColorado",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 117,
-      "symbol": "MBRegion.MBRegionDistrictOfColumbia",
+      "symbol": "MBRegion.MBRegionConnecticut",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 118,
-      "symbol": "MBRegion.MBRegionFlorida",
+      "symbol": "MBRegion.MBRegionDelaware",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 119,
-      "symbol": "MBRegion.MBRegionGeorgia",
+      "symbol": "MBRegion.MBRegionDistrictOfColumbia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 120,
-      "symbol": "MBRegion.MBRegionHawaii",
+      "symbol": "MBRegion.MBRegionFlorida",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 121,
-      "symbol": "MBRegion.MBRegionIdaho",
+      "symbol": "MBRegion.MBRegionGeorgia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 122,
-      "symbol": "MBRegion.MBRegionIllinois",
+      "symbol": "MBRegion.MBRegionHawaii",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 123,
-      "symbol": "MBRegion.MBRegionIndiana",
+      "symbol": "MBRegion.MBRegionIdaho",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 124,
-      "symbol": "MBRegion.MBRegionIowa",
+      "symbol": "MBRegion.MBRegionIllinois",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 125,
-      "symbol": "MBRegion.MBRegionKansas",
+      "symbol": "MBRegion.MBRegionIndiana",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 126,
-      "symbol": "MBRegion.MBRegionKentucky",
+      "symbol": "MBRegion.MBRegionIowa",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 127,
-      "symbol": "MBRegion.MBRegionLouisiana",
+      "symbol": "MBRegion.MBRegionKansas",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 128,
-      "symbol": "MBRegion.MBRegionMaine",
+      "symbol": "MBRegion.MBRegionKentucky",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 129,
-      "symbol": "MBRegion.MBRegionManitoba",
+      "symbol": "MBRegion.MBRegionLouisiana",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 130,
-      "symbol": "MBRegion.MBRegionMaryland",
+      "symbol": "MBRegion.MBRegionMaine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 131,
-      "symbol": "MBRegion.MBRegionMassachusetts",
+      "symbol": "MBRegion.MBRegionManitoba",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 132,
-      "symbol": "MBRegion.MBRegionMichigan",
+      "symbol": "MBRegion.MBRegionMaryland",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 133,
-      "symbol": "MBRegion.MBRegionMinnesota",
+      "symbol": "MBRegion.MBRegionMassachusetts",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 134,
-      "symbol": "MBRegion.MBRegionMississippi",
+      "symbol": "MBRegion.MBRegionMichigan",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 135,
-      "symbol": "MBRegion.MBRegionMissouri",
+      "symbol": "MBRegion.MBRegionMinnesota",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 136,
-      "symbol": "MBRegion.MBRegionMontana",
+      "symbol": "MBRegion.MBRegionMississippi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 137,
-      "symbol": "MBRegion.MBRegionNebraska",
+      "symbol": "MBRegion.MBRegionMissouri",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 138,
-      "symbol": "MBRegion.MBRegionNevada",
+      "symbol": "MBRegion.MBRegionMontana",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 139,
-      "symbol": "MBRegion.MBRegionNewBrunswick",
+      "symbol": "MBRegion.MBRegionNebraska",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 140,
-      "symbol": "MBRegion.MBRegionNewHampshire",
+      "symbol": "MBRegion.MBRegionNevada",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 141,
-      "symbol": "MBRegion.MBRegionNewJersey",
+      "symbol": "MBRegion.MBRegionNewBrunswick",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 142,
-      "symbol": "MBRegion.MBRegionNewMexico",
+      "symbol": "MBRegion.MBRegionNewHampshire",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 143,
-      "symbol": "MBRegion.MBRegionNewSouthWales",
+      "symbol": "MBRegion.MBRegionNewJersey",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 144,
-      "symbol": "MBRegion.MBRegionNewYork",
+      "symbol": "MBRegion.MBRegionNewMexico",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 145,
-      "symbol": "MBRegion.MBRegionNorthernTerritory",
+      "symbol": "MBRegion.MBRegionNewSouthWales",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 146,
-      "symbol": "MBRegion.MBRegionNorthCarolina",
+      "symbol": "MBRegion.MBRegionNewYork",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 147,
-      "symbol": "MBRegion.MBRegionNorthDakota",
+      "symbol": "MBRegion.MBRegionNorthernTerritory",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 148,
-      "symbol": "MBRegion.MBRegionNovaScotia",
+      "symbol": "MBRegion.MBRegionNorthCarolina",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 149,
-      "symbol": "MBRegion.MBRegionOhio",
+      "symbol": "MBRegion.MBRegionNorthDakota",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 150,
-      "symbol": "MBRegion.MBRegionOklahoma",
+      "symbol": "MBRegion.MBRegionNovaScotia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 151,
-      "symbol": "MBRegion.MBRegionOntario",
+      "symbol": "MBRegion.MBRegionOhio",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 152,
-      "symbol": "MBRegion.MBRegionOregon",
+      "symbol": "MBRegion.MBRegionOklahoma",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 153,
-      "symbol": "MBRegion.MBRegionPennsylvania",
+      "symbol": "MBRegion.MBRegionOntario",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 154,
-      "symbol": "MBRegion.MBRegionQuebec",
+      "symbol": "MBRegion.MBRegionOregon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 155,
-      "symbol": "MBRegion.MBRegionQueensland",
+      "symbol": "MBRegion.MBRegionPennsylvania",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 156,
-      "symbol": "MBRegion.MBRegionRhodeIsland",
+      "symbol": "MBRegion.MBRegionQuebec",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 157,
-      "symbol": "MBRegion.MBRegionSaskatchewan",
+      "symbol": "MBRegion.MBRegionQueensland",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 158,
-      "symbol": "MBRegion.MBRegionSouthAustralia",
+      "symbol": "MBRegion.MBRegionRhodeIsland",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 159,
-      "symbol": "MBRegion.MBRegionSouthCarolina",
+      "symbol": "MBRegion.MBRegionSaskatchewan",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 160,
-      "symbol": "MBRegion.MBRegionSouthDakota",
+      "symbol": "MBRegion.MBRegionSouthAustralia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 161,
-      "symbol": "MBRegion.MBRegionTasmania",
+      "symbol": "MBRegion.MBRegionSouthCarolina",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 162,
-      "symbol": "MBRegion.MBRegionTennessee",
+      "symbol": "MBRegion.MBRegionSouthDakota",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 163,
-      "symbol": "MBRegion.MBRegionTexas",
+      "symbol": "MBRegion.MBRegionTasmania",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 164,
-      "symbol": "MBRegion.MBRegionUtah",
+      "symbol": "MBRegion.MBRegionTennessee",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 165,
-      "symbol": "MBRegion.MBRegionVermont",
+      "symbol": "MBRegion.MBRegionTexas",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 166,
-      "symbol": "MBRegion.MBRegionVictoria",
+      "symbol": "MBRegion.MBRegionUtah",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 167,
-      "symbol": "MBRegion.MBRegionVirginia",
+      "symbol": "MBRegion.MBRegionVermont",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 168,
-      "symbol": "MBRegion.MBRegionWashington",
+      "symbol": "MBRegion.MBRegionVictoria",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 169,
-      "symbol": "MBRegion.MBRegionWesternAustralia",
+      "symbol": "MBRegion.MBRegionVirginia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 170,
-      "symbol": "MBRegion.MBRegionWestVirginia",
+      "symbol": "MBRegion.MBRegionWashington",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 171,
-      "symbol": "MBRegion.MBRegionWisconsin",
+      "symbol": "MBRegion.MBRegionWesternAustralia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 172,
-      "symbol": "MBRegion.MBRegionWyoming",
+      "symbol": "MBRegion.MBRegionWestVirginia",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 173,
+      "symbol": "MBRegion.MBRegionWisconsin",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 174,
+      "symbol": "MBRegion.MBRegionWyoming",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 175,
       "symbol": "MBRegion.MBRegionYukon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
@@ -1242,189 +1277,231 @@
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 176,
-      "symbol": "MBType",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 176,
-      "symbol": "MBType",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "symbol": "MBRegion.MBRegionCiudadDeMexico",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 177,
-      "symbol": "MBType.MBTypeNone",
+      "symbol": "MBRegion.MBRegionJalisco",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 178,
-      "symbol": "MBType.MBTypeConsularId",
+      "symbol": "MBRegion.MBRegionNewfoundlandAndLabrador",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 179,
-      "symbol": "MBType.MBTypeDl",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 180,
-      "symbol": "MBType.MBTypeDlPublicServicesCard",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 181,
-      "symbol": "MBType.MBTypeEmploymentPass",
+      "symbol": "MBRegion.MBRegionNuevoLeon",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 182,
-      "symbol": "MBType.MBTypeFinCard",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "symbol": "MBType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 182,
+      "symbol": "MBType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 183,
-      "symbol": "MBType.MBTypeId",
+      "symbol": "MBType.MBTypeNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 184,
-      "symbol": "MBType.MBTypeMultipurposeId",
+      "symbol": "MBType.MBTypeConsularId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 185,
-      "symbol": "MBType.MBTypeMyKad",
+      "symbol": "MBType.MBTypeDl",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 186,
-      "symbol": "MBType.MBTypeMyKid",
+      "symbol": "MBType.MBTypeDlPublicServicesCard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 187,
-      "symbol": "MBType.MBTypeMyPR",
+      "symbol": "MBType.MBTypeEmploymentPass",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 188,
-      "symbol": "MBType.MBTypeMyTentera",
+      "symbol": "MBType.MBTypeFinCard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 189,
-      "symbol": "MBType.MBTypePanCard",
+      "symbol": "MBType.MBTypeId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 190,
-      "symbol": "MBType.MBTypeProfessionalId",
+      "symbol": "MBType.MBTypeMultipurposeId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 191,
-      "symbol": "MBType.MBTypePublicServicesCard",
+      "symbol": "MBType.MBTypeMyKad",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 192,
-      "symbol": "MBType.MBTypeResidencePermit",
+      "symbol": "MBType.MBTypeMyKid",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 193,
-      "symbol": "MBType.MBTypeResidentId",
+      "symbol": "MBType.MBTypeMyPR",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 194,
-      "symbol": "MBType.MBTypeTemporaryResidencePermit",
+      "symbol": "MBType.MBTypeMyTentera",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 195,
-      "symbol": "MBType.MBTypeVoterId",
+      "symbol": "MBType.MBTypePanCard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 196,
-      "symbol": "MBType.MBTypeWorkPermit",
+      "symbol": "MBType.MBTypeProfessionalId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 197,
-      "symbol": "MBType.MBTypeiKad",
+      "symbol": "MBType.MBTypePublicServicesCard",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 198,
-      "symbol": "MBType.MBTypeMilitaryId",
+      "symbol": "MBType.MBTypeResidencePermit",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 199,
-      "symbol": "MBType.MBTypeMyKas",
+      "symbol": "MBType.MBTypeResidentId",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 200,
-      "symbol": "MBType.MBTypeSocialSecurityCard",
+      "symbol": "MBType.MBTypeTemporaryResidencePermit",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
       "line": 201,
+      "symbol": "MBType.MBTypeVoterId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 202,
+      "symbol": "MBType.MBTypeWorkPermit",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 203,
+      "symbol": "MBType.MBTypeiKad",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 204,
+      "symbol": "MBType.MBTypeMilitaryId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 205,
+      "symbol": "MBType.MBTypeMyKas",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 206,
+      "symbol": "MBType.MBTypeSocialSecurityCard",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 207,
       "symbol": "MBType.MBTypeHealthInsuranceCard",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 208,
+      "symbol": "MBType.MBTypePassport",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "line": 209,
+      "symbol": "MBType.MBTypeSPass",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
@@ -1528,7 +1605,7 @@
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBDocumentFaceRecognizer.h",
-      "line": 28,
+      "line": 29,
       "symbol": "MBDocumentFaceRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1755,6 +1832,13 @@
       "line": 11,
       "symbol": "MBEncodedSignatureImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBErrorReticle.h",
+      "line": 19,
+      "symbol": "MBErrorReticle.errorColor",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
@@ -2346,6 +2430,62 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 13,
+      "symbol": "MBLicenseErrorNotification",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 15,
+      "symbol": "MBLicenseError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 15,
+      "symbol": "MBLicenseError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 16,
+      "symbol": "MBLicenseError.MBLicenseErrorNetworkRequired",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 17,
+      "symbol": "MBLicenseError.MBLicenseErrorUnableToDoRemoteLicenceCheck",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 18,
+      "symbol": "MBLicenseError.MBLicenseErrorLicenseIsLocked",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 19,
+      "symbol": "MBLicenseError.MBLicenseErrorLicenseCheckFailed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLicenseError.h",
+      "line": 22,
+      "symbol": "MBLicenseErrorBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBLogger.h",
       "line": 13,
       "symbol": "MBLogLevel",
@@ -2473,14 +2613,14 @@
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBMicroblinkDefines.h",
-      "line": 26,
+      "line": 29,
       "symbol": "MBBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-macpro2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.framework/Headers/MBMicroblinkSDK.h",
-      "line": 20,
+      "line": 21,
       "symbol": "MBMicroblinkSDK.+sharedInstance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
