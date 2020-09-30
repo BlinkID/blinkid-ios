@@ -21,6 +21,9 @@
 #import "MBFullDocumentImageExtensionFactors.h"
 #import "MBAnonymizationMode.h"
 #import "MBRecognitionModeFilter.h"
+#import "MBSignatureImage.h"
+#import "MBSignatureImageDpi.h"
+#import "MBEncodeSignatureImage.h"
 
 @protocol MBBlinkIdCombinedRecognizerDelegate;
 
@@ -30,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Recognizer which can scan front and back side of the United States driver license.
  */
 MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
-@interface MBBlinkIdCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors>
+@interface MBBlinkIdCombinedRecognizer : MBRecognizer<NSCopying, MBCombinedRecognizer, MBDigitalSignature, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors, MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage>
 
 MB_INIT
 

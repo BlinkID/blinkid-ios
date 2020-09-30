@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Acercarse";
 "mb_blinkid_camera_near" = "Alejarse";
 "mb_blinkid_document_too_close_to_edge" = "Mueva el documento desde el borde";
+"mb_check_internet_connection" = "Verifique su conexión a Internet";
+"mb_close" = "Cerrar";
 "mb_data_not_match_msg" = "Por favor, inicie el proceso de escaneo de nuevo.";
 "mb_data_not_match_retry_button" = "Reintentar";
 "mb_data_not_match_title" = "Los lados no coinciden";
+"mb_flashlight_glare_tooltip" = "Tenga cuidado con el resplandor de la linterna.\nMueva suavemente su ID a su alrededor para evitarlo.";
+"mb_network_error" = "Error de red";
 "mb_recognition_timeout_dialog_message" = "No se puede leer el documento. Por favor, inténtelo de nuevo.";
 "mb_recognition_timeout_dialog_title" = "Escaneo fallido";
+"mb_scanning_not_available" = "Escaneo no disponible";
 "mb_tooltip_glare" = "Mueva ligeramente la identificación para eliminar el deslumbramiento.";
 "mb_unsupported_document_message" = "Escanee la parte frontal de un documento compatible.";
 "mb_unsupported_document_title" = "Documento no reconocido";

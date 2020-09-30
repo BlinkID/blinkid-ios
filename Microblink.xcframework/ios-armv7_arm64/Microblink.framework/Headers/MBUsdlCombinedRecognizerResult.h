@@ -42,9 +42,19 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *firstName;
 
 /**
+ * The middle name of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *middleName;
+
+/**
  * The last name of the United States driver license owner.
  */
 @property (nonatomic, readonly, nullable) NSString *lastName;
+
+/**
+ * The name suffix of the United States driver license owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *nameSuffix;
 
 /**
  * The full name of the United States driver license owner.

@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Mohon dekatkan";
 "mb_blinkid_camera_near" = "Mohon jauhkan";
 "mb_blinkid_document_too_close_to_edge" = "Gerakkan dokumen dari tepian";
+"mb_check_internet_connection" = "Cek koneksi internet";
+"mb_close" = "Tutup";
 "mb_data_not_match_msg" = "Mohon ulangi proses pemindaian dari awal.";
 "mb_data_not_match_retry_button" = "Coba Lagi";
 "mb_data_not_match_title" = "Sisi tidak cocok";
+"mb_flashlight_glare_tooltip" = "Waspadai kilau blitz.\nPindahkan ID Anda dengan perlahan untuk menghindarinya.";
+"mb_network_error" = "Kesalahan jaringan";
 "mb_recognition_timeout_dialog_message" = "Tak dapat membaca dokumen. Silakan coba lagi.";
 "mb_recognition_timeout_dialog_title" = "Pemindaian gagal";
+"mb_scanning_not_available" = "Pemindaian tidak tersedia";
 "mb_tooltip_glare" = "Geser sedikit kartu identitas untuk menghilangkan silau.";
 "mb_unsupported_document_message" = "Pindai sisi depan dokumen yang didukung.";
 "mb_unsupported_document_title" = "Dokumen tak dikenali";

@@ -9,26 +9,30 @@
 
 # BlinkID SDK for iOS
 
-BlinkID SDK enables scanning of over 500 international identity documents, including driving licenses, national identity cards, passports, and others. SDK includes:
+Reimagine the way your users fill in their information with BlinkID iOS SDK. Fast, accurate and secure identity document scanning of more than 180 countries worldwide.
 
-- Real-time data and document photo extraction using on-device Machine Learning
-- Offline, on-device processing for maximum security and privacy
-- Front and back side data capture and comparison
-- A beautiful and frictionless scanning UX
-- Layered API, allowing everything from simple integration to complex UX customizations. 
+BlinkID is:
 
-To quickly integrate the SDK into your app, follow our [Quick Start](#quick-start) guide.
-
-If you'd like to try BlinkID without coding, simply download the free Microblink Vision demo app:
-
-[![Vision App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
+* **Fast.** Real-time data extraction in less than 400ms. Way better than minutes-long form-filling.
+* **Secure.** Privacy first, always. Scanning works even if the user’s iPhone is in airplane mode, meaning personal information never touches a third-party server.
+* **Intelligent.** Machine learning models, optimized to read and parse virtually any identity document in the world, be it a Malaysian MyTentera or a Californian driver license.   
+* **Lightweight.** Designed to increase your app’s usability, not weight.  
+* **What you make of it.** Customize and rebrand the default UI or leave it as it is. It’s up to you.
+* **More than just a powerful ID scanner.** Powerful data extraction, coupled with powerful perks. Get a cropped document image back, spot printed identity documents or data match both sides of the ID for parity.
 
 <p align="center" >
   <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
-    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-v5.gif" alt="BlinkID SDK">
+    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/BlinkID-new.gif" alt="BlinkID SDK">
   </a>
 </p>
 
+To see all of these features at work, download our free demo app:
+
+[![Vision App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
+
+Feeling ready to get going with the integration? First, make sure we support your document type ➡️ [full list](https://microblink.com/blog/full-list-of-identity-documents-you-can-scan-with-blinkid). And then carefully follow the guidelines below.
+
+*Updating to a newer version of the SDK? Go to our 📚 [release notes](https://github.com/BlinkID/blinkid-ios/blob/master/CHANGELOG.md) to see what’s changed.*
 # Table of contents
 
 - [Requirements](#requirements)
@@ -103,7 +107,7 @@ pod init
 ```ruby
 platform :ios, '8.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.7.1'
+    pod 'PPBlinkID', '~> 5.8.0'
 end
 ```
 

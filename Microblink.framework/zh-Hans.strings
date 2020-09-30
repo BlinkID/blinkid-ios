@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "靠近一些";
 "mb_blinkid_camera_near" = "离远一些";
 "mb_blinkid_document_too_close_to_edge" = "从边缘移动文件";
+"mb_check_internet_connection" = "检查网络连接";
+"mb_close" = "关闭";
 "mb_data_not_match_msg" = "请重新开始扫描过程。";
 "mb_data_not_match_retry_button" = "重试";
 "mb_data_not_match_title" = "页数不匹配";
+"mb_flashlight_glare_tooltip" = "当心闪光灯眩光。\n请轻轻移动您的身份证件,避免产生眩光。";
+"mb_network_error" = "网络错误";
 "mb_recognition_timeout_dialog_message" = "未能读取文件,请重试。";
 "mb_recognition_timeout_dialog_title" = "扫描失败";
+"mb_scanning_not_available" = "扫描不可用";
 "mb_tooltip_glare" = "稍稍移动证件,消除眩光。";
 "mb_unsupported_document_message" = "扫描支持文件类型的正面。";
 "mb_unsupported_document_title" = "未能识别文件";

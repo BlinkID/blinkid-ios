@@ -1,5 +1,160 @@
 # Release notes
 
+## 5.8.0
+
+### New features:
+* We added user feedback when turning on the flashlight on `MBBlinkIdOverlayViewcontroller`:
+	* It prompts user to watch out for flashlight glare
+	* It can be disabled by setting `showFlashlightWarning` property to NO/false on `MBBlinkIdOverlaySettings`
+* We added `MBBlinkIdOverlayViewController` customization:
+	* Set font, text color, corner radius and custom images
+	* Use [`MBBlinkIdOverlayTheme`](https://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayTheme.html)
+
+### New additions to our supported documents list
+#### Plastic page passports
+We added support for scanning the visual inspection zone - VIZ includes everything except MRZ or barcode. Keep in mind that BlinkID scans and extracts data only from the VIZ that is on the first **plastic page** found in the passport list below:
+
+* **Chile** Passport (BETA)
+* **Colombia** Passport
+* **Croatia** Passport
+* **Denmark** Passport
+* **Finland** Passport (BETA)
+* **Germany** Passport
+* **Hong Kong** Passport (BETA)
+* **Ireland** Passport (BETA)
+* **Malaysia** Passport
+* **Netherlands** Passport
+* **New Zealand** Passport
+* **Norway** Passport
+* **Singapore** Passport
+* **South Africa** Passport
+* **Sweden** Passport
+* **Turkey** Passport (BETA)
+
+If you need to scan the MRZ only, you can always set the "MRZ Passport" [recognition mode](https://blinkid.github.io/blinkid-ios/Classes/MBRecognitionModeFilter.html#/c:objc(cs)MBRecognitionModeFilter(py)enableMrzPassport).
+​
+#### Vertical US documents
+* **California** ID
+* **Illinois** ID
+* **New York** ID
+* **North Carolina** ID
+* **Texas** ID
+
+
+#### Other documents
+* **Canada** Newfoundland and Labrador DL
+* **Croatia** Residence Permit (BETA)
+* **Guatemala** Consular ID
+* **Malaysia** MyKAS (BETA)
+* **Mexico** Jalisco DL / front side only
+* **Mexico** Nuevo Leon DL (BETA)
+* **Peru** ID (BETA)
+* **Singapore** S Pass (BETA)
+* **Uruguay** ID / front side only
+* **USA** Missouri ID
+* **USA** Texas ID
+
+#### European DLs with a single line MRZ
+BlinkID extracts data from driver’s licenses that contain single line MRZ:
+
+* **Croatia** DL
+* **Estonia** DL
+* **France** DL
+* **Ireland** DL
+* **Netherlands** DL
+* **Slovakia** DL
+
+#### Back side supported on:
+* **Azerbaijan** ID
+* **Singapore** DL
+* **Singapore** Employment Pass
+
+#### No longer BETA
+* **Slovakia** DL
+
+### New features and updates in MBBlinkID(Combined)Recognizer
+* We added `signatureImage` to the result. Extract signature image from the documents below:
+	* Australia Victoria DL
+	* Austria ID
+	* Austria DL
+	* Brunei Military ID
+	* Colombia ID
+	* Croatia ID (on 2013 and 2015 versions)
+	* Cyrus ID
+	* Czechia ID (on the 2012 version)
+	* Germany ID (2010 version)
+	* Germany DL (2013 version)
+	* Indonesia ID
+	* Ireland DL
+	* Italy DL
+	* Mexico Voter ID
+	* New Zealand DL
+	* Slovenia ID
+	* Spain DL
+	* Sweden DL
+	* Switzerland ID
+	* UAE ID
+	* UAE Resident ID
+
+* We enabled extraction of the **date of birth** from the **NRIC** from Malaysian documents:
+	* MyKad
+	* MyKas
+	* MyKid
+	* MyPR
+	* MyTentera
+
+* We added anonymization support for:
+	* MRZ (OPT2 containing the ID number) on China Mainland Travel Permit Hong Kong
+	* MRZ (Document number) on Germany Alien Passport
+	* Document number, MRZ (Document number) on Germany ID
+	* MRZ (Document number) on Germany Minors Passport
+	* MRZ (Document number) on Germany Passport
+	* Document number on Hong Kong ID
+	* MRZ (Document number, OPT1 containing the passport or ID number) on Hong Kong Passport
+	* Personal ID number on Netherlands DL
+	* Personal ID number, MRZ (OPT1 containing the BSN) on Netherlands ID
+	* MRZ (OPT1 containing the BSN) on Netherlands Passport
+	* Document number on Singapore DL
+	* Personal ID number on Singapore Employment Pass
+	* Document number on Singapore FIN Card
+	* Document number on Singapore ID
+	* MRZ (Document number, OPT1 containing the NRIC) on Singapore Passport
+	* Document number on Singapore Resident ID
+	* Document number on Singapore S Pass
+	* Personal ID number on Singapore Work Permit
+	* MRZ (OPT1 containing the resident registration number) on South Korea Diplomatic Passport 
+	* MRZ (OPT1 containing the resident registration number) on South Korea Passport
+	* MRZ (OPT1 containing the resident registration number) on South Korea Residence Passport
+	* MRZ (OPT1 containing the resident registration number) on South Korea Service Passport
+	* MRZ (OPT1 containing the resident registration number) on South Korea Temporary Passport
+* We improved MRZ data extraction on:
+	* **Russia Passport**
+
+### Other features and updates
+
+* We added the field `middleName` to `MBBlinkID(Combined)Recognizer`, `MBIdBarcodeRecognizer` and `MBUsdl(Combined)Recognizer` results. This field is extracted from AAMVA standard compliant barcodes, whenever available.
+
+### Deprecated recognizers
+* We have deprecated following recognizers:
+	* `MBDocumentFaceRecognizer`
+	* `MBMrtdRecognizer`
+		* **Use `MBBlinkIdRecognizer` instead**
+	* `MBMrtdCombinedRecognizer`
+	* `MBPassportRecognizer`
+	* `MBVisaRecognizer`
+		* **Use `MBBlinkIdRecognizer` or `MBBlinkIdCombinedRecongizer` instead**
+	* `MBUsdlRecognizer`
+		* **Use `MBIdBarcodeRecognizer` instead**
+
+### Major API change:
+* We added `errorCallback` on `MBMicroblinkSDK` methods which needs to be implemented for properly setting up the license key.
+
+### Fixes
+* We improved the data match logic for **Guatemala Consular ID** in `MBBlinkID(Combined)Recognizer`.
+* We fixed race conditions and camera asserts that could sometimes cause crashes.
+* We fixed camera reticle animation on `MBBlinkIdOverlayViewController` when user would go to the background.
+* We fixed SDK localization that was broken when device language is set to Chinese Simplified.
+
 ## 5.7.1
 
 ### Major bug fix:

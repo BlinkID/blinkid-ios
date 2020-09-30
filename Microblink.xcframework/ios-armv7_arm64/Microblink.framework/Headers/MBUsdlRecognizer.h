@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * A recognizer that can scan USDL.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBIdBarcodeRecognizer.") MB_FINAL
 @interface MBUsdlRecognizer : MBRecognizer<NSCopying>
 
 MB_INIT

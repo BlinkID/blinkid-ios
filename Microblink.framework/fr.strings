@@ -5,11 +5,16 @@
 "mb_blinkid_camera_high" = "Rapprochez-vous";
 "mb_blinkid_camera_near" = "Éloignez-vous";
 "mb_blinkid_document_too_close_to_edge" = "Déplacer le document du bord";
+"mb_check_internet_connection" = "Vérifiez la connexion internet";
+"mb_close" = "Fermer";
 "mb_data_not_match_msg" = "Veuillez recommencer le processus de numérisation.";
 "mb_data_not_match_retry_button" = "Réessayez";
 "mb_data_not_match_title" = "Les côtés ne correspondent pas";
+"mb_flashlight_glare_tooltip" = "Attention aux reflets de la lampe de poche.\nBougez doucement votre pièce d'identité pour les éviter.";
+"mb_network_error" = "Erreur de réseau";
 "mb_recognition_timeout_dialog_message" = "Impossible de lire le document. Veuillez réessayer.";
 "mb_recognition_timeout_dialog_title" = "Numérisation infructueuse";
+"mb_scanning_not_available" = "Numérisation non disponible";
 "mb_tooltip_glare" = "Déplacez légèrement la carte d'identité pour éliminer les reflets.";
 "mb_unsupported_document_message" = "Numérisez le recto d'un document pris en charge.";
 "mb_unsupported_document_title" = "Document non reconnu";

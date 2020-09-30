@@ -71,6 +71,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)recognizerRunnerViewControllerDidStopScanning:(nonnull UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewController;
 
+@optional
+/**
+ * Called  when Scanning library will turn on/off torch.
+ *
+ *  @param recognizerRunnerViewController recognizerRunnerViewController Recognizer runner view controller responsible for scanning
+ *  @param isTorchOn isTorchOn Returns YES if torch mode was set successfully, otherwise NO.
+ */
+- (void)recognizerRunnerViewController:(nonnull UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewController willSetTorch:(BOOL)isTorchOn;
+
 @end
 
 NS_ASSUME_NONNULL_END

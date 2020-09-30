@@ -69,6 +69,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *firstName;
 
 /**
+* The middle name of the document owner.
+*/
+@property (nonatomic, readonly) NSString *middleName;
+
+/**
 * The full name of the document owner.
 */
 @property (nonatomic, readonly) NSString *fullName;
