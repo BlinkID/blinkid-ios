@@ -13,6 +13,7 @@
 	- Please check out our guide for implementation
 - We added `Swift Package Manager` support
 	- Please check out our guide for implementation.
+- We’ve introduced a new `MBFrameRecognitionRecognizerRunnerViewControllerDelegate` protocol which is invoked each time a camera frame from a video stream is recognized.
 
 ### Note on ARM Macs
 
