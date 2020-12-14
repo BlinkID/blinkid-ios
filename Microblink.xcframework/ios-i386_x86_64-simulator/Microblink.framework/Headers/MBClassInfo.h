@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 MB_CLASS_AVAILABLE_IOS(8.0)
-@interface MBClassInfo : NSObject
+@interface MBClassInfo : NSObject <NSSecureCoding>
 
 - (instancetype)init NS_UNAVAILABLE;
 

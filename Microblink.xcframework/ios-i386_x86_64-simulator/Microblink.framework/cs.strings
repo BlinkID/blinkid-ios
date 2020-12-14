@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Spusťte proces skenování znovu.";
 "mb_data_not_match_retry_button" = "Opakovat";
 "mb_data_not_match_title" = "Strany neodpovídají";
+"mb_error_mandatory_field_missing" = "Ponechat dokument zcela viditelný";
 "mb_flashlight_glare_tooltip" = "Dejte pozor na odlesky způsobené bleskem.\nVyhnete se jim lehkým posunutím vašeho průkazu.";
 "mb_network_error" = "Chyba sítě";
 "mb_recognition_timeout_dialog_message" = "Dokument se nepodařilo přečíst. Zkuste to znovu.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Skenování dokumentu dokončeno";
 "photopay_front_splash_verification_document" = "Přední strana";
 "photopay_front_verification_document" = "Umístěte přední stranu dokumentu do rámečku a počkejte na automatické skenování.";
+"photopay_grant_camera_permission_button_title" = "Udělit povolení fotoaparátu";
 "photopay_id_position_tooltip" = "Pozice ID karty v tomto Rámu";

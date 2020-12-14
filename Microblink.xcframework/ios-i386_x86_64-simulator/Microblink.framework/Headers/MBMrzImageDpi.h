@@ -18,7 +18,7 @@
  *
  * Default: 250
  */
-@property (nonatomic, assign) NSUInteger mrzImageDpi;
+@property (nonatomic, assign) NSInteger mrzImageDpi;
 
 @end
 

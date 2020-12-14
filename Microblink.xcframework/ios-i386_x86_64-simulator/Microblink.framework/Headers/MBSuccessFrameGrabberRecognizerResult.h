@@ -23,7 +23,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 MB_INIT_UNAVAILABLE
 
 /**
- * Success frame PPImage of successful frame
+ * Success frame MBImage of successful frame
  */
 @property (nonatomic, strong, readonly) MBImage *successFrame;
 

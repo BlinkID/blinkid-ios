@@ -16,7 +16,8 @@ typedef NS_ENUM(NSInteger, MBLicenseError) {
     MBLicenseErrorNetworkRequired,
     MBLicenseErrorUnableToDoRemoteLicenceCheck,
     MBLicenseErrorLicenseIsLocked,
-    MBLicenseErrorLicenseCheckFailed
+    MBLicenseErrorLicenseCheckFailed,
+    MBLicenseErrorInvalidLicense
 };
 
 typedef void(^MBLicenseErrorBlock)(MBLicenseError licenseError);

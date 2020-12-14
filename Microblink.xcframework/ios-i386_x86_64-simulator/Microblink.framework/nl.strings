@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Begin het scanproces alstublieft nogmaals.";
 "mb_data_not_match_retry_button" = "Probeer opnieuw";
 "mb_data_not_match_title" = "Zijdes komen niet overeen";
+"mb_error_mandatory_field_missing" = "Het document volledig zichtbaar houden";
 "mb_flashlight_glare_tooltip" = "Pas op voor schittering van de flitser.\nVerplaats uw ID voorzichtig om dit te voorkomen.";
 "mb_network_error" = "Netwerkfout";
 "mb_recognition_timeout_dialog_message" = "Kon het document niet lezen. Probeer het alstublieft opnieuw.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Scannen van document gereed";
 "photopay_front_splash_verification_document" = "Voorzijde";
 "photopay_front_verification_document" = "Plaats de voorzijde van het document in het kader en wacht op de automatische scan.";
+"photopay_grant_camera_permission_button_title" = "Geef cameratoestemming";
 "photopay_id_position_tooltip" = "Positioneer ID-kaart in dit kader";

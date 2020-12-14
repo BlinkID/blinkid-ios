@@ -35,7 +35,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 
 /**
  * UIImage of wrapped image.
- * If this PPImage wasn't created with UIImage, UIImage will be created with first access of this property.
+ * If this MBImage wasn't created with UIImage, UIImage will be created with first access of this property.
  */
 @property (nonatomic, readonly, nullable) UIImage *image;
 
@@ -82,7 +82,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic) BOOL cameraFrame;
 
 /**
- * Creates PPImage around UIImage.
+ * Creates MBImage around UIImage.
  */
 + (instancetype)imageWithUIImage:(UIImage *)image;
 

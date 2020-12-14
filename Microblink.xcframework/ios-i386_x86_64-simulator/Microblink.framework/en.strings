@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Please start the scanning process over.";
 "mb_data_not_match_retry_button" = "Retry";
 "mb_data_not_match_title" = "Sides don’t match";
+"mb_error_mandatory_field_missing" = "Keep the document fully visible";
 "mb_flashlight_glare_tooltip" = "Watch out for flashlight glare.\nGently move your ID around to avoid it.";
 "mb_network_error" = "Network error";
 "mb_recognition_timeout_dialog_message" = "Unable to read the document. Please try again.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Document scanning done";
 "photopay_front_splash_verification_document" = "Front side";
 "photopay_front_verification_document" = "Place the front side of the document in the frame and wait for automatic scan.";
+"photopay_grant_camera_permission_button_title" = "Grant camera permission";
 "photopay_id_position_tooltip" = "Position ID card in this Frame";

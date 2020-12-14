@@ -81,7 +81,7 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  *
  * Default: 6
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
 
 MB_INIT
 

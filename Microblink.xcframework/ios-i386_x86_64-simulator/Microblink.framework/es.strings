@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Por favor, inicie el proceso de escaneo de nuevo.";
 "mb_data_not_match_retry_button" = "Reintentar";
 "mb_data_not_match_title" = "Los lados no coinciden";
+"mb_error_mandatory_field_missing" = "Mantenga el documento visible en su totalidad";
 "mb_flashlight_glare_tooltip" = "Tenga cuidado con el resplandor de la linterna.\nMueva suavemente su ID a su alrededor para evitarlo.";
 "mb_network_error" = "Error de red";
 "mb_recognition_timeout_dialog_message" = "No se puede leer el documento. Por favor, inténtelo de nuevo.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Escaneo del documento realizado";
 "photopay_front_splash_verification_document" = "Lado frontal";
 "photopay_front_verification_document" = "Ponga el lado delantero del documento en el marco y espere a que se haga el escaneo automático.";
+"photopay_grant_camera_permission_button_title" = "Otorgar permiso a la cámara";
 "photopay_id_position_tooltip" = "Ponga la tarjeta identificativa en este marco";

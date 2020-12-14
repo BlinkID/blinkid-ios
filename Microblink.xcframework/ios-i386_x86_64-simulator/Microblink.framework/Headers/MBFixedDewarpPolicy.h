@@ -28,14 +28,14 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  * @param dewarpHeight Desired dewarp height in pixels. Note that if device does not support given
  *                     dewarp height, the max supported by the device will be used.
  */
-- (instancetype)initWithDewarpHeight:(NSUInteger)dewarpHeight NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDewarpHeight:(NSInteger)dewarpHeight NS_DESIGNATED_INITIALIZER;
 
 /**
  * Returns the desired dewarp height (in pixels) as specified by this policy.
  *
  * Default: 100
  */
-@property (nonatomic, assign, readonly) NSUInteger dewarpHeight;
+@property (nonatomic, assign, readonly) NSInteger dewarpHeight;
 
 @end
 

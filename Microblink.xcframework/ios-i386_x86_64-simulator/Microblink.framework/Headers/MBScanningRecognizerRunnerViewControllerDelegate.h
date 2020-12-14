@@ -35,6 +35,6 @@
  *
  */
 
-- (void)recognizerRunnerViewController:(nonnull UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewController didFinishScanningWithState:(MBRecognizerResultState)state;
+- (void)recognizerRunnerViewControllerDidFinishScanning:(nonnull UIViewController<MBRecognizerRunnerViewController> *)recognizerRunnerViewController state:(MBRecognizerResultState)state;
 
 @end

@@ -131,6 +131,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *documentAdditionalNumber;
 
 /**
+ * The one more additional number of the document.
+ */
+@property (nonatomic, readonly, nullable) NSString *documentOptionalAdditionalNumber;
+
+/**
 * TThe additional personal identification number.
 */
 @property (nonatomic, readonly) NSString *additionalPersonalIdNumber;

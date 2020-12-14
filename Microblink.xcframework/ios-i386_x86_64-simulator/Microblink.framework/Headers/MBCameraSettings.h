@@ -74,7 +74,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Camera preset. With this property you can set the resolution of the camera
  *
- * Default: PPCameraPresetOptimal
+ * Default: MBCameraPresetOptimal
  */
 @property (nonatomic, assign) MBCameraPreset cameraPreset;
 
@@ -98,7 +98,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Range restriction for camera autofocus.
  *
- * Default: PPCameraAutofocusRestrictionNone
+ * Default: MBCameraAutofocusRestrictionNone
  */
 @property (nonatomic, assign) MBCameraAutofocusRestriction cameraAutofocusRestriction;
 

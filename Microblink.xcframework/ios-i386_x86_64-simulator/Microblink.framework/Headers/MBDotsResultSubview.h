@@ -46,7 +46,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * Default: 50
  */
-@property (assign, nonatomic) NSUInteger dotCount;
+@property (assign, nonatomic) NSInteger dotCount;
 
 @end
 

@@ -32,14 +32,14 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 /**
  * @param maxAllowedDewarpHeight Max allowed dewarp height.
  */
-- (instancetype)initWithMaxAllowedDewarpHeight:(NSUInteger)maxAllowedDewarpHeight NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMaxAllowedDewarpHeight:(NSInteger)maxAllowedDewarpHeight NS_DESIGNATED_INITIALIZER;
 
 /**
  * Returns the max allowed dewarp height as specified by this policy.
  *
  * Default: 400
  */
-@property (nonatomic, assign, readonly) NSUInteger maxAllowedDewarpHeight;
+@property (nonatomic, assign, readonly) NSInteger maxAllowedDewarpHeight;
 
 @end
 

@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Xin vui lòng bắt đầu lại quá trình quét.";
 "mb_data_not_match_retry_button" = "Thử lại";
 "mb_data_not_match_title" = "Các mặt không khớp";
+"mb_error_mandatory_field_missing" = "Giữ văn bản hiển thị hoàn toàn";
 "mb_flashlight_glare_tooltip" = "Coi chừng lóa sáng do đèn flash.\nNhẹ nhàng di chuyển giấy tờ của bạn qua lại để chống lóa.";
 "mb_network_error" = "Lỗi mạng";
 "mb_recognition_timeout_dialog_message" = "Không thể đọc tài liệu. Xin vui lòng thử lại.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Đã quét xong tài liệu";
 "photopay_front_splash_verification_document" = "Mặt trước";
 "photopay_front_verification_document" = "Đặt mặt trước của tài liệu vào khung và chờ quét tự động.";
+"photopay_grant_camera_permission_button_title" = "Cấp quyền sử dụng máy ảnh";
 "photopay_id_position_tooltip" = "Căn chỉnh thẻ ID vào trong Khung này";

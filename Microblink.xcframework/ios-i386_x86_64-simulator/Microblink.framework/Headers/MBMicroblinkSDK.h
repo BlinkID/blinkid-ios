@@ -42,7 +42,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param licenseBuffer Byte array containing the license.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license buffer and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -53,14 +53,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param licensee Licensee to which license is given to.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer andLicensee:(NSString * _Nonnull)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseBuffer:(NSData * _Nonnull)licenseBuffer andLicensee:(NSString * _Nonnull)licensee errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license key and unlock the SDK. Application package will be used to validate the license.
  * @param base64LicenseKey License file encoded as base64 string.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set license key and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -71,7 +71,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param licensee Licensee to which license is given to.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey andLicensee:(NSString * _Nonnull)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseKey:(NSString * _Nonnull)base64LicenseKey andLicensee:(NSString * _Nonnull)licensee errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set the license file and unlock the SDK. Application package will be used to validate the license.
@@ -81,7 +81,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param bundle NSBundle bundle required to access file.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Set the license file and unlock the SDK. Also define licensee that will be used to validate the license.
@@ -95,7 +95,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * @param licensee Licensee to which license is given to.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.
  */
-- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle andLicensee:(NSString *)licensee errorCallback:(nullable MBLicenseErrorBlock)errorCallback;
+- (void)setLicenseResource:(NSString * _Nonnull)fileName withExtension:(NSString * _Nullable)extension inSubdirectory:(NSString * _Nullable)subdirectory forBundle:(NSBundle * _Nonnull)bundle andLicensee:(NSString *)licensee errorCallback:(MBLicenseErrorBlock)errorCallback;
 
 /**
  * Returns the string that contains the library build version

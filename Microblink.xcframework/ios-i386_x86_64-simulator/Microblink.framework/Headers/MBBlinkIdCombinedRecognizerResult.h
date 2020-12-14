@@ -156,6 +156,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *documentAdditionalNumber;
 
 /**
+ * The one more additional number of the document.
+ */
+@property (nonatomic, readonly, nullable) NSString *documentOptionalAdditionalNumber;
+
+/**
  * The issuing authority of the document.
  */
 @property (nonatomic, readonly, nullable) NSString *issuingAuthority;
