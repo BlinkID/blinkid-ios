@@ -73,7 +73,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Default: UIInterfaceOrientationMaskPortrait
  */
-@property (nonatomic, assign) NSUInteger supportedOrientations;
+@property (nonatomic, assign) UIInterfaceOrientationMask supportedOrientations;
 
 /**
  * Reconfigures current recognizer collection to new recognizer collection. Use this method to reconfigure what you wish to scan.

@@ -94,7 +94,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  *
  * The downside is that frame quality estimation spends some valuable CPU time.
  *
- * Default PPFrameQualityEstimationModeDefault
+ * Default MBFrameQualityEstimationModeDefault
  */
 @property (nonatomic) MBFrameQualityEstimationMode frameQualityEstimationMode;
 

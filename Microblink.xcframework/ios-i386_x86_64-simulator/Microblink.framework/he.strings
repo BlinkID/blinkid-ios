@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "נא להתחיל את תהליך הסריקה מחדש.";
 "mb_data_not_match_retry_button" = "לנסות שוב";
 "mb_data_not_match_title" = "הצדדים אינם תואמים";
+"mb_error_mandatory_field_missing" = "השאירו את המסמך גלוי לחלוטין";
 "mb_flashlight_glare_tooltip" = "היזהרו מפני סנוור הפנס.\nהזיזו בעדינות את תעודת הזהות שלכם בכדי להימנע מהדבר.";
 "mb_network_error" = "בעיית רשת";
 "mb_recognition_timeout_dialog_message" = "לא ניתן לקרוא את המסמך. נא לנסות שוב.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "סריקת המסמך בוצעה";
 "photopay_front_splash_verification_document" = "הצד הקדמי";
 "photopay_front_verification_document" = "נא להניח את הצד הקדמי של המסמך במסגרת ולהמתין לסריקה אוטומטית.";
+"photopay_grant_camera_permission_button_title" = "תנו רשות למצלמה";
 "photopay_id_position_tooltip" = "נא להניח את כרטיס הזיהוי במסגרת זו";

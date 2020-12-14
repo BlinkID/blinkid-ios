@@ -8,7 +8,6 @@
 #ifndef MBMicroblinkDefines_h
 #define MBMicroblinkDefines_h
 
-#import "PPMicroblinkDefines.h"
 #import "MBMicroblinkInitialization.h"
 #import "AvailabilityMacros.h"
 
@@ -18,13 +17,19 @@
 # define MB_FINAL
 #endif
 
-#define MB_CLASS_AVAILABLE_IOS PP_CLASS_AVAILABLE_IOS
-#define MB_CLASS_DEPRECATED_IOS PP_CLASS_DEPRECATED_IOS
+#define MB_CLASS_AVAILABLE_IOS(_ios) NS_CLASS_AVAILABLE_IOS(_ios)
+#define MB_CLASS_DEPRECATED_IOS(_iosIntro, _iosDep, ...) NS_CLASS_DEPRECATED(NA, NA, _iosIntro, _iosDep, __VA_ARGS__)
 #define MB_PROPERTY_DEPRECATED DEPRECATED_ATTRIBUTE
 #define MB_ATTRIBUTE_DEPRECATED DEPRECATED_ATTRIBUTE
 #define MB_CLASS_DEPRECATED(message) __attribute__((deprecated(message)))
 
 #define MB_IS_IPAD (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad))
+
+#ifdef __cplusplus
+#define MB_EXTERN extern "C" __attribute__((visibility("default")))
+#else
+#define MB_EXTERN extern __attribute__((visibility("default")))
+#endif
 
 typedef void(^MBBlock)(void);
 

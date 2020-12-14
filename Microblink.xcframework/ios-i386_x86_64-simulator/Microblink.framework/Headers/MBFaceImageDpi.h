@@ -18,7 +18,7 @@
  *
  * Default: 250
  */
-@property (nonatomic, assign) NSUInteger faceImageDpi;
+@property (nonatomic, assign) NSInteger faceImageDpi;
 
 @end
 

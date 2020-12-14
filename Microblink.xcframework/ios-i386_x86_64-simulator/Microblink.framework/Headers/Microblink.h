@@ -21,6 +21,7 @@
 #import "MBRecognizerRunnerViewControllerMetadataDelegates.h"
 #import "MBRecognizerRunnerViewControllerDelegate.h"
 #import "MBScanningRecognizerRunnerViewControllerDelegate.h"
+#import "MBFrameRecognitionRecognizerRunnerViewControllerDelegate.h"
 
 #import "MBRecognizerRunner.h"
 #import "MBRecognizerRunnerMetadataDelegates.h"

@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "請重新開始掃描程序。";
 "mb_data_not_match_retry_button" = "重試";
 "mb_data_not_match_title" = "兩面不相符";
+"mb_error_mandatory_field_missing" = "保持文件完全可見";
 "mb_flashlight_glare_tooltip" = "請注意閃光燈眩光。\n慢慢移動您的證件以避免眩光。";
 "mb_network_error" = "網路錯誤";
 "mb_recognition_timeout_dialog_message" = "無法讀取文件,請再試一次。";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "文件掃描完畢";
 "photopay_front_splash_verification_document" = "正面";
 "photopay_front_verification_document" = "將文件正面放在框線中,並等候自動掃描。";
+"photopay_grant_camera_permission_button_title" = "同意使用相機";
 "photopay_id_position_tooltip" = "將身分證放在此框線中";

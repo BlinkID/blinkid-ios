@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.8.0 Docs
+          PPBlinkID v5.9.0 Docs
         </a>
-         (70% documented)
+         (69% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -555,6 +555,9 @@
                 <a class="nav-group-task-link" href="Protocols/MBFrameGrabberRecognizerDelegate.html">MBFrameGrabberRecognizerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a>
               </li>
               <li class="nav-group-task">
@@ -772,7 +775,7 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Functions.html#/c:@F@scanningRegionForFrameInBounds">scanningRegionForFrameInBounds</a>
+                <a class="nav-group-task-link" href="Functions.html#/c:@F@MBscanningRegionForFrameInBounds">MBscanningRegionForFrameInBounds</a>
               </li>
             </ul>
           </li>
@@ -780,7 +783,7 @@
             <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Structs/_MBImageExtensionFactors.html">_MBImageExtensionFactors</a>
+                <a class="nav-group-task-link" href="Structs/MBImageExtensionFactors.html">MBImageExtensionFactors</a>
               </li>
             </ul>
           </li>
@@ -1118,18 +1121,19 @@
 <span class="err">@required</span>
 
 <span class="cm">/**
+ * Returns YES if recognizer has finished scanning first side and is now scanning back side,
+ * NO if it's still scanning first side.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">scanningFirstSideDone</span><span class="p">;</span>
+
+<span class="k">@optional</span>
+<span class="cm">/**
  * Returns MBDataMatchResultSuccess if data from scanned parts/sides of the document match,
  * MBDataMatchResultFailed otherwise. For example if date of expiry is scanned from the front and back side
  * of the document and values do not match, this method will return MBDataMatchResultFailed. Result will
  * be MBDataMatchResultSuccess only if scanned values for all fields that are compared are the same.
  */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/MBDataMatchResult.html">MBDataMatchResult</a></span> <span class="n">documentDataMatch</span><span class="p">;</span>
-
-<span class="cm">/**
- * Returns YES if recognizer has finished scanning first side and is now scanning back side,
- * NO if it's still scanning first side.
- */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">scanningFirstSideDone</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -1352,7 +1356,7 @@
 <span class="cm">/**
  * Version of the digital signature. Available only if enabled with `MBDigitalSignature signResult` property.
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">digitalSignatureVersion</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">digitalSignatureVersion</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -1983,7 +1987,7 @@
  *
  * Default: 250
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">faceImageDpi</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">faceImageDpi</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -2151,7 +2155,7 @@
  * Note that all buffers associated with image are available only during life of this method.
  * As soon as this method exits, there is no guarantee that buffers will be valid. If you need
  * to store image for later processing, showing or saving, make sure you create a copy of it.
- * @param cameraFrame The {PPImage} containing frame that will be processed.
+ * @param cameraFrame The {MBImage} containing frame that will be processed.
  * @param focused Information whether or not given frame is considered to be in focus. This
  *                  information is calculated on the basis of frame quality estimation algorithm
  *                  combined with information about actual frame that was provided by camera device.
@@ -2167,6 +2171,39 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBFrameGrabberRecognizerDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)MBFrameRecognitionRecognizerRunnerViewControllerDelegate"></a>
+                    <a name="//apple_ref/objc/Protocol/MBFrameRecognitionRecognizerRunnerViewControllerDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MBFrameRecognitionRecognizerRunnerViewControllerDelegate">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protocol for obtaining frame recognition</p>
+
+                        <a href="Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -2248,7 +2285,7 @@
  *
  * Default: 250
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">fullDocumentImageDpi</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">fullDocumentImageDpi</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -2293,7 +2330,7 @@
  * @see MBImageExtensionFactors
  * Default: {0.0f, 0.0f, 0.0f, 0.0f}
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Type%20Definitions/MBImageExtensionFactors.html">MBImageExtensionFactors</a></span> <span class="n">fullDocumentImageExtensionFactors</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Structs/MBImageExtensionFactors.html">MBImageExtensionFactors</a></span> <span class="n">fullDocumentImageExtensionFactors</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -2709,7 +2746,7 @@
  *
  * Default: 250
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">mrzImageDpi</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">mrzImageDpi</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -2892,7 +2929,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Overlay View Controller also needs to notify CameraViewController on certain events.
-Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
+Those are events specified by MBOverlayViewControllerDelegate protocol.</p>
 
                         <a href="Protocols/MBOverlayContainerViewController.html" class="slightly-smaller">See more</a>
                       </div>
@@ -3218,7 +3255,7 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
  *
  * Default: 250
  */</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">signatureImageDpi</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">signatureImageDpi</span><span class="p">;</span>
 
 <span class="k">@end</span></code></pre>
 
@@ -3394,7 +3431,7 @@ Those are events specified by PPOverlayViewControllerDelegate protocol.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-09-30)</p>
+      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-12-14)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

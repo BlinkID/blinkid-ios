@@ -22,7 +22,7 @@
 /**
  * Version of the digital signature. Available only if enabled with `MBDigitalSignature signResult` property.
  */
-@property (nonatomic, readonly) NSUInteger digitalSignatureVersion;
+@property (nonatomic, readonly) NSInteger digitalSignatureVersion;
 
 @end
 

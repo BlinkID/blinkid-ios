@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Postopek optičnega branja začnite ponovno.";
 "mb_data_not_match_retry_button" = "Poskusi znova";
 "mb_data_not_match_title" = "Strani se ne ujemata";
+"mb_error_mandatory_field_missing" = "Dokument ohrani povsem viden";
 "mb_flashlight_glare_tooltip" = "Pazite na bleščanje bliskavice.\nOsebni dokument rahlo premaknite, da se mu izognete.";
 "mb_network_error" = "Napaka v omrežju";
 "mb_recognition_timeout_dialog_message" = "Dokumenta ni mogoče prebrati. Poskusite znova.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Optično branje dokumenta končano";
 "photopay_front_splash_verification_document" = "Sprednja stran";
 "photopay_front_verification_document" = "Sprednjo stran dokumenta postavite v okvir in počakajte na samodejno optično branje.";
+"photopay_grant_camera_permission_button_title" = "Daj dovoljenje za kamero";
 "photopay_id_position_tooltip" = "Osebno izkaznico namestite v ta okvir";

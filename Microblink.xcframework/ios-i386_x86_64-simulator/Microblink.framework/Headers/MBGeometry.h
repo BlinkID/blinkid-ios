@@ -132,4 +132,4 @@ void CGControlPointsForArcBetweenPointsWithRadius(CGPoint startPoint, CGPoint en
 #pragma mark - ScanningRegion
 
 // Convert given frame into scanning region frame for given bounds.
-PP_EXTERN CGRect scanningRegionForFrameInBounds(CGRect frame, CGRect bounds);
+MB_EXTERN CGRect MBscanningRegionForFrameInBounds(CGRect frame, CGRect bounds);

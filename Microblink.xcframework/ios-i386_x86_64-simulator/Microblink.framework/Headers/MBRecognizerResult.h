@@ -28,6 +28,11 @@ typedef NS_ENUM(NSInteger, MBRecognizerResultState) {
      */
     MBRecognizerResultStateValid,
 
+    /**
+     *  StageValid
+     */
+    MBRecognizerResultStateStageValid,
+
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -41,6 +46,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 MB_INIT_UNAVAILABLE
 
 @property (nonatomic, assign, readonly) MBRecognizerResultState resultState;
+@property (nonatomic, readonly) NSString *resultStateString;
 
 @end
 

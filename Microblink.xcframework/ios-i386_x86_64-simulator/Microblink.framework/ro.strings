@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Reîncepeți procesul de scanare.";
 "mb_data_not_match_retry_button" = "Reîncercare";
 "mb_data_not_match_title" = "Fețele nu se potrivesc";
+"mb_error_mandatory_field_missing" = "Menține documentul vizibil integral";
 "mb_flashlight_glare_tooltip" = "Fiți atent la strălucirea cauzată de lumina blițului.\nMutați-vă ușor actul de identitate pentru a o evita.";
 "mb_network_error" = "Eroare de rețea";
 "mb_recognition_timeout_dialog_message" = "Documentul nu poate fi citit. Încercați din nou.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Scanarea documentului a fost terminată";
 "photopay_front_splash_verification_document" = "Fața";
 "photopay_front_verification_document" = "Poziționați fața documentului în cadru și așteptați scanarea automată.";
+"photopay_grant_camera_permission_button_title" = "Acordați permisiunea pentru camera foto";
 "photopay_id_position_tooltip" = "Poziționați cartea de identitate în acest cadru";

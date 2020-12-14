@@ -32,9 +32,8 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
         self.tooltipLabel.text = "Scan Front Side"
     }
 
-    func recognizerRunnerViewController(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController,
-                                        didFinishScanningWith state: MBRecognizerResultState) {
-
+    func recognizerRunnerViewControllerDidFinishScanning(_ recognizerRunnerViewController: UIViewController & MBRecognizerRunnerViewController,
+                                                         state: MBRecognizerResultState) {
         // This is done on background thread
         if state == MBRecognizerResultState.valid {
             recognizerRunnerViewController.pauseScanning()

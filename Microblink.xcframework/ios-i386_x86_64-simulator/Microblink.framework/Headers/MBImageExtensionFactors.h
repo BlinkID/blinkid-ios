@@ -12,7 +12,7 @@
  * For example, value of top = 0.3f means that top side of the image is extended by 30% of cards height,
  * while value of right = 1.3f means that the right side of the image is extended by 120% of the cards width.
  */
-typedef struct _MBImageExtensionFactors {
+typedef struct MBImageExtensionFactors {
     CGFloat top;
     CGFloat right;
     CGFloat bottom;

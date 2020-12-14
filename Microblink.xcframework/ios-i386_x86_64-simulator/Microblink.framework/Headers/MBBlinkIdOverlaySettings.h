@@ -124,6 +124,12 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, strong) NSString *retryButtonText;
 
 /**
+* Instructions for the user that is covering some mandatory fields for a scan
+* Default: Keep the document fully visible
+*/
+@property(nonatomic, strong) NSString *errorMandatoryFieldMissing;
+
+/**
  * Designated initializer. Initializes the object with default settings.
  *
  *  @return object initialized with default values.

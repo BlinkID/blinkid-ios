@@ -30,14 +30,14 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
 /**
  * @param desiredDPI Desired DPI (dots per inch)
  */
-- (instancetype)initWithDesiredDPI:(NSUInteger)desiredDPI NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDesiredDPI:(NSInteger)desiredDPI NS_DESIGNATED_INITIALIZER;
 
 /**
  * Returns the desired DPI as defined by this policy.
  *
  * Default: 250
  */
-@property (nonatomic, assign, readonly) NSUInteger desiredDPI;
+@property (nonatomic, assign, readonly) NSInteger desiredDPI;
 
 @end
 

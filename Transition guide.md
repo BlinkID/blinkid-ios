@@ -1,3 +1,32 @@
+## 5.9.0
+
+### Major API changes:
+
+- We've added an error callback when setting license keys on `MBMicroblinkSDK`
+	- You will be getting error callback containing the reason why you could not unlock the SDK - see `MBLicenseError`
+
+### Minor API changes:
+
+- Swift:
+	- All `unsigned integers` are now `Int`
+
+### Note on ARM Macs
+
+- We are supporting `ARM64 Device` slice through our `.xcframework` format.
+- We are still working on supporting the `ARM64 Simulator` slice for newly released ARM Macs. We will update our SDK with `ARM64 Simulator` support as soon as it’s out.
+
+### iOS Version support change:
+
+-  We are no longer supporting **iOS 8**.
+
+### Cocapods support change:
+
+- We are updating our Cocoapods with `.xcframework` format from now on. Please download [Cocoapods 1.10.0](https://github.com/CocoaPods/CocoaPods/releases/tag/1.10.0) or newer to use our SDK.
+
+### Known issues:
+
+- SDK crashes on armv7 devices if bitcode is enabled. We are working on it.
+
 ## 5.8.0
 
 ### Deprecated recognizers

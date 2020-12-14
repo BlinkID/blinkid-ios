@@ -12,7 +12,7 @@
 
 /**
  Overlay View Controller also needs to notify CameraViewController on certain events.
- Those are events specified by PPOverlayViewControllerDelegate protocol.
+ Those are events specified by MBOverlayViewControllerDelegate protocol.
  */
 @protocol MBOverlayContainerViewController <MBRecognizerRunnerViewController>
 
@@ -38,7 +38,7 @@
 - (BOOL)overlayViewController:(MBOverlayViewController *)overlayViewController willSetTorch:(BOOL)isTorchOn;
 
 /**
- * If help mechanism is implemented using PPScanDelegate's scanningViewControllerWillPresentHelp method,
+ * If help mechanism is implemented using MBScanDelegate's scanningViewControllerWillPresentHelp method,
  * Overlay view controller should ask it's container whether it's appropriate do display help button;
  *
  *  @return YES if help button should be displayed.

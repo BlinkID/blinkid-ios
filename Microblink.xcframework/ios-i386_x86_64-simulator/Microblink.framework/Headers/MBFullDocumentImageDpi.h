@@ -15,6 +15,6 @@
  *
  * Default: 250
  */
-@property (nonatomic, assign) NSUInteger fullDocumentImageDpi;
+@property (nonatomic, assign) NSInteger fullDocumentImageDpi;
 
 @end

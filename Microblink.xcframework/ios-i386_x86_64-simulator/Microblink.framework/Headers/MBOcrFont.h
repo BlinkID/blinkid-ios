@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Microblink Ltd. All rights reserved.
 //
 
-#ifndef BlinkOcrFramework_PPOcrFont_h
-#define BlinkOcrFramework_PPOcrFont_h
+#ifndef BlinkOcrFramework_MB_OcrFont_h
+#define BlinkOcrFramework_MB_OcrFont_h
 
 /**
  * A list of fonts supported by BlinkOCR

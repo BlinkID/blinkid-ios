@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Sila mulakan proses pengimbasan dari awal.";
 "mb_data_not_match_retry_button" = "Cuba semula";
 "mb_data_not_match_title" = "Bahagian hadapan dan belakang tidak sepadan";
+"mb_error_mandatory_field_missing" = "Sentiasa pastikan dokumen dapat dilihat sepenuhnya";
 "mb_flashlight_glare_tooltip" = "Berhati-hati dengan silau lampu suluh.\nGerakkan ID anda dengan perlahan keliling untuk menjauhinya.";
 "mb_network_error" = "Ralat rangkaian";
 "mb_recognition_timeout_dialog_message" = "Tidak dapat membaca dokumen. Sila cuba semula.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Pengimbasan dokumen selesai";
 "photopay_front_splash_verification_document" = "Bahagian hadapan";
 "photopay_front_verification_document" = "Tempatkan bahagian hadapan dokumen di dalam bingkai dan tunggu pengimbasan automatik.";
+"photopay_grant_camera_permission_button_title" = "Beri kebenaran kamera";
 "photopay_id_position_tooltip" = "Tempatkan kad ID di dalam Bingkai ini";

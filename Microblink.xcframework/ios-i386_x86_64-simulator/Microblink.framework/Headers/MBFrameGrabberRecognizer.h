@@ -47,7 +47,7 @@ MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
  * Note that all buffers associated with image are available only during life of this method.
  * As soon as this method exits, there is no guarantee that buffers will be valid. If you need
  * to store image for later processing, showing or saving, make sure you create a copy of it.
- * @param cameraFrame The {PPImage} containing frame that will be processed.
+ * @param cameraFrame The {MBImage} containing frame that will be processed.
  * @param focused Information whether or not given frame is considered to be in focus. This
  *                  information is calculated on the basis of frame quality estimation algorithm
  *                  combined with information about actual frame that was provided by camera device.

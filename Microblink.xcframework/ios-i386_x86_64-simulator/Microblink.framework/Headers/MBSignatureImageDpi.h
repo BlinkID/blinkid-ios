@@ -18,7 +18,7 @@
  *
  * Default: 250
  */
-@property (nonatomic, assign) NSUInteger signatureImageDpi;
+@property (nonatomic, assign) NSInteger signatureImageDpi;
 
 @end
 

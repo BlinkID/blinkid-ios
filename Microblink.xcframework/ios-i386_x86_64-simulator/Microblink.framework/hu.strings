@@ -10,6 +10,7 @@
 "mb_data_not_match_msg" = "Kérjük, kezdje újra a szkennelési folyamatot.";
 "mb_data_not_match_retry_button" = "Próbálja újra";
 "mb_data_not_match_title" = "Az oldalak nem egyeznek";
+"mb_error_mandatory_field_missing" = "Tartsd a dokumentumot teljesen láthatóan";
 "mb_flashlight_glare_tooltip" = "Figyeljen oda a vaku fényének visszaverődésére.\nFinoman mozgassa a személyi igazolványát, hogy elkerülje.";
 "mb_network_error" = "Hálózati hiba";
 "mb_recognition_timeout_dialog_message" = "Nem sikerült elolvasni a dokumentumot. Kérjük, próbálja újra.";
@@ -26,4 +27,5 @@
 "photopay_done_splash_verification_document" = "Dokumentum szkennelése elvégezve.";
 "photopay_front_splash_verification_document" = "Elülső oldal";
 "photopay_front_verification_document" = "Helyezze a dokumentum elülső oldalát a keretbe, és várja meg az automatikus szkennelést.";
+"photopay_grant_camera_permission_button_title" = "Kamera engedélyezése";
 "photopay_id_position_tooltip" = "Helyezze a személyi igazolvány ebbe a Keretbe";

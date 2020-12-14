@@ -48,7 +48,7 @@ MB_INIT
  *
  * Default: 6
  */
-@property (nonatomic, assign) NSUInteger numStableDetectionsThreshold;
+@property (nonatomic, assign) NSInteger numStableDetectionsThreshold;
     
 
 @end

@@ -41,11 +41,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /** Bundle with resources used in framework */
 @property (nonatomic) NSBundle *resourcesBundle;
 
+/** Custom bundle for overriding resourcesBundle */
+@property (nonatomic) NSBundle *customResourcesBundle;
+
 /** Localization file in main bundle used for overrideing framework's localizations */
 @property (nonatomic) NSString *customLocalizationFileName;
 
 /** Obtain the shared instance */
-+ (instancetype)instance;
+@property (class, readonly) MBMicroblinkApp *instance;
 
 /** Designated initializer */
 - (id)init;
@@ -96,6 +99,15 @@ static inline NSString * MB_LOCALIZED(NSString *key) {
         if (![overridenStringFromCustomLocalizationFile isEqualToString:key]) {
             return overridenStringFromCustomLocalizationFile;
         }
+    }
+
+    NSString *overridenStringFromCustomBundle = NSLocalizedStringWithDefaultValue(key,
+                                                                                  MBMicroblinkApp.instance.language,
+                                                                                  MBMicroblinkApp.instance.customResourcesBundle,
+                                                                                  @"",
+                                                                                  @"");
+    if ( overridenStringFromCustomBundle != nil && ![overridenStringFromCustomBundle isEqualToString:key]) {
+        return overridenStringFromCustomBundle;
     }
 
     return NSLocalizedStringWithDefaultValue(key,
