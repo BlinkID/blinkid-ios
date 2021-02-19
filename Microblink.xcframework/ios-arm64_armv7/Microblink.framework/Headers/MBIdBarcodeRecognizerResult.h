@@ -9,6 +9,7 @@
 #import "MBDateResult.h"
 #import "MBBarcodeType.h"
 #import "MBIdBarcodeDocumentType.h"
+#import "MBBarcodeElements.h"
 
 #import "MBAgeResult.h"
 #import "MBDocumentExpirationCheckResult.h"
@@ -198,6 +199,12 @@ MB_INIT_UNAVAILABLE
 */
 @property (nonatomic, readonly) NSString *jurisdiction;
 
+/**
+ * Document specific extended elements that contain all barcode fields in their original form.
+ *
+ * Currently this is only filled for AAMVACompliant documents.
+*/
+@property (nonatomic, readonly) MBBarcodeElements *extendedElements;
 
 @end
 

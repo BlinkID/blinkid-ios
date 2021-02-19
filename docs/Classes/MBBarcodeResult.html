@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.9.0 Docs
+          PPBlinkID v5.10.0 Docs
         </a>
-         (69% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBBarcodeElements.html">MBBarcodeElements</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBarcodeResult.html">MBBarcodeResult</a>
               </li>
@@ -371,6 +374,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBBarcodeElementKey.html">MBBarcodeElementKey</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -775,6 +781,9 @@
                 <a class="nav-group-task-link" href="../Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_FOR_LANGUAGE">MB_LOCALIZED_FOR_LANGUAGE</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Functions.html#/c:@F@MBscanningRegionForFrameInBounds">MBscanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -964,6 +973,13 @@
 */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">empty</span><span class="p">;</span>
 
+<span class="cm">/**
+ * Document specific extended elements that contain all barcode fields in their original form.
+ *
+ * Currently this is only filled for AAMVACompliant documents.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBBarcodeElements.html">MBBarcodeElements</a></span> <span class="o">*</span><span class="n">extendedElements</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                 </div>
@@ -1005,6 +1021,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1036,6 +1055,9 @@
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1069,6 +1091,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L30">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1101,6 +1126,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">uncertain</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1139,6 +1167,9 @@ E.g obtained from damaged barcode.</p>
                         <h4>Return Value</h4>
                         <p>Type of the barcode</p>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L43">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1170,6 +1201,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">firstName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1203,6 +1237,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L54">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1234,6 +1271,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1267,6 +1307,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L64">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1298,6 +1341,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalNameInformation</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1331,6 +1377,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L74">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1362,6 +1411,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">placeOfBirth</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1395,6 +1447,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L84">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1426,6 +1481,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">race</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1459,6 +1517,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L94">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1490,6 +1551,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">profession</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1523,6 +1587,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L104">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1554,6 +1621,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">residentialStatus</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1587,6 +1657,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L114">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1618,6 +1691,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sex</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1651,6 +1727,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L124">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1682,6 +1761,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfIssue</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L129">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1715,6 +1797,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L134">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1746,6 +1831,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1779,6 +1867,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L144">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1810,6 +1901,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentAdditionalNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1843,6 +1937,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L154">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1874,6 +1971,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">street</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L159">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1907,6 +2007,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L164">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1939,6 +2042,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L169">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1970,6 +2076,9 @@ E.g obtained from damaged barcode.</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">jurisdiction</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L174">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2004,6 +2113,9 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L179">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2036,6 +2148,46 @@ E.g obtained from damaged barcode.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L184">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBarcodeResult(py)extendedElements"></a>
+                    <a name="//apple_ref/objc/Property/extendedElements" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBarcodeResult(py)extendedElements">extendedElements</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Document specific extended elements that contain all barcode fields in their original form.</p>
+
+<p>Currently this is only filled for AAMVACompliant documents.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBBarcodeElements.html">MBBarcodeElements</a></span> <span class="o">*</span><span class="n">extendedElements</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">extendedElements</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBBarcodeElements.html">MBBarcodeElements</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L191">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2047,7 +2199,7 @@ E.g obtained from damaged barcode.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-12-14)</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-02-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

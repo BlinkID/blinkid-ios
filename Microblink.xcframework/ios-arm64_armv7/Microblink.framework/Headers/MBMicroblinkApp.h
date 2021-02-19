@@ -91,6 +91,24 @@ static inline NSString * MB_LOCALIZED_DEFAULT_STRING(NSString *key) {
     return ([NSString stringWithFormat:@"[[%@]]", key]);
 }
 
+static inline NSString * MB_LOCALIZED_FOR_LANGUAGE(NSString *key, NSString *language) {
+
+    NSString *overridenStringFromCustomBundle = NSLocalizedStringWithDefaultValue(key,
+                                                                                  language,
+                                                                                  MBMicroblinkApp.instance.customResourcesBundle,
+                                                                                  @"",
+                                                                                  @"");
+    if ( overridenStringFromCustomBundle != nil && ![overridenStringFromCustomBundle isEqualToString:key]) {
+        return overridenStringFromCustomBundle;
+    }
+
+    return NSLocalizedStringWithDefaultValue(key,
+                                             language,
+                                             [[MBMicroblinkApp instance] resourcesBundle],
+                                             MB_LOCALIZED_DEFAULT_STRING(key),
+                                             nil);
+}
+
 static inline NSString * MB_LOCALIZED(NSString *key) {
     NSString *localizationFileName = MBMicroblinkApp.instance.customLocalizationFileName;
     if (localizationFileName) {
@@ -100,18 +118,15 @@ static inline NSString * MB_LOCALIZED(NSString *key) {
             return overridenStringFromCustomLocalizationFile;
         }
     }
-
-    NSString *overridenStringFromCustomBundle = NSLocalizedStringWithDefaultValue(key,
-                                                                                  MBMicroblinkApp.instance.language,
-                                                                                  MBMicroblinkApp.instance.customResourcesBundle,
-                                                                                  @"",
-                                                                                  @"");
-    if ( overridenStringFromCustomBundle != nil && ![overridenStringFromCustomBundle isEqualToString:key]) {
-        return overridenStringFromCustomBundle;
+    
+    NSString *localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, MBMicroblinkApp.instance.language);
+    
+#ifndef DNDEBUG
+    return localizedString;
+#else
+    if ([localizedString isEqualToString:MB_LOCALIZED_DEFAULT_STRING(key)] && ![MBMicroblinkApp.instance.language isEqualToString:@"en"]) {
+        localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, @"en");
     }
-
-    return NSLocalizedStringWithDefaultValue(key,
-                                             MBMicroblinkApp.instance.language,
-                                             [[MBMicroblinkApp instance] resourcesBundle],
-                                             MB_LOCALIZED_DEFAULT_STRING(key), nil);
+    return localizedString;
+#endif
 }

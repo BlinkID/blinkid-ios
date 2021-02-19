@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.9.0 Docs
+          PPBlinkID v5.10.0 Docs
         </a>
-         (69% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,6 +53,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeElements.html">MBBarcodeElements</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
               </li>
@@ -371,6 +374,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBBarcodeElementKey.html">MBBarcodeElementKey</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -775,6 +781,9 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_FOR_LANGUAGE">MB_LOCALIZED_FOR_LANGUAGE</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@MBscanningRegionForFrameInBounds">MBscanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -803,6 +812,59 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBarcodeElements"></a>
+                    <a name="//apple_ref/objc/Class/MBBarcodeElements" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBarcodeElements">MBBarcodeElements</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/MBBarcodeElements.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">MBBarcodeElements</span> <span class="p">:</span> <span class="nc">NSObject</span><span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span>
+
+<span class="n">MB_INIT_UNAVAILABLE</span>
+
+<span class="cm">/**
+ * Flag that indicates if barcode elements is empty
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">empty</span><span class="p">;</span>
+
+<span class="cm">/**
+ * Get value for wanted MBBarcodeElementKey
+ *
+ * @param key The input value representing one key from MBBarcodeElementKey enum
+ * @return NSString The string for scanned barcode element key value
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">getValue</span><span class="p">:(</span><span class="n"><a href="Enums/MBBarcodeElementKey.html">MBBarcodeElementKey</a></span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBarcodeElements</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeElements.h#L18-L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -992,6 +1054,13 @@
 */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">empty</span><span class="p">;</span>
 
+<span class="cm">/**
+ * Document specific extended elements that contain all barcode fields in their original form.
+ *
+ * Currently this is only filled for AAMVACompliant documents.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="Classes/MBBarcodeElements.html">MBBarcodeElements</a></span> <span class="o">*</span><span class="n">extendedElements</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -1000,6 +1069,9 @@
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBarcodeResult</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h#L18-L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1035,6 +1107,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBaseOcrOverlaySettings.h#L16-L25">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1069,6 +1144,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBaseOverlaySettings.h#L16-L55">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1102,6 +1180,9 @@
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBaseOverlayViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBOverlayViewController.html">MBOverlayViewController</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBaseOverlayViewController.h#L19-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1142,6 +1223,9 @@
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdCombinedRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizer.html">MBCombinedRecognizer</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignature.html">MBDigitalSignature</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImage.html">MBFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFaceImage.html">MBEncodeFaceImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageDpi.html">MBFaceImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImage.html">MBFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeFullDocumentImage.html">MBEncodeFullDocumentImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageDpi.html">MBFullDocumentImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageExtensionFactors.html">MBFullDocumentImageExtensionFactors</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImage.html">MBSignatureImage</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBSignatureImageDpi.html">MBSignatureImageDpi</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodeSignatureImage.html">MBEncodeSignatureImage</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h#L36-L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,6 +1268,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizerResult.h#L39-L218">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1217,6 +1304,9 @@
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdOverlaySettings</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBBaseOverlaySettings.html">MBBaseOverlaySettings</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L16-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1340,6 +1430,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlayTheme.h#L14-L103">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1373,6 +1466,9 @@
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBBlinkIdOverlayViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlayViewController.h#L21-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1413,6 +1509,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h#L33-L124">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1452,6 +1551,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizerResult.h#L36-L206">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1487,6 +1589,9 @@ the system is active but has not detected an object yet.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBCameraReticle.h#L17-L46">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1520,6 +1625,9 @@ the system is active but has not detected an object yet.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBCameraSettings</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBCameraSettings.h#L72-L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1564,6 +1672,31 @@ the system is active but has not detected an object yet.</p>
  */</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n"><a href="Enums/MBType.html">MBType</a></span> <span class="n">type</span><span class="p">;</span>
 
+<span class="cm">/**
+ * Flag that indicates if class info is empty
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">empty</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The name of the country that issued the scanned document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">countryName</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The ISO numeric code of the country that issued the scanned document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">isoNumericCountryCode</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The 2 letter ISO code of the country that issued the scanned document.
+*/</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">isoAlpha2CountryCode</span><span class="p">;</span>
+
+<span class="cm">/**
+ * The 3 letter ISO code of the country that issued the scanned document.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">isoAlpha3CountryCode</span><span class="p">;</span>
+
 <span class="k">@end</span></code></pre>
 
                         </div>
@@ -1572,6 +1705,9 @@ the system is active but has not detected an object yet.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBClassInfo</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBClassInfo.h#L15-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1607,6 +1743,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBCustomOverlayViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBOverlayViewController.html">MBOverlayViewController</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h#L26-L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1647,6 +1786,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDPIBasedDewarpPolicy.h#L23-L42">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1684,6 +1826,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDateResult.h#L20-L83">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1717,6 +1862,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDewarpPolicy</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDewarpPolicy.h#L17-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1752,6 +1900,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDisplayableDetection.h#L19-L38">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1785,6 +1936,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDisplayableObject</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDisplayableObject.h#L17-L24">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1820,6 +1974,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDisplayablePointsDetection.h#L17-L24">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1853,6 +2010,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDisplayableQuadDetection</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBDisplayableDetection.html">MBDisplayableDetection</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDisplayableQuadDetection.h#L19-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1898,6 +2058,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L27-L54">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1934,6 +2097,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizerResult.h#L20-L35">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1968,6 +2134,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentOverlaySettings.h#L16-L47">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2001,6 +2170,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDocumentOverlayViewController</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentOverlayViewController.h#L23-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2043,6 +2215,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentSubview.h#L24-L63">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2077,6 +2252,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentVerificationInstructionsSubview.h#L13-L19">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2110,6 +2288,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDocumentVerificationOverlaySettings</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentVerificationOverlaySettings.h#L16-L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2146,6 +2327,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentVerificationOverlayViewController.h#L27-L50">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2180,6 +2364,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentVerificationSubview.h#L15-L25">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2213,6 +2400,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDotsResultSubview</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBSubview.html">MBSubview</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBPointDetectorSubview.html">MBPointDetectorSubview</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDotsResultSubview.h#L18-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2249,6 +2439,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDotsSubview</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBSubview.html">MBSubview</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBPointDetectorSubview.html">MBPointDetectorSubview</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDotsSubview.h#L20-L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2307,6 +2500,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDriverLicenseDetailedInfo.h#L14-L38">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2339,6 +2535,9 @@ It&rsquo;s responsibility is to provide meaningful and useful interface for the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBEntity</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBEntity.h#L18-L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2374,6 +2573,9 @@ the system is active and has detected object.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBErrorReticle</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBSubview.html">MBSubview</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBErrorReticle.h#L17-L21">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2411,6 +2613,9 @@ the system is active and has detected object.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBFixedDewarpPolicy.h#L20-L40">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2444,6 +2649,9 @@ the system is active and has detected object.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBFrameGrabberRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBFrameGrabberRecognizer.h#L22-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2480,6 +2688,9 @@ The subview is presented as translucent view with detection status label in the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h#L18-L30">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2513,6 +2724,9 @@ The subview is presented as translucent view with detection status label in the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBIdBarcodeRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBIdBarcodeRecognizer.h#L17-L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2550,6 +2764,9 @@ The subview is presented as translucent view with detection status label in the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBIdBarcodeRecognizerResult.h#L23-L209">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2583,6 +2800,9 @@ The subview is presented as translucent view with detection status label in the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBImage</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBImage.h#L34-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2651,6 +2871,9 @@ The subview is presented as translucent view with detection status label in the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBImageAnalysisResult.h#L16-L50">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2685,6 +2908,9 @@ The subview is presented as translucent view with detection status label in the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBImageReturnProcessor.h#L20-L37">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2718,6 +2944,9 @@ The subview is presented as translucent view with detection status label in the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBImageReturnProcessorResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBProcessorResult.html">MBProcessorResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBImageReturnProcessorResult.h#L20-L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2759,6 +2988,9 @@ The subview is presented as translucent view with detection status label in the 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBLogger</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBLogger.h#L30-L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2841,6 +3073,9 @@ The subview is presented as translucent view with detection status label in the 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h#L37-L85">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2875,6 +3110,9 @@ optimisation of passing data.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMicroblinkSDK</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkSDK.h#L19-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2921,6 +3159,9 @@ optimisation of passing data.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrtdCombinedRecognizer.h#L39-L93">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2958,6 +3199,9 @@ optimisation of passing data.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedFullDocumentImageResult.html">MBCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedCombinedFullDocumentImageResult.html">MBEncodedCombinedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrtdCombinedRecognizerResult.h#L34-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3002,6 +3246,9 @@ optimisation of passing data.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrtdRecognizer.h#L35-L85">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3038,6 +3285,9 @@ optimisation of passing data.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrtdRecognizerResult.h#L26-L43">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3072,6 +3322,9 @@ We encurage users to create specifications with one of our presets, if possible.
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBMrtdSpecification</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrtdSpecification.h#L32-L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3260,6 +3513,9 @@ We encurage users to create specifications with one of our presets, if possible.
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBMrzResult.h#L47-L201">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3300,6 +3556,9 @@ We encurage users to create specifications with one of our presets, if possible.
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBNoUpScalingDewarpPolicy</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBDewarpPolicy.html">MBDewarpPolicy</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBNoUpScalingDewarpPolicy.h#L25-L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3354,6 +3613,9 @@ We encurage users to create specifications with one of our presets, if possible.
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L38-L105">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3393,6 +3655,9 @@ We encurage users to create specifications with one of our presets, if possible.
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L113-L147">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3431,6 +3696,9 @@ We encurage users to create specifications with one of our presets, if possible.
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBOcrLine</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L155-L189">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3495,6 +3763,9 @@ We encurage users to create specifications with one of our presets, if possible.
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L192-L222">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3528,6 +3799,9 @@ We encurage users to create specifications with one of our presets, if possible.
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBOcrChar</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L228-L273">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3564,6 +3838,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L280-L347">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3597,6 +3874,9 @@ sides aligned to the sides of the image.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBOverlaySettings</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOverlaySettings.h#L23-L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3643,6 +3923,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOverlayViewController.h#L31-L41">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3677,6 +3960,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessor.h#L22-L45">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3710,6 +3996,9 @@ sides aligned to the sides of the image.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBParserGroupProcessorResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBProcessorResult.html">MBProcessorResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessorResult.h#L19-L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3754,6 +4043,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBPassportRecognizer.h#L28-L44">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3792,6 +4084,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBPassportRecognizerResult.h#L24-L34">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3825,6 +4120,9 @@ sides aligned to the sides of the image.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBProcessor</span> <span class="p">:</span> <span class="kt"><a href="Classes.html#/c:objc(cs)MBEntity">MBEntity</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBProcessor.h#L20-L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3860,6 +4158,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBProcessorGroup.h#L22-L40">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3894,6 +4195,9 @@ sides aligned to the sides of the image.</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBProcessorResult.h#L39-L45">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3927,6 +4231,9 @@ sides aligned to the sides of the image.</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBQuadrangle</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBQuadrangle.h#L17-L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -3963,6 +4270,9 @@ Setting is taken into account only if the right for that document is purchased.<
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognitionModeFilter.h#L18-L47">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -3996,6 +4306,9 @@ Setting is taken into account only if the right for that document is purchased.<
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes.html#/c:objc(cs)MBEntity">MBEntity</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizer.h#L20-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4031,6 +4344,9 @@ Setting is taken into account only if the right for that document is purchased.<
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizerCollection.h#L49-L101">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4064,6 +4380,9 @@ Setting is taken into account only if the right for that document is purchased.<
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBRecognizerResult</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizerResult.h#L44-L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4100,6 +4419,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h#L27-L79">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4133,6 +4455,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBRecognizerRunnerMetadataDelegates</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h#L20-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4168,6 +4493,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h#L20-L28">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4202,6 +4530,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBSubview.h#L21-L26">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4235,6 +4566,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBSuccessFrameGrabberRecognizer</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBSuccessFrameGrabberRecognizer.h#L19-L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4271,6 +4605,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h#L21-L30">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4304,6 +4641,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBTapToFocusSubview</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBSubview.html">MBSubview</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBTapToFocusSubview.h#L17-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4339,6 +4679,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBTemplatingClass.h#L22-L58">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4373,6 +4716,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBTemplatingRecognizer.h#L22-L50">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4406,6 +4752,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBTemplatingRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBTemplatingRecognizerResult.h#L21-L31">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4447,6 +4796,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBUsdlCombinedRecognizer.h#L36-L88">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4484,6 +4836,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBUsdlCombinedRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBCombinedRecognizerResult.html">MBCombinedRecognizerResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFaceImageResult.html">MBFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBFullDocumentImageResult.html">MBFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBDigitalSignatureResult.html">MBDigitalSignatureResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFaceImageResult.html">MBEncodedFaceImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBEncodedFullDocumentImageResult.html">MBEncodedFullDocumentImageResult</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBUsdlCombinedRecognizerResult.h#L35-L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4524,6 +4879,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBUsdlRecognizer.h#L19-L54">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4557,6 +4915,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBUsdlRecognizerResult</span> <span class="p">:</span> <span class="kt"><a href="Classes/MBRecognizerResult.html">MBRecognizerResult</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt"><a href="Protocols/MBAgeResult.html">MBAgeResult</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBUsdlRecognizerResult.h#L23-L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4592,6 +4953,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBViewControllerFactory</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBViewControllerFactory.h#L17-L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -4636,6 +5000,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBVisaRecognizer.h#L26-L36">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4673,6 +5040,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBVisaRecognizerResult.h#L22-L31">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4707,6 +5077,9 @@ Camera view controllers created this way will be managed internally by the SDK, 
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.10.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L19-L158">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -4718,7 +5091,7 @@ Camera view controllers created this way will be managed internally by the SDK, 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-12-14)</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-02-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

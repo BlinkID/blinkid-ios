@@ -19,6 +19,8 @@
 // ID Barcode Recognizer
 #import "MBIdBarcodeRecognizer.h"
 #import "MBIdBarcodeRecognizerResult.h"
+#import "MBBarcodeElementKey.h"
+#import "MBBarcodeElements.h"
 
 // Mrtd
 #import "MBMrtdRecognizer.h"

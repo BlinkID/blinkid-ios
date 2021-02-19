@@ -10,6 +10,7 @@
 #import "MBBarcodeType.h"
 #import "MBDateResult.h"
 #import "MBDriverLicenseDetailedInfo.h"
+#import "MBBarcodeElements.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -181,6 +182,13 @@ MB_INIT_UNAVAILABLE
  * Flag that indicates if barcode result is empty
 */
 @property (nonatomic, readonly, assign) BOOL empty;
+
+/**
+ * Document specific extended elements that contain all barcode fields in their original form.
+ *
+ * Currently this is only filled for AAMVACompliant documents.
+*/
+@property (nonatomic, readonly, nullable) MBBarcodeElements *extendedElements;
 
 @end
 

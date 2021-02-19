@@ -1,5 +1,58 @@
 # Release notes
 
+## 5.10.0
+
+### New features:
+
+* We have full support for Apple Silicon!
+
+### Framework formats and architectures:
+
+* Use `.xcframework` as we now have full Apple Silicon and Intel support.
+* We are still supporting `fat binary .framework` format, but we’ve removed simulator slices from it.
+
+### Carthage:
+
+* Carthage still doesn't support `binary .xcframework`, so there is no support for simulator slices anymore.
+
+### Improvements:
+
+* **Newly supported identity documents**
+
+    *   Saudi Arabia - DL (front)
+    *   Saudi Arabia - Resident ID (front)
+
+### Changes to the BlinkId(Combined)Recognizer:
+
+*   We're now able to extract the additional address on Hungary Address Cards
+*   We've improved data extraction through the MRZ:
+    *   We now return the document type through `MBClassInfo`, regardless of the `MBRecognitionMode` you're using (`MrzId`, `MrzPassport` or `MrzVisa`). 
+    *   This means you can now use `MBClassFilter` to filter these documents by their type.
+    *   We now return the document number on Nigeria IDs complete with its check digit.
+    *   We now support Italy Residence Permits with a *CR* document code.
+*   We've extended the `ClassInfo` structure with new properties so you can filter documents by country more easily:
+    *   Use `countryName`, `isoNumericCountryCode`, `isoAlpha2CountryCode` and `isoAlpha3CountryCode` to get the full country names or their representative codes defined by [ISO](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes).
+*   We've extended the `MBBarcodeResult` structure with `extendedElements` 
+    *   You can find all data from AAMVA-compliant barcodes under their respective `MBBarcodeElementKey` in the `MBBarcodeElements` structure
+    *   For a full list of keys please see `MBBarcodeElementKey` enum
+*   We've added another `ProcessingStatus` called `AwaitingOtherSide`
+    *   This status is triggered once BlinkID has finished with the first side of a document and expects the other side, too.
+*   We're now able to extract the date of birth from the CURP field on Mexico Voter IDs
+*   Direct API:
+	*   We've added a new recognition mode for recognizing still images of documents that have already been cropped:
+		*   Set the `scanCroppedDocumentImage` to true when you're feeding BlinkID images of documents that have already been cropped and don't require detection.
+		*   Keep in mind that this setting won't work on document images that haven't been properly cropped.
+
+### Changes to the IdBarcodeRecognizer:
+
+* We've extended the results with `extendedElements` 
+    *   You can find all data from AAMVA-compliant barcodes under their respective `MBBarcodeElementKey` in the `MBBarcodeElements` structure
+    *   For a full list of keys please see `MBBarcodeElementKey` enum
+
+### Minor API changes
+
+* We've replaced `Using time-limited license!` warning with `Using trial license!` warning. The warning message is displayed when using a trial license key. To disable it, use `showTrialLicenseWarning` on `MBMicroblinkSDK`.
+
 ## 5.9.0
 
 ### New features

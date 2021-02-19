@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "5.9.0"
+  s.version     = "5.10.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -20,26 +20,21 @@ Pod::Spec.new do |s|
   s.license     = { 
         :type => 'commercial',
         :text => <<-LICENSE
-                © 2013-2015 MicroBlink Ltd. All rights reserved.
+                © 2013-2021 Microblink Ltd. All rights reserved.
                 LICENSE
         }
 
   s.authors     = {
-        "MicroBlink" => "info@microblink.com",
+        "Microblink" => "info@microblink.com",
         "Jurica Cerovec" => "jurica.cerovec@microblink.com",
         "Jura Skrlec" => "jura.skrlec@microblink.com"
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v5.9.0/blinkid-ios_v5.9.0.tar.gz'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v5.10.0/blinkid-ios_v5.10.0.tar.gz'
   }
 
   s.platform     = :ios
-
-  s.pod_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-    }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   # ――― MULTI-PLATFORM VALUES ――――――――――――――――――――――――――――――――――――――――――――――――― #
 
