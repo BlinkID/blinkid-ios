@@ -1,3 +1,22 @@
+## 5.10.0
+
+### New features:
+
+* We have full support for Apple Silicon!
+
+### Framework formats and architectures:
+
+* Use `.xcframework` as we now have full Apple Silicon and Intel support.
+* We are still supporting `fat binary .framework` format, but we’ve removed simulator slices from it.
+
+### Carthage:
+
+* Carthage still doesn't support `binary .xcframework`, so there is no support for simulator slices anymore.
+
+### Minor API changes:
+
+- We've replaced `Using time-limited license!` warning with `Using trial license!` warning. The warning message is displayed when using a trial license key. To disable it, use `showTrialLicenseWarning` on `MBCMicroblinkSDK`.
+
 ## 5.9.0
 
 ### Major API changes:

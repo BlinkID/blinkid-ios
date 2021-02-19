@@ -123,6 +123,14 @@ MB_INIT
  */
 @property (nonatomic, strong) MBRecognitionModeFilter *recognitionModeFilter;
 
+/**
+ * Configure the recognizer to only work on already cropped and dewarped images.
+ * This only works for still images - video feeds will ignore this setting.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL scanCroppedDocumentImage;
+
 @end
 
 @protocol MBBlinkIdCombinedRecognizerDelegate <NSObject>

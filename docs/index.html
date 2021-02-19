@@ -20,9 +20,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.9.0 Docs
+          PPBlinkID v5.10.0 Docs
         </a>
-         (69% documented)
+         (65% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -52,6 +52,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBBarcodeElements.html">MBBarcodeElements</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBBarcodeResult.html">MBBarcodeResult</a>
               </li>
@@ -370,6 +373,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBAnonymizationMode.html">MBAnonymizationMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MBBarcodeElementKey.html">MBBarcodeElementKey</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/MBBarcodeType.html">MBBarcodeType</a>
@@ -774,6 +780,9 @@
                 <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_DEFAULT_STRING">MB_LOCALIZED_DEFAULT_STRING</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/c:MBMicroblinkApp.h@F@MB_LOCALIZED_FOR_LANGUAGE">MB_LOCALIZED_FOR_LANGUAGE</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Functions.html#/c:@F@MBscanningRegionForFrameInBounds">MBscanningRegionForFrameInBounds</a>
               </li>
             </ul>
@@ -887,7 +896,7 @@
 </ul>
 <h1 id='a-name-requirements-a-requirements' class='heading'><a name="requirements"></a> Requirements</h1>
 
-<p>SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 9.0 or later</strong>.</p>
+<p>SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 9.0 or later</strong>.</p>
 
 <p>SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which <a href="http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536">don&rsquo;t have camera with autofocus</a>. </p>
 <h1 id='a-name-quick-start-a-quick-start' class='heading'><a name="quick-start"></a> Quick Start</h1>
@@ -921,7 +930,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.9.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.10.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -938,12 +947,12 @@ git lfs install
 </code></pre>
 <h4 id='using-carthage' class='heading'>Using Carthage</h4>
 
-<p>Microblink SDK is available via <a href="https://github.com/Carthage/Carthage">Carthage</a>. Please check out <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage documentation</a> if you are new to Carthage.</p>
+<p>BlinkID SDK is available via <a href="https://github.com/Carthage/Carthage">Carthage</a>. Please check out <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage documentation</a> if you are new to Carthage.</p>
 
 <ul>
 <li>Install Carthage. Check out <a href="https://github.com/Carthage/Carthage#installing-carthage">Installing Carthage guide</a>. Please make sure you have Carthage version &gt;= 0.35.0 installed.</li>
 <li>Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is.</li>
-<li>Add Microblink as a dependency to this Cartfile:</li>
+<li>Add BlinkID as a dependency to this Cartfile:</li>
 </ul>
 <pre class="highlight shell"><code>binary <span class="s2">"https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"</span>
 </code></pre>
@@ -955,7 +964,7 @@ git lfs install
 </ul>
 <h4 id='using-swift-package-manager' class='heading'>Using Swift Package Manager</h4>
 
-<p>Microblink SDK is available as <a href="https://swift.org/package-manager/">Swift Package</a>. Please check out <a href="https://github.com/apple/swift-package-manager">Swift Package Manager documentation</a> if you are new to Swift Package Manager.</p>
+<p>BlinkID SDK is available as <a href="https://swift.org/package-manager/">Swift Package</a>. Please check out <a href="https://github.com/apple/swift-package-manager">Swift Package Manager documentation</a> if you are new to Swift Package Manager.</p>
 
 <p>We provide a URL to the public package repository that you can add in Xcode:</p>
 <pre class="highlight shell"><code>https://github.com/BlinkID/blinkid-swift-package
@@ -1004,18 +1013,18 @@ git lfs install
 </code></pre>
 
 <ul>
-<li><p>Copy Microblink.xcframework to your project folder.</p></li>
-<li><p>In your Xcode project, open the Project navigator. Drag the Microblink.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose &ldquo;Create groups&rdquo;, instead of the &ldquo;Create folder references&rdquo; option.</p></li>
+<li><p>Copy BlinkID.xcframework to your project folder.</p></li>
+<li><p>In your Xcode project, open the Project navigator. Drag the BlinkID.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose &ldquo;Create groups&rdquo;, instead of the &ldquo;Create folder references&rdquo; option.</p></li>
 </ul>
 
-<p><img src="https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png" alt="Adding Microblink.xcframework to your project"></p>
+<p><img src="https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png" alt="Adding BlinkID.xcframework to your project"></p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
-    Since Microblink.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option <code>Embed &amp; Sign</code>.
+    Since BlinkID.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option <code>Embed &amp; Sign</code>.
 
 </div>
 
-<p><img src="https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png" alt="Adding Microblink.xcframework to embedded binaries"></p>
+<p><img src="https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png" alt="Adding BlinkID.xcframework to embedded binaries"></p>
 
 <ul>
 <li><p>Include the additional frameworks and libraries into your project in the &ldquo;Linked frameworks and libraries&rdquo; section of your target settings.</p>
@@ -1033,11 +1042,11 @@ git lfs install
 <p>In files in which you want to use scanning functionality place import directive.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Microblink</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BlinkID</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>#import &lt;Microblink/Microblink.h&gt;
+<pre class="highlight plaintext"><code>#import &lt;BlinkID/BlinkID.h&gt;
 </code></pre>
 <h3 id='3-initiating-the-scanning-process' class='heading'>3. Initiating the scanning process</h3>
 
@@ -1570,7 +1579,7 @@ We will continue expanding this recognizer by adding support for new document ty
 <p>For example, let&rsquo;s say that we want to change text &ldquo;Scan the front side of a document&rdquo; to &ldquo;Scan the front side&rdquo; in BlinkID sample project. This would be the steps:</p>
 
 <ul>
-<li>Find the translation key in en.strings file inside Microblink.framework</li>
+<li>Find the translation key in en.strings file inside BlinkID.framework</li>
 <li>Add a new file MyTranslations.strings to the project by using &ldquo;Strings File&rdquo; template</li>
 <li>With MyTranslations.string open, in File inspector tap &ldquo;Localize&hellip;&rdquo; button and select English</li>
 <li>Add the translation key &ldquo;blinkid_generic_message&rdquo; and the value &ldquo;Scan the front side&rdquo; to MyTranslations.strings</li>
@@ -1636,7 +1645,7 @@ If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git
 <p>This usually happens when using <a href="http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizerRunnerViewController.html"><code><a href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></code></a> and forgetting to pause the <a href="http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizerRunnerViewController.html"><code><a href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></code></a> in your <code>didFinish</code> callback. Then, as soon as <code>didFinish</code> happens, the result is mutated or reset by additional processing that <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> performs in the time between end of your <code>didFinish</code> callback and actual finishing of the scanning activity. For more information about statefulness of the <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> objects, check <a href="#recognizer-concept">this section</a>.</p>
 <h4 id='unsupported-architectures-when-submitting-app-to-app-store' class='heading'>Unsupported architectures when submitting app to App Store</h4>
 
-<p>Microblink.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you&rsquo;ll need to preprocess the framework to remove simulator architectures.</p>
+<p>BlinkID.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you&rsquo;ll need to preprocess the framework to remove simulator architectures.</p>
 
 <p>Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.</p>
 
@@ -1689,7 +1698,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2020-12-14)</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-02-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

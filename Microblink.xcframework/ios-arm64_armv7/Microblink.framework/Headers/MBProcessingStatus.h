@@ -53,7 +53,10 @@ typedef NS_ENUM(NSInteger, MBProcessingStatus) {
     MBProcessingStatusUnsupportedClass,
 
     /** License for the detected document is missing. */
-    MBProcessingStatusUnsupportedByLicense
+    MBProcessingStatusUnsupportedByLicense,
+    
+    /** Front side recognition has completed successfully, and recognizer is waiting for the other side to be scanned. */
+    MBProcessingStatusAwaitingOtherSide
 };
 
 #endif /* MBProcessingStatus_h */

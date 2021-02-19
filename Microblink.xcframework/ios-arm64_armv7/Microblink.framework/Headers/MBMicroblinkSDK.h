@@ -21,11 +21,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 + (instancetype)sharedInstance NS_SWIFT_NAME(shared());
 
 /**
- * If YES, tooltip limited license key warning messages will appear on screen
+ * Disable or enable showing of toast when trial license key is entered. By default, whenever
+ * someone uses trial license key, a toast will appear informing user that license is trial.
+ * This feature should protect you from accidentally using trial license key in production
+ * version of your app.
  *
  * Default: YES.
  */
-@property (nonatomic, assign) BOOL showLicenseKeyTimeLimitedWarning;
+@property (nonatomic, assign) BOOL showTrialLicenseWarning;
 
 /**
  * Bundle in which the resources for the scanning process should be found. Usually, by default, this
