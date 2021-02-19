@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2223D1025DFFE59009510AD /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2223D0F25DFFE29009510AD /* Microblink.xcframework */; };
+		A2223D1125DFFE59009510AD /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2223D0F25DFFE29009510AD /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2E36049259369CD00246B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E36048259369CD00246B44 /* AppDelegate.swift */; };
 		A2E3604B259369CD00246B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3604A259369CD00246B44 /* SceneDelegate.swift */; };
 		A2E3604D259369CD00246B44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E3604C259369CD00246B44 /* ContentView.swift */; };
@@ -18,8 +20,6 @@
 		A2E3606625936A4300246B44 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E3606525936A4300246B44 /* AudioToolbox.framework */; };
 		A2E3606825936A4B00246B44 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E3606725936A4B00246B44 /* CoreMedia.framework */; };
 		A2E360712593842900246B44 /* BlinkIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E360702593842900246B44 /* BlinkIdViewController.swift */; };
-		A2E3607325A35DC000246B44 /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E3607225A35DC000246B44 /* Microblink.xcframework */; };
-		A2E3607425A35DC000246B44 /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2E3607225A35DC000246B44 /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2E3607725A35DDC00246B44 /* blinkid-license.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2E3607625A35DDC00246B44 /* blinkid-license.txt */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A2E3607425A35DC000246B44 /* Microblink.xcframework in Embed Frameworks */,
+				A2223D1125DFFE59009510AD /* Microblink.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A2223D0F25DFFE29009510AD /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = ../../Microblink.xcframework; sourceTree = "<group>"; };
 		A2E36045259369CD00246B44 /* BlinkID-sample-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlinkID-sample-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E36048259369CD00246B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E3604A259369CD00246B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		A2E3606525936A4300246B44 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2E3606725936A4B00246B44 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A2E360702593842900246B44 /* BlinkIdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkIdViewController.swift; sourceTree = "<group>"; };
-		A2E3607225A35DC000246B44 /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = ../../Microblink.xcframework; sourceTree = "<group>"; };
 		A2E3607625A35DDC00246B44 /* blinkid-license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "blinkid-license.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +66,7 @@
 				A2E3606825936A4B00246B44 /* CoreMedia.framework in Frameworks */,
 				A2E3606425936A3E00246B44 /* AVFoundation.framework in Frameworks */,
 				A2E3606225936A3200246B44 /* Accelerate.framework in Frameworks */,
-				A2E3607325A35DC000246B44 /* Microblink.xcframework in Frameworks */,
+				A2223D1025DFFE59009510AD /* Microblink.xcframework in Frameworks */,
 				A2E3606625936A4300246B44 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +118,7 @@
 		A2E3605D25936A1800246B44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A2E3607225A35DC000246B44 /* Microblink.xcframework */,
+				A2223D0F25DFFE29009510AD /* Microblink.xcframework */,
 				A2E3606725936A4B00246B44 /* CoreMedia.framework */,
 				A2E3606525936A4300246B44 /* AudioToolbox.framework */,
 				A2E3606325936A3E00246B44 /* AVFoundation.framework */,
