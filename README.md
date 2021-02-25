@@ -795,6 +795,26 @@ If you have followed [XCode integration instructions](#quick-start) and are stil
 
 In case of problems with using the SDK, you should do as follows:
 
+### <a name="troubleshooting-cfbundle-problems"></a> Missing CFBundleVersion and CFBundleShortVersionString
+
+We are aware that of version **v5.10.0**, when uploading to the App Store, you will get: `The bundle '/Frameworks/Microblink.framework' is missing plist key. The Info.plist file is missing the required key: CFBundleVersion and CFBundleShortVersionString` message. This will be fixed for the **v5.11.0** release, but for now, there is a workaround. Please follow the next steps:
+
+* To `Info.plist` inside `Microblink.xcframework` add:
+
+```
+	<key>CFBundleVersion</key>
+	<string>1</string>
+```
+
+* To `Info.plist` inside `Microblink.framework` add:
+
+```
+	<key>CFBundleShortVersionString</key>
+	<string>5.10.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+```
+
 ### <a name="troubleshooting-licensing-problems"></a> Licencing problems
 
 If you are getting "invalid licence key" error or having other licence-related problems (e.g. some feature is not enabled that should be or there is a watermark on top of camera), first check the console. All licence-related problems are logged to error log so it is easy to determine what went wrong.
@@ -818,11 +838,6 @@ If you are having problems with scanning certain items, undesired behaviour on s
 
 ## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.
-
-#### Note on ARM Macs
-
-We are supporting `ARM64 Device` slice through our `.xcframework` format.
-We are still in development supporting `ARM64 Simulator` slice for newly released ARM Macs and we will update our SDK with `ARM64 Simulator` support as soon as development is done.
 
 #### In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizer.html) object
 
