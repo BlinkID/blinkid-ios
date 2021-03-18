@@ -47,5 +47,9 @@
 		<integer>2</integer>
 		<integer>6</integer>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>5.10.0</string>
 </dict>
 </plist>
