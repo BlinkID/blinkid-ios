@@ -22,7 +22,7 @@
 "photopay_align_message" = "למקם את הטלפון מעל השובר";
 "photopay_back_splash_verification_document" = "הצד האחורי";
 "photopay_back_verification_document" = "נא להניח את צדו האחורי של המסמך במסגרת ולחכות לסריקה האוטומטית.";
-"photopay_camera_permission_denied" = "ל-{font:@Medium}%@{/font} אין הרשאה להשתמש במצלמה.\n\nנא לעבור אל:\n*  {font:@Medium}הגדרות{/font}\n* {font:@Medium}%@{/font}\n* נא לוודא ש-{font:@Medium} מצלמה {/font} זמין";
+"photopay_camera_permission_denied" = "ל-%@ אין הרשאה להשתמש במצלמה.\n\nנא לעבור אל:\n*  הגדרות\n* %@\n* נא לוודא ש- מצלמה  זמין";
 "photopay_close" = "ביטול";
 "photopay_done_splash_verification_document" = "סריקת המסמך בוצעה";
 "photopay_front_splash_verification_document" = "הצד הקדמי";

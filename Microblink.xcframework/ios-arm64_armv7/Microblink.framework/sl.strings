@@ -22,7 +22,7 @@
 "photopay_align_message" = "Postavite telefon nad potrdilo";
 "photopay_back_splash_verification_document" = "Zadnja stran";
 "photopay_back_verification_document" = "Zadnjo stran dokumenta postavite v okvir in počakajte na samodejno optično branje.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nima dovoljenja za uporabo kamere.\n\nPojdite na:\n• {font:@Medium}Nastavitve{/font}\n• {font:@Medium}%@{/font}\n• Prepričajte se, da je možnost {font:@Medium}Kamera{/font} omogočena";
+"photopay_camera_permission_denied" = "%@ nima dovoljenja za uporabo kamere.\n\nPojdite na:\n• Nastavitve\n• %@\n• Prepričajte se, da je možnost Kamera omogočena";
 "photopay_close" = "Prekliči";
 "photopay_done_splash_verification_document" = "Optično branje dokumenta končano";
 "photopay_front_splash_verification_document" = "Sprednja stran";

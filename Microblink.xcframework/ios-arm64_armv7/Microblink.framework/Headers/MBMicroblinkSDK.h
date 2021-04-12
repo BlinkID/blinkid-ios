@@ -31,16 +31,6 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic, assign) BOOL showTrialLicenseWarning;
 
 /**
- * Bundle in which the resources for the scanning process should be found. Usually, by default, this
- * is equal to Microblink.bundle located in Main app bundle.
- *
- * i.e, this is by default initialized to:
- *   [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Microblink" ofType:@"bundle"];
- *
- */
-@property (nonatomic, strong) NSBundle *resourcesBundle;
-
-/**
  * Set license buffer and unlock the SDK. Application package will be used to validate the license.
  * @param licenseBuffer Byte array containing the license.
  * @param errorCallback A block that get executed when an issue with the license occurs. The only parameter represents the type of the issue.

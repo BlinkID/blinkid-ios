@@ -22,7 +22,7 @@
 "photopay_align_message" = "Tempatkan telefon di atas slip";
 "photopay_back_splash_verification_document" = "Bahagian belakang";
 "photopay_back_verification_document" = "Tempatkan bahagian belakang dokumen di dalam bingkai dan tunggu pengimbasan automatik.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} tidak mempunyai kebenaran untuk menggunakan kamera.\n\nSila pergi ke:\n• {font:@Medium}Tetapan{/font}\n• {font:@Medium}%@{/font}\n• Pastikan {font:@Medium}Kamera{/font} didayakan";
+"photopay_camera_permission_denied" = "%@ tidak mempunyai kebenaran untuk menggunakan kamera.\n\nSila pergi ke:\n• Tetapan\n• %@\n• Pastikan Kamera didayakan";
 "photopay_close" = "Batal";
 "photopay_done_splash_verification_document" = "Pengimbasan dokumen selesai";
 "photopay_front_splash_verification_document" = "Bahagian hadapan";

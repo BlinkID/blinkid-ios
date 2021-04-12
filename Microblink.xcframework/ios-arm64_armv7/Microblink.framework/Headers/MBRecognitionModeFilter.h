@@ -40,6 +40,11 @@ MB_INIT
 @property (nonatomic, assign) BOOL enablePhotoId;
 
 /**
+ * Enable scanning of barcode IDs. Setting is taken into account only if the barcode right to scan that barcode is purchased.
+ */
+@property (nonatomic, assign) BOOL enableBarcodeId;
+
+/**
  * Enable full document recognition. Setting is taken into account only if the document right to scan that document is purchased.
  */
 @property (nonatomic, assign) BOOL enableFullDocumentRecognition;

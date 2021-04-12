@@ -22,7 +22,7 @@
 "photopay_align_message" = "将手机置于纸条上方";
 "photopay_back_splash_verification_document" = "背面";
 "photopay_back_verification_document" = "将文件的背面置于框内,并等待自动扫描。";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} 没有使用相机的权限。\n\n请前往:\n• {font:@Medium}设置{/font}\n• {font:@Medium}%@{/font}\n• 确保{font:@Medium}相机{/font}已启用";
+"photopay_camera_permission_denied" = "%@ 没有使用相机的权限。\n\n请前往:\n• 设置\n• %@\n• 确保相机已启用";
 "photopay_close" = "取消";
 "photopay_done_splash_verification_document" = "文件扫描已完成";
 "photopay_front_splash_verification_document" = "正面";

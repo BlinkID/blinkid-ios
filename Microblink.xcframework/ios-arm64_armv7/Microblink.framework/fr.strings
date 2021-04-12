@@ -22,7 +22,7 @@
 "photopay_align_message" = "Placez le téléphone au-dessus du bulletin de paiement";
 "photopay_back_splash_verification_document" = "Verso";
 "photopay_back_verification_document" = "Veuillez placer le verso du document dans le cadre et attendre la numérisation automatique.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} n'a pas l'autorisation pour utiliser l'appareil photo.\n\nVeuillez vous rendre dans :\n• {font:@Medium}Paramètres{/font}\n• {font:@Medium}%@{/font}\n• Assurez-vous que l'{font:@Medium}appareil photo{/font} est activé";
+"photopay_camera_permission_denied" = "%@ n'a pas l'autorisation pour utiliser l'appareil photo.\n\nVeuillez vous rendre dans :\n• Paramètres\n• %@\n• Assurez-vous que l'appareil photo est activé";
 "photopay_close" = "Annuler";
 "photopay_done_splash_verification_document" = "Numérisation du document terminée";
 "photopay_front_splash_verification_document" = "Recto";
