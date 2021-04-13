@@ -24,7 +24,7 @@
         "description": "err - yet another take on C++ error handling"
     },
     {
-        "package": "Functionoid/3.0.2@microblink/stable",
+        "package": "Functionoid/3.0.3@microblink/stable",
         "url": "https://github.com/microblink/functionoid",
         "license": "Boost Software License, Version 1.0",
         "description": "a complete C++17 rewrite of boost/std::function"
@@ -84,7 +84,7 @@
         "description": null
     },
     {
-        "package": "Pimpl/1.0.2@microblink/stable",
+        "package": "Pimpl/1.0.3@microblink/stable",
         "url": "https://github.com/microblink/pimpl",
         "license": "BSD 2-Clause \"Simplified\" License",
         "description": "Proving pimpls do not require heap, exceptions or runtime polymorphism."
@@ -120,7 +120,7 @@
         "description": null
     },
     {
-        "package": "cpuinfo/3.0.0@microblink/stable",
+        "package": "cpuinfo/3.0.1@microblink/stable",
         "url": "https://github.com/microblink/cpuinfo",
         "license": "BSD 2-Clause \"Simplified\" License",
         "description": "cpuinfo is a library to detect essential for performance optimization information about host CPU"

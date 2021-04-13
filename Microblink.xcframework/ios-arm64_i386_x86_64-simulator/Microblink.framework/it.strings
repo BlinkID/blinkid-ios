@@ -22,7 +22,7 @@
 "photopay_align_message" = "Posizionare il telefono sopra il bollettino";
 "photopay_back_splash_verification_document" = "Retro";
 "photopay_back_verification_document" = "Posiziona il retro del documento nel riquadro e attendi la scansione automatica.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@ {/font} non ha l'autorizzazione ad usare la fotocamera.\n\nAndare a:\n• {font:@Medium}Impostazioni {/font}\n• {font:@Medium}%@ {/font}\n• Assicurarsi che \n• {font:@Medium}la fotocamera {/font} sia abilitata";
+"photopay_camera_permission_denied" = "%@  non ha l'autorizzazione ad usare la fotocamera.\n\nAndare a:\n• Impostazioni \n• %@ \n• Assicurarsi che \n• la fotocamera  sia abilitata";
 "photopay_close" = "Annulla";
 "photopay_done_splash_verification_document" = "Scansione documento eseguita";
 "photopay_front_splash_verification_document" = "Fronte";

@@ -29,7 +29,10 @@ typedef NS_ENUM(NSInteger, MBRecognitionMode) {
     MBRecognitionModePhotoId,
 
     /** Detailed document recognition. */
-    MBRecognitionModeFullRecognition
+    MBRecognitionModeFullRecognition,
+    
+    /** Recognition of barcode document. */
+    MBRecognitionModeBarcodeId
 };
 
 #endif /* MBRecognitionMode_h */

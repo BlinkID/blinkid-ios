@@ -22,7 +22,7 @@
 "photopay_align_message" = "ثبت الهاتف أعلى القسيمة";
 "photopay_back_splash_verification_document" = "الظهر";
 "photopay_back_verification_document" = "ضع ظهر المستند داخل الإطار وانتظر المسح التلقائي.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} ليس لديه إذن باستخدام الكاميرا.\n\nيُرجى الانتقال إلى:\n• {font:@Medium}الإعدادات{/font}\n• {font:@Medium}%@{/font}\n• تأكد من أن {font:@Medium}الكاميرا{/font} مُمَكَّنة";
+"photopay_camera_permission_denied" = "%@ ليس لديه إذن باستخدام الكاميرا.\n\nيُرجى الانتقال إلى:\n• الإعدادات\n• %@\n• تأكد من أن الكاميرا مُمَكَّنة";
 "photopay_close" = "إلغاء";
 "photopay_done_splash_verification_document" = "تمت عملية المسح الضوئي للمستند";
 "photopay_front_splash_verification_document" = "الوجه";

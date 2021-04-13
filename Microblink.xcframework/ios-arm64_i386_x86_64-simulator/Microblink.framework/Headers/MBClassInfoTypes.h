@@ -348,7 +348,34 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionMichoacan,
     MBRegionNewYorkCity,
     MBRegionTamaulipas,
-    MBRegionVeracruz
+    MBRegionVeracruz,
+    MBRegionChiapas,
+    MBRegionCoahuila,
+    MBRegionDurango,
+    MBRegionGuerreroCocula,
+    MBRegionGuerreroJuchitan,
+    MBRegionGuerreroTepecoacuilco,
+    MBRegionGuerreroTlacoapa,
+    MBRegionGujarat,
+    MBRegionHidalgo,
+    MBRegionKarnataka,
+    MBRegionKerala,
+    MBRegionKhyberPakhtunkhwa,
+    MBRegionMadhyaPradesh,
+    MBRegionMaharashtra,
+    MBRegionMorelos,
+    MBRegionNayarit,
+    MBRegionOaxaca,
+    MBRegionPuebla,
+    MBRegionPunjab,
+    MBRegionQueretaro,
+    MBRegionSanLuisPotosi,
+    MBRegionSinaloa,
+    MBRegionSonora,
+    MBRegionTabasco,
+    MBRegionTamilNadu,
+    MBRegionYucatan,
+    MBRegionZacatecas
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -388,7 +415,17 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeProfessionalDl,
     MBTypeTaxId,
     MBTypeWeaponPermit,
-    MBTypeVisa
+    MBTypeVisa,
+    MBTypeBorderCrossingCard,
+    MBTypeDriverCard,
+    MBTypeGlobalEntryCard,
+    MBTypeMypolis,
+    MBTypeNexusCard,
+    MBTypePassportCard,
+    MBTypeProofOfAgeCard,
+    MBTypeRefugeeId,
+    MBTypeTribalId,
+    MBTypeVeteranId
 };
 
 #endif /* MBClassInfoTypes_h */

@@ -1,6 +1,6 @@
 language: swift
-osx_image: xcode12.2
-xcode_sdk: iphonesimulator14.2
+osx_image: xcode12.4
+xcode_sdk: iphonesimulator14.4
 
 install: true
 before_install: ./travis/before_script.sh

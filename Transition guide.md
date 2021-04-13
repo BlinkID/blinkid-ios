@@ -1,3 +1,9 @@
+## 5.11.0
+
+### Minor API changes:
+
+- Renamed MicroblinkApp `instance` to `sharedInstance` (Objective C) / `shared` (Swift)
+
 ## 5.10.0
 
 ### New features:

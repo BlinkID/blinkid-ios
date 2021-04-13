@@ -22,7 +22,7 @@
 "photopay_align_message" = "Iposisyon ang telepono sa slip";
 "photopay_back_splash_verification_document" = "Likurang bahagi";
 "photopay_back_verification_document" = "Ilagay ang likurang bahagi ng dokumento sa loob ng frame at maghintay para sa awtomatikong pag-scan.";
-"photopay_camera_permission_denied" = "Walang pahintulot ang {font:@Medium}%@{/font} na gamitin ang camera.\n\nPumunta sa:\n• {font:@Medium}Mga Setting{/font}\n• {font:@Medium}%@{/font}\n• Tiyaking naka-enable ang {font:@Medium}Camera{/font}";
+"photopay_camera_permission_denied" = "Walang pahintulot ang %@ na gamitin ang camera.\n\nPumunta sa:\n• Mga Setting\n• %@\n• Tiyaking naka-enable ang Camera";
 "photopay_close" = "Kanselahin";
 "photopay_done_splash_verification_document" = "Tapos na ang pag-i-scan sa dokumento";
 "photopay_front_splash_verification_document" = "Harapang bahagi";

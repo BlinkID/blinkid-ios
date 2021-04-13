@@ -54,6 +54,7 @@ Feeling ready to get going with the integration? First, make sure we support you
 		- [Machine Readable Travel Document recognizer](#mrtd-recognizer)
 		- [Passport recognizer](#passport-recognizer)
 		- [Visa recognizer](#visa-recognizer)
+		- [ID barcode recognizer](#id-barcode-recognizer)
 		- [Document face recognizer](#document-face-recognizers)
 		- [BlinkID Recognizer](#blink-id-recognizers)
 		- [BlinkID Combined Recognizer](#blink-id-combined-recognizers)
@@ -108,7 +109,7 @@ pod init
 ```ruby
 platform :ios, '9.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.10.0'
+    pod 'PPBlinkID', '~> 5.11.0'
 end
 ```
 
@@ -742,14 +743,8 @@ The [`MBVisaRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBVisaReco
 
 You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
-### AAMVA standard barcode recognizer (USA, Canada, Nigeria)
-The [`MBUsdlRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlRecognizer.html) is used for scanning PDF417 barcode from USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.
-
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
-
-### AAMVA standard combined recognizer (USA, Canada, Nigeria)
-The [`MBUsdlCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) first scans the front side of the document to obtain the full document image and face image. It then scans PDF417 barcode from the back side of AAMVA standard documents. This includes USA ID cards and driver’s licence, Canadian ID cards and driving licence, and Nigerian driving licence.
-Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBUsdlRecognizer](http://blinkid.github.io/blinkid-ios/Classes/MBUsdlCombinedRecognizer.html) for scanning the PDF417 barcode.
+### <a name="id-barcode-recognizer"></a> ID barcode recognizer
+The [`MBIdBarcodeRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIdBarcodeRecognizer.html) is used for scanning barcodes from various ID cards. Check this document to see the list of supported document types.
 
 You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
 
@@ -795,26 +790,6 @@ If you have followed [XCode integration instructions](#quick-start) and are stil
 
 In case of problems with using the SDK, you should do as follows:
 
-### <a name="troubleshooting-cfbundle-problems"></a> Missing CFBundleVersion and CFBundleShortVersionString
-
-We are aware that of version **v5.10.0**, when uploading to the App Store, you will get: `The bundle '/Frameworks/Microblink.framework' is missing plist key. The Info.plist file is missing the required key: CFBundleVersion and CFBundleShortVersionString` message. This will be fixed for the **v5.11.0** release, but for now, there is a workaround. Please follow the next steps:
-
-* To `Info.plist` inside `Microblink.xcframework` add:
-
-```
-	<key>CFBundleVersion</key>
-	<string>1</string>
-```
-
-* To `Info.plist` inside `Microblink.framework` add:
-
-```
-	<key>CFBundleShortVersionString</key>
-	<string>5.10.0</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-```
-
 ### <a name="troubleshooting-licensing-problems"></a> Licencing problems
 
 If you are getting "invalid licence key" error or having other licence-related problems (e.g. some feature is not enabled that should be or there is a watermark on top of camera), first check the console. All licence-related problems are logged to error log so it is easy to determine what went wrong.
@@ -838,6 +813,11 @@ If you are having problems with scanning certain items, undesired behaviour on s
 
 ## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.
+
+#### Note on ARM Macs
+
+We are supporting `ARM64 Device` slice through our `.xcframework` format.
+We are still in development supporting `ARM64 Simulator` slice for newly released ARM Macs and we will update our SDK with `ARM64 Simulator` support as soon as development is done.
 
 #### In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/docs/Classes/MBRecognizer.html) object
 
