@@ -116,13 +116,19 @@ static inline NSString * MB_LOCALIZED(NSString *key) {
         }
     }
     
-    NSString *localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, [MBMicroblinkApp sharedInstance].language);
+    NSString *language = [MBMicroblinkApp sharedInstance].language;
+    NSString *localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, language);
     
 #ifndef DNDEBUG
     return localizedString;
 #else
-    if ([localizedString isEqualToString:MB_LOCALIZED_DEFAULT_STRING(key)] && ![MBMicroblinkApp.sharedInstance.language isEqualToString:@"en"]) {
-        localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, @"en");
+    if ([localizedString isEqualToString:MB_LOCALIZED_DEFAULT_STRING(key)]) {
+        if (![language isEqualToString:@"ar-AE"] && [language hasPrefix:@"ar"]) {
+            localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, @"ar-AE");
+        }
+        else if (![language isEqualToString:@"en"]) {
+            localizedString = MB_LOCALIZED_FOR_LANGUAGE(key, @"en");
+        }
     }
     return localizedString;
 #endif

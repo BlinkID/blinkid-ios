@@ -211,6 +211,16 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, assign) MBProcessingStatus processingStatus;
 
 /**
+ * Status of the last front side recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus frontProcessingStatus;
+
+/**
+ * Status of the last back side recognition process.
+ */
+@property (nonatomic, readonly, assign) MBProcessingStatus backProcessingStatus;
+
+/**
  * Recognition mode used to scan current document.
  */
 @property (nonatomic, readonly, assign) MBRecognitionMode recognitionMode;
