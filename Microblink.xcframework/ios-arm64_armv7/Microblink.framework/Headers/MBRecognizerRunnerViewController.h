@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Internal state is used to use the fact that the same object exists on multiple consecutive frames, and using internal
  * state provides better scanning results.
  *
- * NOTE: This method must be called on the background thread.
+ * NOTE: This method must be called on the main thread.
  *
  *  @param resetState YES if state should be reset.
  */

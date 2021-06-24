@@ -56,7 +56,10 @@ typedef NS_ENUM(NSInteger, MBProcessingStatus) {
     MBProcessingStatusUnsupportedByLicense,
     
     /** Front side recognition has completed successfully, and recognizer is waiting for the other side to be scanned. */
-    MBProcessingStatusAwaitingOtherSide
+    MBProcessingStatusAwaitingOtherSide,
+    
+    /** Side not scanned. */
+    MBProcessingStatusNotScanned
 };
 
 #endif /* MBProcessingStatus_h */

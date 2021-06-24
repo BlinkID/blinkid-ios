@@ -10,6 +10,7 @@
 #import "MBMicroblinkApp.h"
 #import "MBViewControllerFactory.h"
 #import "MBMicroblinkSDK.h"
+#import "MBProductIntegrationInfo.h"
 #import "MBException.h"
 #import "MBImage.h"
 #import "MBDateResult.h"

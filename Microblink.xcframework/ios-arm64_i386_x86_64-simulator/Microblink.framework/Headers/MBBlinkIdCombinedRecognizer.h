@@ -131,6 +131,21 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL scanCroppedDocumentImage;
 
+/**
+ * Proceed with scanning the back side even if the front side result is uncertain.
+ * This only works for still images - video feeds will ignore this setting.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowUncertainFrontSideScan;
+
+/**
+ * Configure the number of characters per field that are allowed to be inconsistent in data match.
+ *
+ * Default: 0 
+ */
+@property (nonatomic, assign) NSInteger maxAllowedMismatchesPerField;
+
 @end
 
 @protocol MBBlinkIdCombinedRecognizerDelegate <NSObject>

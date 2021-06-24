@@ -1,3 +1,7 @@
+## 5.12.0
+
+- No changes
+
 ## 5.11.0
 
 ### Minor API changes:

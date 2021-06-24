@@ -12,19 +12,19 @@
         "description": "Additions to boost/config for additional compiler-specific codegen tweaking macros"
     },
     {
-        "package": "Eigen/3.3.7.7@microblink/stable",
+        "package": "Eigen/3.3.9@microblink/stable",
         "url": "https://github.com/microblink/eigen-git-mirror",
         "license": "Mozilla Public License Version 2.0",
         "description": "Eigen is a C++ template library for linear algebra: vectors, matrices, and related algorithms. It is versatile, fast, elegant and works on many platforms (OS/Compilers)."
     },
     {
-        "package": "Err/1.1.1@microblink/stable",
+        "package": "Err/1.1.2@microblink/stable",
         "url": "https://github.com/microblink/err",
         "license": "Boost Software License",
         "description": "err - yet another take on C++ error handling"
     },
     {
-        "package": "Functionoid/3.0.3@microblink/stable",
+        "package": "Functionoid/3.0.4@microblink/stable",
         "url": "https://github.com/microblink/functionoid",
         "license": "Boost Software License, Version 1.0",
         "description": "a complete C++17 rewrite of boost/std::function"
@@ -96,7 +96,7 @@
         "description": "A fast JSON parser/generator for C++ with both SAX/DOM style API"
     },
     {
-        "package": "Sweater/8.0.4@microblink/stable",
+        "package": "Sweater/9.0.0@microblink/stable",
         "url": "https://github.com/microblink/sweater",
         "license": "MIT",
         "description": "Humble Outer Dispatch"
@@ -120,7 +120,7 @@
         "description": null
     },
     {
-        "package": "cpuinfo/3.0.1@microblink/stable",
+        "package": "cpuinfo/3.0.3@microblink/stable",
         "url": "https://github.com/microblink/cpuinfo",
         "license": "BSD 2-Clause \"Simplified\" License",
         "description": "cpuinfo is a library to detect essential for performance optimization information about host CPU"
