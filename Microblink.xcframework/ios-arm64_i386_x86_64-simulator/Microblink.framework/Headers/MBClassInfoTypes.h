@@ -241,7 +241,7 @@ typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountrySudan,
     MBCountrySuriname,
     MBCountrySvalbardAndJanMayen,
-    MBCountrySwaziland,
+    MBCountryEswatini,
     MBCountrySyria,
     MBCountryTajikistan,
     MBCountryTanzania,

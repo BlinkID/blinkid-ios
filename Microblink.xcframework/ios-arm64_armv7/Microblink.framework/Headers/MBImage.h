@@ -94,7 +94,7 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 /**
  * Creates MBImage around CVPixelBufferRef.
  */
-+ (instancetype)imageWithCvPixelBuffer:(CVPixelBufferRef)buffer;
++ (instancetype)imageWithCvPixelBuffer:(CVPixelBufferRef)buffer orientation:(UIImageOrientation)orientation;
 
 @end
 

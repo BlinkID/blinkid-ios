@@ -4,45 +4,45 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>BlinkID_Analyzer_general_6.5.0.strop</key>
+		<key>BlinkID_Analyzer_general_6.6.0.strop</key>
 		<data>
-		A9v/lN8oJnpNm5YX34laFoM0wPA=
+		v+XVUtGy0naVdwPDhdFqjBcXm38=
 		</data>
 		<key>BlinkID_BlurClassifier_general_6.2.0.strop</key>
 		<data>
-		xJ3d5nDP/aRkm9rrynW6tKTUHcc=
+		yjILgZK2BRzZCnYnLYJQWKI5GUg=
 		</data>
-		<key>BlinkID_Classifier_general_6.14.0.strop</key>
+		<key>BlinkID_Classifier_general_6.15.0.strop</key>
 		<data>
-		gNg59knt+k+yYgko4vEXhsc46Ss=
+		3cLaTeZdRP7t1o2BQ0gbDu0Ktoo=
 		</data>
-		<key>BlinkID_Detector_general_6.6.0.strop</key>
+		<key>BlinkID_Detector_general_6.7.0.strop</key>
 		<data>
-		Ucl4vKY0i4nFlYyicLKik5bfCa0=
+		g4E/aEfyzqQFiegpZxm3g/O0aBc=
 		</data>
 		<key>BlinkID_MoireClassifier_malaysia_6.0.0.strop</key>
 		<data>
-		Dg0pSSFbwvCgmpt9g0Tph0vl8og=
+		B+iKh2C60JeQqKDdG5fk9/b98h4=
 		</data>
 		<key>BlinkID_MonochromeClassifier_general_6.0.0.strop</key>
 		<data>
-		N+y4/Kvlt3AB0D3+2l234RgJ3Lc=
+		BLFsI9OC7yzfV5YI134qi60atx0=
 		</data>
-		<key>BlinkID_Ocr_general_6.13.0.strop</key>
+		<key>BlinkID_Ocr_general_6.14.0.strop</key>
 		<data>
-		WTotyIY1eeAfU/munqR5qYAKkqE=
+		vai2vl517F4LgWBJ8U5Aejncq1o=
 		</data>
 		<key>BlinkID_Ocr_mrz_6.4.0.strop</key>
 		<data>
-		/i/y/fjl/hHHPacWhTtMSAIVhZ0=
+		DvTSs0z1RmixS9Kgm4U/UGOf8bc=
 		</data>
 		<key>BlinkID_RotationClassifier_general_6.2.0.strop</key>
 		<data>
-		mzocwOceu2t34NkST0NRDWNBRss=
+		u36DxAQnHSxS0Ew8aGQAZEywkWQ=
 		</data>
-		<key>BlinkID_Segmentator_general_6.14.0.strop</key>
+		<key>BlinkID_Segmentator_general_6.15.0.strop</key>
 		<data>
-		74unqUw3guVA/9kLb5xEJQ6uWwo=
+		OtrRB8BmzrIAhNaTqJm2DwvNLJ4=
 		</data>
 		<key>Close.png</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Headers/MBClassInfoTypes.h</key>
 		<data>
-		r9pdlgp9KgG5ZWzV00rxSAJYxJo=
+		02a1pMFGTJcQXeaZsR2AGXKh6vI=
 		</data>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
 		<data>
@@ -426,7 +426,7 @@
 		</data>
 		<key>Headers/MBImage.h</key>
 		<data>
-		bd9eXBFGwCfLoPGxif8cAZXDc6o=
+		s3EqB0+MUSk01Fz6YDB/vBQkOaQ=
 		</data>
 		<key>Headers/MBImageAnalysisDetectionStatus.h</key>
 		<data>
@@ -466,7 +466,7 @@
 		</data>
 		<key>Headers/MBMicroblinkDefines.h</key>
 		<data>
-		Lt/A1msZyHy4K6gMs4dLCQdRyPE=
+		rjstjy6hT6JpfwA2Xex5I2q1FmU=
 		</data>
 		<key>Headers/MBMicroblinkInitialization.h</key>
 		<data>
@@ -738,7 +738,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+TAXtcqDFtoJ5YMz833vH85zO4g=
+		T0S88DxtkZYdt997YamHIigc8z4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1194,7 +1194,7 @@
 		</data>
 		<key>model_mrtd.zzip</key>
 		<data>
-		TLYT0oVfoHn4rU46c/NQtbmZlqA=
+		j3DhAqIKAZ9t0TBP/h19gXqJHY8=
 		</data>
 		<key>ms.strings</key>
 		<data>
@@ -1307,114 +1307,114 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>BlinkID_Analyzer_general_6.5.0.strop</key>
+		<key>BlinkID_Analyzer_general_6.6.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A9v/lN8oJnpNm5YX34laFoM0wPA=
+			v+XVUtGy0naVdwPDhdFqjBcXm38=
 			</data>
 			<key>hash2</key>
 			<data>
-			E5x5LDdcz70pTD5UPgXbzYpiGAo+g0MppH+nSdsgey8=
+			CevSAktZ4EhBkhN7qJrY636bsOXFZ/hWIv5+JC/QMKk=
 			</data>
 		</dict>
 		<key>BlinkID_BlurClassifier_general_6.2.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xJ3d5nDP/aRkm9rrynW6tKTUHcc=
+			yjILgZK2BRzZCnYnLYJQWKI5GUg=
 			</data>
 			<key>hash2</key>
 			<data>
-			A8TM9FQKjrTPKugCLnMQ9GGh39Iefmam34ZB/PIYqCE=
+			jAOo2Hvk/JmF2e5WULaBUdFhiNH205qe4eQrocHn0pQ=
 			</data>
 		</dict>
-		<key>BlinkID_Classifier_general_6.14.0.strop</key>
+		<key>BlinkID_Classifier_general_6.15.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gNg59knt+k+yYgko4vEXhsc46Ss=
+			3cLaTeZdRP7t1o2BQ0gbDu0Ktoo=
 			</data>
 			<key>hash2</key>
 			<data>
-			q97s68TsZzztm3ao/P1r2xWYeMK4v//ymWzNx6T9Dvo=
+			vCkocLPjyE1LNtmxTKg+rgd5wi4FoNSXEN2gvptukLM=
 			</data>
 		</dict>
-		<key>BlinkID_Detector_general_6.6.0.strop</key>
+		<key>BlinkID_Detector_general_6.7.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ucl4vKY0i4nFlYyicLKik5bfCa0=
+			g4E/aEfyzqQFiegpZxm3g/O0aBc=
 			</data>
 			<key>hash2</key>
 			<data>
-			gHii5+ebWlhWQd+nOO5kWz9sjt2q/68OixQiVSp8EJk=
+			Xv9YaLo9ZKkq2BXGuGgc36cvQpJoVbybo3YjGn1f/R8=
 			</data>
 		</dict>
 		<key>BlinkID_MoireClassifier_malaysia_6.0.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dg0pSSFbwvCgmpt9g0Tph0vl8og=
+			B+iKh2C60JeQqKDdG5fk9/b98h4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+G0jZneGwh8vsz8MChqI3l+nkyKFRLt1xZzBO+njZAo=
+			DSEz6SWWj4dgmZfNbdulPGDJy97MasP70mvi56UV8t8=
 			</data>
 		</dict>
 		<key>BlinkID_MonochromeClassifier_general_6.0.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N+y4/Kvlt3AB0D3+2l234RgJ3Lc=
+			BLFsI9OC7yzfV5YI134qi60atx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			jxgBJNg36axuWFCiCF+FpVP3CGmbJqnE39vkRmC2qas=
+			vkGuzE5VbH/ArcuSWzFdJji3MlN6nH5FJUDecx5eY7o=
 			</data>
 		</dict>
-		<key>BlinkID_Ocr_general_6.13.0.strop</key>
+		<key>BlinkID_Ocr_general_6.14.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WTotyIY1eeAfU/munqR5qYAKkqE=
+			vai2vl517F4LgWBJ8U5Aejncq1o=
 			</data>
 			<key>hash2</key>
 			<data>
-			4Tf7/8UqhqA/d/1Dhz9jJO/kG/q5nQ2FjMTyh1eWSRs=
+			CYlP/bQm+pzL4y6QrdozOVzR92QqHaelOL9kMrPUnoA=
 			</data>
 		</dict>
 		<key>BlinkID_Ocr_mrz_6.4.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/i/y/fjl/hHHPacWhTtMSAIVhZ0=
+			DvTSs0z1RmixS9Kgm4U/UGOf8bc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2e4QMgKKwNGjHae/d2Tgq1v2/ZM2SpCQBhe42v+af3s=
+			++/lKCi/TmSfpF2u0FxkEBo1dFLJoD/J2HVXZiA0DFI=
 			</data>
 		</dict>
 		<key>BlinkID_RotationClassifier_general_6.2.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mzocwOceu2t34NkST0NRDWNBRss=
+			u36DxAQnHSxS0Ew8aGQAZEywkWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			GEcifKavwpBaUiEkLUe2OTj8AfCzEFgoy7wBzq56ZsM=
+			q6WIbFaLTL7mU+bV7JvPGuPvWaHUzMT4CTj+QDmaGkU=
 			</data>
 		</dict>
-		<key>BlinkID_Segmentator_general_6.14.0.strop</key>
+		<key>BlinkID_Segmentator_general_6.15.0.strop</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			74unqUw3guVA/9kLb5xEJQ6uWwo=
+			OtrRB8BmzrIAhNaTqJm2DwvNLJ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ayjNYhCY2qWlUCMbLDp1dDuhzfbgEQ1XvXZr+L8Q1DI=
+			+BMjH7TrQcSAj6k++q8PWMz1f+qQ84cHFtL/RmULFtQ=
 			</data>
 		</dict>
 		<key>Close.png</key>
@@ -1707,11 +1707,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r9pdlgp9KgG5ZWzV00rxSAJYxJo=
+			02a1pMFGTJcQXeaZsR2AGXKh6vI=
 			</data>
 			<key>hash2</key>
 			<data>
-			1PGUqbd3C+znqcKNfYGIXCzTMZeB1G3tibHJeBbSCBM=
+			pxZOFdKUuXJj9xPVniAcAKeYQybxFBkEwSM5e1lbbvg=
 			</data>
 		</dict>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
@@ -2466,11 +2466,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bd9eXBFGwCfLoPGxif8cAZXDc6o=
+			s3EqB0+MUSk01Fz6YDB/vBQkOaQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			GUwFBXZLuHAkDQn5hSThsSlAw5lZzU1h1q1hKJo36Bs=
+			Kxi5J+Lw5I1Yw0ZYrGL5n+CFC2NiQ0ZD6xhIrFPdmMY=
 			</data>
 		</dict>
 		<key>Headers/MBImageAnalysisDetectionStatus.h</key>
@@ -2576,11 +2576,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Lt/A1msZyHy4K6gMs4dLCQdRyPE=
+			rjstjy6hT6JpfwA2Xex5I2q1FmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			55xxOJAcidYZyPh2FJVmBnX3FKfb9Nzd04y6T5JdKd4=
+			oAcXbTF6sDWTu5OQPXSdqniIqG1eEFx8tiq3FjP0hwI=
 			</data>
 		</dict>
 		<key>Headers/MBMicroblinkInitialization.h</key>
@@ -4567,11 +4567,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TLYT0oVfoHn4rU46c/NQtbmZlqA=
+			j3DhAqIKAZ9t0TBP/h19gXqJHY8=
 			</data>
 			<key>hash2</key>
 			<data>
-			LRBvDozC2YzR+/EJKyvHlsXUOPnQ5G40Ru49QRSx0cg=
+			Rz4aNSecKzKVuq/Fa0dhe6E/d9EoBahL7nEw3qJUvP8=
 			</data>
 		</dict>
 		<key>ms.strings</key>
