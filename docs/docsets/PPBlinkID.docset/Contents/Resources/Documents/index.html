@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.12.0 Docs
+          PPBlinkID v5.13.0 Docs
         </a>
          (82% documented)
       </p>
@@ -568,7 +568,7 @@
 </ul>
 <h1 id='a-name-requirements-a-requirements' class='heading'><a name="requirements"></a> Requirements</h1>
 
-<p>SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 9.0 or later</strong>.</p>
+<p>SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 9.0 or later</strong>.</p>
 
 <p>SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which <a href="http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536">don&rsquo;t have camera with autofocus</a>. </p>
 <h1 id='a-name-quick-start-a-quick-start' class='heading'><a name="quick-start"></a> Quick Start</h1>
@@ -602,7 +602,7 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.12.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.13.0'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -619,12 +619,12 @@ git lfs install
 </code></pre>
 <h4 id='using-carthage' class='heading'>Using Carthage</h4>
 
-<p>BlinkID SDK is available via <a href="https://github.com/Carthage/Carthage">Carthage</a>. Please check out <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage documentation</a> if you are new to Carthage.</p>
+<p>Microblink SDK is available via <a href="https://github.com/Carthage/Carthage">Carthage</a>. Please check out <a href="https://github.com/Carthage/Carthage/blob/master/README.md">Carthage documentation</a> if you are new to Carthage.</p>
 
 <ul>
 <li>Install Carthage. Check out <a href="https://github.com/Carthage/Carthage#installing-carthage">Installing Carthage guide</a>. Please make sure you have Carthage version &gt;= 0.35.0 installed.</li>
 <li>Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is.</li>
-<li>Add BlinkID as a dependency to this Cartfile:</li>
+<li>Add Microblink as a dependency to this Cartfile:</li>
 </ul>
 <pre class="highlight shell"><code>binary <span class="s2">"https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"</span>
 </code></pre>
@@ -636,7 +636,7 @@ git lfs install
 </ul>
 <h4 id='using-swift-package-manager' class='heading'>Using Swift Package Manager</h4>
 
-<p>BlinkID SDK is available as <a href="https://swift.org/package-manager/">Swift Package</a>. Please check out <a href="https://github.com/apple/swift-package-manager">Swift Package Manager documentation</a> if you are new to Swift Package Manager.</p>
+<p>Microblink SDK is available as <a href="https://swift.org/package-manager/">Swift Package</a>. Please check out <a href="https://github.com/apple/swift-package-manager">Swift Package Manager documentation</a> if you are new to Swift Package Manager.</p>
 
 <p>We provide a URL to the public package repository that you can add in Xcode:</p>
 <pre class="highlight shell"><code>https://github.com/BlinkID/blinkid-swift-package
@@ -685,18 +685,18 @@ git lfs install
 </code></pre>
 
 <ul>
-<li><p>Copy BlinkID.xcframework to your project folder.</p></li>
-<li><p>In your Xcode project, open the Project navigator. Drag the BlinkID.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose &ldquo;Create groups&rdquo;, instead of the &ldquo;Create folder references&rdquo; option.</p></li>
+<li><p>Copy Microblink.xcframework to your project folder.</p></li>
+<li><p>In your Xcode project, open the Project navigator. Drag the Microblink.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you&rsquo;re using. When asked, choose &ldquo;Create groups&rdquo;, instead of the &ldquo;Create folder references&rdquo; option.</p></li>
 </ul>
 
-<p><img src="https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png" alt="Adding BlinkID.xcframework to your project"></p>
+<p><img src="https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png" alt="Adding Microblink.xcframework to your project"></p>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
-    Since BlinkID.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option <code>Embed &amp; Sign</code>.
+    Since Microblink.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option <code>Embed &amp; Sign</code>.
 
 </div>
 
-<p><img src="https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png" alt="Adding BlinkID.xcframework to embedded binaries"></p>
+<p><img src="https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png" alt="Adding Microblink.xcframework to embedded binaries"></p>
 
 <ul>
 <li><p>Include the additional frameworks and libraries into your project in the &ldquo;Linked frameworks and libraries&rdquo; section of your target settings.</p>
@@ -714,11 +714,11 @@ git lfs install
 <p>In files in which you want to use scanning functionality place import directive.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BlinkID</span>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Microblink</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>#import &lt;BlinkID/BlinkID.h&gt;
+<pre class="highlight plaintext"><code>#import &lt;Microblink/Microblink.h&gt;
 </code></pre>
 <h3 id='3-initiating-the-scanning-process' class='heading'>3. Initiating the scanning process</h3>
 
@@ -732,7 +732,7 @@ git lfs install
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
-        <span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"blinkid-license"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span>
+        <span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"blinkid-license"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
     <span class="p">}</span>
 
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">didTapScan</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
@@ -771,7 +771,7 @@ git lfs install
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main];
+    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main errorCallback:block];
 }
 
 
@@ -810,22 +810,22 @@ git lfs install
 <p>You can pass the license key as a string, the following way:</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseKey</span><span class="p">(</span><span class="s">"LICENSE-KEY"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseKey</span><span class="p">(</span><span class="s">"LICENSE-KEY"</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY"];
+<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY" errorCallback:block];
 </code></pre>
 <h4 id='license-key-as-file' class='heading'>License key as file</h4>
 
 <p>Or you can include the license key, with the code below. Please make sure that the file that contains the license key is included in your project and is copied during <strong>Copy Bundle Resources</strong> build phase.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
+<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
 </code></pre>
 
 <p>If the licence is invalid or expired then the methods above will throw an <strong>exception</strong>.</p>
@@ -1200,32 +1200,32 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html"><code><a href="Classes/MBMrtdRecognizer.html">MBMrtdRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBMrzFilter.html"><code>MBMrzFilter</code></a>.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='machine-readable-travel-document-combined-recognizer' class='heading'>Machine Readable Travel Document combined recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html"><code><a href="Classes/MBMrtdCombinedRecognizer.html">MBMrtdCombinedRecognizer</a></code></a> scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses <a href="#document-face-recognizer">MBDocumentFaceRecognizer</a> for obtaining full document image and face image as the first step and then <a href="#mrtd-recognizer">MBMrtdRecognizer</a> for scanning the MRZ.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-passport-recognizer-a-passport-recognizer' class='heading'><a name="passport-recognizer"></a> Passport recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html"><code><a href="Classes/MBPassportRecognizer.html">MBPassportRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-visa-recognizer-a-visa-recognizer' class='heading'><a name="visa-recognizer"></a> Visa recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html"><code><a href="Classes/MBVisaRecognizer.html">MBVisaRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-id-barcode-recognizer-a-id-barcode-recognizer' class='heading'><a name="id-barcode-recognizer"></a> ID barcode recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBIdBarcodeRecognizer.html"><code><a href="Classes/MBIdBarcodeRecognizer.html">MBIdBarcodeRecognizer</a></code></a> is used for scanning barcodes from various ID cards. Check this document to see the list of supported document types.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-document-face-recognizers-a-document-face-recognizer' class='heading'><a name="document-face-recognizers"></a> Document face recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html"><code><a href="Classes/MBDocumentFaceRecognizer.html">MBDocumentFaceRecognizer</a></code></a> is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.</p>
 
-<p>You can find information about usage context at the beginning of <a href="#-blinkid_recognizers">this section</a>.</p>
+<p>You can find information about usage context at the beginning of <a href="#-blinkid-recognizers">this section</a>.</p>
 <h3 id='a-name-blink-id-recognizers-a-blinkid-recognizer' class='heading'><a name="blink-id-recognizers"></a> BlinkID Recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html"><code><a href="Classes/MBBlinkIdRecognizer.html">MBBlinkIdRecognizer</a></code></a> scans and extracts data from the front side of the supported document.
@@ -1247,7 +1247,7 @@ We will continue expanding this recognizer by adding support for new document ty
 <p>For example, let&rsquo;s say that we want to change text &ldquo;Scan the front side of a document&rdquo; to &ldquo;Scan the front side&rdquo; in BlinkID sample project. This would be the steps:</p>
 
 <ul>
-<li>Find the translation key in en.strings file inside BlinkID.framework</li>
+<li>Find the translation key in en.strings file inside Microblink.framework</li>
 <li>Add a new file MyTranslations.strings to the project by using &ldquo;Strings File&rdquo; template</li>
 <li>With MyTranslations.string open, in File inspector tap &ldquo;Localize&hellip;&rdquo; button and select English</li>
 <li>Add the translation key &ldquo;blinkid_generic_message&rdquo; and the value &ldquo;Scan the front side&rdquo; to MyTranslations.strings</li>
@@ -1313,7 +1313,7 @@ If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git
 <p>This usually happens when using <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html"><code><a href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></code></a> and forgetting to pause the <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html"><code><a href="Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></code></a> in your <code>didFinish</code> callback. Then, as soon as <code>didFinish</code> happens, the result is mutated or reset by additional processing that <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> performs in the time between end of your <code>didFinish</code> callback and actual finishing of the scanning activity. For more information about statefulness of the <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> objects, check <a href="#recognizer-concept">this section</a>.</p>
 <h4 id='unsupported-architectures-when-submitting-app-to-app-store' class='heading'>Unsupported architectures when submitting app to App Store</h4>
 
-<p>BlinkID.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you&rsquo;ll need to preprocess the framework to remove simulator architectures.</p>
+<p>Microblink.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you&rsquo;ll need to preprocess the framework to remove simulator architectures.</p>
 
 <p>Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.</p>
 
@@ -1366,7 +1366,7 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-08-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

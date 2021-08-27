@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "5.12.0"
+  s.version     = "5.13.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v5.12.0/blinkid-ios_v5.12.0.tar.gz'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v5.13.0/blinkid-ios_v5.13.0.tar.gz'
   }
 
   s.platform     = :ios
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0.0'
   s.ios.requires_arc = false
   s.ios.vendored_frameworks = 'Microblink.xcframework'
-  s.ios.frameworks = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia'
+  s.ios.frameworks = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'AssetsLibrary', 'CoreMedia', 'ImageIO'
   s.ios.libraries = 'c++', 'iconv', 'z'
 
 end

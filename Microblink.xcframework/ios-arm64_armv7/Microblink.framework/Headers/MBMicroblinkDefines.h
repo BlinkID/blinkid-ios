@@ -33,7 +33,8 @@
 
 typedef void(^MBBlock)(void);
 
-#define MBASSERTE(condition, description)     \
+#ifdef SHOWCASE_DEV
+#define MBASSERTE(condition, description)                           \
      do {                                                           \
        NSAssert(condition, description);                            \
        if (!(condition)) {                                          \
@@ -41,6 +42,16 @@ typedef void(^MBBlock)(void);
          LOGE("%s", [message UTF8String]);                          \
        }                                                            \
      } while (0)
+#else
+#define MBASSERTE(condition, description)                           \
+     do {                                                           \
+       NSAssert(condition, description);                            \
+       if (!(condition)) {                                          \
+        NSString *message = [NSString stringWithFormat:@"Assertion failed: (%s), %@", #condition, description]; \
+         LOGE("%s", [message UTF8String]);                          \
+       }                                                            \
+     } while (0)
+#endif
 
 
 #ifdef MB_DISABLE_OBFUSCATION
@@ -56,5 +67,21 @@ typedef void(^MBBlock)(void);
 #endif // MB_DISABLE_OBFUSCATION
 
 #define MB_OBFUSCATED(value) [NSString stringWithFormat:@"%s", OBFUSCATED(value)]
+
+#define MBASSERT_OR_RETURN(condition)               \
+    do {                                            \
+        NSAssert(condition, @"%s", #condition);     \
+        if (!(condition)) {                         \
+            return;                                 \
+        }                                           \
+    } while (0)
+
+#define MBASSERT_OR_RETURN_VALUE(condition, value)  \
+    do {                                            \
+        NSAssert(condition, @"%s", #condition);     \
+        if (!(condition)) {                         \
+            return value;                           \
+        }                                           \
+    } while(0)
 
 #endif /* MBMicroblinkDefines_h */

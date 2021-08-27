@@ -71,7 +71,7 @@ Feeling ready to get going with the integration? First, make sure we support you
 
 # <a name="requirements"></a> Requirements
 
-SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 9.0 or later**.
+SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 9.0 or later**.
 
 SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
 # <a name="quick-start"></a> Quick Start
@@ -109,7 +109,7 @@ pod init
 ```ruby
 platform :ios, '9.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.12.0'
+    pod 'PPBlinkID', '~> 5.13.0'
 end
 ```
 
@@ -129,11 +129,11 @@ open <YourProjectName>.xcworkspace
 
 #### Using Carthage
 
-BlinkID SDK is available via [Carthage](https://github.com/Carthage/Carthage). Please check out [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md) if you are new to Carthage.
+Microblink SDK is available via [Carthage](https://github.com/Carthage/Carthage). Please check out [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md) if you are new to Carthage.
 
 - Install Carthage. Check out [Installing Carthage guide](https://github.com/Carthage/Carthage#installing-carthage). Please make sure you have Carthage version >= 0.35.0 installed.
 - Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is.
-- Add BlinkID as a dependency to this Cartfile:
+- Add Microblink as a dependency to this Cartfile:
 
 ```shell
 binary "https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"
@@ -146,7 +146,7 @@ binary "https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"
 
 #### Using Swift Package Manager
 
-BlinkID SDK is available as [Swift Package](https://swift.org/package-manager/). Please check out [Swift Package Manager documentation](https://github.com/apple/swift-package-manager) if you are new to Swift Package Manager.
+Microblink SDK is available as [Swift Package](https://swift.org/package-manager/). Please check out [Swift Package Manager documentation](https://github.com/apple/swift-package-manager) if you are new to Swift Package Manager.
 
 We provide a URL to the public package repository that you can add in Xcode:
 
@@ -198,15 +198,15 @@ git lfs install
 git clone git@github.com:BlinkID/blinkid-ios.git
 ```
 
-- Copy BlinkID.xcframework to your project folder.
+- Copy Microblink.xcframework to your project folder.
 
-- In your Xcode project, open the Project navigator. Drag the BlinkID.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
+- In your Xcode project, open the Project navigator. Drag the Microblink.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
 
-![Adding BlinkID.xcframework to your project](https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png)
+![Adding Microblink.xcframework to your project](https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png)
 
-- Since BlinkID.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
+- Since Microblink.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
 
-![Adding BlinkID.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png)
+![Adding Microblink.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png)
 
 - Include the additional frameworks and libraries into your project in the "Linked frameworks and libraries" section of your target settings.
 
@@ -223,13 +223,13 @@ In files in which you want to use scanning functionality place import directive.
 Swift
 
 ```swift
-import BlinkID
+import Microblink
 ```
 
 Objective-C
 
 ```objective-c
-#import <BlinkID/BlinkID.h>
+#import <Microblink/Microblink.h>
 ```
 
 ### 3. Initiating the scanning process
@@ -246,7 +246,7 @@ class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main)
+        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main, errorCallback: block)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
@@ -287,7 +287,7 @@ Objective-C
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main];
+    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main errorCallback:block];
 }
 
 
@@ -329,13 +329,13 @@ You can pass the license key as a string, the following way:
 Swift
 
 ```swift
-MBMicroblinkSDK.shared().setLicenseKey("LICENSE-KEY")
+MBMicroblinkSDK.shared().setLicenseKey("LICENSE-KEY", errorCallback: block)
 ```
 
 Objective-C
 
 ```objective-c
-[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY"];
+[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY" errorCallback:block];
 ```
 
 #### License key as file
@@ -344,13 +344,13 @@ Or you can include the license key, with the code below. Please make sure that t
 Swift
 
 ```swift
-MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main)
+MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
 ```
 
 Objective-C
 
 ```objective-c
-[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle]];
+[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
 ```
 
 If the licence is invalid or expired then the methods above will throw an **exception**.
@@ -728,32 +728,32 @@ Unless stated otherwise for concrete recognizer, **single side BlinkID recognize
 ### <a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer
 The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MBMrzFilter`](http://blinkid.github.io/blinkid-ios/Protocols/MBMrzFilter.html).
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### Machine Readable Travel Document combined recognizer
 The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html) scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBMrtdRecognizer](#mrtd-recognizer) for scanning the MRZ.
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="passport-recognizer"></a> Passport recognizer
 The [`MBPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="visa-recognizer"></a> Visa recognizer
 The [`MBVisaRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="id-barcode-recognizer"></a> ID barcode recognizer
 The [`MBIdBarcodeRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIdBarcodeRecognizer.html) is used for scanning barcodes from various ID cards. Check this document to see the list of supported document types.
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="document-face-recognizers"></a> Document face recognizer
 The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
 
-You can find information about usage context at the beginning of [this section](#-blinkid_recognizers).
+You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="blink-id-recognizers"></a> BlinkID Recognizer
 The [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
@@ -774,7 +774,7 @@ If you would like us to support additional languages or report incorrect transla
 If you want to add additional languages yourself or change existing translations, you need to set `customLocalizationFileName` property on [`MBMicroblinkApp`](http://blinkid.github.io/blinkid-ios/Classes/MBMicroblinkApp.html) object to your strings file name.
 
 For example, let's say that we want to change text "Scan the front side of a document" to "Scan the front side" in BlinkID sample project. This would be the steps:
-* Find the translation key in en.strings file inside BlinkID.framework
+* Find the translation key in en.strings file inside Microblink.framework
 * Add a new file MyTranslations.strings to the project by using "Strings File" template
 * With MyTranslations.string open, in File inspector tap "Localize..." button and select English
 * Add the translation key "blinkid_generic_message" and the value "Scan the front side" to MyTranslations.strings
@@ -844,7 +844,7 @@ This usually happens when using [`MBRecognizerRunnerViewController`](http://blin
 
 #### Unsupported architectures when submitting app to App Store
 
-BlinkID.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures.
+Microblink.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures.
 
 Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.
 
