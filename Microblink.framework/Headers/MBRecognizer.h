@@ -26,6 +26,8 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 
 - (UIInterfaceOrientationMask)getOptimalHudOrientation;
 
+- (NSString *)toJson;
+
 @end
 
 NS_ASSUME_NONNULL_END

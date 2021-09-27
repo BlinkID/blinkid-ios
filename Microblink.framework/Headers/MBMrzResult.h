@@ -39,7 +39,10 @@ typedef NS_ENUM(NSInteger, MBMrtdDocumentType) {
     MBMrtdTypeDl,
     
     /** China mainland travel permit */
-    MBMrtdTypeInternalTravelDocument
+    MBMrtdTypeInternalTravelDocument,
+    
+    /** Border crossing card  */
+    MBMrtdTypeBorderCrossingCard
 
 };
 

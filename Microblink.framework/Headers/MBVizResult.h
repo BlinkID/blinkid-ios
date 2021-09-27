@@ -36,6 +36,16 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *fullName;
 
 /**
+ * The father's name of the document owner.
+ */
+@property (nonatomic, readonly) NSString *fathersName;
+
+/**
+ * The mother's name of the document owner.
+ */
+@property (nonatomic, readonly) NSString *mothersName;
+
+/**
 * The additional name information of the document owner.
 */
 @property (nonatomic, readonly) NSString *additionalNameInformation;
