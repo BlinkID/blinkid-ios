@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.13.0 Docs
+          PPBlinkID v5.14.0 Docs
         </a>
          (82% documented)
       </p>
@@ -481,6 +481,7 @@
             </div>
               <div class="declaration">
                 <div class="language">
+                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBDocumentFaceRecognizer</span>
     <span class="p">:</span> <span class="nc"><a href="../Classes/MBRecognizer.html">MBRecognizer</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n">MBFullDocumentImage</span><span class="p">,</span> <span class="n">MBFullDocumentImageDpi</span><span class="p">,</span>
@@ -488,11 +489,19 @@
                     <span class="n">MBFullDocumentImageExtensionFactors</span><span class="o">&gt;</span></code></pre>
 
                 </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBDocumentFaceRecognizer</span> <span class="p">:</span> <span class="kt"><a href="../Classes/MBRecognizer.html">MBRecognizer</a></span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">MBFullDocumentImage</span><span class="p">,</span> <span class="kt">MBFullDocumentImageDpi</span><span class="p">,</span> <span class="kt">MBFaceImage</span><span class="p">,</span> <span class="kt">MBFaceImageDpi</span><span class="p">,</span> <span class="kt">MBFullDocumentImageExtensionFactors</span></code></pre>
+
+                </div>
               </div>
             <p>Class for configuring Document Face Recognizer Recognizer.</p>
 
 <p>Document Face Recognizer recognizer is used for scanning documents containing face images.</p>
 
+              <div class="slightly-smaller">
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L27-L54">Show on GitHub</a>
+              </div>
           </div>
         </section>
 
@@ -520,8 +529,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
-    <span class="n"><a href="../Classes/MBDocumentFaceRecognizerResult.html">MBDocumentFaceRecognizerResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">result</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDocumentFaceRecognizerResult.html">MBDocumentFaceRecognizerResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">result</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -531,7 +539,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.13.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L34">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,8 +566,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
-    <span class="n"><a href="../Enums/MBDocumentFaceDetectorType.html">MBDocumentFaceDetectorType</a></span> <span class="n">detectorType</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/MBDocumentFaceDetectorType.html">MBDocumentFaceDetectorType</a></span> <span class="n">detectorType</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -569,7 +576,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.13.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -599,8 +606,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
-    <span class="n">NSInteger</span> <span class="n">numStableDetectionsThreshold</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">numStableDetectionsThreshold</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -610,7 +616,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.13.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -623,8 +629,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-08-27)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-09-27)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
