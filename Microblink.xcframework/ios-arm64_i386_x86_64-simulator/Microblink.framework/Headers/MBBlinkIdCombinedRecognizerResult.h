@@ -178,7 +178,7 @@ MB_INIT_UNAVAILABLE
 /**
  * The data extracted from the machine readable zone
  */
-@property (nonatomic, readonly) MBMrzResult *mrzResult;
+@property (nonatomic, readonly, nullable) MBMrzResult *mrzResult;
 
 /**
  * The driver license detailed info.

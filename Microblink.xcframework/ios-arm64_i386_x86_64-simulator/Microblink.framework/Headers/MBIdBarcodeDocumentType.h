@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger, MBIdBarcodeDocumentType) {
     MBIdBarcodeDocumentTypeAAMVACompliant,
     /** Argentina ID */
     MBIdBarcodeDocumentTypeArgentinaID,
+    /** Argentina Alien ID */
+    MBIdBarcodeDocumentTypeArgentinaAlienID,
     /** Argentina DL */
     MBIdBarcodeDocumentTypeArgentinaDL,
     /** Colombia ID */

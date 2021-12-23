@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.14.0 Docs
+          PPBlinkID v5.15.0 Docs
         </a>
          (82% documented)
       </p>
@@ -126,12 +126,6 @@
                 <a class="nav-group-task-link" href="../Classes/MBDocumentSubview.html">MBDocumentSubview</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBDocumentVerificationOverlaySettings.html">MBDocumentVerificationOverlaySettings</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDotsResultSubview.html">MBDotsResultSubview</a>
               </li>
               <li class="nav-group-task">
@@ -166,6 +160,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBLegacyDocumentVerificationOverlaySettings.html">MBLegacyDocumentVerificationOverlaySettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBLegacyDocumentVerificationOverlayViewController.html">MBLegacyDocumentVerificationOverlayViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBMicroblinkSDK.html">MBMicroblinkSDK</a>
@@ -397,10 +397,10 @@
                 <a class="nav-group-task-link" href="../Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html">MBDocumentVerificationOverlayViewControllerDelegate</a>
+                <a class="nav-group-task-link" href="../Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
+                <a class="nav-group-task-link" href="../Protocols/MBLegacyDocumentVerificationOverlayViewControllerDelegate.html">MBLegacyDocumentVerificationOverlayViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/MBOcrRecognizerRunnerDelegate.html">MBOcrRecognizerRunnerDelegate</a>
@@ -476,14 +476,8 @@
             <h1>MBOcrLayout</h1>
               <div class="declaration">
                 <div class="language">
-                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">MBOcrLayout</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
-
-                </div>
-                <div class="language">
-                  <p class="aside-title">Swift</p>
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MBOcrLayout</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -508,9 +502,6 @@
 
 </div>
 
-              <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L38-L105">Show on GitHub</a>
-              </div>
           </div>
         </section>
 
@@ -538,7 +529,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">box</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">box</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -548,7 +539,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -573,7 +564,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MBOcrBlock.html">MBOcrBlock</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">blocks</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MBOcrBlock.html">MBOcrBlock</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">blocks</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -583,7 +575,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L48">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -612,7 +604,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGAffineTransform</span> <span class="n">transform</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n">CGAffineTransform</span> <span class="n">transform</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -622,7 +615,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L57">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -647,7 +640,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">transformInvalid</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">transformInvalid</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -657,7 +651,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L62">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -682,7 +676,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/MBPosition.html">MBPosition</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">position</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/MBPosition.html">MBPosition</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">position</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -692,7 +687,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -717,7 +712,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">flipped</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">flipped</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -727,7 +722,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L72">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -737,7 +732,7 @@
                     <code>
                     <a name="/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:transform:box:flipped:"></a>
                     <a name="//apple_ref/objc/Method/-initWithOcrBlocks:transform:box:flipped:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:transform:box:flipped:">-initWithOcrBlocks:<wbr>transform:<wbr>box:<wbr>flipped:<wbr></a>
+                    <a class="token" href="#/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:transform:box:flipped:">-initWithOcrBlocks:transform:box:flipped:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -801,7 +796,7 @@
                         <p>initialized ocr layout</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L84-L87">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L84-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -811,7 +806,7 @@
                     <code>
                     <a name="/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:"></a>
                     <a name="//apple_ref/objc/Method/-initWithOcrBlocks:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:">-initWithOcrBlocks:<wbr></a>
+                    <a class="token" href="#/c:objc(cs)MBOcrLayout(im)initWithOcrBlocks:">-initWithOcrBlocks:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -831,7 +826,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">ocrBlocks</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">ocrBlocks</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -859,7 +854,7 @@
                         <p>initialized ocr layout</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -898,7 +893,7 @@
                         <p>ocr layout converted to string</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.14.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L103">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.15.0/blinkid-ios/Microblink.xcframework/ios-arm64_i386_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h#L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -911,8 +906,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-09-27)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-12-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

@@ -8,22 +8,22 @@
 
 // Overlay delegates
 #import "MBDocumentOverlayViewControllerDelegate.h"
-#import "MBDocumentVerificationOverlayViewControllerDelegate.h"
+#import "MBLegacyDocumentVerificationOverlayViewControllerDelegate.h"
 #import "MBBlinkIdOverlayViewControllerDelegate.h"
 
 // Overlays
 #import "MBDocumentOverlayViewController.h"
 #import "MBDocumentOverlaySettings.h"
-#import "MBDocumentVerificationOverlayViewController.h"
-#import "MBDocumentVerificationOverlaySettings.h"
+#import "MBLegacyDocumentVerificationOverlayViewController.h"
+#import "MBLegacyDocumentVerificationOverlaySettings.h"
 #import "MBBlinkIdOverlayViewController.h"
 #import "MBBlinkIdOverlaySettings.h"
 #import "MBCustomOverlayViewController.h"
 
 // Overlay subviews
 #import "MBDocumentSubview.h"
-#import "MBDocumentVerificationSubview.h"
-#import "MBDocumentVerificationInstructionsSubview.h"
+#import "MBLegacyDocumentVerificationSubview.h"
+#import "MBLegacyDocumentVerificationInstructionsSubview.h"
 #import "MBCameraReticle.h"
 #import "MBErrorReticle.h"
 #import "MBDotsSubview.h"

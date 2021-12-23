@@ -109,7 +109,7 @@ pod init
 ```ruby
 platform :ios, '9.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.14.0'
+    pod 'PPBlinkID', '~> 5.15.0'
 end
 ```
 
@@ -784,9 +784,9 @@ For example, let's say that we want to change text "Scan the front side of a doc
 
 ## <a name="troubleshooting-integration-problems"></a> Integration problems
 
-In case of problems with integration of the SDK, first make sure that you have tried integrating it into XCode by following [integration instructions](#quick-start).
+In case of problems with integration of the SDK, first make sure that you have tried integrating it into Xcode by following [integration instructions](#quick-start).
 
-If you have followed [XCode integration instructions](#quick-start) and are still having integration problems, please contact us at [help.microblink.com](http://help.microblink.com).
+If you have followed [Xcode integration instructions](#quick-start) and are still having integration problems, please contact us at [help.microblink.com](http://help.microblink.com).
 
 ## <a name="troubleshooting-sdk-problems"></a> SDK problems
 
@@ -815,11 +815,6 @@ If you are having problems with scanning certain items, undesired behaviour on s
 
 ## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
 Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.
-
-#### Note on ARM Macs
-
-We are supporting `ARM64 Device` slice through our `.xcframework` format.
-We are still in development supporting `ARM64 Simulator` slice for newly released ARM Macs and we will update our SDK with `ARM64 Simulator` support as soon as development is done.
 
 #### In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object
 
