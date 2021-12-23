@@ -93,6 +93,18 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property(nonatomic, strong) NSString *sidesNotMatchingMessage;
 
 /**
+* Title of the dialog, which is shown when scanned document has data mismatch.
+* Default: Something went wrong
+*/
+@property(nonatomic, strong) NSString *dataMismatchTitle;
+
+/**
+* Message inside dialog, which is shown when scanned document has data mismatch.
+* Default: It appears the information on the document is inconsistent. Please try scanning again.
+*/
+@property(nonatomic, strong) NSString *dataMismatchMessage;
+
+/**
 * Title of the dialog, which is shown when scanned document sides are not from the same document.
 * Default: Document not recognized
 */

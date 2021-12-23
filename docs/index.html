@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v5.14.0 Docs
+          PPBlinkID v5.15.0 Docs
         </a>
          (82% documented)
       </p>
@@ -125,12 +125,6 @@
                 <a class="nav-group-task-link" href="Classes/MBDocumentSubview.html">MBDocumentSubview</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBDocumentVerificationOverlaySettings.html">MBDocumentVerificationOverlaySettings</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBDotsResultSubview.html">MBDotsResultSubview</a>
               </li>
               <li class="nav-group-task">
@@ -165,6 +159,12 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBImageReturnProcessorResult.html">MBImageReturnProcessorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBLegacyDocumentVerificationOverlaySettings.html">MBLegacyDocumentVerificationOverlaySettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MBLegacyDocumentVerificationOverlayViewController.html">MBLegacyDocumentVerificationOverlayViewController</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/MBMicroblinkSDK.html">MBMicroblinkSDK</a>
@@ -396,10 +396,10 @@
                 <a class="nav-group-task-link" href="Protocols/MBDocumentOverlayViewControllerDelegate.html">MBDocumentOverlayViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/MBDocumentVerificationOverlayViewControllerDelegate.html">MBDocumentVerificationOverlayViewControllerDelegate</a>
+                <a class="nav-group-task-link" href="Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/MBFrameRecognitionRecognizerRunnerViewControllerDelegate.html">MBFrameRecognitionRecognizerRunnerViewControllerDelegate</a>
+                <a class="nav-group-task-link" href="Protocols/MBLegacyDocumentVerificationOverlayViewControllerDelegate.html">MBLegacyDocumentVerificationOverlayViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/MBOcrRecognizerRunnerDelegate.html">MBOcrRecognizerRunnerDelegate</a>
@@ -587,8 +587,8 @@
 </ul><div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
-git lfs <span class="nb">install</span>
+<pre class="highlight shell"><code>brew install git-lfs
+git lfs install
 </code></pre>
 
 </div><ul>
@@ -602,14 +602,14 @@ git lfs <span class="nb">install</span>
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.14.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 5.15.0'</span>
 <span class="k">end</span>
 </code></pre>
 
 <ul>
 <li>Install the dependencies in your project:</li>
 </ul>
-<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
 </code></pre>
 
 <ul>
@@ -658,9 +658,9 @@ git lfs <span class="nb">install</span>
 <li>Add a new run script phase script to your app’s target</li>
 <li>Add the following script to force deep sign the frameworks with your own signing identity:</li>
 </ol>
-<pre class="highlight shell"><code>find <span class="s2">"</span><span class="k">${</span><span class="nv">CODESIGNING_FOLDER_PATH</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-print0</span> | <span class="k">while </span><span class="nb">read</span> <span class="nt">-d</span> <span class="s1">$'</span><span class="se">\0</span><span class="s1">'</span> framework 
+<pre class="highlight shell"><code>find <span class="s2">"</span><span class="k">${</span><span class="nv">CODESIGNING_FOLDER_PATH</span><span class="k">}</span><span class="s2">"</span> -name <span class="s1">'*.framework'</span> -print0 | <span class="k">while </span><span class="nb">read</span> -d <span class="s1">$'</span><span class="se">\0</span><span class="s1">'</span> framework 
 <span class="k">do 
-    </span>codesign <span class="nt">--force</span> <span class="nt">--deep</span> <span class="nt">--sign</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXPANDED_CODE_SIGN_IDENTITY</span><span class="k">}</span><span class="s2">"</span> <span class="nt">--preserve-metadata</span><span class="o">=</span>identifier,entitlements <span class="nt">--timestamp</span><span class="o">=</span>none <span class="s2">"</span><span class="k">${</span><span class="nv">framework</span><span class="k">}</span><span class="s2">"</span> 
+    </span>codesign --force --deep --sign <span class="s2">"</span><span class="k">${</span><span class="nv">EXPANDED_CODE_SIGN_IDENTITY</span><span class="k">}</span><span class="s2">"</span> --preserve-metadata<span class="o">=</span>identifier,entitlements --timestamp<span class="o">=</span>none <span class="s2">"</span><span class="k">${</span><span class="nv">framework</span><span class="k">}</span><span class="s2">"</span> 
 <span class="k">done</span>
 </code></pre>
 <h4 id='manual-integration' class='heading'>Manual integration</h4>
@@ -673,8 +673,8 @@ git lfs <span class="nb">install</span>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
-git lfs <span class="nb">install</span>
+<pre class="highlight shell"><code>brew install git-lfs
+git lfs install
 </code></pre>
 
 </div><ul>
@@ -1195,7 +1195,7 @@ The only difference is that user should call <code>- (void)processString:(NSStri
 
 <p>Unless stated otherwise for concrete recognizer, <strong>single side BlinkID recognizes</strong> from this list can be used in any context, but they work best with the <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html"><code><a href="Classes/MBDocumentOverlayViewController.html">MBDocumentOverlayViewController</a></code></a>, which has UI best suited for document scanning.</p>
 
-<p><strong>Combined recognizers</strong> should be used with <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html"><code><a href="Classes/MBDocumentVerificationOverlayViewController.html">MBDocumentVerificationOverlayViewController</a></code></a> which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.</p>
+<p><strong>Combined recognizers</strong> should be used with <a href="http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html"><code>MBDocumentVerificationOverlayViewController</code></a> which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.</p>
 <h3 id='a-name-mrtd-recognizer-a-machine-readable-travel-document-recognizer' class='heading'><a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer</h3>
 
 <p>The <a href="http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html"><code><a href="Classes/MBMrtdRecognizer.html">MBMrtdRecognizer</a></code></a> is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBMrzFilter.html"><code>MBMrzFilter</code></a>.</p>
@@ -1256,9 +1256,9 @@ We will continue expanding this recognizer by adding support for new document ty
 <h1 id='a-name-troubleshooting-a-troubleshooting' class='heading'><a name="troubleshooting"></a> Troubleshooting</h1>
 <h2 id='a-name-troubleshooting-integration-problems-a-integration-problems' class='heading'><a name="troubleshooting-integration-problems"></a> Integration problems</h2>
 
-<p>In case of problems with integration of the SDK, first make sure that you have tried integrating it into XCode by following <a href="#quick-start">integration instructions</a>.</p>
+<p>In case of problems with integration of the SDK, first make sure that you have tried integrating it into Xcode by following <a href="#quick-start">integration instructions</a>.</p>
 
-<p>If you have followed <a href="#quick-start">XCode integration instructions</a> and are still having integration problems, please contact us at <a href="http://help.microblink.com">help.microblink.com</a>.</p>
+<p>If you have followed <a href="#quick-start">Xcode integration instructions</a> and are still having integration problems, please contact us at <a href="http://help.microblink.com">help.microblink.com</a>.</p>
 <h2 id='a-name-troubleshooting-sdk-problems-a-sdk-problems' class='heading'><a name="troubleshooting-sdk-problems"></a> SDK problems</h2>
 
 <p>In case of problems with using the SDK, you should do as follows:</p>
@@ -1291,10 +1291,6 @@ We will continue expanding this recognizer by adding support for new document ty
 <h2 id='a-name-troubleshooting-faq-a-frequently-asked-questions-and-known-problems' class='heading'><a name="troubleshooting-faq"></a> Frequently asked questions and known problems</h2>
 
 <p>Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.</p>
-<h4 id='note-on-arm-macs' class='heading'>Note on ARM Macs</h4>
-
-<p>We are supporting <code>ARM64 Device</code> slice through our <code>.xcframework</code> format.
-We are still in development supporting <code>ARM64 Simulator</code> slice for newly released ARM Macs and we will update our SDK with <code>ARM64 Simulator</code> support as soon as development is done.</p>
 <h4 id='in-demo-everything-worked-but-after-switching-to-production-license-i-get-code-nserror-code-with-code-mbmicroblinksdkrecognizererrordomain-code-and-code-mbrecognizerfailedtoinitalize-code-code-as-soon-as-i-construct-specific-a-href-http-blinkid-github-io-blinkid-ios-classes-mbrecognizer-html-code-mbrecognizer-code-a-object' class='heading'>In demo everything worked, but after switching to production license I get <code>NSError</code> with <code>MBMicroblinkSDKRecognizerErrorDomain</code> and <code>MBRecognizerFailedToInitalize</code> code as soon as I construct specific <a href="http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html"><code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code></a> object</h4>
 
 <p>Each license key contains information about which features are allowed to use and which are not. This <code>NSError</code> indicates that your production license does not allow using of specific <code><a href="Classes/MBRecognizer.html">MBRecognizer</a></code> object. You should contact <a href="http://help.microblink.com">support</a> to check if provided licence is OK and that it really contains all features that you have purchased.</p>
@@ -1322,9 +1318,9 @@ If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git
 
 <span class="c"># This script loops through the frameworks embedded in the application and</span>
 <span class="c"># removes unused architectures.</span>
-find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
+find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> -name <span class="s1">'*.framework'</span> -type d | <span class="k">while </span><span class="nb">read</span> -r FRAMEWORK
 <span class="k">do
-</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="si">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="si">)</span>
+</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="k">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="k">)</span>
 <span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
 <span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
@@ -1333,17 +1329,17 @@ find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">
 <span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
 <span class="k">do
 </span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
+lipo -extract <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
 EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
 <span class="k">done
 
 </span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
-lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+lipo -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> -create <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+rm <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 
 <span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-<span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+rm <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
 <span class="k">done</span>
 </code></pre>
@@ -1366,8 +1362,8 @@ lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAME
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-09-27)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="http://microblink.com" target="_blank" rel="external">Microblink</a>. All rights reserved. (Last updated: 2021-12-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
