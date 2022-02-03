@@ -1,3 +1,11 @@
+
+## 5.15.1
+
+### Changes to all Recognizers
+- Added `toSignedJson` API
+- Removed `toJson` API
+- Removed `DigitalSignature*` protocols
+
 ## 5.15.0
 
 - No changes

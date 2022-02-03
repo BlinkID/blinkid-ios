@@ -1,5 +1,10 @@
 # Release notes
 
+## 5.15.1
+
+### Visual identity update
+- We’ve updated Microblink logo and colors
+
 ## 5.15.0
 
 ### Newly added versions of documents for already supported documents
