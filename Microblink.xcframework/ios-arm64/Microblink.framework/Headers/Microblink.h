@@ -14,6 +14,7 @@
 #import "MBException.h"
 #import "MBImage.h"
 #import "MBDateResult.h"
+#import "MBSignedPayload.h"
 
 // Settings
 #import "MBCameraSettings.h"

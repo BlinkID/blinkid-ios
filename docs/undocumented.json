@@ -1422,6 +1422,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignedPayload.h",
+      "line": 17,
+      "symbol": "MBSignedPayload",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
       "line": 10,
       "symbol": "MBStringProcessingRecognizerRunnerDelegate",

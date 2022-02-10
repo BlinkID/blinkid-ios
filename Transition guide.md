@@ -1,4 +1,8 @@
 
+## 5.15.2
+
+- No changes
+
 ## 5.15.1
 
 ### Changes to all Recognizers

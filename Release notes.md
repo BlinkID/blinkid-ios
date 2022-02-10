@@ -1,5 +1,9 @@
 # Release notes
 
+## 5.15.2
+
+- Fixed exposure of `toSignedJson` method
+
 ## 5.15.1
 
 ### Visual identity update
