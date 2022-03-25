@@ -115,6 +115,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSString *additionalAddressInformation;
 
 /**
+ * The one more additional address information of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *additionalOptionalAddressInformation;
+
+/**
  * The place of birth of the document owner.
  */
 @property (nonatomic, readonly, nullable) NSString *placeOfBirth;
@@ -233,6 +238,21 @@ MB_INIT_UNAVAILABLE
  * Recognition mode used to scan current document.
  */
 @property (nonatomic, readonly, assign) MBRecognitionMode recognitionMode;
+
+/**
+ * The front raw camera frame.
+ */
+@property (nonatomic, readonly, nullable) MBImage *frontCameraFrame;
+
+/**
+ * The back raw camera frame.
+ */
+@property (nonatomic, readonly, nullable) MBImage *backCameraFrame;
+
+/**
+ * The barcode raw camera frame.
+ */
+@property (nonatomic, readonly, nullable) MBImage *barcodeCameraFrame;
 
 @end
 

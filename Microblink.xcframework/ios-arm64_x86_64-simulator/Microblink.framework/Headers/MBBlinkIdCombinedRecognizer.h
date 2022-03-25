@@ -139,6 +139,14 @@ MB_INIT
 @property (nonatomic, assign) BOOL allowUncertainFrontSideScan;
 
 /**
+ * Configure the recognizer to save the raw camera frames.
+ * This significantly increases memory consumption.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL saveCameraFrames;
+
+/**
  * Configure the number of characters per field that are allowed to be inconsistent in data match.
  *
  * Default: 0 

@@ -51,7 +51,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 150,
+      "line": 158,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -79,7 +79,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 126,
+      "line": 134,
       "symbol": "MBBlinkIdRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -128,14 +128,14 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 386,
+      "line": 389,
       "symbol": "MBType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
-      "line": 386,
+      "line": 389,
       "symbol": "MBType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
@@ -282,7 +282,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDriverLicenseDetailedInfo.h",
-      "line": 14,
+      "line": 16,
       "symbol": "MBDriverLicenseDetailedInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
@@ -1423,7 +1423,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignedPayload.h",
-      "line": 17,
+      "line": 16,
       "symbol": "MBSignedPayload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
@@ -1524,6 +1524,13 @@
       "line": 25,
       "symbol": "MBUsdlRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVehicleClassInfo.h",
+      "line": 16,
+      "symbol": "MBVehicleClassInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {

@@ -93,6 +93,7 @@
 
 // Generic
 #import "MBDriverLicenseDetailedInfo.h"
+#import "MBVehicleClassInfo.h"
 #import "MBClassInfo.h"
 #import "MBClassInfoTypes.h"
 #import "MBImageAnalysisResult.h"
