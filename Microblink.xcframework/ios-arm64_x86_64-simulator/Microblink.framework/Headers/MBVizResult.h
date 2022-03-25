@@ -66,6 +66,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly) NSString *additionalAddressInformation;
 
 /**
+ * The one more additional address information of the document owner.
+ */
+@property (nonatomic, readonly, nullable) NSString *additionalOptionalAddressInformation;
+
+/**
 * The place of birth of the document owner.
 */
 @property (nonatomic, readonly) NSString *placeOfBirth;

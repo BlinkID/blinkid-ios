@@ -121,6 +121,14 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL scanCroppedDocumentImage;
 
+/**
+ * Configure the recognizer to save the raw camera frames.
+ * This significantly increases memory consumption.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL saveCameraFrames;
+
 @end
 
 @protocol MBBlinkIdRecognizerDelegate <NSObject>

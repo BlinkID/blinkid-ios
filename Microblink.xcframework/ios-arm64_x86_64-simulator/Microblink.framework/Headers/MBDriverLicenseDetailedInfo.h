@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "MBMicroblinkDefines.h"
 
+@class MBVehicleClassInfo;
+
 NS_ASSUME_NONNULL_BEGIN
 
 MB_CLASS_AVAILABLE_IOS(8.0)
@@ -34,6 +36,11 @@ MB_CLASS_AVAILABLE_IOS(8.0)
  * The driver license conditions.
  */
 @property (nonatomic, readonly, nullable) NSString *conditions;
+
+/**
+ * The additional information on vehicle class.
+ */
+@property (nonatomic, readonly, nullable) NSArray<MBVehicleClassInfo *> *vehicleClassesInfo;
 
 @end
 

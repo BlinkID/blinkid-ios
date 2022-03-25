@@ -10,7 +10,6 @@
 
 #import "MBMicroblinkDefines.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL

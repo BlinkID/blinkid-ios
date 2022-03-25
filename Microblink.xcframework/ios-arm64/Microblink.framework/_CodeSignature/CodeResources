@@ -16,70 +16,6 @@
 		<data>
 		1tzxgxzHRD39iv5X8pOHNvO2qpA=
 		</data>
-		<key>Frameworks/libswiftAVFoundation.dylib</key>
-		<data>
-		/WQdEr9ygj8RNA5akhDUOXouyFg=
-		</data>
-		<key>Frameworks/libswiftCore.dylib</key>
-		<data>
-		lPn4QPbfFrZ8NU0iJ9XrNHg4bhw=
-		</data>
-		<key>Frameworks/libswiftCoreAudio.dylib</key>
-		<data>
-		XenXwPat3ICF70IUU2/kqEDbhxc=
-		</data>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
-		<data>
-		8JpKidalFzUgEka0/sI7J8KHiF0=
-		</data>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
-		<data>
-		bKeRT2b7EMWbgCrGXbV4LnGJA/0=
-		</data>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
-		<data>
-		SKrCppJe2m1rl9+JqMq/ko2ueBQ=
-		</data>
-		<key>Frameworks/libswiftCoreMedia.dylib</key>
-		<data>
-		Lysj0clJYSUsbspSu0wern861JA=
-		</data>
-		<key>Frameworks/libswiftDarwin.dylib</key>
-		<data>
-		rZPayMQaGHBiWdCQpPUBBu0iCpw=
-		</data>
-		<key>Frameworks/libswiftDispatch.dylib</key>
-		<data>
-		IAROZatxI2VaTN1KopIqQlWq5E8=
-		</data>
-		<key>Frameworks/libswiftFoundation.dylib</key>
-		<data>
-		ONKfd0hdG1KJ4nxPzsa+krGM/9I=
-		</data>
-		<key>Frameworks/libswiftMetal.dylib</key>
-		<data>
-		40/wSeXWc1bQSMa0RDHVGODDcHE=
-		</data>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
-		<data>
-		1bBHg3H7jYBNKIKLxpQSmyNz4aY=
-		</data>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<data>
-		PaSpEIxHS5aXhm4qGI4Zw/HPlGc=
-		</data>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<data>
-		SNBjpjCgIyGAOqg+Eo92lXLleo4=
-		</data>
-		<key>Frameworks/libswiftos.dylib</key>
-		<data>
-		0FvMIbK+3sGwmmramghMBTx1AvM=
-		</data>
-		<key>Frameworks/libswiftsimd.dylib</key>
-		<data>
-		oe/XAC7tHIZRcgNgjIF2gxlFGV0=
-		</data>
 		<key>Headers/MBAgeLimitStatus.h</key>
 		<data>
 		hechmrPkrzBdknMzxKV3J8yuJVk=
@@ -122,7 +58,7 @@
 		</data>
 		<key>Headers/MBBlinkIDEntities.h</key>
 		<data>
-		GF/lsnV8TsN8ETxHYOz/OlKjm44=
+		EEGiD+hU/Hd/xsmSaL+yYTf4cfM=
 		</data>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
 		<data>
@@ -130,11 +66,11 @@
 		</data>
 		<key>Headers/MBBlinkIdCombinedRecognizer.h</key>
 		<data>
-		m2xd+pdJx5OZoAGeLkuGoZExU6Y=
+		zPCj7MFjC1Rf4Q2r3j9HwRuoeUs=
 		</data>
 		<key>Headers/MBBlinkIdCombinedRecognizerResult.h</key>
 		<data>
-		rHCHvAaRgYDtNQL2e2YsQlnH7tk=
+		V4+2wkRD3ohF3BurYTiy48RBaO8=
 		</data>
 		<key>Headers/MBBlinkIdOverlaySettings.h</key>
 		<data>
@@ -154,11 +90,11 @@
 		</data>
 		<key>Headers/MBBlinkIdRecognizer.h</key>
 		<data>
-		6h83Bu5lkPNE4rAYFkPWj2qoAEQ=
+		q79Pf7I+lad/TaVk4cK+FkvE9SY=
 		</data>
 		<key>Headers/MBBlinkIdRecognizerResult.h</key>
 		<data>
-		+Fy2d5SS2/PC2pdtaAZuJfNqzGE=
+		nwUISqYg3CPo5FSZ7Qc3rtOf8uA=
 		</data>
 		<key>Headers/MBCameraReticle.h</key>
 		<data>
@@ -174,7 +110,7 @@
 		</data>
 		<key>Headers/MBClassInfoTypes.h</key>
 		<data>
-		02a1pMFGTJcQXeaZsR2AGXKh6vI=
+		2sZvaGN/v0sZKjBCrg9WffoP6Vg=
 		</data>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
 		<data>
@@ -286,7 +222,7 @@
 		</data>
 		<key>Headers/MBDriverLicenseDetailedInfo.h</key>
 		<data>
-		wEMMvXINVS2ZpvOHY9rc0XhQUTM=
+		ogbpDlAsjmHBwDrPeSPYQhWLKNk=
 		</data>
 		<key>Headers/MBEncodeFaceImage.h</key>
 		<data>
@@ -678,7 +614,7 @@
 		</data>
 		<key>Headers/MBSignedPayload.h</key>
 		<data>
-		vmgO0q+koR6xQOVfORWtGbOVOJs=
+		O5fs+vHcL7wHkZ5NhXvzUz89xS0=
 		</data>
 		<key>Headers/MBStringProcessingRecognizerRunnerDelegate.h</key>
 		<data>
@@ -736,6 +672,10 @@
 		<data>
 		krzGtVvK191pXO2gCNY5WTlayzs=
 		</data>
+		<key>Headers/MBVehicleClassInfo.h</key>
+		<data>
+		a3GeK61n+FC5hXEZvsYE7+f/06I=
+		</data>
 		<key>Headers/MBViewControllerFactory.h</key>
 		<data>
 		Q2bdixv6v622g9+xXOfVdTs0368=
@@ -750,11 +690,11 @@
 		</data>
 		<key>Headers/MBVizResult.h</key>
 		<data>
-		qgUbnBFRFG2g/3mN9HP+M0bMAso=
+		jj2hMZJ92ZO7MLYDH7flBc0FXZw=
 		</data>
 		<key>Headers/Microblink-Swift.h</key>
 		<data>
-		CZa6TljsYi0ylMGTCmZVQzaFAo4=
+		OxeezcwUwII87tjvxdvKEad7tHE=
 		</data>
 		<key>Headers/Microblink.h</key>
 		<data>
@@ -762,79 +702,79 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QSKJ85A+XvA/5NO2H/RNuP/ifw8=
-		</data>
-		<key>Model_141118c0becd849c17db70ccc43c26d657598b76e2406e690660574e27ec2854.strop</key>
-		<data>
-		/3xx5OId11B5cWUqMS3EFTxKgOY=
+		bBYbb/L3MO/ERpvHh61gcM9VqV4=
 		</data>
 		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<data>
-		agVhLKVfqG78196xx158u0cPmaM=
+		1p4Hj2hh/2G5M7HkijVyil9oeNw=
 		</data>
 		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
 		<data>
-		x5qnjVsO5UoQbwb2+yEUrmNSU4Q=
+		1TE6WZB7y8525av1nPI2+RBArTs=
 		</data>
 		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
 		<data>
-		fVwZhpWd0Bpq/r3hiPB4o1RlK1A=
+		oiKvRDgKpxIvbQh2x1xgQMUUpF0=
 		</data>
-		<key>Model_6fcfcf65470175835ad25f62811d30a830eae72672962cfcdcac88cda8b91b9d.strop</key>
+		<key>Model_8322bc53f683fdb17f42124244cf6469a82e1c00ec8c43c5d7939ae25ee8c006.strop</key>
 		<data>
-		ocK7MtOEMO0vhZimffKq+NvpuHQ=
+		vpLafn4SgQxfgJ3WRVp24aVNddg=
 		</data>
-		<key>Model_a3df4ea01179026ff7879c27ceec653d59d062c20eaaed021e1000d18879f2a1.strop</key>
+		<key>Model_840bd7ad76dab96d6ebae4afab54c9608ffe35d9f35a92e46a45924d04fee981.strop</key>
 		<data>
-		NPkBoR7WgOcL7aiggAD+JDVBXAA=
+		EseAy9DBEwR6UijctWGbWiBrG8M=
+		</data>
+		<key>Model_a5858807e9d6b351bdbe37cbb4f373b6b9dca41776e0f60a8457be92550632ed.strop</key>
+		<data>
+		RTvnzr/2WhJqTMoXbHf2hXtU7sI=
 		</data>
 		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
 		<data>
-		6JddZ/hbxhF0yp50tzKqbjdiEWc=
+		ybdjwB9g3f+QfopuDbKbex2h8Ds=
 		</data>
-		<key>Model_e2dda372088c13ba3741a0f13e7d33946d638f58b97e4cd886f0970eeccfde39.strop</key>
+		<key>Model_d647a73c5ff6581d591761cdfe03eff14a830e302c92782c1d683291bea047d6.strop</key>
 		<data>
-		eHJ7rzWGETYqA50jK60PWoUal5I=
+		Mht26DVvPkRAf0J1jvWWXiuZJfo=
 		</data>
 		<key>Model_e4f1f62f68ec44b71ecad3fb3f3b48fe3790beb5ab325611e17d63af06e9f644.strop</key>
 		<data>
-		rnkIXQz+5yZ0v5FC2hLKAi6hBa4=
+		iqeet2dUIYRpqtKovyERZ6KrzW0=
 		</data>
 		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
 		<data>
-		Oodr3Z+7lQxKaFSWfz0GK6Ah2aI=
+		kIchxcWM253kvZwoegRfVctLoLU=
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		lDxsF7tmIQs6qgo6nnuVVQm35hU=
+		dUAdc/U1I/jgGaubL8FTU3oSa0I=
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		lDxsF7tmIQs6qgo6nnuVVQm35hU=
+		dUAdc/U1I/jgGaubL8FTU3oSa0I=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		769nyE2nETZOgpMDqhya3fQ8WUs=
+		fcMzCgbc4E6s4beX1Qz9iU73B9I=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		sJCRwJpmGI/3gGbK5Gdm03xY6IE=
+		2E9Tuwt92XYzCG24p5W78BhlzQI=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		9Y+PdNfnMoFBrwuy1W4QEludLX8=
+		iPVo5VbUyJpHtW+BsedfucO8wSQ=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		769nyE2nETZOgpMDqhya3fQ8WUs=
+		fcMzCgbc4E6s4beX1Qz9iU73B9I=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		sJCRwJpmGI/3gGbK5Gdm03xY6IE=
+		2E9Tuwt92XYzCG24p5W78BhlzQI=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		9Y+PdNfnMoFBrwuy1W4QEludLX8=
+		iPVo5VbUyJpHtW+BsedfucO8wSQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1294,7 +1234,7 @@
 		</data>
 		<key>model_mrtd.zzip</key>
 		<data>
-		j3DhAqIKAZ9t0TBP/h19gXqJHY8=
+		tL16uoEbRsrInVsIm3HkWFsHFx0=
 		</data>
 		<key>ms.strings</key>
 		<data>
@@ -1428,118 +1368,6 @@
 			1ab4mbAdyoAyWsrqteX/kugLOs8pCEhwNbuxRFtwSYQ=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftAVFoundation.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4MZKIN2F+CMxmbZiDd3IefaycBeRrNkR8sIVgJcowsY=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCore.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pMWpqszN6GeoQ13b8y5Da/TYLQEj2h4WBzWXoIwvKFw=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreAudio.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3xlg/cpWVJVXHq0ml6hbmCspxNU6x8uGFuRtpIuZWCI=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UAaon+ioqnD7Ad4QdBz8XyJDLh6tLpIg16NpvdnBuOU=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			v68/ox7sMjITRMaMLNw5I8wXBTqxkSX6Mw+i5dDwSpg=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NyYleT1WmDRhXHSHoo0/GbitWrLt0Hv7w+xotOo8JYo=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreMedia.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			s9OGgNsOKRNBA/0GmDq0485i89cSJT19PuW6lhgLK0w=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftDarwin.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qmTYGdUF5wAqPwmQwMPslH4rIEl7uTgmdqEQGH6Cr7o=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftDispatch.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cHGWuxTegCS1HieLQC/uuegsfZgFtbC+V74+TeUqtLk=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftFoundation.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			k/ltQGXt4KEVnz880v257vfSd16EYzDVX2UbNKkcDL8=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftMetal.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			b0bbC/BNYqC2dn4ZdMl1rUGU8NQudycpTeMoFreilnA=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Qawis83wx+QEGA+CgtlPfddtfzWl/hcSOf3e0YoPiqc=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PvtKXSxeElqMGMK6SPX2xXId80q4/4g7ScZKwBE64X0=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8+CiK4uEIflfWAFqL6JqUbQVZ6uezyo4orzxTbkoce4=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftos.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6vgHmLOZJrY1s30tCu6ayAk5wagQ81ha3/nIqUf9scg=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftsimd.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pnQmKwTIg7uWFHUzUcK3L9kRaS3BO7xYPLOiysVHwxo=
-			</data>
-		</dict>
 		<key>Headers/MBAgeLimitStatus.h</key>
 		<dict>
 			<key>hash2</key>
@@ -1614,7 +1442,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gp3ju76uA+9CKn6HoEcXcf+WcwUWhNYybnUBNb+k8uQ=
+			pZphMhUe/qBT/EmtzrggbIwjeMklm/v6Zg8qHbKQxq8=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIDUIComponents.h</key>
@@ -1628,14 +1456,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MxOdw/s6d5K6QnCvfH/kCJOEb9tjsC8c337cyouSyqc=
+			ST99//ufh47ucjTa6Yuc5TVf3Jemo48YZZCvz8xEbLQ=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdCombinedRecognizerResult.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HIxj0g4cGLp/jAFxoCNGeJl1L+09y6UUjstzaQ7drDE=
+			tkr5bPEkRFYsqY5eapd0LZ/200fTLOpZsUrS5jFqVfo=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdOverlaySettings.h</key>
@@ -1670,14 +1498,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rm6gBVn/+BP5tkim48L/NQPccuFCrtLAZ9fMCd5avqE=
+			PgfP7RlFF4cV7mdiHyVkoxKoueGlyzO5jJExKcbcJkY=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdRecognizerResult.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gql16807mNr7aazcG1JkhNAnNBpAXpHd1Z49WON9C60=
+			/D3S99a2tqSQ0g5jxGhz5ejI/Y61RzgaVwWwkjavCsM=
 			</data>
 		</dict>
 		<key>Headers/MBCameraReticle.h</key>
@@ -1705,7 +1533,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pxZOFdKUuXJj9xPVniAcAKeYQybxFBkEwSM5e1lbbvg=
+			kDGM1SJk42SsS3kUMT1I3y2Hg9bPOB6g26OohWa75b0=
 			</data>
 		</dict>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
@@ -1901,7 +1729,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uDm7yKLl7KYd0fCZt+MxvYlXVCJ2K/W3iO7YUgrqsdA=
+			Culc5WH7vn/NLtRXoOnxso+9TxMkbPVXUfdA1/zxkK4=
 			</data>
 		</dict>
 		<key>Headers/MBEncodeFaceImage.h</key>
@@ -2587,7 +2415,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zoYAJlcI0eq4BpijFJwQDSnmldu22w6XD9QPWuXYapc=
+			0Z7mLb4iA0ybjvC97c2X1Mrk8jbFLZPH9DRMcvjOGzs=
 			</data>
 		</dict>
 		<key>Headers/MBStringProcessingRecognizerRunnerDelegate.h</key>
@@ -2688,6 +2516,13 @@
 			j7u+OTuPGwVLN8Iv4LQ8dd1j95mVe/G7e06J+K30/q4=
 			</data>
 		</dict>
+		<key>Headers/MBVehicleClassInfo.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ezNVmlm1fg5w/6z5WkTJNOqw4mQ7YI1Qz5UAVvY7GqU=
+			</data>
+		</dict>
 		<key>Headers/MBViewControllerFactory.h</key>
 		<dict>
 			<key>hash2</key>
@@ -2713,14 +2548,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KqCcrhVdmJwBP5TzYa+kKbzyJyNFzX2N/AnfTX+nQpw=
+			ThYtEkiauLhgoWiH9STEetAjsZ6gMUBAgAqk8NYE3pM=
 			</data>
 		</dict>
 		<key>Headers/Microblink-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wm5XiXmZaeU/zz7I/4ay8jivuLdp/a7oA8NHcWtYlHo=
+			BoTHLraI4xzGvla32fE73T4wjSTUZHDWADQva/FdlSA=
 			</data>
 		</dict>
 		<key>Headers/Microblink.h</key>
@@ -2730,130 +2565,130 @@
 			aThqU5L5KCHVxu0Pz+aYUHCcBjzfVAumgFRSKDQiWwI=
 			</data>
 		</dict>
-		<key>Model_141118c0becd849c17db70ccc43c26d657598b76e2406e690660574e27ec2854.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vMOnayaVAMWJULTvabMkXrgpCONmUiQMP6rCRu3vkiI=
-			</data>
-		</dict>
 		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Qq4Pa8/3PtFs8z9IMFOn62dzibbbhRtbZieOSyT+Zc=
+			dgWpwTVLmvkTP4UHVVvv1Oo1ylhGU9h4oDBJdwG7nwo=
 			</data>
 		</dict>
 		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+toHJC24up4aE/AGtp5UcszFPMfAaDfglYNR5A2M5wI=
+			tsquwwm8WQWBzLo4NlJLdPMo2u9cd4iFBEtgZ4d6joc=
 			</data>
 		</dict>
 		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UG2Q0yYl+UshVurJ5MB//8/9ty0zdTI6uwHr3q4W8qg=
+			1T3GugwBYYhnXj9jgUOf6XINEbG7tsg1MJlT+WM3UxU=
 			</data>
 		</dict>
-		<key>Model_6fcfcf65470175835ad25f62811d30a830eae72672962cfcdcac88cda8b91b9d.strop</key>
+		<key>Model_8322bc53f683fdb17f42124244cf6469a82e1c00ec8c43c5d7939ae25ee8c006.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u1g8VrN2yU+PIvVbvtGXStSr+pcA9ilvFysRmVWi/r8=
+			3nKcCNeQCX21r/XM/jVZx3I3SGCu/A4c/1puhvxRe+k=
 			</data>
 		</dict>
-		<key>Model_a3df4ea01179026ff7879c27ceec653d59d062c20eaaed021e1000d18879f2a1.strop</key>
+		<key>Model_840bd7ad76dab96d6ebae4afab54c9608ffe35d9f35a92e46a45924d04fee981.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZtoLLqEfKuR0CW1V0wX024smfMA529CCNHk7g0rrZgY=
+			PdVvusU8ShiJUKHss/XY6tqw1Ri5+gvkHE6TW50n45A=
+			</data>
+		</dict>
+		<key>Model_a5858807e9d6b351bdbe37cbb4f373b6b9dca41776e0f60a8457be92550632ed.strop</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			maWx1BllE3Et4tXxaYi7uoJ3/4iLvq66yFBuUgt25Gc=
 			</data>
 		</dict>
 		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bHocHXQH2vCwhcSKHRGjlI6heJYXlxN2bkxAejgeJ9w=
+			bHENbPhvf475PeEg4vGMXTkGURb4ulK2RaUQpilQ5vE=
 			</data>
 		</dict>
-		<key>Model_e2dda372088c13ba3741a0f13e7d33946d638f58b97e4cd886f0970eeccfde39.strop</key>
+		<key>Model_d647a73c5ff6581d591761cdfe03eff14a830e302c92782c1d683291bea047d6.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w2xIB/UqQ00INGFxdvcreFwkR5+dElAqrUwRGztsQe8=
+			W36yMNMZVZ/k6gt5OqIHZyROr0zOK6wrV+O5pHVZB2U=
 			</data>
 		</dict>
 		<key>Model_e4f1f62f68ec44b71ecad3fb3f3b48fe3790beb5ab325611e17d63af06e9f644.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4YkZFWG08lEi0bvUtf76tKG31XHDbYdHqQcTzGvUWNE=
+			GjABs0G82VsiTe7MtdLDGRiYuiO28hx7Yyzz6qUiQgE=
 			</data>
 		</dict>
 		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8TXw77BjlfhGPbncIZBqdDg38PrA5pVvPGjbnmbxTTk=
+			U7MNfNPsVA7kfttdZ3HPqUrBzMl5ytGi/rF8MhlGhNI=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5fJ2ck4seu4AJLZqBa3l831Ea8XGnkEStr8HI6lym7g=
+			WB2XgrSYEsX1SPntOPXtsrQK7rJfSKwmrisjJ+1p5AM=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5fJ2ck4seu4AJLZqBa3l831Ea8XGnkEStr8HI6lym7g=
+			WB2XgrSYEsX1SPntOPXtsrQK7rJfSKwmrisjJ+1p5AM=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			edVW7LO2DYac4y/3lcub0zV6nYqZ1MrvoftjluNzcuM=
+			okRnVmpysajZhHeV4zzAnEw4JVn3n448tMopSUMwZ0Y=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jNfz7yNbTyhTUfdzmdZRcItKgbYIDZ7Ah+PR7YOJEBI=
+			sItGLJ0BipRdXm/IN8KWZWPeAz4Em9fMtpfKk9BdWBo=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gyabpaTLOpY2NdQHkEyaF4eb3D5/nQg7/ZkvraExiko=
+			tjsJoDxqhvvLRcSsJ05hXCNYJi0k63WJCNDvXg2z6Xo=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			edVW7LO2DYac4y/3lcub0zV6nYqZ1MrvoftjluNzcuM=
+			okRnVmpysajZhHeV4zzAnEw4JVn3n448tMopSUMwZ0Y=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jNfz7yNbTyhTUfdzmdZRcItKgbYIDZ7Ah+PR7YOJEBI=
+			sItGLJ0BipRdXm/IN8KWZWPeAz4Em9fMtpfKk9BdWBo=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gyabpaTLOpY2NdQHkEyaF4eb3D5/nQg7/ZkvraExiko=
+			tjsJoDxqhvvLRcSsJ05hXCNYJi0k63WJCNDvXg2z6Xo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3658,7 +3493,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rz4aNSecKzKVuq/Fa0dhe6E/d9EoBahL7nEw3qJUvP8=
+			OThkbpfdPsFJJMtq4g1v4ThmRxLR51i0Ck/D1Va3WAM=
 			</data>
 		</dict>
 		<key>ms.strings</key>
