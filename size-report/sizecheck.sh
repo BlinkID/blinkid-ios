@@ -3,7 +3,7 @@
 if [ "$#" -ne 2 ]
 then
   echo "Usage: $0 PATH_TO_SAMPLES PROJECT_NAME"
-  echo "Example: $0 ../Samples BlinkID"
+  echo "Example: $0 blinkid-ios/Samples BlinkID-sample-Swift"
   exit 1
 fi
 

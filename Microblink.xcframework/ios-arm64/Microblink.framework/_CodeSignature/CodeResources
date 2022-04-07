@@ -702,7 +702,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bBYbb/L3MO/ERpvHh61gcM9VqV4=
+		KBbUYFmgCqdp5SGbOdE6USSWGgQ=
 		</data>
 		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<data>
@@ -746,11 +746,11 @@
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		dUAdc/U1I/jgGaubL8FTU3oSa0I=
+		o24P9H9Ks0961mEKRhKXaNW3Xfw=
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		dUAdc/U1I/jgGaubL8FTU3oSa0I=
+		o24P9H9Ks0961mEKRhKXaNW3Xfw=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -762,7 +762,7 @@
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iPVo5VbUyJpHtW+BsedfucO8wSQ=
+		Ry56k1W+/Zd8nYGlVqRfuEBF4zU=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -774,7 +774,7 @@
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		iPVo5VbUyJpHtW+BsedfucO8wSQ=
+		Ry56k1W+/Zd8nYGlVqRfuEBF4zU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2639,14 +2639,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WB2XgrSYEsX1SPntOPXtsrQK7rJfSKwmrisjJ+1p5AM=
+			zaNjiwCLft8HTcM5hMPMU7ty4rwNZGxlxXcaBVWkLTw=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WB2XgrSYEsX1SPntOPXtsrQK7rJfSKwmrisjJ+1p5AM=
+			zaNjiwCLft8HTcM5hMPMU7ty4rwNZGxlxXcaBVWkLTw=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -2667,7 +2667,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tjsJoDxqhvvLRcSsJ05hXCNYJi0k63WJCNDvXg2z6Xo=
+			uKUe79s94ZeJqIQuiXyrOftaeBq0Pw7R2LBpfcQRrss=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64.swiftdoc</key>
@@ -2688,7 +2688,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tjsJoDxqhvvLRcSsJ05hXCNYJi0k63WJCNDvXg2z6Xo=
+			uKUe79s94ZeJqIQuiXyrOftaeBq0Pw7R2LBpfcQRrss=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
