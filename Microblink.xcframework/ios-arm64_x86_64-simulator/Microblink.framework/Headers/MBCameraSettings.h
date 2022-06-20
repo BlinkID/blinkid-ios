@@ -131,6 +131,14 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 @property (nonatomic) BOOL cameraMirroredVertically;
 
 /**
+ * Set the back side preview camera layer zoom factor. 1.0 means there is no zoom, 2.0 double the zoom - preview layer is 2x zoomed than video output.
+ * Valid ranges are [1.0, 2.0] - rounded to nearest two decimals. Setting previewZoomScale out of valid ranges throws an exception.
+ *
+ * Default: 1.0
+ */
+@property (nonatomic) CGFloat previewZoomScale;
+
+/**
  * Designated initializer. Initializes the object with default settings (see above for defaults)
  *
  *  @return object initialized with default values.

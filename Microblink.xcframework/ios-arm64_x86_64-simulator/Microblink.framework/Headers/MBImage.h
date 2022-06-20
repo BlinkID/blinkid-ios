@@ -1,5 +1,5 @@
 //
-//  PPImage.h
+//  MBImage.h
 //  BlinkIdFramework
 //
 //  Created by Dino on 25/02/16.
