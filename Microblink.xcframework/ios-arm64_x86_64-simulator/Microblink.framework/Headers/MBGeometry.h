@@ -119,6 +119,8 @@ void CGRectClosestTwoCornerPoints(CGRect rect, CGPoint point, CGPoint *point1, C
 // the rectangle. Returns NULL_POINT if no interseciton is found.
 CGPoint CGLineIntersectsRectAtPoint(CGRect rect, CGLine line);
 
+// Transforms point from one rect to another.
+CGPoint CGTransformedPointToDestination(CGPoint point, CGRect originalRect, CGRect destinationRect);
 
 #pragma mark - Arcs
 

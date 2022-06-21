@@ -44,21 +44,21 @@
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 37,
+      "line": 38,
       "symbol": "MBBlinkIdCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 158,
+      "line": 151,
       "symbol": "MBBlinkIdCombinedRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizerResult.h",
-      "line": 40,
+      "line": 41,
       "symbol": "MBBlinkIdCombinedRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -72,14 +72,14 @@
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 35,
+      "line": 36,
       "symbol": "MBBlinkIdRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 134,
+      "line": 127,
       "symbol": "MBBlinkIdRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -89,6 +89,13 @@
       "line": 38,
       "symbol": "MBBlinkIdRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCameraFrames.h",
+      "line": 11,
+      "symbol": "MBCameraFrames",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
@@ -201,6 +208,13 @@
       "line": 41,
       "symbol": "MBCustomOverlayViewController.-initWithRecognizerCollection:cameraSettings:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDataMatchDetailedInfo.h",
+      "line": 15,
+      "symbol": "MBDataMatchDetailedInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
@@ -702,14 +716,21 @@
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
-      "line": 129,
+      "line": 123,
+      "symbol": "CGTransformedPointToDestination",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "line": 131,
       "symbol": "CGControlPointsForArcBetweenPointsWithRadius",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
-      "line": 135,
+      "line": 137,
       "symbol": "MBscanningRegionForFrameInBounds",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
@@ -1234,7 +1255,7 @@
     },
     {
       "file": "/opt/jenkins-armini2/E0/core-ios/SDKs/BlinkID/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizer.h",
-      "line": 29,
+      "line": 31,
       "symbol": "MBRecognizer.-getOptimalHudOrientation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

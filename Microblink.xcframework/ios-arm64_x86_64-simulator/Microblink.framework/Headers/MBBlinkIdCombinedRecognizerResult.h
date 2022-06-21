@@ -28,6 +28,7 @@
 
 #import "MBAgeResult.h"
 #import "MBDocumentExpirationCheckResult.h"
+#import "MBDataMatchDetailedInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -253,6 +254,11 @@ MB_INIT_UNAVAILABLE
  * The barcode raw camera frame.
  */
 @property (nonatomic, readonly, nullable) MBImage *barcodeCameraFrame;
+
+/**
+ * Detailed info on data match.
+ */
+@property (nonatomic, readonly, nullable) MBDataMatchDetailedInfo *dataMatchDetailedInfo;
 
 @end
 
