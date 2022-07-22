@@ -383,7 +383,8 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionQuintanaRooBenitoJuarez,
     MBRegionQuintanaRoo,
     MBRegionQuintanaRooSolidaridad,
-    MBRegionTlaxcala
+    MBRegionTlaxcala,
+    MBRegionQuintanaRooCozumel
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -435,7 +436,10 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeTribalId,
     MBTypeVeteranId,
     MBTypeCitizenshipCertificate,
-    MBTypeMyNumberCard
+    MBTypeMyNumberCard,
+    MBTypeConsularPassport,
+    MBTypeMinorsPassport,
+    MBTypeMinorsPublicServicesCard
 };
 
 #endif /* MBClassInfoTypes_h */

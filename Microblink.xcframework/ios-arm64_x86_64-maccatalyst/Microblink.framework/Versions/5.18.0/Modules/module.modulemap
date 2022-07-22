@@ -1,0 +1,11 @@
+framework module Microblink {
+  umbrella header "Microblink.h"
+
+  export *
+  module * { export * }
+}
+
+module Microblink.Swift {
+    header "Microblink-Swift.h"
+    requires objc
+}
