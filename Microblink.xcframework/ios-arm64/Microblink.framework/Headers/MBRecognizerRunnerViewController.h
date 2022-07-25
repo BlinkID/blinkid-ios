@@ -116,6 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Method with block for getting high resoultion images
  *
  * @warning this is returned from background thread
+ * @discussion The high res image is captured independently of other images returned by recognizers. Because of a delay when switching from video to photo camera mode, the high-resolution image can look different from other images like cropped images.
  */
 - (void)captureHighResImage:(MBCaptureHighResImage)highResoulutionImageCaptured;
 

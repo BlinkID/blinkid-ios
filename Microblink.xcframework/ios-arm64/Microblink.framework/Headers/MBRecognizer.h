@@ -11,9 +11,7 @@
 #import "MBEntity.h"
 #import "MBRecognizerResult.h"
 
-#if MB_RESULT_JSONIZATION
 @class MBSignedPayload;
-#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,14 +28,12 @@ MB_CLASS_AVAILABLE_IOS(8.0)
 
 - (UIInterfaceOrientationMask)getOptimalHudOrientation;
 
-#if MB_RESULT_JSONIZATION
 /**
  * Returns the signed JSON representation of this entity's current state as a MBSignedPayload.
  *
  * @return signed JSON representation of this entity's current state.
  */
 - (MBSignedPayload *)toSignedJson;
-#endif
 
 @end
 

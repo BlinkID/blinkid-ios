@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/MBClassInfoTypes.h</key>
 		<data>
-		2sZvaGN/v0sZKjBCrg9WffoP6Vg=
+		sqyU9mWNguEZ3Yz3TlVl3GDnMqE=
 		</data>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
 		<data>
@@ -570,7 +570,7 @@
 		</data>
 		<key>Headers/MBRecognizer.h</key>
 		<data>
-		bWd3lYDba7qKqADhzixg2+iISa0=
+		d00bz6kMzmeupAOKQvaaKvUz1Jw=
 		</data>
 		<key>Headers/MBRecognizerCollection.h</key>
 		<data>
@@ -590,7 +590,7 @@
 		</data>
 		<key>Headers/MBRecognizerRunnerViewController.h</key>
 		<data>
-		8ayDyOcG3f+Q6mwdtASclSKNU8I=
+		na8h2R4aeD52/SN3VZbpFGuEuYs=
 		</data>
 		<key>Headers/MBRecognizerRunnerViewControllerDelegate.h</key>
 		<data>
@@ -718,55 +718,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3Xls1gw5Ggvdfj/6V2Kq4Pm9caY=
+		O9yiBNuAnxE3zXOaT8x6G27bfRE=
+		</data>
+		<key>Model_26abb1accd3147801c9070f367d68903d55fee884a3870d78f7053360da50e30.strop</key>
+		<data>
+		49vLr6pmdHjT5XcSu/0G6pU7IEE=
 		</data>
 		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<data>
-		GNLEKohRmcoRKGXwBcNzL57Kuog=
+		MOIGgJxP0XYVtdwVnQFnFksbFiE=
 		</data>
 		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
 		<data>
-		/5vKssbtQVv2+/p1JOl+t5W805I=
+		6ZJESJtoHTbIu0HDV3YWUAY24UI=
 		</data>
 		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
 		<data>
-		99alNB+ZjuSrucb8TZaWeieRzCo=
+		Ke2x0CIJGLArMVf+2iYUayHfnD8=
 		</data>
 		<key>Model_8322bc53f683fdb17f42124244cf6469a82e1c00ec8c43c5d7939ae25ee8c006.strop</key>
 		<data>
-		kSoaKKLZIqsud/VFlWdI20ZLOTA=
+		ZDmFYZvrNUFr4mjrQZZh3IYFKu0=
 		</data>
-		<key>Model_840bd7ad76dab96d6ebae4afab54c9608ffe35d9f35a92e46a45924d04fee981.strop</key>
+		<key>Model_9728a773c1b4698cf671cb4a5babc846265c5f7ab0fe34b27cb15c6c50d2881b.strop</key>
 		<data>
-		BMiqIYQUTg3Yqz8XgtRcFdnmyXY=
-		</data>
-		<key>Model_a5858807e9d6b351bdbe37cbb4f373b6b9dca41776e0f60a8457be92550632ed.strop</key>
-		<data>
-		W1sJQA5HFlHe6Z5TWIo2dlWqCdY=
+		p8oUmzw6+PcM9k/1ivbbxTyJrGo=
 		</data>
 		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
 		<data>
-		OLwVi5CHQdJe/llbbvasD2A2sgk=
-		</data>
-		<key>Model_d647a73c5ff6581d591761cdfe03eff14a830e302c92782c1d683291bea047d6.strop</key>
-		<data>
-		y262eDYtOvwOYw2pNzxWsLyRoP8=
+		FXExCNHQ3z1J7+64YRm1By2aETI=
 		</data>
 		<key>Model_e4f1f62f68ec44b71ecad3fb3f3b48fe3790beb5ab325611e17d63af06e9f644.strop</key>
 		<data>
-		/odNJ0TEpq4w1X/4zw9sefODMl0=
+		kUI7OiP3IlUYDKCmvB0mjc7airo=
+		</data>
+		<key>Model_ed586fd6ca47c8eebb513c4ffaaacc2c54e92162b145062d7022519fba0911de.strop</key>
+		<data>
+		QlDFjhreg1PX3kuqvTbmJKOvps0=
 		</data>
 		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
 		<data>
-		BC9GsHOrXvHn00z3BDaFL2rpG2w=
+		o7lXmad2RJCCi+P1vsJ3F50wFXQ=
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		YcF4uiQS41MX5vbLbKzIhsj/xCQ=
+		WqUIR2zRk19+L5gZy/lnya3qXw8=
 		</data>
 		<key>Modules/Microblink.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		2fKpcc5sSmT3L+rtZm1PdF2vekI=
+		9reJEE4p1QofNc0TFtmBnc3sbJk=
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -778,7 +778,7 @@
 		</data>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IwMWMBrmKiGY4W4LGHmI8dk52og=
+		WxqM5TRGpS23nJbuFzVz4ftVrjw=
 		</data>
 		<key>Modules/Microblink.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -790,7 +790,7 @@
 		</data>
 		<key>Modules/Microblink.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		N53h8de+3vgL+GEodutcLVNDwqs=
+		NUrOuVNS7edbuh3Yu/g8d/oULrU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1560,7 +1560,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kDGM1SJk42SsS3kUMT1I3y2Hg9bPOB6g26OohWa75b0=
+			lvYL21L7l00N696DQBkGunuQAK3nK7I6bYVRpy9LgyE=
 			</data>
 		</dict>
 		<key>Headers/MBCombinedFullDocumentImageResult.h</key>
@@ -2358,7 +2358,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOF6PBf4BbHP/SaPLNSoNBGrv0kNsp4wgGpkIffG7KE=
+			WsT/XFwFjKhoV6T+Ec4KpeCSrHoPgbPUO3+GN98Qa8Q=
 			</data>
 		</dict>
 		<key>Headers/MBRecognizerCollection.h</key>
@@ -2393,7 +2393,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TBYfj9mtLthK/9gFzPztU580tiFkabRTEGlCINeUM5E=
+			fXO3gVr7bwUQzO8Kmo060P88ArXY5GStvV8C3yEfJAU=
 			</data>
 		</dict>
 		<key>Headers/MBRecognizerRunnerViewControllerDelegate.h</key>
@@ -2613,88 +2613,88 @@
 			aThqU5L5KCHVxu0Pz+aYUHCcBjzfVAumgFRSKDQiWwI=
 			</data>
 		</dict>
+		<key>Model_26abb1accd3147801c9070f367d68903d55fee884a3870d78f7053360da50e30.strop</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6R8+KWSX/etLJloD3epTNgvoYOWszzOBXRYMJ9922Fk=
+			</data>
+		</dict>
 		<key>Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ggB0FSwPwaJDmk0WkJ1o1/fU9m5Yx4sGIwjQdtJeB4o=
+			WiG4808cDAa009pbmCMAuIAh6TYJfV6ULv5qF+oY6Po=
 			</data>
 		</dict>
 		<key>Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KCvFWtC15c8rLZIG65FNY8/Wk66xNK1ElGUImD8PrbA=
+			istjXIuFxmZKbGCpntnWLickVAr+F5kmi71uO6UCKZ4=
 			</data>
 		</dict>
 		<key>Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e0YUhaKMO8QZKWRplXzCHMeViSQou8JOZlIL17BMpFM=
+			REG2hDGedSYqNp4e1vuCLiyeCvvfz5hLll4T3wwxgYg=
 			</data>
 		</dict>
 		<key>Model_8322bc53f683fdb17f42124244cf6469a82e1c00ec8c43c5d7939ae25ee8c006.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y/kDmxe5UJ/uTVoi13/fGUgnc5vXPkBD5KvlnDsV5dw=
+			79Cs+EutE1JU1S1jYfBWZ/6XJz2jrdrXZuepjxriwOY=
 			</data>
 		</dict>
-		<key>Model_840bd7ad76dab96d6ebae4afab54c9608ffe35d9f35a92e46a45924d04fee981.strop</key>
+		<key>Model_9728a773c1b4698cf671cb4a5babc846265c5f7ab0fe34b27cb15c6c50d2881b.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EcS/ch5JEEWJ0Pf3r8N6lXNjbbMeYEyuqj5Bj1kDheM=
-			</data>
-		</dict>
-		<key>Model_a5858807e9d6b351bdbe37cbb4f373b6b9dca41776e0f60a8457be92550632ed.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			OroidpnTJEF/o9VlbO/cLe4yJhlcN79EvyMbY5eJAoY=
+			KDI2qSeV5QlakotCAZO3e0to8OKwFdJ0NkJCnnPg2pU=
 			</data>
 		</dict>
 		<key>Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nxQVv/fvxZO2X3FsbuvHAHwnHHweBEusE8LFxm/omAU=
-			</data>
-		</dict>
-		<key>Model_d647a73c5ff6581d591761cdfe03eff14a830e302c92782c1d683291bea047d6.strop</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hwCjuku769MEFey+Xs7cC7jkgaZJKRaPc2ojYngkKxM=
+			pS2Pm5AZAaXtphgxqsLdLloaEw0WYzn9czo97dOEA7Y=
 			</data>
 		</dict>
 		<key>Model_e4f1f62f68ec44b71ecad3fb3f3b48fe3790beb5ab325611e17d63af06e9f644.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x27MGSwSSbY0TkTRR7kyRzbhDiXTQjCfoh3Vk1cKvHE=
+			T0PrEQlr46AdWyD9lJM8yYguTo80IYO1tm7ctZpuDHg=
+			</data>
+		</dict>
+		<key>Model_ed586fd6ca47c8eebb513c4ffaaacc2c54e92162b145062d7022519fba0911de.strop</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fmqa4ohU+uStZOlu5oyFlYjkv+wtSqDleqZZrLJJU/o=
 			</data>
 		</dict>
 		<key>Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZgfKf/SqqLKUscAniWu814O8eUl0q6iI/bcr/W3XEeA=
+			rzDDA0VZCDTQTORFC2aqO6SABXCj6pM3R5vtCYgsdOc=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SzZ+Jh5WOe2tTWsvOk4cvSmv8sk1f0q1xOQEYAXqySc=
+			VbA94Yel/JpwqjHCmf6gPLTXrMv9oxIvSMKfwv8NeEw=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dHBuTyWsLTouM3GN2ski8WABtOFg2Eb5/D6d0uvomlg=
+			FutYaGenW8cAhuGdIDAvRqloSKrhlOBMcLKTMJ7sl7E=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -2715,7 +2715,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O53QDjlKzh+Rktsb2f5yYYqAIwVy/LMzxF3UAMVfxLw=
+			zCEljB2V18WzyHF2TNPArcDzAhJOohpBSNRdH++8lJo=
 			</data>
 		</dict>
 		<key>Modules/Microblink.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -2736,7 +2736,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IfnMGB6xdDziti81QhYmLCPF16G61HrAMfKnd0KfflE=
+			WtTVO/HowZPoWJhVDo3Yd+JE7WqwhbJkuYJJaWGJ6Mw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
