@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 * The ID Barcode Recognizer is used for scanning ID Barcode.
 */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBIdBarcodeRecognizerResult : MBRecognizerResult<NSCopying, MBAgeResult, MBDocumentExpirationCheckResult>
 
 MB_INIT_UNAVAILABLE

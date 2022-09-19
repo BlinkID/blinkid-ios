@@ -24,7 +24,7 @@
 "photopay_align_message" = "Umiestnite telefón nad tlačivo";
 "photopay_back_splash_verification_document" = "Zadná strana";
 "photopay_back_verification_document" = "Vložte zadnú stranu dokumentu do rámu a počkajte na automatické naskenovanie.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nemá povolenie na používanie kamery.\n\nProsím, choďte na:\n• {font:@Medium}Settings{/font}\n• {font:@Medium}%@{/font}\n• Uistite sa, že {font:@Medium}kamera{/font} je zapnutá";
+"photopay_camera_permission_denied" = "%@ nemá povolenie na používanie kamery.\n\nProsím, choďte na:\n• Settings\n• %@\n• Uistite sa, že kamera je zapnutá";
 "photopay_close" = "Zrušiť";
 "photopay_done_splash_verification_document" = "Skenovanie dokumentu bolo dokončené";
 "photopay_front_splash_verification_document" = "Predná strana";

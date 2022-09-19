@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
  * A camera reticle that locates at the center of screen and uses circle arc rotation to indicate that
  * the system is active but has not detected an object yet.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBCameraReticle : MBSubview
 
 /** Whether the reticle is currently animating. */

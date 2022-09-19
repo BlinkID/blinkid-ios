@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Base class for all dewarp policies
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBDewarpPolicy : NSObject
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;

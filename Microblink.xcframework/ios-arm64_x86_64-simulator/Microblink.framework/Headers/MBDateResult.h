@@ -16,7 +16,7 @@
  *
  * While converting to NSDate, internally prior knowledge about scanned document is used to use the right format.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBDateResult : NSObject <MBNativeResult>
 
 // Unavailable

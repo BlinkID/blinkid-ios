@@ -1010,28 +1010,28 @@
     },
     {
       "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
-      "line": 37,
+      "line": 25,
       "symbol": "MBMicroblinkApp",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
-      "line": 87,
+      "line": 75,
       "symbol": "MB_LOCALIZED_DEFAULT_STRING",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
-      "line": 91,
+      "line": 79,
       "symbol": "MB_LOCALIZED_FOR_LANGUAGE",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
-      "line": 109,
+      "line": 97,
       "symbol": "MB_LOCALIZED",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"

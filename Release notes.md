@@ -1,5 +1,22 @@
 # Release notes
 
+## 5.19.0
+​
+### What's new in the BlinkID(Combined) Recognizer?
+
+### Support for atypical Vietnam passports
+- Extract data from Vietnam Passports that have non-ICAO compliant MRZ fields. For example, when the filler arrow is facing the other way (>) instead of the standard way (<)
+​
+### Data anonymization
+- We've added the option to not extract the religion field on all supported Malaysian documents (MyKad, MyKas, MyKid, MyPR, MyTentera)
+
+### Setting up custom scanning overlay
+- You will need to set the cameraFrame property of MBImage to `NO` when using still images (photos) for processing, or set cameraFrame to `YES` when using a video capture output.
+- cameraFrame is set to 'YES' by default except when creating MBImage from UIImage when it is set to `NO`
+​
+### Bugfixes
+- Resolved issues with RGB color overlay when extracting document image, which was present on some devices
+
 ## 5.18.0
 
 ### New feature:

@@ -24,7 +24,7 @@
 "photopay_align_message" = "Giữ điện thoại phía trên chứng từ";
 "photopay_back_splash_verification_document" = "Mặt sau";
 "photopay_back_verification_document" = "Đặt mặt sau của tài liệu vào khung và chờ quét tự động.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} không có quyền sử dụng camera.\n\nXin vui lòng vào:\n• {font:@Medium}Cài đặt{/font}\n• {font:@Medium}%@{/font}\n• Hãy đảm bảo rằng {font:@Medium}Camera{/font} đã được bật";
+"photopay_camera_permission_denied" = "%@ không có quyền sử dụng camera.\n\nXin vui lòng vào:\n• Cài đặt\n• %@\n• Hãy đảm bảo rằng Camera đã được bật";
 "photopay_close" = "Hủy";
 "photopay_done_splash_verification_document" = "Đã quét xong tài liệu";
 "photopay_front_splash_verification_document" = "Mặt trước";

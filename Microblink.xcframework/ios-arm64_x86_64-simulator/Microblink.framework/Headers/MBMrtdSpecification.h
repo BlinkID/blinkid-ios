@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, MBMrtdSpecificationPreset) {
  * Mrtd class describes a document which is being detected by MrtdDetector.
  * We encurage users to create specifications with one of our presets, if possible.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBMrtdSpecification : NSObject <NSCopying>
 
 - (instancetype)init NS_UNAVAILABLE;

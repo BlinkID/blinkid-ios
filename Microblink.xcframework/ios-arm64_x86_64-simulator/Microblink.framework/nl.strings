@@ -24,7 +24,7 @@
 "photopay_align_message" = "Plaats de telefoon over de acceptgiro";
 "photopay_back_splash_verification_document" = "Achterzijde";
 "photopay_back_verification_document" = "Plaats de achterzijde van het document in het kader en wacht op de automatische scan.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} heeft geen toestemming op de camera te gebruiken.\n\nGa alstublieft naar:\n• {font:@Medium}Instellingen{/font}\n• {font:@Medium}%@{/font}\n• Zorg ervoor dat {font:@Medium}Camera{/font} is geactiveerd";
+"photopay_camera_permission_denied" = "%@ heeft geen toestemming op de camera te gebruiken.\n\nGa alstublieft naar:\n• Instellingen\n• %@\n• Zorg ervoor dat Camera is geactiveerd";
 "photopay_close" = "Annuleren";
 "photopay_done_splash_verification_document" = "Scannen van document gereed";
 "photopay_front_splash_verification_document" = "Voorzijde";

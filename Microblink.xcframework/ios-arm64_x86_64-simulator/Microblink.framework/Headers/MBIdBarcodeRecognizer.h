@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 * The ID Barcode Recognizer is used for scanning ID Barcode.
 */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBIdBarcodeRecognizer : MBRecognizer<NSCopying>
 
 MB_INIT

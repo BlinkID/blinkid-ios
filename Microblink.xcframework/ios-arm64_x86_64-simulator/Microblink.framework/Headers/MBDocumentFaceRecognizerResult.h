@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class representing values obtained when scanning Document Face Recognizer
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBDocumentFaceRecognizerResult : MBRecognizerResult<NSCopying, MBFullDocumentImageResult, MBFaceImageResult>
 
 MB_INIT_UNAVAILABLE

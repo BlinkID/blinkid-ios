@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Entry class for all Microblink SDKs - used for setting up license key and to add support for
  * optimisation of passing data.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBMicroblinkSDK : NSObject
 
 + (instancetype)sharedInstance NS_SWIFT_NAME(shared());
