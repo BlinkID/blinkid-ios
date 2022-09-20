@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
  * A camera reticle detection that locates at the center of screen and uses circular rotation to indicate that
  * the system is active and has detected object.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBErrorReticle : MBSubview
 
 @property(nonatomic, strong) UIColor *errorColor;

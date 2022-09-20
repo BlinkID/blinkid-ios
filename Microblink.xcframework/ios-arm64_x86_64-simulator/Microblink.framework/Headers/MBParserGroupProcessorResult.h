@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * A recognizer that can scan PDF417 2D barcodes.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBParserGroupProcessorResult : MBProcessorResult <NSCopying>
 
 MB_INIT_UNAVAILABLE

@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * Document Face Recognizer recognizer is used for scanning documents containing face images.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkIdRecognizer with photoID right.") MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_CLASS_DEPRECATED("Use MBBlinkIdRecognizer with photoID right.") MB_FINAL
 @interface MBDocumentFaceRecognizer : MBRecognizer <NSCopying, MBFullDocumentImage, MBFullDocumentImageDpi, MBFaceImage, MBFaceImageDpi, MBFullDocumentImageExtensionFactors>
 
 MB_INIT

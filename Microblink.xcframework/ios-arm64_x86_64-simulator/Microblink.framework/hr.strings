@@ -24,7 +24,7 @@
 "photopay_align_message" = "Postavi kameru iznad uplatnice ili barkoda";
 "photopay_back_splash_verification_document" = "Stražnja strana";
 "photopay_back_verification_document" = "Postavi stražnju stranu dokumenta u okvir i pričekaj automatsko skeniranje.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} ne može pristupiti kameri. Omogući pristup u postavkama.";
+"photopay_camera_permission_denied" = "%@ ne može pristupiti kameri. Omogući pristup u postavkama.";
 "photopay_close" = "Zatvori";
 "photopay_done_splash_verification_document" = "Skeniranje završeno";
 "photopay_front_splash_verification_document" = "Prednja strana";

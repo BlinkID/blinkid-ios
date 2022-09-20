@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Overlay subview presenting the effect which happens when the user taps to focus
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBTapToFocusSubview : MBSubview
 /**
  * Designated initializer 

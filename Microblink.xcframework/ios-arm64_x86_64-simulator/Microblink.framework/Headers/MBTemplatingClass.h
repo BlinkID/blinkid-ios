@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class that represents a specific class of documents when used within Templating API.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBTemplatingClass : NSObject
 
 MB_INIT

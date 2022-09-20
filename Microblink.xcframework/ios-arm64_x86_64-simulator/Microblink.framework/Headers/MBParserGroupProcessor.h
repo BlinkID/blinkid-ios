@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * A processor for a group
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBParserGroupProcessor : MBProcessor <NSCopying>
 
 MB_INIT_UNAVAILABLE

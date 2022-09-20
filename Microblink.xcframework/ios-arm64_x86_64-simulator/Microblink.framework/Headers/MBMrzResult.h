@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, MBMrtdDocumentType) {
 
 };
 
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBMrzResult : NSObject<MBAgeResult>
 
 MB_INIT_UNAVAILABLE

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 * MBRecognitionModeFilter is used to enable/disable recognition of specific document groups.
 * Setting is taken into account only if the right for that document is purchased.
 */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBRecognitionModeFilter : NSObject <NSCopying>
 
 MB_INIT

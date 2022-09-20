@@ -24,7 +24,7 @@
 "photopay_align_message" = "Helyezze a telefont a blokk / csekk fölé";
 "photopay_back_splash_verification_document" = "Hátoldal";
 "photopay_back_verification_document" = "Helyezze a dokumentum hátoldalát a keretbe, és várja meg az automatikus szkennelést.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nem rendelkezik engedéllyel a kamera használatához.\n\nKérjük, kövesse az alábbi lépéseket:\n• {font:@Medium}Beállítások{/font}\n• {font:@Medium}%@{/font}\n• Bizonyosodjon meg arról, hogy a {font:@Medium}Kamera{/font} engedélyezve van";
+"photopay_camera_permission_denied" = "%@ nem rendelkezik engedéllyel a kamera használatához.\n\nKérjük, kövesse az alábbi lépéseket:\n• Beállítások\n• %@\n• Bizonyosodjon meg arról, hogy a Kamera engedélyezve van";
 "photopay_close" = "Mégsem";
 "photopay_done_splash_verification_document" = "Dokumentum szkennelése elvégezve.";
 "photopay_front_splash_verification_document" = "Elülső oldal";

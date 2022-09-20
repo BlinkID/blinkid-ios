@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-MB_CLASS_AVAILABLE_IOS(9.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBDataMatchDetailedInfo : NSObject
 
 /**
