@@ -1,5 +1,9 @@
 # Release notes
 
+## 5.19.1
+
+- Internal bugfixes and improvements
+
 ## 5.19.0
 ​
 ### What's new in the BlinkID(Combined) Recognizer?
