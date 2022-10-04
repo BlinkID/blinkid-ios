@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Processor that will simply save given image.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBImageReturnProcessorResult : MBProcessorResult <NSCopying>
 
 MB_INIT_UNAVAILABLE

@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, MBLogLevel) {
 
 @end
 
-MB_CLASS_AVAILABLE_IOS(8.0) @interface MBLogger : NSObject
+MB_CLASS_AVAILABLE_IOS(11.0) @interface MBLogger : NSObject
 
 @property (nonatomic) id<MBLoggerDelegate> delegate;
 

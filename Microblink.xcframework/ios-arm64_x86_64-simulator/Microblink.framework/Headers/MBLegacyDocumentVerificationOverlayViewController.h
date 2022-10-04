@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, MBLegacyDocumentVerificationHighResImageState) {
 /**
  * Default overlay when using ID card combined recognizers for verification.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_CLASS_DEPRECATED("Use MBBlinkIdOverlayViewController.") MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_CLASS_DEPRECATED("Use MBBlinkIdOverlayViewController.") MB_FINAL
 @interface MBLegacyDocumentVerificationOverlayViewController : MBBaseOverlayViewController
 
 /**

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class represents the quadrangle (arbitrary geometric object with 4 different corner points
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBQuadrangle : NSObject
 
 /** Upper left point */

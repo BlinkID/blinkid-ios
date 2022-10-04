@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, MBProcessingOrientation) {
 /**
  * Object which represents an image.
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBImage : NSObject
 
 /**
