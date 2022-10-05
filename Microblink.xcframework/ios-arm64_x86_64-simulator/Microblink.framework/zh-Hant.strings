@@ -24,7 +24,7 @@
 "photopay_align_message" = "將手機擺在薪資單上方";
 "photopay_back_splash_verification_document" = "背面";
 "photopay_back_verification_document" = "將文件背面放在框線中,並等候自動掃描。";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} 沒有使用相機的權限。\n\n請前往:\n• {font:@Medium}設定{/font}\n• {font:@Medium}%@{/font}\n• 確認{font:@Medium}相機{/font}已啟用";
+"photopay_camera_permission_denied" = "%@ 沒有使用相機的權限。\n\n請前往:\n• 設定\n• %@\n• 確認相機已啟用";
 "photopay_close" = "取消";
 "photopay_done_splash_verification_document" = "文件掃描完畢";
 "photopay_front_splash_verification_document" = "正面";

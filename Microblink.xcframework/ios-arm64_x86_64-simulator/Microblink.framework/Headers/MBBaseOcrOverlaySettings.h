@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Settings class containing UI information
  */
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBBaseOcrOverlaySettings : MBBaseOverlaySettings
 
 /**

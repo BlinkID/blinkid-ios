@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * This policy is usually best for processor groups that use legacy BlinkOCR.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBFixedDewarpPolicy : MBDewarpPolicy
 
 /**

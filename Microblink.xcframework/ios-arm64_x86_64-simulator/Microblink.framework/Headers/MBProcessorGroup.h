@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Class that represents a group of processors that will be executed on same dewarped image.
  */
-MB_CLASS_AVAILABLE_IOS(8.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBProcessorGroup : NSObject
 
 MB_INIT_UNAVAILABLE

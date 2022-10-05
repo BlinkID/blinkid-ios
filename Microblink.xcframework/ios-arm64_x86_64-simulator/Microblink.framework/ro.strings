@@ -24,7 +24,7 @@
 "photopay_align_message" = "Poziționați telefonul deasupra formularului";
 "photopay_back_splash_verification_document" = "Spatele";
 "photopay_back_verification_document" = "Poziționați spatele documentului în cadru și așteptați să fie scanat automat.";
-"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nu are permisiunile necesare pentru a folosi fotocamera.\n\nMergeți la:\n• {font:@Medium}Setări{/font}\n• {font:@Medium}%@{/font}\n• Asigurați-vă că {font:@Medium}Fotocamera{/font} este activată";
+"photopay_camera_permission_denied" = "%@ nu are permisiunile necesare pentru a folosi fotocamera.\n\nMergeți la:\n• Setări\n• %@\n• Asigurați-vă că Fotocamera este activată";
 "photopay_close" = "Anulare";
 "photopay_done_splash_verification_document" = "Scanarea documentului a fost terminată";
 "photopay_front_splash_verification_document" = "Fața";

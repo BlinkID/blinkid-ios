@@ -15,25 +15,13 @@
 
 #define PP_IS_IPAD (([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad))
 
-/*
- *  System Versioning Preprocessor Macros
- */
-
-#define SYSTEM_VERSION_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define SYSTEM_VERSION_GREATER_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) \
-    ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v) \
-    ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
 #define PP_NOTIFY(notificationKey, valueKey)                                                                  \
     {                                                                                                         \
         NSDictionary *dict = [NSDictionary dictionaryWithObject:@(YES) forKey:valueKey];                      \
         [[NSNotificationCenter defaultCenter] postNotificationName:notificationKey object:nil userInfo:dict]; \
     }
 
-MB_CLASS_AVAILABLE_IOS(8.0)
+MB_CLASS_AVAILABLE_IOS(11.0)
 @interface MBMicroblinkApp : NSObject
 
 @property (nonatomic) NSString *language;

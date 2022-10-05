@@ -24,7 +24,7 @@
 "photopay_align_message" = "Coloque o telefone sobre o talão";
 "photopay_back_splash_verification_document" = "Verso";
 "photopay_back_verification_document" = "Posicione o verso do documento no interior do enquadramento e aguarde a digitalização automática.";
-"photopay_camera_permission_denied" = "A {font:@Medium}%@{/font} não tem permissão para usar a câmara.\n\nDirija-se a:\n• {font:@Medium}Definições{/font}\n• {font:@Medium}%@{/font}\nCertifique-se de que a opção da {font:@Medium}Câmara{/font} está ativada";
+"photopay_camera_permission_denied" = "A %@ não tem permissão para usar a câmara.\n\nDirija-se a:\n• Definições\n• %@\nCertifique-se de que a opção da Câmara está ativada";
 "photopay_close" = "Cancelar";
 "photopay_done_splash_verification_document" = "Digitalização de documentos concluída";
 "photopay_front_splash_verification_document" = "Frente";

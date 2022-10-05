@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-MB_CLASS_AVAILABLE_IOS(9.0) MB_FINAL
+MB_CLASS_AVAILABLE_IOS(11.0) MB_FINAL
 @interface MBProductIntegrationInfo : NSObject
 
 + (instancetype)sharedInstance NS_SWIFT_NAME(shared());
