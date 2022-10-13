@@ -23,4 +23,6 @@ if [ -d "$PATH_TO_SAMPLES" ]; then
   xcodebuild -exportArchive -archivePath $PATH_TO_SIZE_REPORT/app.xcarchive -exportPath $PATH_TO_SIZE_REPORT/app.ipa -exportOptionsPlist $PATH_TO_SIZE_REPORT/exportOptions.plist -allowProvisioningUpdates
 
   cp "$PATH_TO_SIZE_REPORT/app.ipa/App Thinning Size Report.txt" "$PATH_TO_SIZE_REPORT"
+  
+  rm -r $PATH_TO_SIZE_REPORT/app.xcarchive $PATH_TO_SIZE_REPORT/app.ipa
 fi
