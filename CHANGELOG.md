@@ -1,5 +1,9 @@
 # Release notes
 
+## 5.20.1
+
+- Fixed autofocus issues on iPhone 14 Pro and iPhone 14 Pro Max
+
 ## 5.20.0
 
 ### New feature:
