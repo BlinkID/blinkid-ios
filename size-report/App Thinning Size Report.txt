@@ -31,6 +31,6 @@ On Demand Resources size: Zero KB compressed, Zero KB uncompressed
 
 Variant: BlinkID-sample-Swift.ipa
 Supported variant descriptors: Universal
-App + On Demand Resources size: 16,7 MB compressed, 42,7 MB uncompressed
-App size: 16,7 MB compressed, 42,7 MB uncompressed
+App + On Demand Resources size: 6,8 MB compressed, 11 MB uncompressed
+App size: 6,8 MB compressed, 11 MB uncompressed
 On Demand Resources size: Zero KB compressed, Zero KB uncompressed
