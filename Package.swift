@@ -9,7 +9,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlinkID",
-            targets: ["Microblink"]),
+            targets: ["Microblink"]
+            )
     ],
     dependencies: [],
     targets: [
@@ -19,4 +20,3 @@ let package = Package(
             checksum: "7a39c387890934f64c2cc844db1582396f06c062ff886d58e32d4b40fc44ede6")
     ]
 )
-
