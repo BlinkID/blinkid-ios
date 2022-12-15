@@ -71,9 +71,7 @@ Feeling ready to get going with the integration? First, make sure we support you
 
 # <a name="requirements"></a> Requirements
 
-SDK package contains Microblink framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 11.0 or later**.
-
-SDK performs significantly better when the images obtained from the camera are focused. Because of that, the SDK can have lower performance on iPad 2 and iPod Touch 4th gen devices, which [don't have camera with autofocus](http://www.adweek.com/socialtimes/ipad-2-rear-camera-has-tap-for-auto-exposure-not-auto-focus/12536). 
+SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**. 
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with BlinkID SDK
@@ -88,7 +86,7 @@ The source code of the sample app can be used as the reference during the integr
 
 #### Using CocoaPods
 
-- Download and install/update [Cocopods version 1.10.0](https://github.com/CocoaPods/CocoaPods/releases/tag/1.10.0) or newer
+- Download and install/update [Cocopods version 1.11.3](https://github.com/CocoaPods/CocoaPods/releases/tag/1.11.3) or newer
 - Since the libraries are stored on [Git Large File Storage](https://git-lfs.github.com), you need to install git-lfs by running these commands:
 ```shell
 brew install git-lfs
@@ -107,9 +105,9 @@ pod init
 - Copy and paste the following lines into the TextEdit window:
 
 ```ruby
-platform :ios, '11.0'
+platform :ios, '13.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 5.20.1'
+    pod 'PPBlinkID', '~> 6.0.0'
 end
 ```
 
@@ -129,11 +127,11 @@ open <YourProjectName>.xcworkspace
 
 #### Using Carthage
 
-Microblink SDK is available via [Carthage](https://github.com/Carthage/Carthage). Please check out [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md) if you are new to Carthage.
+BlinkID SDK is available via [Carthage](https://github.com/Carthage/Carthage). Please check out [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md) if you are new to Carthage.
 
 - Install Carthage. Check out [Installing Carthage guide](https://github.com/Carthage/Carthage#installing-carthage). Please make sure you have Carthage version >= 0.35.0 installed.
 - Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is.
-- Add Microblink as a dependency to this Cartfile:
+- Add BlinkID as a dependency to this Cartfile:
 
 ```shell
 binary "https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"
@@ -146,19 +144,19 @@ binary "https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"
 
 #### Using Swift Package Manager
 
-Microblink SDK is available as [Swift Package](https://swift.org/package-manager/). Please check out [Swift Package Manager documentation](https://github.com/apple/swift-package-manager) if you are new to Swift Package Manager.
+BlinkID SDK is available as [Swift Package](https://swift.org/package-manager/). Please check out [Swift Package Manager documentation](https://github.com/apple/swift-package-manager) if you are new to Swift Package Manager.
 
 We provide a URL to the public package repository that you can add in Xcode:
 
 ```shell
-https://github.com/BlinkID/blinkid-swift-package
+https://github.com/BlinkID/blinkid-ios
 ```
 
-1. Select your project’s Swift Packages tab:
-![Swift Package Project](https://user-images.githubusercontent.com/26868155/99409747-fe15c100-28f1-11eb-879e-57fed8bff5e6.png)
+1. Select your project’s Package Dependencies tab:
+![Swift Package Project](https://user-images.githubusercontent.com/1635933/207304597-76c83b08-1e9e-4131-aecd-2c1b1e8204bb.png)
 
 2. Add the BlinkID Swift package repository URL:
-![Swift Package Repo](https://user-images.githubusercontent.com/26868155/101786723-8b69c100-3afe-11eb-946d-9202c4817e66.png)
+![Swift Package Repo](https://user-images.githubusercontent.com/1635933/207304992-118eb25f-c46e-453f-b6fb-112f77357d4e.png)
 
 3. Choose Swift package version
 
@@ -198,15 +196,15 @@ git lfs install
 git clone git@github.com:BlinkID/blinkid-ios.git
 ```
 
-- Copy Microblink.xcframework to your project folder.
+- Copy BlinkID.xcframework to your project folder.
 
-- In your Xcode project, open the Project navigator. Drag the Microblink.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
+- In your Xcode project, open the Project navigator. Drag the BlinkID.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
 
-![Adding Microblink.xcframework to your project](https://user-images.githubusercontent.com/1635933/89505694-535a1680-d7ca-11ea-8c65-678f158acae9.png)
+![Adding BlinkID.xcframework to your project](https://user-images.githubusercontent.com/1635933/207306198-2b4cbd1f-ead3-44d1-89a2-0a34ac659b17.png)
 
-- Since Microblink.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
+- Since BlinkID.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
 
-![Adding Microblink.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/89793425-238e7400-db26-11ea-9556-6eedeb6dcc95.png)
+![Adding BlinkID.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/207307980-bbebe5a4-9ece-4ef6-a767-106468c47a84.png)
 
 - Include the additional frameworks and libraries into your project in the "Linked frameworks and libraries" section of your target settings.
 
@@ -214,7 +212,7 @@ git clone git@github.com:BlinkID/blinkid-ios.git
     - libiconv.tbd
     - libz.tbd
 
-![Adding Apple frameworks to your project](https://user-images.githubusercontent.com/26868155/65599813-f7feab80-df9e-11e9-9612-e285641b272c.png)
+![Adding Apple frameworks to your project](https://user-images.githubusercontent.com/1635933/207308158-d897a67c-40c1-43bb-928c-082fabb83e26.png)
 
 ### 2. Referencing header file
 
@@ -223,13 +221,13 @@ In files in which you want to use scanning functionality place import directive.
 Swift
 
 ```swift
-import Microblink
+import BlinkID
 ```
 
 Objective-C
 
 ```objective-c
-#import <Microblink/Microblink.h>
+#import <BlinkID/BlinkID.h>
 ```
 
 ### 3. Initiating the scanning process
@@ -241,7 +239,7 @@ Swift
 ```swift
 class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  {
 
-    var blinkIdRecognizer : MBBlinkIdRecognizer?
+    var blinkIdMultiSideRecognizer : MBBlinkIdMultiSideRecognizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -252,13 +250,13 @@ class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  
     @IBAction func didTapScan(_ sender: AnyObject) {
 
         /** Create BlinkID recognizer */
-        self.blinkIdRecognizer = MBBlinkIdRecognizer()
+        self.blinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
 
         /** Create BlinkID settings */
         let settings : MBBlinkIdOverlaySettings = MBBlinkIdOverlaySettings()
 
         /** Crate recognizer collection */
-        let recognizerList = [self.blinkIdRecognizer!]
+        let recognizerList = [self.blinkIdMultiSideRecognizer!]
         let recognizerCollection : MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
 
         /** Create your overlay view controller */
@@ -278,7 +276,7 @@ Objective-C
 ```objective-c
 @interface ViewController () <MBBlinkIdOverlayViewControllerDelegate>
 
-@property (nonatomic, strong) MBBlinkIdRecognizer *blinkIdRecognizer;
+@property (nonatomic, strong) MBBlinkIdMultiSideRecognizer *blinkIdMultiSideRecognizer;
 
 @end
 
@@ -294,13 +292,13 @@ Objective-C
 - (IBAction)didTapScan:(id)sender {
 
     /** Create BlinkID recognizer */
-    self.blinkIdRecognizer = [[MBBlinkIdRecognizer alloc] init];
+    self.blinkIdMultiSideRecognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
 
      /** Create BlinkID settings */
     MBBlinkIdOverlaySettings* settings = [[MBBlinkIdOverlaySettings alloc] init];
 
     /** Create recognizer collection */
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.blinkIdRecognizer]];
+    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.blinkIdMultiSideRecognizer]];
 
     /** Create your overlay view controller */
     MBBlinkIdOverlayViewController *blinkIdOverlayViewController = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
@@ -419,12 +417,12 @@ This section covers more advanced details of BlinkID integration.
 Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. 
 ### <a name="using-blinkid-overlay-viewcontroller"></a> Using `MBBlinkIdOverlayViewController`
 
-[`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
+[`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdSingleSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
 * clear indication for searching phase, when BlinkID is searching for an ID document
 * clear progress indication, when BlinkID is busy with OCR and data extraction
 * clear message when the document is not supported
 * visual indications when the user needs to place the document closer to the camera
-* when [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
+* when [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
 
 The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher.
 To force the UI in landscape mode, use the following instructions:
@@ -583,7 +581,7 @@ Swift
 ```swift
 func setupRecognizerRunner() {
     var recognizers = [MBRecognizer]()
-    recognizer = MBBlinkIdCombinedRecognizer()
+    recognizer = MBBlinkIdMultiSideRecognizer()
     recognizers.append(recognizer!)
     let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
     recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
@@ -615,7 +613,7 @@ Objective-C
 - (void)setupRecognizerRunner {
     NSMutableArray<MBRecognizer *> *recognizers = [[NSMutableArray alloc] init];
 
-    self.recognizer = [[MBBlinkIdCombinedRecognizer alloc] init];
+    self.recognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
 
     [recognizers addObject: self.recognizer];
 
@@ -756,12 +754,12 @@ The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MB
 You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
 
 ### <a name="blink-id-recognizers"></a> BlinkID Recognizer
-The [`MBBlinkIdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
+The [`MBBlinkIdSingleSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
 You can find the list of the currently supported documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
 
 ### <a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer
-Use [`MBBlinkIdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdCombinedRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
+Use [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
 You can find the list of the currently supported documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
 We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
 
@@ -774,7 +772,7 @@ If you would like us to support additional languages or report incorrect transla
 If you want to add additional languages yourself or change existing translations, you need to set `customLocalizationFileName` property on [`MBMicroblinkApp`](http://blinkid.github.io/blinkid-ios/Classes/MBMicroblinkApp.html) object to your strings file name.
 
 For example, let's say that we want to change text "Scan the front side of a document" to "Scan the front side" in BlinkID sample project. This would be the steps:
-* Find the translation key in en.strings file inside Microblink.framework
+* Find the translation key in en.strings file inside BlinkID.framework
 * Add a new file MyTranslations.strings to the project by using "Strings File" template
 * With MyTranslations.string open, in File inspector tap "Localize..." button and select English
 * Add the translation key "blinkid_generic_message" and the value "Scan the front side" to MyTranslations.strings
@@ -839,7 +837,7 @@ This usually happens when using [`MBRecognizerRunnerViewController`](http://blin
 
 #### Unsupported architectures when submitting app to App Store
 
-Microblink.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures.
+BlinkID.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures.
 
 Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.
 

@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.20.1 Docs
+          PPBlinkID v6.0.0 Docs
         </a>
-         (82% documented)
+         (81% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -54,6 +54,9 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAdditionalProcessingInfo.html">MBAdditionalProcessingInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
               <li class="nav-group-task">
@@ -63,10 +66,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizer.html">MBBlinkIdCombinedRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizer.html">MBBlinkIdMultiSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizerResult.html">MBBlinkIdCombinedRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizerResult.html">MBBlinkIdMultiSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlaySettings.html">MBBlinkIdOverlaySettings</a>
@@ -75,10 +78,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizer.html">MBBlinkIdRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizer.html">MBBlinkIdSingleSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizerResult.html">MBBlinkIdRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizerResult.html">MBBlinkIdSingleSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCameraReticle.html">MBCameraReticle</a>
@@ -91,6 +94,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDPIBasedDewarpPolicy.html">MBDPIBasedDewarpPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDate.html">MBDate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDateResult.html">MBDateResult</a>
@@ -255,6 +261,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)MBRecognizerRunnerViewControllerMetadataDelegates">MBRecognizerRunnerViewControllerMetadataDelegates</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBStringResult.html">MBStringResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBSubview.html">MBSubview</a>
               </li>
               <li class="nav-group-task">
@@ -323,7 +332,7 @@
                 <a class="nav-group-task-link" href="../Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/MBDataMatchResult.html">MBDataMatchResult</a>
+                <a class="nav-group-task-link" href="../Enums/MBDataMatchState.html">MBDataMatchState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDetectionStatus.html">MBDetectionStatus</a>
@@ -490,7 +499,7 @@
             <p>Settings class containing parameters for BlinkId UI</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L16-L151">Show on GitHub</a>
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L16-L169">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -512,7 +521,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If YES, MBBlinkIdCombinedRecognizer will check if sides do match when scanning is finished</p>
+                        <p>If YES, MBBlinkIdMultiSideRecognizer will check if sides do match when scanning is finished</p>
 
 <p>Default: YES</p>
 
@@ -531,7 +540,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L23">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -568,7 +577,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L30">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -605,7 +614,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -642,7 +651,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -678,7 +687,7 @@ Default: Scan the front side of a document</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -714,7 +723,7 @@ Default: Scan the barcode</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -751,7 +760,7 @@ Default: Flip the card</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L63">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -787,7 +796,7 @@ Default: Move closer</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L69">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -823,7 +832,7 @@ Default: Move farther</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -859,7 +868,7 @@ Default: Move the document from the edge</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L81">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -895,7 +904,7 @@ Default: Sides don&rsquo;t match</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -931,7 +940,7 @@ Default: Please start the scanning process over.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L93">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -967,7 +976,7 @@ Default: Something went wrong</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L99">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1003,7 +1012,7 @@ Default: It appears the information on the document is inconsistent. Please try 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L105">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1039,7 +1048,7 @@ Default: Document not recognized</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L111">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1075,7 +1084,7 @@ Default: Scan the front side of a supported document.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L117">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1111,7 +1120,7 @@ Default: Scan unsuccessful</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L123">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1147,7 +1156,7 @@ Default: Unable to read the document. Please try again.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L129">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L129">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,7 +1193,7 @@ Default: Retry</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L136">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L136">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1220,7 +1229,115 @@ Default: Keep the document fully visible</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L142">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L142">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdOverlaySettings(py)onboardingButtonTooltipDelay"></a>
+                    <a name="//apple_ref/objc/Property/onboardingButtonTooltipDelay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdOverlaySettings(py)onboardingButtonTooltipDelay">onboardingButtonTooltipDelay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Option to configure when the onboarding help tooltip will appear.
+Default: 8.0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">onboardingButtonTooltipDelay</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">onboardingButtonTooltipDelay</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L148">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdOverlaySettings(py)showOnboardingInfo"></a>
+                    <a name="//apple_ref/objc/Property/showOnboardingInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdOverlaySettings(py)showOnboardingInfo">showOnboardingInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines whether button for presenting onboarding screens will be present on screen.
+Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showOnboardingInfo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">showOnboardingInfo</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdOverlaySettings(py)showIntroductionDialog"></a>
+                    <a name="//apple_ref/objc/Property/showIntroductionDialog" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdOverlaySettings(py)showIntroductionDialog">showIntroductionDialog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines whether tutorial alert will be presented on appear.
+Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showIntroductionDialog</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">showIntroductionDialog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L160">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1259,7 +1376,7 @@ Default: Keep the document fully visible</p>
                         <p>object initialized with default values.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlaySettings.h#L149">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlaySettings.h#L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1272,7 +1389,7 @@ Default: Keep the document fully visible</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-11-08)</p>
+      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-12-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

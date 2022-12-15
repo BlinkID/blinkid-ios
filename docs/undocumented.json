@@ -1,1576 +1,1695 @@
 {
   "warnings": [
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBAgeLimitStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBAgeLimitStatus.h",
       "line": 11,
       "symbol": "MBAgeLimitStatus",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBAgeLimitStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBAgeLimitStatus.h",
       "line": 11,
       "symbol": "MBAgeLimitStatus",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBAgeResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBAgeResult.h",
       "line": 13,
       "symbol": "MBAgeResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBarcodeElements.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBarcodeDriverLicenseDetailedInfo.h",
+      "line": 24,
+      "symbol": "MBBarcodeDriverLicenseDetailedInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBarcodeElements.h",
       "line": 18,
       "symbol": "MBBarcodeElements",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBarcodeResult.h",
-      "line": 18,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBarcodeResult.h",
+      "line": 19,
       "symbol": "MBBarcodeResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBarcodeType.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBarcodeType.h",
       "line": 12,
       "symbol": "MBBarcodeType.MBBarcodeNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBarcodeVehicleClassInfo.h",
+      "line": 21,
+      "symbol": "MBBarcodeVehicleClassInfo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBgraImage.h",
+      "line": 18,
+      "symbol": "MBBgraImage",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
       "line": 38,
-      "symbol": "MBBlinkIdCombinedRecognizer.-init",
+      "symbol": "MBBlinkIdMultiSideRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizer.h",
-      "line": 151,
-      "symbol": "MBBlinkIdCombinedRecognizerDelegate",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
+      "line": 136,
+      "symbol": "MBBlinkIdMultiSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdCombinedRecognizerResult.h",
-      "line": 41,
-      "symbol": "MBBlinkIdCombinedRecognizerResult.-init",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizerResult.h",
+      "line": 44,
+      "symbol": "MBBlinkIdMultiSideRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdOverlayTheme.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizerResult.h",
+      "line": 279,
+      "symbol": "MBBlinkIdMultiSideRecognizerResult.version",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdOverlayTheme.h",
       "line": 14,
       "symbol": "MBBlinkIdOverlayTheme",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizer.h",
       "line": 36,
-      "symbol": "MBBlinkIdRecognizer.-init",
+      "symbol": "MBBlinkIdSingleSideRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizer.h",
-      "line": 127,
-      "symbol": "MBBlinkIdRecognizerDelegate",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizer.h",
+      "line": 112,
+      "symbol": "MBBlinkIdSingleSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBBlinkIdRecognizerResult.h",
-      "line": 38,
-      "symbol": "MBBlinkIdRecognizerResult.-init",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizerResult.h",
+      "line": 41,
+      "symbol": "MBBlinkIdSingleSideRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCameraFrames.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCameraFrames.h",
       "line": 11,
       "symbol": "MBCameraFrames",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfo.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfo.h",
       "line": 15,
       "symbol": "MBClassInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 11,
       "symbol": "MBCountry",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 11,
       "symbol": "MBCountry",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 269,
       "symbol": "MBRegion",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 269,
       "symbol": "MBRegion",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 391,
       "symbol": "MBType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBClassInfoTypes.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBClassInfoTypes.h",
       "line": 391,
       "symbol": "MBType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCombinedFullDocumentImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCombinedFullDocumentImageResult.h",
       "line": 13,
       "symbol": "MBCombinedFullDocumentImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCombinedRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCombinedRecognizer.h",
       "line": 14,
       "symbol": "MBCombinedRecognizer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCombinedRecognizerResult.h",
-      "line": 23,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCombinedRecognizerResult.h",
+      "line": 13,
       "symbol": "MBCombinedRecognizerResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 28,
       "symbol": "MBCustomOverlayViewController.recognizerCollection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 29,
       "symbol": "MBCustomOverlayViewController.cameraSettings",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 30,
       "symbol": "MBCustomOverlayViewController.metadataDelegates",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 31,
       "symbol": "MBCustomOverlayViewController.scanningRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 32,
       "symbol": "MBCustomOverlayViewController.recognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBCustomOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBCustomOverlayViewController.h",
       "line": 41,
       "symbol": "MBCustomOverlayViewController.-initWithRecognizerCollection:cameraSettings:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDataMatchDetailedInfo.h",
-      "line": 15,
-      "symbol": "MBDataMatchDetailedInfo",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDataMatchResult.h",
+      "line": 18,
+      "symbol": "MBDataMatchField",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDataMatchResult.h",
+      "line": 18,
+      "symbol": "MBDataMatchField",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDataMatchResult.h",
+      "line": 27,
+      "symbol": "MBFieldState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDateResult.h",
-      "line": 23,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDataMatchResult.h",
+      "line": 39,
+      "symbol": "MBDataMatchResult",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDate.h",
+      "line": 27,
+      "symbol": "MBDate.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDateResult.h",
+      "line": 31,
       "symbol": "MBDateResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDewarpPolicy.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDewarpPolicy.h",
       "line": 19,
       "symbol": "MBDewarpPolicy.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentExpirationCheckResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentExpirationCheckResult.h",
       "line": 11,
       "symbol": "MBDocumentExpirationCheckResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentFaceRecognizer.h",
       "line": 29,
       "symbol": "MBDocumentFaceRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentFaceRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentFaceRecognizerResult.h",
       "line": 22,
       "symbol": "MBDocumentFaceRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentImageColorStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentImageColorStatus.h",
       "line": 17,
       "symbol": "MBDocumentImageColorStatus.MBDocumentImageColorStatusNotAvailable",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentImageColorStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentImageColorStatus.h",
       "line": 20,
       "symbol": "MBDocumentImageColorStatus.MBDocumentImageColorStatusBlackAndWhite",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDocumentImageColorStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDocumentImageColorStatus.h",
       "line": 23,
       "symbol": "MBDocumentImageColorStatus.MBDocumentImageColorStatusColor",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDotsSubview.h",
       "line": 23,
       "symbol": "MBDotsSubview.dotsLayer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDotsSubview.h",
       "line": 42,
       "symbol": "MBDotsSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDotsSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDotsSubview.h",
       "line": 44,
       "symbol": "MBDotsSubview.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBDriverLicenseDetailedInfo.h",
-      "line": 16,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBDriverLicenseDetailedInfo.h",
+      "line": 24,
       "symbol": "MBDriverLicenseDetailedInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodeFaceImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodeFaceImage.h",
       "line": 11,
       "symbol": "MBEncodeFaceImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodeFullDocumentImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodeFullDocumentImage.h",
       "line": 11,
       "symbol": "MBEncodeFullDocumentImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodeMrzImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodeMrzImage.h",
       "line": 11,
       "symbol": "MBEncodeMrzImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodeSignatureImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodeSignatureImage.h",
       "line": 11,
       "symbol": "MBEncodeSignatureImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodedCombinedFullDocumentImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodedCombinedFullDocumentImageResult.h",
       "line": 11,
       "symbol": "MBEncodedCombinedFullDocumentImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodedFaceImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodedFaceImageResult.h",
       "line": 11,
       "symbol": "MBEncodedFaceImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodedFullDocumentImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodedFullDocumentImageResult.h",
       "line": 11,
       "symbol": "MBEncodedFullDocumentImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodedMrzImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodedMrzImageResult.h",
       "line": 11,
       "symbol": "MBEncodedMrzImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBEncodedSignatureImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBEncodedSignatureImageResult.h",
       "line": 11,
       "symbol": "MBEncodedSignatureImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBErrorReticle.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBErrorReticle.h",
       "line": 19,
       "symbol": "MBErrorReticle.errorColor",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 11,
       "symbol": "MBExceptionName",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 13,
       "symbol": "MBIllegalModificationException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 14,
       "symbol": "MBInvalidLicenseKeyException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 15,
       "symbol": "MBInvalidLicenseeKeyException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 16,
       "symbol": "MBInvalidLicenseResourceException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 17,
       "symbol": "MBInvalidBundleException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 18,
       "symbol": "MBMissingSettingsException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBException.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBException.h",
       "line": 19,
       "symbol": "MBInvalidArgumentException",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFaceImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFaceImage.h",
       "line": 11,
       "symbol": "MBFaceImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFaceImageDpi.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFaceImageDpi.h",
       "line": 11,
       "symbol": "MBFaceImageDpi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFaceImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFaceImageResult.h",
       "line": 13,
       "symbol": "MBFaceImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFirstSideFinishedRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFieldType.h",
+      "line": 11,
+      "symbol": "MBFieldType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFieldType.h",
+      "line": 11,
+      "symbol": "MBFieldType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFirstSideFinishedRecognizerRunnerDelegate.h",
       "line": 13,
       "symbol": "MBFirstSideFinishedRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFirstSideFinishedRecognizerRunnerViewControllerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFirstSideFinishedRecognizerRunnerViewControllerDelegate.h",
       "line": 15,
       "symbol": "MBFirstSideFinishedRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 24,
       "symbol": "MBFrameGrabberRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 25,
       "symbol": "MBFrameGrabberRecognizer.-initWithFrameGrabberDelegate:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFrameGrabberRecognizer.h",
       "line": 43,
       "symbol": "MBFrameGrabberRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFullDocumentImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFullDocumentImage.h",
       "line": 11,
       "symbol": "MBFullDocumentImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFullDocumentImageDpi.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFullDocumentImageDpi.h",
       "line": 8,
       "symbol": "MBFullDocumentImageDpi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFullDocumentImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFullDocumentImageExtensionFactors.h",
       "line": 10,
       "symbol": "MBFullDocumentImageExtensionFactors",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBFullDocumentImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBFullDocumentImageResult.h",
       "line": 13,
       "symbol": "MBFullDocumentImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 27,
       "symbol": "CGDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 30,
       "symbol": "",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 30,
       "symbol": "CGLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 38,
       "symbol": "CGDeltaMake",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 41,
       "symbol": "CGPointWithDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 44,
       "symbol": "CGPointDistance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 47,
       "symbol": "CGPointAlongLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 50,
       "symbol": "CGPointRotatedAroundPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 55,
       "symbol": "CGLineMake",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 58,
       "symbol": "CGLineEqualToLine",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 61,
       "symbol": "CGLineMidPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 64,
       "symbol": "CGLineDirection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 67,
       "symbol": "CGLinesAngle",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 70,
       "symbol": "CGLinesIntersectAtPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 73,
       "symbol": "CGLineLength",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 76,
       "symbol": "CGLineScale",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 79,
       "symbol": "CGLineTranslate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 82,
       "symbol": "CGLineScaleOnMidPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 85,
       "symbol": "CGLineDelta",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 88,
       "symbol": "CGLinesAreParallel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 93,
       "symbol": "CGRectTopLeftPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 94,
       "symbol": "CGRectTopRightPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 95,
       "symbol": "CGRectBottomLeftPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 96,
       "symbol": "CGRectBottomRightPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 99,
       "symbol": "CGRectResize",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 102,
       "symbol": "CGRectInsetEdge",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 113,
       "symbol": "CGRectCenterPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 116,
       "symbol": "CGRectClosestTwoCornerPoints",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 120,
       "symbol": "CGLineIntersectsRectAtPoint",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 123,
       "symbol": "CGTransformedPointToDestination",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 131,
       "symbol": "CGControlPointsForArcBetweenPointsWithRadius",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGeometry.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGeometry.h",
       "line": 137,
       "symbol": "MBscanningRegionForFrameInBounds",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareDetection.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareDetection.h",
       "line": 11,
       "symbol": "MBGlareDetection",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareRecognizerRunnerDelegate.h",
       "line": 13,
       "symbol": "MBGlareRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareRecognizerRunnerViewControllerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareRecognizerRunnerViewControllerDelegate.h",
       "line": 15,
       "symbol": "MBGlareRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareStatusSubview.h",
       "line": 20,
       "symbol": "MBGlareStatusSubview.label",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareStatusSubview.h",
       "line": 22,
       "symbol": "MBGlareStatusSubview.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareStatusSubview.h",
       "line": 24,
       "symbol": "MBGlareStatusSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareStatusSubview.h",
       "line": 26,
       "symbol": "MBGlareStatusSubview.-initWithFrame:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBGlareStatusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBGlareStatusSubview.h",
       "line": 28,
       "symbol": "MBGlareStatusSubview.-glareDetectionFinishedWithResult:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBIdBarcodeDocumentType.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBIdBarcodeDocumentType.h",
       "line": 12,
       "symbol": "MBIdBarcodeDocumentType.MBIdBarcodeDocumentTypeNone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBIdBarcodeRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBIdBarcodeRecognizer.h",
       "line": 19,
       "symbol": "MBIdBarcodeRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBIdBarcodeRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBIdBarcodeRecognizerResult.h",
       "line": 25,
       "symbol": "MBIdBarcodeRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageAnalysisDetectionStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisDetectionStatus.h",
       "line": 17,
       "symbol": "MBImageAnalysisDetectionStatus.MBImageAnalysisDetectionStatusNotAvailable",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageAnalysisDetectionStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisDetectionStatus.h",
       "line": 20,
       "symbol": "MBImageAnalysisDetectionStatus.MBImageAnalysisDetectionStatusNotDetected",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageAnalysisDetectionStatus.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisDetectionStatus.h",
       "line": 23,
       "symbol": "MBImageAnalysisDetectionStatus.MBImageAnalysisDetectionStatusDetected",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageAnalysisResult.h",
-      "line": 16,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisResult.h",
+      "line": 15,
+      "symbol": "MBCardOrientation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisResult.h",
+      "line": 15,
+      "symbol": "MBCardOrientation",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageAnalysisResult.h",
+      "line": 21,
       "symbol": "MBImageAnalysisResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 16,
       "symbol": "MBImageExtensionFactors.MBImageExtensionFactors.top",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 16,
       "symbol": "MBImageExtensionFactors.top",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 17,
       "symbol": "MBImageExtensionFactors.MBImageExtensionFactors.right",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 17,
       "symbol": "MBImageExtensionFactors.right",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 18,
       "symbol": "MBImageExtensionFactors.MBImageExtensionFactors.bottom",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 18,
       "symbol": "MBImageExtensionFactors.bottom",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 19,
       "symbol": "MBImageExtensionFactors.MBImageExtensionFactors.left",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageExtensionFactors.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtensionFactors.h",
       "line": 19,
       "symbol": "MBImageExtensionFactors.left",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageProcessingRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageProcessingRecognizerRunnerDelegate.h",
       "line": 11,
       "symbol": "MBImageProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageReturnProcessor.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageReturnProcessor.h",
       "line": 22,
       "symbol": "MBImageReturnProcessor.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBImageReturnProcessorResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageReturnProcessorResult.h",
       "line": 22,
       "symbol": "MBImageReturnProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLegacyDocumentVerificationInstructionsSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLegacyDocumentVerificationInstructionsSubview.h",
       "line": 13,
       "symbol": "MBLegacyDocumentVerificationInstructionsSubview",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLegacyDocumentVerificationOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLegacyDocumentVerificationOverlayViewController.h",
       "line": 18,
       "symbol": "MBLegacyDocumentVerificationHighResImageState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLegacyDocumentVerificationOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLegacyDocumentVerificationOverlayViewController.h",
       "line": 18,
       "symbol": "MBLegacyDocumentVerificationHighResImageState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLegacyDocumentVerificationSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLegacyDocumentVerificationSubview.h",
       "line": 15,
       "symbol": "MBLegacyDocumentVerificationSubview",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLegacyDocumentVerificationSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLegacyDocumentVerificationSubview.h",
       "line": 27,
       "symbol": "MBLegacyDocumentVerificationSubviewDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLicenseError.h",
       "line": 13,
       "symbol": "MBLicenseErrorNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLicenseError.h",
       "line": 15,
       "symbol": "MBLicenseError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLicenseError.h",
       "line": 15,
       "symbol": "MBLicenseError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLicenseError.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLicenseError.h",
       "line": 27,
       "symbol": "MBLicenseErrorBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLogger.h",
       "line": 13,
       "symbol": "MBLogLevel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLogger.h",
       "line": 13,
       "symbol": "MBLogLevel",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLogger.h",
       "line": 21,
       "symbol": "MBLoggerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBLogger.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBLogger.h",
       "line": 30,
       "symbol": "MBLogger",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkApp.h",
       "line": 25,
       "symbol": "MBMicroblinkApp",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkApp.h",
       "line": 75,
       "symbol": "MB_LOCALIZED_DEFAULT_STRING",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkApp.h",
       "line": 79,
       "symbol": "MB_LOCALIZED_FOR_LANGUAGE",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkApp.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkApp.h",
       "line": 97,
       "symbol": "MB_LOCALIZED",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.function",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkDefines.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkDefines.h",
       "line": 34,
       "symbol": "MBBlock",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMicroblinkSDK.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMicroblinkSDK.h",
       "line": 21,
       "symbol": "MBMicroblinkSDK.+sharedInstance",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdCombinedRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdCombinedRecognizer.h",
       "line": 40,
       "symbol": "MBMrtdCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdCombinedRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdCombinedRecognizer.h",
       "line": 94,
       "symbol": "MBMrzCombinedFilter",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdCombinedRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdCombinedRecognizerResult.h",
       "line": 33,
       "symbol": "MBMrtdCombinedRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdRecognizer.h",
       "line": 37,
       "symbol": "MBMrtdRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdRecognizer.h",
       "line": 87,
       "symbol": "MBMrzFilter",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdRecognizerResult.h",
       "line": 28,
       "symbol": "MBMrtdRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrtdSpecification.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrtdSpecification.h",
       "line": 34,
       "symbol": "MBMrtdSpecification.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrzImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrzImage.h",
       "line": 11,
       "symbol": "MBMrzImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrzImageDpi.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrzImageDpi.h",
       "line": 11,
       "symbol": "MBMrzImageDpi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrzImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrzImageResult.h",
       "line": 13,
       "symbol": "MBMrzImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrzResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrzResult.h",
       "line": 21,
       "symbol": "MBMrtdDocumentType.MBMrtdTypeUnknown",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBMrzResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBMrzResult.h",
       "line": 50,
       "symbol": "MBMrzResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBNativeResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBNativeResult.h",
       "line": 14,
       "symbol": "MBNativeResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBOcrLayout.h",
       "line": 74,
       "symbol": "MBOcrLayout.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBOcrLayout.h",
       "line": 192,
       "symbol": "MBCharWithVariants",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBOcrLayout.h",
       "line": 260,
       "symbol": "MBOcrChar.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBOcrLayout.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBOcrLayout.h",
       "line": 302,
       "symbol": "MBPosition.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBOverlayViewController.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBOverlayViewController.h",
       "line": 33,
       "symbol": "MBOverlayViewController.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessor.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBParserGroupProcessor.h",
       "line": 24,
       "symbol": "MBParserGroupProcessor.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessor.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBParserGroupProcessor.h",
       "line": 26,
       "symbol": "MBParserGroupProcessor.-initWithParsers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessorResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBParserGroupProcessorResult.h",
       "line": 21,
       "symbol": "MBParserGroupProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBParserGroupProcessorResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBParserGroupProcessorResult.h",
       "line": 23,
       "symbol": "MBParserGroupProcessorResult.ocrLayout",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBPassportRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBPassportRecognizer.h",
       "line": 28,
       "symbol": "MBPassportRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBPassportRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBPassportRecognizerResult.h",
       "line": 24,
       "symbol": "MBPassportRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBProcessorGroup.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBProcessorGroup.h",
       "line": 24,
       "symbol": "MBProcessorGroup.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBProcessorResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBProcessorResult.h",
       "line": 41,
       "symbol": "MBProcessorResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBProcessorResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBProcessorResult.h",
       "line": 43,
       "symbol": "MBProcessorResult.resultState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBProductIntegrationInfo.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBProductIntegrationInfo.h",
       "line": 17,
       "symbol": "MBProductIntegrationInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognitionModeFilter.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognitionModeFilter.h",
       "line": 20,
       "symbol": "MBRecognitionModeFilter.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizer.h",
       "line": 29,
       "symbol": "MBRecognizer.-getOptimalHudOrientation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerCollection.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerCollection.h",
       "line": 51,
       "symbol": "MBRecognizerCollection.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerCollection.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerCollection.h",
       "line": 53,
       "symbol": "MBRecognizerCollection.-initWithRecognizers:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerResult.h",
       "line": 46,
       "symbol": "MBRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerResult.h",
       "line": 48,
       "symbol": "MBRecognizerResult.resultState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerResult.h",
       "line": 49,
       "symbol": "MBRecognizerResult.resultStateString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 29,
       "symbol": "MBRecognizerRunner.metadataDelegates",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 30,
       "symbol": "MBRecognizerRunner.scanningRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 31,
       "symbol": "MBRecognizerRunner.imageProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 32,
       "symbol": "MBRecognizerRunner.stringProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 34,
       "symbol": "MBRecognizerRunner.coordinator",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 36,
       "symbol": "MBRecognizerRunner.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 41,
       "symbol": "MBRecognizerRunner.-resetState",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunner.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunner.h",
       "line": 43,
       "symbol": "MBRecognizerRunner.-resetState:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 22,
       "symbol": "MBRecognizerRunnerMetadataDelegates.debugRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 23,
       "symbol": "MBRecognizerRunnerMetadataDelegates.detectionRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 24,
       "symbol": "MBRecognizerRunnerMetadataDelegates.ocrRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 25,
       "symbol": "MBRecognizerRunnerMetadataDelegates.glareRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerMetadataDelegates.h",
       "line": 26,
       "symbol": "MBRecognizerRunnerMetadataDelegates.firstSideFinishedRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 22,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.debugRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 23,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.detectionRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 24,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.ocrRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 25,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.glareRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBRecognizerRunnerViewControllerMetadataDelegates.h",
       "line": 26,
       "symbol": "MBRecognizerRunnerViewControllerMetadataDelegates.firstSideFinishedRecognizerRunnerViewControllerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignatureImage.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSignatureImage.h",
       "line": 11,
       "symbol": "MBSignatureImage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignatureImageDpi.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSignatureImageDpi.h",
       "line": 11,
       "symbol": "MBSignatureImageDpi",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignatureImageResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSignatureImageResult.h",
       "line": 13,
       "symbol": "MBSignatureImageResult",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSignedPayload.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSignedPayload.h",
       "line": 16,
       "symbol": "MBSignedPayload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringProcessingRecognizerRunnerDelegate.h",
       "line": 10,
       "symbol": "MBStringProcessingRecognizerRunnerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h",
+      "line": 18,
+      "symbol": "MBAlphabetType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h",
+      "line": 18,
+      "symbol": "MBAlphabetType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h",
+      "line": 40,
+      "symbol": "MBStringResult.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
       "line": 21,
       "symbol": "MBSuccessFrameGrabberRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSuccessFrameGrabberRecognizer.h",
       "line": 22,
       "symbol": "MBSuccessFrameGrabberRecognizer.-initWithRecognizer:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBSuccessFrameGrabberRecognizerResult.h",
       "line": 23,
       "symbol": "MBSuccessFrameGrabberRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTapToFocusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTapToFocusSubview.h",
       "line": 25,
       "symbol": "MBTapToFocusSubview.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTapToFocusSubview.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTapToFocusSubview.h",
       "line": 27,
       "symbol": "MBTapToFocusSubview.-willFocusAtPoint:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTemplatingClass.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTemplatingClass.h",
       "line": 24,
       "symbol": "MBTemplatingClass.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTemplatingClass.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTemplatingClass.h",
       "line": 60,
       "symbol": "MBTemplatingClassifier",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTemplatingRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTemplatingRecognizer.h",
       "line": 24,
       "symbol": "MBTemplatingRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBTemplatingRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBTemplatingRecognizerResult.h",
       "line": 23,
       "symbol": "MBTemplatingRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBUsdlCombinedRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBUsdlCombinedRecognizer.h",
       "line": 84,
       "symbol": "MBUsdlCombinedRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBUsdlCombinedRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBUsdlCombinedRecognizerResult.h",
       "line": 36,
       "symbol": "MBUsdlCombinedRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBUsdlRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBUsdlRecognizer.h",
       "line": 21,
       "symbol": "MBUsdlRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBUsdlRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBUsdlRecognizerResult.h",
       "line": 25,
       "symbol": "MBUsdlRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVehicleClassInfo.h",
-      "line": 16,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVehicleClassInfo.h",
+      "line": 22,
       "symbol": "MBVehicleClassInfo",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVisaRecognizer.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBViewControllerFactory.h",
+      "line": 13,
+      "symbol": "MBScanningResultBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBViewControllerFactory.h",
+      "line": 14,
+      "symbol": "MBScanningOverlayCloseButtonTappedBlock",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVisaRecognizer.h",
       "line": 28,
       "symbol": "MBVisaRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVisaRecognizerResult.h",
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVisaRecognizerResult.h",
       "line": 24,
       "symbol": "MBVisaRecognizerResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h",
-      "line": 21,
+      "file": "/opt/jenkins-ios-armini/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h",
+      "line": 23,
       "symbol": "MBVizResult.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
