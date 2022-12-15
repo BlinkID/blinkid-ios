@@ -9,14 +9,14 @@
 // REVERSE ENGINEER, DECOMPILE, OR DISASSEMBLE IT.
 
 import UIKit
-import Microblink
+import BlinkID
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Valid until: 2023-3-8
+        // Valid until: 2023-4-14
         MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: nil, for: .main) { (_) in
         }
         return true

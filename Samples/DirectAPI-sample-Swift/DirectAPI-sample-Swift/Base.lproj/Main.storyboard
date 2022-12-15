@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJJ-BS-5lk">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJJ-BS-5lk">
                                 <rect key="frame" x="141.5" y="251" width="92" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Camera"/>
@@ -24,7 +24,7 @@
                                     <segue destination="RZ0-xy-TKo" kind="presentation" id="zkR-Ab-xrD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgN-Ib-qM5">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgN-Ib-qM5">
                                 <rect key="frame" x="112.5" y="331" width="150" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Image Picker"/>
@@ -33,6 +33,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eJJ-BS-5lk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3dG-yJ-kDw"/>
@@ -40,7 +41,6 @@
                             <constraint firstItem="IgN-Ib-qM5" firstAttribute="top" secondItem="eJJ-BS-5lk" secondAttribute="bottom" constant="35" id="EF8-0c-7sH"/>
                             <constraint firstItem="IgN-Ib-qM5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="750" constant="20" id="bU5-1R-XuX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTF-lX-ovs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTF-lX-ovs">
                                 <rect key="frame" x="16" y="0.0" width="55" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Close">
@@ -80,18 +80,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[[Scan the front side]]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unc-Ox-QHO" userLabel="tooltipLabel">
-                                <rect key="frame" x="92.5" y="573" width="190" height="24"/>
+                                <rect key="frame" x="91.5" y="573" width="192.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="S0b-VS-ogY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="asr-56-9HQ" firstAttribute="height" secondItem="WgV-gA-m5O" secondAttribute="height" id="0tW-NW-DPR"/>
                             <constraint firstItem="asr-56-9HQ" firstAttribute="width" secondItem="WgV-gA-m5O" secondAttribute="width" id="9T2-m0-pN6"/>
                             <constraint firstItem="jTF-lX-ovs" firstAttribute="top" secondItem="S0b-VS-ogY" secondAttribute="top" id="G96-VL-Hvh"/>
-                            <constraint firstItem="xUu-eh-Ult" firstAttribute="top" secondItem="unc-Ox-QHO" secondAttribute="bottom" constant="50" id="HWK-YB-Tva"/>
+                            <constraint firstItem="S0b-VS-ogY" firstAttribute="bottom" secondItem="unc-Ox-QHO" secondAttribute="bottom" constant="50" id="HWK-YB-Tva"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jTF-lX-ovs" secondAttribute="trailingMargin" id="OXF-j4-UCl"/>
                             <constraint firstItem="dlo-lw-ACu" firstAttribute="centerY" secondItem="asr-56-9HQ" secondAttribute="centerY" id="V3J-vd-8ws"/>
                             <constraint firstItem="dlo-lw-ACu" firstAttribute="centerX" secondItem="asr-56-9HQ" secondAttribute="centerX" id="aRq-s5-Dme"/>
@@ -100,7 +101,6 @@
                             <constraint firstItem="asr-56-9HQ" firstAttribute="centerY" secondItem="WgV-gA-m5O" secondAttribute="centerY" id="foa-Md-nGE"/>
                             <constraint firstItem="unc-Ox-QHO" firstAttribute="centerX" secondItem="WgV-gA-m5O" secondAttribute="centerX" id="rUQ-r8-UpG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="S0b-VS-ogY"/>
                     </view>
                     <connections>
                         <outlet property="cameraPausedLabel" destination="dlo-lw-ACu" id="i6k-9c-w6W"/>

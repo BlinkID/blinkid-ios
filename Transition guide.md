@@ -1,3 +1,72 @@
+## 6.0.0
+
+## Breaking changes
+### Renamed the framework
+- The framework's name changed from Microblink to BlinkID
+    - You can replace occurrences of Microblink with BlinkID (e.g. change `import Microblink` to `import BlinkID`)
+​
+### Renaming of recognizers
+- One very important change came when it comes to using BlinkID recognizers - they have been renamed to make them more understandable for new developers and users:
+	- Basic single-sided recognizer, which used to be named `BlinkIdRecognizer`, is now called __BlinkIdSingleSideRecognizer__, and should be used for scanning one-sided documents or if you wish to capture only the front side of it
+	- More advanced recognizer, which used to be named `BlinkIdCombinedRecognizer`, is now called __BlinkIdMultiSideRecognizer__, and should be used for scanning the documents which have information that you want to extract on more than one side
+    - All other classes, protocols and APIs, referenced from `BlinkIdSingleSideRecognizer` or `BlinkIdMultiSideRecognizer`, were renamed in simmilar fashion:
+        - `BlinkIdRecognizerResult` become `BlinkIdSingleSideRecognizerResult`
+        - `BlinkIdRecognizerDelegate` become `BlinkIdSingleSideRecognizerDelegate`
+        - `BlinkIdCombinedRecognizerResult` become `BlinkIdMultiSideRecognizerResult`
+        - `BlinkIdCombinedRecognizerDelegate` become `BlinkIdMultiSideRecognizerDelegate`
+        - `onCombinedImageAvailable:` become `onMultiSideImageAvailable:`
+        - `onCombinedDocumentSupportStatus:` become `onMultiSideDocumentSupportStatus:`
+        - `combinedClassInfoFilter:` become `multiSideClassInfoFilter:`
+        - `onCombinedBarcodeScanningStarted` become `onMultiSideBarcodeScanningStarted:`
+​
+### Other API changes
+- We introduced new classes: `MBStringResult`, `MBDate`, and `MBDateResult` in order to support multiple alphabets. If a recognizer supports multiple alphabets, its result class (e.g., `BlinkIdSingleSideRecognizerResult`, `BlinkIdMultiSideRecognizerResult`) will return `MBStringResult` for APIs that previously returned `NSString`
+- If a recognizer doesn't support multiple alphabets, it now returns `Date` for APIs that previously returned `DateResult`
+- `DataMatchDetailedInfo` class is removed and replaced by `DataMatchResult`
+​
+### Minimum supported SDK version
+- iOS deployment target is now set to `13.0`, meaning that devices like iPhone 6 / 6 Plus or iPad mini 3 are no longer supported by BlinkID SDK.
+
+​
+## Improvements
+​
+### Scanning in less steps
+- In *BlinkID v6.0.0* we added convenience API which enables scanning in less steps.
+​
+#####Example in Swift:
+```swift
+let recognizerRunneViewController = MBViewControllerFactory.recognizerRunnerViewController(
+            withResult: { result in
+                if result.resultState != .valid {
+                    return
+                }
+                print(result.description)
+        },
+            closeButtonTapped: {
+                dismiss(animated: true, completion: nil)
+        })
+
+present(recognizerRunneViewController, animated: true, completion: nil)
+```
+- It is recommended to check the result status as shown in order to avoid crashes before doing something with the result itself.
+​
+​
+###Added onboarding screens
+- New onboarding screens have been added to the SDK, providing the users with a small tutorial on how to scan properly; this will potentially improve the successful scan rate.
+- Onboarding consists of two parts:
+	- Introduction dialog - appears as soon as the user starts the scanning process in the shape of an overlay dialog with an instruction image and an instruction text, which can be dismissed by a press of a button
+	- Onboarding dialog - appears at a press of an onboarding help button, a small FAB located in the bottom right corner, which has an additional tooltip with a "Need help?" text which is shown after a timeout or a tap on the screen
+- By default, both the introduction and onboarding dialogs are set to show, and onboarding button tooltip delay is set to 12 seconds. These settings can be manually altered by configuring `BlinkIdUISettings` which are used as a parameter when the scanning function is called.
+- Example - setting introduction dialog, onboarding dialog visibility, and tooltip delay time:
+​
+```swift
+var blinkIdUISettings = BlinkIdUISettings(recognizerBundle)
+blinkIdUISettings.showIntroductionDialog = false    // set to true by default
+blinkIdUISettings.showOnboardingInfo = true         // set to true by default
+blinkIdUISettings.onboardingButtonTooltipDelay = 8  // set to 12 by default (in seconds)
+```
+- Onboarding help button will only be shown if the onboarding dialog is set to true
+
 ## 5.20.1
 
 - No changes

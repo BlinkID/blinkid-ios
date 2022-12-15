@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.20.1 Docs
+          PPBlinkID v6.0.0 Docs
         </a>
-         (82% documented)
+         (81% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -54,6 +54,9 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAdditionalProcessingInfo.html">MBAdditionalProcessingInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
               <li class="nav-group-task">
@@ -63,10 +66,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizer.html">MBBlinkIdCombinedRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizer.html">MBBlinkIdMultiSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizerResult.html">MBBlinkIdCombinedRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizerResult.html">MBBlinkIdMultiSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlaySettings.html">MBBlinkIdOverlaySettings</a>
@@ -75,10 +78,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizer.html">MBBlinkIdRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizer.html">MBBlinkIdSingleSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizerResult.html">MBBlinkIdRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizerResult.html">MBBlinkIdSingleSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCameraReticle.html">MBCameraReticle</a>
@@ -91,6 +94,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDPIBasedDewarpPolicy.html">MBDPIBasedDewarpPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDate.html">MBDate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDateResult.html">MBDateResult</a>
@@ -255,6 +261,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)MBRecognizerRunnerViewControllerMetadataDelegates">MBRecognizerRunnerViewControllerMetadataDelegates</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBStringResult.html">MBStringResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBSubview.html">MBSubview</a>
               </li>
               <li class="nav-group-task">
@@ -323,7 +332,7 @@
                 <a class="nav-group-task-link" href="../Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/MBDataMatchResult.html">MBDataMatchResult</a>
+                <a class="nav-group-task-link" href="../Enums/MBDataMatchState.html">MBDataMatchState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDetectionStatus.html">MBDetectionStatus</a>
@@ -491,7 +500,7 @@
 Camera view controllers created this way will be managed internally by the SDK, and input frames will be processed.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBViewControllerFactory.h#L17-L37">Show on GitHub</a>
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBViewControllerFactory.h#L21-L53">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -568,7 +577,84 @@ Camera view controllers created this way will be managed internally by the SDK, 
                         <p>Scanning view controller fully initialized for presenting on screen.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBViewControllerFactory.h#L35">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBViewControllerFactory.h#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBViewControllerFactory(cm)recognizerRunnerViewControllerWithResult:closeButtonTapped:"></a>
+                    <a name="//apple_ref/objc/Method/+recognizerRunnerViewControllerWithResult:closeButtonTapped:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBViewControllerFactory(cm)recognizerRunnerViewControllerWithResult:closeButtonTapped:">+recognizerRunnerViewControllerWithResult:<wbr>closeButtonTapped:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The method creates a camera view controller, which is responsible for displaying the camera input on the phone screen.
+ With this method, you can specify blocks for handling when scanning is finished and when scanning is canceled via the cancel button.
+ When scanning is finished with a result, scanning is automatically paused.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIViewController</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">recognizerRunnerViewControllerWithResult</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">MBScanningResultBlock</span><span class="p">)</span><span class="nv">result</span>
+                           <span class="nf">closeButtonTapped</span><span class="p">:</span>
+                               <span class="p">(</span><span class="n">nonnull</span> <span class="n">MBScanningOverlayCloseButtonTappedBlock</span><span class="p">)</span>
+                                   <span class="n">closeButtonTapped</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">recognizerRunnerViewController</span><span class="p">(</span><span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">MBScanningResultBlock</span><span class="p">,</span> <span class="nv">closeButtonTapped</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">MBScanningOverlayCloseButtonTappedBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">UIViewController</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols/MBRecognizerRunnerViewController.html">MBRecognizerRunnerViewController</a></span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure which will be called when the scanning view controller is finished with scanning. Receives one parameter: BlinkIdMultiSideRecognizerResult</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closeButtonTapped</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Closure which will be called when cancel button is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Scanning view controller fully initialized for presenting on screen.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBViewControllerFactory.h#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -581,7 +667,7 @@ Camera view controllers created this way will be managed internally by the SDK, 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-11-08)</p>
+      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-12-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

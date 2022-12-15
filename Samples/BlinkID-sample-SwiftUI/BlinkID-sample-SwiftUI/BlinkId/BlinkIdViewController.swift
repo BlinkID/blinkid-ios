@@ -10,12 +10,12 @@
 
 import Foundation
 import SwiftUI
-import Microblink
+import BlinkID
 
 struct BlinkIdViewController: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var showAlert: Bool
-    @Binding var blinkIdCombinedRecognizer: MBBlinkIdCombinedRecognizer
+    @Binding var blinkIdMultiSideRecognizer: MBBlinkIdMultiSideRecognizer
     class Coordinator: NSObject, MBBlinkIdOverlayViewControllerDelegate {
         
         var parent: BlinkIdViewController
@@ -42,13 +42,13 @@ struct BlinkIdViewController: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        blinkIdCombinedRecognizer.returnFullDocumentImage = true
+        blinkIdMultiSideRecognizer.returnFullDocumentImage = true
 
         /** Create settings */
         let settings: MBBlinkIdOverlaySettings = MBBlinkIdOverlaySettings()
 
         /** Crate recognizer collection */
-        let recognizerList = [blinkIdCombinedRecognizer]
+        let recognizerList = [blinkIdMultiSideRecognizer]
         let recognizerCollection: MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
 
         /** Create your overlay view controller */

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Dino. All rights reserved.
 //
 
-import Microblink
+import BlinkID
 
 class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerViewControllerDelegate,
         MBFirstSideFinishedRecognizerRunnerViewControllerDelegate {
@@ -46,14 +46,14 @@ class CustomOverlay: MBCustomOverlayViewController, MBScanningRecognizerRunnerVi
                 for recognizer in self.recognizerCollection.recognizerList where
                     recognizer.baseResult?.resultState == MBRecognizerResultState.valid {
 
-                    if recognizer is MBBlinkIdRecognizer {
-                        let blinkIdRecognizer = recognizer as? MBBlinkIdRecognizer
-                        title = "BlinkID"
+                    if recognizer is MBBlinkIdSingleSideRecognizer {
+                        let blinkIdRecognizer = recognizer as? MBBlinkIdSingleSideRecognizer
+                        title = "BlinkID Single Side"
                         message = (blinkIdRecognizer?.result.description)!
                     }
-                    if recognizer is MBBlinkIdCombinedRecognizer {
-                        let blinkIdRecognizer = recognizer as? MBBlinkIdCombinedRecognizer
-                        title = "BlinkID Combined"
+                    if recognizer is MBBlinkIdMultiSideRecognizer {
+                        let blinkIdRecognizer = recognizer as? MBBlinkIdMultiSideRecognizer
+                        title = "BlinkID Multi Side"
                         message = (blinkIdRecognizer?.result.description)!
                     }
                 }

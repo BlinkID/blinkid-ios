@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B9113E824E546F4005E4FBD /* Microblink.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9113E624E546F1005E4FBD /* Microblink.xcframework */; };
-		7B9113E924E546F4005E4FBD /* Microblink.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9113E624E546F1005E4FBD /* Microblink.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7B65C042294B9D0900394548 /* BlinkID.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B65C040294B9D0500394548 /* BlinkID.xcframework */; };
+		7B65C043294B9D0900394548 /* BlinkID.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B65C040294B9D0500394548 /* BlinkID.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A207A4A320A485DF002AEDB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4A220A485DF002AEDB0 /* AppDelegate.swift */; };
 		A207A4A520A485DF002AEDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207A4A420A485DF002AEDB0 /* ViewController.swift */; };
 		A207A4A820A485DF002AEDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A207A4A620A485DF002AEDB0 /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7B9113E924E546F4005E4FBD /* Microblink.xcframework in Embed Frameworks */,
+				7B65C043294B9D0900394548 /* BlinkID.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7B9113E624E546F1005E4FBD /* Microblink.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Microblink.xcframework; path = ../../Microblink.xcframework; sourceTree = "<group>"; };
+		7B65C040294B9D0500394548 /* BlinkID.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BlinkID.xcframework; path = ../../BlinkID.xcframework; sourceTree = "<group>"; };
 		A207A49F20A485DF002AEDB0 /* DirectAPI-sample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DirectAPI-sample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A207A4A220A485DF002AEDB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A207A4A420A485DF002AEDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				A207A4C220A4863E002AEDB0 /* libz.tbd in Frameworks */,
 				A207A4C020A48633002AEDB0 /* libc++.tbd in Frameworks */,
 				A207A4BE20A4862D002AEDB0 /* libiconv.tbd in Frameworks */,
-				7B9113E824E546F4005E4FBD /* Microblink.xcframework in Frameworks */,
+				7B65C042294B9D0900394548 /* BlinkID.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 		A207A4B420A4860A002AEDB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B9113E624E546F1005E4FBD /* Microblink.xcframework */,
+				7B65C040294B9D0500394548 /* BlinkID.xcframework */,
 				A207A4C120A4863E002AEDB0 /* libz.tbd */,
 				A207A4BF20A48633002AEDB0 /* libc++.tbd */,
 				A207A4BD20A4862D002AEDB0 /* libiconv.tbd */,
@@ -272,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -327,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

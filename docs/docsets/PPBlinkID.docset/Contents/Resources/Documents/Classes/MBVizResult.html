@@ -21,9 +21,9 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v5.20.1 Docs
+          PPBlinkID v6.0.0 Docs
         </a>
-         (82% documented)
+         (81% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -54,6 +54,9 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAdditionalProcessingInfo.html">MBAdditionalProcessingInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBaseOcrOverlaySettings.html">MBBaseOcrOverlaySettings</a>
               </li>
               <li class="nav-group-task">
@@ -63,10 +66,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBaseOverlayViewController.html">MBBaseOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizer.html">MBBlinkIdCombinedRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizer.html">MBBlinkIdMultiSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdCombinedRecognizerResult.html">MBBlinkIdCombinedRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdMultiSideRecognizerResult.html">MBBlinkIdMultiSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlaySettings.html">MBBlinkIdOverlaySettings</a>
@@ -75,10 +78,10 @@
                 <a class="nav-group-task-link" href="../Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizer.html">MBBlinkIdRecognizer</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizer.html">MBBlinkIdSingleSideRecognizer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/MBBlinkIdRecognizerResult.html">MBBlinkIdRecognizerResult</a>
+                <a class="nav-group-task-link" href="../Classes/MBBlinkIdSingleSideRecognizerResult.html">MBBlinkIdSingleSideRecognizerResult</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBCameraReticle.html">MBCameraReticle</a>
@@ -91,6 +94,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDPIBasedDewarpPolicy.html">MBDPIBasedDewarpPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBDate.html">MBDate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBDateResult.html">MBDateResult</a>
@@ -255,6 +261,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)MBRecognizerRunnerViewControllerMetadataDelegates">MBRecognizerRunnerViewControllerMetadataDelegates</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBStringResult.html">MBStringResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBSubview.html">MBSubview</a>
               </li>
               <li class="nav-group-task">
@@ -323,7 +332,7 @@
                 <a class="nav-group-task-link" href="../Enums/MBCameraType.html">MBCameraType</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/MBDataMatchResult.html">MBDataMatchResult</a>
+                <a class="nav-group-task-link" href="../Enums/MBDataMatchState.html">MBDataMatchState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBDetectionStatus.html">MBDetectionStatus</a>
@@ -490,7 +499,7 @@
             <p>MBVizResult contains data extracted from the Visual Inspection Zone.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L19-L173">Show on GitHub</a>
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L21-L175">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -519,17 +528,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">firstName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">firstName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">firstName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">firstName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L26">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -554,17 +563,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">lastName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">lastName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L31">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -589,17 +598,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fullName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">fullName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fullName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fullName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -624,17 +633,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fathersName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">fathersName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fathersName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fathersName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L41">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -659,17 +668,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">mothersName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">mothersName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mothersName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mothersName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -694,17 +703,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">additionalNameInformation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">additionalNameInformation</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalNameInformation</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalNameInformation</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L51">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -729,17 +738,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">localizedName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">localizedName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localizedName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localizedName</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -764,17 +773,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">address</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">address</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">address</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L61">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -799,17 +808,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">additionalAddressInformation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">additionalAddressInformation</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalAddressInformation</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalAddressInformation</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -834,17 +843,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">additionalOptionalAddressInformation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">additionalOptionalAddressInformation</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalOptionalAddressInformation</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalOptionalAddressInformation</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -869,17 +878,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">placeOfBirth</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">placeOfBirth</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">placeOfBirth</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">placeOfBirth</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L76">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -904,17 +913,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">nationality</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">nationality</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nationality</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nationality</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L81">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -939,17 +948,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">race</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">race</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">race</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">race</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L86">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -974,17 +983,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">religion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">religion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">religion</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">religion</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L91">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1009,17 +1018,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">profession</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">profession</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">profession</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">profession</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1044,17 +1053,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">maritalStatus</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">maritalStatus</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maritalStatus</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maritalStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L101">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1079,17 +1088,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">residentialStatus</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">residentialStatus</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">residentialStatus</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">residentialStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L106">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1114,17 +1123,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">employer</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">employer</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">employer</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">employer</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L111">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1149,17 +1158,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">sex</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">sex</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sex</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sex</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L116">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1184,17 +1193,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">dateOfBirth</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfBirth</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfBirth</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfBirth</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L121">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1219,17 +1228,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">dateOfIssue</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfIssue</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfIssue</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfIssue</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L126">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1254,17 +1263,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">dateOfExpiry</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="o">*</span><span class="n">dateOfExpiry</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfExpiry</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateOfExpiry</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBDateResult.html">MBDateResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L131">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1289,17 +1298,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">documentNumber</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">documentNumber</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentNumber</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L136">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L138">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1324,17 +1333,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">personalIdNumber</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">personalIdNumber</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">personalIdNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">personalIdNumber</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L141">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1359,17 +1368,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">documentAdditionalNumber</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">documentAdditionalNumber</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentAdditionalNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentAdditionalNumber</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L146">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L148">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1394,17 +1403,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">documentOptionalAdditionalNumber</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">documentOptionalAdditionalNumber</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentOptionalAdditionalNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentOptionalAdditionalNumber</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L151">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L153">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1429,17 +1438,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">additionalPersonalIdNumber</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">additionalPersonalIdNumber</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalPersonalIdNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">additionalPersonalIdNumber</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L156">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1464,17 +1473,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">issuingAuthority</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MBStringResult.html">MBStringResult</a></span> <span class="o">*</span><span class="n">issuingAuthority</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">issuingAuthority</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">issuingAuthority</span><span class="p">:</span> <span class="kt"><a href="../Classes/MBStringResult.html">MBStringResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L161">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L163">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1509,7 +1518,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L166">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1544,7 +1553,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v5.20.1/blinkid-ios/Microblink.xcframework/ios-arm64_x86_64-simulator/Microblink.framework/Headers/MBVizResult.h#L171">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.0.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBVizResult.h#L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1557,7 +1566,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-11-08)</p>
+      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-12-15)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

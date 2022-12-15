@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Microblink
+import BlinkID
 import MobileCoreServices
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private var recognizerRunner: MBRecognizerRunner?
-    private var blinkIdCombinedReconginzer: MBBlinkIdCombinedRecognizer?
+    private var blinkIdMultiSideRecognizer: MBBlinkIdMultiSideRecognizer?
     private var imagePickerController: UIImagePickerController?
     private var overlayLabel = UILabel(frame: .zero)
     private let serialQueue = DispatchQueue(label: "com.microblink.DirectAPI-sample-swift")
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Valid until: 2023-3-8
+        // Valid until: 2023-4-14
         MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main) { (_) in
         }
         
@@ -58,8 +58,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private func setupRecognizerRunner() {
         var recognizers = [MBRecognizer]()
-        blinkIdCombinedReconginzer = MBBlinkIdCombinedRecognizer()
-        recognizers.append(blinkIdCombinedReconginzer!)
+        blinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
+        recognizers.append(blinkIdMultiSideRecognizer!)
         let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
         recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
         recognizerRunner?.scanningRecognizerRunnerDelegate = self
@@ -138,7 +138,7 @@ extension ViewController: MBScanningRecognizerRunnerDelegate {
             let title = "BlinkID"
             // Save the string representation of the code
             print(state.rawValue)
-            let message = self.blinkIdCombinedReconginzer?.result.description
+            let message = self.blinkIdMultiSideRecognizer?.result.description
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: {(_ action: UIAlertAction) -> Void in
                 self.dismiss(animated: true) {() -> Void in }
