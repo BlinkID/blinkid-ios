@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import Microblink
+import BlinkID
 
 class ViewController: UIViewController {
 
-    var blinkIdRecognizer: MBBlinkIdCombinedRecognizer?
+    var blinkIdRecognizer: MBBlinkIdMultiSideRecognizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Valid until: 2023-3-8
+        // Valid until: 2023-4-14
         MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main) { (_) in
         }
     }
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBAction func didTapScan(_ sender: AnyObject) {
 
         /** Create BlinkID recognizer */
-        self.blinkIdRecognizer = MBBlinkIdCombinedRecognizer()
+        self.blinkIdRecognizer = MBBlinkIdMultiSideRecognizer()
         self.blinkIdRecognizer?.returnFullDocumentImage = true
 
         /** Create settings */
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     @IBAction func didTapCustomUI(_ sender: Any) {
 
         /** Create BlinkID recognizer */
-        self.blinkIdRecognizer = MBBlinkIdCombinedRecognizer()
+        self.blinkIdRecognizer = MBBlinkIdMultiSideRecognizer()
 
         /** Crate recognizer collection */
         let recognizerList = [self.blinkIdRecognizer!]

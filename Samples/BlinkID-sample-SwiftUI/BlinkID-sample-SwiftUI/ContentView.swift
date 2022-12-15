@@ -9,12 +9,12 @@
 // REVERSE ENGINEER, DECOMPILE, OR DISASSEMBLE IT.
 
 import SwiftUI
-import Microblink
+import BlinkID
 
 struct ContentView: View {
     @State private var showingBlinkIdViewController = false
     @State private var showBlinkIdResult = false
-    @State private var blinkIdCombinedRecognizer: MBBlinkIdCombinedRecognizer = MBBlinkIdCombinedRecognizer()
+    @State private var blinkIdMultiSideRecognizer: MBBlinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
     var body: some View {
         VStack {
             Button("Scan") {
@@ -22,10 +22,10 @@ struct ContentView: View {
             }
         }
         .fullScreenCover(isPresented: $showingBlinkIdViewController) {
-            BlinkIdViewController(showAlert: $showBlinkIdResult, blinkIdCombinedRecognizer: $blinkIdCombinedRecognizer)
+            BlinkIdViewController(showAlert: $showBlinkIdResult, blinkIdMultiSideRecognizer: $blinkIdMultiSideRecognizer)
                 .alert(isPresented: $showBlinkIdResult) { () -> Alert in
                     let alert = Alert(title: Text("BlinkId Results"),
-                                      message: Text(self.blinkIdCombinedRecognizer.result.description),
+                                      message: Text(self.blinkIdMultiSideRecognizer.result.description),
                                       dismissButton: .default(Text("Ok"),
                                       action: {
                         self.showingBlinkIdViewController.toggle()

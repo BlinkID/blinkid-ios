@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import Microblink
+import BlinkID
 
 class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBufferDelegate, AVCaptureVideoDataOutputSampleBufferDelegate, MBFirstSideFinishedRecognizerRunnerDelegate, MBScanningRecognizerRunnerDelegate {
     
@@ -17,7 +17,7 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
     
     var captureSession: AVCaptureSession?
     var recognizerRunner: MBRecognizerRunner?
-    var blinkIdCombinedReconginzer: MBBlinkIdCombinedRecognizer?
+    var blinkIdMultiSideRecognizer: MBBlinkIdMultiSideRecognizer?
     var isPauseRecognition = false
     
     @IBOutlet weak var myView: UIView!
@@ -27,6 +27,8 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
     var input: AVCaptureDeviceInput?
     var output: AVCaptureMetadataOutput?
     var prevLayer: AVCaptureVideoPreviewLayer?
+    
+    let cameraQueue = DispatchQueue(label: "cameraQueue")
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -45,7 +47,7 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
         
         // Note that the app delegate controls the device orientation notifications required to use the device orientation.
         coordinator.animate(alongsideTransition: { (context) -> Void in
-            self.prevLayer?.connection?.videoOrientation = self.transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.statusBarOrientation.rawValue)!)
+            self.prevLayer?.connection?.videoOrientation = self.transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.windows.first!.windowScene!.interfaceOrientation.rawValue)!)
             self.prevLayer?.frame.size = self.myView.frame.size
         }, completion: { (context) -> Void in
             
@@ -107,16 +109,20 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
     
     @objc func captureSessionDidStartRunning(_ note: Notification?) {
         print("captureSessionDidStartRunningNotification!")
-        UIView.animate(withDuration: 0.3, animations: {() -> Void in
-            self.cameraPausedLabel.alpha = 0.0
-        })
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.3, animations: {() -> Void in
+                self?.cameraPausedLabel.alpha = 0.0
+            })
+        }
     }
     
     @objc func captureSessionDidStopRunning(_ note: Notification?) {
         print("captureSessionDidStopRunningNotification!")
-        UIView.animate(withDuration: 0.3, animations: {() -> Void in
-            self.cameraPausedLabel.alpha = 1.0
-        })
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.3, animations: {() -> Void in
+                self?.cameraPausedLabel.alpha = 1.0
+            })
+        }
     }
     
     @objc func captureSessionRuntimeErrorNotification(_ note: Notification?) {
@@ -124,6 +130,7 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
     }
     
     func startCaptureSession() {
+        
         // Create session
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = .high
@@ -143,25 +150,28 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
         prevLayer?.frame.size = myView.frame.size
         prevLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
-        prevLayer?.connection?.videoOrientation = transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.statusBarOrientation.rawValue)!)
+        prevLayer?.connection?.videoOrientation = transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.windows.first!.windowScene!.interfaceOrientation.rawValue)!)
         
         myView.layer.addSublayer(prevLayer!)
         
         var recognizers = [MBRecognizer]()
-        blinkIdCombinedReconginzer = MBBlinkIdCombinedRecognizer()
-        recognizers.append(blinkIdCombinedReconginzer!)
+        blinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
+        recognizers.append(blinkIdMultiSideRecognizer!)
         
         let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
         recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
         recognizerRunner?.scanningRecognizerRunnerDelegate = self
         recognizerRunner?.metadataDelegates.firstSideFinishedRecognizerRunnerDelegate = self
-        
-        captureSession?.startRunning()
+        cameraQueue.async { [weak self] in
+            self?.captureSession?.startRunning()
+        }
     }
     
     func stopCaptureSession() {
-        captureSession?.stopRunning()
-        captureSession = nil
+        cameraQueue.async { [weak self] in
+            self?.captureSession?.stopRunning()
+            self?.captureSession = nil
+        }
     }
     
     // Find a camera with the specificed AVCaptureDevicePosition, returning nil if one is not found
@@ -198,7 +208,7 @@ class MBCameraViewController: UIViewController, AVCaptureAudioDataOutputSampleBu
             DispatchQueue.main.async(execute: {() -> Void in
                 let title = "BlinkID"
                 // Save the string representation of the code
-                let message = self.blinkIdCombinedReconginzer?.result.description
+                let message = self.blinkIdMultiSideRecognizer?.result.description
                 let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .default, handler: {(_ action: UIAlertAction) -> Void in
                     self.dismiss(animated: true) {() -> Void in }
