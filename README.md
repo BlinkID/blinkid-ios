@@ -72,6 +72,7 @@ Feeling ready to get going with the integration? First, make sure we support you
 # <a name="requirements"></a> Requirements
 
 SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**. 
+**NOTE:** The SDK doesn't contain bitcode anymore.
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with BlinkID SDK
