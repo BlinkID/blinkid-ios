@@ -27,6 +27,8 @@
 ### Minimum supported SDK version
 - iOS deployment target is now set to `13.0`, meaning that devices like iPhone 6 / 6 Plus or iPad mini 3 are no longer supported by BlinkID SDK.
 
+### Bitcode
+- The SDK doesn't contain bitcode anymore
 ​
 ## Improvements
 ​
