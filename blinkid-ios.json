@@ -15,5 +15,6 @@
     "5.19.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v5.19.0/Microblink.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v5.19.0/Microblink.xcframework.zip",
     "5.20.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v5.20.0/Microblink.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v5.20.0/Microblink.xcframework.zip",
 	"5.20.1": "https://github.com/BlinkID/blinkid-ios/releases/download/v5.20.1/Microblink.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v5.20.1/Microblink.xcframework.zip",
-    "6.0.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.0.0/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.0.0/BlinkID.xcframework.zip"
+    "6.0.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.0.0/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.0.0/BlinkID.xcframework.zip",
+    "6.1.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.1.0/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.1.0/BlinkID.xcframework.zip"
 }

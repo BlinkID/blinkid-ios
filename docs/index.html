@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v6.0.0 Docs
+          PPBlinkID v6.1.0 Docs
         </a>
          (81% documented)
       </p>
@@ -577,7 +577,8 @@
 </ul>
 <h1 id='a-name-requirements-a-requirements' class='heading'><a name="requirements"></a> Requirements</h1>
 
-<p>SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 13.0 or later</strong>. </p>
+<p>SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in <strong>iOS 13.0 or later</strong>.
+<strong>NOTE:</strong> The SDK doesn&rsquo;t contain bitcode anymore. </p>
 <h1 id='a-name-quick-start-a-quick-start' class='heading'><a name="quick-start"></a> Quick Start</h1>
 <h2 id='getting-started-with-blinkid-sdk' class='heading'>Getting started with BlinkID SDK</h2>
 
@@ -594,8 +595,8 @@
 </ul><div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
-git lfs <span class="nb">install</span>
+<pre class="highlight shell"><code>brew install git-lfs
+git lfs install
 </code></pre>
 
 </div><ul>
@@ -609,14 +610,14 @@ git lfs <span class="nb">install</span>
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'13.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 6.0.0'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 6.1.0'</span>
 <span class="k">end</span>
 </code></pre>
 
 <ul>
 <li>Install the dependencies in your project:</li>
 </ul>
-<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
 </code></pre>
 
 <ul>
@@ -665,9 +666,9 @@ git lfs <span class="nb">install</span>
 <li>Add a new run script phase script to your app’s target</li>
 <li>Add the following script to force deep sign the frameworks with your own signing identity:</li>
 </ol>
-<pre class="highlight shell"><code>find <span class="s2">"</span><span class="k">${</span><span class="nv">CODESIGNING_FOLDER_PATH</span><span class="k">}</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-print0</span> | <span class="k">while </span><span class="nb">read</span> <span class="nt">-d</span> <span class="s1">$'</span><span class="se">\0</span><span class="s1">'</span> framework 
+<pre class="highlight shell"><code>find <span class="s2">"</span><span class="k">${</span><span class="nv">CODESIGNING_FOLDER_PATH</span><span class="k">}</span><span class="s2">"</span> -name <span class="s1">'*.framework'</span> -print0 | <span class="k">while </span><span class="nb">read</span> -d <span class="s1">$'</span><span class="se">\0</span><span class="s1">'</span> framework 
 <span class="k">do 
-    </span>codesign <span class="nt">--force</span> <span class="nt">--deep</span> <span class="nt">--sign</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXPANDED_CODE_SIGN_IDENTITY</span><span class="k">}</span><span class="s2">"</span> <span class="nt">--preserve-metadata</span><span class="o">=</span>identifier,entitlements <span class="nt">--timestamp</span><span class="o">=</span>none <span class="s2">"</span><span class="k">${</span><span class="nv">framework</span><span class="k">}</span><span class="s2">"</span> 
+    </span>codesign --force --deep --sign <span class="s2">"</span><span class="k">${</span><span class="nv">EXPANDED_CODE_SIGN_IDENTITY</span><span class="k">}</span><span class="s2">"</span> --preserve-metadata<span class="o">=</span>identifier,entitlements --timestamp<span class="o">=</span>none <span class="s2">"</span><span class="k">${</span><span class="nv">framework</span><span class="k">}</span><span class="s2">"</span> 
 <span class="k">done</span>
 </code></pre>
 <h4 id='manual-integration' class='heading'>Manual integration</h4>
@@ -680,8 +681,8 @@ git lfs <span class="nb">install</span>
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
-git lfs <span class="nb">install</span>
+<pre class="highlight shell"><code>brew install git-lfs
+git lfs install
 </code></pre>
 
 </div><ul>
@@ -739,7 +740,7 @@ git lfs <span class="nb">install</span>
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
-        <span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"blinkid-license"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
+        <span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"blinkid-license"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"key"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
     <span class="p">}</span>
 
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">didTapScan</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
@@ -778,7 +779,7 @@ git lfs <span class="nb">install</span>
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main errorCallback:block];
+    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"key" inSubdirectory:@"" for:Bundle.main errorCallback:block];
 }
 
 
@@ -828,11 +829,11 @@ git lfs <span class="nb">install</span>
 <p>Or you can include the license key, with the code below. Please make sure that the file that contains the license key is included in your project and is copied during <strong>Copy Bundle Resources</strong> build phase.</p>
 
 <p>Swift</p>
-<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"txt"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">MBMicroblinkSDK</span><span class="o">.</span><span class="nf">shared</span><span class="p">()</span><span class="o">.</span><span class="nf">setLicenseResource</span><span class="p">(</span><span class="s">"license-key-file"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"key"</span><span class="p">,</span> <span class="nv">inSubdirectory</span><span class="p">:</span> <span class="s">"directory-to-license-key"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span> <span class="nv">errorCallback</span><span class="p">:</span> <span class="n">block</span><span class="p">)</span>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
+<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
 </code></pre>
 
 <p>If the licence is invalid or expired then the methods above will throw an <strong>exception</strong>.</p>
@@ -1325,9 +1326,9 @@ If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git
 
 <span class="c"># This script loops through the frameworks embedded in the application and</span>
 <span class="c"># removes unused architectures.</span>
-find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
+find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> -name <span class="s1">'*.framework'</span> -type d | <span class="k">while </span><span class="nb">read</span> -r FRAMEWORK
 <span class="k">do
-</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="si">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="si">)</span>
+</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="k">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="k">)</span>
 <span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
 <span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
@@ -1336,17 +1337,17 @@ find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">
 <span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
 <span class="k">do
 </span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
+lipo -extract <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
 EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
 <span class="k">done
 
 </span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
-lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+lipo -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> -create <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+rm <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 
 <span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
-<span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-<span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+rm <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
 <span class="k">done</span>
 </code></pre>
@@ -1369,7 +1370,7 @@ lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAME
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2022-12-15)</p>
+      <p>&copy; 2023 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2023-02-09)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

@@ -1,10 +1,9 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "6.0.0"
+  s.version     = "6.1.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
-  s.readme      = "https://raw.githubusercontent.com/BlinkID/blinkid-ios/v6.0.0/README.md"
   
   s.description = <<-DESC
         BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with         [MicroBlink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
@@ -21,7 +20,7 @@ Pod::Spec.new do |s|
   s.license     = { 
         :type => 'commercial',
         :text => <<-LICENSE
-                © 2013-2022 Microblink Ltd. All rights reserved.
+                © 2013-2023 Microblink Ltd. All rights reserved.
                 LICENSE
         }
 
@@ -32,7 +31,7 @@ Pod::Spec.new do |s|
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.0.0/blinkid-ios_v6.0.0.tar.gz'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.1.0/blinkid-ios_v6.1.0.tar.gz'
   }
 
   s.platform     = :ios

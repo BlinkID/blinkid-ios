@@ -110,7 +110,6 @@ MB_INIT
 @end
 
 @protocol MBBlinkIdSingleSideRecognizerDelegate <NSObject>
-@optional
 
 /**
  * Called when dewarped full document image is available

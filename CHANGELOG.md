@@ -1,5 +1,74 @@
 # Release notes
 
+## 6.1.0
+### New features
+- new and improved machine learning models for data extraction
+- further improved barcode scanning (parsing for non-standard US DLs)
+- added anonymization for QR code on Dutch ID card
+- anonymization of religion field on Malaysian documents
+
+### Added support for 9 new documents:
+- Australia - Victoria - Proof of Age Card
+- Brazil - Rio de Janeiro - ID Card
+- Liechtenstein - ID Card
+- Luxembourg - Passport
+- Mozambique - ID Card
+- Norway - ID Card 
+- Togo - ID Card
+- USA - Wyoming - ID Card
+- Zimbabwe - ID Card 
+
+### Added support for 9 new documents in BETA:
+- Barbados - ID Card 
+- Belgium - Passport 
+- Brazil - Rio Grande do Sul - ID Card 
+- Ireland - Residence Permit 
+- Japan - Residence Permit
+- Lithuania - Residence Permit 
+- Saint Lucia - ID Card 
+- USA - New Hampshire - ID Card 
+- USA - South Dakota - ID Card 
+
+### Added support for 34 new versions of already supported documents: 
+- Belgium - Resident ID Card
+- Canada - Residence Permit
+- Estonia - ID Card
+- Finland - Alien ID Card
+- Finland - ID Card
+- Latvia - Alien ID Card
+- Lithuania - ID Card 
+- Luxembourg - ID Card
+- Malta - Residence Permit
+- Netherlands - ID Card
+- Netherlands - Residence Permit 
+- Poland - ID Card
+- Sweden Residence Permit
+- USA - Alabama - ID Card
+- USA - Alaska - ID Card
+- USA - Colorado - Driving License
+- USA - Connecticut - ID Card
+- USA - District of Colombia - Driving License
+- USA - District of Colombia - ID Card
+- USA - Iowa - ID Card
+- USA - Kansas - ID Card
+- USA - Louisiana - Driving License
+- USA - Maine - Driving License
+- USA - Maine - ID Card
+- USA - Minnesota - ID Card
+- USA - Mississippi - ID Card
+- USA - Nevada - Driving License
+- USA - New York - Driving License 
+- USA - South Carolina - ID Card
+- USA - South Dakota - Driving License 
+- USA - Texas - ID Card 
+- USA - Vermont - Driving License 
+- USA - Washington - ID Card
+- USA - Wisconsin - Driving License 
+
+### Added support for 2 new versions of already supported documents in BETA:
+- Poland - Residence Permit
+- Portugal - Residence Permit
+
 ## 6.0.0
 ### New features:
 #### Extracting ID data from Arabic and Cyrillic IDs
