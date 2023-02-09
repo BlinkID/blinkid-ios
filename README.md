@@ -71,8 +71,8 @@ Feeling ready to get going with the integration? First, make sure we support you
 
 # <a name="requirements"></a> Requirements
 
-SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**. 
-**NOTE:** The SDK doesn't contain bitcode anymore.
+SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**.
+**NOTE:** The SDK doesn't contain bitcode anymore. 
 # <a name="quick-start"></a> Quick Start
 
 ## Getting started with BlinkID SDK
@@ -108,7 +108,7 @@ pod init
 ```ruby
 platform :ios, '13.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 6.0.0'
+    pod 'PPBlinkID', '~> 6.1.0'
 end
 ```
 
@@ -245,7 +245,7 @@ class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main, errorCallback: block)
+        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "key", inSubdirectory: "", for: Bundle.main, errorCallback: block)
     }
 
     @IBAction func didTapScan(_ sender: AnyObject) {
@@ -286,7 +286,7 @@ Objective-C
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"txt" inSubdirectory:@"" for:Bundle.main errorCallback:block];
+    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"key" inSubdirectory:@"" for:Bundle.main errorCallback:block];
 }
 
 
@@ -343,13 +343,13 @@ Or you can include the license key, with the code below. Please make sure that t
 Swift
 
 ```swift
-MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "txt", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
+MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "key", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
 ```
 
 Objective-C
 
 ```objective-c
-[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"txt" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
+[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
 ```
 
 If the licence is invalid or expired then the methods above will throw an **exception**.

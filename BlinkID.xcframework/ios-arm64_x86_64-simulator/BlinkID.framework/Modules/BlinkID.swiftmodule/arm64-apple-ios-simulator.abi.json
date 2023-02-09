@@ -62,6 +62,49 @@
             ],
             "isFromExtension": true,
             "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(string:style:font:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableAttributedString",
+                "printedName": "Foundation.NSMutableAttributedString",
+                "usr": "c:objc(cs)NSMutableAttributedString"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSParagraphStyle",
+                "printedName": "UIKit.NSParagraphStyle",
+                "usr": "c:objc(cs)NSParagraphStyle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@CM@BlinkID@@objc(cs)NSMutableAttributedString(im)initWithString:style:font:",
+            "mangledName": "$sSo25NSMutableAttributedStringC7BlinkIDE6string5style4fontABSS_So16NSParagraphStyleCSo6UIFontCtcfc",
+            "moduleName": "BlinkID",
+            "objc_name": "initWithString:style:font:",
+            "declAttributes": [
+              "Dynamic",
+              "Convenience",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
           }
         ],
         "declKind": "Class",

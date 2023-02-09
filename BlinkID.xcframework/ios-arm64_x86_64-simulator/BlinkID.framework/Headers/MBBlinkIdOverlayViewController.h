@@ -6,6 +6,8 @@
 //
 
 #import "MBBaseOverlayViewController.h"
+#import "MBBlinkIdMultiSideRecognizer.h"
+#import "MBBlinkIdSingleSideRecognizer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Default version of overlay view controller with modern design.
  */
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
-@interface MBBlinkIdOverlayViewController : MBBaseOverlayViewController
+@interface MBBlinkIdOverlayViewController : MBBaseOverlayViewController <MBBlinkIdMultiSideRecognizerDelegate, MBBlinkIdSingleSideRecognizerDelegate>
 
 /**
  * Common BlinkId UI settings

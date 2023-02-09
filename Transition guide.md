@@ -1,3 +1,9 @@
+## 6.1.0
+
+## Breaking changes
+### Made `BlinkIdMultiSideRecognizerDelegate` and `BlinkIdSingleSideRecognizerDelegate` methods non-optional
+- If you implemented only some of the methods present in one (or both) of these delegates but would like to keep default behaviour with the remaining methods you can use our default methods found on an instance of `BlinkIdOverlayViewController`
+
 ## 6.0.0
 
 ## Breaking changes
@@ -27,8 +33,6 @@
 ### Minimum supported SDK version
 - iOS deployment target is now set to `13.0`, meaning that devices like iPhone 6 / 6 Plus or iPad mini 3 are no longer supported by BlinkID SDK.
 
-### Bitcode
-- The SDK doesn't contain bitcode anymore
 ​
 ## Improvements
 ​

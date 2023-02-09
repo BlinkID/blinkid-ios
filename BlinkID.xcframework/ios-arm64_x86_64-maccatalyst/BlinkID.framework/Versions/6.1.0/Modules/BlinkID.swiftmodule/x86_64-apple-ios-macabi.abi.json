@@ -1,0 +1,186 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BlinkID",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BlinkID"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSMutableAttributedString",
+        "printedName": "NSMutableAttributedString",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(string:style:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableAttributedString",
+                "printedName": "Foundation.NSMutableAttributedString",
+                "usr": "c:objc(cs)NSMutableAttributedString"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSParagraphStyle",
+                "printedName": "UIKit.NSParagraphStyle",
+                "usr": "c:objc(cs)NSParagraphStyle"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@CM@BlinkID@@objc(cs)NSMutableAttributedString(im)initWithString:style:",
+            "mangledName": "$sSo25NSMutableAttributedStringC7BlinkIDE6string5styleABSS_So16NSParagraphStyleCtcfc",
+            "moduleName": "BlinkID",
+            "objc_name": "initWithString:style:",
+            "declAttributes": [
+              "Dynamic",
+              "Convenience",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(string:style:font:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableAttributedString",
+                "printedName": "Foundation.NSMutableAttributedString",
+                "usr": "c:objc(cs)NSMutableAttributedString"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSParagraphStyle",
+                "printedName": "UIKit.NSParagraphStyle",
+                "usr": "c:objc(cs)NSParagraphStyle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@CM@BlinkID@@objc(cs)NSMutableAttributedString(im)initWithString:style:font:",
+            "mangledName": "$sSo25NSMutableAttributedStringC7BlinkIDE6string5style4fontABSS_So16NSParagraphStyleCSo6UIFontCtcfc",
+            "moduleName": "BlinkID",
+            "objc_name": "initWithString:style:font:",
+            "declAttributes": [
+              "Dynamic",
+              "Convenience",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSMutableAttributedString",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "intro_iOS": "3.2",
+        "objc_name": "NSMutableAttributedString",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSAttributedString",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Foundation.NSAttributedString",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
