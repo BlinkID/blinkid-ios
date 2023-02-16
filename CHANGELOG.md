@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.1.1
+
+- Fix isExpired value in recognizer result
+
 ## 6.1.0
 ### New features
 - new and improved machine learning models for data extraction
