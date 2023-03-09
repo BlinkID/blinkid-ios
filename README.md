@@ -108,7 +108,7 @@ pod init
 ```ruby
 platform :ios, '13.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 6.1.1'
+    pod 'PPBlinkID', '~> 6.1.2'
 end
 ```
 
@@ -160,20 +160,6 @@ https://github.com/BlinkID/blinkid-ios
 ![Swift Package Repo](https://user-images.githubusercontent.com/1635933/207304992-118eb25f-c46e-453f-b6fb-112f77357d4e.png)
 
 3. Choose Swift package version
-
-**NOTE: There is a [known issue](https://bugs.swift.org/browse/SR-13343) in Xcode 12 that could cause crash running on real iOS device. Please follow instructions below for the workaround:**
-
-1. Add a new copy files phase in your application’s Build Phase
-2. Change the copy files phase’s destination to Frameworks
-3. Add a new run script phase script to your app’s target
-4. Add the following script to force deep sign the frameworks with your own signing identity:
-
-```shell
-find "${CODESIGNING_FOLDER_PATH}" -name '*.framework' -print0 | while read -d $'\0' framework 
-do 
-    codesign --force --deep --sign "${EXPANDED_CODE_SIGN_IDENTITY}" --preserve-metadata=identifier,entitlements --timestamp=none "${framework}" 
-done
-```
 
 #### Manual integration
 

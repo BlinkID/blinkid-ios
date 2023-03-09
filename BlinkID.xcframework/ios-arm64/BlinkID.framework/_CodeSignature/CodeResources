@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/MBBlinkIdMultiSideRecognizerResult.h</key>
 		<data>
-		pv2zsjtTLZhpoEyNSEIeDmqPInY=
+		Fe09jIJUU3y0pk7P3tSXsvAiqMQ=
 		</data>
 		<key>Headers/MBBlinkIdOverlaySettings.h</key>
 		<data>
@@ -398,7 +398,7 @@
 		</data>
 		<key>Headers/MBIdBarcodeRecognizerResult.h</key>
 		<data>
-		zLZPwkCX3nSY10/h61XEN1QhfHo=
+		FeM2smzkn+l5mV8lf1W5tLp2lSc=
 		</data>
 		<key>Headers/MBImage.h</key>
 		<data>
@@ -742,7 +742,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Fw2ds3R2ZMkabAzW/9Sm8zz41R8=
+		YZsZ13FUOQn/pUGbpRCYXS4+cMA=
 		</data>
 		<key>Model_19d332fd742e2cc1f4d925a61caceb93ee3b225b3bad0c3966df7d1e3c9f6e0b.strop</key>
 		<data>
@@ -790,7 +790,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		5BCoy1/w6NPCzhJuUH3qx3oEAXk=
+		iVICSxw1YbrymEZZuXFS77RGebA=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -810,7 +810,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		02BpgJsGQ33+sSUzH7PDitNNOVo=
+		g6to/i4ZBbg6R/mHEfb7ecAN6PA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -886,7 +886,7 @@
 		</data>
 		<key>ar-AE.strings</key>
 		<data>
-		Q7RRhkc6ZmlOh8jJgypdbMDjCWU=
+		vVi1WUHqq8romZgt1hIGym1JEaI=
 		</data>
 		<key>arrow.png</key>
 		<data>
@@ -1665,7 +1665,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			u2j6TDLua2lAaDpziSnjwEnzceSqX5cj4dqOTpwwxQM=
+			0m3Mef9otMiPpmSeu+TR4WYEBuGBXirA7blgU1ndNOA=
 			</data>
 		</dict>
 		<key>Headers/MBBlinkIdOverlaySettings.h</key>
@@ -2197,7 +2197,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Snuz7BZQ0G/dYSD7GjCdAGVtM7kACKnt0SpqPD57bE0=
+			uMRzk97SurAARmvqTjsqI21qm+tI/0BuDgFK7RSzCH8=
 			</data>
 		</dict>
 		<key>Headers/MBImage.h</key>
@@ -2876,7 +2876,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fe7FhXHwP9rRyBLEfb05wAxsotmqVpAxSRQfnim5DwU=
+			PLh3VylmxGaYFdpDiPsWir/e/7waqxK6cM/GISN/Wtw=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -2911,7 +2911,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gCCYCe4314l5NWmTOIHoGSMnndAiw6+XlB3GqDwXbxI=
+			BYvhn03bZ1ueQWGfVQztLZVcLWQIRaF5auK9fsVesQE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -3044,7 +3044,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LjDnIrGYmatiOEQSanUql9LjfJC+JNCADuL+Ml+QoEw=
+			4oJl/ozHg/ck8IN3cGKMjZt5qy8s/PfSlQPX1tW6bqM=
 			</data>
 		</dict>
 		<key>arrow.png</key>

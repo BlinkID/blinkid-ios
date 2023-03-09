@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.1.2
+
+- Internal improvements
+
 ## 6.1.1
 
 - Fix isExpired value in recognizer result

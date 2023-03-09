@@ -19,10 +19,10 @@
 "mb_data_not_match_msg" = "يُرجى بدء عملية المسح الضوئي من جديد.";
 "mb_data_not_match_retry_button" = "إعادة المحاولة";
 "mb_data_not_match_title" = "الجانبان غير متطابقين";
-"mb_document_verification_onboarding_back_button" = "Back";
-"mb_document_verification_onboarding_cancel_button" = "Cancel";
-"mb_document_verification_onboarding_done_button" = "Done";
-"mb_document_verification_onboarding_next_button" = "Next";
+"mb_document_verification_onboarding_back_button" = "عودة";
+"mb_document_verification_onboarding_cancel_button" = "إلغاء";
+"mb_document_verification_onboarding_done_button" = "انتهى";
+"mb_document_verification_onboarding_next_button" = "التالي";
 "mb_error_mandatory_field_missing" = "إبقاء المستند مرئياً بالكامل";
 "mb_flashlight_glare_tooltip" = "احترس من وهج المصباح. \n حرك هويتك برفق لتتجنبه.";
 "mb_network_error" = "خطأ في الشبكة";

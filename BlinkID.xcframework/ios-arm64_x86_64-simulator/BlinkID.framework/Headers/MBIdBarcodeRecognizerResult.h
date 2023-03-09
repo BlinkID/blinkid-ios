@@ -6,7 +6,7 @@
 //
 
 #import "MBRecognizerResult.h"
-#import "MBDateResult.h"
+#import "MBDate.h"
 #import "MBBarcodeType.h"
 #import "MBIdBarcodeDocumentType.h"
 #import "MBBarcodeElements.h"
@@ -37,17 +37,17 @@ MB_INIT_UNAVAILABLE
 /**
 * The date of birth of the document owner.
 */
-@property (nonatomic, readonly) MBDateResult *dateOfBirth;
+@property (nonatomic, readonly) MBDate *dateOfBirth;
 
 /**
 * The date of expiry of the document.
 */
-@property (nonatomic, readonly) MBDateResult *dateOfExpiry;
+@property (nonatomic, readonly) MBDate *dateOfExpiry;
 
 /**
 * The date of issue of the document.
 */
-@property (nonatomic, readonly) MBDateResult *dateOfIssue;
+@property (nonatomic, readonly) MBDate *dateOfIssue;
 
 /**
 * The additional number of the document.
