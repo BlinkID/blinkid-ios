@@ -22,6 +22,7 @@
 #import "MBSignatureImageDpi.h"
 #import "MBEncodeSignatureImage.h"
 #import "MBCameraFrames.h"
+#import "MBClassAnonymization.h"
 
 @protocol MBBlinkIdSingleSideRecognizerDelegate;
 
@@ -31,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 * The Blink ID Recognizer is used for scanning Blink ID.
 */
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
-@interface MBBlinkIdSingleSideRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors,  MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage, MBCameraFrames>
+@interface MBBlinkIdSingleSideRecognizer : MBRecognizer <NSCopying, MBFaceImage, MBEncodeFaceImage, MBFaceImageDpi, MBFullDocumentImage, MBEncodeFullDocumentImage, MBFullDocumentImageDpi, MBFullDocumentImageExtensionFactors,  MBSignatureImage, MBSignatureImageDpi, MBEncodeSignatureImage, MBCameraFrames, MBClassAnonymization>
 
 MB_INIT
 

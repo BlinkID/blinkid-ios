@@ -136,10 +136,18 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @property(nonatomic, strong) NSString *retryButtonText;
 
 /**
-* Instructions for the user that is covering some mandatory fields for a scan
+* Instructions for the user that is covering more than two mandatory fields for a scan.
+* If defineSpecificMissingMandatoryFields is YES, this message will be shown if user is covering any mandatory field.
 * Default: Keep the document fully visible
 */
 @property(nonatomic, strong) NSString *errorMandatoryFieldMissing;
+
+/**
+* If YES and number of missing mandatory fields is <= 2, names of missing mandatory fields will be present in the message.
+*
+* Default: YES
+*/
+@property(nonatomic, assign) BOOL defineSpecificMissingMandatoryFields;
 
 /**
 * Option to configure when the onboarding help tooltip will appear.
