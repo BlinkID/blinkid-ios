@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, MBFieldType) {
     MBFieldTypeAdditionalOptionalAddressInformation,
     MBFieldTypeAdditionalPersonalIdNumber,
     MBFieldTypeAddress,
+    MBFieldTypeBloodType,
     MBFieldTypeClassEffectiveDate,
     MBFieldTypeClassExpiryDate,
     MBFieldTypeConditions,
@@ -44,6 +45,7 @@ typedef NS_ENUM(NSInteger, MBFieldType) {
     MBFieldTypeResidentialStatus,
     MBFieldTypeRestrictions,
     MBFieldTypeSex,
+    MBFieldTypeSponsor,
     MBFieldTypeVehicleClass
 };
 

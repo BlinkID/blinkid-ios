@@ -33,13 +33,15 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  * @param month month of year
  * @param year gregorian calendar
  * @param originalDateString contains original string which describes that result, e.g "23.4.1988." for every supported alphabet
+ * @param isFilledByDomainKnowledge indicates that date is filled by our internal domain knowledge
  *
  * @return initialized value
  */
 - (instancetype _Nonnull)initWithDay:(NSInteger)day
                                month:(NSInteger)month
                                 year:(NSInteger)year
-                  originalDateString:(NSString *_Nullable)originalDateString NS_DESIGNATED_INITIALIZER;
+                  originalDateString:(NSString *_Nullable)originalDateString
+           isFilledByDomainKnowledge:(BOOL)isFilledByDomainKnowledge NS_DESIGNATED_INITIALIZER;
 
 
 /**
@@ -68,6 +70,12 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  */
 @property (nonatomic, readonly, assign) NSInteger year;
 
+/**
+ * Indicates that date does not appear on the document but is filled by our internal domain knowledge.
+ *
+ * @return true if the date is filled by our internal domain knowledge
+ */
+@property (nonatomic, readonly) BOOL isFilledByDomainKnowledge;
 
 /**
  * Factory method
@@ -76,11 +84,13 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  * @param month month of year
  * @param year gregorian calendar
  * @param originalDateString contains original string which describes that result, e.g "23.4.1988." for every supported alphabet
+ * @param isFilledByDomainKnowledge indicates that date is filled by our internal domain knowledge
  *
  * @return initialized value
  */
 + (instancetype _Nonnull)dateWithDay:(NSInteger)day
                                month:(NSInteger)month
                                 year:(NSInteger)year
-                  originalDateString:(NSString *_Nullable)originalDateString;
+                  originalDateString:(NSString *_Nullable)originalDateString
+           isFilledByDomainKnowledge:(BOOL)isFilledByDomainKnowledge;
 @end

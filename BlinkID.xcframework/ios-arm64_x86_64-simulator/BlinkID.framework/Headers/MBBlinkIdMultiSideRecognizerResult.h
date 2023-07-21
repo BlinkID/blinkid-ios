@@ -273,11 +273,6 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) MBDataMatchResult *dataMatchResult;
 
-/**
- * The version of result.
- */
-@property (nonatomic, readonly) NSInteger version;
-
 @end
 
 NS_ASSUME_NONNULL_END
