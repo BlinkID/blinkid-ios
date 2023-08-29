@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Mohon jauhkan";
 "mb_blinkid_document_too_close_to_edge" = "Gerakkan dokumen dari tepian";
 "mb_blinkid_introduction_dialog_message" = "Pastikan dokumen cukup diterangi cahaya. Semua bagian dokumen harus terlihat di layar kamera.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Jenis dokumen berbeda dapat memiliki format dan lokasi kode batang yang berbeda juga. Lihat sisi depan dan belakang dokumen untuk menemukan kode batang.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Anda akan menemukan string panjang karakter di bagian bawah sisi depan atau belakang dokumen. Karakter dibagi menjadi 2 atau 3 baris dan dipisahkan oleh tanda panah (<< dan >>).";
 "mb_blinkid_introduction_dialog_title" = "Pastikan semua detail terlihat";
+"mb_blinkid_introduction_dialog_title_barcode" = "Temukan kode batang pada dokumen";
+"mb_blinkid_introduction_dialog_title_mrz" = "Temukan kode MRZ pada dokumen";
 "mb_blinkid_mf_additional_address_information" = "Informasi alamat";
 "mb_blinkid_mf_additional_name_information" = "Informasi nama";
 "mb_blinkid_mf_address" = "Alamat";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Bidang kelamin";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Kelas kendaraan";
+"mb_blinkid_onboarding_msg1_barcode" = "Pastikan jari Anda tidak menutupi bagian kode batang. Selain itu, hindari pantulan pada kode batang yang dapat menjadikannya tidak terbaca.";
+"mb_blinkid_onboarding_msg1_mrz" = "Pastikan jari Anda tidak menutupi bagian kode MRZ. Selain itu, hindari pantulan pada kode MRZ yang dapat menjadikannya tidak terbaca.";
 "mb_blinkid_onboarding_msg_1" = "Pastikan jari Anda tidak menutupi bagian mana pun dari dokumen, termasuk baris paling bawah. Waspadai juga pantulan hologram yang menerpa bagian dokumen.";
 "mb_blinkid_onboarding_msg_2" = "Hindari sorot cahaya tajam karena dapat memantul dari dokumen dan menyebabkan bagian dokumen tidak terbaca. Akibatnya, data di dokumen juga tidak akan terlihat di kamera.";
 "mb_blinkid_onboarding_msg_3" = "Pastikan ponsel dan dokumen tidak bergerak saat pemindaian. Jika bergerak, gambar bisa kabur atau data di dokumen tidak terbaca.";
+"mb_blinkid_onboarding_title1_barcode" = "Pastikan kode batang tetap terlihat";
+"mb_blinkid_onboarding_title1_mrz" = "Pastikan kode MRZ tetap terlihat";
 "mb_blinkid_onboarding_title_1" = "Pastikan semua bagian terlihat";
 "mb_blinkid_onboarding_title_2" = "Waspadai cahaya tajam";
 "mb_blinkid_onboarding_title_3" = "Pastikan dokumen tidak bergerak saat pemindaian";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Posisikan ponsel di atas slip";
 "photopay_back_splash_verification_document" = "Sisi belakang";
 "photopay_back_verification_document" = "Posisikan sisi belakang dokumen di dalam bingkai dan tunggu pemindaian otomatis.";
-"photopay_camera_permission_denied" = "%@ tidak memiliki izin untuk menggunakan kamera.\n\nSilakan buka:\n• Pengaturan\n• %@\n• Pastikan Kamera telah diaktifkan";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} tidak memiliki izin untuk menggunakan kamera.\n\nSilakan buka:\n• {font:@Medium}Pengaturan{/font}\n• {font:@Medium}%@{/font}\n• Pastikan {font:@Medium}Kamera{/font} telah diaktifkan";
 "photopay_close" = "Batal";
 "photopay_done_splash_verification_document" = "Pemindaian dokumen selesai";
 "photopay_front_splash_verification_document" = "Sisi depan";

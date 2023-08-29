@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Move farther";
 "mb_blinkid_document_too_close_to_edge" = "Move the document from the edge";
 "mb_blinkid_introduction_dialog_message" = "Make sure you keep the document well lit. All document fields should be visible on the camera screen.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Different types of documents may have different barcode formats and locations. Look at the front and back of the document for a barcode.";
+"mb_blinkid_introduction_dialog_message_mrz" = "You’ll find a long string of characters at the bottom of the front or the back of the document. It’s divided into 2 or 3 lines and separated by arrows (<< and >>).";
 "mb_blinkid_introduction_dialog_title" = "Keep all the details visible";
+"mb_blinkid_introduction_dialog_title_barcode" = "Locate barcode on the document";
+"mb_blinkid_introduction_dialog_title_mrz" = "Locate MRZ code on the document";
 "mb_blinkid_mf_additional_address_information" = "Address information";
 "mb_blinkid_mf_additional_name_information" = "Name information";
 "mb_blinkid_mf_address" = "Address";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Sex field";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Vehicle class";
+"mb_blinkid_onboarding_msg1_barcode" = "Make sure you aren’t covering parts of the barcode with a finger. Also, watch out for reflections that go over the barcode and could make it unreadable.";
+"mb_blinkid_onboarding_msg1_mrz" = "Make sure you aren’t covering parts of the MRZ code with a finger. Also, watch out for reflections that go over the MRZ code and could make it unreadable.";
 "mb_blinkid_onboarding_msg_1" = "Make sure you aren’t covering parts of the document with a finger, including the bottom lines. Also, watch out for hologram reflections that go over the document fields.";
 "mb_blinkid_onboarding_msg_2" = "Avoid direct harsh light because it reflects from the document and can make parts of the document unreadable. If you can’t read data on the document, it won’t be visible to the camera either.";
 "mb_blinkid_onboarding_msg_3" = "Try to keep the phone and document still while scanning. Moving either can blur the image and make data on the document unreadable.";
+"mb_blinkid_onboarding_title1_barcode" = "Keep the barcode visible";
+"mb_blinkid_onboarding_title1_mrz" = "Keep the MRZ code visible";
 "mb_blinkid_onboarding_title_1" = "Keep all the fields visible";
 "mb_blinkid_onboarding_title_2" = "Watch out for harsh light";
 "mb_blinkid_onboarding_title_3" = "Keep still while scanning";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Position the phone over the slip";
 "photopay_back_splash_verification_document" = "Back side";
 "photopay_back_verification_document" = "Place the back side of the document in the frame and wait for automatic scan.";
-"photopay_camera_permission_denied" = "%@ does not have permission to use the camera.\n\nPlease go to:\n• Settings\n• %@\n• Make sure that Camera is enabled";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} does not have permission to use the camera.\n\nPlease go to:\n• {font:@Medium}Settings{/font}\n• {font:@Medium}%@{/font}\n• Make sure that {font:@Medium}Camera{/font} is enabled";
 "photopay_close" = "Cancel";
 "photopay_done_splash_verification_document" = "Document scanning done";
 "photopay_front_splash_verification_document" = "Front side";

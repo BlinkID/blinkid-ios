@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Jauhkan lagi";
 "mb_blinkid_document_too_close_to_edge" = "Alihkan fokumen dari tepi";
 "mb_blinkid_introduction_dialog_message" = "Pastikan dokumen anda menerima pencahayaan yang cukup. Semua medan dokumen hendaklah kelihatan pada skrin kamera.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Jenis dokumen yang berbeza mungkin mempunyai format dan lokasi kod bar yang berbeza. Lihat bahagian depan dan belakang dokumen untuk kod bar.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Anda akan menemui rentetan aksara yang panjang di bahagian bawah bahagian hadapan atau belakang dokumen. Ia dibahagikan kepada 2 atau 3 baris dan dipisahkan dengan anak panah (<< dan >>).";
 "mb_blinkid_introduction_dialog_title" = "Pastikan semua butiran kelihatan";
+"mb_blinkid_introduction_dialog_title_barcode" = "Cari kod bar pada dokumen";
+"mb_blinkid_introduction_dialog_title_mrz" = "Cari kod MRZ pada dokumen";
 "mb_blinkid_mf_additional_address_information" = "Maklumat alamat";
 "mb_blinkid_mf_additional_name_information" = "Maklumat nama";
 "mb_blinkid_mf_address" = "Alamat";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Ruangan jantina";
 "mb_blinkid_mf_sponsor" = "Penaja";
 "mb_blinkid_mf_vehicle_class" = "Kelas kenderaan";
+"mb_blinkid_onboarding_msg1_barcode" = "Pastikan anda tidak menutup bahagian kod bar dengan jari. Selain itu, berhati-hati terhadap pantulan yang melepasi kod bar dan boleh menjadikannya tidak boleh dibaca.";
+"mb_blinkid_onboarding_msg1_mrz" = "Pastikan anda tidak menutup bahagian kod MRZ dengan jari. Juga, berhati-hati terhadap pantulan yang merentasi kod MRZ dan boleh menjadikannya tidak boleh dibaca.";
 "mb_blinkid_onboarding_msg_1" = "Pastikan anda tidak menutup sebahagian daripada dokumen dengan jari, termasuk baris bawah. Di samping itu, berhati-hati dengan pantulan hologram yang melintasi medan dokumen.";
 "mb_blinkid_onboarding_msg_2" = "Jauhi cahaya yang boleh menyilaukan mata kerana cahaya tersebut dipantulkan daripada dokumen dan boleh membuatkan sebahagian daripada dokumen tersebut tidak dapat dibaca. Jika anda tidak dapat membaca data dalam dokumen, data tersebut juga tidak akan kelihatan pada kamera.";
 "mb_blinkid_onboarding_msg_3" = "Cuba kekalkan kedudukan telefon dan dokumen semasa mengimbas. Menggerakkan kedua-duanya boleh mengaburkan imej dan menjadikan data dalam dokumen tidak dapat dibaca.";
+"mb_blinkid_onboarding_title1_barcode" = "Pastikan kod bar kelihatan";
+"mb_blinkid_onboarding_title1_mrz" = "Kekalkan";
 "mb_blinkid_onboarding_title_1" = "Pastikan semua medan kelihatan";
 "mb_blinkid_onboarding_title_2" = "Jaga-jaga dengan cahaya yang menyilaukan mata";
 "mb_blinkid_onboarding_title_3" = "Kekalkan kedudukan semasa mengimbas";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Tempatkan telefon di atas slip";
 "photopay_back_splash_verification_document" = "Bahagian belakang";
 "photopay_back_verification_document" = "Tempatkan bahagian belakang dokumen di dalam bingkai dan tunggu pengimbasan automatik.";
-"photopay_camera_permission_denied" = "%@ tidak mempunyai kebenaran untuk menggunakan kamera.\n\nSila pergi ke:\n• Tetapan\n• %@\n• Pastikan Kamera didayakan";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} tidak mempunyai kebenaran untuk menggunakan kamera.\n\nSila pergi ke:\n• {font:@Medium}Tetapan{/font}\n• {font:@Medium}%@{/font}\n• Pastikan {font:@Medium}Kamera{/font} didayakan";
 "photopay_close" = "Batal";
 "photopay_done_splash_verification_document" = "Pengimbasan dokumen selesai";
 "photopay_front_splash_verification_document" = "Bahagian hadapan";

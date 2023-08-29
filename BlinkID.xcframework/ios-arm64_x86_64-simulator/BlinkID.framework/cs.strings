@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Kousek dál";
 "mb_blinkid_document_too_close_to_edge" = "Přesunout dokument dál od kraje";
 "mb_blinkid_introduction_dialog_message" = "Ujistěte se, že je dokument dobře osvětlen. Na obrazovce fotoaparátu by měla být vidět všechna pole dokumentu.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Různé typy dokumentů se mohou lišit formátem a umístěním čárového kódu. Kód může být jak na přední, tak na zadní straně dokumentu.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Ve spodní části přední či zadní strany dokumentu najdete dlouhý řetězec znaků. Bude rozdělený do 2 nebo 3 řádků a přerušovaný šipkami (<< a >>).";
 "mb_blinkid_introduction_dialog_title" = "Všechny detaily musejí být ve viditelném stavu";
+"mb_blinkid_introduction_dialog_title_barcode" = "Vyhledejte na dokumentu čárový kód";
+"mb_blinkid_introduction_dialog_title_mrz" = "Vyhledejte na dokumentu MRZ kód";
 "mb_blinkid_mf_additional_address_information" = "Údaje adresy";
 "mb_blinkid_mf_additional_name_information" = "Údaje jména";
 "mb_blinkid_mf_address" = "Adresa";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Pole pohlaví";
 "mb_blinkid_mf_sponsor" = "Sponzor";
 "mb_blinkid_mf_vehicle_class" = "Typ vozidla";
+"mb_blinkid_onboarding_msg1_barcode" = "Zkontrolujte, zda část čárového kódu nezakrýváte prstem. Také dejte pozor na odlesky, které by mohly zapříčinit, že bude nečitelný.";
+"mb_blinkid_onboarding_msg1_mrz" = "Zkontrolujte, zda část MRZ kódu nezakrýváte prstem. Také dejte pozor na odlesky, které by mohly zapříčinit, že bude nečitelný.";
 "mb_blinkid_onboarding_msg_1" = "Ujistěte se, že prstem nezakrýváte části dokumentu, včetně spodních řádků. Dávejte si také pozor na hologramové odlesky, které přesahují pole dokumentu.";
 "mb_blinkid_onboarding_msg_2" = "Vyhněte se přímému ostrému světlu, protože se odráží od dokumentu a může způsobit, že části dokumentu nebudou čitelné. Pokud nelze údaje na dokumentu přečíst, nebudou viditelné ani pro fotoaparát.";
 "mb_blinkid_onboarding_msg_3" = "Při skenování se snažte držet telefon a dokument v klidu. Pohyb může obraz rozmazat a způsobit, že data na dokumentu nebudou čitelná.";
+"mb_blinkid_onboarding_title1_barcode" = "Nezakrývejte čárový kód";
+"mb_blinkid_onboarding_title1_mrz" = "Nezakrývejte MRZ kód";
 "mb_blinkid_onboarding_title_1" = "Všechna pole musejí být ve viditelném stavu";
 "mb_blinkid_onboarding_title_2" = "Dávejte pozor na ostré světlo";
 "mb_blinkid_onboarding_title_3" = "Při skenování se nehýbejte";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Umístěte telefon přes doklad";
 "photopay_back_splash_verification_document" = "Zadní strana";
 "photopay_back_verification_document" = "Umístěte zadní stranu dokumentu do rámečku a počkejte na automatické skenování.";
-"photopay_camera_permission_denied" = "%@ nemá povolení používat fotoaparát.\n\nJděte prosím do:\n• Nastavení\n• %@\n• Ujistěte se, že Fotoaparát je povolený";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nemá povolení používat fotoaparát.\n\nJděte prosím do:\n• {font:@Medium}Nastavení{/font}\n• {font:@Medium}%@{/font}\n• Ujistěte se, že {font:@Medium}Fotoaparát{/font} je povolený";
 "photopay_close" = "Zrušit";
 "photopay_done_splash_verification_document" = "Skenování dokumentu dokončeno";
 "photopay_front_splash_verification_document" = "Přední strana";
