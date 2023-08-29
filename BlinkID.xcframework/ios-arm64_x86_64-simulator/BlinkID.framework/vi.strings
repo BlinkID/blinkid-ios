@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Di chuyển xa hơn";
 "mb_blinkid_document_too_close_to_edge" = "Di chuyển tài liệu từ cạnh";
 "mb_blinkid_introduction_dialog_message" = "Đảm bảo rằng bạn giữ cho tài liệu được chiếu sáng tốt. Tất cả các trường tài liệu sẽ hiển thị trên màn hình camera.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Các loại giấy tờ khác nhau có thể có định dạng và vị trí mã vạch khác nhau. Hãy xem mặt trước và mặt sau của giấy tờ để tìm mã vạch.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Bạn sẽ tìm thấy một chuỗi ký tự dài ở phía dưới mặt trước hoặc mặt sau của giấy tờ. Chuỗi ký tự này được chia thành 2 hoặc 3 dòng và được phân tách bằng mũi tên (<< và >>).";
 "mb_blinkid_introduction_dialog_title" = "Đảm bảo nhìn thấy rõ tất cả các chi tiết";
+"mb_blinkid_introduction_dialog_title_barcode" = "Xác định vị trí mã vạch trên giấy tờ";
+"mb_blinkid_introduction_dialog_title_mrz" = "Xác định vị trí mã MRZ trên giấy tờ";
 "mb_blinkid_mf_additional_address_information" = "Thông tin về địa chỉ";
 "mb_blinkid_mf_additional_name_information" = "Thông tin về tên";
 "mb_blinkid_mf_address" = "Địa chỉ";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Trường giới";
 "mb_blinkid_mf_sponsor" = "Nhà tài trợ";
 "mb_blinkid_mf_vehicle_class" = "Hạng xe";
+"mb_blinkid_onboarding_msg1_barcode" = "Đảm bảo bạn không dùng ngón tay che các phần của mã vạch. Ngoài ra, hãy coi chừng ánh sáng phản xạ trên mã vạch có thể khiến mã vạch không đọc được.";
+"mb_blinkid_onboarding_msg1_mrz" = "Đảm bảo bạn không dùng ngón tay che các phần của mã MRZ. Ngoài ra, hãy coi chừng ánh sáng phản xạ trên mã MRZ có thể khiến mã MRZ không đọc được.";
 "mb_blinkid_onboarding_msg_1" = "Đảm bảo rằng bạn không dùng ngón tay che các phần của tài liệu, kể cả các dòng dưới cùng. Ngoài ra, hãy để ý các phản xạ ảnh ba chiều đi qua các trường tài liệu.";
 "mb_blinkid_onboarding_msg_2" = "Tránh ánh sáng gay gắt trực tiếp vì ánh sáng đó phản chiếu từ tài liệu và có thể làm cho các phần của tài liệu không thể đọc được. Nếu bạn không thể đọc dữ liệu trên tài liệu, chúng cũng sẽ không nhìn thấy rõ trên camera.";
 "mb_blinkid_onboarding_msg_3" = "Cố gắng giữ cố định điện thoại và tài liệu trong khi quét. Việc di chuyển có thể làm mờ hình ảnh và làm cho dữ liệu trên tài liệu không thể đọc được.";
+"mb_blinkid_onboarding_title1_barcode" = "Đảm bảo thấy rõ mã vạch";
+"mb_blinkid_onboarding_title1_mrz" = "Đảm bảo thấy rõ mã MRZ";
 "mb_blinkid_onboarding_title_1" = "Đảm bảo nhìn thấy rõ tất cả các trường";
 "mb_blinkid_onboarding_title_2" = "Đề phòng ánh sáng gay gắt";
 "mb_blinkid_onboarding_title_3" = "Giữ cố định trong khi quét";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Giữ điện thoại phía trên chứng từ";
 "photopay_back_splash_verification_document" = "Mặt sau";
 "photopay_back_verification_document" = "Đặt mặt sau của tài liệu vào khung và chờ quét tự động.";
-"photopay_camera_permission_denied" = "%@ không có quyền sử dụng camera.\n\nXin vui lòng vào:\n• Cài đặt\n• %@\n• Hãy đảm bảo rằng Camera đã được bật";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} không có quyền sử dụng camera.\n\nXin vui lòng vào:\n• {font:@Medium}Cài đặt{/font}\n• {font:@Medium}%@{/font}\n• Hãy đảm bảo rằng {font:@Medium}Camera{/font} đã được bật";
 "photopay_close" = "Hủy";
 "photopay_done_splash_verification_document" = "Đã quét xong tài liệu";
 "photopay_front_splash_verification_document" = "Mặt trước";

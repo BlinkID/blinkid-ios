@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Afaste";
 "mb_blinkid_document_too_close_to_edge" = "Mova o documento da margem";
 "mb_blinkid_introduction_dialog_message" = "Assegure-se de que mantém o documento bem iluminado. Todos os campos do documento devem estar visíveis no ecrã da câmara.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Diferentes tipos de documentos podem ter diferentes formatos e localizações de códigos de barras. Procure um código de barras na frente e no verso do documento.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Encontrará uma longa sequência de carateres na parte inferior da frente ou do verso do documento. Está dividida em 2 ou 3 linhas e separada por setas (<< e >>).";
 "mb_blinkid_introduction_dialog_title" = "Mantenha todos os pormenores visíveis";
+"mb_blinkid_introduction_dialog_title_barcode" = "Localize o código de barras no documento";
+"mb_blinkid_introduction_dialog_title_mrz" = "Localize o código MRZ no documento";
 "mb_blinkid_mf_additional_address_information" = "Informações sobre a morada";
 "mb_blinkid_mf_additional_name_information" = "Informações sobre o nome";
 "mb_blinkid_mf_address" = "Endereço";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Campo do Sexo";
 "mb_blinkid_mf_sponsor" = "Patrocinador";
 "mb_blinkid_mf_vehicle_class" = "Classe do veículo";
+"mb_blinkid_onboarding_msg1_barcode" = "Certifique-se de que não está a cobrir partes do código de barras com um dedo. Além disso, tenha em atenção os reflexos que se sobrepõem ao código de barras e que poderão torná-lo ilegível.";
+"mb_blinkid_onboarding_msg1_mrz" = "Certifique-se de que não está a cobrir partes do código MRZ com um dedo. Além disso, tenha em atenção os reflexos que se sobrepõem ao código MRZ e que poderão torná-lo ilegível.";
 "mb_blinkid_onboarding_msg_1" = "Certifique-se de que não está a cobrir partes do documento com um dedo, incluindo as linhas de fundo. Tenha também em atenção os reflexos de holograma que passam por cima dos campos do documento.";
 "mb_blinkid_onboarding_msg_2" = "Evite a luz direta e intensa porque reflete a partir do documento e pode tornar ilegíveis partes do documento. Se não conseguir ler os dados no documento, também não serão visíveis para a câmara.";
 "mb_blinkid_onboarding_msg_3" = "Tente manter o telefone e o documento imóveis enquanto digitaliza. A deslocação de qualquer um deles pode desfocar a imagem e tornar ilegíveis os dados no documento.";
+"mb_blinkid_onboarding_title1_barcode" = "Mantenha o código de barras visível";
+"mb_blinkid_onboarding_title1_mrz" = "Mantenha o código MRZ visível";
 "mb_blinkid_onboarding_title_1" = "Mantenha todos os campos visíveis";
 "mb_blinkid_onboarding_title_2" = "Cuidado com a luz intensa";
 "mb_blinkid_onboarding_title_3" = "Mantenha-se imóvel enquanto digitaliza";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Coloque o telefone sobre o talão";
 "photopay_back_splash_verification_document" = "Verso";
 "photopay_back_verification_document" = "Posicione o verso do documento no interior do enquadramento e aguarde a digitalização automática.";
-"photopay_camera_permission_denied" = "A %@ não tem permissão para usar a câmara.\n\nDirija-se a:\n• Definições\n• %@\nCertifique-se de que a opção da Câmara está ativada";
+"photopay_camera_permission_denied" = "A {font:@Medium}%@{/font} não tem permissão para usar a câmara.\n\nDirija-se a:\n• {font:@Medium}Definições{/font}\n• {font:@Medium}%@{/font}\nCertifique-se de que a opção da {font:@Medium}Câmara{/font} está ativada";
 "photopay_close" = "Cancelar";
 "photopay_done_splash_verification_document" = "Digitalização de documentos concluída";
 "photopay_front_splash_verification_document" = "Frente";

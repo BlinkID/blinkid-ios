@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Ilayo pa";
 "mb_blinkid_document_too_close_to_edge" = "Iurong ang dokumento mula sa gilid";
 "mb_blinkid_introduction_dialog_message" = "Tiyaki na lubos na naiilawan ang dokumento. Dapat nakikita sa screen ng camera ang lahat ng field ng dokumento.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Maaaring may iba't ibang format at lokasyon ng barcode ang iba't ibang uri ng mga dokumento. Tumingin sa harap at likod ng dokumento para sa isang barcode.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Makakakita ka ng mahabang string ng mga character sa ibaba ng harap o likod ng dokumento. Nahahati ito sa 2 o 3 linya at pinaghihiwalay ng mga arrow (<< at >>).";
 "mb_blinkid_introduction_dialog_title" = "Panatilihing nakikita ang lahat ng detalye";
+"mb_blinkid_introduction_dialog_title_barcode" = "Hanapin ang barcode sa dokumento";
+"mb_blinkid_introduction_dialog_title_mrz" = "Hanapin ang MRZ code sa dokumento";
 "mb_blinkid_mf_additional_address_information" = "Impormasyon sa tinitirhan";
 "mb_blinkid_mf_additional_name_information" = "Impormasyon ng pangalan";
 "mb_blinkid_mf_address" = "Address";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Kasarian";
 "mb_blinkid_mf_sponsor" = "Isponsor";
 "mb_blinkid_mf_vehicle_class" = "Uri ng sasakyan";
+"mb_blinkid_onboarding_msg1_barcode" = "Tiyaking hindi mo tinatakpan ang mga bahagi ng barcode gamit ang isang daliri. Gayundin, mag-ingat sa mga pagmumuni-muni na lumalampas sa barcode at maaaring gawin itong hindi nababasa.";
+"mb_blinkid_onboarding_msg1_mrz" = "Tiyaking hindi mo sinasaklaw ang mga bahagi ng MRZ code gamit ang isang daliri. Gayundin, mag-ingat sa mga pagmumuni-muni na lumalampas sa MRZ code at maaaring gawin itong hindi nababasa.";
 "mb_blinkid_onboarding_msg_1" = "Siguraduhin na hindi natatakpak ng iyong daliri ang mga bahagi ng dokumento, pati na ang pinakababang mga linya. Gayon rin, tingnan rin kung may mga hologram reflection na maaaring makatakip sa mga field ng dokumento.";
 "mb_blinkid_onboarding_msg_2" = "Iwasan ang direktang nakakasilaw na liwanag dahil umaaninag ito mula sa dokumento at puwedeng gawing hindi nababasa ang mga bahagi ng dokumento. Kung hindi mo mabasa ang data sa dokuemnto, hindi rin ito makikita ng camera.";
 "mb_blinkid_onboarding_msg_3" = "Panatilihing ito gumagalaw ang telepono at dokumento habang nag-i-scan. Puwedeng maging malabo at hindi nababasa ang data sa dokumento kapag gumalaw.";
+"mb_blinkid_onboarding_title1_barcode" = "Panatilihing nakikita ang barcode";
+"mb_blinkid_onboarding_title1_mrz" = "Panatilihing nakikita ang MRZ code";
 "mb_blinkid_onboarding_title_1" = "Panatilihing nakikita ang lahat ng field";
 "mb_blinkid_onboarding_title_2" = "Tingnan kung may nakakasilaw na liwanag";
 "mb_blinkid_onboarding_title_3" = "Panatilihing hindi gumagalaw habang nag-i-scan";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Iposisyon ang telepono sa slip";
 "photopay_back_splash_verification_document" = "Likurang bahagi";
 "photopay_back_verification_document" = "Ilagay ang likurang bahagi ng dokumento sa loob ng frame at maghintay para sa awtomatikong pag-scan.";
-"photopay_camera_permission_denied" = "Walang pahintulot ang %@ na gamitin ang camera.\n\nPumunta sa:\n• Mga Setting\n• %@\n• Tiyaking naka-enable ang Camera";
+"photopay_camera_permission_denied" = "Walang pahintulot ang {font:@Medium}%@{/font} na gamitin ang camera.\n\nPumunta sa:\n• {font:@Medium}Mga Setting{/font}\n• {font:@Medium}%@{/font}\n• Tiyaking naka-enable ang {font:@Medium}Camera{/font}";
 "photopay_close" = "Kanselahin";
 "photopay_done_splash_verification_document" = "Tapos na ang pag-i-scan sa dokumento";
 "photopay_front_splash_verification_document" = "Harapang bahagi";

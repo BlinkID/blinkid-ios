@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Îndepărtați";
 "mb_blinkid_document_too_close_to_edge" = "Îndepărtați documentul de margine";
 "mb_blinkid_introduction_dialog_message" = "Asigurați-vă că documentul este bine iluminat. Toate secțiunile din document trebuie să fie vizibile pe ecranul camerei.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Diferite tipuri de documente pot avea diferite formate de coduri de bare și amplasări. Căutați codul de bare pe ambele părți ale documentului.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Veți găsi un șir lung de caractere în partea de jos a documentului, pe fața sau pe spatele acestuia. Este împărțit în 2 sau 3 rânduri și separat prin săgeți (<< și >>).";
 "mb_blinkid_introduction_dialog_title" = "Asigurați vizibilitatea tuturor detaliilor";
+"mb_blinkid_introduction_dialog_title_barcode" = "Găsiți codul de bare pe document";
+"mb_blinkid_introduction_dialog_title_mrz" = "Găsiți codul MRZ pe document";
 "mb_blinkid_mf_additional_address_information" = "Informații adresă";
 "mb_blinkid_mf_additional_name_information" = "Informații nume";
 "mb_blinkid_mf_address" = "Adresa";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Câmpul „sex\"";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Clasa vehiculului";
+"mb_blinkid_onboarding_msg1_barcode" = "Asigurați-vă că nu acoperiți părți ale codului de bare cu un deget. De asemenea, aveți grijă să nu se formeze reflexii peste codul de bare, deoarece îl pot face ilizibil.";
+"mb_blinkid_onboarding_msg1_mrz" = "Asigurați-vă că nu acoperiți părți ale codului MRZ cu degetul. De asemenea, aveți grijă să nu se formeze reflexii peste codul MRZ, deoarece îl pot face ilizibil.";
 "mb_blinkid_onboarding_msg_1" = "Asigurați-vă că nu ați acoperit cu degetul porțiuni din document, nici rândurile de jos. Evitați și reflexiile holografice care se suprapun pe secțiunile din document.";
 "mb_blinkid_onboarding_msg_2" = "Evitați lumina puternică directă, deoarece se va reflecta din document și poate face imposibilă citirea anumitor porțiuni din acesta. Dacă nu puteți citi datele din document, ele nu vor fi vizibile nici pe cameră.";
 "mb_blinkid_onboarding_msg_3" = "Încercați să mențineți telefonul și documentul imobile în timpul scanării. Mișcările pot compromite claritatea imaginii și pot face imposibilă citirea datelor din document.";
+"mb_blinkid_onboarding_title1_barcode" = "Păstrați codul de bare vizibil";
+"mb_blinkid_onboarding_title1_mrz" = "Păstrați codul MRZ vizibil";
 "mb_blinkid_onboarding_title_1" = "Asigurați vizibilitatea tuturor secțiunilor";
 "mb_blinkid_onboarding_title_2" = "Feriți-vă de lumina puternică";
 "mb_blinkid_onboarding_title_3" = "Nu vă mișcați în timpul scanării";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Poziționați telefonul deasupra formularului";
 "photopay_back_splash_verification_document" = "Spatele";
 "photopay_back_verification_document" = "Poziționați spatele documentului în cadru și așteptați să fie scanat automat.";
-"photopay_camera_permission_denied" = "%@ nu are permisiunile necesare pentru a folosi fotocamera.\n\nMergeți la:\n• Setări\n• %@\n• Asigurați-vă că Fotocamera este activată";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nu are permisiunile necesare pentru a folosi fotocamera.\n\nMergeți la:\n• {font:@Medium}Setări{/font}\n• {font:@Medium}%@{/font}\n• Asigurați-vă că {font:@Medium}Fotocamera{/font} este activată";
 "photopay_close" = "Anulare";
 "photopay_done_splash_verification_document" = "Scanarea documentului a fost terminată";
 "photopay_front_splash_verification_document" = "Fața";

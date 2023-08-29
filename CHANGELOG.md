@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.2.1
+
+- Fixed the issue with reading the back side of the USA/Washington and USA/Vermont driving license documents.
+
 ## 6.2.0
 
 ### New features

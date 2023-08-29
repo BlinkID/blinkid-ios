@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "התרחק/י";
 "mb_blinkid_document_too_close_to_edge" = "הזז/י את המסמך מהקצה";
 "mb_blinkid_introduction_dialog_message" = "המסמך חייב להיות מואר היטב. כל שדות המסמכים צריכים להיות גלויים על מסך המצלמה.";
+"mb_blinkid_introduction_dialog_message_barcode" = "לסוגים שונים של מסמכים עשויים להיות פורמטים ומיקומים שונים של ברקוד. חפשו ברקוד בחלק הקדמי והאחורי של המסמך.";
+"mb_blinkid_introduction_dialog_message_mrz" = "תמצאו מחרוזת ארוכה של תווים בתחתית החלק הקדמי או האחורי של המסמך. היא מחולקת ל-2 או 3 שורות ומופרדת על ידי חיצים (<< ו->>).";
 "mb_blinkid_introduction_dialog_title" = "כל הפרטים חייבים להיות גלויים";
+"mb_blinkid_introduction_dialog_title_barcode" = "אתרו ברקוד במסמך";
+"mb_blinkid_introduction_dialog_title_mrz" = "אתרו קוד MRZ במסמך";
 "mb_blinkid_mf_additional_address_information" = "פרטי הכתובת";
 "mb_blinkid_mf_additional_name_information" = "פרטי השם";
 "mb_blinkid_mf_address" = "כתובת";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "שדה מין";
 "mb_blinkid_mf_sponsor" = "ספונסר";
 "mb_blinkid_mf_vehicle_class" = "סיווג כלי הרכב";
+"mb_blinkid_onboarding_msg1_barcode" = "ודאו שאינכם מכסים חלקים מהברקוד עם האצבע. כמו כן, היזהרו מהשתקפויות על גבי הברקוד שעלולות להפוך אותו לבלתי קריא.";
+"mb_blinkid_onboarding_msg1_mrz" = "ודאו שאינכם מכסים חלקים מקוד ה-MRZ עם האצבע. כמו כן, היזהרו מהשתקפויות על גבי קוד ה-MRZ שעלולות להפוך אותו לבלתי קריא.";
 "mb_blinkid_onboarding_msg_1" = "הקפד לא לכסות חלקים מהמסמך באצבע, כולל השורות התחתונות.כמו כן, היזהר מהשתקפויות הולוגרמה העוברות על שדות המסמך.";
 "mb_blinkid_onboarding_msg_2" = "הימנע מאור ישיר חזק מכיוון שהוא משתקף מהמסמך ועלול להפוך חלקים מהמסמך לבלתי קריאים. אם אינך יכול לקרוא את הנתונים במסמך, הם לא יהיו גלויים גם למצלמה.";
 "mb_blinkid_onboarding_msg_3" = "נסה לשמור על יציבות הטלפון והמסמך בזמן הסריקה. הזזתם עלולה לטשטש את התמונה ולהפוך את הנתונים במסמך לבלתי קריאים.";
+"mb_blinkid_onboarding_title1_barcode" = "הקפידו שהברקוד יישאר גלוי";
+"mb_blinkid_onboarding_title1_mrz" = "הקפידו שקוד ה-MRZ יישאר גלוי";
 "mb_blinkid_onboarding_title_1" = "כל השדות צריכים להיות גלויים";
 "mb_blinkid_onboarding_title_2" = "התרחק מאור חזק";
 "mb_blinkid_onboarding_title_3" = "הישאר יציב בזמן הסריקה";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "למקם את הטלפון מעל השובר";
 "photopay_back_splash_verification_document" = "הצד האחורי";
 "photopay_back_verification_document" = "נא להניח את צדו האחורי של המסמך במסגרת ולחכות לסריקה האוטומטית.";
-"photopay_camera_permission_denied" = "ל-%@ אין הרשאה להשתמש במצלמה.\n\nנא לעבור אל:\n*  הגדרות\n* %@\n* נא לוודא ש- מצלמה  זמין";
+"photopay_camera_permission_denied" = "ל-{font:@Medium}%@{/font} אין הרשאה להשתמש במצלמה.\n\nנא לעבור אל:\n*  {font:@Medium}הגדרות{/font}\n* {font:@Medium}%@{/font}\n* נא לוודא ש-{font:@Medium} מצלמה {/font} זמין";
 "photopay_close" = "ביטול";
 "photopay_done_splash_verification_document" = "סריקת המסמך בוצעה";
 "photopay_front_splash_verification_document" = "הצד הקדמי";

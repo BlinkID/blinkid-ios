@@ -6,7 +6,11 @@
 "mb_blinkid_camera_near" = "Oddaljite";
 "mb_blinkid_document_too_close_to_edge" = "Dokument odmaknite od roba";
 "mb_blinkid_introduction_dialog_message" = "Poskrbite, da bo dokument dobro osvetljen. Na zaslonu kamere morajo biti vidna vsa polja dokumenta.";
+"mb_blinkid_introduction_dialog_message_barcode" = "Različne vrste dokumentov imajo lahko različne oblike črtnih kod in lokacije. Črtno kodo poiščite na sprednji in zadnji strani dokumenta.";
+"mb_blinkid_introduction_dialog_message_mrz" = "Na dnu sprednje ali zadnje strani dokumenta boste našli dolg niz znakov. Razdeljen je na 2 ali 3 vrstice in ločen s puščicami (<< in >>).";
 "mb_blinkid_introduction_dialog_title" = "Vidni morajo biti vsi podatki";
+"mb_blinkid_introduction_dialog_title_barcode" = "Poiščite črtno kodo na dokumentu";
+"mb_blinkid_introduction_dialog_title_mrz" = "Poiščite kodo MRZ v dokumentu";
 "mb_blinkid_mf_additional_address_information" = "Podatki o naslovu";
 "mb_blinkid_mf_additional_name_information" = "Podatki o imenu";
 "mb_blinkid_mf_address" = "Naslov";
@@ -43,9 +47,13 @@
 "mb_blinkid_mf_sex" = "Področje spola";
 "mb_blinkid_mf_sponsor" = "Sponzor";
 "mb_blinkid_mf_vehicle_class" = "Razred vozila";
+"mb_blinkid_onboarding_msg1_barcode" = "Prepričajte se, da s prstom ne prekrivate delov črtne kode. Pazite tudi na odseve, ki prekrivajo črtno kodo in jo lahko naredijo nečitljivo.";
+"mb_blinkid_onboarding_msg1_mrz" = "Prepričajte se, da s prstom ne zakrivate delov kode MRZ. Pazite tudi na odseve, ki prekrivajo kodo MRZ in jo lahko naredijo nečitljivo.";
 "mb_blinkid_onboarding_msg_1" = "Poskrbite, da s prstom ne boste prekrivali delov dokumenta, to velja tudi za spodnjo linijo. Prav tako bodite pozorni na hologramske znake, ki gredo preko polj na dokumentu.";
 "mb_blinkid_onboarding_msg_2" = "Izogibajte se neposredni močni svetlobi, saj se ta odbija od dokumenta in lahko dele dokumenta naredi neberljive. Če ne morete prebrati podatkov na dokumentu, jih niti kamera ne bo mogla videti.";
 "mb_blinkid_onboarding_msg_3" = "Potrudite se, da bosta med optičnim branjem telefon in dokument pri miru. Če se kateri od njiju premakne, se lahko slika razmaže in dokument postane neberljiv.";
+"mb_blinkid_onboarding_title1_barcode" = "Črtna koda naj bo vidna";
+"mb_blinkid_onboarding_title1_mrz" = "Koda MRZ naj bo vidna";
 "mb_blinkid_onboarding_title_1" = "Vidna morajo biti vsa polja";
 "mb_blinkid_onboarding_title_2" = "Svetloba ne sme biti premočna";
 "mb_blinkid_onboarding_title_3" = "Držite pri miru med optičnim branjem";
@@ -73,7 +81,7 @@
 "photopay_align_message" = "Postavite telefon nad potrdilo";
 "photopay_back_splash_verification_document" = "Zadnja stran";
 "photopay_back_verification_document" = "Zadnjo stran dokumenta postavite v okvir in počakajte na samodejno optično branje.";
-"photopay_camera_permission_denied" = "%@ nima dovoljenja za uporabo kamere.\n\nPojdite na:\n• Nastavitve\n• %@\n• Prepričajte se, da je možnost Kamera omogočena";
+"photopay_camera_permission_denied" = "{font:@Medium}%@{/font} nima dovoljenja za uporabo kamere.\n\nPojdite na:\n• {font:@Medium}Nastavitve{/font}\n• {font:@Medium}%@{/font}\n• Prepričajte se, da je možnost {font:@Medium}Kamera{/font} omogočena";
 "photopay_close" = "Prekliči";
 "photopay_done_splash_verification_document" = "Optično branje dokumenta končano";
 "photopay_front_splash_verification_document" = "Sprednja stran";
