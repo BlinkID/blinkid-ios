@@ -43,6 +43,18 @@ MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
 /** Starts animating the reticle. Does nothing if the reticle is already animating. */
 - (void)animateArcRotation;
 
+/**
+ * Custom reticle image. Shown instead of default circle.
+ * Content mode: center.
+ * Size: 88 x 88.
+ * Default: nil
+ */
+@property(nullable, nonatomic, strong) UIImage *reticleImage;
+/** Custom tint color used for arc and progress animation. Default white. */
+@property(nonatomic, strong) UIColor *reticleColor;
+/** Custom tint color used for tinting reticleImage. Ignored if white. */
+@property(nonatomic, strong) UIColor *reticleDefaultColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

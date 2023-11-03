@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBOcrLayout.h"
+#import "MBRecognizerRunnerViewController.h"
 
 @class MBOcrLayout;
 @protocol MBRecognizerRunnerViewController;

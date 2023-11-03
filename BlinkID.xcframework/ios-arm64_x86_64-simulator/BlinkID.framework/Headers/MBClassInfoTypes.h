@@ -263,7 +263,8 @@ typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountryYemen,
     MBCountryYugoslavia,
     MBCountryZambia,
-    MBCountryZimbabwe
+    MBCountryZimbabwe,
+    MBSchengenArea
 };
 
 typedef NS_ENUM(NSInteger, MBRegion) {
@@ -452,7 +453,8 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeProvisionalDl,
     MBTypeRefugeePassport,
     MBTypeSpecialId,
-    MBTypeUniformedServicesId
+    MBTypeUniformedServicesId,
+    MBImmigrantVisa
 };
 
 #endif /* MBClassInfoTypes_h */

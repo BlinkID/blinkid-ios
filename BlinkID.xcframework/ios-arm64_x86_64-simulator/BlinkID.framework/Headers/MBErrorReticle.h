@@ -16,7 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
 @interface MBErrorReticle : MBSubview
 
+/** Custom tint color used for tinting reticleImage. Ignored if white. */
 @property(nonatomic, strong) UIColor *errorColor;
+/**
+ * Custom reticle image. Shown instead of default circle.
+ * Content mode: center.
+ * Size: 88 x 88.
+ * Default: nil
+ */
+@property(nonatomic, strong) UIImage *errorReticleImage;
 
 @end
 

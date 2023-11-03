@@ -9,6 +9,7 @@
 #define MBFaceImageResult_h
 
 #import "MBImage.h"
+#import "MBStringResult.h"
 
 @protocol MBFaceImageResult
 
