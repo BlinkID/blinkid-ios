@@ -66,27 +66,6 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @property (nonatomic, assign) CGFloat flashlightWarningCornerRadius;
 
 /**
- * Reticle error color
- *
- * Default: red alpha .4f
-*/
-@property (nonatomic, strong) UIColor *reticleErrorColor;
-
-/**
- * Success flash color
- *
- * Default: white
-*/
-@property (nonatomic, strong) UIColor *successFlashColor;
-
-/**
- * Image that animates when scanning is successful
- *
- * Default: check mark image
-*/
-@property (nonatomic, strong) UIImage *successScanningImage;
-
-/**
  * First image in animation queu that is shown on first side finished scanning
  *
  * Default: check mark image
@@ -234,6 +213,55 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  * Default: need-help-tooltip-dark
 */
 @property (nonatomic) UIImage *helpButtonDarkImage;
+
+/**
+ * Default Reticle image
+ *
+ * Default: nil
+*/
+@property (nullable, nonatomic, strong) UIImage *defaultReticleImage;
+
+/**
+ * Image that animates when scanning is successful
+ *
+ * Default: check mark image
+*/
+@property (nonatomic, strong) UIImage *successScanningImage;
+
+/**
+ * Reticle error image
+ *
+ * Default: nil
+*/
+@property (nullable, nonatomic, strong) UIImage *errorReticleImage;
+
+/**
+ * Reticle animation color that is active before a card is detected
+ *
+ * Default: white
+*/
+@property (nonatomic, strong) UIColor *reticleColor;
+
+/**
+ * Reticle error color
+ *
+ * Default: red alpha .4f
+*/
+@property (nonatomic, strong) UIColor *reticleDefaultColor;
+
+/**
+ * Reticle error color
+ *
+ * Default: red alpha .4f
+*/
+@property (nonatomic, strong) UIColor *reticleErrorColor;
+
+/**
+ * Success flash color
+ *
+ * Default: white
+*/
+@property (nonatomic, strong) UIColor *successFlashColor;
 
 @end
 

@@ -21,6 +21,12 @@ typedef NS_ENUM(NSInteger, MBAlphabetType) {
     MBAlphabetTypeCyrillic
 };
 
+typedef NS_ENUM(NSInteger, MBSide) {
+    MBSideNone = 0,
+    MBSideFront,
+    MBSideBack
+};
+
 /**
  * Class for all obtaining original string per alphabet type
  */
@@ -36,6 +42,26 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  * @return value of the specified alphabet type.
  */
 - (NSString *)valueForAlphabetType:(MBAlphabetType)alphabetType;
+
+/**
+ * @return the CGRect location, if result is detected, else CGRectNull. Priority given to Latin alphabet.
+ */
+@property(nonatomic, readonly) CGRect location;
+
+/**
+ * @return location of the specified alphabet type.
+ */
+- (CGRect)locationForAlphabetType:(MBAlphabetType)alphabetType;
+
+/**
+ * @return the MBSide side, if result is detected, else MBSideNone. Priority given to Latin alphabet.
+ */
+@property(nonatomic, readonly) MBSide side;
+
+/**
+ * @return side of the specified alphabet type.
+ */
+- (MBSide)sideForAlphabetType:(MBAlphabetType)alphabetType;
 
 - (instancetype _Nonnull)init NS_UNAVAILABLE;
 

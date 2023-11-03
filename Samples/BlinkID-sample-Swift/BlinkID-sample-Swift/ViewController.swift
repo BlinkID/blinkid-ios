@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Valid until: 2023-11-21
+        // Valid until: 2024-3-3
         MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "txt", inSubdirectory: "", for: Bundle.main) { (_) in
         }
     }
@@ -84,7 +84,6 @@ extension ViewController: MBBlinkIdOverlayViewControllerDelegate {
 
         var message: String = ""
         var title: String = ""
-
         if self.blinkIdRecognizer?.result.resultState == MBRecognizerResultState.valid {
             title = "BlinkID"
 

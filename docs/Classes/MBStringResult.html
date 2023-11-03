@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v6.2.1 Docs
+          PPBlinkID v6.3.0 Docs
         </a>
          (81% documented)
       </p>
@@ -141,7 +141,7 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)MBEntity">MBEntity</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)MBErrorReticle">MBErrorReticle</a>
+                <a class="nav-group-task-link" href="../Classes/MBErrorReticle.html">MBErrorReticle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBFixedDewarpPolicy.html">MBFixedDewarpPolicy</a>
@@ -499,7 +499,7 @@
             <p>Class for all obtaining original string per alphabet type</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.2.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L28-L42">Show on GitHub</a>
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L34-L68">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -541,7 +541,7 @@
                         <p>the non-empty value, if such is present, with priority given to Latin alphabet.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.2.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L33">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -579,7 +579,159 @@
                         <p>value of the specified alphabet type.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.2.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L44">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBStringResult(py)location"></a>
+                    <a name="//apple_ref/objc/Property/location" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBStringResult(py)location">location</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">location</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the CGRect location, if result is detected, else CGRectNull. Priority given to Latin alphabet.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBStringResult(im)locationForAlphabetType:"></a>
+                    <a name="//apple_ref/objc/Method/-locationForAlphabetType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBStringResult(im)locationForAlphabetType:">-locationForAlphabetType:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">CGRect</span><span class="p">)</span><span class="nf">locationForAlphabetType</span><span class="p">:(</span><span class="n">MBAlphabetType</span><span class="p">)</span><span class="nv">alphabetType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">location</span><span class="p">(</span><span class="k">for</span> <span class="nv">alphabetType</span><span class="p">:</span> <span class="kt">MBAlphabetType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGRect</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>location of the specified alphabet type.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBStringResult(py)side"></a>
+                    <a name="//apple_ref/objc/Property/side" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBStringResult(py)side">side</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">MBSide</span> <span class="n">side</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">side</span><span class="p">:</span> <span class="kt">MBSide</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the MBSide side, if result is detected, else MBSideNone. Priority given to Latin alphabet.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBStringResult(im)sideForAlphabetType:"></a>
+                    <a name="//apple_ref/objc/Method/-sideForAlphabetType:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBStringResult(im)sideForAlphabetType:">-sideForAlphabetType:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">MBSide</span><span class="p">)</span><span class="nf">sideForAlphabetType</span><span class="p">:(</span><span class="n">MBAlphabetType</span><span class="p">)</span><span class="nv">alphabetType</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">side</span><span class="p">(</span><span class="k">for</span> <span class="nv">alphabetType</span><span class="p">:</span> <span class="kt">MBAlphabetType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MBSide</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>side of the specified alphabet type.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.3.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStringResult.h#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -592,7 +744,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2023 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2023-08-29)</p>
+      <p>&copy; 2023 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2023-11-03)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

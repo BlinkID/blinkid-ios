@@ -1,5 +1,34 @@
 # Release notes
 
+## 6.3.0
+
+### New features
+
+- Changes to`StringResult`:
+  - new properties:
+    - `location` - location coordinates of the first detected result, priority `latin`, `arabic`, `cyrillic`
+    - `side` - document side of the first detected result, priority `latin`, `arabic`, `cyrillic`
+  - new methods:
+    - `location(AlphabetType)` - location coordinates of every non-empty result are available
+    - `side (AlphabetType)` - document side of every non-empty result is available
+
+- Changes to `BlinkIdSingleSideRecognizerResult` and `BlinkIdMultiSideRecognizerResult`:
+  - new properties:
+    - `faceImageLocation`
+    - `faceImageSide`
+
+- added new items to enums:
+  - Country:
+    - SCHENGEN_AREA
+  - Type:
+    - IMMIGRANT_VISA
+
+### Bugfixes
+- Remove autofill on `Russian` passport `DateOfExpiry` when present on a document
+- Improved scanning success rate and stability when using `BlinkIdMultiSideRecognizer`
+- Fix crash with certain `RecognitionModeFilter` combinations
+- Improve scanning experience with the new iPhone 15 Pro and iPhone 15 Pro Max devices
+
 ## 6.2.1
 
 - Fixed the issue with reading the back side of the USA/Washington and USA/Vermont driving license documents.

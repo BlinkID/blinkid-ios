@@ -17,6 +17,13 @@ typedef NS_ENUM(NSInteger, MBCardOrientation) {
     MBCardOrientationVertical
 };
 
+typedef NS_ENUM(NSInteger, MBRotation) {
+    MBRotationZero,
+    MBRotationClockwise90,
+    MBRotationCounterClockwise90,
+    MBRotationUpsideDown
+};
+
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
 @interface MBImageAnalysisResult : NSObject
 
