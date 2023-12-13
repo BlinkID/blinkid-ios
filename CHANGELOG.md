@@ -1,5 +1,72 @@
 # Release notes
 
+## 6.4.0
+
+### New features
+
+- Added new result member `cardRotation` to `ImageAnalysisResult`
+- New `CardOrientation` status - `NotAvailable`
+
+- New `Region` enum values:
+    - `DISTRITO_FEDERAL`
+    - `MARANHAO`
+    - `MATO_GROSSO`
+    - `MINAS_GERAIS`
+    - `PARA`
+    - `PARANA`
+    - `PERNAMBUCO`
+    - `SANTA_CATARINA`
+- New `Type` enum values:
+    - `CONSULAR_VOTER_ID`
+    - `TWIC_CARD`
+
+### Added support for 8 new documents
+
+- Bolivia - Paper Passport
+- Brazil - Alien ID
+- Brazil - Distrito Federal - Identity Card
+- Brazil - Minas Gerais - Identity Card
+- Cameroon - Polycarbonate Passport
+- Costa Rica - Paper Passport
+- UK - Proof of Age Card
+- USA - Twic Card
+
+### Added support for 14 new versions of already supported documents
+
+- Brazil - Driver’s License
+- Luxembourg - Identity Card
+- North Macedonia - Identity Card
+- Portugal - Driver’s License
+- Slovakia - Identity Card
+- Switzerland - Identity Card
+- Switzerland - Driver’s License
+- Turkey - Polyc
+
+### Added support for 17 new documents in BETA
+
+- Australia - Australian Capital Territory - Identity Card
+- Australia - Queensland - Proof of Age Card
+- Australia - Tasmania - Identity Card
+- Australia - Western Australia - Identity Card
+- Bahrain - Driver’s License
+- Bahrain - Paper Passport
+- Brazil - Maranhao - Identity Card
+- Brazil - Mato Grosso - Identity Card
+- Brazil - Para - Identity Card
+- Brazil - Parana - Identity Card
+- Brazil - Pernambuco - Identity Card
+- Brazil - Santa Catarina - Identity Card
+- Cameroon - Paper Passport
+- Mexico - Quintana Roo, Benito Juarez - Driver’s License
+- Mexico - Quintana Roo -Driver’s License
+- Switzerland - Polycarbonate Passport
+- UAE - Polycarbonate Passport
+
+### Bug Fixes
+
+- Fixed the issue where the wrong missing field message was shown when the mandatory field was missing
+- Minor bugfixes and improvements
+
 ## 6.3.0
 
 ### New features

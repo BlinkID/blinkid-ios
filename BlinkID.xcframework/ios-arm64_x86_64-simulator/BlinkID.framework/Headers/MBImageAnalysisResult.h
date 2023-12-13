@@ -14,14 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, MBCardOrientation) {
     MBCardOrientationHorizontal,
-    MBCardOrientationVertical
+    MBCardOrientationVertical,
+    MBCardOrientationNotAvailable
 };
 
 typedef NS_ENUM(NSInteger, MBRotation) {
     MBRotationZero,
     MBRotationClockwise90,
     MBRotationCounterClockwise90,
-    MBRotationUpsideDown
+    MBRotationUpsideDown,
+    MBRotationNone
 };
 
 MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
@@ -63,6 +65,12 @@ MB_INIT_UNAVAILABLE
  * Orientation determined from the scanned image.
  */
 @property (nonatomic, readonly, assign) MBCardOrientation cardOrientation;
+
+/**
+ * Orientation determined from the scanned image.
+ */
+
+@property (nonatomic, readonly, assign) MBRotation cardRotation;
 
 @end
 
