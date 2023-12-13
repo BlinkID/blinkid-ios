@@ -264,7 +264,7 @@ typedef NS_ENUM(NSInteger, MBCountry) {
     MBCountryYugoslavia,
     MBCountryZambia,
     MBCountryZimbabwe,
-    MBSchengenArea
+    MBCountrySchengenArea
 };
 
 typedef NS_ENUM(NSInteger, MBRegion) {
@@ -391,7 +391,15 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionRioGrandeDoSul,
     MBRegionNorthwestTerritories,
     MBRegionNunavut,
-    MBRegionPrinceEdwardIsland
+    MBRegionPrinceEdwardIsland,
+    MBRegionDistritoFederal,
+    MBRegionMaranhao,
+    MBRegionMatoGrosso,
+    MBRegionMinasGerais,
+    MBRegionPara,
+    MBRegionParana,
+    MBRegionPernambuco,
+    MBRegionSantaCatarina
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -454,7 +462,9 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeRefugeePassport,
     MBTypeSpecialId,
     MBTypeUniformedServicesId,
-    MBImmigrantVisa
+    MBTypeImmigrantVisa,
+    MBTypeConsularVoterId,
+    MBTypeTwicCard
 };
 
 #endif /* MBClassInfoTypes_h */

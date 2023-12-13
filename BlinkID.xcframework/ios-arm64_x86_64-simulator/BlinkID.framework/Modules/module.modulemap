@@ -1,7 +1,7 @@
 framework module BlinkID {
   umbrella header "BlinkID.h"
-
   export *
+
   module * { export * }
 }
 
