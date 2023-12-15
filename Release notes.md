@@ -19,6 +19,11 @@
 - New `Type` enum values:
     - `CONSULAR_VOTER_ID`
     - `TWIC_CARD`
+    
+### Bug Fixes
+
+- Fixed the issue where the wrong missing field message was shown when the mandatory field was missing
+- Minor bugfixes and improvements
 
 ### Added support for 8 new documents
 
@@ -40,7 +45,13 @@
 - Slovakia - Identity Card
 - Switzerland - Identity Card
 - Switzerland - Driver’s License
-- Turkey - Polyc
+- Turkey - Polycarbonate Passport
+- Ukraine - Driver’s License
+- USA - Arizona - Driver’s License
+- USA - Arizona - Identity Card
+- USA - Nebraska - Driver’s License
+- USA - Pennsylvania - Identity Card
+- USA - Virginia - Driver’s License
 
 ### Added support for 17 new documents in BETA
 
@@ -62,10 +73,10 @@
 - Switzerland - Polycarbonate Passport
 - UAE - Polycarbonate Passport
 
-### Bug Fixes
+### Added support for 2 new versions of already supported documents in BETA
 
-- Fixed the issue where the wrong missing field message was shown when the mandatory field was missing
-- Minor bugfixes and improvements
+- Iceland - Paper Passport
+- Mexico - Consular ID
 
 ## 6.3.0
 
