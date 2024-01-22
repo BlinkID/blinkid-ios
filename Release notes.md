@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.5.0
+
+- Improved the document side detection for US driver licenses which reduces the possibility of capturing the wrong side of the document. Barcode is now mandatory for the document back side of the US driving licenses
+
 ## 6.4.0
 
 ### New features
