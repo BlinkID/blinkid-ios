@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.5.1
+
+- Improved scanning of Bolivia IDs by addressing cases where the expiration date is covered by a signature, allowing the completion of the scanning process.
+
 ## 6.5.0
 
 - Improved the document side detection for US driver licenses which reduces the possibility of capturing the wrong side of the document. Barcode is now mandatory for the document back side of the US driving licenses

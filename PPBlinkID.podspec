@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "6.5.0"
+  s.version     = "6.5.1"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
   s.description = <<-DESC
-        BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with         [MicroBlink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
+        BlinkID SDK is a delightful component for quick and easy scanning of ID cards, passports and drivers licenses. The SDK is powered with         [Microblink's](http://www.microblink.com) industry-proven and world leading OCR and barcode scanning technology, and offers:
 
         - integrated camera management
         - layered API, allowing everything from simple integration to complex UX customizations.
@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
         - enteprise-level security standards
         - data parsing from ID barcode standards
 
-        BlinkID is a part of family of SDKs developed by [MicroBlink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning and many others. 
+        BlinkID is a part of family of SDKs developed by [Microblink](http://www.microblink.com) for optical text recognition, barcode scanning, ID document scanning and many others. 
         DESC
   
   s.license     = { 
         :type => 'commercial',
         :text => <<-LICENSE
-                © 2013-2023 Microblink Ltd. All rights reserved.
+                © 2013-2024 Microblink Ltd. All rights reserved.
                 LICENSE
         }
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.5.0/blinkid-ios_v6.5.0.tar.gz'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.5.1/blinkid-ios_v6.5.1.tar.gz'
   }
 
   s.platform     = :ios

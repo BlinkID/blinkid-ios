@@ -108,7 +108,7 @@ pod init
 ```ruby
 platform :ios, '13.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 6.5.0'
+    pod 'PPBlinkID', '~> 6.5.1'
 end
 ```
 
