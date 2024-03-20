@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   
   s.name        = "PPBlinkID"
-  s.version     = "6.5.1"
+  s.version     = "6.6.0"
   s.summary     = "A delightful component for barcode scanning"
   s.homepage    = "http://microblink.com"
   
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   }
 
   s.source      = { 
-        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.5.1/blinkid-ios_v6.5.1.tar.gz'
+        :http => 'https://github.com/BlinkID/blinkid-ios/releases/download/v6.6.0/blinkid-ios_v6.6.0.tar.gz'
   }
 
   s.platform     = :ios

@@ -109,6 +109,15 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  */
 + (BOOL)isScanningUnsupportedForCameraType:(MBCameraType)type error:(NSError *_Nullable *_Nullable)error NS_SWIFT_NOTHROW;
 
+/**
+ * Set the URL for ping proxy.
+ * This method is used if for setting ping proxy URL if that right is enabled in license.
+ * URL must be https.
+ * 
+ * @param urlString The URL string for ping proxy
+ */
+- (void)setPingProxyUrl:(NSString * _Nonnull)urlString;
+
 @end
 
 NS_ASSUME_NONNULL_END

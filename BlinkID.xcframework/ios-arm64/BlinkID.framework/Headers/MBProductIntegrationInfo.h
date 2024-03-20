@@ -26,6 +26,7 @@ MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
 @property (nonatomic, strong, readonly) NSString *device;
 @property (nonatomic, strong, readonly) NSString *userId;
 @property (nonatomic, strong, readonly) NSString *licensee;
+@property (nonatomic, strong, readonly) NSArray  *applicationIds;
 @property (nonatomic, strong, readonly) NSString *licenseId;
 
 @end
