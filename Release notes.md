@@ -2,22 +2,9 @@
 
 ## 6.6.0
 
-### What’s new:
-- Data extraction improvements:
-  - Added `Sponsor` and `BloodType` result fields to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult` and `VizResult`
+### Document Updates
 
-- Upgraded to `YUV` Color Format:
-  - We’ve upgraded our imaging to support the `YUV` color format (`kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`), making it the default encoding scheme. 
-
-#### Accessibility changes:
-- Optimized Color Contrast by fine-tuning color contrasts across the app, enhancing readability for all users.
-- Blurred content and translucent areas have been made mostly opaque, simplifying the UI and making it easier to navigate.
-- A new icon for harsh light conditions has been added to the onboarding screen, aiding in better navigation and usability.
-
-#### Deprecated functionality:
-- `IdBarcodeRecognizer` is now marked as deprecated. We recommend transitioning to `BlinkIdMultiSideRecognizer`, which not only covers the functionality of `IdBarcodeRecognizer` but also offers additional features.
-
-### Added support for 7 new documents:
+#### New Documents Support:
 - Australia - Polycarbonate Passport
 - Indonesia - Polycarbonate Passport
 - Mexico - Consular Voter ID
@@ -26,7 +13,7 @@
 - Panama - Polycarbonate Passport
 - USA - West Virginia - ID Card
 
-### Added support for 10 new documents in BETA:
+#### New Beta Documents Support:
 - Brazil - Ceara - ID Card
 - Brazil - Goias - ID Card
 - Brazil - Sergipe - ID Card
@@ -38,7 +25,7 @@
 - India - Haryana - DL
 - European Union - Health Insurance Card
 
-### Added new version support for 37 already supported documents
+#### New Document Versions for Supported Documents:
 - Australia - Queensland - DL
 - Australia - Victoria - DL
 - Australia - Western Australia - DL
@@ -77,7 +64,7 @@
 - USA - Wisconsin - DL
 - USA - Wisconsin - ID Card
 
-### Added new version support for 7 already supported documents in BETA:
+#### New Document Versions for Beta Supported Documents:
 - Australia - Queensland - Proof of Age Card
 - Brazil - ID Card
 - Ireland - Residence Permit
@@ -86,11 +73,12 @@
 - Mexico - Nayarit - DL
 - USA - North Dakota - ID Card
 
-### These documents are no longer BETA:
+#### Out of Beta:
 - Croatia - Residence Permit
 - Moldova - Paper Passport
 
-### Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer`:
+### Platform Updates
+
 - Expanded geographic support with new `Region` enum values:
   - `ANDHRA_PRADESH`
   - `CEARA`
@@ -105,6 +93,20 @@
   - `NBI_CLEARANCE`
   - `PROOF_OF_REGISTRATION`
   - `TEMPORARY_PROTECTION_PERMIT`
+  
+- Data extraction improvements:
+  - Added `Sponsor` and `BloodType` result fields to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult` and `VizResult`
+
+- Upgraded to `YUV` Color Format:
+  - We’ve upgraded our imaging to support the `YUV` color format (`kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`), making it the default encoding scheme. 
+
+#### Accessibility Changes:
+- Optimized Color Contrast by fine-tuning color contrasts across the app, enhancing readability for all users.
+- Blurred content and translucent areas have been made mostly opaque, simplifying the UI and making it easier to navigate.
+- A new icon for harsh light conditions has been added to the onboarding screen, aiding in better navigation and usability.
+
+#### Deprecated Functionality:
+- `IdBarcodeRecognizer` is now marked as deprecated. We recommend transitioning to `BlinkIdMultiSideRecognizer`, which not only covers the functionality of `IdBarcodeRecognizer` but also offers additional features.
 
 ## 6.5.1
 
