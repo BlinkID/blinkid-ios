@@ -181,6 +181,16 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBStringResult *issuingAuthority;
 
 /**
+ * The sponsor of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *sponsor;
+
+/**
+ * The blood type of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *bloodType;
+
+/**
  * The data extracted from the machine readable zone
  */
 @property (nonatomic, readonly) MBMrzResult *mrzResult;

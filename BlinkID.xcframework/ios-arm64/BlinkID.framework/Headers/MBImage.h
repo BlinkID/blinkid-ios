@@ -13,6 +13,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// Enum which defines video rotation angle or capture connection's video orientation.
+typedef NS_ENUM(NSInteger, MBVideoRotationAngle) {
+    // Landscape left
+    MBVideoRotationAngleLandscapeLeft,
+    // Portrait
+    MBVideoRotationAnglePortrait,
+    // Landscape right
+    MBVideoRotationAngleLandscapeRight,
+    // Portrait upside down
+    MBVideoRotationAnglePortraitUpsideDown
+};
+
 /**
  * Enum which describes text orientation on an image.
  */
@@ -80,6 +92,10 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *  Default: YES if created with CMSampleBuffer, NO if created with UIImage
  */
 @property (nonatomic) BOOL cameraFrame;
+
+/// Connection orientation.
+/// Default: `MBVideoRotationAngleLandscapeRight` - landscape right.
+@property (nonatomic) MBVideoRotationAngle videoRotationAngle;
 
 /**
  * Creates MBImage around UIImage.

@@ -163,6 +163,16 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBStringResult *issuingAuthority;
 
 /**
+ * The sponsor of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *sponsor;
+
+/**
+ * The blood type of the document owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *bloodType;
+
+/**
  * The driver license detailed info.
  */
 @property (nonatomic, readonly, nullable) MBDriverLicenseDetailedInfo *driverLicenseDetailedInfo;

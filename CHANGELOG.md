@@ -1,5 +1,111 @@
 # Release notes
 
+## 6.6.0
+
+### What’s new:
+- Data extraction improvements:
+  - Added `Sponsor` and `BloodType` result fields to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult` and `VizResult`
+
+- Upgraded to `YUV` Color Format:
+  - We’ve upgraded our imaging to support the `YUV` color format (`kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`), making it the default encoding scheme. 
+
+#### Accessibility changes:
+- Optimized Color Contrast by fine-tuning color contrasts across the app, enhancing readability for all users.
+- Blurred content and translucent areas have been made mostly opaque, simplifying the UI and making it easier to navigate.
+- A new icon for harsh light conditions has been added to the onboarding screen, aiding in better navigation and usability.
+
+#### Deprecated functionality:
+- `IdBarcodeRecognizer` is now marked as deprecated. We recommend transitioning to `BlinkIdMultiSideRecognizer`, which not only covers the functionality of `IdBarcodeRecognizer` but also offers additional features.
+
+### Added support for 7 new documents:
+- Australia - Polycarbonate Passport
+- Indonesia - Polycarbonate Passport
+- Mexico - Consular Voter ID
+- Moldova - Polycarbonate Passport
+- Pakistan - Proof Of Registration
+- Panama - Polycarbonate Passport
+- USA - West Virginia - ID Card
+
+### Added support for 10 new documents in BETA:
+- Brazil - Ceara - ID Card
+- Brazil - Goias - ID Card
+- Brazil - Sergipe - ID Card
+- China - Exit Entry Permit
+- China - Mainland Travel Permit Taiwan
+- Colombia - Temporary Protection Permit
+- India - DL
+- India - Andhra Pradesh - DL
+- India - Haryana - DL
+- European Union - Health Insurance Card
+
+### Added new version support for 37 already supported documents
+- Australia - Queensland - DL
+- Australia - Victoria - DL
+- Australia - Western Australia - DL
+- Bolivia - Minor's ID
+- Brazil - Alien ID
+- Estonia - DL
+- Finland - Alien ID
+- Guatemala - Paper Passport
+- India - Paper Passport - New side type
+- Malta - DL
+- Mexico - Guanajuato - DL 
+- Mexico - San Luis Potosi - DL
+- New Zealand - Polycarbonate Passport
+- Paraguay - ID Card
+- Slovenia - Residence Permit
+- USA - Green Card
+- USA - Work Permit
+- USA - Arizona - ID Card
+- USA - Colorado - DL
+- USA - Colorado - ID Card
+- USA - District of Columbia - DL
+- USA - District of Columbia - ID Card
+- USA - Idaho - DL
+- USA - Idaho - ID Card
+- USA - Missouri - ID Card
+- USA - Nebraska - ID Card
+- USA - Nevada - ID Card
+- USA - New York - ID Card
+- USA - North Dakota - DL
+- USA - Oklahoma - ID Card
+- USA - Pennsylvania - ID Card
+- USA - Utah - ID Card
+- USA - Virginia - DL
+- USA - Virginia - ID Card
+- USA - West Virginia - DL
+- USA - Wisconsin - DL
+- USA - Wisconsin - ID Card
+
+### Added new version support for 7 already supported documents in BETA:
+- Australia - Queensland - Proof of Age Card
+- Brazil - ID Card
+- Ireland - Residence Permit
+- Mexico - Consular ID
+- Mexico - Residence Permit
+- Mexico - Nayarit - DL
+- USA - North Dakota - ID Card
+
+### These documents are no longer BETA:
+- Croatia - Residence Permit
+- Moldova - Paper Passport
+
+### Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer`:
+- Expanded geographic support with new `Region` enum values:
+  - `ANDHRA_PRADESH`
+  - `CEARA`
+  - `GOIAS`
+  - `GUERRERO_ACAPULCO_DE_JUAREZ`
+  - `HARYANA`
+  - `SERGIPE`   
+
+- Document recognition enhanced with new `Type` enum values:
+  - `EXIT_ENTRY_PERMIT`
+  - `MAINLAND_TRAVEL_PERMIT_TAIWAN`
+  - `NBI_CLEARANCE`
+  - `PROOF_OF_REGISTRATION`
+  - `TEMPORARY_PROTECTION_PERMIT`
+
 ## 6.5.1
 
 - Improved scanning of Bolivia IDs by addressing cases where the expiration date is covered by a signature, allowing the completion of the scanning process.
