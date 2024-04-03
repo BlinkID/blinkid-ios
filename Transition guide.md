@@ -1,6 +1,30 @@
 ## 6.6.0
 
-- No changes
+### IDBarcodeRecognizer
+- `MBIdBarcodeRecognizer` is now deprecated as it is no longer maintained and all of its functionalities are available with `MBBlinkIdSingleSideRecognizer` and `MBBlinkIdMultiSideRecognizer`
+    -  To achieve the same `IDBarcodeRecognizer` behavior with the BlinkID generic recognizers, the `RecognitionModeFilter` must be limited to only the `BarcodeId` recognition mode:
+    ```
+        self.blinkIdRecognizer = MBBlinkIdSingleSideRecognizer()
+        
+        let recognitionModeFilter = MBRecognitionModeFilter()
+        recognitionModeFilter.enableFullDocumentRecognition = false
+        recognitionModeFilter.enableMrzId = false
+        recognitionModeFilter.enableMrzVisa = false
+        recognitionModeFilter.enableMrzPassport = false
+        recognitionModeFilter.enablePhotoId = false
+        recognitionModeFilter.enableBarcodeId = true
+        
+        self.blinkIdRecognizer?.recognitionModeFilter = recognitionModeFilter
+     ```
+    - The results are obtained by directly using the `result` or `barcodeResult` property from the recognizer result:
+    
+     ```
+        let result = self.blinkIdRecognizer?.result
+        let firstName = result?.firstName
+        //or
+        let barcodeResult = self.blinkIdRecognizer?.result.barcodeResult
+        let barcodeFirstName = barcodeResult?.firstName
+    ```
 
 ## 6.5.1
 
