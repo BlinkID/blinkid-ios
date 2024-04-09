@@ -78,6 +78,7 @@
 - Moldova - Paper Passport
 
 ### Platform Updates
+- Added `PrivacyInfo.xcprivacy` to the framework
 
 - Expanded geographic support with new `Region` enum values:
   - `ANDHRA_PRADESH`
