@@ -59,7 +59,10 @@ typedef NS_ENUM(NSInteger, MBProcessingStatus) {
     MBProcessingStatusAwaitingOtherSide,
     
     /** Side not scanned. */
-    MBProcessingStatusNotScanned
+    MBProcessingStatusNotScanned,
+    
+    /** The barcode was not found on the image. This processing status can only occur if document has mandatory barcode. */
+    MBProcessingStatusBarcodeDetectionFailed
 };
 
 #endif /* MBProcessingStatus_h */

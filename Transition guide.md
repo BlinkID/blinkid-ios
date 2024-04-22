@@ -1,3 +1,7 @@
+## 6.7.0
+
+- No changes
+
 ## 6.6.0
 
 ### IDBarcodeRecognizer

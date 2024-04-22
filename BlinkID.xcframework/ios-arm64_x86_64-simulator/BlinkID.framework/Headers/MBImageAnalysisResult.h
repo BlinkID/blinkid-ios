@@ -62,6 +62,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus barcodeDetectionStatus;
 
 /**
+ * RealID detection status determined from the scanned image.
+ */
+@property (nonatomic, readonly, assign) MBImageAnalysisDetectionStatus realIDDetectionStatus;
+
+/**
  * Orientation determined from the scanned image.
  */
 @property (nonatomic, readonly, assign) MBCardOrientation cardOrientation;
