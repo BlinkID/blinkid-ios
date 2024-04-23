@@ -1,23 +1,41 @@
 # Release notes
 
+## 6.7.0
+
+### New features
+- **Real ID detection on US driver's license**
+  - BlinkID now includes the capability to identify Real ID symbols from US driver's licenses, providing users with immediate feedback on the presence or abscence of a Real ID symbol. This enhances user convenience and compliance with Real ID requirements, ensuring customers can quickly determine if a Real ID is available on a scanned US driver's license.
+- **UX improvements**
+    - Extended duration for UI messages: 
+        - UI messages now remain visible for a longer duration after scanning, improving user experience. Users can now review post-scanning messages at a comfortable pace, leading to a smoother process.
+  - Success indicator for front side capture: 
+          - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enahnces user confidence by providing immediate feedback on the capturing process. 
+- **Data extraction improvements**
+  - Partial anonymization of the "Document Number"
+          - To ensure user privacy and security, BlinkID now offers the option of partially anonyimizing sensitive information from the scanned document.
+    
+### Minor API changes
+- We've added another `ProcessingStatus` called `BarcodeDetectionFailed`
+    - This status is triggered once barcode was not found on the image. This processing status can only occur if document has mandatory barcode.
+- Added new boolean member `realIDDetectionStatus` to the `ImageAnalysisResult`. If `true`, Real ID symbol is present, `false` otherwise.
+- New setting added to `BlinkIdMultisideRecognizer` and `BlinkIdSingleSideRecognizer`: `documentNumberAnonymizationSettings`
+  - Added new member `documentNumberAnonymizationSettings` to the `ClassAnonymizationSettings` for seamless integration with the document number anonymization feature.
+
+### Bugfixes
+- Updated internal mapping for Myanmar Passports
+  - Fixed internal mapping to display nationality as "Myanmarese" instead of "Burmese" on Mynamar passports. 
+- "Date of Issue" marked optional on Peru ID
+- Mandatory Barcode Presence
+  - To minimize the cases of presenting the front side of the document as the back frame in the results, BlinkID now requires the presence of a barcode before saving the back frame on US documents. Processing status `BarcodeDetectionFailed` is returned when mandatory barcode is not present on the back of US documents.
+- Improved "Date of Expiry" handling logic for MRZ
+  - Fixed a bug where documents with a date of expiry 1969 were not correctly sanitized.
+- Fixed the issue when `reconfigureRecognizers` function not working properly
+
 ## 6.6.0
 
-### What’s new:
-- Data extraction improvements:
-  - Added `Sponsor` and `BloodType` result fields to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult` and `VizResult`
+### Document Updates
 
-- Upgraded to `YUV` Color Format:
-  - We’ve upgraded our imaging to support the `YUV` color format (`kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`), making it the default encoding scheme. 
-
-#### Accessibility changes:
-- Optimized Color Contrast by fine-tuning color contrasts across the app, enhancing readability for all users.
-- Blurred content and translucent areas have been made mostly opaque, simplifying the UI and making it easier to navigate.
-- A new icon for harsh light conditions has been added to the onboarding screen, aiding in better navigation and usability.
-
-#### Deprecated functionality:
-- `IdBarcodeRecognizer` is now marked as deprecated. We recommend transitioning to `BlinkIdMultiSideRecognizer`, which not only covers the functionality of `IdBarcodeRecognizer` but also offers additional features.
-
-### Added support for 7 new documents:
+#### New Documents Support:
 - Australia - Polycarbonate Passport
 - Indonesia - Polycarbonate Passport
 - Mexico - Consular Voter ID
@@ -26,7 +44,7 @@
 - Panama - Polycarbonate Passport
 - USA - West Virginia - ID Card
 
-### Added support for 10 new documents in BETA:
+#### New Beta Documents Support:
 - Brazil - Ceara - ID Card
 - Brazil - Goias - ID Card
 - Brazil - Sergipe - ID Card
@@ -38,7 +56,7 @@
 - India - Haryana - DL
 - European Union - Health Insurance Card
 
-### Added new version support for 37 already supported documents
+#### New Document Versions for Supported Documents:
 - Australia - Queensland - DL
 - Australia - Victoria - DL
 - Australia - Western Australia - DL
@@ -77,7 +95,7 @@
 - USA - Wisconsin - DL
 - USA - Wisconsin - ID Card
 
-### Added new version support for 7 already supported documents in BETA:
+#### New Document Versions for Beta Supported Documents:
 - Australia - Queensland - Proof of Age Card
 - Brazil - ID Card
 - Ireland - Residence Permit
@@ -86,11 +104,13 @@
 - Mexico - Nayarit - DL
 - USA - North Dakota - ID Card
 
-### These documents are no longer BETA:
+#### Out of Beta:
 - Croatia - Residence Permit
 - Moldova - Paper Passport
 
-### Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer`:
+### Platform Updates
+- Added `PrivacyInfo.xcprivacy` to the framework
+
 - Expanded geographic support with new `Region` enum values:
   - `ANDHRA_PRADESH`
   - `CEARA`
@@ -105,6 +125,20 @@
   - `NBI_CLEARANCE`
   - `PROOF_OF_REGISTRATION`
   - `TEMPORARY_PROTECTION_PERMIT`
+  
+- Data extraction improvements:
+  - Added `Sponsor` and `BloodType` result fields to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult` and `VizResult`
+
+- Upgraded to `YUV` Color Format:
+  - We’ve upgraded our imaging to support the `YUV` color format (`kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`), making it the default encoding scheme. 
+
+#### Accessibility Changes:
+- Optimized Color Contrast by fine-tuning color contrasts across the app, enhancing readability for all users.
+- Blurred content and translucent areas have been made mostly opaque, simplifying the UI and making it easier to navigate.
+- A new icon for harsh light conditions has been added to the onboarding screen, aiding in better navigation and usability.
+
+#### Deprecated Functionality:
+- `IdBarcodeRecognizer` is now marked as deprecated. We recommend transitioning to `BlinkIdMultiSideRecognizer`, which not only covers the functionality of `IdBarcodeRecognizer` but also offers additional features.
 
 ## 6.5.1
 
