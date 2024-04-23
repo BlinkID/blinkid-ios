@@ -4,14 +4,14 @@
 
 ### New Features
 - **Real ID detection on US driver's license**
-  - BlinkID now includes the capability to identify Real ID symbols from US driver's licenses, providing users with immediate feedback on the presence or abscence of a Real ID symbol. This enhances user convenience and compliance with Real ID requirements, ensuring customers can quickly determine if a Real ID is available on a scanned US driver's license.
+  - BlinkID now includes the capability to identify Real ID symbols from US driver's licenses, providing users with immediate feedback on the presence or the absence of a Real ID symbol. This enhances user convenience and compliance with Real ID requirements, ensuring customers can quickly determine if a Real ID is available on a scanned US driver's license.
 - **UX Improvements**
   - Extended duration for UI messages 
     - UI messages now remain visible for a longer duration after scanning, improving user experience. Users can now review post-scanning messages at a comfortable pace, leading to a smoother process.
   - Success indicator for front side capture
-      - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enahnces user confidence by providing immediate feedback on the capturing process. 
+      - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enhances user confidence by providing immediate feedback during the capturing process. 
 - **Partial anonymization of the "Document Number"**
-  - To ensure user privacy and security, BlinkID now offers the option of partially anonyimizing the document number from the scanned document.
+  - To ensure user privacy and security, BlinkID now offers the option of partially anonymizing the document number from the scanned document.
 - **Mandatory Barcode Presence on US documents**
   - To minimize the cases of capturing the front side of the document as the back frame in the results, BlinkID now requires the presence of a barcode before saving the back frame on US documents. Processing status `BarcodeDetectionFailed` is returned when mandatory barcode is not present on the back of US documents.
     
@@ -19,11 +19,10 @@
 - We've added another `ProcessingStatus` called `BarcodeDetectionFailed`
     - This status is triggered once barcode was not found on the image. This processing status can only occur if document has mandatory barcode.
 - Added new boolean member `realIDDetectionStatus` to the `ImageAnalysisResult`. If `true`, Real ID symbol is present, `false` otherwise.
-- New setting added to `BlinkIdMultiSideRecognizer` and `BlinkIdSingleSideRecognizer`: `documentNumberAnonymizationSettings`
-  - Added new member `documentNumberAnonymizationSettings` to the `ClassAnonymizationSettings` for seamless integration with the document number anonymization feature.
+- Added new member `documentNumberAnonymizationSettings` to the `ClassAnonymizationSettings` for seamless integration with the document number anonymization feature.
 
 #### Bugfixes
-- Updated internal mapping for Myanmar Passports to display nationality as `Myanmarese` instead of `Burmese` on Mynamar passports. 
+- Updated internal mapping for Myanmar Passports to display nationality as `Myanmarese` instead of `Burmese` on Myanmar passports. 
 - `Date of Issue` marked optional on Peru ID offering users more flexibility in capturing ID information. 
 - `Date of Expiry` handling logic for MRZ improved in cases where documents with a date of expiry 1969 were not correctly sanitized.
 - Fixed the issue when `reconfigureRecognizers` function not working properly.
