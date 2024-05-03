@@ -1,5 +1,9 @@
 # Release notes
 
+## 6.7.1
+
+- Add file timestamp API required reason to the privacy manifest
+
 ## 6.7.0
 
 ### New Features
@@ -7,7 +11,7 @@
   - BlinkID can now identify Real ID symbols from US driver’s licenses, providing feedback on their presence or absence. This ensures customers can quickly determine if a Real ID symbol is available on a scanned US driver’s license to be compliant with Real ID regulations.
 - **UX Improvements**
   - Success indicator for front side capture
-  	- BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enhances user confidence by providing immediate feedback during the scanning process. 
+      - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enhances user confidence by providing immediate feedback during the scanning process. 
 - **Partial anonymization of the "Document Number"**
   - To ensure user privacy and security, BlinkID now offers the option of partially anonymizing the document number from the scanned document.
 - **Mandatory Barcode Presence on US documents**
@@ -790,7 +794,7 @@ Result will be DataMatchResult: Success only if scanned values for all fields th
 
 	
 #### Changes to IDBarcodeRecognizer
-- For barcodes in countries: Argentina, Colombia, Nigeria, Panama, and South Africa, we now also extract data from the field `Sex` when it's populated with the character "X".
+- For barcodes in countries: Argentina, Colombia, Nigeria, Panama, and South Africa, we now also extract data from the field `Sex` when it's populated with the character `X`.
 
  
 ### Improvements

@@ -1,35 +1,33 @@
 # Release notes
 
+## 6.7.1
+
+- Add file timestamp API required reason to the privacy manifest
+
 ## 6.7.0
 
-### New features
-- **Real ID detection on US driver's license**
-  - BlinkID now includes the capability to identify Real ID symbols from US driver's licenses, providing users with immediate feedback on the presence or abscence of a Real ID symbol. This enhances user convenience and compliance with Real ID requirements, ensuring customers can quickly determine if a Real ID is available on a scanned US driver's license.
-- **UX improvements**
-    - Extended duration for UI messages: 
-        - UI messages now remain visible for a longer duration after scanning, improving user experience. Users can now review post-scanning messages at a comfortable pace, leading to a smoother process.
-  - Success indicator for front side capture: 
-          - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enahnces user confidence by providing immediate feedback on the capturing process. 
-- **Data extraction improvements**
-  - Partial anonymization of the "Document Number"
-          - To ensure user privacy and security, BlinkID now offers the option of partially anonyimizing sensitive information from the scanned document.
+### New Features
+- **Real ID symbol detection on US driver's license**
+  - BlinkID can now identify Real ID symbols from US driver’s licenses, providing feedback on their presence or absence. This ensures customers can quickly determine if a Real ID symbol is available on a scanned US driver’s license to be compliant with Real ID regulations.
+- **UX Improvements**
+  - Success indicator for front side capture
+      - BlinkID now displays a clear success indicator after scanning the front side of a document. This visual cue enhances user confidence by providing immediate feedback during the scanning process. 
+- **Partial anonymization of the "Document Number"**
+  - To ensure user privacy and security, BlinkID now offers the option of partially anonymizing the document number from the scanned document.
+- **Mandatory Barcode Presence on US documents**
+  - To minimize the cases of capturing the front side of the document as the back frame in the results, BlinkID now requires the presence of a barcode before saving the back frame on US documents. Processing status `BarcodeDetectionFailed` is returned when the mandatory barcode is not present on the back of US documents.
     
 ### Minor API changes
 - We've added another `ProcessingStatus` called `BarcodeDetectionFailed`
-    - This status is triggered once barcode was not found on the image. This processing status can only occur if document has mandatory barcode.
+    - This status is triggered once barcode was not found on the image. This processing status can only occur if document has the mandatory barcode.
 - Added new boolean member `realIDDetectionStatus` to the `ImageAnalysisResult`. If `true`, Real ID symbol is present, `false` otherwise.
-- New setting added to `BlinkIdMultisideRecognizer` and `BlinkIdSingleSideRecognizer`: `documentNumberAnonymizationSettings`
-  - Added new member `documentNumberAnonymizationSettings` to the `ClassAnonymizationSettings` for seamless integration with the document number anonymization feature.
+- Added new member `documentNumberAnonymizationSettings` to the `ClassAnonymizationSettings` for seamless integration with the document number anonymization feature.
 
-### Bugfixes
-- Updated internal mapping for Myanmar Passports
-  - Fixed internal mapping to display nationality as "Myanmarese" instead of "Burmese" on Mynamar passports. 
-- "Date of Issue" marked optional on Peru ID
-- Mandatory Barcode Presence
-  - To minimize the cases of presenting the front side of the document as the back frame in the results, BlinkID now requires the presence of a barcode before saving the back frame on US documents. Processing status `BarcodeDetectionFailed` is returned when mandatory barcode is not present on the back of US documents.
-- Improved "Date of Expiry" handling logic for MRZ
-  - Fixed a bug where documents with a date of expiry 1969 were not correctly sanitized.
-- Fixed the issue when `reconfigureRecognizers` function not working properly
+#### Bug Fixes
+- Updated internal mapping for Myanmar passports to display nationality as `Myanmarese` instead of `Burmese` on Myanmar passports. 
+- On Peru ID "Date of Issue" is marked optional, offering customers more flexibility in capturing ID information.
+- Improved "Date of Expiry" handling logic for MRZ in cases where documents with a date of expiry year 1969 were not correctly sanitized.
+- Fixed the issue when `reconfigureRecognizers` function not working properly.
 
 ## 6.6.0
 
@@ -796,7 +794,7 @@ Result will be DataMatchResult: Success only if scanned values for all fields th
 
 	
 #### Changes to IDBarcodeRecognizer
-- For barcodes in countries: Argentina, Colombia, Nigeria, Panama, and South Africa, we now also extract data from the field `Sex` when it's populated with the character "X".
+- For barcodes in countries: Argentina, Colombia, Nigeria, Panama, and South Africa, we now also extract data from the field `Sex` when it's populated with the character `X`.
 
  
 ### Improvements

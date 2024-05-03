@@ -1,3 +1,7 @@
+## 6.7.1
+
+- No changes
+
 ## 6.7.0
 
 - No changes
