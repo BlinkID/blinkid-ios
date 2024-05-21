@@ -13,9 +13,7 @@ import MobileCoreServices
 class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private var recognizerRunner: MBRecognizerRunner?
-    private var blinkIdMultiSideRecognizer: MBBlinkIdMultiSideRecognizer?
-    private var imagePickerController: UIImagePickerController?
-    private var overlayLabel = UILabel(frame: .zero)
+    private var blinkIdSingleSideRecognizer: MBBlinkIdSingleSideRecognizer?
     private let serialQueue = DispatchQueue(label: "com.microblink.DirectAPI-sample-swift")
 
     override func viewDidLoad() {
@@ -26,8 +24,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
         
         setupRecognizerRunner()
-        overlayLabel.text = "Scan the front side"
-        overlayLabel.textColor = .white
     }
 
     @IBAction func openImagePicker(_ sender: Any) {
@@ -36,34 +32,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     private func openImagePicker() {
         let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.cameraDevice = .rear
-
-        addOverlayLabel(toImagePicker: imagePicker)
+        imagePicker.sourceType = .photoLibrary
         
         // Displays a control that allows the user to choose only photos
         imagePicker.mediaTypes = [kUTTypeImage as String]
         
-        // Hides the controls for moving & scaling pictures, or for trimming movies.
-        imagePicker.allowsEditing = false
-        
-        // Shows default camera control overlay over camera preview.
-        imagePicker.showsCameraControls = true
-        
         // set delegate
         imagePicker.delegate = self
         present(imagePicker, animated: true) {() -> Void in }
-        imagePickerController = imagePicker
     }
     
     private func setupRecognizerRunner() {
         var recognizers = [MBRecognizer]()
-        blinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
-        recognizers.append(blinkIdMultiSideRecognizer!)
+        blinkIdSingleSideRecognizer = MBBlinkIdSingleSideRecognizer()
+        recognizers.append(blinkIdSingleSideRecognizer!)
         let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
         recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
         recognizerRunner?.scanningRecognizerRunnerDelegate = self
-        recognizerRunner?.metadataDelegates.firstSideFinishedRecognizerRunnerDelegate = self
     }
     
     private func processImageRunner(_ originalImage: UIImage?) {
@@ -75,15 +60,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         image?.orientation = MBProcessingOrientation.left
 
         
-        serialQueue.async(execute: {() -> Void in
+        serialQueue.async {
             self.recognizerRunner?.processImage(image!)
-        })
-    }
-    
-    private func addOverlayLabel(toImagePicker imagePicker: UIImagePickerController) {
-        overlayLabel.frame = imagePicker.cameraOverlayView!.frame
-        overlayLabel.textAlignment = .center
-        imagePicker.cameraOverlayView = overlayLabel
+        }
     }
 }
 
@@ -103,50 +82,29 @@ extension ViewController: UIImagePickerControllerDelegate {
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        serialQueue.async {
-            self.recognizerRunner?.resetState()
-        }
-
         dismiss(animated: true, completion: nil)
-        overlayLabel.text = "Scan the front side"
     }
 }
-
-
-// MARK: - MBFirstSideFinishedRecognizerRunnerDelegate
-extension ViewController: MBFirstSideFinishedRecognizerRunnerDelegate {
-    
-    func recognizerRunnerDidFinishRecognition(ofFirstSide recognizerRunner: MBRecognizerRunner) {
-        DispatchQueue.main.async {
-            self.overlayLabel.text = "Scan the back side"
-            self.openImagePicker()
-        }
-    }
-}
-
 
 // MARK: - MBScanningRecognizerRunnerDelegate
 extension ViewController: MBScanningRecognizerRunnerDelegate {
     
     func recognizerRunner(_ recognizerRunner: MBRecognizerRunner, didFinishScanningWith state: MBRecognizerResultState) {
-        DispatchQueue.main.async(execute: {() -> Void in
+        DispatchQueue.main.async {
             if state != .valid {
-                self.openImagePicker()
+                let alertController = UIAlertController(title: "Error", message: "Result state is not valid. Please try again.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertController, animated: true) {() -> Void in }
                 return
             }
             
-            let title = "BlinkID"
-            // Save the string representation of the code
-            print(state.rawValue)
-            let message = self.blinkIdMultiSideRecognizer?.result.description
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let message = self.blinkIdSingleSideRecognizer?.result.description
+            let alertController = UIAlertController(title: "BlinkID", message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: {(_ action: UIAlertAction) -> Void in
                 self.dismiss(animated: true) {() -> Void in }
             })
             alertController.addAction(okAction)
             self.present(alertController, animated: true) {() -> Void in }
-            
-            self.overlayLabel.text = "Scan the front side"
-        })
+        }
     }
 }
