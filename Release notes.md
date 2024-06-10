@@ -15,14 +15,13 @@
   - We upgraded our classifier model to prevent double-capturing of the front side of a document, ensuring the front and the back sides are captured correctly. If the back side of a document is not detected, the processing status will return `UnsupportedClass`.
 - **Option to anonymize barcode data**
   - You can now anonymize specific fields in the barcode results from an identity document, in addition to the anonymized fields already supported in the Visual Inspection Zone (VIZ). 
-- new message for back side scanning `backSideInstructionsText` in `BlinkIdOverlaySettings`
   
 ### Breaking API changes
 - Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` settings:
   - renamed `allowBlurFilter` to `enableBlurFilter`
   
 ### Minor API changes
-- Added a new result member `documentSubtype` in `BlinkIdSingleSideRecognizer::Result`, `BlinkIdMultiSideRecognizer::Result,` and `VIZResult` to include subtype information for US driver’s licenses or ID cards (commercial, provisional, etc.)
+- Added a new result member `documentSubtype` in `BlinkIdSingleSideRecognizerResult`, `BlinkIdMultiSideRecognizerResult,` and `VIZResult` to include subtype information for US driver’s licenses or ID cards (commercial, provisional, etc.)
 - Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` settings:
   - added `enableGlareFilter` which is set to `true` by default
   - added `blurStrictnessLevel` which is set to `Normal` by default (`Strict`, `Normal`, or `Relaxed`)
