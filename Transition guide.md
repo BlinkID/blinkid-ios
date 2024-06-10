@@ -1,3 +1,9 @@
+## 6.8.0
+
+## Breaking changes
+- Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` settings:
+  - renamed `allowBlurFilter` to `enableBlurFilter`
+
 ## 6.7.1
 
 - No changes

@@ -1,5 +1,36 @@
 # Release notes
 
+## 6.8.0
+
+### New Features
+- **Glare detection**
+  - We’ve introduced glare detection to BlinkID, which removes occlusion on document images caused by glare. You can control the strictness of glare detection with three options (relaxed, normal, and strict) to suit your use case. 
+  - Real-time feedback during scanning includes a new UI message to help users position the document correctly and reduce glare. 
+- **Improved blur detection**
+  - We’ve raised the threshold for our blur model, making it stricter. This improvement ensures that sharper images are accepted for processing. You can now control the strictness of blur detection with three options (relaxed, normal, and strict).
+  - Real-time feedback during scanning includes a new UI message to help users position the document optimally for a clear image. 
+- **Support for extracting the subtypes of US driver’s licenses & ID cards**
+  - BlinkID now extracts precise information about subtypes of driver’s licenses and ID cards (e.g., conditional driver’s license, learner’s permit, provision, enhanced, etc.). This information is included in the scanning results, allowing you to tailor workflows or processes based on document limitations. 
+- **Classifier improvements**
+  - We upgraded our classifier model to prevent double-capturing of the front side of a document, ensuring the front and the back sides are captured correctly. If the back side of a document is not detected, the processing status will return `UnsupportedClass`.
+- **Option to anonymize barcode data**
+  - You can now anonymize specific fields in the barcode results from an identity document, in addition to the anonymized fields already supported in the Visual Inspection Zone (VIZ). 
+- new message for back side scanning `backSideInstructionsText` in `BlinkIdOverlaySettings`
+  
+### Breaking API changes
+- Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` settings:
+  - renamed `allowBlurFilter` to `enableBlurFilter`
+  
+### Minor API changes
+- Added a new result member `documentSubtype` in `BlinkIdSingleSideRecognizer::Result`, `BlinkIdMultiSideRecognizer::Result,` and `VIZResult` to include subtype information for US driver’s licenses or ID cards (commercial, provisional, etc.)
+- Changes to the `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` settings:
+  - added `enableGlareFilter` which is set to `true` by default
+  - added `blurStrictnessLevel` which is set to `Normal` by default (`Strict`, `Normal`, or `Relaxed`)
+  - added `glareStrictnessLevel` which is set to `Normal` by default (`Strict`, `Normal`, or `Relaxed`)
+- Changes to the `ImageAnalysisResult`:
+  - renamed `glare` to `glareDetected`
+  - renamed `blurred` to `blurDetected`
+
 ## 6.7.1
 
 - Add file timestamp API required reason to the privacy manifest

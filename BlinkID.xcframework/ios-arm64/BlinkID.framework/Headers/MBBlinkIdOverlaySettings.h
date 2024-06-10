@@ -50,6 +50,12 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @property(nonatomic, strong) NSString *firstSideInstructionsText;
 
 /**
+* Message that is shown while scanning back side of the document.
+* Default: Scan the back side of a document
+*/
+@property(nonatomic, strong) NSString *backSideInstructionsText;
+
+/**
 * Message that is shown after fornt side of the USDL document is scanned.
 * Default: Scan the barcode
 */
@@ -166,6 +172,18 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 * Default: YES
 */
 @property(nonatomic, assign) BOOL showIntroductionDialog;
+
+/**
+* Instructions for the user to avoid glare.
+* Default: Tilt or move document to remove reflection
+*/
+@property(nonatomic, strong) NSString *glareDetectedMessage;
+
+/**
+* Instructions for the user to avoid blur.
+* Default: Keep document and phone still
+*/
+@property(nonatomic, strong) NSString *blurDetectedMessage;
 
 /**
  * Designated initializer. Initializes the object with default settings.
