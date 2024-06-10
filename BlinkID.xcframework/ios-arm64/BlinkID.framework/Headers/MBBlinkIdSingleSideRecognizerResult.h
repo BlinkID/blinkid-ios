@@ -181,6 +181,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) MBStringResult *issuingAuthority;
 
 /**
+ * The transcription of the document subtype.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *documentSubtype;
+
+/**
  * The sponsor of the document owner.
  */
 @property (nonatomic, readonly, nullable) MBStringResult *sponsor;

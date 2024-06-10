@@ -21,7 +21,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="../index.html">
-          PPBlinkID v6.7.1 Docs
+          PPBlinkID v6.8.0 Docs
         </a>
          (81% documented)
       </p>
@@ -380,6 +380,9 @@
                 <a class="nav-group-task-link" href="../Enums/MBRecognizerResultState.html">MBRecognizerResultState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@MBStrictnessLevel">MBStrictnessLevel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/MBUsdlKeys.html">MBUsdlKeys</a>
               </li>
               <li class="nav-group-task">
@@ -508,7 +511,7 @@
             <p>Recognizer which can scan front and back side of the United States driver license.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L37-L135">Show on GitHub</a>
+                <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L38-L158">Show on GitHub</a>
               </div>
           </div>
         </section>
@@ -547,7 +550,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L44">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -577,12 +580,12 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">MBBlinkIdMultiSideRecognizerDelegate</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt">MBBlinkIdMultiSideRecognizerDelegate</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L49">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -590,9 +593,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)allowBlurFilter"></a>
-                    <a name="//apple_ref/objc/Property/allowBlurFilter" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)allowBlurFilter">allowBlurFilter</a>
+                    <a name="/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)enableBlurFilter"></a>
+                    <a name="//apple_ref/objc/Property/enableBlurFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)enableBlurFilter">enableBlurFilter</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -600,7 +603,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines whether blured frames filtering is allowed</p>
+                        <p>Skip processing of the blurred frames.</p>
 
 <p>Default: YES</p>
 
@@ -609,17 +612,128 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allowBlurFilter</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableBlurFilter</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">allowBlurFilter</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableBlurFilter</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)blurStrictnessLevel"></a>
+                    <a name="//apple_ref/objc/Property/blurStrictnessLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)blurStrictnessLevel">blurStrictnessLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Strictness level for blur detection.</p>
+
+<p>Default: MBStrictnessLevelNormal</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums.html#/c:@E@MBStrictnessLevel">MBStrictnessLevel</a></span> <span class="n">blurStrictnessLevel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">blurStrictnessLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@MBStrictnessLevel">MBStrictnessLevel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)enableGlareFilter"></a>
+                    <a name="//apple_ref/objc/Property/enableGlareFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)enableGlareFilter">enableGlareFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Skip processing of the glared frames.</p>
+
+<p>Default: YES</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">enableGlareFilter</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">enableGlareFilter</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)glareStrictnessLevel"></a>
+                    <a name="//apple_ref/objc/Property/glareStrictnessLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MBBlinkIdMultiSideRecognizer(py)glareStrictnessLevel">glareStrictnessLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Strictness level for glare detection.</p>
+
+<p>Default: MBStrictnessLevelNormal</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums.html#/c:@E@MBStrictnessLevel">MBStrictnessLevel</a></span> <span class="n">glareStrictnessLevel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">glareStrictnessLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@MBStrictnessLevel">MBStrictnessLevel</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -656,7 +770,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L63">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L86">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -694,7 +808,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -733,7 +847,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L80">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -770,7 +884,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -808,7 +922,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L95">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -846,7 +960,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L103">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -883,7 +997,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L110">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -921,7 +1035,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L118">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -959,7 +1073,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L126">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -996,7 +1110,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.7.1/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L133">Show on GitHub</a>
+                        <a href="https://github.com/blinkid/blinkid-ios/releases/tag/v6.8.0/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h#L156">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1009,7 +1123,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-05-02)</p>
+      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-06-10)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

@@ -23,6 +23,7 @@
 #import "MBEncodeSignatureImage.h"
 #import "MBCameraFrames.h"
 #import "MBClassAnonymization.h"
+#import "MBStrictnessLevel.h"
 
 @protocol MBBlinkIdSingleSideRecognizerDelegate;
 
@@ -47,11 +48,33 @@ MB_INIT
 @property (nonatomic, nullable, weak) id<MBBlinkIdSingleSideRecognizerDelegate> delegate;
 
 /**
- * Defines whether blured frames filtering is allowed
+ * Skip processing of the blurred frames.
  *
  * Default: YES
  */
-@property (nonatomic, assign) BOOL allowBlurFilter;
+@property (nonatomic, assign) BOOL enableBlurFilter;
+
+
+/**
+ * Strictness level for blur detection.
+ *
+ * Default: MBStrictnessLevelNormal
+ */
+@property (nonatomic, assign) MBStrictnessLevel blurStrictnessLevel;
+
+/**
+ * Skip processing of the glared frames.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL enableGlareFilter;
+
+/**
+ * Strictness level for glare detection.
+ *
+ * Default: MBStrictnessLevelNormal
+ */
+@property (nonatomic, assign) MBStrictnessLevel glareStrictnessLevel;
 
 /**
  * Defines whether returning of unparsed MRZ (Machine Readable Zone) results is allowed

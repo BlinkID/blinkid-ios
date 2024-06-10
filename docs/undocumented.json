@@ -65,14 +65,14 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
-      "line": 39,
+      "line": 40,
       "symbol": "MBBlinkIdMultiSideRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
-      "line": 137,
+      "line": 160,
       "symbol": "MBBlinkIdMultiSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -93,14 +93,14 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizer.h",
-      "line": 37,
+      "line": 38,
       "symbol": "MBBlinkIdSingleSideRecognizer.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizer.h",
-      "line": 113,
+      "line": 136,
       "symbol": "MBBlinkIdSingleSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -1580,6 +1580,27 @@
       "line": 16,
       "symbol": "MBSignedPayload",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStrictnessLevel.h",
+      "line": 19,
+      "symbol": "MBStrictnessLevel.MBStrictnessLevelStrict",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStrictnessLevel.h",
+      "line": 20,
+      "symbol": "MBStrictnessLevel.MBStrictnessLevelNormal",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBStrictnessLevel.h",
+      "line": 21,
+      "symbol": "MBStrictnessLevel.MBStrictnessLevelRelaxed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
