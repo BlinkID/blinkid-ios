@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Beruf";
 "mb_blinkid_mf_race" = "Rasse";
 "mb_blinkid_mf_religion" = "Religion";
+"mb_blinkid_mf_remarks" = "Bemerkungen";
+"mb_blinkid_mf_residence_permit_type" = "Art der Aufenthaltserlaubnis";
 "mb_blinkid_mf_residential_status" = "Aufenthaltsstatus";
 "mb_blinkid_mf_restrictions" = "Beschränkungen";
 "mb_blinkid_mf_sex" = "Geschlechtsfeld";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Fahrzeugklasse";
+"mb_blinkid_mf_visa_type" = "Visumtyp";
 "mb_blinkid_onboarding_msg1_barcode" = "Achten Sie darauf, dass Sie nicht Teile des Barcodes mit einem Finger verdecken. Achten Sie auch auf störende Lichtreflexe, die den Barcode überlagern und ihn unlesbar machen könnten.";
 "mb_blinkid_onboarding_msg1_mrz" = "Achten Sie darauf, dass Sie nicht Teile des MRZ-Codes mit einem Finger verdecken. Achten Sie auch auf störende Lichtreflexe, die den MRZ-Code überlagern und ihn unlesbar machen könnten.";
 "mb_blinkid_onboarding_msg_1" = "Gehen Sie auf Nummer sicher, indem Sie Teile des Dokuments nicht mit dem Finger verdecken, insbesondere nicht die unteren Zeilen. Vermeiden Sie außerdem Spiegelungen von Hologrammen, die über die Felder des Dokuments hinausgehen.";

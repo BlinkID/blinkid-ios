@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Profese";
 "mb_blinkid_mf_race" = "Rasová příslušnost";
 "mb_blinkid_mf_religion" = "Náboženské vyznání";
+"mb_blinkid_mf_remarks" = "Poznámky";
+"mb_blinkid_mf_residence_permit_type" = "Typ povolení k pobytu";
 "mb_blinkid_mf_residential_status" = "Rezidenční status";
 "mb_blinkid_mf_restrictions" = "Omezení";
 "mb_blinkid_mf_sex" = "Pole pohlaví";
 "mb_blinkid_mf_sponsor" = "Sponzor";
 "mb_blinkid_mf_vehicle_class" = "Typ vozidla";
+"mb_blinkid_mf_visa_type" = "Typ karty";
 "mb_blinkid_onboarding_msg1_barcode" = "Zkontrolujte, zda část čárového kódu nezakrýváte prstem. Také dejte pozor na odlesky, které by mohly zapříčinit, že bude nečitelný.";
 "mb_blinkid_onboarding_msg1_mrz" = "Zkontrolujte, zda část MRZ kódu nezakrýváte prstem. Také dejte pozor na odlesky, které by mohly zapříčinit, že bude nečitelný.";
 "mb_blinkid_onboarding_msg_1" = "Ujistěte se, že prstem nezakrýváte části dokumentu, včetně spodních řádků. Dávejte si také pozor na hologramové odlesky, které přesahují pole dokumentu.";

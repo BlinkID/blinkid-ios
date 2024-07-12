@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Profesia";
 "mb_blinkid_mf_race" = "Rasa";
 "mb_blinkid_mf_religion" = "Religia";
+"mb_blinkid_mf_remarks" = "Comentarii";
+"mb_blinkid_mf_residence_permit_type" = "Tipul permisului de ședere";
 "mb_blinkid_mf_residential_status" = "Statutul rezidențial";
 "mb_blinkid_mf_restrictions" = "Restricții";
 "mb_blinkid_mf_sex" = "Câmpul „sex\"";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Clasa vehiculului";
+"mb_blinkid_mf_visa_type" = "Tipul de viză";
 "mb_blinkid_onboarding_msg1_barcode" = "Asigurați-vă că nu acoperiți părți ale codului de bare cu un deget. De asemenea, aveți grijă să nu se formeze reflexii peste codul de bare, deoarece îl pot face ilizibil.";
 "mb_blinkid_onboarding_msg1_mrz" = "Asigurați-vă că nu acoperiți părți ale codului MRZ cu degetul. De asemenea, aveți grijă să nu se formeze reflexii peste codul MRZ, deoarece îl pot face ilizibil.";
 "mb_blinkid_onboarding_msg_1" = "Asigurați-vă că nu ați acoperit cu degetul porțiuni din document, nici rândurile de jos. Evitați și reflexiile holografice care se suprapun pe secțiunile din document.";

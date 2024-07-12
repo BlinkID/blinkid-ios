@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Szakma";
 "mb_blinkid_mf_race" = "Faj";
 "mb_blinkid_mf_religion" = "Vallás";
+"mb_blinkid_mf_remarks" = "Megjegyzések";
+"mb_blinkid_mf_residence_permit_type" = "Tartózkodási engedély típusa";
 "mb_blinkid_mf_residential_status" = "Lakossági státusz";
 "mb_blinkid_mf_restrictions" = "Korlátozások";
 "mb_blinkid_mf_sex" = "Nem mező";
 "mb_blinkid_mf_sponsor" = "Szponzor";
 "mb_blinkid_mf_vehicle_class" = "Jármű osztály";
+"mb_blinkid_mf_visa_type" = "Vízum típusa";
 "mb_blinkid_onboarding_msg1_barcode" = "Ügyeljen arra, hogy a vonalkód egyes részeit ne takarja el az ujjával. Ezenkívül ügyeljen a tükröződésekre, amelyek a vonalkódon áthaladnak, és olvashatatlanná tehetik azt.";
 "mb_blinkid_onboarding_msg1_mrz" = "Ügyeljen arra, hogy az MRZ-kód egyes részeit ne takarja el az ujjával. Ezenkívül ügyeljen a tükröződésekre amelyek az MRZ-kódon áthaladnak, és olvashatatlanná tehetik azt.";
 "mb_blinkid_onboarding_msg_1" = "Ügyeljen arra, hogy ne takarja le az ujjával a dokumentum részeit (az alsó sorokat is beleértve). Ügyeljen továbbá a hologramokra is, amelyek visszatükröződnek a dokumentummezőkön.";

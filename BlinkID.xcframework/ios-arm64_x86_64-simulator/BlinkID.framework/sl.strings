@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Poklic";
 "mb_blinkid_mf_race" = "Rasa";
 "mb_blinkid_mf_religion" = "Vera";
+"mb_blinkid_mf_remarks" = "Opombe";
+"mb_blinkid_mf_residence_permit_type" = "Vrsta dovoljenja za prebivanje";
 "mb_blinkid_mf_residential_status" = "Status prebivanja";
 "mb_blinkid_mf_restrictions" = "Omejitve";
 "mb_blinkid_mf_sex" = "Področje spola";
 "mb_blinkid_mf_sponsor" = "Sponzor";
 "mb_blinkid_mf_vehicle_class" = "Razred vozila";
+"mb_blinkid_mf_visa_type" = "Vrsta vizuma";
 "mb_blinkid_onboarding_msg1_barcode" = "Prepričajte se, da s prstom ne prekrivate delov črtne kode. Pazite tudi na odseve, ki prekrivajo črtno kodo in jo lahko naredijo nečitljivo.";
 "mb_blinkid_onboarding_msg1_mrz" = "Prepričajte se, da s prstom ne zakrivate delov kode MRZ. Pazite tudi na odseve, ki prekrivajo kodo MRZ in jo lahko naredijo nečitljivo.";
 "mb_blinkid_onboarding_msg_1" = "Poskrbite, da s prstom ne boste prekrivali delov dokumenta, to velja tudi za spodnjo linijo. Prav tako bodite pozorni na hologramske znake, ki gredo preko polj na dokumentu.";

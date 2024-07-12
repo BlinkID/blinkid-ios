@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Propesyon";
 "mb_blinkid_mf_race" = "Lahi";
 "mb_blinkid_mf_religion" = "Relihiyon";
+"mb_blinkid_mf_remarks" = "Mga Puna";
+"mb_blinkid_mf_residence_permit_type" = "Uri ng permit sa paninirahan";
 "mb_blinkid_mf_residential_status" = "Katayuan ng Paninirahan";
 "mb_blinkid_mf_restrictions" = "Mga Paghihigpit";
 "mb_blinkid_mf_sex" = "Kasarian";
 "mb_blinkid_mf_sponsor" = "Isponsor";
 "mb_blinkid_mf_vehicle_class" = "Uri ng sasakyan";
+"mb_blinkid_mf_visa_type" = "Uri ng visa";
 "mb_blinkid_onboarding_msg1_barcode" = "Tiyaking hindi mo tinatakpan ang mga bahagi ng barcode gamit ang isang daliri. Gayundin, mag-ingat sa mga pagmumuni-muni na lumalampas sa barcode at maaaring gawin itong hindi nababasa.";
 "mb_blinkid_onboarding_msg1_mrz" = "Tiyaking hindi mo sinasaklaw ang mga bahagi ng MRZ code gamit ang isang daliri. Gayundin, mag-ingat sa mga pagmumuni-muni na lumalampas sa MRZ code at maaaring gawin itong hindi nababasa.";
 "mb_blinkid_onboarding_msg_1" = "Siguraduhin na hindi natatakpak ng iyong daliri ang mga bahagi ng dokumento, pati na ang pinakababang mga linya. Gayon rin, tingnan rin kung may mga hologram reflection na maaaring makatakip sa mga field ng dokumento.";

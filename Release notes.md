@@ -1,5 +1,124 @@
 # Release notes
 
+## 6.9.0
+
+### New Features
+- **Custom mandatory fields**
+  - We’re introducing the option for customers to define their own set of mandatory fields. This feature allows greater flexibility in the scanning process by enabling the extraction of only the necessary information from identity documents. Now you can customize the process and focus on only those fields that are relevant to your use case.  
+  - Custom mandatory fields can be set at the document level or applied universally to all document types.
+- **Face detector improvements**
+  - We made significant enhancements to our face detector model. 
+- **Added new values to `ClassInfo` enum:**
+  - `Region`: `
+    - ALAGOAS` for Brazilian documents
+  - `Type`: 
+    - `AFGHAN_CITIZEN_CARD`
+    - `EID`
+    - `PASS`
+    - `SIS_ID`
+
+### Expanded Document Coverage
+
+#### New Documents Support
+- Austria - Polycarbonate Passport
+- Canada - Polycarbonate Passport
+- Ecuador - Paper Passport
+- Germany - eID
+- Guatemala - Alien ID
+- Iraq - Polycarbonate Passport
+- Namibia - Identity Card
+- Nepal - Polycarbonate Passport
+- Sweden - SIS ID
+- USA, Delaware - Identity Card
+- USA, Louisiana - Identity Card
+- USA, Vermont - Identity Card
+
+#### New Document Versions for Supported Documents
+- Bolivia - Identity Card
+- Canada, British Columbia - Public Services Card
+- Finland - Identity Card
+- Greece - Identity Card
+- Malaysia - iKAD
+- Mexico, Nuevo Leon - Driver's License
+- Mexico, Tlaxcala - Driver's License
+- Morocco - Driver's License
+- Thailand - Polycarbonate Passport
+- USA - Alaska - Driver's License
+- USA - Alaska - Identity Card
+- USA - Connecticut - Identity Card
+- USA - Delaware - Driver's License
+- USA - District of Columbia - Driver's License
+- USA - Hawaii - Identity Card
+- USA - Idaho - Driver's License
+- USA - Indiana - Driver's License
+- USA - Indiana - Identity Card
+- USA - Iowa - Identity Card
+- USA - Kansas - Identity Card
+- USA - Kentucky - Identity Card
+- USA - Kentucky - Driver's License
+- USA - Maine - Identity Card
+- USA - Maine - Driver's License
+- USA - Michigan - Driver's License
+- USA - Minnesota - Driver's License
+- USA - Minnesota - Identity Card
+- USA - Montana - Identity Card
+- USA - Montana - Driver's License
+- USA - New Hampshire - Identity Card
+- USA - New Mexico - Driver's License
+- USA - New Mexico - Identity Card
+- USA - New York - Identity Card
+- USA - North Dakota - Identity Card
+- USA - Oregon - Identity Card
+- USA - Pennsylvania - Driver's License
+- USA - Rhode Island - Identity Card
+- USA - South Carolina - Identity Card
+- USA - Vermont - Driver's License
+- USA - Washington - Identity Card
+- USA - Wyoming - Driver's License
+- USA - Wyoming - Identity Card
+
+#### Out of Beta
+- European Union - Health Insurance Card
+
+#### New Beta Documents Support
+- Democratic Republic of the Congo - Voter ID
+- Philippines - Alien ID
+- Philippines - Postal ID
+- Philippines - Work Permit
+- Philippines - Health Insurance Card
+
+#### New Document Versions for Beta-Supported Documents
+- Honduras - Paper Passport
+- Mexico, Sonora - Driver's License
+- Peru - Alien ID
+- Philippines - Alien ID
+
+#### New Segments Supported on Documents
+- China Exit Entry Permit - MRZ
+- China Mainland Travel Permit Taiwan - MRZ
+- France Residence permit - `Remarks` & `ResidencePermitType`
+- Philippines Alien ID - `VisaType`
+
+#### Bug Fixes
+- German ID - Fixed issues in cases when documents contain multiple surnames
+- Paraguay ID - Added support for parsing the smaller barcode found on the back side of the ID
+- Bulgaria Driver’s License - The Address field is set to optional, improving the extraction process
+- Improved MRZ parsing for the back side of the following identity documents:
+  - Brazil Alien ID
+  - Kenya ID
+  - Bosnia and Herzegovina ID
+  - Ivory Coast ID
+  - Paraguay ID 
+- Added missing `ParaguayID` to `IdBarcodeDocumentType`
+
+#### Other changes
+- Set `defineSpecificMissingMandatoryFields` in `MBBlinkIdOverlaySettings` default value to `false`. If you want detailed UI messages about missing mandatory fields, set it to `true`
+- Added `CustomClassRules` setting to `BlinkIdSingleSideRecognizer` and `BlinkIdMultiSideRecognizer` to support above mentioned custom mandatory fields
+
+### API breaking change
+- **Additional anonymization**    
+    - The ClassAnonymizationSettings class used for additional anonymization now includes a ClassFilter for filtering classes by Country, Region, and Type.
+
 ## 6.8.0
 
 ### New Features

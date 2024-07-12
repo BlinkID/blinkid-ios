@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "职业";
 "mb_blinkid_mf_race" = "种族";
 "mb_blinkid_mf_religion" = "宗教";
+"mb_blinkid_mf_remarks" = "备注";
+"mb_blinkid_mf_residence_permit_type" = "居留许可类型";
 "mb_blinkid_mf_residential_status" = "居留身份";
 "mb_blinkid_mf_restrictions" = "限制条件";
 "mb_blinkid_mf_sex" = "性别字段";
 "mb_blinkid_mf_sponsor" = "担保人";
 "mb_blinkid_mf_vehicle_class" = "车辆分类";
+"mb_blinkid_mf_visa_type" = "签证类型";
 "mb_blinkid_onboarding_msg1_barcode" = "确保您的手指没有遮挡条形码。此外,请留意条形码上的反光,反光可能导致条形码无法读取。";
 "mb_blinkid_onboarding_msg1_mrz" = "确保您的手指没有遮挡护照机读码。此外,请留意护照机读码上的反光,反光可能导致护照机读码无法读取。";
 "mb_blinkid_onboarding_msg_1" = "确保不要用手指遮盖文件的任意部分，包括底部边线。同时注意全息图在文件字段的反射。";

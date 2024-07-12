@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Nghề nghiệp";
 "mb_blinkid_mf_race" = "Chủng tộc";
 "mb_blinkid_mf_religion" = "Tôn giáo";
+"mb_blinkid_mf_remarks" = "Nhận xét";
+"mb_blinkid_mf_residence_permit_type" = "Loại giấy phép cư trú";
 "mb_blinkid_mf_residential_status" = "Tình trạng Cư trú";
 "mb_blinkid_mf_restrictions" = "Hạn chế";
 "mb_blinkid_mf_sex" = "Trường giới";
 "mb_blinkid_mf_sponsor" = "Nhà tài trợ";
 "mb_blinkid_mf_vehicle_class" = "Hạng xe";
+"mb_blinkid_mf_visa_type" = "Loại thị thực";
 "mb_blinkid_onboarding_msg1_barcode" = "Đảm bảo bạn không dùng ngón tay che các phần của mã vạch. Ngoài ra, hãy coi chừng ánh sáng phản xạ trên mã vạch có thể khiến mã vạch không đọc được.";
 "mb_blinkid_onboarding_msg1_mrz" = "Đảm bảo bạn không dùng ngón tay che các phần của mã MRZ. Ngoài ra, hãy coi chừng ánh sáng phản xạ trên mã MRZ có thể khiến mã MRZ không đọc được.";
 "mb_blinkid_onboarding_msg_1" = "Đảm bảo rằng bạn không dùng ngón tay che các phần của tài liệu, kể cả các dòng dưới cùng. Ngoài ra, hãy để ý các phản xạ ảnh ba chiều đi qua các trường tài liệu.";

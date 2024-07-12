@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Profesi";
 "mb_blinkid_mf_race" = "Ras";
 "mb_blinkid_mf_religion" = "Agama";
+"mb_blinkid_mf_remarks" = "Pernyataan";
+"mb_blinkid_mf_residence_permit_type" = "Jenis izin tinggal";
 "mb_blinkid_mf_residential_status" = "Status Tempat Tinggal";
 "mb_blinkid_mf_restrictions" = "Batasan";
 "mb_blinkid_mf_sex" = "Bidang kelamin";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Kelas kendaraan";
+"mb_blinkid_mf_visa_type" = "Jenis visa";
 "mb_blinkid_onboarding_msg1_barcode" = "Pastikan jari Anda tidak menutupi bagian kode batang. Selain itu, hindari pantulan pada kode batang yang dapat menjadikannya tidak terbaca.";
 "mb_blinkid_onboarding_msg1_mrz" = "Pastikan jari Anda tidak menutupi bagian kode MRZ. Selain itu, hindari pantulan pada kode MRZ yang dapat menjadikannya tidak terbaca.";
 "mb_blinkid_onboarding_msg_1" = "Pastikan jari Anda tidak menutupi bagian mana pun dari dokumen, termasuk baris paling bawah. Waspadai juga pantulan hologram yang menerpa bagian dokumen.";

@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "職業";
 "mb_blinkid_mf_race" = "種族";
 "mb_blinkid_mf_religion" = "宗教";
+"mb_blinkid_mf_remarks" = "備註";
+"mb_blinkid_mf_residence_permit_type" = "居留證類別";
 "mb_blinkid_mf_residential_status" = "居留身分";
 "mb_blinkid_mf_restrictions" = "限制";
 "mb_blinkid_mf_sex" = "性別欄位";
 "mb_blinkid_mf_sponsor" = "贊助單位";
 "mb_blinkid_mf_vehicle_class" = "車輛種類";
+"mb_blinkid_mf_visa_type" = "簽證類別";
 "mb_blinkid_onboarding_msg1_barcode" = "請確保手指沒有遮住部分條碼。此外,請注意別讓反光在條碼上而造成無法讀取。";
 "mb_blinkid_onboarding_msg1_mrz" = "請確保手指沒有遮住部分 MRZ 碼。此外,請注意別讓反光在 MRZ 碼上而造成無法讀取。";
 "mb_blinkid_onboarding_msg_1" = "確保您的手指沒有蓋到文件的某些內容，包括底線。此外，請注意文件欄位的全息圖反射。";
