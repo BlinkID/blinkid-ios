@@ -1,3 +1,9 @@
+## 6.9.0
+
+## Breaking changes
+- **Additional anonymization**    
+    - The ClassAnonymizationSettings class used for additional anonymization now includes a ClassFilter for filtering classes by Country, Region, and Type.
+
 ## 6.8.0
 
 ## Breaking changes

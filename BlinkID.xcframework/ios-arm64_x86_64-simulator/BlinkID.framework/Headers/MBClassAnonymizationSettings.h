@@ -12,6 +12,7 @@
 #import "MBMicroblinkDefines.h"
 #import "MBClassInfoTypes.h"
 #import "MBDocumentNumberAnonymizationSettings.h"
+#import "MBClassFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,22 +20,9 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @interface MBClassAnonymizationSettings : NSObject
 
 /**
- * Country that defines class of documents to be anonymized
- * @discusion: MBCountry wrapped in NSNumber
+ * Specified fields will be anonymized if filter conditions are met.
  */
-@property (nonatomic, assign) NSNumber *country;
-
-/**
- * Region that defines class of documents to be anonymized
- * @discusion: MBRegion wrapped in NSNumber
- */
-@property (nonatomic, assign) NSNumber *region;
-
-/**
- * Type that defines class of documents to be anonymized
- * @discusion: MBType wrapped in NSNumber
- */
-@property (nonatomic, assign) NSNumber *type;
+@property (nonatomic, strong) MBClassFilter *classFilter;
 
 /**
  * List of fields that will be anonymized on the document.
@@ -57,91 +45,11 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @param fields NSArray of NSnumbers representing MBFieldType enum types
  *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param country MBCountry object
- *
- *  @param region MBRegion object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param country MBCountry object
- *
- *  @param type MBType object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithCountry:(MBCountry)country type:(MBType)type fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param region MBRegion object
- *
- *  @param type MBType object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithRegion:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param country MBCountry object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithCountry:(MBCountry)country fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param region MBRegion object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithRegion:(MBRegion)region fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param type MBType object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithType:(MBType)type fields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
- *  @return initialized classAnonymizationSettings
- */
-- (instancetype)initWithFields:(NSArray<NSNumber *> *)fields;
-
-/**
- *  @param country MBCountry object
- *
- *  @param region MBRegion object
- *
- *  @param type MBType object
- *
- *  @param fields NSArray of NSnumbers representing MBFieldType enum types
- *
  *  @param documentNumberAnonymizationSettings MBDocumentNumberAnonymizationSettings object
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param country MBCountry object
@@ -154,7 +62,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithCountry:(MBCountry)country region:(MBRegion)region fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param country MBCountry object
@@ -167,7 +75,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithCountry:(MBCountry)country type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithCountry:(MBCountry)country type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param region MBRegion object
@@ -180,7 +88,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithRegion:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithRegion:(MBRegion)region type:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param country MBCountry object
@@ -191,7 +99,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithCountry:(MBCountry)country fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithCountry:(MBCountry)country fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param region MBRegion object
@@ -202,7 +110,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithRegion:(MBRegion)region fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithRegion:(MBRegion)region fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param type MBType object
@@ -213,7 +121,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithType:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithType:(MBType)type fields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
 
 /**
  *  @param fields NSArray of NSnumbers representing MBFieldType enum types
@@ -222,7 +130,18 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  *
  *  @return initialized classAnonymizationSettings
  */
-- (instancetype)initWithFields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+- (instancetype)initWithFields:(NSArray<NSNumber *> *)fields documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings;
+
+/**
+ *  @param classFilter nullable MBClassFilter object
+ *
+ *  @param documentNumberAnonymizationSettings nullable MBDocumentNumberAnonymizationSettings object
+ *
+ *  @param fields NSArray of NSnumbers representing MBFieldType enum types
+ *
+ *  @return initialized classAnonymizationSettings
+ */
+- (instancetype)initWithClassFilter:(nullable MBClassFilter*)classFilter documentNumberAnonymizationSettings:(nullable MBDocumentNumberAnonymizationSettings *)documentNumberAnonymizationSettings fields:(NSArray<NSNumber *> *)fields;
 
 @end
 

@@ -405,7 +405,8 @@ typedef NS_ENUM(NSInteger, MBRegion) {
     MBRegionGoias,
     MBRegionGuerreroAcapulcoDeJuarez,
     MBRegionHaryana,
-    MBRegionSergipe
+    MBRegionSergipe,
+    MBRegionAlagoas
 };
 
 typedef NS_ENUM(NSInteger, MBType) {
@@ -475,7 +476,11 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeMainlandTravelPermitTaiwan,
     MBTypeNbiClearance,
     MBTypeProofOfRegistration,
-    MBTypeTemporaryProtectionPermit
+    MBTypeTemporaryProtectionPermit,
+    MBTypeAfghanCitizenCard,
+    MBTypeEId,
+    MBTypePass,
+    MBTypeSisId
 };
 
 #endif /* MBClassInfoTypes_h */

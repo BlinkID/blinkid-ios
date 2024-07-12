@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Profissão";
 "mb_blinkid_mf_race" = "Raça";
 "mb_blinkid_mf_religion" = "Religião";
+"mb_blinkid_mf_remarks" = "Observações";
+"mb_blinkid_mf_residence_permit_type" = "Tipo de autorização de residência";
 "mb_blinkid_mf_residential_status" = "Status residencial";
 "mb_blinkid_mf_restrictions" = "Restrições";
 "mb_blinkid_mf_sex" = "Campo do Sexo";
 "mb_blinkid_mf_sponsor" = "Patrocinador";
 "mb_blinkid_mf_vehicle_class" = "Classe do veículo";
+"mb_blinkid_mf_visa_type" = "Tipo de visto";
 "mb_blinkid_onboarding_msg1_barcode" = "Certifique-se de que não está a cobrir partes do código de barras com um dedo. Além disso, tenha em atenção os reflexos que se sobrepõem ao código de barras e que poderão torná-lo ilegível.";
 "mb_blinkid_onboarding_msg1_mrz" = "Certifique-se de que não está a cobrir partes do código MRZ com um dedo. Além disso, tenha em atenção os reflexos que se sobrepõem ao código MRZ e que poderão torná-lo ilegível.";
 "mb_blinkid_onboarding_msg_1" = "Certifique-se de que não está a cobrir partes do documento com um dedo, incluindo as linhas de fundo. Tenha também em atenção os reflexos de holograma que passam por cima dos campos do documento.";

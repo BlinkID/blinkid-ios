@@ -16,7 +16,7 @@
 "mb_blinkid_mf_additional_address_information" = "Address information";
 "mb_blinkid_mf_additional_name_information" = "Name information";
 "mb_blinkid_mf_address" = "Address";
-"mb_blinkid_mf_blood_type" = "Blood Type";
+"mb_blinkid_mf_blood_type" = "Blood type";
 "mb_blinkid_mf_class_effective_date" = "Effective date";
 "mb_blinkid_mf_class_expiry_date" = "Date of expiry";
 "mb_blinkid_mf_conditions" = "Conditions";
@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Profession";
 "mb_blinkid_mf_race" = "Race";
 "mb_blinkid_mf_religion" = "Religion";
+"mb_blinkid_mf_remarks" = "Remarks";
+"mb_blinkid_mf_residence_permit_type" = "Residence permit type";
 "mb_blinkid_mf_residential_status" = "Residential status";
 "mb_blinkid_mf_restrictions" = "Restrictions";
 "mb_blinkid_mf_sex" = "Sex field";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Vehicle class";
+"mb_blinkid_mf_visa_type" = "Visa type";
 "mb_blinkid_onboarding_msg1_barcode" = "Make sure you aren’t covering parts of the barcode with a finger. Also, watch out for reflections that go over the barcode and could make it unreadable.";
 "mb_blinkid_onboarding_msg1_mrz" = "Make sure you aren’t covering parts of the MRZ code with a finger. Also, watch out for reflections that go over the MRZ code and could make it unreadable.";
 "mb_blinkid_onboarding_msg_1" = "Make sure you aren’t covering parts of the document with a finger, including the bottom lines. Also, watch out for hologram reflections that go over the document fields.";

@@ -298,6 +298,21 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly) MBSide faceImageSide;
 
+/**
+ * The remarks on the residence permit.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *remarks;
+
+/**
+ * The residence permit type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *residencePermitType;
+
+/**
+ * The visa type.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *visaType;
+
 @end
 
 NS_ASSUME_NONNULL_END

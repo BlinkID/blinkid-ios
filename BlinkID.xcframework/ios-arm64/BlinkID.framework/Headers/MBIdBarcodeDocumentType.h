@@ -29,5 +29,7 @@ typedef NS_ENUM(NSInteger, MBIdBarcodeDocumentType) {
     /** Panama ID */
     MBIdBarcodeDocumentTypePanamaID,
     /** South African ID */
-    MBIdBarcodeDocumentTypeSouthAfricaID
+    MBIdBarcodeDocumentTypeSouthAfricaID,
+    /** Paraguay ID */
+    MBIdBarcodeDocumentTypeParaguayID
 };

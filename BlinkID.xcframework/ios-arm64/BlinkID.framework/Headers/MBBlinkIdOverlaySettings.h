@@ -151,7 +151,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 /**
 * If YES and number of missing mandatory fields is <= 2, names of missing mandatory fields will be present in the message.
 *
-* Default: YES
+* Default: NO
 */
 @property(nonatomic, assign) BOOL defineSpecificMissingMandatoryFields;
 

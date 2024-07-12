@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Professione";
 "mb_blinkid_mf_race" = "Etnia";
 "mb_blinkid_mf_religion" = "Religione";
+"mb_blinkid_mf_remarks" = "Osservazioni";
+"mb_blinkid_mf_residence_permit_type" = "Tipo di permesso di soggiorno";
 "mb_blinkid_mf_residential_status" = "Stato civile";
 "mb_blinkid_mf_restrictions" = "Restrizioni";
 "mb_blinkid_mf_sex" = "Campo sesso";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Classe del veicolo";
+"mb_blinkid_mf_visa_type" = "Tipo di Visa";
 "mb_blinkid_onboarding_msg1_barcode" = "Accertati di non coprire parzialmente con un dito il codice a barre. Verifica inoltre che non ci siano riflessi sul codice a barre, che potrebbero comprometterne la leggibilità.";
 "mb_blinkid_onboarding_msg1_mrz" = "Accertati di non coprire parzialmente con un dito il codice MRZ. Verifica inoltre che non ci siano riflessi sul codice MRZ, che potrebbero comprometterne la leggibilità.";
 "mb_blinkid_onboarding_msg_1" = "Controlla di non stare coprendo parte del documento, comprese le ultime righe, con un dito. Fai attenzione anche ai riflessi olografici situati sui campi del documento.";

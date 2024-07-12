@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "מקצוע";
 "mb_blinkid_mf_race" = "גזע";
 "mb_blinkid_mf_religion" = "דת";
+"mb_blinkid_mf_remarks" = "הערות";
+"mb_blinkid_mf_residence_permit_type" = "סוג היתר שהייה";
 "mb_blinkid_mf_residential_status" = "מצב מגורים";
 "mb_blinkid_mf_restrictions" = "הגבלות";
 "mb_blinkid_mf_sex" = "שדה מין";
 "mb_blinkid_mf_sponsor" = "ספונסר";
 "mb_blinkid_mf_vehicle_class" = "סיווג כלי הרכב";
+"mb_blinkid_mf_visa_type" = "סוג ויזה";
 "mb_blinkid_onboarding_msg1_barcode" = "ודאו שאינכם מכסים חלקים מהברקוד עם האצבע. כמו כן, היזהרו מהשתקפויות על גבי הברקוד שעלולות להפוך אותו לבלתי קריא.";
 "mb_blinkid_onboarding_msg1_mrz" = "ודאו שאינכם מכסים חלקים מקוד ה-MRZ עם האצבע. כמו כן, היזהרו מהשתקפויות על גבי קוד ה-MRZ שעלולות להפוך אותו לבלתי קריא.";
 "mb_blinkid_onboarding_msg_1" = "הקפד לא לכסות חלקים מהמסמך באצבע, כולל השורות התחתונות.כמו כן, היזהר מהשתקפויות הולוגרמה העוברות על שדות המסמך.";

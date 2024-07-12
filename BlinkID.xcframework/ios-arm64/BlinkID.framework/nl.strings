@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Beroep";
 "mb_blinkid_mf_race" = "Ras";
 "mb_blinkid_mf_religion" = "Religie";
+"mb_blinkid_mf_remarks" = "Opmerkingen";
+"mb_blinkid_mf_residence_permit_type" = "Type verblijfsvergunning";
 "mb_blinkid_mf_residential_status" = "Verblijfsstatus";
 "mb_blinkid_mf_restrictions" = "Restricties";
 "mb_blinkid_mf_sex" = "Geslachtsveld";
 "mb_blinkid_mf_sponsor" = "Sponsor";
 "mb_blinkid_mf_vehicle_class" = "Voertuig klasse";
+"mb_blinkid_mf_visa_type" = "Visumtype";
 "mb_blinkid_onboarding_msg1_barcode" = "Zorg ervoor dat u geen delen van de streepjescode met een vinger bedekt. Pas ook op voor reflecties die op de streepjescode vallen en deze onleesbaar kunnen maken.";
 "mb_blinkid_onboarding_msg1_mrz" = "Zorg ervoor dat u geen delen van de MRZ-code met een vinger bedekt. Pas ook op voor reflecties die op de MRZ-code vallen en deze onleesbaar kunnen maken.";
 "mb_blinkid_onboarding_msg_1" = "Zorg ervoor dat u onderdelen van het document niet afdekt met een vinger, dus ook niet de onderste regels. Waak ook voor hologramreflecties op de documentvelden.";

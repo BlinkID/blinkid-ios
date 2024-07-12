@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "อาชีพ";
 "mb_blinkid_mf_race" = "เชื้อชาติ";
 "mb_blinkid_mf_religion" = "ศาสนา";
+"mb_blinkid_mf_remarks" = "หมายเหตุ";
+"mb_blinkid_mf_residence_permit_type" = "ประเภทใบสำคัญถิ่นที่อยู่";
 "mb_blinkid_mf_residential_status" = "สถานะการอยู่อาศัย";
 "mb_blinkid_mf_restrictions" = "ข้อจำกัด";
 "mb_blinkid_mf_sex" = "ฟิลด์เพศ";
 "mb_blinkid_mf_sponsor" = "ผู้สนับสนุน";
 "mb_blinkid_mf_vehicle_class" = "ประเภทยานพาหนะ";
+"mb_blinkid_mf_visa_type" = "ประเภทวีซ่า";
 "mb_blinkid_onboarding_msg1_barcode" = "ตรวจสอบให้แน่ใจว่าคุณไม่ได้ใช้นิ้วบังส่วนต่างๆ ของบาร์โค้ด นอกจากนี้ ระวังแสงสะท้อนที่ส่องผ่านบาร์โค้ดและอาจทำให้ไม่สามารถอ่านได้";
 "mb_blinkid_onboarding_msg1_mrz" = "ตรวจสอบให้แน่ใจว่าคุณไม่ได้ปกปิดบางส่วนของโค้ด MRZ ด้วยนิ้ว นอกจากนี้ ระวังการสะท้อนที่ส่องผ่านโค้ด MRZ และอาจทำให้อ่านไม่ได้";
 "mb_blinkid_onboarding_msg_1" = "ตรวจสอบให้แน่ใจว่านิ้วของคุณไม่ได้บังส่วนใดของเอกสาร รวมถึงบรรทัดล่างสุด นอกจากนี้ ระวังแสงสะท้อนของโฮโลแกรมที่จะทับส่วนต่างๆ ของเอกสารด้วย";

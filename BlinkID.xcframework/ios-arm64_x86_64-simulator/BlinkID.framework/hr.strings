@@ -45,11 +45,14 @@
 "mb_blinkid_mf_profession" = "Zanimanje";
 "mb_blinkid_mf_race" = "Rasa";
 "mb_blinkid_mf_religion" = "Religija";
+"mb_blinkid_mf_remarks" = "Napomene";
+"mb_blinkid_mf_residence_permit_type" = "Vrsta boravišne dozvole";
 "mb_blinkid_mf_residential_status" = "Stambeni status";
 "mb_blinkid_mf_restrictions" = "Restrikcije";
 "mb_blinkid_mf_sex" = "Spol";
 "mb_blinkid_mf_sponsor" = "Sponzor";
 "mb_blinkid_mf_vehicle_class" = "Kategorija vozila";
+"mb_blinkid_mf_visa_type" = "Vrsta vize";
 "mb_blinkid_onboarding_msg1_barcode" = "Držite dokument tako da prstima ne prekrivate barkod. Pripazite da nema refleksije svjetla preko barkoda.";
 "mb_blinkid_onboarding_msg1_mrz" = "Pripazite da MRZ kod nije prekriven prstima te da na njemu nema refleksije svjetla.";
 "mb_blinkid_onboarding_msg_1" = "Pripazite kako držite dokument. Bitno je da prstima ne prekrivate površinu dokumenta i da refleksija holograma ne prekriva podatke.";
