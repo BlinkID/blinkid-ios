@@ -1,3 +1,7 @@
+## 6.9.1
+
+- No changes
+
 ## 6.9.0
 
 ## Breaking changes

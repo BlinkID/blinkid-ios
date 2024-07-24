@@ -774,7 +774,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3hB87tN/X+n3vGxPp8n69EEaDOo=
+		y8ndQllve4BX4xsziIbq2UIc+M4=
 		</data>
 		<key>Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop</key>
 		<data>
@@ -838,7 +838,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		kujhghC9xNXsRX55MaXhOZdvVAQ=
+		wkXUKrLnlfX9X5WZQSGScnNO8yo=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -858,7 +858,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JKE7Vry0pwh1YlLs1GM/pWh57Xg=
+		TZq8C3HuskZhDJX3jdqsWpNo0Ac=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -3204,7 +3204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			978QYMRTcbdVNCbrm1qVxIQRnT7U9cvKJcGMUQUHwOQ=
+			V4hAJdHxghysFZoUeTTIoQcqbr6yjdgWOYl3D8p8hUo=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -3239,7 +3239,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1Z66zZ2GXaFaK0AQ0yPwoyB1QR60FhNF3RB+/7UZ30I=
+			ecxgngNu9b3CSK7hA5UZ2NWLzCKnHE0R/fuj/Qu1gJk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
