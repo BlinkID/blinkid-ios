@@ -1,5 +1,10 @@
 # Release notes
 
+## 6.9.1
+
+#### Bug Fixes
+- Fixed the issue where in some cases scanning the back side of the document was not working properly.
+
 ## 6.9.0
 
 ### New Features
