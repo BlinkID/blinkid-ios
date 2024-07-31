@@ -130,7 +130,7 @@
 		</data>
 		<key>Headers/MBCameraSettings.h</key>
 		<data>
-		RINv07JJMH+W6S6zcbV9fgK2L1o=
+		86lWAtOHUM1F5X0Yu+Yxl91xLJU=
 		</data>
 		<key>Headers/MBClassAnonymization.h</key>
 		<data>
@@ -774,7 +774,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cQU+2H+3sG4V6wQ2yqE7DuLmJtw=
+		WWxpjukN3Sl6OFdOjkI8Ux/b5p0=
 		</data>
 		<key>Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop</key>
 		<data>
@@ -838,11 +838,11 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		frbIfSmhvidD32xVEJeNc3Wlz4s=
+		46E1Gq9LTpJMScAtJAyAI0eyYZU=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		LunMxCUQZYrmS6pM5TsbXsPkKf0=
+		kVUUJU0arLjiVASFub3sI09s+4M=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -1996,7 +1996,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			opfNU2Z2vis9KseABuMLy6ztOm+pIm/2wBUyZh0S58Y=
+			g0JziNdv9C+6O+zhg23lzD2Eo5ut6kzklT10yQlSR3U=
 			</data>
 		</dict>
 		<key>Headers/MBClassAnonymization.h</key>
@@ -3228,14 +3228,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pNNfUa4jaNFEloYex98Yx7+o4GQbOb4kmQjV9j66W+U=
+			1ghhUX0sOMjO0oVVpnN+t4KzP4MVW1hFBNRDu7bOcRc=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			icqXyoWkZte6MzKeEHiZMnXuodzvua0BcdPp8bOROqY=
+			jWkSTWhMcAb4A9nktVt7fi1dbE3xVf5X2fsANWmgnKc=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

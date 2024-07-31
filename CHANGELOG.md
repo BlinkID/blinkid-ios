@@ -1,5 +1,11 @@
 # Release notes
 
+## 6.9.2
+
+#### New features
+- Added new experimental bool `forceUsingPixelFormatTypeBiPlanarFullRange` to `cameraSettings` in `BlinkIdOverlaySettings`.
+  - As `kCVPixelFormatType_420YpCbCr8BiPlanarFullRange` is an experimental feature, no support will be provided while this flag is active. 
+
 ## 6.9.1
 
 #### Bug Fixes

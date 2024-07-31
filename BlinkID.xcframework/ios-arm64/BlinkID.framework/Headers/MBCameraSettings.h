@@ -159,4 +159,12 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  */
 - (AVCaptureAutoFocusRangeRestriction)calcAutofocusRangeRestriction;
 
+/**
+ * Force using `kCVPixelFormatType_420YpCbCr8BiPlanarFullRange`.
+ * As `kCVPixelFormatType_420YpCbCr8BiPlanarFullRange` is an experimental feature, no support will be provided while this flag is active.
+ *
+ * Default: NO
+ */
+@property (nonatomic) BOOL forceUsingPixelFormatTypeBiPlanarFullRange;
+
 @end
