@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "انقل إلى موضع أقرب";
 "mb_blinkid_camera_near" = "انقل إلى موضع أبعد";
 "mb_blinkid_document_too_close_to_edge" = "أبعد المستند عن الحافة";
+"mb_blinkid_face_photo_not_fully_visible" = "حافظ على صورة الوجه مرئية بالكامل\n";
 "mb_blinkid_glare_detected" = "أمِل المستند أو حرّكه لتتخلص من الانعكاس";
 "mb_blinkid_introduction_dialog_message" = "تأكد من إبقاء المستند مضاءً بشكل جيد. كما يجب أن تكون جميع خانات المستندات واضحة على شاشة الكاميرا.";
 "mb_blinkid_introduction_dialog_message_barcode" = "قد تحتوي أنواع المستندات المختلفة على صيغ وأماكن مختلفة للرموز الشريطية. يُرجى البحث في جانبي المستند الأمامي والخلفي عن رمز شريطي.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "احترس من الإضاءة الساطعة";
 "mb_blinkid_onboarding_title_3" = "حافظ على الثبات أثناء إجراء المسح";
 "mb_blinkid_onboarding_tooltip" = "هل تحتاج مساعدة؟";
+"mb_blinkid_scanning_wrong_side" = "اقلب المستند\n";
 "mb_check_internet_connection" = "تحقق من الاتصال بالإنترنت";
 "mb_close" = "إغلاق";
 "mb_data_not_match_msg" = "يُرجى بدء عملية المسح الضوئي من جديد.";

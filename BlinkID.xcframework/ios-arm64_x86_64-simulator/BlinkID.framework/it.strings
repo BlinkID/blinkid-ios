@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Avvicinati";
 "mb_blinkid_camera_near" = "Spostati più lontano";
 "mb_blinkid_document_too_close_to_edge" = "Sposta il documento dal bordo";
+"mb_blinkid_face_photo_not_fully_visible" = "Mantenere la foto del viso completamente visibile ";
 "mb_blinkid_glare_detected" = "Inclina o muovi il documento per eliminare il riflesso";
 "mb_blinkid_introduction_dialog_message" = "Controlla che il documento sia ben illuminato. Tutti i campi del documento devono essere visibili sullo schermo della fotocamera.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Su tipi diversi di documenti possono essere riportati codici a barre con formati e posizioni differenti. Cerca un codice a barre sul fronte e sul retro del documento.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Attenzione alla luce intensa";
 "mb_blinkid_onboarding_title_3" = "Resta immobile durante la scansione";
 "mb_blinkid_onboarding_tooltip" = "Ti serve aiuto?";
+"mb_blinkid_scanning_wrong_side" = "Girare il documento ";
 "mb_check_internet_connection" = "Controlla la connessione a Internet";
 "mb_close" = "Chiudi";
 "mb_data_not_match_msg" = "Ricomincia il processo di scansione.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Fatto";
 "mb_document_verification_onboarding_next_button" = "Avanti";
 "mb_error_mandatory_field_missing" = "Fai in modo che il documento sia completamente visibile";
+"mb_exit_scanning" = "Uscire dalla scansione";
 "mb_flashlight_glare_tooltip" = "Attenzione al riflesso della luce.\nMuovi lentamente il documento per evitarlo.";
 "mb_network_error" = "Errore di rete";
 "mb_recognition_timeout_dialog_message" = "Impossibile leggere il documento. Riprova.";
 "mb_recognition_timeout_dialog_title" = "Scansione non riuscita";
 "mb_scanning_not_available" = "Scansione non disponibile";
+"mb_show_help_screens" = "Mostrare le schermate di aiuto";
 "mb_something_went_wrong" = "Qualcosa è andato storto";
+"mb_success_document_scanned" = "Perfetto! Documento scansionato";
+"mb_success_first_side_scanned" = "Perfetto! Fronte scansionato";
 "mb_tooltip_glare" = "Sposta leggermente l'ID per eliminare il bagliore.";
 "mb_try_scanning_again" = "Sembra che le informazioni presenti nel documento non siano consistenti. Riprova a scansionare.";
+"mb_turn_flashlight_off" = "Spegnere la torcia";
+"mb_turn_flashlight_on" = "Accendere la torcia";
 "mb_unsupported_document_message" = "Scansiona il lato anteriore di un documento supportato.";
 "mb_unsupported_document_title" = "Documento non riconosciuto";
 "photopay_align_message" = "Posizionare il telefono sopra il bollettino";

@@ -2,10 +2,10 @@
   <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
-[![Travis](https://img.shields.io/travis/BlinkID/blinkid-ios/master.svg?style=flat)](https://travis-ci.org/BlinkID/blinkid-ios)
-[![Pod Version](https://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](https://cocoapods.org/pods/PPBlinkID)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0b7aa9b6c254e75829a7b4b223ae60f)](https://www.codacy.com/gh/BlinkID/blinkid-ios?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BlinkID/blinkid-ios&amp;utm_campaign=Badge_Grade)
 [![Platform](https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat)](https://github.com/BlinkID/blinkid-ios#)
+[![Pod Version](https://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](https://cocoapods.org/pods/PPBlinkID)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
 
 # BlinkID SDK for iOS
 
@@ -28,7 +28,7 @@ BlinkID is:
 
 To see all of these features at work, download our free demo app:
 
-[![Vision App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
+[![Microblink Identity App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
 
 Feeling ready to get going with the integration? First, make sure we support your document type ➡️ [full list](https://microblink.com/full-list-of-supported-identity-documents/). And then carefully follow the guidelines below.
 
@@ -108,7 +108,7 @@ pod init
 ```ruby
 platform :ios, '13.0'
 target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 6.9.2'
+    pod 'PPBlinkID', '~> 6.10.0'
 end
 ```
 

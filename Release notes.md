@@ -1,5 +1,38 @@
 # Release notes
 
+## 6.10.0
+
+### New features
+- **Improved reliability and first-time successful scanning experience**
+  - **_Avoiding Double Scans of the Front Side_**: For a more reliable scanning process, BlinkID now prompts users to flip the document when they scan the front side twice. This improves the overall experience and reduces the chance of mistakes.
+  - **_Starting with the Right Side_**: If users attempt to scan the back side of a document first, BlinkID will prompt them to begin with the front side. This feature ensures that users follow the correct order, leading to a more reliable and user-friendly experience.
+
+### Expanded document coverage
+#### New document versions for supported documents
+- Sweden - Social Security Card - Back side
+- Bolivia - Driver's License - Back side
+- Brazil, Distrito Federal - Identity Card - Back side
+#### Out of beta
+- Colombia - Temporary Protection Permit
+#### New beta documents support
+- France - Professional ID
+- Mexico - Tax ID
+#### New document versions for beta-supported documents
+- Brazil, Parana - Identity Card - Back side
+- Brazil, Santa Catarina - Identity Card - Back side
+#### New segments supported on documents
+- Peru - Alien ID - MRZ
+  
+### Accessibility improvements  
+- Accessible button names: Added accessible names to the help and flashlight buttons, enabling TalkBack to read them correctly.
+- Glare warning toast: The toast is now correctly detected and read by VoiceOver.
+
+### Bug fixes
+- Fallback for barcode scanning - `Barcode ID` recognition mode will now extract information from any supported barcode if full document recognition fails. Initially available only for US and Canadian documents, this feature is now available to all documents.
+- MRZ field on US documents - Set to optional by default and currently refers to: Minnesota (DL & ID), New York (DL & ID), Vermont (DL) and Washington (DL & ID).
+- `AdditionalProcessingInfo` - In cases of an empty result, this field now provides details about the reasons why scanning failed. 
+- Improved handling of face photo occlusion - The UI message is slightly changed to prompt users to keep the face photo fully visible when there is a finger occlusion.
+
 ## 6.9.2
 
 #### New features

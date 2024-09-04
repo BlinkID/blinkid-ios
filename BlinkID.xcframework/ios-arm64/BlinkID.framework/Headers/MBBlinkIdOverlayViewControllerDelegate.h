@@ -52,6 +52,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)blinkIdOverlayViewControllerDidFinishScanningFirstSide:(nonnull MBBlinkIdOverlayViewController *)blinkIdOverlayViewController;
 
+/**
+ * Called when data match alert was shown.
+ *
+ *  @param blinkIdOverlayViewController blinkIdOverlayViewController Scanning view controller responsible for scanning
+ */
+- (void)blinkIdOverlayViewControllerDidShowDataMatchFailedAlert:(nonnull MBBlinkIdOverlayViewController *)blinkIdOverlayViewController;
+
+/**
+ * Called when back side scan timeout alert was shown.
+ *
+ *  @param blinkIdOverlayViewController blinkIdOverlayViewController Scanning view controller responsible for scanning
+ */
+- (void)blinkIdOverlayViewControllerDidShowBackSideScanTimeoutAlert:(nonnull MBBlinkIdOverlayViewController *)blinkIdOverlayViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -132,6 +132,25 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL scanCroppedDocumentImage;
 
+/**
+ * Allows barcode recognition to proceed even if the initial extraction fails.
+ * This only works for still images - video feeds will ignore this setting.
+ * If the barcode recognition is successful, the recognizer will still end in a valid state.
+ * This setting is applicable only to photo frames. For multi-side recognizers, it is permitted only for the back side.
+ *
+ * Default: NO
+ */
+@property (nonatomic, assign) BOOL allowBarcodeScanOnly;
+
+/**
+ * Enables the aggregation of data from multiple frames.
+ * Disabling this setting will yield higher-quality captured images, but it may slow down the scanning process due to the additional effort required to find the optimal frame.
+ * Enabling this setting will simplify the extraction process, but the extracted data will be aggregated from multiple frames instead of being sourced from a single frame.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL combineFrameResults;
+
 @end
 
 @protocol MBBlinkIdSingleSideRecognizerDelegate <NSObject>

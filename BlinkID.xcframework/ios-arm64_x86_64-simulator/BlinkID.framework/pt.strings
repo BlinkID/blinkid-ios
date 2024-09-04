@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Aproxime";
 "mb_blinkid_camera_near" = "Afaste";
 "mb_blinkid_document_too_close_to_edge" = "Mova o documento da margem";
+"mb_blinkid_face_photo_not_fully_visible" = "Manter a foto do rosto totalmente visível";
 "mb_blinkid_glare_detected" = "Incline ou desloque o documento para eliminar o reflexo";
 "mb_blinkid_introduction_dialog_message" = "Assegure-se de que mantém o documento bem iluminado. Todos os campos do documento devem estar visíveis no ecrã da câmara.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Diferentes tipos de documentos podem ter diferentes formatos e localizações de códigos de barras. Procure um código de barras na frente e no verso do documento.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Cuidado com a luz intensa";
 "mb_blinkid_onboarding_title_3" = "Mantenha-se imóvel enquanto digitaliza";
 "mb_blinkid_onboarding_tooltip" = "Precisa de ajuda?\n";
+"mb_blinkid_scanning_wrong_side" = "Virar o documento";
 "mb_check_internet_connection" = "Verifique a ligação à internet";
 "mb_close" = "Fechar";
 "mb_data_not_match_msg" = "Reinicie o processo de digitalização.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Concluído";
 "mb_document_verification_onboarding_next_button" = "Seguinte";
 "mb_error_mandatory_field_missing" = "Mantenha o documento totalmente visível";
+"mb_exit_scanning" = "Sair de digitalização";
 "mb_flashlight_glare_tooltip" = "Tenha cuidado com o clarão da lanterna. \n Mova de forma ligeira a sua identificação para o evitar. ";
 "mb_network_error" = "Erro de rede";
 "mb_recognition_timeout_dialog_message" = "Não foi possível ler o documento. Tente novamente.";
 "mb_recognition_timeout_dialog_title" = "A digitalização falhou";
 "mb_scanning_not_available" = "Digitalização não disponível";
+"mb_show_help_screens" = "Mostrar ecrãs de ajuda";
 "mb_something_went_wrong" = "Ocorreu um erro";
+"mb_success_document_scanned" = "Documento digitalizado com sucesso!";
+"mb_success_first_side_scanned" = "Lado da frente digitalizado com sucesso!";
 "mb_tooltip_glare" = "Desloque ligeiramente a identificação para eliminar o brilho.";
 "mb_try_scanning_again" = "As informações do documento parecem ser inconsistentes. Por favor, volte a tentar digitalizá-lo.";
+"mb_turn_flashlight_off" = "Desligar lanterna";
+"mb_turn_flashlight_on" = "Ligar lanterna";
 "mb_unsupported_document_message" = "Digitalize a frente de um documento suportado.";
 "mb_unsupported_document_title" = "Documento não reconhecido";
 "photopay_align_message" = "Coloque o telefone sobre o talão";

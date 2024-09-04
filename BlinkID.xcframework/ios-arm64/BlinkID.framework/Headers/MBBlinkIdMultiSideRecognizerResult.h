@@ -313,6 +313,16 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) MBStringResult *visaType;
 
+/**
+ * This member indicates whether the barcode scanning step was utilized during the
+ * process.
+ * If the barcode scanning step was executed: a parsable barcode image will be stored in the
+ * `barcodeCameraFrame`.
+ * If the barcode scanning step was not executed: a parsable barcode image will be stored in the
+ * `fullDocumentImage`.
+ */
+@property (nonatomic, readonly) BOOL barcodeStepUsed;
+
 @end
 
 NS_ASSUME_NONNULL_END

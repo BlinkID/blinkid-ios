@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Acercarse";
 "mb_blinkid_camera_near" = "Alejarse";
 "mb_blinkid_document_too_close_to_edge" = "Mueva el documento desde el borde";
+"mb_blinkid_face_photo_not_fully_visible" = "Mantenga la foto del rostro completamente visible";
 "mb_blinkid_glare_detected" = "Incline o mueva el documento para evitar los reflejos";
 "mb_blinkid_introduction_dialog_message" = "Asegúrese de mantener el documento bien iluminado. Todos los campos del documento deben ser visibles en la pantalla de la cámara.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Cada tipo de documento puede tener un formato y una ubicación de código de barras diferentes. Busque el código de barras tanto en la parte frontal como en el reverso del documento.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Cuidado con la luz intensa";
 "mb_blinkid_onboarding_title_3" = "No se mueva mientras escanea";
 "mb_blinkid_onboarding_tooltip" = "¿Necesitas ayuda?";
+"mb_blinkid_scanning_wrong_side" = "Dar la vuelta al documento";
 "mb_check_internet_connection" = "Verifique su conexión a Internet";
 "mb_close" = "Cerrar";
 "mb_data_not_match_msg" = "Por favor, inicie el proceso de escaneo de nuevo.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Hecho";
 "mb_document_verification_onboarding_next_button" = "Siguiente";
 "mb_error_mandatory_field_missing" = "Mantenga el documento visible en su totalidad";
+"mb_exit_scanning" = "Salir del escaneo";
 "mb_flashlight_glare_tooltip" = "Tenga cuidado con el resplandor de la linterna.\nMueva suavemente su ID a su alrededor para evitarlo.";
 "mb_network_error" = "Error de red";
 "mb_recognition_timeout_dialog_message" = "No se puede leer el documento. Por favor, inténtelo de nuevo.";
 "mb_recognition_timeout_dialog_title" = "Escaneo fallido";
 "mb_scanning_not_available" = "Escaneo no disponible";
+"mb_show_help_screens" = "Mostrar pantallas de ayuda";
 "mb_something_went_wrong" = "Algo ha ido mal";
+"mb_success_document_scanned" = "¡Bien! Documento escaneado";
+"mb_success_first_side_scanned" = "¡Bien! Cara frontal escaneada";
 "mb_tooltip_glare" = "Mueva ligeramente la identificación para eliminar el deslumbramiento.";
 "mb_try_scanning_again" = "Parece que la información del documento no es consistente. Intente escanear de nuevo.";
+"mb_turn_flashlight_off" = "Apagar linterna";
+"mb_turn_flashlight_on" = "Encender linterna";
 "mb_unsupported_document_message" = "Escanee la parte frontal de un documento compatible.";
 "mb_unsupported_document_title" = "Documento no reconocido";
 "photopay_align_message" = "Ponga el teléfono sobre el comprobante de pago";

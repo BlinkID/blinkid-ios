@@ -43,6 +43,12 @@ MB_CLASS_AVAILABLE_IOS(13.0) MB_FINAL
  */
 @property (nonatomic, readonly) NSArray<NSNumber *> *extraPresentFields;
 
+/**
+ * List of fields that weren't expected on the document but were present.
+ * @discusion: List contains elements of type MBImageExtractionType wrapped in NSNumber
+ */
+@property (nonatomic, readonly) NSArray<NSNumber *> *imageExtractionFailures;
+
 @end
 
 NS_ASSUME_NONNULL_END
