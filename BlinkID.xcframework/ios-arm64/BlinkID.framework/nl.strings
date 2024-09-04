@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Beweeg dichterbij";
 "mb_blinkid_camera_near" = "Beweeg verder weg";
 "mb_blinkid_document_too_close_to_edge" = "Verplaats het document weg van de rand";
+"mb_blinkid_face_photo_not_fully_visible" = "Houd foto gezicht volledig zichtbaar";
 "mb_blinkid_glare_detected" = "Kantel of verplaats het document om de reflectie te verwijderen";
 "mb_blinkid_introduction_dialog_message" = "Zorg ervoor dat het document goed verlicht is. Alle velden op het document moeten onder het camerascherm zichtbaar zijn.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Verschillende soorten documenten kunnen verschillende formaten en locaties van de streepjescode hebben. Kijk op de voor- en achterzijde van het document voor een streepjescode.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Pas op voor fel licht";
 "mb_blinkid_onboarding_title_3" = "Beweeg niet tijdens het scannen";
 "mb_blinkid_onboarding_tooltip" = "Hulp nodig?";
+"mb_blinkid_scanning_wrong_side" = "Draai het document om";
 "mb_check_internet_connection" = "Controleer de internetverbinding";
 "mb_close" = "Sluiten";
 "mb_data_not_match_msg" = "Begin het scanproces alstublieft nogmaals.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Gereed";
 "mb_document_verification_onboarding_next_button" = "Volgende";
 "mb_error_mandatory_field_missing" = "Het document volledig zichtbaar houden";
+"mb_exit_scanning" = "Stoppen met scannen";
 "mb_flashlight_glare_tooltip" = "Pas op voor schittering van de flitser.\nVerplaats uw ID voorzichtig om dit te voorkomen.";
 "mb_network_error" = "Netwerkfout";
 "mb_recognition_timeout_dialog_message" = "Kon het document niet lezen. Probeer het alstublieft opnieuw.";
 "mb_recognition_timeout_dialog_title" = "Scan niet gelukt";
 "mb_scanning_not_available" = "Scannen niet beschikbaar";
+"mb_show_help_screens" = "Hulpschermen tonen";
 "mb_something_went_wrong" = "Er ging iets verkeerd";
+"mb_success_document_scanned" = "Succes! Document gescand";
+"mb_success_first_side_scanned" = "Succes! Voorkant gescand";
 "mb_tooltip_glare" = "Verplaats het ID een beetje om weerspiegeling te voorkomen.";
 "mb_try_scanning_again" = "Het lijkt erop dat de informatie op het document inconsistent is. Probeer opnieuw te scannen.";
+"mb_turn_flashlight_off" = "Zaklamp uitschakelen";
+"mb_turn_flashlight_on" = "Zaklamp inschakelen";
 "mb_unsupported_document_message" = "Scan de voorzijde van een ondersteund document.";
 "mb_unsupported_document_title" = "Document niet herkend";
 "photopay_align_message" = "Plaats de telefoon over de acceptgiro";

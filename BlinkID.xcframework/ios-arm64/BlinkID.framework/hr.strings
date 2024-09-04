@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Približi dokument";
 "mb_blinkid_camera_near" = "Udalji dokument";
 "mb_blinkid_document_too_close_to_edge" = "Odmakni dokument od ruba";
+"mb_blinkid_face_photo_not_fully_visible" = "Fotografija lica nije u potpunosti vidljiva";
 "mb_blinkid_glare_detected" = "Nagni ili premjesti dokument kako bi uklonio refleksiju";
 "mb_blinkid_introduction_dialog_message" = "Pripazite da dokument bude dovoljno osvijetljen. Svi podaci s dokumenta trebaju biti vidljivi na ekranu vašeg uređaja.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Drugačiji tipovi dokumenata mogu imati različite formate barkodova. Barkod može biti na nekoliko različitih mjesta na dokumentu. Potražite ga na prednjoj i stražnoj strani.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Pripazite na direktno osvjetljenje";
 "mb_blinkid_onboarding_title_3" = "Mirno držite dokument";
 "mb_blinkid_onboarding_tooltip" = "Trebaš pomoć?";
+"mb_blinkid_scanning_wrong_side" = "Okrenite dokument";
 "mb_check_internet_connection" = "Provjeri internetsku vezu";
 "mb_close" = "Zatvori";
 "mb_data_not_match_msg" = "Molimo ponovno skeniraj prednju i stražnju stranu istog dokumenta.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "OK";
 "mb_document_verification_onboarding_next_button" = "Dalje";
 "mb_error_mandatory_field_missing" = "Drži dokument u potpunosti vidljivim";
+"mb_exit_scanning" = "Zatvori skeniranje";
 "mb_flashlight_glare_tooltip" = "Smanji odsjaj bljeskalice laganim pomicanjem dokumenta.";
 "mb_network_error" = "Greška u povezivanju";
 "mb_recognition_timeout_dialog_message" = "Dokument nije moguće očitati. Molimo pokušaj ponovo.";
 "mb_recognition_timeout_dialog_title" = "Skeniranje nije uspjelo";
 "mb_scanning_not_available" = "Skeniranje nije dostupno";
+"mb_show_help_screens" = "Prikaži pomoć";
 "mb_something_went_wrong" = "Nešto nije u redu";
+"mb_success_document_scanned" = "Uspjeh! Dokument skeniran";
+"mb_success_first_side_scanned" = "Uspjeh! Prednja strana skenirana";
 "mb_tooltip_glare" = "Smanji odsjaj laganim pomicanjem dokumenta.";
 "mb_try_scanning_again" = "Čini se da informacije na dokumentu nisu dosljedne. Molimo skenirajte ponovo.";
+"mb_turn_flashlight_off" = "Ugasi bljeskalicu";
+"mb_turn_flashlight_on" = "Upali bljeskalicu";
 "mb_unsupported_document_message" = "Ponovi skeniranje prednje strane podržanog dokumenta.";
 "mb_unsupported_document_title" = "Nepoznat dokument";
 "photopay_align_message" = "Postavi kameru iznad uplatnice ili barkoda";

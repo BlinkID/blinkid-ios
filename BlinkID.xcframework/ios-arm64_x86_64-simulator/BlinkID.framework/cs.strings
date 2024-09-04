@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Kousek blíž";
 "mb_blinkid_camera_near" = "Kousek dál";
 "mb_blinkid_document_too_close_to_edge" = "Přesunout dokument dál od kraje";
+"mb_blinkid_face_photo_not_fully_visible" = "Zachovejte úplnou viditelnost fotografie obličeje";
 "mb_blinkid_glare_detected" = "Nakloňte nebo přesuňte dokument pro odstranění odrazů";
 "mb_blinkid_introduction_dialog_message" = "Ujistěte se, že je dokument dobře osvětlen. Na obrazovce fotoaparátu by měla být vidět všechna pole dokumentu.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Různé typy dokumentů se mohou lišit formátem a umístěním čárového kódu. Kód může být jak na přední, tak na zadní straně dokumentu.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Dávejte pozor na ostré světlo";
 "mb_blinkid_onboarding_title_3" = "Při skenování se nehýbejte";
 "mb_blinkid_onboarding_tooltip" = "Potřebujete pomoct?";
+"mb_blinkid_scanning_wrong_side" = "Překlopit dokument";
 "mb_check_internet_connection" = "Zkontrolujte připojení k internetu";
 "mb_close" = "Zavřít";
 "mb_data_not_match_msg" = "Spusťte proces skenování znovu.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Hotovo";
 "mb_document_verification_onboarding_next_button" = "Další";
 "mb_error_mandatory_field_missing" = "Ponechat dokument zcela viditelný";
+"mb_exit_scanning" = "Ukončit skenování";
 "mb_flashlight_glare_tooltip" = "Dejte pozor na odlesky způsobené bleskem.\nVyhnete se jim lehkým posunutím vašeho průkazu.";
 "mb_network_error" = "Chyba sítě";
 "mb_recognition_timeout_dialog_message" = "Dokument se nepodařilo přečíst. Zkuste to znovu.";
 "mb_recognition_timeout_dialog_title" = "Skenování neúspěšné";
 "mb_scanning_not_available" = "Skenování není k dispozici";
+"mb_show_help_screens" = "Zobrazit obrazovky nápovědy";
 "mb_something_went_wrong" = "Něco se pokazilo";
+"mb_success_document_scanned" = "Úspěch! Dokument byl naskenován";
+"mb_success_first_side_scanned" = "Úspěch! Čelní strana byla naskenována";
 "mb_tooltip_glare" = "Upravte pozici průkazu totožnosti, aby nedocházelo k odleskům.";
 "mb_try_scanning_again" = "Údaje v dokumentu pravděpodobně nesouhlasí. Zkuste skenovat znovu. ";
+"mb_turn_flashlight_off" = "Vypnout svítilnu";
+"mb_turn_flashlight_on" = "Zapnout svítilnu";
 "mb_unsupported_document_message" = "Naskenujte přední stranu podporovaného dokumentu.";
 "mb_unsupported_document_title" = "Dokument se nepodařilo rozpoznat";
 "photopay_align_message" = "Umístěte telefon přes doklad";

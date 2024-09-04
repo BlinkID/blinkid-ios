@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Posuňte sa bližšie";
 "mb_blinkid_camera_near" = "Posuňte sa ďalej";
 "mb_blinkid_document_too_close_to_edge" = "Presunúť dokument od okraja";
+"mb_blinkid_face_photo_not_fully_visible" = "Ponechajte fotku tváre plne viditeľnú";
 "mb_blinkid_glare_detected" = "Nakloňte alebo posuňte dokument, aby ste odstránili odraz";
 "mb_blinkid_introduction_dialog_message" = "Uistite sa, že máte dokument dobre osvetlený. Všetky polia dokumentu by mali byť viditeľné na obrazovke fotoaparátu.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Rôzne typy dokumentov môžu mať rôzne formáty čiarových kódov a rôzne umiestnenia. Pozrite sa na prednú a zadnú stranu dokumentu, kde nájdete čiarový kód.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Pozor na ostré svetlo";
 "mb_blinkid_onboarding_title_3" = "Počas snímania zostaňte v pokoji";
 "mb_blinkid_onboarding_tooltip" = "Potrebujete pomoc?";
+"mb_blinkid_scanning_wrong_side" = "Otočte dokument";
 "mb_check_internet_connection" = "Skontrolujte internetové pripojenie";
 "mb_close" = "Zavrieť";
 "mb_data_not_match_msg" = "Spustite proces skenovania znova.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Hotovo";
 "mb_document_verification_onboarding_next_button" = "Ďalej";
 "mb_error_mandatory_field_missing" = "Dokument musí byť úplne viditeľný";
+"mb_exit_scanning" = "Opustiť skenovanie";
 "mb_flashlight_glare_tooltip" = "Dajte si pozor na oslnenie baterkou.\nJemne posuňte svoje ID, aby ste sa tomu vyhli.";
 "mb_network_error" = "Chyba siete";
 "mb_recognition_timeout_dialog_message" = "Dokument sa nepodarilo prečítať. Prosím, skúste znova.";
 "mb_recognition_timeout_dialog_title" = "Skenovanie neúspešné";
 "mb_scanning_not_available" = "Skenovanie nie je dostupné";
+"mb_show_help_screens" = "Zobraziť obrazovky pomoci";
 "mb_something_went_wrong" = "Niečo sa pokazilo";
+"mb_success_document_scanned" = "Úspech! Doklad bol naskenovaný";
+"mb_success_first_side_scanned" = "Úspech! Naskenovaná predná strana";
 "mb_tooltip_glare" = "Mierne posuňte preukaz, aby ste eliminovali oslnenie.";
 "mb_try_scanning_again" = "Zdá sa, že obsah dokumentu je neúplný. Skúste ho nasnímať znova.";
+"mb_turn_flashlight_off" = "Vypnúť baterku";
+"mb_turn_flashlight_on" = "Zapnúť baterku";
 "mb_unsupported_document_message" = "Naskenujte prednú stranu podporovaného dokumentu.";
 "mb_unsupported_document_title" = "Dokument nebol rozpoznaný";
 "photopay_align_message" = "Umiestnite telefón nad tlačivo";

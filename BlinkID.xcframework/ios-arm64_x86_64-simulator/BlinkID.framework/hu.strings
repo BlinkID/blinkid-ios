@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Menjen közelebb";
 "mb_blinkid_camera_near" = "Menjen távolabb";
 "mb_blinkid_document_too_close_to_edge" = "Mozdítsa el a dokumentumot a széltől";
+"mb_blinkid_face_photo_not_fully_visible" = "Tartsa az arcképet teljesen láthatóan";
 "mb_blinkid_glare_detected" = "Döntse meg vagy mozgassa a dokumentumot a tükröződés megszüntetéséhez";
 "mb_blinkid_introduction_dialog_message" = "Ügyeljen a dokumentum megfelelő megvilágítására. Minden dokumentummezőnek láthatónak kell lennie a kameraképernyőn.";
 "mb_blinkid_introduction_dialog_message_barcode" = "A különböző típusú dokumentumok eltérő vonalkód-formátummal és helyekkel rendelkezhetnek. Nézze meg a dokumentum elejét és hátulját, hogy megtalálja a vonalkódot.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Ügyeljen az erős fényre";
 "mb_blinkid_onboarding_title_3" = "Maradjon mozdulatlan a szkennelés során";
 "mb_blinkid_onboarding_tooltip" = "Segíthetünk bármiben?";
+"mb_blinkid_scanning_wrong_side" = "Fordítsa meg a dokumentumot";
 "mb_check_internet_connection" = "Ellenőrizze az internetcsatlakozást";
 "mb_close" = "Bezárás";
 "mb_data_not_match_msg" = "Kérjük, kezdje újra a szkennelési folyamatot.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Kész";
 "mb_document_verification_onboarding_next_button" = "Következő";
 "mb_error_mandatory_field_missing" = "Tartsd a dokumentumot teljesen láthatóan";
+"mb_exit_scanning" = "Kilépés a scannelésből";
 "mb_flashlight_glare_tooltip" = "Figyeljen oda a vaku fényének visszaverődésére.\nFinoman mozgassa a személyi igazolványát, hogy elkerülje.";
 "mb_network_error" = "Hálózati hiba";
 "mb_recognition_timeout_dialog_message" = "Nem sikerült elolvasni a dokumentumot. Kérjük, próbálja újra.";
 "mb_recognition_timeout_dialog_title" = "Sikertelen szkennelés";
 "mb_scanning_not_available" = "Beszkennelés nem lehetséges";
+"mb_show_help_screens" = "Segítség képernyő mutatása";
 "mb_something_went_wrong" = "Valami hiba történt";
+"mb_success_document_scanned" = "Siker! Dokumentum beolvasva";
+"mb_success_first_side_scanned" = "Siker! Első oldal beolvasva";
 "mb_tooltip_glare" = "Kissé mozdítsa el a személyi igazolványt, hogy megszüntesse a fény visszaverődését.";
 "mb_try_scanning_again" = "Úgy tűnik, hogy a dokumentumban szereplő információk nem következetesek. Kérjük, próbálja meg újra a beolvasást.";
+"mb_turn_flashlight_off" = "Vaku kikapcsolás";
+"mb_turn_flashlight_on" = "Vaku bekapcsolás";
 "mb_unsupported_document_message" = "Szkennelje be egy támogatott dokumentum elülső oldalát.";
 "mb_unsupported_document_title" = "A dokumentumot nem sikerült felismerni";
 "photopay_align_message" = "Helyezze a telefont a blokk / csekk fölé";

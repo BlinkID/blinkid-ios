@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Približajte";
 "mb_blinkid_camera_near" = "Oddaljite";
 "mb_blinkid_document_too_close_to_edge" = "Dokument odmaknite od roba";
+"mb_blinkid_face_photo_not_fully_visible" = "Fotografija obraza naj bo v celoti vidna";
 "mb_blinkid_glare_detected" = "Nagnite ali premaknite dokument, da odstranite odsev";
 "mb_blinkid_introduction_dialog_message" = "Poskrbite, da bo dokument dobro osvetljen. Na zaslonu kamere morajo biti vidna vsa polja dokumenta.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Različne vrste dokumentov imajo lahko različne oblike črtnih kod in lokacije. Črtno kodo poiščite na sprednji in zadnji strani dokumenta.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Svetloba ne sme biti premočna";
 "mb_blinkid_onboarding_title_3" = "Držite pri miru med optičnim branjem";
 "mb_blinkid_onboarding_tooltip" = "Potrebujete pomoč?";
+"mb_blinkid_scanning_wrong_side" = "Obrnite dokument ";
 "mb_check_internet_connection" = "Preverite internetno povezavo";
 "mb_close" = "Zapri";
 "mb_data_not_match_msg" = "Postopek optičnega branja začnite ponovno.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Končano";
 "mb_document_verification_onboarding_next_button" = "Naprej";
 "mb_error_mandatory_field_missing" = "Dokument ohrani povsem viden";
+"mb_exit_scanning" = "Zapusti skeniranje";
 "mb_flashlight_glare_tooltip" = "Pazite na bleščanje bliskavice.\nOsebni dokument rahlo premaknite, da se mu izognete.";
 "mb_network_error" = "Napaka v omrežju";
 "mb_recognition_timeout_dialog_message" = "Dokumenta ni mogoče prebrati. Poskusite znova.";
 "mb_recognition_timeout_dialog_title" = "Optično branje ni uspelo";
 "mb_scanning_not_available" = "Optično branje ni na voljo";
+"mb_show_help_screens" = "Pokaži zaslone s pomočjo";
 "mb_something_went_wrong" = "Nekaj je narobe";
+"mb_success_document_scanned" = "Uspelo! Dokument skeniran";
+"mb_success_first_side_scanned" = "Uspelo! Skenirana sprednja stran";
 "mb_tooltip_glare" = "Osebno izkaznico malo premaknite, da odpravite bleščanje.";
 "mb_try_scanning_again" = "Videti je, da so podatki v dokumentu neskladni. Poskusite s ponovnim optičnim branjem.";
+"mb_turn_flashlight_off" = "Izklopi svetilko";
+"mb_turn_flashlight_on" = "Vklopi svetilko";
 "mb_unsupported_document_message" = "Optično preberite sprednjo stran podprtega dokumenta";
 "mb_unsupported_document_title" = "Dokument ni prepoznan";
 "photopay_align_message" = "Postavite telefon nad potrdilo";

@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "เลื่อนเข้าใกล้";
 "mb_blinkid_camera_near" = "เลื่อนออกห่าง";
 "mb_blinkid_document_too_close_to_edge" = "เลื่อนเอกสารออกจากขอบ";
+"mb_blinkid_face_photo_not_fully_visible" = "ถ่ายให้เห็นรูปภาพใบหน้าอย่างชัดเจน";
 "mb_blinkid_glare_detected" = "เอียงหรือย้ายเอกสารเพื่อลบแสงสะท้อน";
 "mb_blinkid_introduction_dialog_message" = "ตรวจสอบว่าเอกสารของคุณมีแสงสว่างเพียงพอ คุณควรมองเห็นทุกส่วนของเอกสารบนหน้าจอกล้อง";
 "mb_blinkid_introduction_dialog_message_barcode" = "เอกสารประเภทต่างๆ อาจมีรูปแบบบาร์โค้ดและตำแหน่งที่แตกต่างกัน ดูบาร์โค้ดที่ด้านหน้าและด้านหลังเอกสาร";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "ระวังแสงจ้า";
 "mb_blinkid_onboarding_title_3" = "ถือนิ่งๆ ขณะสแกน";
 "mb_blinkid_onboarding_tooltip" = "ต้องการความช่วยเหลือ?";
+"mb_blinkid_scanning_wrong_side" = "พลิกเอกสาร";
 "mb_check_internet_connection" = "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต";
 "mb_close" = "ปิด";
 "mb_data_not_match_msg" = "โปรดเริ่มขั้นตอนการสแกนใหม่อีกครั้ง";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "เสร็จสิ้น";
 "mb_document_verification_onboarding_next_button" = "ถัดไป";
 "mb_error_mandatory_field_missing" = "ทำให้สามารถเห็นเอกสารเต็มขั้นตลอด";
+"mb_exit_scanning" = "ออกจากการสแกน";
 "mb_flashlight_glare_tooltip" = "ระวังแสงจ้าจากไฟฉาย\nค่อย ๆ เลื่อนบัตรประชาชนของคุณไปรอบ ๆ เพื่อหลีกเลี่ยง";
 "mb_network_error" = "เครือข่ายเกิดข้อผิดพลาด";
 "mb_recognition_timeout_dialog_message" = "ไม่สามารถอ่านเอกสาร โปรดลองอีกครั้ง";
 "mb_recognition_timeout_dialog_title" = "สแกนไม่สำเร็จ";
 "mb_scanning_not_available" = "ไม่สามารถสแกนได้\n\n\n\n\n\n";
+"mb_show_help_screens" = "แสดงหน้าจอวิธีใช้";
 "mb_something_went_wrong" = "เกิดข้อผิดพลาด";
+"mb_success_document_scanned" = "สำเร็จ! สแกนเอกสารแล้ว";
+"mb_success_first_side_scanned" = "สำเร็จ! สแกนด้านหน้าแล้ว";
 "mb_tooltip_glare" = "เลื่อนบัตรประชาชนเล็กน้อยเพื่อกำจัดแสงสะท้อน";
 "mb_try_scanning_again" = "ปรากฏว่าข้อมูลในเอกสารไม่สอดคล้องกัน โปรดลองสแกนอีกครั้ง";
+"mb_turn_flashlight_off" = "ปิดไฟฉาย";
+"mb_turn_flashlight_on" = "เปิดไฟฉาย";
 "mb_unsupported_document_message" = "สแกนด้านหน้าของเอกสารที่ได้รับการรองรับ";
 "mb_unsupported_document_title" = "ระบบไม่รู้จำเอกสาร";
 "photopay_align_message" = "จัดตำแหน่ง​โทรศัพท์ให้อยู่เหนือสลิป";

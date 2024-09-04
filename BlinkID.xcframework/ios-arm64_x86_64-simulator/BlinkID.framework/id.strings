@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Mohon dekatkan";
 "mb_blinkid_camera_near" = "Mohon jauhkan";
 "mb_blinkid_document_too_close_to_edge" = "Gerakkan dokumen dari tepian";
+"mb_blinkid_face_photo_not_fully_visible" = "Atur agar foto wajah tetap terlihat sepenuhnya";
 "mb_blinkid_glare_detected" = "Miringkan atau pindahkan dokumen untuk menghilangkan pantulan";
 "mb_blinkid_introduction_dialog_message" = "Pastikan dokumen cukup diterangi cahaya. Semua bagian dokumen harus terlihat di layar kamera.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Jenis dokumen berbeda dapat memiliki format dan lokasi kode batang yang berbeda juga. Lihat sisi depan dan belakang dokumen untuk menemukan kode batang.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Waspadai cahaya tajam";
 "mb_blinkid_onboarding_title_3" = "Pastikan dokumen tidak bergerak saat pemindaian";
 "mb_blinkid_onboarding_tooltip" = "Perlu bantuan?";
+"mb_blinkid_scanning_wrong_side" = "Balik dokumen";
 "mb_check_internet_connection" = "Cek koneksi internet";
 "mb_close" = "Tutup";
 "mb_data_not_match_msg" = "Mohon ulangi proses pemindaian dari awal.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Selesai";
 "mb_document_verification_onboarding_next_button" = "Berikutnya";
 "mb_error_mandatory_field_missing" = "Pastikan dokumen tetap terlihat sepenuhnya";
+"mb_exit_scanning" = "Tutup pemindaian";
 "mb_flashlight_glare_tooltip" = "Waspadai kilau blitz.\nPindahkan ID Anda dengan perlahan untuk menghindarinya.";
 "mb_network_error" = "Kesalahan jaringan";
 "mb_recognition_timeout_dialog_message" = "Tak dapat membaca dokumen. Silakan coba lagi.";
 "mb_recognition_timeout_dialog_title" = "Pemindaian gagal";
 "mb_scanning_not_available" = "Pemindaian tidak tersedia";
+"mb_show_help_screens" = "Tampilkan layar bantuan";
 "mb_something_went_wrong" = "Terjadi suatu kesalahan";
+"mb_success_document_scanned" = "Berhasil! Dokumen dipindai";
+"mb_success_first_side_scanned" = "Berhasil! Sisi depan dipindai";
 "mb_tooltip_glare" = "Geser sedikit kartu identitas untuk menghilangkan silau.";
 "mb_try_scanning_again" = "Tampaknya informasi pada dokumen tidak konsisten. Silakan coba pindai lagi.";
+"mb_turn_flashlight_off" = "Matikan senter";
+"mb_turn_flashlight_on" = "Nyalakan senter";
 "mb_unsupported_document_message" = "Pindai sisi depan dokumen yang didukung.";
 "mb_unsupported_document_title" = "Dokumen tak dikenali";
 "photopay_align_message" = "Posisikan ponsel di atas slip";

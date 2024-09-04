@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "靠近一些";
 "mb_blinkid_camera_near" = "离远一些";
 "mb_blinkid_document_too_close_to_edge" = "从边缘移动文件";
+"mb_blinkid_face_photo_not_fully_visible" = "让面部照片完全可见";
 "mb_blinkid_glare_detected" = "倾斜或移动文件以消除反光";
 "mb_blinkid_introduction_dialog_message" = "确保文件处于光线充足的地方。所有文件字段应在相机屏幕上可见。";
 "mb_blinkid_introduction_dialog_message_barcode" = "文件类型不同,其条形码的格式和位置也可能不同。请在文件的正面和反面查找条形码。";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "注意强光直射";
 "mb_blinkid_onboarding_title_3" = "扫描时保持不动";
 "mb_blinkid_onboarding_tooltip" = "需要帮助？";
+"mb_blinkid_scanning_wrong_side" = "翻转文档";
 "mb_check_internet_connection" = "检查网络连接";
 "mb_close" = "关闭";
 "mb_data_not_match_msg" = "请重新开始扫描过程。";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "完成";
 "mb_document_verification_onboarding_next_button" = "下一步";
 "mb_error_mandatory_field_missing" = "保持文档完全可见";
+"mb_exit_scanning" = "退出扫描";
 "mb_flashlight_glare_tooltip" = "当心闪光灯眩光。\n请轻轻移动您的身份证件,避免产生眩光。";
 "mb_network_error" = "网络错误";
 "mb_recognition_timeout_dialog_message" = "未能读取文件,请重试。";
 "mb_recognition_timeout_dialog_title" = "扫描失败";
 "mb_scanning_not_available" = "扫描不可用";
+"mb_show_help_screens" = "显示帮助界面";
 "mb_something_went_wrong" = "出错了";
+"mb_success_document_scanned" = "成功！文件已扫描";
+"mb_success_first_side_scanned" = "成功！正面已扫描";
 "mb_tooltip_glare" = "稍稍移动证件,消除眩光。";
 "mb_try_scanning_again" = "文件上的信息似乎不一致。请尝试重新扫描。";
+"mb_turn_flashlight_off" = "关闭手电筒";
+"mb_turn_flashlight_on" = "打开手电筒";
 "mb_unsupported_document_message" = "扫描支持文件类型的正面。";
 "mb_unsupported_document_title" = "未能识别文件";
 "photopay_align_message" = "将手机置于纸条上方";

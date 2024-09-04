@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Dekatkan lagi";
 "mb_blinkid_camera_near" = "Jauhkan lagi";
 "mb_blinkid_document_too_close_to_edge" = "Alihkan fokumen dari tepi";
+"mb_blinkid_face_photo_not_fully_visible" = "Pastikan gambar muka dapat dilihat sepenuhnya";
 "mb_blinkid_glare_detected" = "Sengetkan atau gerakkan dokumen untuk mengelakkan pantulan cahaya";
 "mb_blinkid_introduction_dialog_message" = "Pastikan dokumen anda menerima pencahayaan yang cukup. Semua medan dokumen hendaklah kelihatan pada skrin kamera.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Jenis dokumen yang berbeza mungkin mempunyai format dan lokasi kod bar yang berbeza. Lihat bahagian depan dan belakang dokumen untuk kod bar.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Jaga-jaga dengan cahaya yang menyilaukan mata";
 "mb_blinkid_onboarding_title_3" = "Kekalkan kedudukan semasa mengimbas";
 "mb_blinkid_onboarding_tooltip" = "Perlukan bantuan?";
+"mb_blinkid_scanning_wrong_side" = "Putar dokumen";
 "mb_check_internet_connection" = "Periksa sambungan Internet";
 "mb_close" = "Tutup";
 "mb_data_not_match_msg" = "Sila mulakan proses pengimbasan dari awal.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Siap";
 "mb_document_verification_onboarding_next_button" = "Seterusnya";
 "mb_error_mandatory_field_missing" = "Sentiasa pastikan dokumen dapat dilihat sepenuhnya";
+"mb_exit_scanning" = "Keluar pengimbasan";
 "mb_flashlight_glare_tooltip" = "Berhati-hati dengan silau lampu suluh.\nGerakkan ID anda dengan perlahan keliling untuk menjauhinya.";
 "mb_network_error" = "Ralat rangkaian";
 "mb_recognition_timeout_dialog_message" = "Tidak dapat membaca dokumen. Sila cuba semula.";
 "mb_recognition_timeout_dialog_title" = "Pengimbasan tidak berjaya";
 "mb_scanning_not_available" = "Pengimbasan tidak tersedia";
+"mb_show_help_screens" = "Tunjukkan skrin bantuan";
 "mb_something_went_wrong" = "Berlaku sedikit masalah";
+"mb_success_document_scanned" = "Berjaya! Dokumen telah diimbas";
+"mb_success_first_side_scanned" = "Berjaya! Bahagian hadapan telah diimbas";
 "mb_tooltip_glare" = "Gerakkan sedikit ID untuk menghilangkan silau.";
 "mb_try_scanning_again" = "Kelihatannya maklumat pada dokumen itu tidak konsisten. Sila cuba semak imbas sekali lagi.";
+"mb_turn_flashlight_off" = "Matikan lampu suluh";
+"mb_turn_flashlight_on" = "Hidupkan lampu suluh";
 "mb_unsupported_document_message" = "Imbas bahagian hadapan dokumen yang disokong.";
 "mb_unsupported_document_title" = "Dokumen tidak dikenal pasti";
 "photopay_align_message" = "Tempatkan telefon di atas slip";

@@ -169,7 +169,7 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 
 /**
 * Defines whether tutorial alert will be presented on appear.
-* Default: YES
+* Default: NO
 */
 @property(nonatomic, assign) BOOL showIntroductionDialog;
 
@@ -184,6 +184,24 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 * Default: Keep document and phone still
 */
 @property(nonatomic, strong) NSString *blurDetectedMessage;
+
+/**
+* Instructions for the user when face image is missing.
+* Default: Keep face photo fully visible
+*/
+@property(nonatomic, strong) NSString *faceImageMissingMessage;
+
+/**
+* Instructions for the user when other side is awaiting scanning.
+* Default: Flip the document
+*/
+@property(nonatomic, strong) NSString *awaitingOtherSideMessage;
+
+/**
+* Instructions for the user when wrong side is being scanned.
+* Default: Flip the document
+*/
+@property(nonatomic, strong) NSString *scanningWrongSideMessage;
 
 /**
  * Designated initializer. Initializes the object with default settings.

@@ -72,7 +72,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
-      "line": 161,
+      "line": 180,
       "symbol": "MBBlinkIdMultiSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -100,7 +100,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdSingleSideRecognizer.h",
-      "line": 137,
+      "line": 156,
       "symbol": "MBBlinkIdSingleSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
@@ -1062,6 +1062,20 @@
       "line": 19,
       "symbol": "MBImageExtensionFactors.left",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.field",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtractionType.h",
+      "line": 14,
+      "symbol": "MBImageExtractionType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBImageExtractionType.h",
+      "line": 14,
+      "symbol": "MBImageExtractionType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {

@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "קרב/י";
 "mb_blinkid_camera_near" = "התרחק/י";
 "mb_blinkid_document_too_close_to_edge" = "הזז/י את המסמך מהקצה";
+"mb_blinkid_face_photo_not_fully_visible" = "לשמור על נראות מלאה של תמונת פנים";
 "mb_blinkid_glare_detected" = "הטו או הזיזו את המסמך כדי להסיר את ההשתקפות";
 "mb_blinkid_introduction_dialog_message" = "המסמך חייב להיות מואר היטב. כל שדות המסמכים צריכים להיות גלויים על מסך המצלמה.";
 "mb_blinkid_introduction_dialog_message_barcode" = "לסוגים שונים של מסמכים עשויים להיות פורמטים ומיקומים שונים של ברקוד. חפשו ברקוד בחלק הקדמי והאחורי של המסמך.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "התרחק מאור חזק";
 "mb_blinkid_onboarding_title_3" = "הישאר יציב בזמן הסריקה";
 "mb_blinkid_onboarding_tooltip" = "זקוקים לעזרה?";
+"mb_blinkid_scanning_wrong_side" = "להפוך את המסמך";
 "mb_check_internet_connection" = "בדקו את חיבור האינטרנט";
 "mb_close" = "סגור";
 "mb_data_not_match_msg" = "נא להתחיל את תהליך הסריקה מחדש.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "בוצע";
 "mb_document_verification_onboarding_next_button" = "הבא";
 "mb_error_mandatory_field_missing" = "השאירו את המסמך גלוי לחלוטין";
+"mb_exit_scanning" = "יציאה מסריקה";
 "mb_flashlight_glare_tooltip" = "היזהרו מפני סנוור הפנס.\nהזיזו בעדינות את תעודת הזהות שלכם בכדי להימנע מהדבר.";
 "mb_network_error" = "בעיית רשת";
 "mb_recognition_timeout_dialog_message" = "לא ניתן לקרוא את המסמך. נא לנסות שוב.";
 "mb_recognition_timeout_dialog_title" = "הסריקה נכשלה";
 "mb_scanning_not_available" = "סריקה לא זמינה";
+"mb_show_help_screens" = "הצגת מסכי עזרה";
 "mb_something_went_wrong" = "משהו השתבש";
+"mb_success_document_scanned" = "הצלחה! המסמך נסרק";
+"mb_success_first_side_scanned" = "הצלחה! הצד הקדמי נסרק";
 "mb_tooltip_glare" = "הזז/י מעט את תעודת הזיהוי כדי למנוע ברק.";
 "mb_try_scanning_again" = "נראה שהמידע על המסמך אינו עקבי. אנא נסו לסרוק בשנית.";
+"mb_turn_flashlight_off" = "כיבוי פנס";
+"mb_turn_flashlight_on" = "הדלקת פנס";
 "mb_unsupported_document_message" = "לסרוק את הצד הקדמי של מסמך נתמך.";
 "mb_unsupported_document_title" = "המסמך לא זוהה";
 "photopay_align_message" = "למקם את הטלפון מעל השובר";

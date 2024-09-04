@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Rapprochez-vous";
 "mb_blinkid_camera_near" = "Éloignez-vous";
 "mb_blinkid_document_too_close_to_edge" = "Déplacer le document du bord";
+"mb_blinkid_face_photo_not_fully_visible" = "La photo de face doit être entièrement visible";
 "mb_blinkid_glare_detected" = "Incliner ou déplacer le document afin d'éliminer les reflets";
 "mb_blinkid_introduction_dialog_message" = "Prenez soin de garder le document bien éclairé. Tous les champs du document doivent être visibles sur l'écran de la caméra.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Les différents types de documents peuvent avoir des formats et des emplacements de codes-barres différents. Examinez le recto et le verso du document à la recherche d'un code-barres.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Faites attention aux lumières trop vives";
 "mb_blinkid_onboarding_title_3" = "Restez immobile pendant la numérisation";
 "mb_blinkid_onboarding_tooltip" = "Besoin d'aide ?";
+"mb_blinkid_scanning_wrong_side" = "Retourner le document";
 "mb_check_internet_connection" = "Vérifiez la connexion internet";
 "mb_close" = "Fermer";
 "mb_data_not_match_msg" = "Veuillez recommencer le processus de numérisation.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Terminé";
 "mb_document_verification_onboarding_next_button" = "Suivant";
 "mb_error_mandatory_field_missing" = "Gardez le document entièrement visible";
+"mb_exit_scanning" = "Quitter la numérisation";
 "mb_flashlight_glare_tooltip" = "Attention aux reflets de la lampe de poche.\nBougez doucement votre pièce d'identité pour les éviter.";
 "mb_network_error" = "Erreur de réseau";
 "mb_recognition_timeout_dialog_message" = "Impossible de lire le document. Veuillez réessayer.";
 "mb_recognition_timeout_dialog_title" = "Numérisation infructueuse";
 "mb_scanning_not_available" = "Numérisation non disponible";
+"mb_show_help_screens" = "Afficher les écrans d'aide";
 "mb_something_went_wrong" = "Une erreur s'est produite";
+"mb_success_document_scanned" = "Document scanné avec succès !";
+"mb_success_first_side_scanned" = "Face avant scannée avec succès !";
 "mb_tooltip_glare" = "Déplacez légèrement la carte d'identité pour éliminer les reflets.";
 "mb_try_scanning_again" = "Il semble que les informations du document ne soient pas concordantes. Essayez de le scanner à nouveau.";
+"mb_turn_flashlight_off" = "Éteindre le flash";
+"mb_turn_flashlight_on" = "Allumer le flash";
 "mb_unsupported_document_message" = "Numérisez le recto d'un document pris en charge.";
 "mb_unsupported_document_title" = "Document non reconnu";
 "photopay_align_message" = "Placez le téléphone au-dessus du bulletin de paiement";

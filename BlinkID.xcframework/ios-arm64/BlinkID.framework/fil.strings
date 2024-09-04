@@ -6,6 +6,7 @@
 "mb_blinkid_camera_high" = "Ilapit pa";
 "mb_blinkid_camera_near" = "Ilayo pa";
 "mb_blinkid_document_too_close_to_edge" = "Iurong ang dokumento mula sa gilid";
+"mb_blinkid_face_photo_not_fully_visible" = "Panatilihing ganap na nakikita ang larawan sa mukha";
 "mb_blinkid_glare_detected" = "I-tilt o iusog ang dokumento para maalis ang reflection";
 "mb_blinkid_introduction_dialog_message" = "Tiyaki na lubos na naiilawan ang dokumento. Dapat nakikita sa screen ng camera ang lahat ng field ng dokumento.";
 "mb_blinkid_introduction_dialog_message_barcode" = "Maaaring may iba't ibang format at lokasyon ng barcode ang iba't ibang uri ng mga dokumento. Tumingin sa harap at likod ng dokumento para sa isang barcode.";
@@ -64,6 +65,7 @@
 "mb_blinkid_onboarding_title_2" = "Tingnan kung may nakakasilaw na liwanag";
 "mb_blinkid_onboarding_title_3" = "Panatilihing hindi gumagalaw habang nag-i-scan";
 "mb_blinkid_onboarding_tooltip" = "Kailangan ng tulong?";
+"mb_blinkid_scanning_wrong_side" = "Baligtarin ang dokumento";
 "mb_check_internet_connection" = "Suriin ang koneksiyon sa internet";
 "mb_close" = "Isara";
 "mb_data_not_match_msg" = "Simulan ang proseso ng pag-i-scan.";
@@ -75,14 +77,20 @@
 "mb_document_verification_onboarding_done_button" = "Tapos na";
 "mb_document_verification_onboarding_next_button" = "Susunod";
 "mb_error_mandatory_field_missing" = "Panatilihing ganap na nakikita ang dokumento";
+"mb_exit_scanning" = "Lumabas sa pag-scan";
 "mb_flashlight_glare_tooltip" = "Mag-ingat sa flashlight glare.\nDahan-dahang ilipat ang iyong ID sa paligid upang maiwasan ito.";
 "mb_network_error" = "Mali sa network";
 "mb_recognition_timeout_dialog_message" = "Hindi mabasa ang dokumento. Pakisubukan ulit.";
 "mb_recognition_timeout_dialog_title" = "Hindi matagumpay ang pag-scan";
 "mb_scanning_not_available" = "Hindi magagamit ang pag-scan";
+"mb_show_help_screens" = "Ipakita ang mga screen ng tulong";
 "mb_something_went_wrong" = "May problema";
+"mb_success_document_scanned" = "Tagumpay! Na-scan ang dokumento";
+"mb_success_first_side_scanned" = "Tagumpay! Na-scan ang harap na bahagi";
 "mb_tooltip_glare" = "Dahan-danan alisin ang ID upang maiwasan ang pagkakaroon ng kislap.";
 "mb_try_scanning_again" = "Lumalabas na inconsistent ang impormasyon sa dokumento. Subukan na i-scan ulit.";
+"mb_turn_flashlight_off" = "Patayin ang flashlight";
+"mb_turn_flashlight_on" = "Buksan ang flashlight";
 "mb_unsupported_document_message" = "I-scan ang unahang bahagi ng isang suportadong dokumento.";
 "mb_unsupported_document_title" = "Hindi nababasa ang dokumento";
 "photopay_align_message" = "Iposisyon ang telepono sa slip";
