@@ -1,5 +1,10 @@
 # Release notes
 
+## 6.10.1
+
+### Bug fixes
+- Fixed a bug that would cause a crash on older iOS versions
+
 ## 6.10.0
 
 ### New features
