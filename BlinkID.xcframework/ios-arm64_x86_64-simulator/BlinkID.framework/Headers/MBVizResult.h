@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "MBMicroblinkDefines.h"
 #import "MBDriverLicenseDetailedInfo.h"
+#import "MBDependentInfo.h"
 
 @class MBStringResult;
 @class MBDateResult;
@@ -201,6 +202,31 @@ MB_INIT_UNAVAILABLE
  * The visa type.
  */
 @property (nonatomic, readonly, nullable) MBStringResult *visaType;
+
+/**
+ * The manufacturing year.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *manufacturingYear;
+
+/**
+ * The eligibility category.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleType;
+
+/**
+ * The manufacturing year..
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *eligibilityCategory;
+
+/**
+ * The specific document validity.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *specificDocumentValidity;
+
+/**
+ * The dependents info.
+ */
+@property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
 
 @end
 

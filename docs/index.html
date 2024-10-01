@@ -20,7 +20,7 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          PPBlinkID v6.10.1 Docs
+          PPBlinkID v6.11.0 Docs
         </a>
          (81% documented)
       </p>
@@ -41,9 +41,7 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="index.html">PPBlinkID Reference</a>
-      <img class="carat" src="img/carat.png" alt=""/>
-      PPBlinkID  Reference
+      <a class="breadcrumb" href="index.html">PPBlinkID</a>
     </p>
 
     <div class="content-wrapper">
@@ -601,8 +599,8 @@
 </ul><div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew install git-lfs
-git lfs install
+<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
+git lfs <span class="nb">install</span>
 </code></pre>
 
 </div><ul>
@@ -616,14 +614,14 @@ git lfs install
 </ul>
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'13.0'</span>
 <span class="n">target</span> <span class="s1">'Your-App-Name'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 6.10.1'</span>
+    <span class="n">pod</span> <span class="s1">'PPBlinkID'</span><span class="p">,</span> <span class="s1">'~&gt; 6.11.0'</span>
 <span class="k">end</span>
 </code></pre>
 
 <ul>
 <li>Install the dependencies in your project:</li>
 </ul>
-<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
 </code></pre>
 
 <ul>
@@ -673,8 +671,8 @@ git lfs install
 <div class="aside aside-since">
     <p class="aside-title">Since</p>
     <p>Since the libraries are stored on <a href="https://git-lfs.github.com">Git Large File Storage</a>, you need to install git-lfs by running these commands:</p>
-<pre class="highlight shell"><code>brew install git-lfs
-git lfs install
+<pre class="highlight shell"><code>brew <span class="nb">install </span>git-lfs
+git lfs <span class="nb">install</span>
 </code></pre>
 
 </div><ul>
@@ -718,8 +716,8 @@ git lfs install
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>#import &lt;BlinkID/BlinkID.h&gt;
-</code></pre>
+<pre class="highlight objective_c"><code><span class="cp">#import &lt;BlinkID/BlinkID.h&gt;
+</span></code></pre>
 <h3 id='3-initiating-the-scanning-process' class='heading'>3. Initiating the scanning process</h3>
 
 <p>To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we&rsquo;re listing the initialization code as it looks in a touch handler method.</p>
@@ -760,44 +758,44 @@ git lfs install
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>@interface ViewController () &lt;MBBlinkIdOverlayViewControllerDelegate&gt;
+<pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span> <span class="o">&lt;</span><span class="n">MBBlinkIdOverlayViewControllerDelegate</span><span class="o">&gt;</span>
 
-@property (nonatomic, strong) MBBlinkIdMultiSideRecognizer *blinkIdMultiSideRecognizer;
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">MBBlinkIdMultiSideRecognizer</span> <span class="o">*</span><span class="n">blinkIdMultiSideRecognizer</span><span class="p">;</span>
 
-@end
+<span class="k">@end</span>
 
-@implementation ViewController
+<span class="k">@implementation</span> <span class="nc">ViewController</span>
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidLoad</span><span class="p">];</span>
 
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"key" inSubdirectory:@"" for:Bundle.main errorCallback:block];
-}
+    <span class="p">[</span><span class="n">MBMicroblinkSDK</span><span class="p">.</span><span class="n">sharedInstance</span> <span class="nf">setLicenseResource</span><span class="p">:</span><span class="s">@"blinkid-license"</span> <span class="nf">withExtension</span><span class="p">:</span><span class="s">@"key"</span> <span class="n">inSubdirectory</span><span class="o">:</span><span class="s">@""</span> <span class="k">for</span><span class="o">:</span><span class="n">Bundle</span><span class="p">.</span><span class="n">main</span> <span class="n">errorCallback</span><span class="o">:</span><span class="n">block</span><span class="p">];</span>
+<span class="p">}</span>
 
 
-- (IBAction)didTapScan:(id)sender {
+<span class="k">-</span> <span class="p">(</span><span class="n">IBAction</span><span class="p">)</span><span class="nf">didTapScan</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
 
-    /** Create BlinkID recognizer */
-    self.blinkIdMultiSideRecognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
+    <span class="cm">/** Create BlinkID recognizer */</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">blinkIdMultiSideRecognizer</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdMultiSideRecognizer</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
 
-     /** Create BlinkID settings */
-    MBBlinkIdOverlaySettings* settings = [[MBBlinkIdOverlaySettings alloc] init];
+     <span class="cm">/** Create BlinkID settings */</span>
+    <span class="n">MBBlinkIdOverlaySettings</span><span class="o">*</span> <span class="n">settings</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdOverlaySettings</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
 
-    /** Create recognizer collection */
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.blinkIdMultiSideRecognizer]];
+    <span class="cm">/** Create recognizer collection */</span>
+    <span class="n">MBRecognizerCollection</span> <span class="o">*</span><span class="n">recognizerCollection</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBRecognizerCollection</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithRecognizers</span><span class="p">:@[</span><span class="n">self</span><span class="p">.</span><span class="n">blinkIdMultiSideRecognizer</span><span class="p">]];</span>
 
-    /** Create your overlay view controller */
-    MBBlinkIdOverlayViewController *blinkIdOverlayViewController = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
+    <span class="cm">/** Create your overlay view controller */</span>
+    <span class="n">MBBlinkIdOverlayViewController</span> <span class="o">*</span><span class="n">blinkIdOverlayViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdOverlayViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithSettings</span><span class="p">:</span><span class="n">settings</span> <span class="nf">recognizerCollection</span><span class="p">:</span><span class="n">recognizerCollection</span> <span class="n">delegate</span><span class="o">:</span><span class="n">self</span><span class="p">];</span>
 
-    /** Create recognizer view controller with wanted overlay view controller */
-    UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:blinkIdOverlayViewController];
+    <span class="cm">/** Create recognizer view controller with wanted overlay view controller */</span>
+    <span class="n">UIViewController</span><span class="o">&lt;</span><span class="n">MBRecognizerRunnerViewController</span><span class="o">&gt;*</span> <span class="n">recognizerRunnerViewController</span> <span class="o">=</span> <span class="p">[</span><span class="n">MBViewControllerFactory</span> <span class="nf">recognizerRunnerViewControllerWithOverlayViewController</span><span class="p">:</span><span class="n">blinkIdOverlayViewController</span><span class="p">];</span>
 
-    /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-    [self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
+    <span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">recognizerRunnerViewController</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
 
-}
+<span class="p">}</span>
 
-@end
+<span class="k">@end</span>
 </code></pre>
 <h3 id='4-license-key' class='heading'>4. License key</h3>
 
@@ -814,7 +812,7 @@ git lfs install
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY" errorCallback:block];
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">MBMicroblinkSDK</span> <span class="nf">sharedInstance</span><span class="p">]</span> <span class="nf">setLicenseKey</span><span class="p">:</span><span class="s">@"LICENSE-KEY"</span> <span class="nf">errorCallback</span><span class="p">:</span><span class="n">block</span><span class="p">];</span>
 </code></pre>
 <h4 id='license-key-as-file' class='heading'>License key as file</h4>
 
@@ -825,7 +823,7 @@ git lfs install
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
+<pre class="highlight objective_c"><code><span class="p">[[</span><span class="n">MBMicroblinkSDK</span> <span class="nf">sharedInstance</span><span class="p">]</span> <span class="nf">setLicenseResource</span><span class="p">:</span><span class="s">@"license-key-file"</span> <span class="nf">withExtension</span><span class="p">:</span><span class="s">@"key"</span> <span class="n">inSubdirectory</span><span class="o">:</span><span class="s">@""</span> <span class="n">forBundle</span><span class="o">:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">]</span> <span class="n">errorCallback</span><span class="o">:</span><span class="n">block</span><span class="p">];</span>
 </code></pre>
 
 <p>If the licence is invalid or expired then the methods above will throw an <strong>exception</strong>.</p>
@@ -855,24 +853,24 @@ git lfs install
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>- (void)blinkIdOverlayViewControllerDidFinishScanning:(MBBlinkIdOverlayViewController *)blinkIdOverlayViewController state:(MBRecognizerResultState)state {
+<pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">blinkIdOverlayViewControllerDidFinishScanning</span><span class="p">:(</span><span class="n">MBBlinkIdOverlayViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">blinkIdOverlayViewController</span> <span class="nf">state</span><span class="p">:(</span><span class="n">MBRecognizerResultState</span><span class="p">)</span><span class="nv">state</span> <span class="p">{</span>
 
-    // this is done on background thread
-    // check for valid state
-    if (state == MBRecognizerResultStateValid) {
+    <span class="c1">// this is done on background thread</span>
+    <span class="c1">// check for valid state</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="n">MBRecognizerResultStateValid</span><span class="p">)</span> <span class="p">{</span>
 
-        // first, pause scanning until we process all the results
-        [blinkIdOverlayViewController.recognizerRunnerViewController pauseScanning];
+        <span class="c1">// first, pause scanning until we process all the results</span>
+        <span class="p">[</span><span class="n">blinkIdOverlayViewController</span><span class="p">.</span><span class="n">recognizerRunnerViewController</span> <span class="nf">pauseScanning</span><span class="p">];</span>
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // All UI interaction needs to be done on main thread
-        });
-    }
-}
+        <span class="n">dispatch_async</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+            <span class="c1">// All UI interaction needs to be done on main thread</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-- (void)blinkIdOverlayViewControllerDidTapClose:(nonnull MBBlinkIdOverlayViewController *)blinkIdOverlayViewController {
-    // Your action on cancel
-}
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">blinkIdOverlayViewControllerDidTapClose</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">MBBlinkIdOverlayViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">blinkIdOverlayViewController</span> <span class="p">{</span>
+    <span class="c1">// Your action on cancel</span>
+<span class="p">}</span>
 </code></pre>
 <h1 id='a-name-advanced-integration-a-advanced-blinkid-integration-instructions' class='heading'><a name="advanced-integration"></a> Advanced BlinkID integration instructions</h1>
 
@@ -909,9 +907,9 @@ To force the UI in landscape mode, use the following instructions:</p>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBBlinkIdOverlaySettings *settings = [[MBBlinkIdOverlaySettings alloc] init];
-settings.autorotateOverlay = YES;
-settings.supportedOrientations = UIInterfaceOrientationMaskLandscape;
+<pre class="highlight objective_c"><code><span class="n">MBBlinkIdOverlaySettings</span> <span class="o">*</span><span class="n">settings</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdOverlaySettings</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="n">settings</span><span class="p">.</span><span class="n">autorotateOverlay</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="n">settings</span><span class="p">.</span><span class="n">supportedOrientations</span> <span class="o">=</span> <span class="n">UIInterfaceOrientationMaskLandscape</span><span class="p">;</span>
 </code></pre>
 
 <p>It has <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html"><code><a href="Protocols/MBBlinkIdOverlayViewControllerDelegate.html">MBBlinkIdOverlayViewControllerDelegate</a></code></a> delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html"><code><a href="Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a></code></a>:</p>
@@ -928,11 +926,11 @@ settings.supportedOrientations = UIInterfaceOrientationMaskLandscape;
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>MBBlinkIdOverlayViewController *overlayVC = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
+<pre class="highlight objective_c"><code><span class="n">MBBlinkIdOverlayViewController</span> <span class="o">*</span><span class="n">overlayVC</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdOverlayViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithSettings</span><span class="p">:</span><span class="n">settings</span> <span class="nf">recognizerCollection</span><span class="p">:</span> <span class="n">recognizerCollection</span> <span class="n">delegate</span><span class="o">:</span><span class="n">self</span><span class="p">];</span>
+<span class="n">UIViewController</span><span class="o">&lt;</span><span class="n">MBRecognizerRunnerViewController</span><span class="o">&gt;*</span> <span class="n">recognizerRunnerViewController</span> <span class="o">=</span> <span class="p">[</span><span class="n">MBViewControllerFactory</span> <span class="nf">recognizerRunnerViewControllerWithOverlayViewController</span><span class="p">:</span><span class="n">overlayVC</span><span class="p">];</span>
 
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
+<span class="cm">/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */</span>
+<span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">recognizerRunnerViewController</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
 </code></pre>
 
 <p>As you can see, when initializing <a href="http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html"><code><a href="Classes/MBBlinkIdOverlayViewController.html">MBBlinkIdOverlayViewController</a></code></a>, we are sending delegate property as <code>self</code>. To get results, we need to conform to <a href="http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html"><code><a href="Protocols/MBBlinkIdOverlayViewControllerDelegate.html">MBBlinkIdOverlayViewControllerDelegate</a></code></a> protocol.</p>
@@ -1033,7 +1031,7 @@ UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewCo
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>UIViewController&lt;MBRecognizerRunnerViewController&gt;* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:CustomOverlayViewController];
+<pre class="highlight objective_c"><code><span class="n">UIViewController</span><span class="o">&lt;</span><span class="n">MBRecognizerRunnerViewController</span><span class="o">&gt;*</span> <span class="n">recognizerRunnerViewController</span> <span class="o">=</span> <span class="p">[</span><span class="n">MBViewControllerFactory</span> <span class="nf">recognizerRunnerViewControllerWithOverlayViewController</span><span class="p">:</span><span class="n">CustomOverlayViewController</span><span class="p">];</span>
 </code></pre>
 <h2 id='a-name-direct-api-processing-a-direct-processing-api' class='heading'><a name="direct-api-processing"></a> Direct processing API</h2>
 
@@ -1076,7 +1074,7 @@ Developer can choose which protocol to conform:</p>
         <span class="n">image</span> <span class="o">=</span> <span class="kt">MBImage</span><span class="p">(</span><span class="nv">uiImage</span><span class="p">:</span> <span class="n">anImage</span><span class="p">)</span>
     <span class="p">}</span>
     <span class="n">image</span><span class="p">?</span><span class="o">.</span><span class="n">cameraFrame</span> <span class="o">=</span> <span class="kc">true</span>
-    <span class="n">image</span><span class="p">?</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="kt">MBProcessingOrientation</span><span class="o">.</span><span class="n">left</span>
+    <span class="n">image</span><span class="p">?</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="kt">MBProcessingOrientation</span><span class="o">.</span><span class="k">left</span>
     <span class="k">let</span> <span class="nv">_serialQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="p">(</span><span class="nv">label</span><span class="p">:</span> <span class="s">"com.microblink.DirectAPI-sample-swift"</span><span class="p">)</span>
     <span class="n">_serialQueue</span><span class="o">.</span><span class="nf">async</span><span class="p">(</span><span class="nv">execute</span><span class="p">:</span> <span class="p">{()</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
         <span class="k">self</span><span class="o">.</span><span class="n">recognizerRunner</span><span class="p">?</span><span class="o">.</span><span class="nf">processImage</span><span class="p">(</span><span class="n">image</span><span class="o">!</span><span class="p">)</span>
@@ -1091,34 +1089,34 @@ Developer can choose which protocol to conform:</p>
 </code></pre>
 
 <p>Objective-C</p>
-<pre class="highlight plaintext"><code>- (void)setupRecognizerRunner {
-    NSMutableArray&lt;MBRecognizer *&gt; *recognizers = [[NSMutableArray alloc] init];
+<pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">setupRecognizerRunner</span> <span class="p">{</span>
+    <span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n">MBRecognizer</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">recognizers</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableArray</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
 
-    self.recognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
+    <span class="n">self</span><span class="p">.</span><span class="n">recognizer</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBBlinkIdMultiSideRecognizer</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
 
-    [recognizers addObject: self.recognizer];
+    <span class="p">[</span><span class="n">recognizers</span> <span class="nf">addObject</span><span class="p">:</span> <span class="n">self</span><span class="p">.</span><span class="n">recognizer</span><span class="p">];</span>
 
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
+    <span class="n">MBRecognizerCollection</span> <span class="o">*</span><span class="n">recognizerCollection</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBRecognizerCollection</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithRecognizers</span><span class="p">:</span><span class="n">recognizers</span><span class="p">];</span>
 
-    self.recognizerRunner = [[MBRecognizerRunner alloc] initWithRecognizerCollection:recognizerCollection];
-    self.recognizerRunner.scanningRecognizerRunnerDelegate = self;
-}
+    <span class="n">self</span><span class="p">.</span><span class="n">recognizerRunner</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MBRecognizerRunner</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithRecognizerCollection</span><span class="p">:</span><span class="n">recognizerCollection</span><span class="p">];</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">recognizerRunner</span><span class="p">.</span><span class="n">scanningRecognizerRunnerDelegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+<span class="p">}</span>
 
-- (void)processImageRunner:(UIImage *)originalImage {
-    MBImage *image = [MBImage imageWithUIImage:originalImage];
-    image.cameraFrame = YES;
-    image.orientation = MBProcessingOrientationLeft;
-    dispatch_queue_t _serialQueue = dispatch_queue_create("com.microblink.DirectAPI-sample", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(_serialQueue, ^{
-        [self.recognizerRunner processImage:image];
-    });
-}
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">processImageRunner</span><span class="p">:(</span><span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">originalImage</span> <span class="p">{</span>
+    <span class="n">MBImage</span> <span class="o">*</span><span class="n">image</span> <span class="o">=</span> <span class="p">[</span><span class="n">MBImage</span> <span class="nf">imageWithUIImage</span><span class="p">:</span><span class="n">originalImage</span><span class="p">];</span>
+    <span class="n">image</span><span class="p">.</span><span class="n">cameraFrame</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+    <span class="n">image</span><span class="p">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">MBProcessingOrientationLeft</span><span class="p">;</span>
+    <span class="n">dispatch_queue_t</span> <span class="n">_serialQueue</span> <span class="o">=</span> <span class="n">dispatch_queue_create</span><span class="p">(</span><span class="s">"com.microblink.DirectAPI-sample"</span><span class="p">,</span> <span class="n">DISPATCH_QUEUE_SERIAL</span><span class="p">);</span>
+    <span class="n">dispatch_async</span><span class="p">(</span><span class="n">_serialQueue</span><span class="p">,</span> <span class="o">^</span><span class="p">{</span>
+        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">recognizerRunner</span> <span class="nf">processImage</span><span class="p">:</span><span class="n">image</span><span class="p">];</span>
+    <span class="p">});</span>
+<span class="p">}</span>
 
-- (void)recognizerRunner:(nonnull MBRecognizerRunner *)recognizerRunner didFinishScanningWithState:(MBRecognizerResultState)state {
-    if (self.blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid) {
-        // Handle result
-    }
-}
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">recognizerRunner</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">MBRecognizerRunner</span> <span class="o">*</span><span class="p">)</span><span class="nv">recognizerRunner</span> <span class="nf">didFinishScanningWithState</span><span class="p">:(</span><span class="n">MBRecognizerResultState</span><span class="p">)</span><span class="nv">state</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">blinkInputRecognizer</span><span class="p">.</span><span class="n">result</span><span class="p">.</span><span class="n">resultState</span> <span class="o">==</span> <span class="n">MBRecognizerResultStateValid</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle result</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
 
 <p>Now you&rsquo;ve seen how to implement the Direct processing API.</p>
@@ -1318,9 +1316,9 @@ If you are using Cocoapods, please be sure that you&rsquo;ve installed <code>git
 
 <span class="c"># This script loops through the frameworks embedded in the application and</span>
 <span class="c"># removes unused architectures.</span>
-find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> -name <span class="s1">'*.framework'</span> -type d | <span class="k">while </span><span class="nb">read</span> -r FRAMEWORK
+find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">"</span> <span class="nt">-name</span> <span class="s1">'*.framework'</span> <span class="nt">-type</span> d | <span class="k">while </span><span class="nb">read</span> <span class="nt">-r</span> FRAMEWORK
 <span class="k">do
-</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="k">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="k">)</span>
+</span><span class="nv">FRAMEWORK_EXECUTABLE_NAME</span><span class="o">=</span><span class="si">$(</span>defaults <span class="nb">read</span> <span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/Info.plist"</span> CFBundleExecutable<span class="si">)</span>
 <span class="nv">FRAMEWORK_EXECUTABLE_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FRAMEWORK</span><span class="s2">/</span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
 <span class="nb">echo</span> <span class="s2">"Executable is </span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
@@ -1329,17 +1327,17 @@ find <span class="s2">"</span><span class="nv">$APP_PATH</span><span class="s2">
 <span class="k">for </span>ARCH <span class="k">in</span> <span class="nv">$ARCHS</span>
 <span class="k">do
 </span><span class="nb">echo</span> <span class="s2">"Extracting </span><span class="nv">$ARCH</span><span class="s2"> from </span><span class="nv">$FRAMEWORK_EXECUTABLE_NAME</span><span class="s2">"</span>
-lipo -extract <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
+lipo <span class="nt">-extract</span> <span class="s2">"</span><span class="nv">$ARCH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span>
 EXTRACTED_ARCHS+<span class="o">=(</span><span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-</span><span class="nv">$ARCH</span><span class="s2">"</span><span class="o">)</span>
 <span class="k">done
 
 </span><span class="nb">echo</span> <span class="s2">"Merging extracted architectures: </span><span class="k">${</span><span class="nv">ARCHS</span><span class="k">}</span><span class="s2">"</span>
-lipo -o <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> -create <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
-rm <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+lipo <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="nt">-create</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+<span class="nb">rm</span> <span class="s2">"</span><span class="k">${</span><span class="nv">EXTRACTED_ARCHS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 
 <span class="nb">echo</span> <span class="s2">"Replacing original executable with thinned version"</span>
-rm <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
-mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+<span class="nb">rm</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
+<span class="nb">mv</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">-merged"</span> <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><span class="s2">"</span>
 
 <span class="k">done</span>
 </code></pre>
@@ -1362,8 +1360,8 @@ mv <span class="s2">"</span><span class="nv">$FRAMEWORK_EXECUTABLE_PATH</span><s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-09-06)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2024 <a class="link" href="http://microblink.com" target="_blank" rel="external noopener">Microblink</a>. All rights reserved. (Last updated: 2024-10-01)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

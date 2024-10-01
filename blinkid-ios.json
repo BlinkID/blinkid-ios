@@ -33,5 +33,6 @@
     "6.9.1": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.9.1/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.9.1/BlinkID.xcframework.zip",
     "6.9.2": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.9.2/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.9.2/BlinkID.xcframework.zip",
     "6.10.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.0/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.0/BlinkID.xcframework.zip",
-    "6.10.1": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.1/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.1/BlinkID.xcframework.zip"
+    "6.10.1": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.1/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.10.1/BlinkID.xcframework.zip",
+    "6.11.0": "https://github.com/BlinkID/blinkid-ios/releases/download/v6.11.0/BlinkID.framework.zip?alt=https://github.com/BlinkID/blinkid-ios/releases/download/v6.11.0/BlinkID.xcframework.zip"
 }

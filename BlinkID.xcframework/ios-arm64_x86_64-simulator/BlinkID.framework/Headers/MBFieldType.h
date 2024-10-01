@@ -50,7 +50,15 @@ typedef NS_ENUM(NSInteger, MBFieldType) {
     MBFieldTypeVisaType,
     MBFieldTypeDocumentSubtype,
     MBFieldTypeRemarks,
-    MBFieldTypeResidencePermitType
+    MBFieldTypeResidencePermitType,
+    MBFieldTypeManufacturingYear,
+    MBFieldTypeVehicleType,
+    MBFieldTypeDependentDateOfBirth,
+    MBFieldTypeDependentSex,
+    MBFieldTypeDependentDocumentNumber,
+    MBFieldTypeDependentFullName,
+    MBFieldTypeEligibilityCategory,
+    MBFieldTypeSpecificDocumentValidity
 };
 
 #endif /* MBFieldType_h */
