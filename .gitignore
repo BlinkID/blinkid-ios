@@ -28,3 +28,4 @@ DerivedData
 .DS_Store
 
 Samples/MicroBlinkDynamic/Release
+*.zip
