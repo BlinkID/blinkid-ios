@@ -1,5 +1,10 @@
 # Release notes
 
+## 6.11.1
+
+### Bug fix:
+- NYC Municipal ID & USA Border Crossing Card - Resolved an issue where the scanning process could get stuck on the back side during multi-side scanning.
+
 ## 6.11.0
 
 ### Expanded Document Coverage
