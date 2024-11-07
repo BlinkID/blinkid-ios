@@ -69,6 +69,48 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 @property(nonatomic, strong) NSString *flipInstructions;
 
 /**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on top
+*/
+@property(nonatomic, strong) NSString *turnTopPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on left
+*/
+@property(nonatomic, strong) NSString *turnLeftPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on right
+*/
+@property(nonatomic, strong) NSString *turnRightPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on top
+*/
+@property(nonatomic, strong) NSString *scanTopPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on left
+*/
+@property(nonatomic, strong) NSString *scanLeftPageInstructions;
+
+/**
+* Instructions to scan the passport, shown when scanning of the first side is done, before scanning the second
+* side of the document.
+* Default: Move to the page on right
+*/
+@property(nonatomic, strong) NSString *scanRightPageInstructions;
+
+/**
 * Instructions for the user to move the document closer.
 * Default: Move closer
 */
@@ -202,6 +244,24 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 * Default: Flip the document
 */
 @property(nonatomic, strong) NSString *scanningWrongSideMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the top
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportTopMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the right
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportRightMessage;
+
+/**
+* Instructions for the user when wrong side of passport is being scanned.
+* Default: Move to the left
+*/
+@property(nonatomic, strong) NSString *scanningWrongSidePassportLeftMessage;
 
 /**
  * Designated initializer. Initializes the object with default settings.

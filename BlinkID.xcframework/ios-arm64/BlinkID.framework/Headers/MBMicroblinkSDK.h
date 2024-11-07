@@ -116,7 +116,16 @@ MB_CLASS_AVAILABLE_IOS(13.0)
  * 
  * @param urlString The URL string for ping proxy
  */
-- (void)setPingProxyUrl:(NSString * _Nonnull)urlString;
+- (void)setMicroblinkProxyUrl:(NSString * _Nonnull)urlString;
+
+/**
+ * Set the URL for baltazar proxy.
+ * This method is used if for setting baltazar proxy URL if that right is enabled in license.
+ * URL must be https.
+ *
+ * @param urlString The URL string for baltazar proxy
+ */
+- (void)setBaltazarProxyUrl:(NSString * _Nonnull)urlString;
 
 @end
 

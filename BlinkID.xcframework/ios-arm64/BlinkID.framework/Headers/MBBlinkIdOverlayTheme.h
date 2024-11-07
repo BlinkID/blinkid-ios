@@ -263,6 +263,69 @@ MB_CLASS_AVAILABLE_IOS(13.0)
 */
 @property (nonatomic, strong) UIColor *successFlashColor;
 
+/**
+ * Passport animation images.
+ *
+ * Default: passport_bottom
+*/
+@property (nonatomic, strong) UIImage *passportBottomImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport-top
+*/
+@property (nonatomic, strong) UIImage *passportTopImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport_highlight
+*/
+@property (nonatomic, strong) UIImage *passportHighlightImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport_bottom
+*/
+@property (nonatomic, strong) UIImage *passportBottomRightImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport-top
+*/
+@property (nonatomic, strong) UIImage *passportTopRightImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport_highlight
+*/
+@property (nonatomic, strong) UIImage *passportHighlightRightImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport_bottom
+*/
+@property (nonatomic, strong) UIImage *passportBottomLeftImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport-top
+*/
+@property (nonatomic, strong) UIImage *passportTopLeftImage;
+
+/**
+ * Passport animation images.
+ *
+ * Default: passport_highlight
+*/
+@property (nonatomic, strong) UIImage *passportHighlightLeftImage;
+
 @end
 
 NS_ASSUME_NONNULL_END
