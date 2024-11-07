@@ -122,7 +122,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>AFGHANISTAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AFGHANISTAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -192,7 +192,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
-<tr><th colspan=2>ALBANIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ALBANIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -237,7 +237,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>ALGERIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ALGERIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -252,7 +252,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ANDORRA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ANDORRA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -265,7 +265,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>ANDORRA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ANDORRA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -350,7 +350,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Barcode data</td><td>Pending</td></tr>
 
-<tr><th colspan=2>ARGENTINA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ARGENTINA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -398,7 +398,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>ARMENIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ARMENIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -420,7 +420,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 
-<tr><th colspan=2>AUSTRALIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AUSTRALIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -434,7 +434,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>AUSTRALIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AUSTRALIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -617,6 +617,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Vehicle class</td><td>Always</td></tr>
 <tr><td>Conditions</td><td>Always if present</td></tr>
 <tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>AUSTRALIA VICTORIA Driver's License - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -680,6 +681,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>AUSTRIA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -691,6 +693,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>AUSTRIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -702,7 +705,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Document number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>AUSTRIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AUSTRIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -715,6 +718,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>AUSTRIA Residence Permit - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -738,7 +742,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>AUSTRIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AUSTRIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -791,7 +795,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>AZERBAIJAN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>AZERBAIJAN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -824,7 +828,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BAHAMAS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BAHAMAS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -838,7 +842,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>BAHAMAS Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BAHAMAS Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -912,7 +916,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BAHRAIN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BAHRAIN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -953,7 +957,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>BANGLADESH Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BANGLADESH Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -968,7 +972,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>First name</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BANGLADESH Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BANGLADESH Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1049,7 +1053,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>BELARUS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BELARUS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1083,7 +1087,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>BELARUS Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BELARUS Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1122,6 +1126,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>BELGIUM Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -1150,7 +1155,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BELGIUM Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BELGIUM Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1220,7 +1225,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BELGIUM Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BELGIUM Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1316,7 +1321,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>BOLIVIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BOLIVIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1364,7 +1369,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BOSNIA AND HERZEGOVINA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BOSNIA AND HERZEGOVINA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1415,7 +1420,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BRAZIL Consular Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BRAZIL Consular Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1468,7 +1473,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BRAZIL Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BRAZIL Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1688,6 +1693,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>BRUNEI Residence Permit - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -1777,7 +1783,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Last name</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>BULGARIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>BULGARIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1848,7 +1854,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>CAMBODIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CAMBODIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1882,7 +1888,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CAMEROON Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CAMEROON Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1897,7 +1903,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always if present</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CAMEROON Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CAMEROON Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1925,7 +1931,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Full name</td><td>Always</td></tr>
 
-<tr><th colspan=2>CANADA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CANADA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -1954,7 +1960,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>CANADA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CANADA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2353,7 +2359,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
-<tr><th colspan=2>CAYMAN ISLANDS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CAYMAN ISLANDS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2367,7 +2373,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>CAYMAN ISLANDS Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CAYMAN ISLANDS Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2437,7 +2443,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CHILE Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CHILE Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2485,7 +2491,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>CHINA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CHINA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2546,6 +2552,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>COLOMBIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2571,7 +2578,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>COLOMBIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>COLOMBIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2603,7 +2610,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>COMOROS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>COMOROS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2642,7 +2649,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>COSTA RICA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>COSTA RICA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2680,6 +2687,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>CROATIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2716,7 +2724,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CROATIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CROATIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2745,7 +2753,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>CUBA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CUBA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2782,6 +2790,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>CYPRUS Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2795,7 +2804,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CYPRUS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CYPRUS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2862,6 +2871,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>CZECHIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2898,7 +2908,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>CZECHIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>CZECHIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -2981,7 +2991,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>DENMARK Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>DENMARK Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3045,7 +3055,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>DOMINICAN REPUBLIC Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>DOMINICAN REPUBLIC Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3098,7 +3108,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Marital status</td><td>Always if present</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ECUADOR Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ECUADOR Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3145,7 +3155,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Marital status</td><td>Always if present</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>EGYPT Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>EGYPT Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3228,7 +3238,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ESTONIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ESTONIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3266,7 +3276,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ESTONIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ESTONIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3281,7 +3291,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>ESWATINI Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ESWATINI Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3368,7 +3378,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>FINLAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>FINLAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3418,7 +3428,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>FRANCE Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>FRANCE Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -3503,7 +3513,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>GEORGIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GEORGIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3529,6 +3539,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>GERMANY Driver Qualification Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3543,6 +3554,14 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
+<tr><th colspan=2>GERMANY eID - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+
 <tr><th colspan=2>GERMANY Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -3554,6 +3573,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>GERMANY Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3563,7 +3583,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>GERMANY Minors Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GERMANY Minors Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3577,7 +3597,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>GERMANY Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GERMANY Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3614,7 +3634,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>GERMANY Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GERMANY Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3627,14 +3647,6 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
-
-<tr><th colspan=2>GERMANY eID - Front</th></tr>
-<tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
-<tr><td>Date of expiry</td><td>Always</td></tr>
-<tr><td>Document additional number</td><td>Always</td></tr>
-<tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
 
 <tr><th colspan=2>GHANA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3663,7 +3675,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>GHANA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GHANA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3708,7 +3720,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>GIBRALTAR Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GIBRALTAR Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3722,7 +3734,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>GIBRALTAR Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GIBRALTAR Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3769,7 +3781,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>GREECE Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GREECE Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3805,7 +3817,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>GREECE Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GREECE Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3891,7 +3903,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>GUATEMALA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GUATEMALA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3933,7 +3945,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 
-<tr><th colspan=2>GUYANA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>GUYANA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3980,7 +3992,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>HAITI Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>HAITI Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4029,7 +4041,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>HONDURAS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>HONDURAS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4054,7 +4066,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Additional name information</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>HONG KONG Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>HONG KONG Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4116,7 +4128,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>HUNGARY Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>HUNGARY Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4165,7 +4177,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
-<tr><th colspan=2>ICELAND Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ICELAND Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4217,7 +4229,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>INDIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>INDIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4231,7 +4243,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>INDIA Paper Passport - Back</th></tr>
+<tr><th colspan=2>INDIA Paper Passport - Second data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Fathers name</td><td>Always</td></tr>
@@ -4384,8 +4396,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Profession</td><td>Always</td></tr>
 <tr><td>Religion</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>INDONESIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>INDONESIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4400,7 +4413,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Document optional additional number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>INDONESIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>INDONESIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4414,7 +4427,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>IRAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>IRAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4440,7 +4453,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>IRAQ Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>IRAQ Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4454,7 +4467,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>IRAQ Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>IRAQ Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4482,6 +4495,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>IRELAND Passport Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -4533,7 +4547,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>IRELAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>IRELAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4546,6 +4560,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>IRELAND Polycarbonate Passport - Second data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>ISRAEL Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -4569,7 +4587,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 
-<tr><th colspan=2>ISRAEL Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ISRAEL Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4596,6 +4614,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 <tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>ITALY Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -4622,7 +4641,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ITALY Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ITALY Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4711,7 +4730,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 
-<tr><th colspan=2>JAMAICA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>JAMAICA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4755,7 +4774,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always if present</td></tr>
 <tr><td>Full name</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>JAPAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>JAPAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4807,8 +4826,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>JORDAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>JORDAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4833,7 +4853,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>KAZAKHSTAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KAZAKHSTAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4863,7 +4883,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>KENYA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KENYA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4910,7 +4930,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>KOSOVO Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KOSOVO Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -4975,7 +4995,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>KUWAIT Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KUWAIT Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5040,7 +5060,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>KYRGYZSTAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KYRGYZSTAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5055,7 +5075,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>KYRGYZSTAN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>KYRGYZSTAN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5142,7 +5162,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>LATVIA Polycarbonate Alien Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LATVIA Polycarbonate Alien Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5157,7 +5177,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>LATVIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LATVIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5201,7 +5221,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Marital status</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>LEBANON Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LEBANON Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5216,7 +5236,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>LIBYA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LIBYA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5313,7 +5333,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>LITHUANIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LITHUANIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5378,7 +5398,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>LUXEMBOURG Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>LUXEMBOURG Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5402,6 +5422,18 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>MALAYSIA i-Kad - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Address</td><td>Always</td></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Employer</td><td>Always if present</td></tr>
+<tr><td>Profession</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MALAYSIA MyKad - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -5447,6 +5479,17 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document optional additional number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
+<tr><th colspan=2>MALAYSIA MyPolis - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>MALAYSIA MyPolis - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+
 <tr><th colspan=2>MALAYSIA MyPR - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -5461,17 +5504,6 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document optional additional number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
-
-<tr><th colspan=2>MALAYSIA MyPolis - Front</th></tr>
-<tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
-<tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
-<tr><td>Personal ID number</td><td>Always if present</td></tr>
-
-<tr><th colspan=2>MALAYSIA MyPolis - Back</th></tr>
-<tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of issue</td><td>Always</td></tr>
 
 <tr><th colspan=2>MALAYSIA MyTentera - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -5498,7 +5530,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>MALAYSIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MALAYSIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5511,18 +5543,6 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
-
-<tr><th colspan=2>MALAYSIA i-Kad - Front</th></tr>
-<tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Address</td><td>Always</td></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
-<tr><td>Date of expiry</td><td>Always</td></tr>
-<tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
-<tr><td>Nationality</td><td>Always</td></tr>
-<tr><td>Sex</td><td>Always</td></tr>
-<tr><td>Employer</td><td>Always if present</td></tr>
-<tr><td>Profession</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MALDIVES Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -5577,7 +5597,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>MALTA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MALTA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5617,7 +5637,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>MALTA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MALTA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5679,12 +5699,14 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Fathers name</td><td>Always if present</td></tr>
 <tr><td>Mothers name</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>MEXICO Consular Voter ID - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>MEXICO Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MEXICO Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5745,7 +5767,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>MEXICO Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MEXICO Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -5777,11 +5799,13 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Mothers name</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>MEXICO Voter ID - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Document number</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>MEXICO AGUASCALIENTES Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6380,7 +6404,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Address</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>MOLDOVA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MOLDOVA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6395,7 +6419,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>MOLDOVA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MOLDOVA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6410,7 +6434,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>MONACO Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MONACO Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6454,7 +6478,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>MONTENEGRO Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MONTENEGRO Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6506,7 +6530,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>MOROCCO Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MOROCCO Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -6566,7 +6590,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
-<tr><th colspan=2>MYANMAR Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>MYANMAR Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6595,7 +6619,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>NEPAL Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NEPAL Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6610,7 +6634,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>NEPAL Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NEPAL Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6703,7 +6727,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>NETHERLANDS Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NETHERLANDS Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6728,8 +6752,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>First name</td><td>Always if present</td></tr>
 <tr><td>Vehicle class</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>NEW ZEALAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NEW ZEALAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6742,6 +6767,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>NEW ZEALAND Polycarbonate Passport - Second data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>NICARAGUA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6793,7 +6822,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>NIGERIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NIGERIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6807,7 +6836,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>NIGERIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NIGERIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6862,6 +6891,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>NORTH MACEDONIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6871,7 +6901,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>NORTH MACEDONIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NORTH MACEDONIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6885,6 +6915,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>NORWAY Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6937,7 +6968,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>NORWAY Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>NORWAY Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -6982,7 +7013,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>OMAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>OMAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7058,7 +7089,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>PAKISTAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PAKISTAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7104,7 +7135,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 
-<tr><th colspan=2>PALESTINE Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PALESTINE Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7152,7 +7183,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>PANAMA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PANAMA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7288,7 +7319,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>PERU Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PERU Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7363,7 +7394,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>PHILIPPINES Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PHILIPPINES Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7486,7 +7517,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>POLAND Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>POLAND Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7526,7 +7557,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>POLAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>POLAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7570,7 +7601,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>PORTUGAL Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>PORTUGAL Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7649,7 +7680,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 
-<tr><th colspan=2>QATAR Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>QATAR Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7706,6 +7737,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Mothers name</td><td>Always if present</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>ROMANIA Residence Permit - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -7730,7 +7762,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>ROMANIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ROMANIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7758,7 +7790,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
-<tr><th colspan=2>RUSSIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>RUSSIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7771,7 +7803,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>RUSSIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>RUSSIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7832,7 +7864,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>SAINT LUCIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SAINT LUCIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7846,7 +7878,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>SAN MARINO Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SAN MARINO Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7880,7 +7912,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>SAUDI ARABIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SAUDI ARABIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -7948,7 +7980,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Address</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SERBIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SERBIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -8025,7 +8057,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 
-<tr><th colspan=2>SINGAPORE Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SINGAPORE Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8096,6 +8128,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SLOVAKIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8128,7 +8161,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SLOVAKIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SLOVAKIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8169,6 +8202,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SLOVENIA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8204,7 +8238,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SLOVENIA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SLOVENIA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8217,6 +8251,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>SLOVENIA Polycarbonate Passport - Second data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Address</td><td>Always</td></tr>
 
 <tr><th colspan=2>SOUTH AFRICA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8249,7 +8287,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Barcode data</td><td>Pending</td></tr>
 
-<tr><th colspan=2>SOUTH AFRICA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SOUTH AFRICA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8278,7 +8316,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 
-<tr><th colspan=2>SOUTH KOREA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SOUTH KOREA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8318,6 +8356,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SPAIN Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8338,7 +8377,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>SPAIN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SPAIN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8405,7 +8444,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SRI LANKA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SRI LANKA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8420,7 +8459,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SUDAN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SUDAN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8445,6 +8484,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SWEDEN Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8488,7 +8528,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SWEDEN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SWEDEN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8504,7 +8544,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SWEDEN Polycarbonate Refugee Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SWEDEN Polycarbonate Refugee Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8556,6 +8596,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SWITZERLAND Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8566,6 +8607,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>SWITZERLAND Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8577,7 +8619,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SWITZERLAND Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SWITZERLAND Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8616,7 +8658,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>SWITZERLAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SWITZERLAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8645,7 +8687,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>SYRIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>SYRIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always</td></tr>
@@ -8693,7 +8735,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Marital status</td><td>Always</td></tr>
 
-<tr><th colspan=2>TAJIKISTAN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TAJIKISTAN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8776,7 +8818,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Document additional number</td><td>Always</td></tr>
 
-<tr><th colspan=2>THAILAND Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>THAILAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8836,7 +8878,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>Document optional additional number</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>TRINIDAD AND TOBAGO Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TRINIDAD AND TOBAGO Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8863,7 +8905,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 
-<tr><th colspan=2>TUNISIA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TUNISIA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -8915,7 +8957,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Marital status</td><td>Always if present</td></tr>
 <tr><td>Religion</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>TURKEY Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TURKEY Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8947,7 +8989,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always if present</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 
-<tr><th colspan=2>TURKEY Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TURKEY Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8962,7 +9004,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>TURKMENISTAN Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TURKMENISTAN Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -8998,7 +9040,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>TURKS AND CAICOS ISLANDS Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>TURKS AND CAICOS ISLANDS Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9035,6 +9077,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>UAE Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9044,8 +9087,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>UAE Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UAE Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9057,6 +9101,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>UAE Resident ID - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9067,6 +9112,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always if present</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>UAE Resident ID - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9079,8 +9125,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>UAE Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UAE Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9093,6 +9140,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
 <tr><th colspan=2>UGANDA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9150,8 +9198,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 <tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Signature</td><td>Pending</td></tr>
 
-<tr><th colspan=2>UK Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UK Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9195,7 +9244,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
-<tr><th colspan=2>UK Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UK Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9259,7 +9308,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>UKRAINE Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UKRAINE Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9390,7 +9439,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>USA Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>USA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -9421,7 +9470,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>USA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>USA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -11489,7 +11538,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 
-<tr><th colspan=2>UZBEKISTAN Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>UZBEKISTAN Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -11525,7 +11574,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Marital status</td><td>Always</td></tr>
 
-<tr><th colspan=2>VENEZUELA Polycarbonate Passport - Bio-data page </th></tr>
+<tr><th colspan=2>VENEZUELA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -11580,7 +11629,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 
-<tr><th colspan=2>ZIMBABWE Paper Passport - Bio-data page </th></tr>
+<tr><th colspan=2>ZIMBABWE Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>

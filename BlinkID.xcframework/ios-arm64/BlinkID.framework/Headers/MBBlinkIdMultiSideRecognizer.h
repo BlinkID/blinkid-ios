@@ -175,6 +175,14 @@ MB_INIT
  */
 @property (nonatomic, assign) BOOL combineFrameResults;
 
+/**
+ * Scan only the data page ( page containing MRZ ) of the passport.
+ * If set to `NO`, it will be required to scan the second page of certain passports.
+ *
+ * Default: YES
+ */
+@property (nonatomic, assign) BOOL scanPassportDataPageOnly;
+
 @end
 
 @protocol MBBlinkIdMultiSideRecognizerDelegate <NSObject>

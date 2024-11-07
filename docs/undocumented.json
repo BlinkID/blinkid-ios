@@ -72,7 +72,7 @@
     },
     {
       "file": "/opt/jenkins-iphone11/E0/sdk-blinkid-ios/blinkid-ios/BlinkID.xcframework/ios-arm64_x86_64-simulator/BlinkID.framework/Headers/MBBlinkIdMultiSideRecognizer.h",
-      "line": 180,
+      "line": 188,
       "symbol": "MBBlinkIdMultiSideRecognizerDelegate",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
