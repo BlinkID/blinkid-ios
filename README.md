@@ -459,9 +459,9 @@ The SDK comes with the ability to customize some aspects of the UI by using the 
 
 #### BlinkID Overlay Theme
 
-![BlinkIDOverlayTheme](https://user-images.githubusercontent.com/26868155/101787592-8c4f2280-3aff-11eb-8ecf-41b49e83a163.png)
+![BlinkIDOverlayTheme](https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-overlay-theme-1.png)
 
-![BlinkIDOverlayThemeSuccess](https://user-images.githubusercontent.com/26868155/101787959-f1a31380-3aff-11eb-9d5c-05e46e347159.png)
+![BlinkIDOverlayThemeSuccess](https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-overlay-theme-2.png)
 
 To customize `MBBlinkIdOverlayViewController`, use `MBBlinkIdOverlayTheme` class to customize your look. You can customise elements labeled on the screenshot above by providing wanted properties to `MBBlinkIdOverlayTheme`:
 
