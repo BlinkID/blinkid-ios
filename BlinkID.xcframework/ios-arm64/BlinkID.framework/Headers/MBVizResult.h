@@ -228,6 +228,11 @@ MB_INIT_UNAVAILABLE
  */
 @property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
 
+/**
+ * The vehicle owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleOwner;
+
 @end
 
 NS_ASSUME_NONNULL_END

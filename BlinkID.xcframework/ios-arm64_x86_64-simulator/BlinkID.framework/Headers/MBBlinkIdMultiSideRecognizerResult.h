@@ -340,6 +340,11 @@ MB_INIT_UNAVAILABLE
 @property (nonatomic, readonly, nullable) NSArray<MBDependentInfo *>* dependentInfos;
 
 /**
+ * The vehicle owner.
+ */
+@property (nonatomic, readonly, nullable) MBStringResult *vehicleOwner;
+
+/**
  * This member indicates whether the barcode scanning step was utilized during the
  * process.
  * If the barcode scanning step was executed: a parsable barcode image will be stored in the
