@@ -106,6 +106,15 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <br>
 
 <table>
+<tr><th colspan=2>UAE Esaad Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+
+<tr><th colspan=2>UAE Esaad Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+
 <tr><th colspan=2>AFGHANISTAN Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Empty document side</td><td></td></tr>
@@ -516,7 +525,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 
 <tr><th colspan=2>AUSTRALIA NORTHERN TERRITORY Proof Of Age Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of birth</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>AUSTRALIA QUEENSLAND Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -1252,6 +1261,28 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
+<tr><th colspan=2>BENIN Identity Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>MRZ</td><td>Always if present</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
+<tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Sex</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>BENIN Identity Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Profession</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
 <tr><th colspan=2>BERMUDA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -1487,6 +1518,19 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>BRAZIL ALAGOAS Identity Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+
+<tr><th colspan=2>BRAZIL ALAGOAS Identity Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
 
 <tr><th colspan=2>BRAZIL CEARA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2056,10 +2100,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
 <tr><td>Restrictions</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>CANADA BRITISH COLUMBIA Driver's License/Public Services Card (Combined) - Back</th></tr>
@@ -2086,10 +2130,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>CANADA BRITISH COLUMBIA Minors Public Services Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2101,9 +2145,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>CANADA BRITISH COLUMBIA Public Services Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -2664,6 +2708,22 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
+<tr><th colspan=2>COSTA RICA Polycarbonate Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
 <tr><th colspan=2>CROATIA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -3072,7 +3132,6 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 
 <tr><th colspan=2>ECUADOR Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
@@ -3080,9 +3139,17 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always</td></tr>
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
-<tr><td>Place of birth</td><td>Always</td></tr>
-<tr><td>Restrictions</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Restrictions</td><td>Always if present</td></tr>
+<tr><td>Vehicle class</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>ECUADOR Driver's License - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Address</td><td>Always</td></tr>
+<tr><td>Restrictions</td><td>Always</td></tr>
 
 <tr><th colspan=2>ECUADOR Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3113,16 +3180,16 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
-<tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>First name</td><td>Always</td></tr>
-<tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
-<tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>EGYPT Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3172,19 +3239,22 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 
 <tr><th colspan=2>EL SALVADOR Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Address</td><td>Always</td></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
-<tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>Date of birth</td><td>Always if present</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>EL SALVADOR Driver's License - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Address</td><td>Always if present</td></tr>
+<tr><td>Date of birth</td><td>Always if present</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>EL SALVADOR Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3481,6 +3551,27 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Remarks</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
+<tr><th colspan=2>GAMBIA Identity Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>GAMBIA Identity Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Address</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Profession</td><td>Always</td></tr>
+
 <tr><th colspan=2>GEORGIA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -3561,6 +3652,11 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Full name</td><td>Always</td></tr>
+
+<tr><th colspan=2>GERMANY eID - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
 
 <tr><th colspan=2>GERMANY Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3755,10 +3851,11 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
-<tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
+<tr><td>Last name</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>GREECE Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -3810,14 +3907,28 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th colspan=2>GREECE Residence Permit - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
-<tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always if present</td></tr>
 <tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Place of birth</td><td>Always if present</td></tr>
 <tr><td>Sex</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>GREECE Polycarbonate Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>GRENADA Paper Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -3919,6 +4030,24 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
+<tr><th colspan=2>GUINEA Identity Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>GUINEA Identity Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+
 <tr><th colspan=2>GUYANA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -4005,21 +4134,28 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>HONDURAS Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
-<tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
+<tr><td>Document additional number</td><td>Always if present</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Full name</td><td>Always if present</td></tr>
+<tr><td>Last name</td><td>Always if present</td></tr>
+<tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Sex</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>HONDURAS Driver's License - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of issue</td><td>Always</td></tr>
-<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>HONDURAS Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -4056,6 +4192,22 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
+<tr><th colspan=2>HONDURAS Resident ID - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>HONDURAS Resident ID - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always</td></tr>
+
 <tr><th colspan=2>HONG KONG Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -4072,13 +4224,13 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>HUNGARY Address Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -4871,17 +5023,22 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th colspan=2>KENYA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
-<tr><td>Date of issue</td><td>Always</td></tr>
-<tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Issuing authority</td><td>Always</td></tr>
-<tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always if present</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
+<tr><td>Document number</td><td>Always if present</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Full name</td><td>Always if present</td></tr>
+<tr><td>Last name</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>KENYA Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>KENYA Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -5384,19 +5541,24 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th colspan=2>LUXEMBOURG Residence Permit - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
-<tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document additional number</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Full name</td><td>Always</td></tr>
-<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Date of birth</td><td>Always if present</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Sex</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>LUXEMBOURG Residence Permit - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
-<tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
-<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Date of birth</td><td>Always if present</td></tr>
+<tr><td>Date of issue</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
+<tr><td>Nationality</td><td>Always if present</td></tr>
+<tr><td>Sex</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>LUXEMBOURG Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6020,11 +6182,12 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Restrictions</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MEXICO HIDALGO Driver's License - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
 <tr><td>Restrictions</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MEXICO JALISCO Driver's License - Front</th></tr>
@@ -6219,6 +6382,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MEXICO QUINTANA ROO-SOLIDARIDAD Driver's License - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6563,10 +6727,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
 <tr><td>Full name</td><td>Always</td></tr>
-<tr><td>Marital status</td><td>Always</td></tr>
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always if present</td></tr>
+<tr><td>Marital status</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MOZAMBIQUE Identity Card - Back</th></tr>
@@ -6576,6 +6740,7 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always if present</td></tr>
+<tr><td>Marital status</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>MYANMAR Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -6754,6 +6919,12 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Vehicle class</td><td>Always if present</td></tr>
 <tr><td>Signature</td><td>Pending</td></tr>
 
+<tr><th colspan=2>NEW ZEALAND Driver's License - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Class effective date</td><td>Always</td></tr>
+<tr><td>Class expiry date</td><td>Always</td></tr>
+<tr><td>Vehicle class</td><td>Always</td></tr>
+
 <tr><th colspan=2>NEW ZEALAND Polycarbonate Passport - Bio-data page</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -6787,6 +6958,21 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
 <tr><td>MRZ</td><td>Always</td></tr>
+
+<tr><th colspan=2>NICARAGUA Paper Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Additional personal id number</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>NIGERIA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -7125,6 +7311,23 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Dependent full name</td><td>Always if present</td></tr>
 <tr><td>Dependent sex or gender</td><td>Always if present</td></tr>
 
+<tr><th colspan=2>PAKISTAN Polycarbonate Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Religion</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
 <tr><th colspan=2>PAKISTAN PUNJAB Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -7244,6 +7447,21 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Marital status</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 <tr><td>Barcode data</td><td>Pending</td></tr>
+
+<tr><th colspan=2>PARAGUAY Paper Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>PERU Alien ID - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -7836,6 +8054,21 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
 
+<tr><th colspan=2>SAINT KITTS AND NEVIS Paper Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Document additional number</td><td>Always if present</td></tr>
+
 <tr><th colspan=2>SAINT LUCIA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -7930,6 +8163,18 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Nationality</td><td>Always</td></tr>
 
+<tr><th colspan=2>SAUDI ARABIA Polycarbonate Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Full name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
 <tr><th colspan=2>SENEGAL Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Address</td><td>Always</td></tr>
@@ -7948,6 +8193,21 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Personal ID number</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>SENEGAL Paper Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
 
 <tr><th colspan=2>SERBIA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -8473,6 +8733,24 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Place of birth</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 
+<tr><th colspan=2>SURINAME Identity Card - Front</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+
+<tr><th colspan=2>SURINAME Identity Card - Back</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+
 <tr><th colspan=2>SWEDEN Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of birth</td><td>Always</td></tr>
@@ -8899,7 +9177,10 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always if present</td></tr>
+<tr><td>Issuing authority</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+<tr><td>Vehicle class</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>TUNISIA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9148,12 +9429,14 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of expiry</td><td>Always</td></tr>
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Issuing authority</td><td>Always</td></tr>
 <tr><td>Personal ID number</td><td>Always</td></tr>
 <tr><td>Restrictions</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Vehicle class</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Full name</td><td>Always if present</td></tr>
+<tr><td>Last name</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>UGANDA Identity Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -9361,6 +9644,21 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Document additional number</td><td>Always if present</td></tr>
 <tr><td>MRZ</td><td>Always if present</td></tr>
 <tr><td>Place of birth</td><td>Always if present</td></tr>
+
+<tr><th colspan=2>URUGUAY Paper Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
 
 <tr><th colspan=2>USA Border Crossing Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -10400,13 +10698,16 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Document subtype</td><td>Always</td></tr>
-<tr><td>Full name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
+<tr><td>Full name</td><td>Always if present</td></tr>
+<tr><td>Last name</td><td>Always if present</td></tr>
 <tr><td>Specific document validity</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>USA MICHIGAN Identity Card - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Barcode data</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>USA MINNESOTA Driver's License - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
@@ -11386,9 +11687,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Date of issue</td><td>Always</td></tr>
 <tr><td>Document number</td><td>Always</td></tr>
 <tr><td>Document subtype</td><td>Always</td></tr>
-<tr><td>First name</td><td>Always</td></tr>
 <tr><td>Last name</td><td>Always</td></tr>
 <tr><td>Sex</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always if present</td></tr>
 <tr><td>Specific document validity</td><td>Always if present</td></tr>
 
 <tr><th colspan=2>USA WASHINGTON Identity Card - Back</th></tr>
@@ -11646,6 +11947,23 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 <tr><td>Sex</td><td>Always</td></tr>
 <tr><td>Profession</td><td>Always if present</td></tr>
 
+<tr><th colspan=2>ZIMBABWE Polycarbonate Passport - Bio-data page</th></tr>
+<tr><th>Field</th><th>Presence</th></tr>
+<tr><td>Address</td><td>Always</td></tr>
+<tr><td>Date of birth</td><td>Always</td></tr>
+<tr><td>Date of expiry</td><td>Always</td></tr>
+<tr><td>Date of issue</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>First name</td><td>Always</td></tr>
+<tr><td>Issuing authority</td><td>Always</td></tr>
+<tr><td>Last name</td><td>Always</td></tr>
+<tr><td>MRZ</td><td>Always</td></tr>
+<tr><td>Nationality</td><td>Always</td></tr>
+<tr><td>Personal ID number</td><td>Always</td></tr>
+<tr><td>Place of birth</td><td>Always</td></tr>
+<tr><td>Sex</td><td>Always</td></tr>
+<tr><td>Profession</td><td>Always if present</td></tr>
+
 <tr><th colspan=2>AUSTRALIA Health Insurance Card - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
 <tr><td>Date of expiry</td><td>Always</td></tr>
@@ -11708,8 +12026,9 @@ in the tables in [documents.md](BlinkIDRecognizer.md) file in this repository.
 
 <tr><th colspan=2>UAE Vehicle Registration - Front</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>
-<tr><td>Empty document side</td><td></td></tr>
-
+<tr><td>Document additional number</td><td>Always</td></tr>
+<tr><td>Document number</td><td>Always</td></tr>
+<tr><td>Vehicle owner</td><td>Always</td></tr>
 
 <tr><th colspan=2>UAE Vehicle Registration - Back</th></tr>
 <tr><th>Field</th><th>Presence</th></tr>

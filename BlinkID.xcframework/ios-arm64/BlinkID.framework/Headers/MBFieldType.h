@@ -58,7 +58,8 @@ typedef NS_ENUM(NSInteger, MBFieldType) {
     MBFieldTypeDependentDocumentNumber,
     MBFieldTypeDependentFullName,
     MBFieldTypeEligibilityCategory,
-    MBFieldTypeSpecificDocumentValidity
+    MBFieldTypeSpecificDocumentValidity,
+    MBFieldTypeVehicleOwner,
 };
 
 #endif /* MBFieldType_h */

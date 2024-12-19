@@ -487,7 +487,8 @@ typedef NS_ENUM(NSInteger, MBType) {
     MBTypeInterimHealthInsuranceCard,
     MBTypeNonVoterId,
     MBTypeReciprocalHealthInsuranceCard,
-    MBTypeVehicleRegistration
+    MBTypeVehicleRegistration,
+    MBTypeEsaadCard,
 };
 
 #endif /* MBClassInfoTypes_h */
