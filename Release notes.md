@@ -65,6 +65,12 @@ Saint Lucia - Paper Passport
 UK - Asylum Request
 USA, North Dakota - Identity Card
 
+### Minor API changes
+- added new items to enums:
+  - Type: `EsaadCard`
+  - FieldType: `VehicleOwner`
+- added `vehicleOwner` result to `BlinkIdMultiSideRecognizerResult`, `BlinkIdSingleSideRecognizerResult`, and `VizResult`
+
 ### Bug Fixes
 - NY ID/DL: Added logic to expose the Enhanced document subtype, allowing customers to distinguish between regular and enhanced versions.
 - Bolivia & Namibia ID: Resolved data match inconsistencies that were causing data match failures.
