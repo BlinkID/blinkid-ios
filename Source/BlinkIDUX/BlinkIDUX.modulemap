@@ -1,0 +1,10 @@
+//
+//  BlinkID.modulemap
+//  DocumentVerificationUX
+//
+//  Created by Jura Skrlec on 13.02.2025..
+//
+
+framework module BlinkIDUX {
+    export *
+}
