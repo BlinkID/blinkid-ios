@@ -1213,8 +1213,8 @@ Here is the SDK *App Size Report* for iPhone:
 
 | Size | App + On Demand Resources size | App size |
 | --- |:-------------:| :----------------:|
-| compressed | 2.1 MB | 2.1 MB |
-| uncompressed | 3.1 MB | 3.1 MB |
+| compressed | 2.4 MB | 2,4 MB |
+| uncompressed | 5,5 MB | 5,5 MB |
 
 The uncompressed size is equivalent to the size of the installed app on the device, and the compressed size is the download size of your app.
 You can find the *App Size Report* [here]().
