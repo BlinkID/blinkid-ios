@@ -1,0 +1,12 @@
+//
+//  cxxmodule.modulemap
+//  BlinkID
+//
+//  Created by Jura Skrlec on 20.01.2025..
+//
+
+module BlinkID.Swift {
+    header "SwiftCxxBridge.hpp"
+
+    requires cplusplus
+}
