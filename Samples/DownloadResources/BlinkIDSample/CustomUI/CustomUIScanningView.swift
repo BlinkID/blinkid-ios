@@ -1,4 +1,4 @@
-// Created by Toni Krešo on 13.01.2025.. 
+// Created by Toni Krešo on 20.3.2025.. 
 // Copyright (c) 2025 Microblink Ltd. All rights reserved.
 
 // ANY UNAUTHORIZED USE OR SALE, DUPLICATION, OR DISTRIBUTION 
@@ -10,7 +10,7 @@
 
 import AVFoundation
 import SwiftUI
-import BlinkIDVerifyUX
+import BlinkIDUX
 
 struct CustomUIScanningView: View {
     @Environment(\.presentationMode) var presentationMode

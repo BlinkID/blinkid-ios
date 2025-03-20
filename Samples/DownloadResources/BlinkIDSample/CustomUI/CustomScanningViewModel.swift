@@ -1,4 +1,4 @@
-// Created by Toni Krešo on 13.01.2025.. 
+// Created by Toni Krešo on 20.3.2025.. 
 // Copyright (c) 2025 Microblink Ltd. All rights reserved.
 
 // ANY UNAUTHORIZED USE OR SALE, DUPLICATION, OR DISTRIBUTION 
@@ -10,22 +10,22 @@
 
 import AVFoundation
 import Foundation
-import BlinkIDVerify
-import BlinkIDVerifyUX
+import BlinkID
+import BlinkIDUX
 
 @MainActor
 public final class CustomScanningViewModel: ObservableObject {
   
     let camera: Camera = Camera()
-    let analyzer: CameraFrameAnalyzer
+    let analyzer: BlinkIDAnalyzer
     @Published var instructionText: String = "Scan the front side"
-    @Published public var captureResult: BlinkIDVerifyCaptureResult?
+    @Published public var scanningResult: BlinkIDScanningResult?
     @Published public var roi: RegionOfInterest = RegionOfInterest()
     private var paused = false
     
     private var eventHandlingTask: Task<Void, Never>?
     
-    public init(analyzer: CameraFrameAnalyzer) {
+    public init(analyzer: BlinkIDAnalyzer) {
         self.analyzer = analyzer
         startEventHandling()
     }
@@ -42,7 +42,7 @@ public final class CustomScanningViewModel: ObservableObject {
     
     func closeButtonTapped() {
         pauseScanning()
-        captureResult = nil
+        scanningResult = nil
     }
     
     // - MARK: Analyze
@@ -50,11 +50,9 @@ public final class CustomScanningViewModel: ObservableObject {
         Task {
             let result = await analyzer.result()
             switch result {
-            case .completed(let captureResult):
-               self.captureResult = captureResult as? BlinkIDVerifyCaptureResult
-            case .cancelled, .timeout:
-                break
-            case .none:
+            case .completed(let scanningResult):
+                self.scanningResult = scanningResult
+            case .cancelled, .interrupted(_), .ended:
                 break
             }
         }

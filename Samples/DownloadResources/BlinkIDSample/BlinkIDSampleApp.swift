@@ -1,4 +1,4 @@
-// Created by Toni Krešo on 20.03.2025.. 
+// Created by Toni Krešo on 07.03.2025.. 
 // Copyright (c) 2025 Microblink Ltd. All rights reserved.
 
 // ANY UNAUTHORIZED USE OR SALE, DUPLICATION, OR DISTRIBUTION 
@@ -10,18 +10,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+@main
+struct BlinkIDSampleApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(BlinkIDViewModel())
         }
-        .padding()
     }
-}
-
-#Preview {
-    ContentView()
 }
