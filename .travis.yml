@@ -1,7 +1,0 @@
-language: swift
-osx_image: xcode14.0
-xcode_sdk: iphonesimulator15.2
-
-install: true
-before_install: ./travis/before_script.sh
-script: ./travis/script.sh
