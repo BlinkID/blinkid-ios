@@ -45,7 +45,8 @@ let package = Package(name: "BlinkIDUX",
                                         dependencies: ["BlinkID"],
                                         path: "Source",
                                         resources: [
-                                            .process("PrivacyInfo.xcprivacy")],
+                                            .process("PrivacyInfo.xcprivacy"),
+                                            .process("BlinkIDUX/Localizable.xcstrings")],
                                         swiftSettings: [.enableUpcomingFeature("ExistentialAny")]),
                                  .binaryTarget(
                                     name: "BlinkID",
