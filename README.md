@@ -1,783 +1,1191 @@
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/logo-microblink.png" alt="Microblink" title="Microblink">
+  <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-android/images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
-[![Platform](https://img.shields.io/cocoapods/p/PPBlinkID.svg?style=flat)](https://github.com/BlinkID/blinkid-ios#)
-[![Pod Version](https://img.shields.io/cocoapods/v/PPBlinkID.svg?style=flat)](https://cocoapods.org/pods/PPBlinkID)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
-[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
-# BlinkID SDK for iOS
+# BlinkID SDK
 
-Reimagine the way your users fill in their information with BlinkID iOS SDK. Fast, accurate and secure identity document scanning of more than 180 countries worldwide.
+The BlinkID SDK is a comprehensive solution for implementing secure document scanning on iOS. It offers powerful capabilities for capturing and analyzing a wide range of identification documents. The package consists of BlinkID, which serves as the core module, and an optional BlinkIDUX package that provides a complete, ready-to-use solution with a user-friendly interface.
 
-BlinkID is:
-
-* **Fast.** Real-time data extraction in less than 400ms. Way better than minutes-long form-filling.
-* **Secure.** Privacy first, always. Scanning works even if the user’s iPhone is in airplane mode, meaning personal information never touches a third-party server.
-* **Intelligent.** Machine learning models, optimized to read and parse virtually any identity document in the world, be it a Malaysian MyTentera or a Californian driver license.   
-* **Lightweight.** Designed to increase your app’s usability, not weight.  
-* **What you make of it.** Customize and rebrand the default UI or leave it as it is. It’s up to you.
-* **More than just a powerful ID scanner.** Powerful data extraction, coupled with powerful perks. Get a cropped document image back, spot printed identity documents or data match both sides of the ID for parity.
-
-<p align="center" >
-  <a href="https://www.youtube.com/watch?v=3sEyQLaxLKA" target="_blank">
-    <img src="https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/BlinkID-new.gif" alt="BlinkID SDK">
-  </a>
-</p>
-
-To see all of these features at work, download our free demo app:
-
-[![Microblink Identity App](https://developer.apple.com/app-store/marketing/guidelines/images/badge-example-preferred.png)](https://apps.apple.com/us/app/microblink-vision/id1464662310?ls=1)
-
-Feeling ready to get going with the integration? First, make sure we support your document type ➡️ [full list](https://microblink.com/full-list-of-supported-identity-documents/). And then carefully follow the guidelines below.
-
-*Updating to a newer version of the SDK? Go to our 📚 [release notes](https://github.com/BlinkID/blinkid-ios/blob/master/CHANGELOG.md) to see what’s changed.*
-# Table of contents
+# Table of Contents
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
-- [Advanced BlinkID integration instructions](#advanced-integration)
-	- [Built-in overlay view controllers and overlay subviews](#ui-customizations)
-		- [Using `MBBlinkIdOverlayViewController`](#using-blinkid-overlay-viewcontroller)
-		- [Custom overlay view controller](#using-custom-overlay-viewcontroller)
-	- [Direct processing API](#direct-api-processing)
-		- [Using Direct API for `NSString` recognition (parsing)](#direct-api-string-processing)
-		- [Understanding DirectAPI's state machine](#understanding-direct-api-state-machine)
-		- [Using DirectAPI while `RecognizerRunnerView` is active](#using-direct-api-while-recognizerrunnerview-active)
-		- [Using Direct API with combined recognizers](#using-direct-api-with-combined-recognizers)
-- [`MBRecognizer` and available recognizers](#recognizer)
-- [List of available recognizers](#available-recognizers)
-	- [Frame Grabber Recognizer](#frame-grabber-recognizer)
-	- [Success Frame Grabber Recognizer](#success-frame-grabber-recognizer)
-	- [BlinkID recognizers](#blinkid-recognizers)
-		- [Machine Readable Travel Document recognizer](#mrtd-recognizer)
-		- [Passport recognizer](#passport-recognizer)
-		- [Visa recognizer](#visa-recognizer)
-		- [ID barcode recognizer](#id-barcode-recognizer)
-		- [Document face recognizer](#document-face-recognizers)
-		- [BlinkID Recognizer](#blink-id-recognizers)
-		- [BlinkID Combined Recognizer](#blink-id-combined-recognizers)
+  - [Getting started with the BlinkID SDK](#getting-started-with-the-blinkid-sdk)
+    - [Integration](#integration)
+    - [Initiating the document scanning process](#initiating-the-document-scanning-process)
+    - [Initiating BlinkID UX](#initiating-blinkid-ux)
+    - [Initiating BlinkID](#blinkid)
+- [BlinkID Components](#BlinkID-components)
+  - [BlinkIDSdk](#BlinkIDSdk)
+  - [BlinkIDSession](#blinkidsession)
+  - [ProcessResult](#processresult)
+  - [InputImage](#inputimage)
+  - [Resource Management](#resource-management)
+- [BlinkIDUX Components](#BlinkID-ux-components)
+  - [BlinkIDAnalyzer](#BlinkIDAnalyzer)
+  - [BlinkIDUXModel](#BlinkIDUXModel)
+  - [BlinkIDUXView](#BlinkIDUXModel)
+- [Creating custom UX component](#creating-custom-ux-component)
 - [Localization](#localization)
-- [Troubleshooting](#troubleshooting)
-	- [Integration problems](#troubleshooting-integration-problems)
-	- [SDK problems](#troubleshooting-sdk-problems)
-		- [Licencing problems](#troubleshooting-licensing-problems)
-		- [Other problems](#troubleshooting-other-problems)
-	- [Frequently asked questions and known problems](#troubleshooting-faq)
-- [Size Report](#size-report)
-- [Additional info](#info)
+- [SDK Integration Troubleshooting](#sdk-integration-troubleshooting)
+- [SDK size](#blinkid-sdk-size)
+- [Additional info](#additional-info)
+
+# Requirements
+
+SDK package contains `BlinkID` framework, `BlinkIDUX` package and one or more sample apps that demonstrate their integration. The `BlinkID` framework can be deployed on iOS 15.0 or later and `BlinkIDUX` package can be deployed on iOS 16.0 or later. The framework and package support Swift projects.
+
+> Both `BlinkID` and `BlinkIDUX` are **dynamic packages**
+
+> This project is designed with Swift 6, leveraging the latest concurrency features to ensure efficient, and modern application performance.
+
+> `BlinkIDUX` is built with full support for SwiftUI, enabling seamless integration of declarative user interfaces with modern, responsive design principles.
+
+## Requirements
+
+| SDK        | Platform       | Installation                                    | Minimum Swift Version | Type    |
+| ---------- | -------------- | ----------------------------------------------- | --------------------- | ------- |
+| BlinkID    | iOS 15.0+      | [Swift Package Manager](#swift-package-manager) | 5.10 / Xcode 15.3     | Dynamic |
+| BlinkIDUX  | iOS 16.0+      | [Swift Package Manager](#swift-package-manager) | 5.10 / Xcode 15.3     | Dynamic |
 
 
-# <a name="requirements"></a> Requirements
-
-SDK package contains BlinkID framework and one or more sample apps which demonstrate framework integration. The framework can be deployed in **iOS 13.0 or later**.
-**NOTE:** The SDK doesn't contain bitcode anymore. 
 # <a name="quick-start"></a> Quick Start
 
-## Getting started with BlinkID SDK
+In this section, you will initialize the SDK, create a capture session, and submit the images for either server-side or client-side verification, resulting in a fraud verdict and a detailed analysis of the document images.
 
-This Quick Start guide will get you up and performing OCR scanning as quickly as possible. All steps described in this guide are required for the integration.
+## <a name="getting-started-with-the-blinkid-sdk"></a> Getting started with the BlinkID SDK
 
-This guide closely follows the BlinkID-Sample app in the Samples folder of this repository. We highly recommend you try to run the sample app. The sample app should compile and run on your device, and in the iOS Simulator.
+This Quick Start guide will get you up and performing document scanning as quickly as possible. All steps described in this guide are required for the integration.
 
-The source code of the sample app can be used as the reference during the integration.
+This guide closely follows the BlinkID app in the Samples folder of this repository. We highly recommend you try to run the sample app. The sample app should compile and run on your device.
 
-### 1. Initial integration steps
+The source code of the sample app can be used as a reference during the integration.
 
-#### Using CocoaPods
+### <a name="integration"></a> Integration
 
-- Download and install/update [Cocopods version 1.11.3](https://github.com/CocoaPods/CocoaPods/releases/tag/1.11.3) or newer
-- Since the libraries are stored on [Git Large File Storage](https://git-lfs.github.com), you need to install git-lfs by running these commands:
-```shell
-brew install git-lfs
-git lfs install
-```
+To integrate the BlinkID SDK into your iOS project, you'll need to:
 
-- **Be sure to restart your console after installing Git LFS**
-- **Note:** if you already did try adding SDK using cocoapods and it's not working, first install the git-lfs and then clear you cocoapods cache. This should be sufficient to force cocoapods to clone BlinkID SDK, if it still doesn't work, try deinitializing your pods and installing them again.
-- Project dependencies to be managed by CocoaPods are specified in a file called `Podfile`. Create this file in the same directory as your Xcode project (`.xcodeproj`) file.
+1. Obtain a valid license key from the [Microblink dashboard](https://developer.microblink.com)
+2. Add the SDK framework to your project
 
-- If you don't have podfile initialized run the following in your project directory.
-```
-pod init
-```
+#### Swift Package Manager
 
-- Copy and paste the following lines into the TextEdit window:
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
 
-```ruby
-platform :ios, '13.0'
-target 'Your-App-Name' do
-    pod 'PPBlinkID', '~> 6.13.0'
-end
-```
+Once you have your Swift package set up, adding BlinkID and BlinkIDUX as a dependency are as easy as adding it to the `dependencies` value of your `Package.swift` or the Package list in Xcode.
 
-- Install the dependencies in your project:
-
-```shell
-$ pod install
-```
-
-- From now on, be sure to always open the generated Xcode workspace (`.xcworkspace`) instead of the project file when building your project:
-
-```shell
-open <YourProjectName>.xcworkspace
-```
-
-
-
-#### Using Carthage
-
-BlinkID SDK is available via [Carthage](https://github.com/Carthage/Carthage). Please check out [Carthage documentation](https://github.com/Carthage/Carthage/blob/master/README.md) if you are new to Carthage.
-
-- Install Carthage. Check out [Installing Carthage guide](https://github.com/Carthage/Carthage#installing-carthage). Please make sure you have Carthage version >= 0.35.0 installed.
-- Create a Cartfile in the same directory where your .xcodeproj or .xcworkspace is.
-- Add BlinkID as a dependency to this Cartfile:
-
-```shell
-binary "https://github.com/BlinkID/blinkid-ios/blob/master/blinkid-ios.json"
-```
-- Run ```carthage update```.
-- If successful, a Cartfile.resolved file and a Carthage directory will appear in the same directory as your Xcode project.
-- Drag the binaries from ```Carthage/Build/<platform>``` into your application’s Xcode project.
-
-
-
-#### Using Swift Package Manager
-
-BlinkID SDK is available as [Swift Package](https://swift.org/package-manager/). Please check out [Swift Package Manager documentation](https://github.com/apple/swift-package-manager) if you are new to Swift Package Manager.
+##### **BlinkID**
 
 We provide a URL to the public package repository that you can add in Xcode:
 
 ```shell
-https://github.com/BlinkID/blinkid-ios
+https://github.com/BlinkID/blinkid-sp
 ```
 
-1. Select your project’s Package Dependencies tab:
-![Swift Package Project](https://user-images.githubusercontent.com/1635933/207304597-76c83b08-1e9e-4131-aecd-2c1b1e8204bb.png)
+##### **BlinkIDUX**
 
-2. Add the BlinkID Swift package repository URL:
-![Swift Package Repo](https://user-images.githubusercontent.com/1635933/207304992-118eb25f-c46e-453f-b6fb-112f77357d4e.png)
+```swift
+dependencies: [
+    .package(url: "https://github.com/BlinkID/blinkid-ios.git", .upToNextMajor(from: "7.0.0"))
+]
+```
 
-3. Choose Swift package version
+Normally you'll want to depend on the `BlinkIDUX` target:
 
-#### Manual integration
+```swift
+.product(name: "BlinkIDUX", package: "BlinkIDUX")
+```
 
--[Download](https://github.com/BlinkID/blinkid-ios/releases) latest release (Download .zip or .tar.gz file starting with BlinkID. DO NOT download Source Code as GitHub does not fully support Git LFS)
+> `BlinkIDUX` has a binary target dependency on `BlinkID`, so **use this package only if you are also using our UX.**
 
-OR
+You can see dependency in our `Package.swift`:
 
-Clone this git repository:
+```swift
+.binaryTarget(
+    name: "BlinkID",
+    path: "Frameworks/BlinkID.xcframework"
+)
+```
 
-- Since the libraries are stored on [Git Large File Storage](https://git-lfs.github.com), you need to install git-lfs by running these commands:
+#### <a name="manual-integration"></a> Manual integration
+
+If you prefer not to use Swift Package Manager, you can integrate BlinkID and BlinkIDUX into your project manually.
+
+##### **BlinkID**
+
+[Download](https://github.com/BlinkID/blinkid-ios/releases) latest release (Download `BlinkID.xcframework.zip` file or clone this repository).
+
+- Copy `BlinkID.xcframework` to your project folder.
+
+- In your Xcode project, open the Project navigator. Drag the `BlinkID.xcframework` file to your project, ideally in the Frameworks group.
+
+- Since `BlinkID.xcframework` is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
+
+##### **BlinkIDUX**
+
+- Open up Terminal, cd into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+
 ```shell
-brew install git-lfs
-git lfs install
+$ git init
 ```
 
-- **Be sure to restart your console after installing Git LFS**
-
-- To clone, run the following shell command:
+- Add BlinkIDUX as a git submodule by running the following command:
 
 ```shell
-git clone git@github.com:BlinkID/blinkid-ios.git
+$ git submodule add https://github.com/BlinkID/blinkid-ios.git
 ```
 
-- Copy BlinkID.xcframework to your project folder.
+To add a local Swift package as a dependency in Xcode:
+	1.	Go to your Xcode project.
+	2.	Select your project in the Project Navigator.
+	3.	Go to the Package Dependencies tab under your project settings.
+	4.	Click the ”+” button to add a new dependency.
+	5.	In the dialog that appears, select the “Add Local…” option at the bottom left.
+	6.	Navigate to the folder containing your local Swift package and select it.
 
-- In your Xcode project, open the Project navigator. Drag the BlinkID.xcframework file to your project, ideally in the Frameworks group, together with other frameworks you're using. When asked, choose "Create groups", instead of the "Create folder references" option.
+This will add the local Swift package as a dependency to your Xcode project.
 
-![Adding BlinkID.xcframework to your project](https://user-images.githubusercontent.com/1635933/207306198-2b4cbd1f-ead3-44d1-89a2-0a34ac659b17.png)
+> `BlinkIDUX` has a binary target dependency on `BlinkID`, so **use this package only if you are also using our UX.**
 
-- Since BlinkID.xcframework is a dynamic framework, you also need to add it to embedded binaries section in General settings of your target and choose option `Embed & Sign`.
+### <a name="initiating-the-blinkid-process"></a> Initiating the document scanning process
 
-![Adding BlinkID.xcframework to embedded binaries](https://user-images.githubusercontent.com/1635933/207307980-bbebe5a4-9ece-4ef6-a767-106468c47a84.png)
-
-- Include the additional frameworks and libraries into your project in the "Linked frameworks and libraries" section of your target settings.
-
-    - libc++.tbd
-    - libiconv.tbd
-    - libz.tbd
-
-![Adding Apple frameworks to your project](https://user-images.githubusercontent.com/1635933/207308158-d897a67c-40c1-43bb-928c-082fabb83e26.png)
-
-### 2. Referencing header file
-
-In files in which you want to use scanning functionality place import directive.
-
-Swift
+In files in which you want to use the functionality of the SDK place the import directive.
 
 ```swift
 import BlinkID
 ```
 
-Objective-C
-
-```objective-c
-#import <BlinkID/BlinkID.h>
-```
-
-### 3. Initiating the scanning process
-
-To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we're listing the initialization code as it looks in a touch handler method.
-
-Swift
+1. Initialize the SDK with your license key:
 
 ```swift
-class ViewController: UIViewController, MBBlinkIdOverlayViewControllerDelegate  {
+let settings = BlinkIDSdkSettings(
+    licenseKey: "your-license-key",
+    downloadResources: true
+)
 
-    var blinkIdMultiSideRecognizer : MBBlinkIdMultiSideRecognizer?
+let sdk = try await BlinkIDSdk.createBlinkIDSdk(withSettings: settings)
+```
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+2. Create a capture session:
 
-        MBMicroblinkSDK.shared().setLicenseResource("blinkid-license", withExtension: "key", inSubdirectory: "", for: Bundle.main, errorCallback: block)
-    }
+```swift
+let session = await sdk.createScanningSession()
+```
 
-    @IBAction func didTapScan(_ sender: AnyObject) {
+3. Process images and handle results:
 
-        /** Create BlinkID recognizer */
-        self.blinkIdMultiSideRecognizer = MBBlinkIdMultiSideRecognizer()
-
-        /** Create BlinkID settings */
-        let settings : MBBlinkIdOverlaySettings = MBBlinkIdOverlaySettings()
-
-        /** Crate recognizer collection */
-        let recognizerList = [self.blinkIdMultiSideRecognizer!]
-        let recognizerCollection : MBRecognizerCollection = MBRecognizerCollection(recognizers: recognizerList)
-
-        /** Create your overlay view controller */
-        let blinkIdOverlayViewController : MBBlinkIdOverlayViewController = MBBlinkIdOverlayViewController(settings: settings, recognizerCollection: recognizerCollection, delegate: self)
-
-        /** Create recognizer view controller with wanted overlay view controller */
-        let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
-
-        /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-        self.present(recognizerRunneViewController, animated: true, completion: nil)
+```swift
+let result = await session.process(inputImage: capturedImage)
+if result.processResult?.resultCompleteness.scanningStatus == .documentScanned {
+    let finalResult = await session.getResult()
+    Task { @ProcessingActor in
+        let sessionResult = BlinkIDSession.getResult()
     }
 }
 ```
 
-Objective-C
+### <a name="initiating-blinkid-ux"></a> Initiating BlinkID UX
 
-```objective-c
-@interface ViewController () <MBBlinkIdOverlayViewControllerDelegate>
+We provide the BlinkIDUX package, which encapsulates all the necessary logic for the document scanning process, streamlining integration into your app.
 
-@property (nonatomic, strong) MBBlinkIdMultiSideRecognizer *blinkIdMultiSideRecognizer;
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    [MBMicroblinkSDK.sharedInstance setLicenseResource:@"blinkid-license" withExtension:@"key" inSubdirectory:@"" for:Bundle.main errorCallback:block];
-}
-
-
-- (IBAction)didTapScan:(id)sender {
-
-    /** Create BlinkID recognizer */
-    self.blinkIdMultiSideRecognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
-
-     /** Create BlinkID settings */
-    MBBlinkIdOverlaySettings* settings = [[MBBlinkIdOverlaySettings alloc] init];
-
-    /** Create recognizer collection */
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:@[self.blinkIdMultiSideRecognizer]];
-
-    /** Create your overlay view controller */
-    MBBlinkIdOverlayViewController *blinkIdOverlayViewController = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection:recognizerCollection delegate:self];
-
-    /** Create recognizer view controller with wanted overlay view controller */
-    UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:blinkIdOverlayViewController];
-
-    /** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-    [self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-
-}
-
-@end
-```
-
-### 4. License key
-
-A valid license key is required to initialize scanning. You can request a **free trial license key**, after you register, at [Microblink Developer Hub](https://account.microblink.com/signin).
-
-You can include the license key in your app by passing a string or a file with license key.
-**Note** that you need to set the license key before intializing scanning. Ideally in `AppDelegate` or `viewDidLoad` before initializing any recognizers.
-
-#### License key as string
-You can pass the license key as a string, the following way:
-
-Swift
+In files in which you want to use the functionality of the SDK place the import directive.
 
 ```swift
-MBMicroblinkSDK.shared().setLicenseKey("LICENSE-KEY", errorCallback: block)
+import BlinkIDUX
 ```
 
-Objective-C
+1. Initialize the BlinkIDAnalyzer:
 
-```objective-c
-[[MBMicroblinkSDK sharedInstance] setLicenseKey:@"LICENSE-KEY" errorCallback:block];
-```
-
-#### License key as file
-Or you can include the license key, with the code below. Please make sure that the file that contains the license key is included in your project and is copied during **Copy Bundle Resources** build phase.
-
-Swift
+- Begin by creating an instance of the BlinkIDAnalyzer after initializing the capture session:
 
 ```swift
-MBMicroblinkSDK.shared().setLicenseResource("license-key-file", withExtension: "key", inSubdirectory: "directory-to-license-key", for: Bundle.main, errorCallback: block)
+let analyzer = await BlinkIDAnalyzer(
+    sdk: sdk,
+    eventStream: BlinkIDEventStream()
+)
 ```
 
-Objective-C
+2. Create a BlinkIDUXModel:
 
-```objective-c
-[[MBMicroblinkSDK sharedInstance] setLicenseResource:@"license-key-file" withExtension:@"key" inSubdirectory:@"" forBundle:[NSBundle mainBundle] errorCallback:block];
-```
-
-If the licence is invalid or expired then the methods above will throw an **exception**.
-
-### 5. Registering for scanning events
-
-In the previous step, you instantiated [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios//Classes/MBBlinkIdOverlayViewController.html) object with a delegate object. This object gets notified on certain events in scanning lifecycle. In this example we set it to `self`. The protocol which the delegate has to implement is [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios//Protocols/MBBlinkIdOverlayViewControllerDelegate.html) protocol. It is necessary to conform to that protocol. We will discuss more about protocols in [Advanced integration section](#advanced-integration). You can use the following default implementation of the protocol to get you started.
-
-Swift
+- Next, use the BlinkIDAnalyzer to initialize the BlinkIDUXModel:
 
 ```swift
-func blinkIdOverlayViewControllerDidFinishScanning(_ blinkIdOverlayViewController: MBBlinkIdOverlayViewController, state: MBRecognizerResultState) {
-
-    // this is done on background thread
-    // check for valid state
-    if state == .valid {
-
-        // first, pause scanning until we process all the results
-        blinkIdOverlayViewController.recognizerRunnerViewController?.pauseScanning()
-
-        DispatchQueue.main.async(execute: {() -> Void in
-            // All UI interaction needs to be done on main thread
-        })
-    }
-}
-
-func blinkIdOverlayViewControllerDidTapClose(_ blinkIdOverlayViewController: MBBlinkIdOverlayViewController) {
-    // Your action on cancel
-}
+let viewModel = BlinkIDUXModel(analyzer: analyzer)
 ```
 
-Objective-C
+3. Display the BlinkIDUXView in SwiftUI:
 
-```objective-c
-- (void)blinkIdOverlayViewControllerDidFinishScanning:(MBBlinkIdOverlayViewController *)blinkIdOverlayViewController state:(MBRecognizerResultState)state {
+- Add the BlinkIDUXView to your SwiftUI view hierarchy using the BlinkIDUXModel::
 
-    // this is done on background thread
-    // check for valid state
-    if (state == MBRecognizerResultStateValid) {
-
-        // first, pause scanning until we process all the results
-        [blinkIdOverlayViewController.recognizerRunnerViewController pauseScanning];
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // All UI interaction needs to be done on main thread
-        });
-    }
-}
-
-- (void)blinkIdOverlayViewControllerDidTapClose:(nonnull MBBlinkIdOverlayViewController *)blinkIdOverlayViewController {
-    // Your action on cancel
-}
-```
-
-# <a name="advanced-integration"></a> Advanced BlinkID integration instructions
-This section covers more advanced details of BlinkID integration.
-
-1. [First part](#ui-customizations) will cover the possible customizations when using UI provided by the SDK.
-2. [Second part](#using-document-overlay-viewcontroller) will describe how to embed [`MBRecognizerRunnerViewController's delegates`](http://blinkid.github.io/blinkid-ios/Protocols.html) into your `UIViewController` with the goal of creating a custom UI for scanning, while still using camera management capabilites of the SDK.
-3. [Third part](#direct-api-processing) will describe how to use the [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html) (Direct API) for recognition directly from `UIImage` without the need of camera or to recognize camera frames that are obtained by custom camera management.
-4. [Fourth part](#recognizer) will describe recognizer concept and available recognizers.
-
-
-## <a name="ui-customizations"></a> Built-in overlay view controllers and overlay subviews
-
-Within BlinkID SDK there are several built-in overlay view controllers and scanning subview overlays that you can use to perform scanning. 
-### <a name="using-blinkid-overlay-viewcontroller"></a> Using `MBBlinkIdOverlayViewController`
-
-[`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements new UI for scanning identity documents, which is optimally designed to be used with new [`MBBlinkIdSingleSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) and [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html). The new [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html) implements several new features:
-* clear indication for searching phase, when BlinkID is searching for an ID document
-* clear progress indication, when BlinkID is busy with OCR and data extraction
-* clear message when the document is not supported
-* visual indications when the user needs to place the document closer to the camera
-* when [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) is used, visual indication that the data from the front side of the document doesn't match the data on the back side of the document.
-
-The new UI allows the user to scan the document at an any angle, in any orientation. We recommend forcing landscape orientation if you scan barcodes on the back side, because in that orientation success rate will be higher.
-To force the UI in landscape mode, use the following instructions:
-
-Swift
 ```swift
-let settings = MBBlinkIdOverlaySettings()
-settings.autorotateOverlay = true
-settings.supportedOrientations = UIInterfaceOrientationMask.landscape
-```
-
-Objective-C
-```objective-c
-MBBlinkIdOverlaySettings *settings = [[MBBlinkIdOverlaySettings alloc] init];
-settings.autorotateOverlay = YES;
-settings.supportedOrientations = UIInterfaceOrientationMaskLandscape;
-```
-
-It has [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html) delegate which can be used out-of-the-box to perform scanning using the default UI. Here is an example how to use and initialize [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html):
-
-Swift
-```swift
-/** Create your overlay view controller */
-let blinkIdOverlayViewController : MBBlinkIdOverlayViewController = MBBlinkIdOverlayViewController(settings: blinkIdSettings, recognizerCollection: recognizerCollection, delegate: self)
-
-/** Create recognizer view controller with wanted overlay view controller */
-let recognizerRunneViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: blinkIdOverlayViewController)
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-self.present(recognizerRunneViewController, animated: true, completion: nil)
-```
-
-Objective-C
-```objective-c
-MBBlinkIdOverlayViewController *overlayVC = [[MBBlinkIdOverlayViewController alloc] initWithSettings:settings recognizerCollection: recognizerCollection delegate:self];
-UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:overlayVC];
-
-/** Present the recognizer runner view controller. You can use other presentation methods as well (instead of presentViewController) */
-[self presentViewController:recognizerRunnerViewController animated:YES completion:nil];
-```
-
-As you can see, when initializing [`MBBlinkIdOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdOverlayViewController.html), we are sending delegate property as `self`. To get results, we need to conform to [`MBBlinkIdOverlayViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBBlinkIdOverlayViewControllerDelegate.html) protocol.
-
-### Customizing the look
-
-The SDK comes with the ability to customize some aspects of the UI by using the UI theming. The screens can be customized to fit your app’s look and feel by defining themes in your application that override themes from the SDK. Each theme must extend the corresponding base theme from the SDK, as described in the following sections.
-
-#### BlinkID Overlay Theme
-
-![BlinkIDOverlayTheme](https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-overlay-theme-1.png)
-
-![BlinkIDOverlayThemeSuccess](https://raw.githubusercontent.com/wiki/blinkid/blinkid-ios/Images/blinkid-overlay-theme-2.png)
-
-To customize `MBBlinkIdOverlayViewController`, use `MBBlinkIdOverlayTheme` class to customize your look. You can customise elements labeled on the screenshot above by providing wanted properties to `MBBlinkIdOverlayTheme`:
-
-- **reticle**
-	- reticleErrorColor - change custom error UIColor
-
-- **instructions**
-	- instructionsFont - set custom UIFont
-	- instructionsTextColor - set custom UIColor
-	- instructionsCornerRadius - set custom corner radius
-
-- **flashlightWarning**
-	- flashlightWarningFont - set custom UIFont
-	- flashlightWarningBackgroundColor - set custom background UIColor
-	- flashlightWarningTextColor - set custom text UIColor
-	- flashlightWarningCornerRadius - set custom corner radius
-
-- **cardIcon**
-	- frontCardImage - change front card image on flip
-	- backCardImage - change back card image on flip
-
-- **successIcon**
-	- successScanningImage - change success scan image
-	- successFlashColor - change flash color on success scanning
-### <a name="using-custom-overlay-viewcontroller"></a> Custom overlay view controller
-
-Please check our Samples for custom implementation of overlay view controller.
-
-Overlay View Controller is an abstract class for all overlay views.
-
-It's responsibility is to provide meaningful and useful interface for the user to interact with.
-
-Typical actions which need to be allowed to the user are:
-
-- intuitive and meaniningful way to guide the user through scanning process. This is usually done by presenting a "viewfinder" in which the user need to place the scanned object
-- a way to cancel the scanning, typically with a "cancel" or "back" button
-- a way to power on and off the light (i.e. "torch") button
-
-BlinkID SDK always provides it's own default implementation of the Overlay View Controller for every specific use. Your implementation should closely mimic the default implementation as it's the result of thorough testing with end users. Also, it closely matches the underlying scanning technology.
-
-For example, the scanning technology usually gives results very fast after the user places the device's camera in the expected way above the scanned object. This means a progress bar for the scan is not particularly useful to the user. The majority of time the user spends on positioning the device's camera correctly. That's just an example which demonstrates careful decision making behind default camera overlay view.
-
-### 1. Subclassing
-
-To use your custom overlay with Microblink's camera view, you must first subclass [`MBCustomOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBCustomOverlayViewController.html) and implement the overlay behaviour conforming wanted protocols.
-
-### 2. Protocols
-
-There are seven [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html) protocols.
-
-Seven `RecognizerRunnerViewController` protocols are:
-- [`MBScanningRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerViewControllerDelegate.html)
-- [`MBDetectionRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDetectionRecognizerRunnerViewControllerDelegate.html)
-- [`MBOcrRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBOcrRecognizerRunnerViewControllerDelegate.html)
-- [`MBGlareRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBGlareRecognizerRunnerViewControllerDelegate.html)
-- [`MBFirstSideFinishedRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBFirstSideFinishedRecognizerRunnerViewControllerDelegate.html)
-- [`MBDebugRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDebugRecognizerRunnerViewControllerDelegate.html)
-- [`MBRecognizerRunnerViewControllerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewControllerDelegate.html)
-
-In `viewDidLoad`, other protocol conformation can be done and it's done on `recognizerRunnerViewController` property of [`MBOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBOverlayViewController.html), for example:
-
-Swift and Objective-C
-```swift
-self.scanningRecognizerRunnerViewControllerDelegate = self;
-```
-
-### 3. Initialization
-In [Quick Start](#quick-start) guide it is shown how to use a default overlay view controller. You can now swap default view controller with your implementation of `CustomOverlayViewController`
-
-Swift
-```swift
-let recognizerRunnerViewController : UIViewController = MBViewControllerFactory.recognizerRunnerViewController(withOverlayViewController: CustomOverlayViewController)
-```
-
-Objective-C
-```objective-c
-UIViewController<MBRecognizerRunnerViewController>* recognizerRunnerViewController = [MBViewControllerFactory recognizerRunnerViewControllerWithOverlayViewController:CustomOverlayViewController];
-```
-
-## <a name="direct-api-processing"></a> Direct processing API
-
-This guide will in short present you how to process UIImage objects with BlinkID SDK, without starting the camera video capture.
-
-With this feature you can solve various use cases like:
-	- recognizing text on images in Camera roll
-	- taking full resolution photo and sending it to processing
-	- scanning barcodes on images in e-mail etc.
-
-DirectAPI-sample demo app here will present UIImagePickerController for taking full resolution photos, and then process it with BlinkID SDK to get scanning results using Direct processing API.
-
-Direct processing API is handled with [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html). That is a class that handles processing of images. It also has protocols as [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html).
-Developer can choose which protocol to conform:
-
-- [`MBScanningRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html)
-- [`MBDetectionRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDetectionRecognizerRunnerDelegate.html)
-- [`MBDebugRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBDebugRecognizerRunnerDelegate.html)
-- [`MBOcrRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBOcrRecognizerRunnerDelegate.html)
-
-In example, we are conforming to [`MBScanningRecognizerRunnerDelegate`](http://blinkid.github.io/blinkid-ios/Protocols/MBScanningRecognizerRunnerDelegate.html) protocol.
-
-To initiate the scanning process, first decide where in your app you want to add scanning functionality. Usually, users of the scanning library have a button which, when tapped, starts the scanning process. Initialization code is then placed in touch handler for that button. Here we're listing the initialization code as it looks in a touch handler method.
-
-Swift
-```swift
-func setupRecognizerRunner() {
-    var recognizers = [MBRecognizer]()
-    recognizer = MBBlinkIdMultiSideRecognizer()
-    recognizers.append(recognizer!)
-    let recognizerCollection = MBRecognizerCollection(recognizers: recognizers)
-    recognizerRunner = MBRecognizerRunner(recognizerCollection: recognizerCollection)
-    recognizerRunner?.scanningRecognizerRunnerDelegate = self
-}
-
-func processImageRunner(_ originalImage: UIImage) {
-    var image: MBImage? = nil
-    if let anImage = originalImage {
-        image = MBImage(uiImage: anImage)
-    }
-    image?.cameraFrame = true
-    image?.orientation = MBProcessingOrientation.left
-    let _serialQueue = DispatchQueue(label: "com.microblink.DirectAPI-sample-swift")
-    _serialQueue.async(execute: {() -> Void in
-        self.recognizerRunner?.processImage(image!)
-    })
-}
-
-func recognizerRunner(_ recognizerRunner: MBRecognizerRunner, didFinishScanningWith state: MBRecognizerResultState) {
-    if blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid {
-        // Handle result
+struct ContentView: View {
+    var body: some View {
+        BlinkIDUXView(viewModel: viewModel)
     }
 }
 ```
 
-Objective-C
-```objective-c
-- (void)setupRecognizerRunner {
-    NSMutableArray<MBRecognizer *> *recognizers = [[NSMutableArray alloc] init];
+4. Access the Capture Result:
 
-    self.recognizer = [[MBBlinkIdMultiSideRecognizer alloc] init];
+- The BlinkIDUXModel exposes the scanning result through the result property, which is a @Published variable. You can observe it to handle the result of the document capture and verification process inside your ViewModel:
 
-    [recognizers addObject: self.recognizer];
+```swift
+viewModel.$result
+    .sink { [weak self] scanningResultState in
+        if let scanningResultState {
+                if let scanningResult = scanningResultState.scanningResult {
+                    // Handle the scanning result
+                    print("Scanning completed with result: \(scanningResult)")
+                }
+        }
+    }
+    .store(in: &cancellables)
+```
 
-    MBRecognizerCollection *recognizerCollection = [[MBRecognizerCollection alloc] initWithRecognizers:recognizers];
+- or you can also directly observe it within your SwiftUI views using SwiftUI’s @ObservedObject or @StateObject property wrappers. This allows you to automatically update your UI based on the capture result without manually handling Combine subscriptions.
 
-    self.recognizerRunner = [[MBRecognizerRunner alloc] initWithRecognizerCollection:recognizerCollection];
-    self.recognizerRunner.scanningRecognizerRunnerDelegate = self;
-}
+```swift
+struct ContentView: View {
+    @StateObject var viewModel: BlinkIDUXModel
 
-- (void)processImageRunner:(UIImage *)originalImage {
-    MBImage *image = [MBImage imageWithUIImage:originalImage];
-    image.cameraFrame = YES;
-    image.orientation = MBProcessingOrientationLeft;
-    dispatch_queue_t _serialQueue = dispatch_queue_create("com.microblink.DirectAPI-sample", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(_serialQueue, ^{
-        [self.recognizerRunner processImage:image];
-    });
-}
+    var body: some View {
+        VStack {
+            BlinkIDUXView(viewModel: viewModel)
 
-- (void)recognizerRunner:(nonnull MBRecognizerRunner *)recognizerRunner didFinishScanningWithState:(MBRecognizerResultState)state {
-    if (self.blinkInputRecognizer.result.resultState == MBRecognizerResultStateValid) {
-        // Handle result
+            if let result = viewModel.scanningResult {
+                Text("Scanning Result: \(result.scanningResult.description)")
+            } else {
+                Text("Awaiting scanning...")
+            }
+        }
     }
 }
 ```
 
-Now you've seen how to implement the Direct processing API.
+### <a name="blinkid"></a> Initiating BlinkID
 
-In essence, this API consists of two steps:
+BlinkID is a powerful document scanning solution designed to enhance the security and accuracy of document scanning processes.
 
-- Initialization of the scanner.
-- Call of `- (void)processImage:(MBImage *)image;` method for each UIImage or CMSampleBufferRef you have.
+## <a name="BlinkID-components"></a> BlinkID Components
+
+### BlinkIDSdk
+
+The `BlinkIDSdk` class serves as the main entry point for document scanning functionality. It manages SDK initialization, resource downloading, and session creation.
+
+```swift
+let settings = BlinkIDSdkSettings(
+    licenseKey: "your-license-key",
+    downloadResources: true
+)
+
+do {
+    let sdk = try await BlinkIDSdk.createBlinkIDSdk(withSettings: settings)
+    let session = await sdk.createScanningSession()
+    // Use the session for document scanning
+} catch {
+    // Handle initialization errors
+}
+```
+
+### BlinkIDSession
+
+`BlinkIDSession` is a Swift class that manages document scanning operations, providing a robust interface for capturing, processing, and validating documents through image analysis and scanning.
+
+The `BlinkIDSession` class serves as the primary controller for document scanning workflows, handling various aspects such as:
+- Image processing and analysis
+- Session lifecycle management
+- Result generation and processing
+
+#### Initialization
+
+```swift
+let sdk = try await BlinkIDSdk.createBlinkIDSdk(withSettings: settings)
+let BlinkIDSession = await sdk.createScanningSession()
+```
+
+Creates a new capture session with specified settings and resource path configurations.
+
+#### Key Features
+
+##### Cancel Processing
+
+```swift
+public func cancelActiveProcessing()
+```
+
+Immediately terminates any ongoing processing operations. This method can be called from any context and is useful for handling user cancellations or session aborts.
+
+##### Image Processing
+
+```swift
+@ProcessingActor
+public func process(inputImage: InputImage) -> FrameProcessResult
+```
+
+Processes an input image and provides detailed analysis results. This method:
+- Analyzes the provided image according to session settings
+- Returns a `FrameProcessResult` containing analysis results and completion status
+- Must be executed within the ProcessingActor context
+
+##### Result Retrieval
+
+```swift
+@ProcessingActor
+public func getResult() -> BlinkIDScanningResult
+```
+
+Retrieves the final results of the capture session, including:
+- All captured images
+- Session metadata
+- Must be called within the ProcessingActor context
+
+#### Usage Example
+
+```swift
+/// Processes a camera frame for document analysis.
+/// - Parameter image: The camera frame to analyze
+public func analyze(image: CameraFrame) async {
+    guard !paused else { return }
+    let inputImage = InputImage(cameraFrame: image)
+    
+    let result = await BlinkIDSession.process(inputImage: inputImage)
+
+    if result.processResult?.resultCompleteness.scanningStatus == .documentScanned {
+        guard !scanningDone else { return }
+        scanningDone = true
+        Task { @ProcessingActor in
+            let sessionResult = BlinkIDSession.getResult()
+            // Finish scanning
+        }
+    }
+}
+```
+
+Please refer to our `BlinkIDAnalyzer` in the BlinkIDUX module for implementation details and guidance on its usage.
+
+#### Integration Considerations
+
+1. Actor Isolation: Many methods must be called within the `ProcessingActor` context to ensure thread safety
+2. Session Management: Each session maintains its own unique identifier and state
+3. Resource Management: Proper initialization with valid resource paths is crucial for operation
+4. Cancellation Support: Operations can be cancelled at any time using `cancelActiveProcessing()`
+
+The class implements the `Sendable` protocol and uses actor isolation (`@ProcessingActor`) to ensure thread-safe operations in concurrent environments.
+
+- Ensure proper error handling for processing operations
+- Consider implementing timeout mechanisms for long-running operations
+- Maintain proper lifecycle management of the session
+- Handle results appropriately according to your application's needs
+
+### ProcessResult
+
+`ProcessResult` is a Swift structure that encapsulates the complete results of a document scanning process, combining frame analysis with completion status information.
+
+- Document detection status
+- Completion status
+
+#### Key Features
+
+##### InputImageAnalysisResult
+
+Contains detailed analysis results for a single frame in the verification process.
+
+##### DetectionStatus
+
+An enumeration representing the status of document detection during scanning.
+
+- `failed`: Document recognition failed
+- `success`: Document recognition completed successfully
+- `cameraTooFar`: Document has been detected but the camera is too far from the document
+- `cameraTooClose`: Document has been detected but the camera is too close to the document
+- `cameraAngleTooSteep`: Document has been detected but the camera’s angle is too steep
+- `documentTooCloseToCameraEdge`: Document has been detected but the document is too close to the camera edge
+- `documentPartiallyVisible`: Only part of the document is visible
+
+##### ScanningStatus
+
+An enumeration that defines the possible statuses that can occur during the scanning operation, specifically for managing the progress of scanning sides and the entire document.
+
+- `scanningSideInProgress`: Document recognition failed
+- `scanningBarcodeInProgress`: Document recognition completed successfully
+- `sideScanned`: Document has been detected but the camera is too far from the document
+- `documentScanned`: Document has been detected but the camera is too close to the document
+- `cancelled`: Document has been detected but the camera’s angle is too steep
+
+##### ResultCompleteness
+
+A structure tracking the progress of different verification phases.
+
+- `scanningStatus`: `ScanningStatus` - Indicates the status of the scanning process
+- `vizExtracted`: `Bool` - Indicates if the VIZ fields have been extracted
+- `mrzExtracted`: `Bool` - Indicates if the MRZ fields have been extracted
+- `barcodeExtracted`: `Bool` - Indicates if the barcode fields have been extracted
+- `documentImageExtracted`: `Bool` - Indicates if the document image has been extracted
+- `faceImageExtracted`: `Bool` - Indicates if the face image has been extracted
+- `signatureImageExtracted`: `Bool` - Indicates if the signature image has been extracted
+
+##### Point
+
+Represents a 2D point in the coordinate system.
+
+- `x`: `Int32` - X-coordinate
+- `y`: `Int32` - Y-coordinate
+
+##### Quadrilateral
+
+Represents a four-sided polygon defined by its corner points.
+
+- `upperLeft`: `Point`
+- `upperRight`: `Point`
+- `lowerRight`: `Point`
+- `lowerLeft`: `Point`
+
+#### DocumentLocation
+
+Combines physical position and orientation information of a detected document.
+
+- `location`: `Quadrilateral` - Boundary coordinates of the detected document
+- `orientation`: `CardOrientation` - Orientation of the detected document
+
+#### Usage Example
+
+```swift
+if result.processResult?.resultCompleteness.scanningStatus == .documentScanned {
+    guard !scanningDone else { return }
+    scanningDone = true
+    Task { @ProcessingActor in
+        let sessionResult = session.getResult()
+        // Finish scanning
+    }
+}
+```
+
+#### Integration Considerations
+
+1. Error Handling
+   - Monitor `documentDetectionStatus` for potential capture issues
+   - Check `processingStatus` for overall processing success
+
+2. Quality Control
+   - Use `blur` and `glare` detection to ensure optimal image quality
+
+3. Progress Tracking
+   - Use `ResultCompleteness` to track verification progress
+   - Monitor `scanningStatus` for overall process state
+   - Handle partial completions appropriately
+
+All types conform to the `Sendable` protocol, ensuring thread-safe operations in concurrent environments.
+
+##### Best practices
+
+1. Always check `resultCompleteness.scanningStatus == .documentScanned` before concluding the scanning process
+2. Implement proper error handling for all possible `DetectionStatus` cases
+4. Monitor quality indicators (blur, glare, moire) for optimal capture conditions
+5. Implement appropriate user feedback based on `processingStatus` and `documentDetectionStatus`
+
+### InputImage
+
+`InputImage` is a Swift class that wraps either a UIImage or camera frame for processing in the document scanning system.
+
+#### Initialization
+
+```swift
+// Create from UIImage
+public init(uiImage: UIImage, regionOfInterest: RegionOfInterest = RegionOfInterest())
+
+// Create from camera frame
+public init(cameraFrame: CameraFrame)
+```
+
+#### Key Features
+
+##### RegionOfInterest
+
+A structure that defines the area of interest within an image for processing.
+
+- `x`: `Float` - X-coordinate (normalized between 0 and 1)
+- `y`: `Float` - Y-coordinate (normalized between 0 and 1)
+- `width`: `Float` - Width (normalized between 0 and 1)
+- `height`: `Float` - Height (normalized between 0 and 1)
+
+##### CameraFrameVideoOrientation
+
+An enumeration representing the device orientation during frame capture.
+
+- `portrait`: Device in normal upright position
+- `portraitUpsideDown`: Device held upside down
+- `landscapeRight`: Device rotated 90 degrees clockwise
+- `landscapeLeft`: Device rotated 90 degrees counterclockwise
+
+##### CameraFrame
+
+A structure representing a complete camera frame with its metadata.
+
+- `buffer`: `MBSampleBufferWrapper` - Raw camera buffer containing image data
+- `roi`: `RegionOfInterest` - Region of interest within the frame
+- `orientation`: `CameraFrameVideoOrientation` - Camera orientation
+- `width`: `Int` - Frame width in pixels (computed property)
+- `height`: `Int` - Frame height in pixels (computed property)
+
+```swift
+public init(
+    buffer: MBSampleBufferWrapper, 
+    roi: RegionOfInterest = RegionOfInterest(), 
+    orientation: CameraFrameVideoOrientation = .portrait
+)
+```
+
+```swift
+func processCameraOutput(_ sampleBuffer: CMSampleBuffer) {
+    let frame = CameraFrame(
+        buffer: MBSampleBufferWrapper(buffer: sampleBuffer),
+        roi: RegionOfInterest(x: 0, y: 0, width: 1.0, height: 1.0),
+        orientation: .portrait
+    )
+
+    let inputImage = InputImage(cameraFrame: frame)
+}
+```
+
+#### Usage Example
+
+```swift
+// Creating from UIImage
+let inputImage1 = InputImage(
+    uiImage: documentImage,
+    regionOfInterest: RegionOfInterest(x: 0, y: 0, width: 1.0, height: 1.0)
+)
+
+// Creating from camera frame
+let inputImage2 = InputImage(cameraFrame: cameraFrame)
+```
+
+#### Integration Considerations
+
+1. Image Source Handling
+   - Choose appropriate initialization method based on image source (UIImage or camera frame)
+   - Consider memory management implications when working with camera frames
+   - Handle orientation conversions properly
+
+2. Region of Interest
+   - Use normalized coordinates (0-1) for region of interest
+   - Validate region boundaries to prevent out-of-bounds issues
+   - Consider UI implications when setting custom regions
+
+3. Performance Optimization
+   - Minimize frame buffer copies
+   - Consider frame rate and processing overhead
+   - Handle memory efficiently when processing multiple frames
+
+- `InputImage` and related types conform to the `Sendable` protocol
+- `CameraFrame` is marked as `@unchecked Sendable` due to buffer handling
+- Care should be taken when sharing frames across threads
+
+###### Best Practices
+
+1. Memory Management
+   - Release camera frames promptly after processing
+   - Avoid unnecessary copies of large image buffers
+   - Use appropriate autorelease pool when processing multiple frames
+
+2. Error Handling
+   - Check frame dimensions before processing
+   - Handle invalid region of interest parameters
+   - Validate image orientation data
+
+3. Performance
+   - Process frames in appropriate queue/thread
+   - Consider frame rate requirements
+   - Optimize region of interest for specific use cases
+
+### <a name="resource-management"></a> Resource Management
+
+The SDK supports both downloaded and bundled resources:
+
+- Automatic resource downloading and caching
+- Bundle-based resource loading
+- Resource validation and verification
+
+#### Downloading models
+
+The SDK supports downloading machine learning models from our CDN. Models are automatically retrieved from https://models.cdn.microblink.com/resources when enabled.
+
+To enable model downloads, set the downloadResources property to true in your `BlinkIDSdkSettings`:
+
+```swift
+let settings = BlinkIDSdkSettings(
+    licenseKey: yourLicenseKey,
+    downloadResources: true  // Enable model downloads
+)
+```
+
+By default, downloaded models are stored in the `MLModels` folder. You can specify a custom storage location using the `resourceLocalFolder` property in the settings.
+
+Model downloads occur during SDK initialization in the `createBlinkIDSdk` method:
+
+```swift
+do {
+    let instance = try await BlinkIDSdk.createBlinkIDSdk(withSettings: settings)
+} catch let error as ResourceDownloaderError {
+    // Handle specific download errors
+    if case .noInternetConnection = error {
+        // Handle no internet connection
+    }
+    // Handle other download errors as needed
+}
+```
+
+The operation may throw a `ResourceDownloaderError` with the following possible cases:
+
+| Error Case | Description |
+|------------|-------------|
+| `invalidURL(String)` | The provided URL for model download is invalid |
+| `downloadFailed(Int)` | Download failed with specific HTTP status code |
+| `fileNotFound(URL)` | Resource file not found at specified location |
+| `hashMismatch(String)` | File hash verification failed |
+| `fileAccessError(Error)` | Error accessing file system |
+| `cacheDirNotFound` | Cache directory not found |
+| `fileCreationError(Error)` | Error creating file |
+| `noInternetConnection` | No internet connection available |
+| `invalidResponse` | Invalid or unexpected server response |
+| `resourceUnavailable` | Requested resource is not available |
+
+The SDK provides built-in components for handling network connectivity states.
+`NetworkMonitor` is ready-to-use network connectivity monitor that uses `NWPathMonitor`:
+
+```swift
+@MainActor
+public class NetworkMonitor: ObservableObject {
+    @Published public var isConnected = true
+    public var isOffline: Bool { !isConnected }
+    
+    public init() {
+        setupMonitor()
+    }
+}
+```
+
+`NoInternetView` is a pre-built SwiftUI view for handling offline states:
+
+```swift
+public struct NoInternetView: View {
+    public init(retryAction: @escaping () -> Void)
+}
+```
+
+#### Bundling models
+
+To use bundled models with our SDK, ensure the required model files are included in your app package and set the `downloadResources` property of `BlinkIDSdkSettings` to `false`. Specify the location of the bundled models using the `bundleURL` property of `BlinkIDSdkSettings`. If you are using the main bundle, you can retrieve its URL as follows:
+
+```swift
+let bundle = Bundle.main.bundleURL
+```
+
+## <a name="BlinkID-ux-components"></a> BlinkID UX Components
+
+The BlinkIDUX package is source-available, allowing you to customize and adapt its functionality to suit the specific needs of your project. This flexibility ensures that you can tailor the user experience and scanning workflow to align with your app’s design and requirements.
+
+In the next section, we will explain the main components of the BlinkIDUX package and how they work together to simplify document scanning integration.
+
+### BlinkIDAnalyzer
+
+The BlinkIDAnalyzer component provides a robust set of features to streamline and enhance the document scanning process. It includes real-time camera frame analysis for immediate feedback during scanning and asynchronous event streaming to ensure smooth, non-blocking operations. The component supports pause and resume functionality, allowing users to temporarily halt the process and continue seamlessly. With session result handling, developers can easily access and process the final scanning outcomes. Additionally, it offers cancellation support, enabling users to terminate the scanning process at any time. Designed with comprehensive UI event feedback, it delivers clear and actionable guidance to users throughout the scanning workflow.
+
+#### Key Features
+
+##### DocumentSide
+
+An enumeration that represents different sides of a document during the scanning process:
+
+```swift
+public enum DocumentSide: Sendable {
+    case front    // Front side of the document
+    case back     // Back side of the document
+    case barcode  // Barcode region of the document
+}
+```
+
+##### BlinkIDEventStream
+
+An actor that manages the stream of UI events during the document scanning process:
+
+```swift
+public actor BlinkIDEventStream: EventStream {
+    public func send(_ events: [UIEvent])
+    public var stream: AsyncStream<[UIEvent]>
+}
+```
+
+##### BlinkIDAnalyzer
+
+The main analyzer component that processes camera frames and manages the document scanning workflow:
+
+```swift
+public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
+    public init(
+        sdk: BlinkIDSdk,
+        blinkIDSessionSettings: BlinkIDSessionSettings = BlinkIDSessionSettings(inputImageSource: .video),
+        eventStream: BlinkIDEventStream
+    )
+}
+```
+
+#### Usage Example
+
+##### Initialization
+
+```swift
+// Create an event stream
+let eventStream = BlinkIDEventStream()
+
+// Initialize the analyzer
+let analyzer = await BlinkIDAnalyzer(
+    sdk: blinkIDVerifySdk,
+    blinkIDSessionSettings: BlinkIDSessionSettings(inputImageSource: .video),
+    eventStream: eventStream
+)
+```
+
+##### Processing Frames
+
+```swift
+// Analyze a camera frame
+for await frame in await camera.sampleBuffer {
+    await analyzer.analyze(image: CameraFrame(buffer: MBSampleBufferWrapper(cmSampleBuffer: frame.buffer), roi: roi, orientation: camera.orientation.toCameraFrameVideoOrientation()))
+}
+```
+
+##### Event Handling
+
+The component provides real-time feedback through an event stream. Events can be observed to update the UI or trigger specific actions based on the scanning progress.
+
+```swift
+eventHandlingTask = Task {
+    for await events in await analyzer.events.stream {
+        if events.contains(.requestDocumentSide(side: .back)) {
+            firstSideScanned()
+        } else if events.contains(.requestDocumentSide(side: .barcode)) {
+            self.setReticleState(.barcode, force: true)
+        } else if events.contains(.wrongSide) {
+            self.setReticleState(.error("Flip the document"))
+        } else if events.contains(.tooClose) {
+            self.setReticleState(.error("Move farther"))
+        } else if events.contains(.tooFar) {
+            self.setReticleState(.error("Move closer"))
+        } else if events.contains(.tooCloseToEdge) {
+            self.setReticleState(.error("Move the document from the edge"))
+        } else if events.contains(.tilt) {
+            self.setReticleState(.error("Keep document parallel with the phone"))
+        } else if events.contains(.blur) {
+            self.setReticleState(.error("Keep document and phone still"))
+        } else if events.contains(.glare) {
+            self.setReticleState(.error("Tilt or move document to remove reflection"))
+        } else if events.contains(.notFullyVisible) {
+            self.setReticleState(.error("Keep document fully visible"))
+        } else if events.contains(.occlusion) {
+            self.setReticleState(.error("Keep document fully visible"))
+        }
+    }
+}
+```
+
+##### Best Practices
+
+When integrating the BlinkIDAnalyzer component, it is essential to follow best practices to ensure a seamless and efficient document scanning experience. By adhering to these guidelines, you can enhance user satisfaction and maintain robust application performance:
+
+- Always handle the event stream to provide real-time user feedback during the scanning process.
+- Implement proper error handling to manage scan failures gracefully and guide users effectively.
+- Consider implementing timeout handling for production environments to prevent indefinite scanning sessions. Check out our implementation for more details.
+- Manage memory efficiently by calling cancel() when the scanner is no longer needed, freeing up resources.
+- Handle the pause/resume cycle appropriately to align with app lifecycle events, ensuring a consistent user experience.
+
+### BlinkIDUXModel
+
+The BlinkIDUXModel is a comprehensive view model that manages the document scanning user experience in iOS applications. This component handles camera preview, document detection, user guidance, and scanning state transitions.
+
+BlinkIDUXModel serves as the business logic layer for the document scanning interface. It is designed as a MainActor to ensure thread-safe UI updates and implements the ObservableObject protocol for SwiftUI integration. The model manages the entire scanning workflow, from camera initialization to document capture and verification.
+
+#### Key Features
+
+##### Camera Management
+
+The model offers comprehensive camera control functionality through seamless integration with AVFoundation. It includes a fully implemented camera session, ensuring thread-safe access and synchronization with the BlinkIDAnalyzer for reliable and efficient performance.
+
+The camera system is designed to provide robust and user-friendly functionality, including:
+
+- Automatic session management for effortless setup and teardown.
+- Torch/flashlight control to adapt to various lighting conditions.
+- Frame capture and analysis synchronization for real-time document processing.
+- Orientation handling to ensure correct alignment regardless of device orientation.
+
+```swift
+public class ScanningViewModel<T>: ObservableObject, ScanningViewModelProtocol {
+    let camera: Camera = Camera()
+}
+```
+
+##### User Feedback
+
+The model provides comprehensive user feedback mechanisms. The feedback features are designed to enhance user experience and guide users effectively throughout the document scanning process. These include:
+
+- Visual guidance through reticle state management, helping users align documents accurately.
+- Error messaging and recovery suggestions, providing clear instructions to resolve issues.
+- Success animations and transitions, offering a smooth and engaging user experience upon successful scans.
+- Accessibility announcements, ensuring inclusivity by providing auditory feedback for users with disabilities.
+- Progress indicators, keeping users informed about the scanning status in real time.
+
+```swift
+@Published var reticleState: ReticleState = .front
+```
+
+The model features a sophisticated animation system designed to provide dynamic and engaging user feedback during the document scanning process. Key animations include:
+
+- Document flip animations, guiding users to scan both sides of a document when required.
+- Success indicators, visually confirming successful scans.
+- Ripple effects, drawing attention to areas of interest during the scanning process.
+- State transitions, ensuring smooth and intuitive changes between different scanning states.
+
+#### Best Practices
+
+When implementing the BlinkIDUXModel, it’s crucial to follow best practices to ensure smooth and efficient operation. Key considerations include:
+
+- Implement proper error handling to manage all scanning states gracefully and provide a robust user experience.
+- Monitor memory usage during extended scanning sessions to avoid potential performance bottlenecks or crashes.
+- Clean up resources promptly when the scanning process is complete to maintain optimal app performance.
+- Handle orientation changes appropriately to ensure consistent user experience across different device orientations.
+
+### BlinkIDUXView
+
+BlinkIDUXView is the main scanning interface component that combines camera functionality with user interaction elements. The view is designed to provide real-time feedback during the document scanning process while maintaining a clean and intuitive user interface.
+
+The view is built using SwiftUI and follows the MVVM (Model-View-ViewModel) pattern, where:
+
+- The view (BlinkIDUXView) handles the UI layout and user interactions
+- The view model (BlinkIDUXModel) manages the business logic and state
+- The camera integration handles the document capture pipeline
+
+#### Key Features
+
+##### Camera Integration
+
+The view incorporates a camera feed through the CameraView component and manages the entire capture pipeline, including:
+
+- Automatic camera session management
+- Support for torch/flashlight functionality
+- Real-time frame processing
+- Orientation handling
+
+#### User Interface Elements
+
+The interface consists of several key components:
+
+1. Camera Feed
+
+    - Full-screen camera preview
+    - Real-time document boundary detection
+    - Automatic orientation adjustment
 
 
-### <a name="direct-api-string-processing"></a> Using Direct API for `NSString` recognition (parsing)
+2. Reticle
 
-Some recognizers support recognition from `NSString`. They can be used through Direct API to parse given `NSString` and return data just like when they are used on an input image. When recognition is performed on `NSString`, there is no need for the OCR. Input `NSString` is used in the same way as the OCR output is used when image is being recognized.
-Recognition from `String` can be performed in the same way as recognition from image.
-The only difference is that user should call `- (void)processString:(NSString *)string;` on [`MBRecognizerRunner`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html).
-
-
-### <a name="understanding-direct-api-state-machine"></a> Understanding DirectAPI's state machine
-
-DirectAPI's `RecognizerRunner` singleton is a state machine that can be in one of 3 states: `OFFLINE`, `READY` and `WORKING`.
-
-- When you obtain the reference to `RecognizerRunner` singleton, it will be in `OFFLINE` state.
-- You can initialize `RecognizerRunner` by calling [`init`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerRunner.html#/c:objc(cs)MBRecognizerRunner(im)initWithRecognizerCollection:) method. If you call `initialize` method while `RecognizerRunner` is not in `OFFLINE` state, you will get `IllegalStateException`.
-- After successful initialization, `RecognizerRunner` will move to `READY` state. Now you can call any of the `recognize*` methods.
-- When starting recognition with any of the `recognize*` methods, `RecognizerRunner` will move to `WORKING` state. If you attempt to call these methods while `RecognizerRunner` is not in `READY` state, you will get `IllegalStateException`
-- Recognition is performed on background thread so it is safe to call all `RecognizerRunner's` methods from UI thread
-- When recognition is finished, `RecognizerRunner` first moves back to `READY` state and then calls the `recognizerRunner(_ :, didFinishScanningWith:)` method of the provided `MBScanningRecognizerRunnerDelegate`.
-- Please note that `MBScanningRecognizerRunnerDelegate's` `recognizerRunner(_ :, didFinishScanningWith:)` method will be called on background processing thread, so make sure you do not perform UI operations in this callback. Also note that until the `recognizerRunner(_ :, didFinishScanningWith:)` method completes, `RecognizerRunner` will not perform recognition of another image or string, even if any of the `recognize*` methods have been called just after transitioning to `READY` state. This is to ensure that results of the recognizers associated with `RecognizerRunner` are not modified while possibly being used within `recognizerRunner(_ :, didFinishScanningWith:)` method.
-- By calling `resetState` method, `RecognizerRunner` singleton will release all its internal resources. Note that even after calling `resetState` you might receive `recognizerRunner(_ :, didFinishScanningWith:)` event if there was work in progress when `resetState` was called.
-- `resetState` method can be called from any `RecognizerRunner` singleton's state
+    - Visual guidance for document positioning
+    - Dynamic state feedback
+    - Accessibility support
+    - Animation capabilities
 
 
-### <a name="using-direct-api-while-recognizerrunnerview-active"></a> Using DirectAPI while `RecognizerRunnerView` is active
-Both `RecognizerRunnerView` and `RecognizerRunner` use the same internal singleton that manages native code. This singleton handles initialization and termination of native library and propagating recognizers to native library. It is possible to use `RecognizerRunnerView` and `RecognizerRunner` together, as internal singleton will make sure correct synchronization and correct recognition settings are used. If you run into problems while using `RecognizerRunner` in combination with `RecognizerRunnerView`, let us know!
+3. Control Buttons
 
-### <a name="using-direct-api-with-combined-recognizers"></a> Using Direct API with combined recognizers
-When you are using combined recognizer and images of both document sides are required, you need to call `RecognizerRunner.recognize*` multiple times. Call it first with the images of the first side of the document, until it is read, and then with the images of the second side. The combined recognizer automatically switches to second side scanning, after it has successfully read the first side. To be notified when the first side scanning is completed, you have to set the `MBFirstSideFinishedRecognizerRunnerDelegate` through `MBRecognizerRunnerMetadataDelegates`. If you don't need that information, e.g. when you have only one image for each document side, don't set the `MBFirstSideFinishedRecognizerRunnerDelegate` and check the RecognitionSuccessType in `MBScanningRecognizerRunnerDelegate.recognizerRunner(_ :, didFinishScanningWith:)`, after the second side image has been processed.
-# <a name="recognizer"></a> `MBRecognizer` and available recognizers
+    - Cancel button for session termination
+    - Torch button for lighting control
+    - Help button for user guidance
 
-## The `MBRecognizer` concept
 
-The [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) is the basic unit of processing within the SDK. Its main purpose is to process the image and extract meaningful information from it. As you will see [later](#available-recognizers), the SDK has lots of different [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that have various purposes.
+4. Feedback Elements
 
-Each [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) has a [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) object, which contains the data that was extracted from the image. The [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) object is a member of corresponding [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object its lifetime is bound to the lifetime of its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object. If you need your `MBRecognizerResult` object to outlive its parent [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object, you must make a copy of it by calling its method `copy`.
+    - Success indicators
+    - Visual animations
+    - Accessibility announcements
 
-While [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object works, it changes its internal state and its result. The [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) always starts in `Empty` state. When corresponding [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object performs the recognition of given image, its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) can either stay in `Empty` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html)failed to perform recognition), move to `Uncertain` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) performed the recognition, but not all mandatory information was extracted) or move to `Valid` state (in case [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) performed recognition and all mandatory information was successfully extracted from the image).
+#### Accessibility
 
-As soon as one [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) within [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) given to `MBRecognizerRunner` or `MBRecognizerRunnerViewController` changes to `Valid` state, the `onScanningFinished` callback will be invoked on same thread that performs the background processing and you will have the opportunity to inspect each of your [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects' [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) to see which one has moved to `Valid` state.
+The component provides comprehensive accessibility support:
 
-As soon as `onScanningFinished` method ends, the `MBRecognizerRunnerViewController` will continue processing new camera frames with same [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects, unless `paused`. Continuation of processing or `reset` recognition will modify or reset all [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerResult). When using built-in activities, as soon as `onScanningFinished` is invoked, built-in activity pauses the `MBRecognizerRunnerViewController` and starts finishing the activity, while saving the [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) with active [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html).
+- VoiceOver compatibility
+- Dynamic text scaling
+- Accessibility labels and hints
+- Automatic announcements for state changes
 
-## `MBRecognizerCollection` concept
+### Best Practices
 
-The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) is is wrapper around [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that has array of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that can be used to give [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects to `MBRecognizerRunner` or `MBRecognizerRunnerViewController` for processing.
+1. Always initialize the view with a properly configured view model
+2. Implement proper error handling and user feedback
+3. Monitor memory usage during extended scanning sessions
+4. Handle orientation changes appropriately
+5. Implement proper cleanup on view dismissal
 
-The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) is always constructed with array `[[MBRecognizerCollection alloc] initWithRecognizers:recognizers]` of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that need to be prepared for recognition (i.e. their properties must be tweaked already).
+## <a name="creating-custom-ux-component"></a> Creating custom UX component
 
-The [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) manages a chain of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects within the recognition process. When a new image arrives, it is processed by the first [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) in chain, then by the second and so on, iterating until a [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object's [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) changes its state to `Valid` or all of the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects in chain were invoked (none getting a `Valid` result state).
+You have the flexibility to create your own custom UX if needed. However, we strongly recommend following the implementations provided in this package as a foundation. Since the package is source-available, you can modify or extend the code directly within your project to tailor it to your specific requirements.
 
-You cannot change the order of the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects within the chain - no matter the order in which you give [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects to [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html), they are internally ordered in a way that provides best possible performance and accuracy. Also, in order for SDK to be able to order [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects in recognition chain in a best way possible, it is not allowed to have multiple instances of [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects of the same type within the chain. Attempting to do so will crash your application.
+We also highly recommend using our built-in Camera and CameraView components, as they are fully optimized for performance and seamlessly integrated with the BlinkIDAnalyzer. However, if necessary, you can implement and use your own camera solution. 
 
-# <a name="available-recognizers"></a> List of available recognizers
+> If implementing your own Camera component, be sure to wrap your CMSampleBufferRef to our own `MBSampleBufferWrapper`. `MBSampleBufferWrapper` safely encapsulates a Core Media sample buffer, ensuring proper reference counting and memory management while maintaining binary compatibility across different Swift versions.
 
-This section will give a list of all [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) objects that are available within BlinkID SDK, their purpose and recommendations how they should be used to get best performance and user experience.
+### ViewModel Creation
 
-## <a name="frame-grabber-recognizer"></a> Frame Grabber Recognizer
+To integrate the document scanning workflow effectively, you will start by creating a ViewModel to manage the scanning logic and interface with the underlying components. The ViewModel acts as the bridge between the CameraFrameAnalyzer and your UI, handling data flow, state management, and event processing.
 
-The [`MBFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBFrameGrabberRecognizer.html) is the simplest recognizer in SDK, as it does not perform any processing on the given image, instead it just returns that image back to its `onFrameAvailable`. Its result never changes state from empty.
+In this section, we will guide you through the process of setting up and configuring the ViewModel, integrating it with the camera and analyzer components, and linking it to your SwiftUI view. This approach ensures a modular and maintainable architecture while leveraging the optimized components provided by the SDK.
 
-This recognizer is best for easy capturing of camera frames with `MBRecognizerRunnerViewController`. Note that [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) sent to `onFrameAvailable` are temporary and their internal buffers all valid only until the `onFrameAvailable` method is executing - as soon as method ends, all internal buffers of [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object are disposed. If you need to store [`MBImage`](http://blinkid.github.io/blinkid-ios/Classes/MBImage.html) object for later use, you must create a copy of it by calling `copy`.
+```swift
+@MainActor
+public final class ViewModel: ObservableObject {
+    // Use our Camera controller
+    let camera: Camera = Camera()
+    let analyzer: CameraFrameAnalyzer
+    // Instructions text for the View
+    @Published var instructionText: String = "Scan the front side"
+    // Published BlinkIDCaptureResult, use it in your ViewModel, or directly in your SwiftUI View
+    @Published public var captureResult: BlinkIDCaptureResult?
 
-## <a name="success-frame-grabber-recognizer"></a> Success Frame Grabber Recognizer
+    private var eventHandlingTask: Task<Void, Never>?
 
-The [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) is a special `MBecognizer` that wraps some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) and impersonates it while processing the image. However, when the [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) being impersonated changes its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) into `Valid` state, the [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html) captures the image and saves it into its own [`MBSuccessFrameGrabberRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizerResult.html) object.
+    public init(analyzer: CameraFrameAnalyzer) {
+        self.analyzer = analyzer
+        startEventHandling()
+    }
+```
 
-Since [`MBSuccessFrameGrabberRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBSuccessFrameGrabberRecognizer.html)  impersonates its slave [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object, it is not possible to give both concrete [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object and `MBSuccessFrameGrabberRecognizer` that wraps it to same `MBRecognizerCollection` - doing so will have the same result as if you have given two instances of same [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) type to the [`MBRecognizerCollection`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizerCollection.html) - it will crash your application.
+The `startEventHandling` method initializes an event task, allowing you to receive and process UIEvents from the CameraFrameAnalyzer’s event stream. 
 
-This recognizer is best for use cases when you need to capture the exact image that was being processed by some other [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object at the time its [`MBRecognizerResult`](http://blinkid.github.io/blinkid-ios/Classes.html#/c:objc(cs)MBRecognizerResult) became `Valid`. When that happens, `MBSuccessFrameGrabberRecognizer's` `MBSuccessFrameGrabberRecognizerResult` will also become `Valid` and will contain described image.
+```swift
+private func startEventHandling() {
+    eventHandlingTask = Task {
+        for await events in await analyzer.events.stream {
+            if events.contains(.requestDocumentSide(side: .back)) {
+            } else if events.contains(.requestDocumentSide(side: .barcode)) {
+            } else if events.contains(.wrongSide) {
+                instructionText = "Flip the document"
+            } else if events.contains(.tooClose) {
+                instructionText = "Move farther"
+            } else if events.contains(.tooFar) {
+                instructionText = "Move closer"
+            } else if events.contains(.tooCloseToEdge) {
+                instructionText = "Move farther"
+            } else if events.contains(.tilt) {
+                instructionText = "Keep document parallel with the phone"
+            } else if events.contains(.blur) {
+                instructionText = "Keep document and phone still"
+            } else if events.contains(.glare) {
+                instructionText = "Tilt or move document to remove reflection"
+            } else if events.contains(.notFullyVisible) {
+                instructionText = "Keep document fully visible"
+            }
+        }
+    }
+}
+```
 
-## <a name="blinkid-recognizers"></a> BlinkID recognizers
+Implement `analyze` and `pauseScanning` methods:
 
-Unless stated otherwise for concrete recognizer, **single side BlinkID recognizes** from this list can be used in any context, but they work best with the [`MBDocumentOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentOverlayViewController.html), which has UI best suited for document scanning.
+```swift
+public func analyze() async {
+    
+    Task {
+        let result = await analyzer.result()
+        if let scanningResult = result as? ScanningResult<BlinkIDScanningResult, BlinkIDScanningAlertType> {
+            switch scanningResult {
+            case .completed(let scanningResult):
+                finishScan()
+                self.result = BlinkIDResultState(scanningResult: scanningResult)
+            case .interrupted(let alertType):
+                self.alertType = alertType
+                showScanningAlert = true
+            case .cancelled:
+                showLicenseErrorAlert = true
+            case .ended:
+                self.result = BlinkIDResultState(scanningResult: nil)
+            }
+        }
+    }
+    
+    for await frame in await camera.sampleBuffer {
+        await analyzer.analyze(image: CameraFrame(buffer: MBSampleBufferWrapper(cmSampleBuffer: frame.buffer), roi: roi, orientation: camera.orientation.toCameraFrameVideoOrientation()))
+    }
+}
+```
 
-**Combined recognizers** should be used with [`MBDocumentVerificationOverlayViewController`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentVerificationOverlayViewController.html) which manages scanning of multiple document sides in the single camera opening and guides the user through the scanning process. Some combined recognizers support scanning of multiple document types, but only one document type can be scanned at a time.
+```swift
+func pauseScanning() {
+    Task {
+        await analyzer.cancel()
+    }
+}
+```
 
-### <a name="mrtd-recognizer"></a> Machine Readable Travel Document recognizer
-The [`MBMrtdRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various Machine Readable Travel Documents (MRTDs) like ID cards and passports. This recognizer is not bound to the specific country, but it can be configured to only return data that match some criteria defined by the [`MBMrzFilter`](http://blinkid.github.io/blinkid-ios/Protocols/MBMrzFilter.html).
+#### CameraFrameAnalyzer
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+The CameraFrameAnalyzer protocol defines the core interface for components that analyze camera frames during document scanning operations. This protocol is designed to provide a standardized way of processing camera input while maintaining thread safety through Swift's concurrency system.
 
-### Machine Readable Travel Document combined recognizer
-The [`MBMrtdCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBMrtdCombinedRecognizer.html) scans Machine Readable Zone (MRZ) after scanning the full document image and face image (usually MRZ is on the back side and face image is on the front side of the document). Internally, it uses [MBDocumentFaceRecognizer](#document-face-recognizer) for obtaining full document image and face image as the first step and then [MBMrtdRecognizer](#mrtd-recognizer) for scanning the MRZ.
+The protocol defines essential methods and properties for analyzing camera frames in real-time, managing the analysis lifecycle, and providing feedback through an event stream.
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+```swift
+public protocol CameraFrameAnalyzer: Sendable {
+    func analyze(image: CameraFrame) async
+    func cancel() async
+    func pause() async
+    func resume() async
+    func restart() async throws
+    func end() async
+    func result() async -> ScanningResult
+    var events: EventStream { get }
+}
+```
 
-### <a name="passport-recognizer"></a> Passport recognizer
-The [`MBPassportRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBPassportRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various passport documents. This recognizer also returns face image from the passport.
+##### Requirements
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+```swift
+analyze(image: CameraFrame) async
+```
 
-### <a name="visa-recognizer"></a> Visa recognizer
-The [`MBVisaRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBVisaRecognizer.html) is used for scanning and data extraction from the Machine Readable Zone (MRZ) of the various visa documents. This recognizer also returns face image from the visa document.
+Processes a single camera frame for analysis. This method operates asynchronously to prevent blocking the main thread during intensive image processing operations.
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+```swift
+cancel() async
+```
+Terminates the current analysis operation immediately. This method ensures proper cleanup of resources when analysis needs to be stopped before completion.
 
-### <a name="id-barcode-recognizer"></a> ID barcode recognizer
-The [`MBIdBarcodeRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBIdBarcodeRecognizer.html) is used for scanning barcodes from various ID cards. Check this document to see the list of supported document types.
+```swift
+pause() async
+```
+Temporarily suspends the analysis operation while maintaining the current state. This is useful for scenarios where analysis needs to be temporarily halted, such as when the app enters the background.
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+```swift
+resume() async
+```
+Continues a previously paused analysis operation. This method restores the analyzer to its active state and resumes processing frames.
 
-### <a name="document-face-recognizers"></a> Document face recognizer
-The [`MBDocumentFaceRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBDocumentFaceRecognizer.html) is a special type of recognizer that only returns face image and full document image of the scanned document. It does not extract document fields like first name, last name, etc. This generic recognizer can be used to obtain document images in cases when specific support for some document type is not available.
+```swift
+restart() async throws
+```
+Starts a new analysis operation. This method resets the analyzer to its initial state and resumes processing frames.
 
-You can find information about usage context at the beginning of [this section](#-blinkid-recognizers).
+```swift
+end() async
+```
+Ends the analysis operation. This is used when analysis needs to be stopped, such as when the cancel button is pressed.
 
-### <a name="blink-id-recognizers"></a> BlinkID Recognizer
-The [`MBBlinkIdSingleSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdRecognizer.html) scans and extracts data from the front side of the supported document.
-You can find the list of the currently supported documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
-We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
+```swift
+result() async -> ScanningResult
+```
+Retrieves the final result of the analysis operation. This method returns a ScanningResult object containing the analysis outcome.
 
-### <a name="blink-id-combined-recognizers"></a> BlinkID Combined Recognizer
-Use [`MBBlinkIdMultiSideRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) for scanning both sides of the supported document. First, it scans and extracts data from the front, then scans and extracts data from the barcode on the back, and finally, combines results from both sides. The [`BlinkIDCombinedRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBBlinkIdMultiSideRecognizer.html) also performs data matching and returns a flag if the extracted data captured from the front side matches the data from the barcode on the back.
-You can find the list of the currently supported documents [`here`](https://github.com/BlinkID/blinkid-ios/tree/master/documentation/BlinkIDRecognizer.md).
-We will continue expanding this recognizer by adding support for new document types in the future. Star this repo to stay updated.
+```swift
+events: EventStream
+```
+Provides access to a stream of UI events generated during the analysis process. This stream can be used to update the user interface based on analysis progress and findings.
 
-# <a name="localization"></a> Localization
+> We strongly recommend using our `BlinkIDAnalyzer` for seamless integration. However, you can create your own custom implementation as long as it conforms to the `CameraFrameAnalyzer` protocol.
 
-The SDK is localized on following languages: Arabic, Chinese simplified, Chinese traditional, Croatian, Czech, Dutch, Filipino, French, German, Hebrew, Hungarian, Indonesian, Italian, Malay, Portuguese, Romanian, Slovak, Slovenian, Spanish, Thai, Vietnamese.
+### View Creation
 
-If you would like us to support additional languages or report incorrect translation, please contact us at [help.microblink.com](http://help.microblink.com).
+Once the ViewModel is set up and configured, the next step is to create a SwiftUI view that interacts with it. The ViewModel serves as the central point for managing the document scanning workflow, including handling events, processing results, and updating the UI state. By linking the ViewModel to your view, you can create a dynamic and responsive interface that provides real-time feedback to users. In this section, we will demonstrate how to build a SwiftUI view using the ViewModel, ensuring seamless integration with the underlying document scanning components.
 
-If you want to add additional languages yourself or change existing translations, you need to set `customLocalizationFileName` property on [`MBMicroblinkApp`](http://blinkid.github.io/blinkid-ios/Classes/MBMicroblinkApp.html) object to your strings file name.
+Start by creating new SwiftUI View called CaptureView. 
 
-For example, let's say that we want to change text "Scan the front side of a document" to "Scan the front side" in BlinkID sample project. This would be the steps:
-* Find the translation key in en.strings file inside BlinkID.framework
-* Add a new file MyTranslations.strings to the project by using "Strings File" template
-* With MyTranslations.string open, in File inspector tap "Localize..." button and select English
-* Add the translation key "blinkid_generic_message" and the value "Scan the front side" to MyTranslations.strings
-* Finally in AppDelegate.swift in method `application(_:, didFinishLaunchingWithOptions:)` add `MBMicroblinkApp.instance()?.customLocalizationFileName = "MyTranslations"`
+```swift
+struct CaptureView: View {
+    @ObservedObject private var viewModel: ViewModel
 
-# <a name="troubleshooting"></a> Troubleshooting
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
+}
+```
 
-## <a name="troubleshooting-integration-problems"></a> Integration problems
+We need to add CameraView to our body:
 
-In case of problems with integration of the SDK, first make sure that you have tried integrating it into Xcode by following [integration instructions](#quick-start).
+```swift
+var body: some View {
+    GeometryReader { geometry in
+    ZStack {
+        CameraView(camera: viewModel.camera)
+            .ignoresSafeArea()
+            .statusBarHidden()
+            .task {
+                await viewModel.camera.start()
+                await viewModel.analyze()
+            }
+            .onDisappear {
+                viewModel.stopEventHandling()
+                Task {
+                    await viewModel.camera.stop()
+                }
+            }
+        }
+    }
+}
+```
 
-If you have followed [Xcode integration instructions](#quick-start) and are still having integration problems, please contact us at [help.microblink.com](http://help.microblink.com).
+The camera feed is displayed using CameraView, which is tightly integrated with the ViewModel’s camera property. The .task modifier ensures that the camera starts and begins analysis as soon as the view appears, and proper cleanup is handled in onDisappear to stop the camera and event handling gracefully.
 
-## <a name="troubleshooting-sdk-problems"></a> SDK problems
+We also need to add some instuction view to our ZStack that will connect our ViewModel's `instructionText`:
+
+```swift
+VStack {
+    Spacer()
+
+    // Text is in the middle of the screen     
+    Text(viewModel.instructionText)
+        .font(.system(size: 20))
+        .foregroundColor(Color.white)
+        .padding()
+        .background(Color.gray)
+        .clipShape(.capsule)
+    
+    Spacer()
+}
+```
+
+### Connecting ViewModel and View
+
+In this section, we will demonstrate how to establish the connection between the ViewModel and the View to facilitate a seamless document scanning workflow:
+
+```swift
+let analyzer = await BlinkIDAnalyzer(
+    sdk: localSdk,
+    eventStream: BlinkIDEventStream()
+)
+
+let viewModel = ViewModel(analyzer: analyzer)
+```
+
+In your SwiftUI View, add CaptureView:
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        CaptureView(viewModel: viewModel)
+    }
+}
+```
+
+And that's it! You have created a custom SwiftUI View and ViewModel!
+
+## <a name="localization"></a> Localization
+
+Our app supports localization following Apple’s recommended approach. We provide a `Localizable.xcstrings` file that you can use or modify as needed. Localization is determined by the system settings, meaning you must define 
+supported languages in your app’s `Info.plist` under the `Localizations` key, ensuring all required keys are included. Once configured, users can change the app’s language via Settings > [App Name] > Language. Note that in-app 
+language switching is not supported, as we adhere to Apple’s intended localization flow.
+
+## <a name="sdk-integration-troubleshooting"></a> SDK Integration Troubleshooting
 
 In case of problems with using the SDK, you should do as follows:
 
-### <a name="troubleshooting-licensing-problems"></a> Licencing problems
+### <a name="troubleshooting-licensing-problems"></a> Licensing problems
 
 If you are getting "invalid licence key" error or having other licence-related problems (e.g. some feature is not enabled that should be or there is a watermark on top of camera), first check the console. All licence-related problems are logged to error log so it is easy to determine what went wrong.
 
@@ -798,77 +1206,22 @@ If you are having problems with scanning certain items, undesired behaviour on s
 	* information about device that you are using
 	* please stress out that you are reporting problem related to iOS version of BlinkID SDK
 
-## <a name="troubleshooting-faq"></a> Frequently asked questions and known problems
-Here is a list of frequently asked questions and solutions for them and also a list of known problems in the SDK and how to work around them.
+# <a name="blinkid-sdk-size"></a> BlinkID SDK size
 
-#### In demo everything worked, but after switching to production license I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code as soon as I construct specific [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object
+BlinkID is really lightweight SDK. Compressed size is just **2.1MB**. SDK size calculation is done by [creating an App Size Report with Xcode](https://developer.apple.com/documentation/xcode/reducing-your-app-s-size), one with and one without the SDK.
+Here is the SDK *App Size Report* for iPhone:
 
-Each license key contains information about which features are allowed to use and which are not. This `NSError` indicates that your production license does not allow using of specific `MBRecognizer` object. You should contact [support](http://help.microblink.com) to check if provided licence is OK and that it really contains all features that you have purchased.
+| Size | App + On Demand Resources size | App size |
+| --- |:-------------:| :----------------:|
+| compressed | 2.4 MB | 2,4 MB |
+| uncompressed | 5,5 MB | 5,5 MB |
 
-#### I get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code with trial license key
+The uncompressed size is equivalent to the size of the installed app on the device, and the compressed size is the download size of your app.
+You can find the *App Size Report* [here]().
 
-Whenever you construct any [`MBRecognizer`](http://blinkid.github.io/blinkid-ios/Classes/MBRecognizer.html) object or, a check whether license allows using that object will be performed. If license is not set prior constructing that object, you will get `NSError` with `MBMicroblinkSDKRecognizerErrorDomain` and `MBRecognizerFailedToInitalize` code. We recommend setting license as early as possible in your app.
-
-#### Undefined Symbols on Architecture armv7
-
-Make sure you link your app with iconv and Accelerate frameworks as shown in [Quick start](#quick-start).
-If you are using Cocoapods, please be sure that you've installed `git-lfs` prior to installing pods. If you are still getting this error, go to project folder and execute command `git-lfs pull`.
-
-### Crash on armv7 devices
-
-SDK crashes on armv7 devices if bitcode is enabled. We are working on it.
-
-#### In my `didFinish` callback I have the result inside my `MBRecognizer`, but when scanning activity finishes, the result is gone
-
-This usually happens when using [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html) and forgetting to pause the [`MBRecognizerRunnerViewController`](http://blinkid.github.io/blinkid-ios/Protocols/MBRecognizerRunnerViewController.html) in your `didFinish` callback. Then, as soon as `didFinish` happens, the result is mutated or reset by additional processing that `MBRecognizer` performs in the time between end of your `didFinish` callback and actual finishing of the scanning activity. For more information about statefulness of the `MBRecognizer` objects, check [this section](#recognizer-concept).
-
-#### Unsupported architectures when submitting app to App Store
-
-BlinkID.framework is a dynamic framework which contains slices for all architectures - device and simulator. If you intend to extract .ipa file for ad hoc distribution, you'll need to preprocess the framework to remove simulator architectures.
-
-Ideal solution is to add a build phase after embed frameworks build phase, which strips unused slices from embedded frameworks.
-
-Build step is based on the one provided here: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
-
-```shell
-APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
-
-# This script loops through the frameworks embedded in the application and
-# removes unused architectures.
-find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
-do
-FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
-
-EXTRACTED_ARCHS=()
-
-for ARCH in $ARCHS
-do
-echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
-lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
-done
-
-echo "Merging extracted architectures: ${ARCHS}"
-lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-rm "${EXTRACTED_ARCHS[@]}"
-
-echo "Replacing original executable with thinned version"
-rm "$FRAMEWORK_EXECUTABLE_PATH"
-mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-
-done
-```
-
-### Disable logging
-
-Logging can be disabled by calling `disableMicroblinkLogging` method on [`MBLogger`](http://blinkid.github.io/blinkid-ios/Classes/MBLogger.html) instance.
-# <a name="size-report"></a> Size Report
-
-We are delivering complete size report of our BlinkID SDK based on our BlinkID-sample-Swift sample project. You can check that [here](https://github.com/BlinkID/blinkid-ios/tree/master/size-report).
 # <a name="info"></a> Additional info
 
-Complete API reference can be found [here](http://blinkid.github.io/blinkid-ios/index.html). 
+Complete API references can be found:
 
-For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).
+* [BlinkID](http://blinkid.github.io/blinkid-swift-package/docs/blinkid/)
+* [BlinkIDUX](http://blinkid.github.io/blinkid-ios/docs/blinkidgux/)
