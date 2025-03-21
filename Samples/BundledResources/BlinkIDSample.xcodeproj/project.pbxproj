@@ -7,23 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A270C9AD2D8CA9BF00B59082 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = A270C9AC2D8CA9BF00B59082 /* BlinkIDUX */; };
-		A270C9B02D8D4D8E00B59082 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = A270C9AF2D8D4D8E00B59082 /* BlinkIDUX */; };
-		A270C9B32D8D4E0600B59082 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = A270C9B22D8D4E0600B59082 /* BlinkIDUX */; };
-		A270C9B62D8D4EFC00B59082 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = A270C9B52D8D4EFC00B59082 /* BlinkIDUX */; };
-		FF0976F22D8C615E004C7219 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = FF0976F12D8C615E004C7219 /* BlinkIDUX */; };
-		FF0976F32D8C6165004C7219 /* BlinkIDUX in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FF0976F12D8C615E004C7219 /* BlinkIDUX */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		FF0977AD2D8D6791004C7219 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = FF0977AC2D8D6791004C7219 /* BlinkIDUX */; };
+		FF2144112D8D6912006E9A84 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = FF2144102D8D6912006E9A84 /* BlinkIDUX */; };
+		FF2144122D8D6916006E9A84 /* BlinkIDUX in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FF2144102D8D6912006E9A84 /* BlinkIDUX */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FF0976F42D8C6165004C7219 /* Embed Frameworks */ = {
+		FF2144132D8D6916006E9A84 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FF0976F32D8C6165004C7219 /* BlinkIDUX in Embed Frameworks */,
+				FF2144122D8D6916006E9A84 /* BlinkIDUX in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,59 +26,41 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FF0976DD2D8C612B004C7219 /* BlinkIDSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkIDSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0977B72D8D67FA004C7219 /* BlinkIDSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkIDSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FF0977442D8C6F8C004C7219 /* Exceptions for "BlinkIDSample" folder in "BlinkIDSample" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = FF0976DC2D8C612B004C7219 /* BlinkIDSample */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF0976DF2D8C612B004C7219 /* BlinkIDSample */ = {
+		FF0977B92D8D67FA004C7219 /* BlinkIDSample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				FF0977442D8C6F8C004C7219 /* Exceptions for "BlinkIDSample" folder in "BlinkIDSample" target */,
-			);
 			path = BlinkIDSample;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF0976DA2D8C612B004C7219 /* Frameworks */ = {
+		FF0977B42D8D67FA004C7219 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A270C9B02D8D4D8E00B59082 /* BlinkIDUX in Frameworks */,
-				A270C9B62D8D4EFC00B59082 /* BlinkIDUX in Frameworks */,
-				FF0976F22D8C615E004C7219 /* BlinkIDUX in Frameworks */,
-				FF0977AD2D8D6791004C7219 /* BlinkIDUX in Frameworks */,
-				A270C9AD2D8CA9BF00B59082 /* BlinkIDUX in Frameworks */,
-				A270C9B32D8D4E0600B59082 /* BlinkIDUX in Frameworks */,
+				FF2144112D8D6912006E9A84 /* BlinkIDUX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF0976D42D8C612B004C7219 = {
+		FF0977AE2D8D67FA004C7219 = {
 			isa = PBXGroup;
 			children = (
-				FF0976DF2D8C612B004C7219 /* BlinkIDSample */,
-				FF0976DE2D8C612B004C7219 /* Products */,
+				FF0977B92D8D67FA004C7219 /* BlinkIDSample */,
+				FF0977B82D8D67FA004C7219 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FF0976DE2D8C612B004C7219 /* Products */ = {
+		FF0977B82D8D67FA004C7219 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF0976DD2D8C612B004C7219 /* BlinkIDSample.app */,
+				FF0977B72D8D67FA004C7219 /* BlinkIDSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,74 +68,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF0976DC2D8C612B004C7219 /* BlinkIDSample */ = {
+		FF0977B62D8D67FA004C7219 /* BlinkIDSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF0976EB2D8C612C004C7219 /* Build configuration list for PBXNativeTarget "BlinkIDSample" */;
+			buildConfigurationList = FF0977C52D8D67FC004C7219 /* Build configuration list for PBXNativeTarget "BlinkIDSample" */;
 			buildPhases = (
-				FF0976D92D8C612B004C7219 /* Sources */,
-				FF0976DA2D8C612B004C7219 /* Frameworks */,
-				FF0976DB2D8C612B004C7219 /* Resources */,
-				FF0976F42D8C6165004C7219 /* Embed Frameworks */,
+				FF0977B32D8D67FA004C7219 /* Sources */,
+				FF0977B42D8D67FA004C7219 /* Frameworks */,
+				FF0977B52D8D67FA004C7219 /* Resources */,
+				FF2144132D8D6916006E9A84 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				FF0976DF2D8C612B004C7219 /* BlinkIDSample */,
+				FF0977B92D8D67FA004C7219 /* BlinkIDSample */,
 			);
 			name = BlinkIDSample;
 			packageProductDependencies = (
-				FF0976F12D8C615E004C7219 /* BlinkIDUX */,
-				A270C9AC2D8CA9BF00B59082 /* BlinkIDUX */,
-				A270C9AF2D8D4D8E00B59082 /* BlinkIDUX */,
-				A270C9B22D8D4E0600B59082 /* BlinkIDUX */,
-				A270C9B52D8D4EFC00B59082 /* BlinkIDUX */,
-				FF0977AC2D8D6791004C7219 /* BlinkIDUX */,
+				FF2144102D8D6912006E9A84 /* BlinkIDUX */,
 			);
 			productName = BlinkIDSample;
-			productReference = FF0976DD2D8C612B004C7219 /* BlinkIDSample.app */;
+			productReference = FF0977B72D8D67FA004C7219 /* BlinkIDSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FF0976D52D8C612B004C7219 /* Project object */ = {
+		FF0977AF2D8D67FA004C7219 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					FF0976DC2D8C612B004C7219 = {
+					FF0977B62D8D67FA004C7219 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = FF0976D82D8C612B004C7219 /* Build configuration list for PBXProject "BlinkIDSample" */;
+			buildConfigurationList = FF0977B22D8D67FA004C7219 /* Build configuration list for PBXProject "BlinkIDSample" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = FF0976D42D8C612B004C7219;
+			mainGroup = FF0977AE2D8D67FA004C7219;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				FF0977AB2D8D6791004C7219 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */,
+				FF21440F2D8D6912006E9A84 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = FF0976DE2D8C612B004C7219 /* Products */;
+			productRefGroup = FF0977B82D8D67FA004C7219 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF0976DC2D8C612B004C7219 /* BlinkIDSample */,
+				FF0977B62D8D67FA004C7219 /* BlinkIDSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF0976DB2D8C612B004C7219 /* Resources */ = {
+		FF0977B52D8D67FA004C7219 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -168,7 +140,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF0976D92D8C612B004C7219 /* Sources */ = {
+		FF0977B32D8D67FA004C7219 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,7 +150,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FF0976E92D8C612C004C7219 /* Debug */ = {
+		FF0977C32D8D67FC004C7219 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		FF0976EA2D8C612C004C7219 /* Release */ = {
+		FF0977C42D8D67FC004C7219 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +269,7 @@
 			};
 			name = Release;
 		};
-		FF0976EC2D8C612C004C7219 /* Debug */ = {
+		FF0977C62D8D67FC004C7219 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -308,7 +280,6 @@
 				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlinkIDSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for testing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.BlinkIDDownloadSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.BlinkIDSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,7 +299,7 @@
 			};
 			name = Debug;
 		};
-		FF0976ED2D8C612C004C7219 /* Release */ = {
+		FF0977C72D8D67FC004C7219 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -339,7 +310,6 @@
 				DEVELOPMENT_TEAM = CQTJWP89J7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BlinkIDSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera used for testing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.BlinkIDDownloadSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.BlinkIDSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -362,20 +332,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF0976D82D8C612B004C7219 /* Build configuration list for PBXProject "BlinkIDSample" */ = {
+		FF0977B22D8D67FA004C7219 /* Build configuration list for PBXProject "BlinkIDSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF0976E92D8C612C004C7219 /* Debug */,
-				FF0976EA2D8C612C004C7219 /* Release */,
+				FF0977C32D8D67FC004C7219 /* Debug */,
+				FF0977C42D8D67FC004C7219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF0976EB2D8C612C004C7219 /* Build configuration list for PBXNativeTarget "BlinkIDSample" */ = {
+		FF0977C52D8D67FC004C7219 /* Build configuration list for PBXNativeTarget "BlinkIDSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF0976EC2D8C612C004C7219 /* Debug */,
-				FF0976ED2D8C612C004C7219 /* Release */,
+				FF0977C62D8D67FC004C7219 /* Debug */,
+				FF0977C72D8D67FC004C7219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -383,38 +353,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FF0977AB2D8D6791004C7219 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */ = {
+		FF21440F2D8D6912006E9A84 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../../blinkid-ios";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A270C9AC2D8CA9BF00B59082 /* BlinkIDUX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlinkIDUX;
-		};
-		A270C9AF2D8D4D8E00B59082 /* BlinkIDUX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlinkIDUX;
-		};
-		A270C9B22D8D4E0600B59082 /* BlinkIDUX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlinkIDUX;
-		};
-		A270C9B52D8D4EFC00B59082 /* BlinkIDUX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlinkIDUX;
-		};
-		FF0976F12D8C615E004C7219 /* BlinkIDUX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlinkIDUX;
-		};
-		FF0977AC2D8D6791004C7219 /* BlinkIDUX */ = {
+		FF2144102D8D6912006E9A84 /* BlinkIDUX */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BlinkIDUX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = FF0976D52D8C612B004C7219 /* Project object */;
+	rootObject = FF0977AF2D8D67FA004C7219 /* Project object */;
 }
