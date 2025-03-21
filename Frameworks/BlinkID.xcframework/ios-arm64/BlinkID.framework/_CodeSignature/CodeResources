@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		M0uUWyqvfAVkQ6WHlBXFPFdzXLo=
+		VQ0RhlphyVcm/xycL0vw4PU1d+w=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		pjGPxqAYnzb4ypneO868eBe+5Ek=
+		DZ7h3jIDUZtUQqZfbIQTOmLTY5E=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		1HEo4aKidSkla5vGUj3FGkzFhj0=
+		kkkDyCdlvftd4hpiqlMF11p4JvE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -88,7 +88,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3sGiaNhpMeFp7SrGVnZ8bCWJHQ4k952ucKkbhnk1dz8=
+			4N3AkBpdCaAcHREEEBaJd1FvWeWCvwM9zLcC3XsCIUs=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AdaB503YNnsXXQClf1MWd7bD0xy1INfLS+zMCj6Ud7E=
+			CtzWhcuCoJED/77EC1VrorqrGh7VuuFoZr5fXBi/f28=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
