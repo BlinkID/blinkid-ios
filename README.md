@@ -1223,5 +1223,5 @@ You can find the *App Size Report* [here]().
 
 Complete API references can be found:
 
-* [BlinkID](http://blinkid.github.io/blinkid-sp/docs/blinkidverify/) 
-* [BlinkIDUX](http://blinkid.github.io/blinkid-ios/docs/blinkidverifyux/)
+* [BlinkID](http://blinkid.github.io/blinkid-swift-package/docs/blinkid/)
+* [BlinkIDUX](http://blinkid.github.io/blinkid-ios/docs/blinkidgux/)
