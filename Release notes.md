@@ -2,7 +2,49 @@
 
 ## 7.0.0
 
-- BlinkID 7.0.0 - see Transition guide 
+We’re excited to introduce BlinkID v7, a major upgrade designed to simplify your integration and deliver a simpler ID scanning experience. With BlinkID v7, we’re taking a fresh approach to scanning logic by introducing a more straightforward, session-based API for an easier configuration path, all while boosting first-time scan success rate.
+
+## Highlights & Integration Improvements
+- **Lighter SDK**: By incorporating dynamic model loading, BlinkID v7 drastically reduces download size from ~10MB to ~2.4MB, and lowers memory usage.
+- **Unified session-based API**: We’ve moved away from juggling multiple recognizers (e.g., SingleSide, MultiSide) to a single session-based BlinkIDScanningSession, unifying scanning logic under one simplified API. There's no need to switch recognizers anymore.
+- **Backward compatibility**: Existing production keys will continue to work with v7.0. No new license key is required for the upgrade.
+- **More maintainable codebase**: This new architecture sets the stage for easier and faster updates.
+
+## Architecture Changes
+- **New core components**: Instead of Recognizer-based architecture, BlinkID uses a streamlined Session-based approach.
+- **Modern Swift features**: Written fully in Swift, the code is simple and easy to work with.
+- **SwiftUI**: SwiftUI is the main driver for the UI through BlinkIDUX package.
+- **Simplified flow**: More straightforward API with clearer separation of concerns.
+
+## Major API Changes
+- New session-based API  
+  - Replaces the recognizer-based approach with a single, streamlined session model for easier scanning logic and better maintainability.  
+- SwiftUI & modular SDK  
+  - UI is now built with SwiftUI, simplifying integration via `BlinkIDUX`.  
+  - The SDK is modular:  
+    - `BlinkID` for scanning logic.  
+    - `BlinkIDUX` for prebuilt UI components.  
+- Simplified initialization & result handling  
+  - New SDK initialization method:  
+    ```swift
+    let settings = BlinkIDSdkSettings(licenseKey: "<key>", helloLogEnabled: true)
+    let sdk = try await BlinkIDSdk.createBlinkIDSdk(withSettings: settings)
+    ```  
+  - Results are now retrieved through structured session-based async-await callbacks instead of recognizer bundles.  
+- Enhanced UI customization & source-available UX  
+  - `UXThemeProtocol` enables direct customization of typography, colors, and strings.  
+  - The source-available UI layer allows advanced modifications for branding and accessibility.  
+- Many of the older settings have been renamed to be more intuitive, including among others:
+  - `blurStrictnessLevel` → `blurDetectionLevel`
+  - `enableBlurFilter` → `skipFramesWithBlur`
+  - `glareStrictnessLevel` → `glareDetectionLevel`
+  - `enableGlareFilter` → `skipFramesWithGlare`
+  - `combineFrameResults` → `enableMultiFrameExtraction`
+  - `cardRotation`→ `documentRotation`
+  - `...`
+  
+## Plan Your Upgrade
+We have prepared a [Transition guide](https://github.com/BlinkID/blinkid-ios/blob/master/Transition%20guide%20v7.md) to help you get started with BlinkID v7.0. It outlines all major API changes and best practices for migrating existing code. Read the transition guide here. For any questions or feedback, reach out to support@microblink.com. We value your input and look forward to hearing how BlinkID v7 improves your app’s experience! 
 
 ## 6.13.0
 
