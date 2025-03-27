@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LFaNBbn4S/Q/sROHD0FKVZTbwJs=
+		Sg2dZGfr6rBU0PD+NpavgfBGr/w=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DZ7h3jIDUZtUQqZfbIQTOmLTY5E=
+		dkreqJ8sxnoF6viaTkfMj/ZEnSE=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6SLhL2m0iLKqRkIukonAzbP+O3Y=
+		rZ0UKdjWMe1b2U9ukcEeD5Z9veg=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DZ7h3jIDUZtUQqZfbIQTOmLTY5E=
+		dkreqJ8sxnoF6viaTkfMj/ZEnSE=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2P26ojMdGg0jTcacStoNKMr0gRk=
+		X8USEfG6UD7KYvLUO17bgnAYfKU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>conan.xcconfig</key>
 		<data>
-		88t0FtRV3m97QyUX4lvuyp6tVoE=
+		h0xt4Fsvpdhka92jtQlkBND96kY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -108,7 +108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4N3AkBpdCaAcHREEEBaJd1FvWeWCvwM9zLcC3XsCIUs=
+			+u/HC+xzYvp6Lxf97QiJFXAEtK0D+2aBGMZg/YuYr18=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -136,14 +136,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SLl2YuawuzXurYTDdMzwZpoJx6JbmhnaiYOqi+RDdk0=
+			/fu25fERI7e4oEIhvUXEKZ3E3KYqjpUBxX10Ju8ZhrI=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4N3AkBpdCaAcHREEEBaJd1FvWeWCvwM9zLcC3XsCIUs=
+			+u/HC+xzYvp6Lxf97QiJFXAEtK0D+2aBGMZg/YuYr18=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+n+yLINdDcZ8nwdSpogXmljQeHMVdpm+7k0uuabKGXA=
+			91NSm0QICkK61+Q3A+0Bc/NEOB5GUjg8B56sZ0U8d0U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -206,7 +206,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GR9eMv9N4NPs+TN7Mz1UXlYocJf/CNgPnKTrKCZySXQ=
+			FrcHsyNYRX1sK9BNHBPCiLLh01ssGZ49Eoc5u/ul2Ic=
 			</data>
 		</dict>
 	</dict>

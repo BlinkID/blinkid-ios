@@ -13,7 +13,6 @@ protocol ScanningUXProtocol {
     associatedtype AlertType: AlertTypeProtocol
     associatedtype UXModel: ScanningViewModel<ScanResult, AlertType>
     associatedtype UXTheme: UXThemeProtocol
-    associatedtype ButtonContentView: View
     associatedtype GenericContentView: View
     
     /// ViewModel used in the document scanning process
@@ -28,59 +27,72 @@ protocol ScanningUXProtocol {
     /// Builder for Reticle
     func ReticleView(reticleState: Binding<ReticleState>) -> AnyView
     
+    /// Builder for whole view
+    func MainView(reticleState: Binding<ReticleState>,
+                  isTorchOn: Binding<Bool>,
+                  showSheet: Binding<Bool>,
+                  showScanningAlert: Binding<Bool>,
+                  showLicenseErrorAlert: Binding<Bool>) -> AnyView
+    
     /// Builder for the cancel button
-    func CancelButton() -> ButtonContentView
+    func CancelButton() -> GenericContentView
     
     /// Builder for the torch button
-    func TorchButton(image: Image, isOn: Binding<Bool>) -> ButtonContentView
+    func TorchButton(image: Image, isOn: Binding<Bool>) -> GenericContentView
     
     /// Builder for the help button
-    func HelpButton() -> ButtonContentView
+    func HelpButton() -> GenericContentView
 }
 
 extension ScanningUXProtocol where Self: View {
     static var reticleDiameter: Double { 88.0 }
     
     @ViewBuilder
-    func CancelButton() -> ButtonContentView {
-        Button {
-            viewModel.closeButtonTapped()
-        } label: {
-            viewModel.cancelImage
-                .toolbarButton()
-        }
-        .accessibilityLabel(viewModel.cancelLabel)
-        .accessibilityHint(viewModel.cancelHint)
-        .accessibilitySortPriority(3)
-        .accessibilityHidden(viewModel.showIntroductionAlert) as! ButtonContentView
+    func CancelButton() -> GenericContentView {
+        AnyView(
+            Button {
+                viewModel.closeButtonTapped()
+            } label: {
+                viewModel.cancelImage
+                    .toolbarButton()
+            }
+                .accessibilityLabel(viewModel.cancelLabel)
+                .accessibilityHint(viewModel.cancelHint)
+                .accessibilitySortPriority(3)
+                .accessibilityHidden(viewModel.showIntroductionAlert)
+        ) as! GenericContentView
     }
     
     @ViewBuilder
-    func TorchButton(image: Image, isOn: Binding<Bool>) -> ButtonContentView {
-        Button {
-            viewModel.isTorchOn.toggle()
-        } label: {
-            image
-                .toolbarButton(isOn: isOn)
-        }
-        .accessibilityLabel(viewModel.torchLabel)
-        .accessibilityHint(viewModel.torchHint)
-        .accessibilitySortPriority(2)
-        .accessibilityHidden(viewModel.showIntroductionAlert) as! ButtonContentView
+    func TorchButton(image: Image, isOn: Binding<Bool>) -> GenericContentView {
+        AnyView(
+            Button {
+                viewModel.isTorchOn.toggle()
+            } label: {
+                image
+                    .toolbarButton(isOn: isOn)
+            }
+                .accessibilityLabel(viewModel.torchLabel)
+                .accessibilityHint(viewModel.torchHint)
+                .accessibilitySortPriority(2)
+                .accessibilityHidden(viewModel.showIntroductionAlert)
+        ) as! GenericContentView
     }
     
     @ViewBuilder
-    func HelpButton() -> ButtonContentView {
-        Button {
-            viewModel.helpButtonTapped()
-        } label: {
-            viewModel.helpImage
-                .themeButton(theme: theme)
-        }
-        .accessibilityLabel(viewModel.helpLabel)
-        .accessibilityHint(viewModel.helpHint)
-        .accessibilitySortPriority(1)
-        .accessibilityHidden(viewModel.showIntroductionAlert) as! ButtonContentView
+    func HelpButton() -> GenericContentView {
+        AnyView(
+            Button {
+                viewModel.helpButtonTapped()
+            } label: {
+                viewModel.helpImage
+                    .themeButton(theme: theme)
+            }
+                .accessibilityLabel(viewModel.helpLabel)
+                .accessibilityHint(viewModel.helpHint)
+                .accessibilitySortPriority(1)
+                .accessibilityHidden(viewModel.showIntroductionAlert)
+        ) as! GenericContentView
     }
     
     @ViewBuilder
@@ -93,7 +105,7 @@ extension ScanningUXProtocol where Self: View {
                   isTorchOn: Binding<Bool>,
                   showSheet: Binding<Bool>,
                   showScanningAlert: Binding<Bool>,
-                  showLicenseErrorAlert: Binding<Bool>) -> some View {
+                  showLicenseErrorAlert: Binding<Bool>) -> GenericContentView {
         createMainView(reticleState: reticleState, isTorchOn: isTorchOn, showSheet: showSheet, showScanningAlert: showScanningAlert, showLicenseErrorAlert: showLicenseErrorAlert) as! GenericContentView
     }
     
@@ -103,126 +115,131 @@ extension ScanningUXProtocol where Self: View {
                                 showSheet: Binding<Bool>,
                                 showScanningAlert: Binding<Bool>,
                                 showLicenseErrorAlert: Binding<Bool>) -> some View {
-        Group {
-            if viewModel.camera.status == .unauthorized {
-                CameraPermissionView()
-            } else {
-                GeometryReader { geometry in
-                    ZStack {
-                        CameraView(camera: viewModel.camera)
-                            .statusBarHidden(true)
-                            .ignoresSafeArea()
-                        VStack(spacing: 8) {
-                            ReticleView(reticleState: reticleState)
-                            Spacer()
-                        }
-                        .offset(y: geometry.size.height / 2 - Self.reticleDiameter / 2)
-                        VStack {
-                            HStack {
-                                CancelButton()
+        AnyView(
+            Group {
+                if viewModel.camera.status == .unauthorized {
+                    CameraPermissionView()
+                } else {
+                    GeometryReader { geometry in
+                        ZStack {
+                            CameraView(camera: viewModel.camera)
+                                .statusBarHidden(true)
+                                .ignoresSafeArea()
+                            VStack(spacing: 8) {
+                                ReticleView(reticleState: reticleState)
                                 Spacer()
-                                if viewModel.camera.isTorchSupported {
-                                    TorchButton(image: viewModel.torchImage, isOn: isTorchOn)
+                            }
+                            .offset(y: geometry.size.height / 2 - Self.reticleDiameter / 2)
+                            VStack {
+                                HStack {
+                                    CancelButton()
+                                    Spacer()
+                                    if viewModel.camera.isTorchSupported {
+                                        TorchButton(image: viewModel.torchImage, isOn: isTorchOn)
+                                    }
+                                }
+                                Spacer()
+                                HStack {
+                                    Spacer()
+                                    HelpButton()
                                 }
                             }
-                            Spacer()
-                            HStack {
-                                Spacer()
-                                HelpButton()
+                            .disabled(viewModel.showIntroductionAlert)
+                            .padding()
+                            
+                            if viewModel.showIntroductionAlert {
+                                OnboardingAlertView(theme: self.theme,
+                                                    dimiss: viewModel.dismissAlert())
+                                .transition(.move(edge: .bottom))
                             }
                         }
-                        .disabled(viewModel.showIntroductionAlert)
-                        .padding()
-                        
-                        if viewModel.showIntroductionAlert {
-                            OnboardingAlertView(theme: self.theme,
-                                                dimiss: viewModel.dismissAlert())
-                            .transition(.move(edge: .bottom))
+                    }
+                    .onChange(of: viewModel.reticleState) { newValue in
+                        if let text = newValue.text {
+                            UIAccessibility.post(notification: .announcement, argument: text)
                         }
                     }
-                }
-                .onChange(of: viewModel.reticleState) { newValue in
-                    if let text = newValue.text {
-                        UIAccessibility.post(notification: .announcement, argument: text)
+                    .sheet(isPresented: showSheet) {
+                        OnboardingSheetView(theme: self.theme)
+                            .presentationDetents([.height(600)])
+                            .onAppear {
+                                viewModel.pauseScanning()
+                            }
+                            .onDisappear {
+                                viewModel.resumeScanning()
+                            }
+                    }
+                    .alert(isPresented: showScanningAlert) {
+                        Alert(
+                            title: Text("mb_recognition_timeout_dialog_title".localizedString),
+                            message: Text("mb_recognition_timeout_dialog_message".localizedString),
+                            dismissButton: .default(Text("mb_recognition_timeout_dialog_retry_button".localizedString))
+                        )
+                    }
+                    .alert("mb_license_locked".localizedString, isPresented: showLicenseErrorAlert) {
+                        Button("mb_close".localizedString, role: .cancel) { }
                     }
                 }
-                .sheet(isPresented: showSheet) {
-                    OnboardingSheetView(theme: self.theme)
-                        .presentationDetents([.height(600)])
-                        .onAppear {
-                            viewModel.pauseScanning()
-                        }
-                        .onDisappear {
-                            viewModel.resumeScanning()
-                        }
-                }
-                .alert(isPresented: showScanningAlert) {
-                    Alert(
-                        title: Text("mb_recognition_timeout_dialog_title".localizedString),
-                        message: Text("mb_recognition_timeout_dialog_message".localizedString),
-                        dismissButton: .default(Text("mb_recognition_timeout_dialog_retry_button".localizedString))
-                    )
-                }
-                .alert("mb_license_locked".localizedString, isPresented: showLicenseErrorAlert) {
-                    Button("mb_close".localizedString, role: .cancel) { }
-                }
             }
-        }
-        .task {
-            // Start the capture pipeline.
-            await viewModel.camera.start()
-            await viewModel.analyze()
-            print("Starting")
-        }
-        .onAppear {
-            if viewModel.shouldShowIntroductionAlert {
-                viewModel.presentAlert()
-            } else {
-                UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
-            }
-        }
-            .onDisappear {
-                viewModel.stopEventHandling()
-                viewModel.camera.stopRotationCoordinator()
-                Task { @MainActor in
-                    await viewModel.camera.stop()
+                .task {
+                    // Start the capture pipeline.
+                    await viewModel.camera.start()
+                    await viewModel.analyze()
                 }
-            }
+                .onAppear {
+                    if viewModel.shouldShowIntroductionAlert {
+                        viewModel.presentAlert()
+                    } else {
+                        UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
+                    }
+                }
+                .onDisappear {
+                    viewModel.stopEventHandling()
+                    viewModel.camera.stopRotationCoordinator()
+                    Task { @MainActor in
+                        await viewModel.camera.stop()
+                    }
+                }
+        )
     }
     
     @ViewBuilder
     private func createReticleView(reticleState: Binding<ReticleState>) -> some View {
-        ZStack {
-            Reticle(diameter: Self.reticleDiameter, reticleState: reticleState)
-            if viewModel.showCardImage {
-                viewModel.cardImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 60)
-                    .rotation3DEffect(.degrees(viewModel.flipCardDegrees), axis: (x: 0, y: 1, z: 0))
-                    .scaleEffect(viewModel.flipCardScale)
+        AnyView(
+            Group {
+                ZStack {
+                    Reticle(diameter: Self.reticleDiameter, reticleState: reticleState)
+                    if viewModel.showCardImage {
+                        viewModel.cardImage
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 60)
+                            .rotation3DEffect(.degrees(viewModel.flipCardDegrees), axis: (x: 0, y: 1, z: 0))
+                            .scaleEffect(viewModel.flipCardScale)
+                    }
+                    if viewModel.showRippleView {
+                        Circle()
+                            .fill(.white)
+                            .frame(height: Self.reticleDiameter)
+                            .scaleEffect(viewModel.rippleViewScale)
+                            .opacity(viewModel.rippleViewOpacity)
+                    }
+                    if viewModel.showSuccessImage {
+                        viewModel.successImage
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: Self.reticleDiameter)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.black, .white)
+                            .scaleEffect(viewModel.successImageScale)
+                    }
+                }
+                .frame(height: 100)
+                if let text = viewModel.reticleState.text?.localizedString {
+                    MessageContainer(theme: self.theme, text: text)
+                        .accessibilityHidden(true)
+                }
             }
-            if viewModel.showRippleView {
-                Circle()
-                    .fill(.white)
-                    .frame(height: Self.reticleDiameter)
-                    .scaleEffect(viewModel.rippleViewScale)
-                    .opacity(viewModel.rippleViewOpacity)
-            }
-            if viewModel.showSuccessImage {
-                viewModel.successImage
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: Self.reticleDiameter)
-                    .symbolRenderingMode(.palette)
-                    .foregroundStyle(.black, .white)
-                    .scaleEffect(viewModel.successImageScale)
-            }
-        }
-        .frame(height: 100)
-        if let text = viewModel.reticleState.text?.localizedString {
-            MessageContainer(theme: self.theme, text: text)
-                .accessibilityHidden(true)
-        }
+        )
     }
 }
