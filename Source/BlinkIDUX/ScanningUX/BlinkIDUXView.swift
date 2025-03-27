@@ -19,7 +19,6 @@ import BlinkID
 /// For `UIEvent` stream, and UX logic, see ``ScanningUXModel``.
 public struct BlinkIDUXView: View, ScanningUXProtocol {
     typealias GenericContentView = AnyView
-    typealias ButtonContentView = ModifiedContent<Button<AnyView>, AccessibilityAttachmentModifier>?
     typealias ScanResult = BlinkIDScanningResult
     typealias AlertType = BlinkIDScanningAlertType
     typealias UXModel = BlinkIDUXModel

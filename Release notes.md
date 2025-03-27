@@ -1,5 +1,9 @@
 # Release notes
 
+## 7.0.1
+
+- Bugfixes
+
 ## 7.0.0
 
 We’re excited to introduce BlinkID v7, a major upgrade designed to simplify your integration and deliver a simpler ID scanning experience. With BlinkID v7, we’re taking a fresh approach to scanning logic by introducing a more straightforward, session-based API for an easier configuration path, all while boosting first-time scan success rate.
