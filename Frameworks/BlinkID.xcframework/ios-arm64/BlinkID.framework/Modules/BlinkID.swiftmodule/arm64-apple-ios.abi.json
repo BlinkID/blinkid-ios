@@ -21910,6 +21910,80 @@
             "moduleName": "BlinkID"
           },
           {
+            "kind": "Var",
+            "name": "registrationCertificate",
+            "printedName": "registrationCertificate",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlinkID.DocumentType.Type) -> BlinkID.DocumentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentType",
+                    "printedName": "BlinkID.DocumentType",
+                    "usr": "s:7BlinkID12DocumentTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlinkID.DocumentType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentType",
+                        "printedName": "BlinkID.DocumentType",
+                        "usr": "s:7BlinkID12DocumentTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF",
+            "mangledName": "$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmF",
+            "moduleName": "BlinkID"
+          },
+          {
+            "kind": "Var",
+            "name": "medicalMarijuanaId",
+            "printedName": "medicalMarijuanaId",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BlinkID.DocumentType.Type) -> BlinkID.DocumentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DocumentType",
+                    "printedName": "BlinkID.DocumentType",
+                    "usr": "s:7BlinkID12DocumentTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BlinkID.DocumentType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DocumentType",
+                        "printedName": "BlinkID.DocumentType",
+                        "usr": "s:7BlinkID12DocumentTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF",
+            "mangledName": "$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF",
+            "moduleName": "BlinkID"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -57944,476 +58018,476 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSession.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSession.swift",
       "kind": "StringLiteral",
       "offset": 165,
       "length": 19,
       "value": "\"MBBlinkIDUniqueID\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 2026,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 2047,
       "length": 8,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 3035,
       "length": 13,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 3058,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 4074,
       "length": 8,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 4128,
       "length": 12,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 5036,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 5050,
       "length": 11,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 5071,
       "length": 18,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/ProcessResult\/SharedProcessResult.swift",
       "kind": "IntegerLiteral",
       "offset": 5099,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
       "kind": "IntegerLiteral",
       "offset": 1733,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
       "kind": "IntegerLiteral",
       "offset": 1747,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
       "kind": "IntegerLiteral",
       "offset": 1765,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/InputImage\/InputImage.swift",
       "kind": "IntegerLiteral",
       "offset": 1784,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 1588,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
       "kind": "BooleanLiteral",
       "offset": 1621,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
       "kind": "StringLiteral",
       "offset": 1657,
       "length": 45,
       "value": "\"https:\/\/models.cdn.microblink.com\/resources\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/BlinkIDSdk.swift",
       "kind": "StringLiteral",
       "offset": 1734,
       "length": 10,
       "value": "\"MLModels\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 2071,
       "length": 3,
       "value": "250"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 2117,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 2164,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 2211,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 2263,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 3846,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 3876,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6646,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6682,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6722,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6758,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6796,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 6848,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 19605,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 19715,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 19847,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 19903,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 19972,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20024,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20305,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20361,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20402,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "FloatLiteral",
       "offset": 20538,
       "length": 4,
       "value": "0.02"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20588,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20647,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "IntegerLiteral",
       "offset": 20706,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "BooleanLiteral",
       "offset": 20758,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/BlinkIDSessionSettings.swift",
       "kind": "FloatLiteral",
       "offset": 24273,
       "length": 4,
       "value": "15.0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 10,
       "value": "\"Envelope\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 583,
       "length": 6,
       "value": "\"Ping\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 629,
       "length": 9,
       "value": "\"payload\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 680,
       "length": 11,
       "value": "\"signature\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 740,
       "length": 18,
       "value": "\"signatureVersion\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 800,
       "length": 11,
       "value": "\"sessionID\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 843,
       "length": 7,
       "value": "\"extra\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "IntegerLiteral",
       "offset": 879,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 1654,
       "length": 19,
       "value": "\"[ERROR]: \""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/Ping\/PingProvider.swift",
       "kind": "StringLiteral",
       "offset": 1672,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
       "kind": "StringLiteral",
       "offset": 541,
       "length": 30,
       "value": "\"MBServerPermissionSubmitData\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
       "kind": "StringLiteral",
       "offset": 630,
       "length": 38,
       "value": "\"MBServerPermissionSubmitTimeInterval\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceChecker.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceChecker.swift",
       "kind": "StringLiteral",
       "offset": 399,
       "length": 14,
       "value": "\"missing file\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceChecker.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceChecker.swift",
       "kind": "StringLiteral",
       "offset": 451,
       "length": 16,
       "value": "\"missing bundle\""
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceManifest.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceManifest.swift",
       "kind": "Dictionary",
       "offset": 118,
       "length": 3483,
-      "value": "[(\"ccc_lookup_table.zzip\", \"25fcbe37707d6bd1f4e0dbc7032700b1099d4b82a5fac20770133834a5431d60\"), (\"Model_d2bcaf18d17504513598e04f472c035b3d4f22d8653d5a79c05b4508a4b547b3.strop\", \"299ab7aeef01eb09cbdc9b2b8c1d2e6a6fe75ce98126688a4e43b9d887fb1599\"), (\"Model_8326c5065a6d8451d6d004db73babf4a4a9f502c68643a14934cc098d04bf44f.strop\", \"a92a1867405dc9019231b2eaa1a1e4572975d20aee997b231b8bddc9e4f1185c\"), (\"Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop\", \"a9501dd262ffd1a74cf73304d1a6c258ef42c79305cf6bc2222bd7bb9d42364f\"), (\"Model_86d689f894da5af89553f5a5a9514ab5a6fdbab4b67a5a7c51f45c2189357ca5.strop\", \"ce43ad539120fd2a724d04c268cc70bc1d93de1ab0a228fe2773890237d4a933\"), (\"Model_d68548d94b956e67d6b606c7a8988082c3d66f494f94a14d705d0cdea6635151.strop\", \"3a786851507428d0e8845e8725aaac4ea6f01561e7162ae9cdb77a3132ae4898\"), (\"Model_4521998f12dfb7ceb1270a78f11efded1c61c91151c7b7ccc7d01796047f169a.strop\", \"e45d7b9989c471a85907a7c355973c3427b5b2c08cb2af8c63d61a81eef91bc3\"), (\"Model_3b11c3ffacbbf390b932fb9a7024f1a0016f66281ea8c790f8b5903374ad89c2.strop\", \"b4d598a0f368c1accbf2d0b5342517035c25fe4197570f69990ba48f8c02a67c\"), (\"Model_abdf47396dafdacf87bc8650c081372e1b355ce20277f1fa47c5bbc79a003664.strop\", \"6f5682401a1705eb2f561ea649e5e72480d6ccd623b4e1827593dab83d89cc34\"), (\"Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop\", \"ffb65e14de57564460d5cc2bd68785d315e6c8b7a8cae2b56792b080075a5561\"), (\"Model_f2874f5766b779c063dbe30467979163497dc4b29c43bab23d70c798ee32993a.strop\", \"e07141ce6e363a2c7718ee8dc8bdee275c0947c0812ce56044ec03d8064a7c3a\"), (\"Model_2cd038a917eb424b973a73e06f0b96c99649b1fa43dcabd5bd19996c6e4aee4c.strop\", \"35260cfb1b7b5007632e596fb04abaf2c8d9fb1792ba5e3e727cdd1da1ff4c8c\"), (\"Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop\", \"43eb07f0ad07e4a0dd2b5d8973fae1b0c66e586838da4b6eb85655aea4b75b69\"), (\"Model_9a8a29486ce57a15db08a18c76a94df4c811039737750667147f0001942f19d3.strop\", \"a752e2e222141490c22ad8335319ef410706717ee7a12f7a97626f531202ee63\"), (\"Model_b901a610b69813465d5fd5ac34356dcf4fff1e51b31a0b60ae63592d28a1325c.strop\", \"36e6a9b02c3bb4b11ce6fd9b7676408a341b7ca01831cafcb93ccfd8fe8b9422\"), (\"static_features.zzip\", \"6d202616abd8c0661063ab97f899c5881ad1a738c4db2e057d6f2ab0c041672c\"), (\"Model_93607315418f2c5d3abec06d0b2a81e69abeb1b8d0506ed6373d7d74bd5e4b05.strop\", \"79bb41b564a2904e832fd6d6610b20308210293a89a47e606e96197bc7d84cda\"), (\"Model_f531088a1f65a31d6ba039e09446fe24c18360080fec3792308ac01514803620.strop\", \"403290ec4e4b5987cd36e5c930d6563bb35e94ff8b1884132503cb324c5899d2\"), (\"Model_8c7727da554fd257fa758787ca3d0f517b47f6c5ba791792f516da7dd210fde8.strop\", \"637c348c0f5940c4edeb50b1dbf5e5574b97060ab373fed9667e4762375e3248\"), (\"Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop\", \"8bece4d92f69a65e3611d9a0da87d1bf337003195f62ce0caf0d02a3277d410b\"), (\"Model_fc22f7553e3e85531eb79ef6db1474302664508cc7ae4ff0d950447b20f2f8ee.strop\", \"af1059000b474cd998e2e424262163da3a3274d40dcd014107f44ef1b88f3f1d\"), (\"Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop\", \"180119c1917935b4c0a44793d1bf3a7f4afdfae2b24ba95932e6781d48a43127\"), (\"Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop\", \"7e608a509c1413f33df020c79d6276fec2e6d8c4d4b72766a6c020efb42b43cf\")]"
+      "value": "[(\"ccc_lookup_table.zzip\", \"25fcbe37707d6bd1f4e0dbc7032700b1099d4b82a5fac20770133834a5431d60\"), (\"Model_854f87e7c7478066c6fcdabd51853b4cad313f688725dfeb6d0695c33f46fa41.strop\", \"3bbaddea67f8940694077bc064108d9cf4df3f508e6c721ded3ff37550a92579\"), (\"Model_8326c5065a6d8451d6d004db73babf4a4a9f502c68643a14934cc098d04bf44f.strop\", \"a92a1867405dc9019231b2eaa1a1e4572975d20aee997b231b8bddc9e4f1185c\"), (\"Model_2880751121560047e6dc571bc8ff4683aeb863886f7c0789234594ceb1e23577.strop\", \"a9501dd262ffd1a74cf73304d1a6c258ef42c79305cf6bc2222bd7bb9d42364f\"), (\"Model_8161cc951620be0dabb65f44e8a31a49970e9da1ac94106d29130f470b0eabe4.strop\", \"8b541731cd732ea60746dc7aebeaeeb94ba2f21f1338c4c925ce90cdb655461b\"), (\"Model_86d689f894da5af89553f5a5a9514ab5a6fdbab4b67a5a7c51f45c2189357ca5.strop\", \"ce43ad539120fd2a724d04c268cc70bc1d93de1ab0a228fe2773890237d4a933\"), (\"Model_d68548d94b956e67d6b606c7a8988082c3d66f494f94a14d705d0cdea6635151.strop\", \"3a786851507428d0e8845e8725aaac4ea6f01561e7162ae9cdb77a3132ae4898\"), (\"Model_a1516add883f909ebecf9b565238086f8f31bbb3e7fb2113258e3ae7c659555e.strop\", \"e327f3c9da2e4d5e2be98195b24aabae557ec3cfb99b91e5630d7efab8ef93d8\"), (\"Model_3b11c3ffacbbf390b932fb9a7024f1a0016f66281ea8c790f8b5903374ad89c2.strop\", \"b4d598a0f368c1accbf2d0b5342517035c25fe4197570f69990ba48f8c02a67c\"), (\"Model_07c7ab860e77ec2e92bb822f6d62424b8595a5beb4340f6b2f7f6a4cffa5d050.strop\", \"ffb65e14de57564460d5cc2bd68785d315e6c8b7a8cae2b56792b080075a5561\"), (\"Model_f2874f5766b779c063dbe30467979163497dc4b29c43bab23d70c798ee32993a.strop\", \"e07141ce6e363a2c7718ee8dc8bdee275c0947c0812ce56044ec03d8064a7c3a\"), (\"Model_36d8e94f4cb46097bd6b7385f2aa91fcdee1a5fefeec59e56d1b9e82c94b00a7.strop\", \"43eb07f0ad07e4a0dd2b5d8973fae1b0c66e586838da4b6eb85655aea4b75b69\"), (\"Model_9a8a29486ce57a15db08a18c76a94df4c811039737750667147f0001942f19d3.strop\", \"a752e2e222141490c22ad8335319ef410706717ee7a12f7a97626f531202ee63\"), (\"static_features.zzip\", \"cdc5240cdc7100dd9f1deff9e23a8cec61968ad38beaa73aca4e7fb4d20b075b\"), (\"Model_93607315418f2c5d3abec06d0b2a81e69abeb1b8d0506ed6373d7d74bd5e4b05.strop\", \"79bb41b564a2904e832fd6d6610b20308210293a89a47e606e96197bc7d84cda\"), (\"Model_f531088a1f65a31d6ba039e09446fe24c18360080fec3792308ac01514803620.strop\", \"403290ec4e4b5987cd36e5c930d6563bb35e94ff8b1884132503cb324c5899d2\"), (\"Model_5ff8f19b99d6b1393981e63c8e563b5af6297aa07808474d3007b609ae416485.strop\", \"49aedf55202bf2173bf397563995fc4aae670a34c618b7e0b39865303a88d536\"), (\"Model_8c7727da554fd257fa758787ca3d0f517b47f6c5ba791792f516da7dd210fde8.strop\", \"637c348c0f5940c4edeb50b1dbf5e5574b97060ab373fed9667e4762375e3248\"), (\"Model_473ac5f5e256623c0a6b282698c1f1b033b9fb5359e6aa142e9fb4a4022afe4e.strop\", \"8bece4d92f69a65e3611d9a0da87d1bf337003195f62ce0caf0d02a3277d410b\"), (\"Model_f11e17b7a27c16e0910be26e455bc8fc119a80e50614afbe8c744b5c2c639e94.strop\", \"9e504b9b3787a751f0d82e823fd6b9fcec8060e6b4ef280c8d79e0b09c4f814f\"), (\"Model_fc22f7553e3e85531eb79ef6db1474302664508cc7ae4ff0d950447b20f2f8ee.strop\", \"af1059000b474cd998e2e424262163da3a3274d40dcd014107f44ef1b88f3f1d\"), (\"Model_b452fd3cd4037080cfcb4c423dba5bc58c8ceafc28427fdf9c5778fb353f088e.strop\", \"180119c1917935b4c0a44793d1bf3a7f4afdfae2b24ba95932e6781d48a43127\"), (\"Model_faf688599c7e261a2a7404730f69ed029115bb0d3e7a3657731d88e701720efe.strop\", \"7e608a509c1413f33df020c79d6276fec2e6d8c4d4b72766a6c020efb42b43cf\")]"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 603,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 642,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
       "kind": "IntegerLiteral",
       "offset": 687,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Shared\/Resources\/ResourceDownloader.swift",
       "kind": "BooleanLiteral",
       "offset": 3463,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/DataMatchResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/DataMatchResult.swift",
       "kind": "IntegerLiteral",
       "offset": 226,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tonikreso\/Desktop\/sdks\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/DataMatchResult.swift",
+      "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/BlinkID\/Session\/DataMatchResult.swift",
       "kind": "IntegerLiteral",
       "offset": 246,
       "length": 1,
