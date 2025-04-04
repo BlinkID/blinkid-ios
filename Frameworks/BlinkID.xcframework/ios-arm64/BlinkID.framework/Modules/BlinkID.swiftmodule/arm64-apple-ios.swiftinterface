@@ -614,6 +614,8 @@ public enum DocumentType : Swift.String, Swift.Decodable, Swift.Sendable {
   case reciprocalHealthInsuranceCard
   case vehicleRegistration
   case esaadCard
+  case registrationCertificate
+  case medicalMarijuanaId
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String

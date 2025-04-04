@@ -16321,6 +16321,8 @@ extern unsigned $s7BlinkID12DocumentTypeO10nonVoterIdyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC;
 }
 
 } // namespace _impl
@@ -16445,6 +16447,8 @@ public:
     reciprocalHealthInsuranceCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmF"),
     vehicleRegistration SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmF"),
     esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF"),
+    registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF"),
+    medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF"),
     unknownDefault
   };
 
@@ -17074,6 +17078,22 @@ public:
   } esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF");
   SWIFT_INLINE_THUNK bool isEsaadCard() const;
 
+  inline const static struct _impl_registrationCertificate {  // impl struct for case registrationCertificate
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::registrationCertificate;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF");
+  SWIFT_INLINE_THUNK bool isRegistrationCertificate() const;
+
+  inline const static struct _impl_medicalMarijuanaId {  // impl struct for case medicalMarijuanaId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::medicalMarijuanaId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isMedicalMarijuanaId() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -17162,6 +17182,8 @@ public:
     if (tag == _impl::$s7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmFWC) return cases::reciprocalHealthInsuranceCard;
     if (tag == _impl::$s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC) return cases::vehicleRegistration;
     if (tag == _impl::$s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC) return cases::esaadCard;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC) return cases::registrationCertificate;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC) return cases::medicalMarijuanaId;
     return cases::unknownDefault;
   }
 
@@ -31364,6 +31386,22 @@ return (__bridge_transfer UIImage *)(__bridge void *)_impl::$s7BlinkID26Detailed
   }
   SWIFT_INLINE_THUNK  bool DocumentType::isEsaadCard() const {
     return *this == DocumentType::esaadCard;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_registrationCertificate::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isRegistrationCertificate() const {
+    return *this == DocumentType::registrationCertificate;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_medicalMarijuanaId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isMedicalMarijuanaId() const {
+    return *this == DocumentType::medicalMarijuanaId;
   }
   SWIFT_INLINE_THUNK  bool DocumentType::isUnknownDefault() const {
     return *this == DocumentType::unknownDefault;
@@ -50826,6 +50864,8 @@ extern unsigned $s7BlinkID12DocumentTypeO10nonVoterIdyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC;
 }
 
 } // namespace _impl
@@ -50950,6 +50990,8 @@ public:
     reciprocalHealthInsuranceCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmF"),
     vehicleRegistration SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmF"),
     esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF"),
+    registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF"),
+    medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF"),
     unknownDefault
   };
 
@@ -51579,6 +51621,22 @@ public:
   } esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF");
   SWIFT_INLINE_THUNK bool isEsaadCard() const;
 
+  inline const static struct _impl_registrationCertificate {  // impl struct for case registrationCertificate
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::registrationCertificate;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF");
+  SWIFT_INLINE_THUNK bool isRegistrationCertificate() const;
+
+  inline const static struct _impl_medicalMarijuanaId {  // impl struct for case medicalMarijuanaId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::medicalMarijuanaId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isMedicalMarijuanaId() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -51667,6 +51725,8 @@ public:
     if (tag == _impl::$s7BlinkID12DocumentTypeO29reciprocalHealthInsuranceCardyA2CmFWC) return cases::reciprocalHealthInsuranceCard;
     if (tag == _impl::$s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC) return cases::vehicleRegistration;
     if (tag == _impl::$s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC) return cases::esaadCard;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC) return cases::registrationCertificate;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC) return cases::medicalMarijuanaId;
     return cases::unknownDefault;
   }
 
@@ -65869,6 +65929,22 @@ return (__bridge_transfer UIImage *)(__bridge void *)_impl::$s7BlinkID26Detailed
   }
   SWIFT_INLINE_THUNK  bool DocumentType::isEsaadCard() const {
     return *this == DocumentType::esaadCard;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_registrationCertificate::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isRegistrationCertificate() const {
+    return *this == DocumentType::registrationCertificate;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_medicalMarijuanaId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isMedicalMarijuanaId() const {
+    return *this == DocumentType::medicalMarijuanaId;
   }
   SWIFT_INLINE_THUNK  bool DocumentType::isUnknownDefault() const {
     return *this == DocumentType::unknownDefault;

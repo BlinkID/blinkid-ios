@@ -68,8 +68,6 @@ public final class Camera: CameraModel {
     
     public func stop() async {
         
-        stopRotationCoordinator()
-        
         status = .stopped
         
         // Verify that the person authorizes the app to use device cameras.
