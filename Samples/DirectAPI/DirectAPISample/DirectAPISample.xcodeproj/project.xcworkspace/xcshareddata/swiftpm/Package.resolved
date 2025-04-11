@@ -1,0 +1,15 @@
+{
+  "originHash" : "6bba3796d4d3e65b05147f39484a86f88df7971042a7fe22542d63c50d63a7a0",
+  "pins" : [
+    {
+      "identity" : "blinkid-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BlinkID/blinkid-swift-package",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3a1701fe75f84b8885ce91904ea4300294ca3e64"
+      }
+    }
+  ],
+  "version" : 3
+}
