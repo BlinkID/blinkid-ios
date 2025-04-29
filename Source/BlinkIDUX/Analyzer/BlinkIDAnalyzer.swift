@@ -93,6 +93,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         let frameProcessResult = await session.process(inputImage: inputImage)
         
         if let classInfo = frameProcessResult.processResult?.inputImageAnalysisResult.documentClassInfo,
+            !classInfo.isEmpty(),
            let filter = classFilter {
             if !filter.classAllowed(classInfo: classInfo) {
                 /// - Note: scanInterrupted returns alert type in continuation which results in presenting an alert.

@@ -34516,6 +34516,8 @@ class ResourceDownloaderError { } SWIFT_UNAVAILABLE_MSG("enum 'ResourceDownloade
 
 class SdkSettings { } SWIFT_UNAVAILABLE_MSG("protocol 'SdkSettings' can not yet be represented in C++");
 
+class UXLicenseProviderBridge { } SWIFT_UNAVAILABLE_MSG("actor-isolated class 'UXLicenseProviderBridge' can not be exposed to C++");
+
 } // namespace BlinkID
 
 #undef SWIFT_SYMBOL
@@ -69058,6 +69060,8 @@ class InputImageResultProtocol { } SWIFT_UNAVAILABLE_MSG("protocol 'InputImageRe
 class ResourceDownloaderError { } SWIFT_UNAVAILABLE_MSG("enum 'ResourceDownloaderError' can not be represented in C++ as one of its cases has an associated value with type that can't be represented in C++");
 
 class SdkSettings { } SWIFT_UNAVAILABLE_MSG("protocol 'SdkSettings' can not yet be represented in C++");
+
+class UXLicenseProviderBridge { } SWIFT_UNAVAILABLE_MSG("actor-isolated class 'UXLicenseProviderBridge' can not be exposed to C++");
 
 } // namespace BlinkID
 

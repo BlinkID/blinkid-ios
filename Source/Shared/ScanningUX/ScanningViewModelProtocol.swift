@@ -83,8 +83,13 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             camera.isTorchEnabled = isTorchOn
             torchImage = isTorchOn ? Image(systemName: "bolt.fill") : Image(systemName: "bolt.slash.fill")
             torchHint = isTorchOn ? "Turn flashlight on" : "Turn flashlight off"
+            if isTorchOn && !isToastVisible {
+                isToastVisible = true
+            }
         }
     }
+    
+    @Published public var isToastVisible: Bool = false
     
     // Help button
     let helpImage = Image(systemName: "questionmark.circle.fill")
@@ -129,6 +134,20 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         }
     }
     
+    // MARK: - Tooltip
+    @Published var showTooltip: Bool = false {
+        didSet {
+            if showTooltip {
+                startHideTooltipTimer()
+            }
+            else {
+                hideTooltipTimer?.invalidate()
+            }
+        }
+    }
+    private var hideTooltipTimer: Timer?
+    private var showTooltipTimer: Timer?
+    
     // MARK: - Animation Properties
     @Published var showCardImage: Bool = false
     @Published var cardImage = Image.frontIdImage
@@ -150,12 +169,21 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     var timer: Timer?
     private var lastReticleStateChange: TimeInterval = Date().timeIntervalSince1970
     
+    let showDemoOverlayImage: Bool
+    let showProductionOverlayImage: Bool
+    
     /// Initializes a new scanning UX model with the specified document analyzer.
     /// - Parameter analyzer: The analyzer responsible for processing camera frames and detecting documents.
     /// - Parameter shouldShowIntroductionAlert: Whether introduction alert will be shown on appear
     public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false) {
         self.analyzer = analyzer
         self.shouldShowIntroductionAlert = shouldShowIntroductionAlert
+        self.showDemoOverlayImage = UXLicenseProviderBridge.shared.showDemoOverlay
+        self.showProductionOverlayImage = UXLicenseProviderBridge.shared.showProductionOverlay
+    }
+    
+    deinit {
+        hideTooltipTimer?.invalidate()
     }
     
     // - MARK: - Protocol Implementation
@@ -186,6 +214,7 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         withAnimation {
             showIntroductionAlert = false
         }
+        startTooltipTimer()
     }
     
     public func stopEventHandling() {
@@ -250,5 +279,35 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
                 }
             }
         }
+    }
+    
+    // MARK: - Tooltip Management
+    
+    func startTooltipTimer() {
+        showTooltipTimer?.invalidate()
+        showTooltip = false
+        showTooltipTimer = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(showTooltipInvoked), userInfo: nil, repeats: false)
+        RunLoop.current.add(showTooltipTimer!, forMode: .common)
+    }
+    
+    @MainActor
+    @objc private func showTooltipInvoked() {
+        showTooltip = true
+    }
+    
+    /// Cancels the tooltip timer and hides the tooltip
+    func cancelTooltipTimer() {
+        showTooltipTimer?.invalidate()
+        showTooltipTimer = nil
+        showTooltip = false
+    }
+    
+    private func startHideTooltipTimer() {
+        hideTooltipTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(hideTooltipInvoked), userInfo: nil, repeats: false)
+        RunLoop.current.add(hideTooltipTimer!, forMode: .common)
+    }
+    
+    @objc private func hideTooltipInvoked() {
+        showTooltip = false
     }
 }

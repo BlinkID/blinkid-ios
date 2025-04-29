@@ -83,7 +83,7 @@ struct Reticle: View {
     var body: some View {
         ZStack {
             switch state {
-            case .front, .back, .barcode:
+            case .front, .back, .barcode, .passport(_):
                 grayBlurView
                 ArcRing(radius: dashDiameter / 2)
                     .trim(from: 0.0, to: percentage)
@@ -138,7 +138,7 @@ struct Reticle: View {
                     .stroke(Color.white.opacity(0.5), lineWidth: lineWidth)
                     .frame(width: dashDiameter, height: dashDiameter)
                 centerDot
-            case .inactive, .flip:
+            case .inactive, .flip, .inactiveWithMessage(_):
                 EmptyView()
             }
             

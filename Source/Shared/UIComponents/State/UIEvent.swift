@@ -11,6 +11,9 @@ public enum UIEvent: Equatable, Sendable {
     /// Indicates the wrong side of the document is being presented
     case wrongSide
     
+    /// Indicates the wrong side of the passport document is being presented
+    case wrongSidePassport(passportOrientation: PassportOrientation)
+    
     /// Camera image is too blurry for accurate document detection
     case blur
     
@@ -34,4 +37,13 @@ public enum UIEvent: Equatable, Sendable {
     
     /// Document is partially outside the camera frame
     case notFullyVisible
+    
+    /// Not enough light on the document
+    case tooDark
+    
+    /// Document is exposed to too much light
+    case tooBright
+    
+    /// Face photo on the document is not fully visible
+    case facePhotoNotFullyVisible
 }

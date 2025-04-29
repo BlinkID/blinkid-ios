@@ -34,4 +34,11 @@ public protocol UXThemeProtocol {
     // Help Button Theme
     var helpButtonForegroundColor: Color { get }
     var helpButtonBackgroundColor: Color { get }
+    
+    // Need Help Button Tooltip
+    var helpButtonTooltipForegroundColor: Color { get }
+    var helpButtonTooltipBackgroundColor: Color { get }
+    
+    // Toast
+    var toastBackgroundColor: Color { get }
 }
