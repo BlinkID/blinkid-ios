@@ -38,6 +38,26 @@ extension Image {
     static var noCameraAccessImage: Image {
         Image("no_camera_access", bundle: Bundle.frameworkBundle)
     }
+    
+    static var passportBottomImage: Image {
+        Image("passport_bottom", bundle: Bundle.frameworkBundle)
+    }
+    
+    static var passportHighlightImage: Image {
+        Image("passport_highlight", bundle: Bundle.frameworkBundle)
+    }
+    
+    static var passportTopImage: Image {
+        Image("passport_top", bundle: Bundle.frameworkBundle)
+    }
+    
+    static var demoOverlayImage: Image {
+        Image("demo_overlay", bundle: Bundle.frameworkBundle)
+    }
+    
+    static var productionOverlayImage: Image {
+        Image("production_overlay", bundle: Bundle.frameworkBundle)
+    }
 }
 
 // custom modifiers

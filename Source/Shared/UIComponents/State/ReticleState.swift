@@ -17,6 +17,8 @@ public enum ReticleState: ReticleStateProtocol {
     case flip
     case error(String)
     case inactive
+    case passport(String)
+    case inactiveWithMessage(String)
     
     var text: String? {
         switch self {
@@ -32,6 +34,10 @@ public enum ReticleState: ReticleStateProtocol {
             return message
         case .detecting, .inactive:
             return nil
+        case .passport(let message):
+            return message
+        case .inactiveWithMessage(let message):
+            return message
         }
     }
     
@@ -45,6 +51,8 @@ public enum ReticleState: ReticleStateProtocol {
             2.0
         case .flip, .inactive:
             0.0
+        case .passport(_), .inactiveWithMessage(_):
+            2.0
         }
     }
     
@@ -54,6 +62,8 @@ public enum ReticleState: ReticleStateProtocol {
             return false
         case .error(_):
             return true
+        case .passport(_), .inactiveWithMessage(_):
+            return false
         }
     }
 }

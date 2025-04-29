@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlinkID-Swift.h</key>
 		<data>
-		CVUKQHhc3PYTQ7NBFzfcmPrcku0=
+		i2IwixR739Xud0cadefNdG9T1ww=
 		</data>
 		<key>Headers/BlinkID.h</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		s2UqqRRvcruXui6d/RdptwVekCA=
+		TfWrwS8VSOgsCd62jEBVpNpBX5c=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Oa3KpVjIvZ6cKuuN2i+53G4ERB8=
+		gQVtKPnRxGZhotzIAGYF4ULRZ4o=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		iysHMXPMzD2+4VUO6689vAxVzRs=
+		tU8rt38j1F1iisJGKSEg5wF+R40=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		iysHMXPMzD2+4VUO6689vAxVzRs=
+		tU8rt38j1F1iisJGKSEg5wF+R40=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		QMRTzavRYvMTc/LoCJq+cpFLSbs=
+		k7lrOn9liH/ebrBInOXZLSlHUlo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>conan.xcconfig</key>
 		<data>
-		hK3fqIckHI3wID+jkT6ceNi/68s=
+		hbcg8qJf80djB3KWFzEpryMSkvY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Li5+82PAImxx3zklfNH49DT4arAEs5z0EZmfNjjZm3Y=
+			mrABCxr73c2FAyDM9tsonXKaHMBtrZf8HK6+NzIuevo=
 			</data>
 		</dict>
 		<key>Headers/BlinkID.h</key>
@@ -88,14 +88,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			evoMtBp3ADt/P7R/ELzRdkoGBUOgRwL91WpdAwB/C78=
+			DekA7MGtNUmeY330rbX4qgXJyHhFqWXu7yyzfxF/fVc=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Do9pVeFyJGvzB/lpzqo5oOaZuWqynmTpeN6IK/4aRTk=
+			v8tZPU5jOLujXW2Xxne1/W0hGbkFjd0faoaEsNzpZT8=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Do9pVeFyJGvzB/lpzqo5oOaZuWqynmTpeN6IK/4aRTk=
+			v8tZPU5jOLujXW2Xxne1/W0hGbkFjd0faoaEsNzpZT8=
 			</data>
 		</dict>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q02ZfV350aZPxF/llKFIEucp0S5cnIM9KYc00mw7j6U=
+			e4VnPxzeFl9PVmAaWs5oDoaB6TOZxCYH5/W9LT+RsoM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QZaPmtixPgenN7YqSFi/NiRpTl2I5fLoMWQbuHj3U88=
+			8HTlz2gncqnRf4Cn+VjzUL/1HygSzEs7qgPkxmWyd28=
 			</data>
 		</dict>
 	</dict>

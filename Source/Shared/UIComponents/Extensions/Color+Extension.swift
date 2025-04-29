@@ -15,6 +15,8 @@ public enum MicroblinkColor: String {
     case tooltipBackground = "verify_tooltip_background"
     case helpBackground = "verify_help_background"
     case background = "verify_background"
+    case needHelpTooltipBackground = "need_help_tooltip"
+    case toastBackgroundColor = "toast_background"
 }
 
 extension Color {
@@ -27,4 +29,6 @@ extension Color {
     static let mbTooltipBackground = Color(MicroblinkColor.tooltipBackground)
     static let mbHelpBackground = Color(MicroblinkColor.helpBackground)
     static let mbBackground = Color(MicroblinkColor.background)
+    static let mbNeedHelpTooltipBackground = Color(MicroblinkColor.needHelpTooltipBackground)
+    static let mbToastBackground = Color(MicroblinkColor.toastBackgroundColor)
 }
