@@ -1356,7 +1356,14 @@ public enum AlphabetType : Swift.String, Swift.Sendable, Swift.CaseIterable {
     get
   }
 }
+public struct RectangleFPoint : Swift.Sendable {
+  public let x: Swift.Float
+  public let y: Swift.Float
+}
 public struct RectangleF : Swift.Sendable {
+  public let origin: BlinkID.RectangleFPoint
+  public let width: Swift.Float
+  public let height: Swift.Float
 }
 public struct DateResult<StringType> : Swift.Sendable where StringType : Swift.Sendable {
   public let day: Swift.Int?

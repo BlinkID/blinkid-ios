@@ -52841,8 +52841,273 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "RectangleFPoint",
+        "printedName": "RectangleFPoint",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "x",
+            "printedName": "x",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BlinkID15RectangleFPointV1xSfvp",
+            "mangledName": "$s7BlinkID15RectangleFPointV1xSfvp",
+            "moduleName": "BlinkID",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BlinkID15RectangleFPointV1xSfvg",
+                "mangledName": "$s7BlinkID15RectangleFPointV1xSfvg",
+                "moduleName": "BlinkID",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "y",
+            "printedName": "y",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BlinkID15RectangleFPointV1ySfvp",
+            "mangledName": "$s7BlinkID15RectangleFPointV1ySfvp",
+            "moduleName": "BlinkID",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BlinkID15RectangleFPointV1ySfvg",
+                "mangledName": "$s7BlinkID15RectangleFPointV1ySfvg",
+                "moduleName": "BlinkID",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7BlinkID15RectangleFPointV",
+        "mangledName": "$s7BlinkID15RectangleFPointV",
+        "moduleName": "BlinkID",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "RectangleF",
         "printedName": "RectangleF",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "origin",
+            "printedName": "origin",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RectangleFPoint",
+                "printedName": "BlinkID.RectangleFPoint",
+                "usr": "s:7BlinkID15RectangleFPointV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BlinkID10RectangleFV6originAA0C6FPointVvp",
+            "mangledName": "$s7BlinkID10RectangleFV6originAA0C6FPointVvp",
+            "moduleName": "BlinkID",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RectangleFPoint",
+                    "printedName": "BlinkID.RectangleFPoint",
+                    "usr": "s:7BlinkID15RectangleFPointV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BlinkID10RectangleFV6originAA0C6FPointVvg",
+                "mangledName": "$s7BlinkID10RectangleFV6originAA0C6FPointVvg",
+                "moduleName": "BlinkID",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "width",
+            "printedName": "width",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BlinkID10RectangleFV5widthSfvp",
+            "mangledName": "$s7BlinkID10RectangleFV5widthSfvp",
+            "moduleName": "BlinkID",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BlinkID10RectangleFV5widthSfvg",
+                "mangledName": "$s7BlinkID10RectangleFV5widthSfvg",
+                "moduleName": "BlinkID",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "height",
+            "printedName": "height",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7BlinkID10RectangleFV6heightSfvp",
+            "mangledName": "$s7BlinkID10RectangleFV6heightSfvp",
+            "moduleName": "BlinkID",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7BlinkID10RectangleFV6heightSfvg",
+                "mangledName": "$s7BlinkID10RectangleFV6heightSfvg",
+                "moduleName": "BlinkID",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
         "declKind": "Struct",
         "usr": "s:7BlinkID10RectangleFV",
         "mangledName": "$s7BlinkID10RectangleFV",

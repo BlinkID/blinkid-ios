@@ -5807,6 +5807,11 @@ SWIFT_EXTERN void $s7BlinkID21RecognitionModeFilterV15enableBarcodeIdSbvs(bool v
 SWIFT_EXTERN bool $s7BlinkID21RecognitionModeFilterV018enableFullDocumentC0Sbvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID21RecognitionModeFilterV018enableFullDocumentC0Sbvs(bool value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID21RecognitionModeFilterV11enableMrzId0fG4Visa0fG8Passport0f5PhotoH00f7BarcodeH00f12FullDocumentC0ACSb_S5btcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, bool enableMrzId, bool enableMrzVisa, bool enableMrzPassport, bool enablePhotoId, bool enableBarcodeId, bool enableFullDocumentRecognition) SWIFT_NOEXCEPT SWIFT_CALL; // init(enableMrzId:enableMrzVisa:enableMrzPassport:enablePhotoId:enableBarcodeId:enableFullDocumentRecognition:)
+SWIFT_EXTERN void $s7BlinkID10RectangleFV6originAA0C6FPointVvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN float $s7BlinkID10RectangleFV5widthSfvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN float $s7BlinkID10RectangleFV6heightSfvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN float $s7BlinkID15RectangleFPointV1xSfvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN float $s7BlinkID15RectangleFPointV1ySfvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID6RegionO8rawValueACSgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID6RegionO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN float $s7BlinkID16RegionOfInterestV1xSfvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -22503,6 +22508,18 @@ struct implClassFor<BlinkID::RecognitionModeFilter> { using type = BlinkID::_imp
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+class SWIFT_SYMBOL("s:7BlinkID15RectangleFPointV") RectangleFPoint;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+static inline const constexpr bool isUsableInGenericContext<BlinkID::RectangleFPoint> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 namespace _impl {
 
 class _impl_RectangleF;
@@ -22553,6 +22570,9 @@ public:
   swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
   abort();
   }
+  SWIFT_INLINE_THUNK RectangleFPoint getOrigin() const SWIFT_SYMBOL("s:7BlinkID10RectangleFV6originAA0C6FPointVvp");
+  SWIFT_INLINE_THUNK float getWidth() const SWIFT_SYMBOL("s:7BlinkID10RectangleFV5widthSfvp");
+  SWIFT_INLINE_THUNK float getHeight() const SWIFT_SYMBOL("s:7BlinkID10RectangleFV6heightSfvp");
 private:
   SWIFT_INLINE_THUNK RectangleF(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
   static SWIFT_INLINE_THUNK RectangleF _make() noexcept {
@@ -22624,6 +22644,135 @@ template<>
 static inline const constexpr bool isOpaqueLayout<BlinkID::RectangleF> = true;
 template<>
 struct implClassFor<BlinkID::RectangleF> { using type = BlinkID::_impl::_impl_RectangleF; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace _impl {
+
+class _impl_RectangleFPoint;
+
+// Type metadata accessor for RectangleFPoint
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID15RectangleFPointVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID15RectangleFPointV") RectangleFPoint final {
+public:
+  SWIFT_INLINE_THUNK ~RectangleFPoint() noexcept {
+    auto metadata = _impl::$s7BlinkID15RectangleFPointVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK RectangleFPoint(const RectangleFPoint &other) noexcept {
+    auto metadata = _impl::$s7BlinkID15RectangleFPointVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK RectangleFPoint &operator =(const RectangleFPoint &other) noexcept {
+    auto metadata = _impl::$s7BlinkID15RectangleFPointVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK RectangleFPoint &operator =(RectangleFPoint &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER RectangleFPoint(RectangleFPoint &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  SWIFT_INLINE_THUNK float getX() const SWIFT_SYMBOL("s:7BlinkID15RectangleFPointV1xSfvp");
+  SWIFT_INLINE_THUNK float getY() const SWIFT_SYMBOL("s:7BlinkID15RectangleFPointV1ySfvp");
+private:
+  SWIFT_INLINE_THUNK RectangleFPoint(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK RectangleFPoint _make() noexcept {
+    auto metadata = _impl::$s7BlinkID15RectangleFPointVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return RectangleFPoint(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_RectangleFPoint;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID15RectangleFPointVD;
+  static inline constexpr $s7BlinkID15RectangleFPointVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_RectangleFPoint {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(RectangleFPoint &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const RectangleFPoint &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER RectangleFPoint returnNewValue(T callable) {
+    auto result = RectangleFPoint::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID15RectangleFPointVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::RectangleFPoint> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID15RectangleFPointVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+static inline const constexpr bool isValueType<BlinkID::RectangleFPoint> = true;
+template<>
+static inline const constexpr bool isOpaqueLayout<BlinkID::RectangleFPoint> = true;
+template<>
+struct implClassFor<BlinkID::RectangleFPoint> { using type = BlinkID::_impl::_impl_RectangleFPoint; };
 } // namespace
 #pragma clang diagnostic pop
 } // namespace swift
@@ -32757,6 +32906,23 @@ return (__bridge_transfer UIImage *)(__bridge void *)_impl::$s7BlinkID16InputIma
   return _impl::_impl_RecognitionModeFilter::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
     _impl::$s7BlinkID21RecognitionModeFilterV11enableMrzId0fG4Visa0fG8Passport0f5PhotoH00f7BarcodeH00f12FullDocumentC0ACSb_S5btcfC(result, enableMrzId, enableMrzVisa, enableMrzPassport, enablePhotoId, enableBarcodeId, enableFullDocumentRecognition);
   });
+  }
+  SWIFT_INLINE_THUNK RectangleFPoint RectangleF::getOrigin() const {
+  return _impl::_impl_RectangleFPoint::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    _impl::$s7BlinkID10RectangleFV6originAA0C6FPointVvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK float RectangleF::getWidth() const {
+  return _impl::$s7BlinkID10RectangleFV5widthSfvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK float RectangleF::getHeight() const {
+  return _impl::$s7BlinkID10RectangleFV6heightSfvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK float RectangleFPoint::getX() const {
+  return _impl::$s7BlinkID15RectangleFPointV1xSfvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK float RectangleFPoint::getY() const {
+  return _impl::$s7BlinkID15RectangleFPointV1ySfvg(_getOpaquePointer());
   }
   SWIFT_INLINE_THUNK Region Region::_impl_none::operator()() const {
     auto result = Region::_make();

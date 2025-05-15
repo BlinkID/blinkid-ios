@@ -1,5 +1,9 @@
 # Release notes
 
+## 7.2.1
+
+- Made RectangleF properties public to enable external access to position and size data for Images and StringResult on cropped images.
+
 ## 7.2.0
 
 ## What's new
