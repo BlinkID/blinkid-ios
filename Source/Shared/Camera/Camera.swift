@@ -25,7 +25,7 @@ public final class Camera: CameraModel {
     public private(set) var isSwitchingModes = false
     
     /// An enum of current video orientation.
-    public private(set) var orientation: AVCaptureVideoOrientation = .portrait
+    public private(set) var orientation: AVCaptureVideoOrientation = .initialOrientation
     
     /// An object that manages the app's capture functionality.
     private let captureService: CaptureService = CaptureService()
@@ -138,7 +138,7 @@ public final class Camera: CameraModel {
         // Enable device orientation notifications
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         // Set initial orientation
-        updateVideoOrientation()
+        updateVideoOrientation(initial: true)
     }
     
     @objc private func deviceOrientationChanged() {
@@ -150,22 +150,29 @@ public final class Camera: CameraModel {
         NotificationCenter.default.removeObserver(self)
     }
     
-    private func updateVideoOrientation() {
-        let deviceOrientation = UIDevice.current.orientation
-        
-        guard deviceOrientation != .faceDown && deviceOrientation != .faceUp else {
-            return
+    private func updateVideoOrientation(initial: Bool = false) {
+        if !initial {
+            let deviceOrientation = UIDevice.current.orientation
+            
+            guard let interfaceOrientation = deviceOrientation.interfaceOrientationMask,
+                  interfaceOrientation.isSupported else {
+                return
+            }
+            
+            guard !deviceOrientation.isFlat else {
+                return
+            }
+            
+            guard UIDevice.current.userInterfaceIdiom == .pad || deviceOrientation != .portraitUpsideDown else {
+                return
+            }
+            
+            guard let videoOrientation = deviceOrientation.captureVideoOrientation else {
+                return
+            }
+            
+            orientation = videoOrientation
         }
-        
-        guard UIDevice.current.userInterfaceIdiom == .pad || deviceOrientation != .portraitUpsideDown else {
-            return
-        }
-        
-        guard let videoOrientation = AVCaptureVideoOrientation(rawValue: deviceOrientation.rawValue) else {
-            return
-        }
-        
-        orientation = videoOrientation
         
         // Check status before updating preview to avoid the crash
         guard status != .stopped && status != .unauthorized && status != .failed else {
@@ -174,7 +181,7 @@ public final class Camera: CameraModel {
         
         // Update preview layer orientation using existing method
         Task {
-            await captureService.updatePreviewOrientation(videoOrientation)
+            await captureService.updatePreviewOrientation(orientation)
         }
     }
     
@@ -193,3 +200,114 @@ public final class Camera: CameraModel {
 }
 
 fileprivate let logger = Logger(subsystem: "com.microblink.camera", category: "Camera")
+
+extension UIDeviceOrientation {
+    var interfaceOrientationMask: UIInterfaceOrientationMask? {
+        switch self {
+        case .portrait: return .portrait
+        case .portraitUpsideDown: return .portraitUpsideDown
+        case .landscapeLeft: return .landscapeRight
+        case .landscapeRight: return .landscapeLeft
+        default: return nil
+        }
+    }
+    
+    var captureVideoOrientation: AVCaptureVideoOrientation? {
+        switch self {
+        case .portrait:
+            return .portrait
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
+        case .landscapeLeft:
+            return .landscapeRight
+        case .landscapeRight:
+            return .landscapeLeft
+        case .faceUp, .faceDown, .unknown:
+            return nil
+        default:
+            return nil
+        }
+    }
+}
+
+extension UIInterfaceOrientation {
+    var interfaceOrientationMask: UIInterfaceOrientationMask? {
+        switch self {
+        case .portrait: return .portrait
+        case .portraitUpsideDown: return .portraitUpsideDown
+        case .landscapeLeft: return .landscapeLeft
+        case .landscapeRight: return .landscapeRight
+        default: return nil
+        }
+    }
+    
+    var captureVideoOrientation: AVCaptureVideoOrientation? {
+        switch self {
+        case .portrait: return .portrait
+        case .portraitUpsideDown: return .portraitUpsideDown
+        case .landscapeLeft: return .landscapeLeft
+        case .landscapeRight: return .landscapeRight
+        default: return nil
+        }
+    }
+}
+
+extension AVCaptureVideoOrientation {
+    /// - Note: this is added because we need to find the initial orientation when starting camera scanning.
+    ///         Simply picking .portrait is not enough since supported interface orientations do not need to contain it.
+    ///         In iOS 17 we can use RotationCoordinator for this.
+    ///                                                          (4.6.2025. Toni Kreso)
+    static var initialOrientation: AVCaptureVideoOrientation {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let interfaceOrientation = windowScene.interfaceOrientation
+            let interfaceMask = interfaceOrientation.interfaceOrientationMask
+            
+            if let interfaceMask = interfaceMask,
+               interfaceMask.isSupported,
+               let videoOrientation = interfaceOrientation.captureVideoOrientation {
+                return videoOrientation
+            }
+        }
+
+        let supported = UIInterfaceOrientationMask.supportedOrientationsFromPlist
+
+        if supported.contains(.portrait) {
+            return .portrait
+        } else if supported.contains(.landscapeLeft) {
+            return .landscapeLeft
+        } else if supported.contains(.landscapeRight) {
+            return .landscapeRight
+        } else if supported.contains(.portraitUpsideDown) {
+            return .portraitUpsideDown
+        }
+
+        return .portrait
+    }
+}
+
+extension UIInterfaceOrientationMask {
+    static var supportedOrientationsFromPlist: UIInterfaceOrientationMask {
+        guard let rawList = Bundle.main.object(forInfoDictionaryKey: "UISupportedInterfaceOrientations") as? [String] else {
+            return []
+        }
+        
+        return rawList.reduce([]) { result, key in
+            switch key {
+            case "UIInterfaceOrientationPortrait":
+                return result.union(.portrait)
+            case "UIInterfaceOrientationPortraitUpsideDown":
+                return result.union(.portraitUpsideDown)
+            case "UIInterfaceOrientationLandscapeLeft":
+                return result.union(.landscapeLeft)
+            case "UIInterfaceOrientationLandscapeRight":
+                return result.union(.landscapeRight)
+            default:
+                return result
+            }
+        }
+    }
+    
+    var isSupported: Bool {
+        return Self.supportedOrientationsFromPlist.contains(self)
+    }
+}

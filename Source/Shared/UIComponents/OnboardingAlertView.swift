@@ -6,9 +6,9 @@
 import SwiftUI
 
 struct OnboardingAlertView: View {
-
-    @State private var orientation = UIDevice.current.orientation
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var contentHeight: CGFloat = 40
+    
     private let theme: any UXThemeProtocol
     private let dismiss: () -> Void
     
@@ -49,9 +49,6 @@ struct OnboardingAlertView: View {
         )
         .padding(50)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onRotate { newOrientation in
-            orientation = newOrientation
-        }
     }
     
     @ViewBuilder
@@ -80,7 +77,7 @@ struct OnboardingAlertView: View {
     }
     
     var isPortrait: Bool {
-        orientation.isPortrait || orientation == .unknown || orientation.isFlat
+        horizontalSizeClass == .compact
     }
     
     var titleText: some View {

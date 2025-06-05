@@ -51,14 +51,14 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     
     private var cancellables = Set<AnyCancellable>()
     
-    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true) {
+    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true, showHelpButton: Bool = true) {
         
         self.topImageOpacity = passportBeginAnimationAlpha
         self.bottomImageOpacity = passportEndAnimationAlpha
         self.highlightOffset = 0
         self.passportOrientation = nil
         
-        super.init(analyzer: analyzer, shouldShowIntroductionAlert: shouldShowIntroductionAlert)
+        super.init(analyzer: analyzer, shouldShowIntroductionAlert: shouldShowIntroductionAlert, showHelpButton: showHelpButton)
         
         startEventHandling()
         camera.$status

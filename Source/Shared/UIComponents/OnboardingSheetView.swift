@@ -83,9 +83,10 @@ struct OnboardingSheetView: View {
 }
 
 struct TabItemView: View {
-    let onboardingStep: OnboardingStep
-    @State private var orientation = UIDevice.current.orientation
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State private var contentHeight: CGFloat = 40
+    
+    private let onboardingStep: OnboardingStep
     private let theme: any UXThemeProtocol
     
     init(theme: any UXThemeProtocol, onboardingStep: OnboardingStep) {
@@ -95,16 +96,13 @@ struct TabItemView: View {
     
     var body: some View {
         Group {
-            if orientation.isPortrait || orientation == .unknown || orientation.isFlat {
+            if horizontalSizeClass == .compact {
                 VStack(spacing: 30) { bodyContent }
             } else {
                 HStack(alignment: .center, spacing: 30) { bodyContent }
             }
         }
         .padding()
-        .onRotate { newOrientation in
-            orientation = newOrientation
-        }
     }
     
     var bodyContent: Group< some View > {
@@ -145,22 +143,5 @@ struct HeightPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 40
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = nextValue()
-    }
-}
-
-struct DeviceRotationViewModifier: ViewModifier {
-    let action: (UIDeviceOrientation) -> Void
-
-    func body(content: Content) -> some View {
-        content
-            .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
-                action(UIDevice.current.orientation)
-            }
-    }
-}
-
-extension View {
-    func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
-        self.modifier(DeviceRotationViewModifier(action: action))
     }
 }

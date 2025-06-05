@@ -1,5 +1,15 @@
 # Release notes
 
+## 7.2.2
+
+## Bug Fixes
+- fixed RectangleF width and height mapping
+- fixed issue with camera rotation when rotation is locked
+- fixed issue with camera rotation when not all interface orientations are supported
+
+## What's new
+- added showHelpButton for BlinkIDUXModel
+
 ## 7.2.1
 
 - Made RectangleF properties public to enable external access to position and size data for Images and StringResult on cropped images.
