@@ -13158,6 +13158,7 @@ struct implClassFor<BlinkID::CroppedImageSettings> { using type = BlinkID::_impl
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
 
+
 class SWIFT_SYMBOL("s:7BlinkID18DataMatchFieldTypeO") DataMatchFieldType;
 } // end namespace 
 
@@ -19608,6 +19609,7 @@ struct implClassFor<BlinkID::InputImage> { using type = BlinkID::_impl::_impl_In
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+
 class SWIFT_SYMBOL("s:7BlinkID16ProcessingStatusO") ProcessingStatus;
 } // end namespace 
 
@@ -21382,6 +21384,7 @@ struct implClassFor<BlinkID::ModelLoadError> { using type = BlinkID::_impl::_imp
 } // namespace swift
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 
 
 
@@ -47869,6 +47872,7 @@ struct implClassFor<BlinkID::CroppedImageSettings> { using type = BlinkID::_impl
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
 
+
 class SWIFT_SYMBOL("s:7BlinkID18DataMatchFieldTypeO") DataMatchFieldType;
 } // end namespace 
 
@@ -54319,6 +54323,7 @@ struct implClassFor<BlinkID::InputImage> { using type = BlinkID::_impl::_impl_In
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+
 class SWIFT_SYMBOL("s:7BlinkID16ProcessingStatusO") ProcessingStatus;
 } // end namespace 
 
@@ -56093,6 +56098,7 @@ struct implClassFor<BlinkID::ModelLoadError> { using type = BlinkID::_impl::_imp
 } // namespace swift
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 
 
 

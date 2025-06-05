@@ -162,11 +162,12 @@ extension ScanningUXProtocol where Self: View {
                                     }
                                 }
                                 Spacer()
-                                HelpButton(
-                                    showTooltip: viewModel.showTooltip,
-                                    tooltipText: "mb_need_help_tooltip".localizedString
-                                )
-                                
+                                if viewModel.showHelpButton {
+                                    HelpButton(
+                                        showTooltip: viewModel.showTooltip,
+                                        tooltipText: "mb_need_help_tooltip".localizedString
+                                    )
+                                }
                             }
                             .disabled(viewModel.showIntroductionAlert)
                             .padding()

@@ -100,6 +100,9 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     // Introduction alert
     let shouldShowIntroductionAlert: Bool
     
+    // Onboarding sheet
+    let showHelpButton: Bool
+    
     // MARK: - Alert States
     @Published public var showIntroductionAlert = false {
         didSet {
@@ -175,9 +178,10 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     /// Initializes a new scanning UX model with the specified document analyzer.
     /// - Parameter analyzer: The analyzer responsible for processing camera frames and detecting documents.
     /// - Parameter shouldShowIntroductionAlert: Whether introduction alert will be shown on appear
-    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false) {
+    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false, showHelpButton: Bool = false) {
         self.analyzer = analyzer
         self.shouldShowIntroductionAlert = shouldShowIntroductionAlert
+        self.showHelpButton = showHelpButton
         self.showDemoOverlayImage = UXLicenseProviderBridge.shared.showDemoOverlay
         self.showProductionOverlayImage = UXLicenseProviderBridge.shared.showProductionOverlay
     }

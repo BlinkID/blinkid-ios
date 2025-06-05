@@ -59464,6 +59464,102 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "BlinkID"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CxxSession",
+        "printedName": "CxxSession",
+        "declKind": "Struct",
+        "usr": "c:@N@MB@N@NativeBlinkID@S@CxxSession",
+        "moduleName": "__ObjC",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InputImage",
+        "printedName": "InputImage",
+        "declKind": "Struct",
+        "usr": "c:@N@MB@S@InputImage",
+        "moduleName": "__ObjC",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativeBarcodeElements",
+        "printedName": "NativeBarcodeElements",
+        "declKind": "Struct",
+        "usr": "c:@N@MB@N@NativeBlinkID@S@NativeBarcodeElements",
+        "moduleName": "__ObjC",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -59885,14 +59981,14 @@
     {
       "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 10191,
+      "offset": 10304,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/opt\/jenkins-ios-armini2\/E0\/sdk-document-verification-v2-ios\/DocumentVerification\/DocumentVerification\/Capture\/Swift\/Shared\/License\/LicenseProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 10242,
+      "offset": 10355,
       "length": 5,
       "value": "false"
     },
