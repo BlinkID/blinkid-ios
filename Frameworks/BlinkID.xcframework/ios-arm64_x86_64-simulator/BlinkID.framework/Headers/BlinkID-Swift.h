@@ -5606,6 +5606,8 @@ SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV19resourceLocalFolderSSvs(struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvs(struct swift_interop_passStub_BlinkID_uint64_t_0_8_uint64_t_8_16 value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A9IDSessionC22cancelActiveProcessingyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // cancelActiveProcessing()
 SWIFT_EXTERN void $s7BlinkID0A9IDSessionC22resumeActiveProcessingyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // resumeActiveProcessing()
 SWIFT_EXTERN void $s7BlinkID0A17IDSessionSettingsV16inputImageSourceAA05InputfG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -9112,6 +9114,8 @@ public:
   SWIFT_INLINE_THUNK void setResourceLocalFolder(const swift::String& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV19resourceLocalFolderSSvp");
   SWIFT_INLINE_THUNK RequestTimeout getResourceRequestTimeout() const SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvp");
   SWIFT_INLINE_THUNK void setResourceRequestTimeout(const RequestTimeout& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvp");
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> getMicroblinkProxyURL() const SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvp");
+  SWIFT_INLINE_THUNK void setMicroblinkProxyURL(const swift::Optional<swift::String>& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvp");
 private:
   SWIFT_INLINE_THUNK BlinkIDSdkSettings(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
   static SWIFT_INLINE_THUNK BlinkIDSdkSettings _make() noexcept {
@@ -16329,6 +16333,8 @@ extern unsigned $s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC;
 }
 
 } // namespace _impl
@@ -16455,6 +16461,8 @@ public:
     esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF"),
     registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF"),
     medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF"),
+    nonCardTribalId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmF"),
+    diplomaticId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO12diplomaticIdyA2CmF"),
     unknownDefault
   };
 
@@ -17100,6 +17108,22 @@ public:
   } medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF");
   SWIFT_INLINE_THUNK bool isMedicalMarijuanaId() const;
 
+  inline const static struct _impl_nonCardTribalId {  // impl struct for case nonCardTribalId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nonCardTribalId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } nonCardTribalId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isNonCardTribalId() const;
+
+  inline const static struct _impl_diplomaticId {  // impl struct for case diplomaticId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::diplomaticId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } diplomaticId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO12diplomaticIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isDiplomaticId() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -17190,6 +17214,8 @@ public:
     if (tag == _impl::$s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC) return cases::esaadCard;
     if (tag == _impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC) return cases::registrationCertificate;
     if (tag == _impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC) return cases::medicalMarijuanaId;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC) return cases::nonCardTribalId;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC) return cases::diplomaticId;
     return cases::unknownDefault;
   }
 
@@ -17668,6 +17694,9 @@ extern unsigned $s7BlinkID9FieldTypeO17dependentFullNameyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO19eligibilityCategoryyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO24specificDocumentValidityyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO12vehicleOwneryA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO11countryCodeyA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC;
 }
 
 } // namespace _impl
@@ -17765,6 +17794,9 @@ public:
     eligibilityCategory SWIFT_SYMBOL("s:7BlinkID9FieldTypeO19eligibilityCategoryyA2CmF"),
     specificDocumentValidity SWIFT_SYMBOL("s:7BlinkID9FieldTypeO24specificDocumentValidityyA2CmF"),
     vehicleOwner SWIFT_SYMBOL("s:7BlinkID9FieldTypeO12vehicleOwneryA2CmF"),
+    nationalInsuranceNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmF"),
+    countryCode SWIFT_SYMBOL("s:7BlinkID9FieldTypeO11countryCodeyA2CmF"),
+    certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF"),
     unknownDefault
   };
 
@@ -18178,6 +18210,30 @@ public:
   } vehicleOwner SWIFT_SYMBOL("s:7BlinkID9FieldTypeO12vehicleOwneryA2CmF");
   SWIFT_INLINE_THUNK bool isVehicleOwner() const;
 
+  inline const static struct _impl_nationalInsuranceNumber {  // impl struct for case nationalInsuranceNumber
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nationalInsuranceNumber;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } nationalInsuranceNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmF");
+  SWIFT_INLINE_THUNK bool isNationalInsuranceNumber() const;
+
+  inline const static struct _impl_countryCode {  // impl struct for case countryCode
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::countryCode;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } countryCode SWIFT_SYMBOL("s:7BlinkID9FieldTypeO11countryCodeyA2CmF");
+  SWIFT_INLINE_THUNK bool isCountryCode() const;
+
+  inline const static struct _impl_certificateNumber {  // impl struct for case certificateNumber
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::certificateNumber;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF");
+  SWIFT_INLINE_THUNK bool isCertificateNumber() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -18239,6 +18295,9 @@ public:
     if (tag == _impl::$s7BlinkID9FieldTypeO19eligibilityCategoryyA2CmFWC) return cases::eligibilityCategory;
     if (tag == _impl::$s7BlinkID9FieldTypeO24specificDocumentValidityyA2CmFWC) return cases::specificDocumentValidity;
     if (tag == _impl::$s7BlinkID9FieldTypeO12vehicleOwneryA2CmFWC) return cases::vehicleOwner;
+    if (tag == _impl::$s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC) return cases::nationalInsuranceNumber;
+    if (tag == _impl::$s7BlinkID9FieldTypeO11countryCodeyA2CmFWC) return cases::countryCode;
+    if (tag == _impl::$s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC) return cases::certificateNumber;
     return cases::unknownDefault;
   }
 
@@ -19017,7 +19076,7 @@ SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID19ImageExtractionTypeOMa
 
 // Tags for resilient enum ImageExtractionType
 extern "C" {
-extern unsigned $s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC;
+extern unsigned $s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC;
 extern unsigned $s7BlinkID19ImageExtractionTypeO4faceyA2CmFWC;
 extern unsigned $s7BlinkID19ImageExtractionTypeO9signatureyA2CmFWC;
 }
@@ -19066,7 +19125,7 @@ public:
   }
 
   enum class cases {
-    fullDocument SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmF"),
+    document SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO8documentyA2CmF"),
     face SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO4faceyA2CmF"),
     signature SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO9signatureyA2CmF"),
     unknownDefault
@@ -19074,13 +19133,13 @@ public:
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
-  inline const static struct _impl_fullDocument {  // impl struct for case fullDocument
+  inline const static struct _impl_document {  // impl struct for case document
     SWIFT_INLINE_THUNK constexpr operator cases() const {
-      return cases::fullDocument;
+      return cases::document;
     }
     SWIFT_INLINE_THUNK ImageExtractionType operator()() const;
-  } fullDocument SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmF");
-  SWIFT_INLINE_THUNK bool isFullDocument() const;
+  } document SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO8documentyA2CmF");
+  SWIFT_INLINE_THUNK bool isDocument() const;
 
   inline const static struct _impl_face {  // impl struct for case face
     SWIFT_INLINE_THUNK constexpr operator cases() const {
@@ -19108,7 +19167,7 @@ public:
 #pragma clang diagnostic pop
   SWIFT_INLINE_THUNK operator cases() const {
     auto tag = _getEnumTag();
-    if (tag == _impl::$s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC) return cases::fullDocument;
+    if (tag == _impl::$s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC) return cases::document;
     if (tag == _impl::$s7BlinkID19ImageExtractionTypeO4faceyA2CmFWC) return cases::face;
     if (tag == _impl::$s7BlinkID19ImageExtractionTypeO9signatureyA2CmFWC) return cases::signature;
     return cases::unknownDefault;
@@ -20271,6 +20330,7 @@ struct implClassFor<BlinkID::InvalidLicenseKeyError> { using type = BlinkID::_im
 } // namespace swift
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 
 
 class SWIFT_SYMBOL("s:7BlinkID15MRZDocumentTypeO") MRZDocumentType;
@@ -28055,6 +28115,17 @@ namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
   swift::_impl::ConsumedValueStorageDestroyer<RequestTimeout> storageGuard_consumedParamCopy_value(consumedParamCopy_value);
   _impl::$s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvs(_impl::_impl_RequestTimeout::getOpaquePointer(consumedParamCopy_value), _getOpaquePointer());
   }
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> BlinkIDSdkSettings::getMicroblinkProxyURL() const {
+  return swift::_impl::_impl_Optional<swift::String>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    _impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(result, _impl::$s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK void BlinkIDSdkSettings::setMicroblinkProxyURL(const swift::Optional<swift::String>& value) {
+  alignas(alignof(swift::Optional<swift::String>)) char copyBuffer_consumedParamCopy_value[sizeof(swift::Optional<swift::String>)];
+  auto &consumedParamCopy_value = *(new(copyBuffer_consumedParamCopy_value) swift::Optional<swift::String>(value));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<swift::String>> storageGuard_consumedParamCopy_value(consumedParamCopy_value);
+  _impl::$s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvs(_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(swift::_impl::_impl_Optional<swift::String>::getOpaquePointer(consumedParamCopy_value)), _getOpaquePointer());
+  }
   SWIFT_INLINE_THUNK void BlinkIDSession::cancelActiveProcessing() {
   _impl::$s7BlinkID0A9IDSessionC22cancelActiveProcessingyyF(::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
   }
@@ -31555,6 +31626,22 @@ return (__bridge_transfer UIImage *)(__bridge void *)_impl::$s7BlinkID26Detailed
   SWIFT_INLINE_THUNK  bool DocumentType::isMedicalMarijuanaId() const {
     return *this == DocumentType::medicalMarijuanaId;
   }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_nonCardTribalId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isNonCardTribalId() const {
+    return *this == DocumentType::nonCardTribalId;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_diplomaticId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isDiplomaticId() const {
+    return *this == DocumentType::diplomaticId;
+  }
   SWIFT_INLINE_THUNK  bool DocumentType::isUnknownDefault() const {
     return *this == DocumentType::unknownDefault;
   }
@@ -32049,6 +32136,30 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
   SWIFT_INLINE_THUNK  bool FieldType::isVehicleOwner() const {
     return *this == FieldType::vehicleOwner;
   }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_nationalInsuranceNumber::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isNationalInsuranceNumber() const {
+    return *this == FieldType::nationalInsuranceNumber;
+  }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_countryCode::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO11countryCodeyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isCountryCode() const {
+    return *this == FieldType::countryCode;
+  }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_certificateNumber::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isCertificateNumber() const {
+    return *this == FieldType::certificateNumber;
+  }
   SWIFT_INLINE_THUNK  bool FieldType::isUnknownDefault() const {
     return *this == FieldType::unknownDefault;
   }
@@ -32143,13 +32254,13 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
   SWIFT_INLINE_THUNK swift::Int ImageAnalysisLightingStatus::getHashValue() const {
   return _impl::$s7BlinkID27ImageAnalysisLightingStatusO9hashValueSivg(_getOpaquePointer());
   }
-  SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_fullDocument::operator()() const {
+  SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_document::operator()() const {
     auto result = ImageExtractionType::_make();
-    result._destructiveInjectEnumTag(_impl::$s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC);
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC);
     return result;
   }
-  SWIFT_INLINE_THUNK  bool ImageExtractionType::isFullDocument() const {
-    return *this == ImageExtractionType::fullDocument;
+  SWIFT_INLINE_THUNK  bool ImageExtractionType::isDocument() const {
+    return *this == ImageExtractionType::document;
   }
   SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_face::operator()() const {
     auto result = ImageExtractionType::_make();
@@ -40320,6 +40431,8 @@ SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV19resourceLocalFolderSSvs(struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvs(struct swift_interop_passStub_BlinkID_uint64_t_0_8_uint64_t_8_16 value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID0A9IDSessionC22cancelActiveProcessingyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // cancelActiveProcessing()
 SWIFT_EXTERN void $s7BlinkID0A9IDSessionC22resumeActiveProcessingyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // resumeActiveProcessing()
 SWIFT_EXTERN void $s7BlinkID0A17IDSessionSettingsV16inputImageSourceAA05InputfG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -43826,6 +43939,8 @@ public:
   SWIFT_INLINE_THUNK void setResourceLocalFolder(const swift::String& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV19resourceLocalFolderSSvp");
   SWIFT_INLINE_THUNK RequestTimeout getResourceRequestTimeout() const SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvp");
   SWIFT_INLINE_THUNK void setResourceRequestTimeout(const RequestTimeout& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvp");
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> getMicroblinkProxyURL() const SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvp");
+  SWIFT_INLINE_THUNK void setMicroblinkProxyURL(const swift::Optional<swift::String>& value) SWIFT_SYMBOL("s:7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvp");
 private:
   SWIFT_INLINE_THUNK BlinkIDSdkSettings(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
   static SWIFT_INLINE_THUNK BlinkIDSdkSettings _make() noexcept {
@@ -51043,6 +51158,8 @@ extern unsigned $s7BlinkID12DocumentTypeO19vehicleRegistrationyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC;
 extern unsigned $s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC;
+extern unsigned $s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC;
 }
 
 } // namespace _impl
@@ -51169,6 +51286,8 @@ public:
     esaadCard SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO9esaadCardyA2CmF"),
     registrationCertificate SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO23registrationCertificateyA2CmF"),
     medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF"),
+    nonCardTribalId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmF"),
+    diplomaticId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO12diplomaticIdyA2CmF"),
     unknownDefault
   };
 
@@ -51814,6 +51933,22 @@ public:
   } medicalMarijuanaId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmF");
   SWIFT_INLINE_THUNK bool isMedicalMarijuanaId() const;
 
+  inline const static struct _impl_nonCardTribalId {  // impl struct for case nonCardTribalId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nonCardTribalId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } nonCardTribalId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isNonCardTribalId() const;
+
+  inline const static struct _impl_diplomaticId {  // impl struct for case diplomaticId
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::diplomaticId;
+    }
+    SWIFT_INLINE_THUNK DocumentType operator()() const;
+  } diplomaticId SWIFT_SYMBOL("s:7BlinkID12DocumentTypeO12diplomaticIdyA2CmF");
+  SWIFT_INLINE_THUNK bool isDiplomaticId() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -51904,6 +52039,8 @@ public:
     if (tag == _impl::$s7BlinkID12DocumentTypeO9esaadCardyA2CmFWC) return cases::esaadCard;
     if (tag == _impl::$s7BlinkID12DocumentTypeO23registrationCertificateyA2CmFWC) return cases::registrationCertificate;
     if (tag == _impl::$s7BlinkID12DocumentTypeO18medicalMarijuanaIdyA2CmFWC) return cases::medicalMarijuanaId;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC) return cases::nonCardTribalId;
+    if (tag == _impl::$s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC) return cases::diplomaticId;
     return cases::unknownDefault;
   }
 
@@ -52382,6 +52519,9 @@ extern unsigned $s7BlinkID9FieldTypeO17dependentFullNameyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO19eligibilityCategoryyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO24specificDocumentValidityyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO12vehicleOwneryA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO11countryCodeyA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC;
 }
 
 } // namespace _impl
@@ -52479,6 +52619,9 @@ public:
     eligibilityCategory SWIFT_SYMBOL("s:7BlinkID9FieldTypeO19eligibilityCategoryyA2CmF"),
     specificDocumentValidity SWIFT_SYMBOL("s:7BlinkID9FieldTypeO24specificDocumentValidityyA2CmF"),
     vehicleOwner SWIFT_SYMBOL("s:7BlinkID9FieldTypeO12vehicleOwneryA2CmF"),
+    nationalInsuranceNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmF"),
+    countryCode SWIFT_SYMBOL("s:7BlinkID9FieldTypeO11countryCodeyA2CmF"),
+    certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF"),
     unknownDefault
   };
 
@@ -52892,6 +53035,30 @@ public:
   } vehicleOwner SWIFT_SYMBOL("s:7BlinkID9FieldTypeO12vehicleOwneryA2CmF");
   SWIFT_INLINE_THUNK bool isVehicleOwner() const;
 
+  inline const static struct _impl_nationalInsuranceNumber {  // impl struct for case nationalInsuranceNumber
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nationalInsuranceNumber;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } nationalInsuranceNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmF");
+  SWIFT_INLINE_THUNK bool isNationalInsuranceNumber() const;
+
+  inline const static struct _impl_countryCode {  // impl struct for case countryCode
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::countryCode;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } countryCode SWIFT_SYMBOL("s:7BlinkID9FieldTypeO11countryCodeyA2CmF");
+  SWIFT_INLINE_THUNK bool isCountryCode() const;
+
+  inline const static struct _impl_certificateNumber {  // impl struct for case certificateNumber
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::certificateNumber;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF");
+  SWIFT_INLINE_THUNK bool isCertificateNumber() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -52953,6 +53120,9 @@ public:
     if (tag == _impl::$s7BlinkID9FieldTypeO19eligibilityCategoryyA2CmFWC) return cases::eligibilityCategory;
     if (tag == _impl::$s7BlinkID9FieldTypeO24specificDocumentValidityyA2CmFWC) return cases::specificDocumentValidity;
     if (tag == _impl::$s7BlinkID9FieldTypeO12vehicleOwneryA2CmFWC) return cases::vehicleOwner;
+    if (tag == _impl::$s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC) return cases::nationalInsuranceNumber;
+    if (tag == _impl::$s7BlinkID9FieldTypeO11countryCodeyA2CmFWC) return cases::countryCode;
+    if (tag == _impl::$s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC) return cases::certificateNumber;
     return cases::unknownDefault;
   }
 
@@ -53731,7 +53901,7 @@ SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID19ImageExtractionTypeOMa
 
 // Tags for resilient enum ImageExtractionType
 extern "C" {
-extern unsigned $s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC;
+extern unsigned $s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC;
 extern unsigned $s7BlinkID19ImageExtractionTypeO4faceyA2CmFWC;
 extern unsigned $s7BlinkID19ImageExtractionTypeO9signatureyA2CmFWC;
 }
@@ -53780,7 +53950,7 @@ public:
   }
 
   enum class cases {
-    fullDocument SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmF"),
+    document SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO8documentyA2CmF"),
     face SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO4faceyA2CmF"),
     signature SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO9signatureyA2CmF"),
     unknownDefault
@@ -53788,13 +53958,13 @@ public:
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
-  inline const static struct _impl_fullDocument {  // impl struct for case fullDocument
+  inline const static struct _impl_document {  // impl struct for case document
     SWIFT_INLINE_THUNK constexpr operator cases() const {
-      return cases::fullDocument;
+      return cases::document;
     }
     SWIFT_INLINE_THUNK ImageExtractionType operator()() const;
-  } fullDocument SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmF");
-  SWIFT_INLINE_THUNK bool isFullDocument() const;
+  } document SWIFT_SYMBOL("s:7BlinkID19ImageExtractionTypeO8documentyA2CmF");
+  SWIFT_INLINE_THUNK bool isDocument() const;
 
   inline const static struct _impl_face {  // impl struct for case face
     SWIFT_INLINE_THUNK constexpr operator cases() const {
@@ -53822,7 +53992,7 @@ public:
 #pragma clang diagnostic pop
   SWIFT_INLINE_THUNK operator cases() const {
     auto tag = _getEnumTag();
-    if (tag == _impl::$s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC) return cases::fullDocument;
+    if (tag == _impl::$s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC) return cases::document;
     if (tag == _impl::$s7BlinkID19ImageExtractionTypeO4faceyA2CmFWC) return cases::face;
     if (tag == _impl::$s7BlinkID19ImageExtractionTypeO9signatureyA2CmFWC) return cases::signature;
     return cases::unknownDefault;
@@ -54985,6 +55155,7 @@ struct implClassFor<BlinkID::InvalidLicenseKeyError> { using type = BlinkID::_im
 } // namespace swift
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 
 
 class SWIFT_SYMBOL("s:7BlinkID15MRZDocumentTypeO") MRZDocumentType;
@@ -62769,6 +62940,17 @@ namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
   swift::_impl::ConsumedValueStorageDestroyer<RequestTimeout> storageGuard_consumedParamCopy_value(consumedParamCopy_value);
   _impl::$s7BlinkID0A13IDSdkSettingsV22resourceRequestTimeoutAA0fG0Vvs(_impl::_impl_RequestTimeout::getOpaquePointer(consumedParamCopy_value), _getOpaquePointer());
   }
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> BlinkIDSdkSettings::getMicroblinkProxyURL() const {
+  return swift::_impl::_impl_Optional<swift::String>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    _impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(result, _impl::$s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK void BlinkIDSdkSettings::setMicroblinkProxyURL(const swift::Optional<swift::String>& value) {
+  alignas(alignof(swift::Optional<swift::String>)) char copyBuffer_consumedParamCopy_value[sizeof(swift::Optional<swift::String>)];
+  auto &consumedParamCopy_value = *(new(copyBuffer_consumedParamCopy_value) swift::Optional<swift::String>(value));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<swift::String>> storageGuard_consumedParamCopy_value(consumedParamCopy_value);
+  _impl::$s7BlinkID0A13IDSdkSettingsV18microblinkProxyURLSSSgvs(_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(swift::_impl::_impl_Optional<swift::String>::getOpaquePointer(consumedParamCopy_value)), _getOpaquePointer());
+  }
   SWIFT_INLINE_THUNK void BlinkIDSession::cancelActiveProcessing() {
   _impl::$s7BlinkID0A9IDSessionC22cancelActiveProcessingyyF(::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
   }
@@ -66269,6 +66451,22 @@ return (__bridge_transfer UIImage *)(__bridge void *)_impl::$s7BlinkID26Detailed
   SWIFT_INLINE_THUNK  bool DocumentType::isMedicalMarijuanaId() const {
     return *this == DocumentType::medicalMarijuanaId;
   }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_nonCardTribalId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO15nonCardTribalIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isNonCardTribalId() const {
+    return *this == DocumentType::nonCardTribalId;
+  }
+  SWIFT_INLINE_THUNK DocumentType DocumentType::_impl_diplomaticId::operator()() const {
+    auto result = DocumentType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12DocumentTypeO12diplomaticIdyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool DocumentType::isDiplomaticId() const {
+    return *this == DocumentType::diplomaticId;
+  }
   SWIFT_INLINE_THUNK  bool DocumentType::isUnknownDefault() const {
     return *this == DocumentType::unknownDefault;
   }
@@ -66763,6 +66961,30 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
   SWIFT_INLINE_THUNK  bool FieldType::isVehicleOwner() const {
     return *this == FieldType::vehicleOwner;
   }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_nationalInsuranceNumber::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isNationalInsuranceNumber() const {
+    return *this == FieldType::nationalInsuranceNumber;
+  }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_countryCode::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO11countryCodeyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isCountryCode() const {
+    return *this == FieldType::countryCode;
+  }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_certificateNumber::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isCertificateNumber() const {
+    return *this == FieldType::certificateNumber;
+  }
   SWIFT_INLINE_THUNK  bool FieldType::isUnknownDefault() const {
     return *this == FieldType::unknownDefault;
   }
@@ -66857,13 +67079,13 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
   SWIFT_INLINE_THUNK swift::Int ImageAnalysisLightingStatus::getHashValue() const {
   return _impl::$s7BlinkID27ImageAnalysisLightingStatusO9hashValueSivg(_getOpaquePointer());
   }
-  SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_fullDocument::operator()() const {
+  SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_document::operator()() const {
     auto result = ImageExtractionType::_make();
-    result._destructiveInjectEnumTag(_impl::$s7BlinkID19ImageExtractionTypeO12fullDocumentyA2CmFWC);
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19ImageExtractionTypeO8documentyA2CmFWC);
     return result;
   }
-  SWIFT_INLINE_THUNK  bool ImageExtractionType::isFullDocument() const {
-    return *this == ImageExtractionType::fullDocument;
+  SWIFT_INLINE_THUNK  bool ImageExtractionType::isDocument() const {
+    return *this == ImageExtractionType::document;
   }
   SWIFT_INLINE_THUNK ImageExtractionType ImageExtractionType::_impl_face::operator()() const {
     auto result = ImageExtractionType::_make();

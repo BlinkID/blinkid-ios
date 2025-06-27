@@ -66,6 +66,10 @@ public protocol CameraFrameAnalyzer<Frame, Event> : Sendable {
     
     /// Get stream of UI Events.
     var events: any EventStream<Event> { get }
+    
+    /// Duration in seconds before scanning step times out and is cancelled.
+    /// If less than zero, scanning will not time out.
+    var stepTimeoutDuration: TimeInterval { get async }
 }
 
 /// Represents passport rotation orientation depending on View interface and a document card rotation property.

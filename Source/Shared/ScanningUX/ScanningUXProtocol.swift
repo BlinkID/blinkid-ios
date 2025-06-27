@@ -129,6 +129,9 @@ extension ScanningUXProtocol where Self: View {
                             CameraView(camera: viewModel.camera)
                                 .statusBarHidden(true)
                                 .ignoresSafeArea()
+                                .zIndex(1)
+                            /// - Note: zIndex is necessary because, without it, the OnboardingAlertView does not animate when disappearing
+                            ///                                                          (27.6.2025. Toni Kreso)
                             
                             if viewModel.showDemoOverlayImage {
                                 VStack {
@@ -138,6 +141,7 @@ extension ScanningUXProtocol where Self: View {
                                     Spacer()
                                 }
                                 .frame(maxHeight: .infinity)
+                                .zIndex(2)
                             }
                             
                             if viewModel.showProductionOverlayImage {
@@ -145,6 +149,7 @@ extension ScanningUXProtocol where Self: View {
                                     Spacer()
                                     Image.productionOverlayImage
                                 }
+                                .zIndex(3)
                             }
                             
                             VStack(spacing: 8) {
@@ -152,6 +157,7 @@ extension ScanningUXProtocol where Self: View {
                                 Spacer()
                             }
                             .offset(y: geometry.size.height / 2 - Self.reticleDiameter / 2)
+                            .zIndex(4)
                             
                             VStack {
                                 HStack {
@@ -171,12 +177,19 @@ extension ScanningUXProtocol where Self: View {
                             }
                             .disabled(viewModel.showIntroductionAlert)
                             .padding()
+                            .zIndex(5)
                             
                             if viewModel.showIntroductionAlert {
-                                OnboardingAlertView(theme: self.theme,
-                                                    dimiss: viewModel.dismissAlert())
-                                .transition(.move(edge: .bottom))
+                                ZStack {
+                                    Color.black.opacity(0.5)
+                                        .ignoresSafeArea()
+                                    OnboardingAlertView(theme: self.theme,
+                                                        dismiss: viewModel.dismissAlert())
+                                }
+                                .transition(.opacity)
+                                .zIndex(6)
                             }
+                                
                         }
                     }
                     .onChange(of: viewModel.reticleState) { newValue in
@@ -192,13 +205,12 @@ extension ScanningUXProtocol where Self: View {
                             }
                             .onDisappear {
                                 viewModel.resumeScanning()
-                                viewModel.startTooltipTimer()
                             }
                     }
                     .alert(isPresented: showScanningAlert) {
                         Alert(
-                            title: Text("mb_recognition_timeout_dialog_title".localizedString),
-                            message: Text("mb_recognition_timeout_dialog_message".localizedString),
+                            title: Text(viewModel.alertType?.title ?? "mb_recognition_timeout_dialog_title".localizedString),
+                            message: Text(viewModel.alertType?.description ?? "mb_recognition_timeout_dialog_message".localizedString),
                             dismissButton: .default(Text("mb_recognition_timeout_dialog_retry_button".localizedString))
                         )
                     }
@@ -220,7 +232,6 @@ extension ScanningUXProtocol where Self: View {
                 if viewModel.shouldShowIntroductionAlert {
                     viewModel.presentAlert()
                 } else {
-                    viewModel.startTooltipTimer()
                     UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
                 }
             }

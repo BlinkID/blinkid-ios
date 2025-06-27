@@ -3,7 +3,7 @@
 //  Modifications are allowed under the terms of the license for files located in the UX/UI lib folder.
 //
 
-protocol ReticleStateProtocol: Equatable {
+protocol ReticleStateProtocol: Equatable, Hashable {
     var text: String? { get }
     var duration: Double { get }
     var shouldExpire: Bool { get }
@@ -44,11 +44,11 @@ public enum ReticleState: ReticleStateProtocol {
     var duration: Double {
         switch self {
         case .front, .back, .barcode:
-            1.0
+            2.0
         case .detecting:
             1.5
         case .error(_):
-            2.0
+            3.0
         case .flip, .inactive:
             0.0
         case .passport(_), .inactiveWithMessage(_):

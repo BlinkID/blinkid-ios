@@ -68,7 +68,7 @@ final class BlinkIDUXTranslator {
                     events.append(.facePhotoNotFullyVisible)
                 }
             }
-        case .mandatoryFieldMissing:
+        case .mandatoryFieldMissing, .invalidCharactersFound, .mrzParsingFailed:
             events.append(.notFullyVisible)
         default:
             break
@@ -128,8 +128,6 @@ final class BlinkIDUXTranslator {
     }
     
     private func getPassportOrientation(_ documentRotation: DocumentRotation) -> PassportOrientation {
-        print("Document rotation is \(documentRotation)")
-        print("Device orientation is \(UIDevice.current.orientation)")
         let currentOrientation = UIDevice.current.orientation
         let isPortrait = currentOrientation.isPortrait || currentOrientation == .unknown
         let isFlat = currentOrientation.isFlat
