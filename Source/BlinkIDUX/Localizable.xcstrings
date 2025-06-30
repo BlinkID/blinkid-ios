@@ -56,7 +56,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skeniraj stražnju stranu dokumenta"
+            "value" : "Skenirajte stražnju stranu dokumenta"
           }
         },
         "hu" : {
@@ -344,7 +344,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Drži dokument i telefon mirno"
+            "value" : "Držite dokument i telefon mirno"
           }
         },
         "hu" : {
@@ -488,7 +488,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Okreni dokument"
+            "value" : "Okrenite dokument"
           }
         },
         "hu" : {
@@ -919,7 +919,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pomakni se na slabije osvijetljeno mjesto"
+            "value" : "Pomaknite se na slabije osvijetljeno mjesto"
           }
         },
         "hu" : {
@@ -1927,7 +1927,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Drži dokument u potpunosti vidljivim"
+            "value" : "Držite dokument u potpunosti vidljivim"
           }
         },
         "hu" : {
@@ -2071,7 +2071,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Odmakni dokument od ruba"
+            "value" : "Odmaknite dokument od ruba"
           }
         },
         "hu" : {
@@ -2215,7 +2215,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dozvoli pristup kameri"
+            "value" : "Dozvolite pristup kameri"
           }
         },
         "hu" : {
@@ -2359,7 +2359,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bit ćeš odveden na sustavske postavke gdje moraš aplikaciji dozvoliti pristup kameri."
+            "value" : "Bit ćete odvedeni na sustavske postavke gdje morate aplikaciji dozvoliti pristup kameri."
           }
         },
         "hu" : {
@@ -2503,7 +2503,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dozvoli pristup kameri u postavkama aplikacije."
+            "value" : "Dozvolite pristup kameri u postavkama aplikacije."
           }
         },
         "hu" : {
@@ -2791,7 +2791,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Smanji odsjaj bljeskalice laganim pomicanjem dokumenta."
+            "value" : "Smanjite odsjaj bljeskalice laganim pomicanjem dokumenta."
           }
         },
         "hu" : {
@@ -2935,7 +2935,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skeniraj prednju stranu dokumenta"
+            "value" : "Skenirajte prednju stranu dokumenta"
           }
         },
         "hu" : {
@@ -3079,7 +3079,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nagni ili premjesti dokument kako bi uklonio refleksiju"
+            "value" : "Nagnite ili premjestite dokument kako biste uklonili refleksiju"
           }
         },
         "hu" : {
@@ -4086,7 +4086,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pomakni se na više osvijetljeno mjesto"
+            "value" : "Pomaknite se na više osvijetljeno mjesto"
           }
         },
         "hu" : {
@@ -4518,7 +4518,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na lijevu stranicu"
+            "value" : "Prijeđite na lijevu stranicu"
           }
         },
         "hu" : {
@@ -4662,7 +4662,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na desnu stranicu"
+            "value" : "Prijeđite na desnu stranicu"
           }
         },
         "hu" : {
@@ -4806,7 +4806,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na gornju stranicu"
+            "value" : "Prijeđite na gornju stranicu"
           }
         },
         "hu" : {
@@ -4950,7 +4950,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Drži dokument paralelno s telefonom"
+            "value" : "Držite dokument paralelno s telefonom"
           }
         },
         "hu" : {
@@ -5094,7 +5094,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skeniraj lijevu stranicu"
+            "value" : "Skenirajte lijevu stranicu"
           }
         },
         "hu" : {
@@ -5382,7 +5382,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Približi dokument"
+            "value" : "Približite dokument"
           }
         },
         "hu" : {
@@ -5526,7 +5526,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Udalji dokument"
+            "value" : "Udaljite dokument"
           }
         },
         "hu" : {
@@ -5670,7 +5670,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trebaš pomoć?"
+            "value" : "Trebate pomoć?"
           }
         },
         "hu" : {
@@ -6246,7 +6246,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dokument nije moguće očitati. Molimo pokušaj ponovo."
+            "value" : "Dokument nije moguće očitati. Molimo pokušajte ponovo."
           }
         },
         "hu" : {
@@ -6678,7 +6678,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skeniraj desnu stranicu"
+            "value" : "Skenirajte desnu stranicu"
           }
         },
         "hu" : {
@@ -6822,7 +6822,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na lijevu stranicu"
+            "value" : "Prijeđite na lijevu stranicu"
           }
         },
         "hu" : {
@@ -6966,7 +6966,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na desnu stranicu"
+            "value" : "Prijeđite na desnu stranicu"
           }
         },
         "hu" : {
@@ -7110,7 +7110,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prijeđi na gornju stranicu"
+            "value" : "Prijeđite na gornju stranicu"
           }
         },
         "hu" : {
@@ -7398,7 +7398,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Skeniraj gornju stranicu"
+            "value" : "Skenirajte gornju stranicu"
           }
         },
         "hu" : {
@@ -7542,7 +7542,7 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ponovi skeniranje prednje strane podržanog dokumenta."
+            "value" : "Ponovite skeniranje prednje strane podržanog dokumenta."
           }
         },
         "hu" : {

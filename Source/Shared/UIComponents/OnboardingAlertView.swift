@@ -7,14 +7,15 @@ import SwiftUI
 
 struct OnboardingAlertView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     @State private var contentHeight: CGFloat = 40
     
     private let theme: any UXThemeProtocol
     private let dismiss: () -> Void
     
-    init(theme: any UXThemeProtocol, dimiss: @autoclosure @escaping () -> Void) {
+    init(theme: any UXThemeProtocol, dismiss: @autoclosure @escaping () -> Void) {
         self.theme = theme
-        self.dismiss = dimiss
+        self.dismiss = dismiss
     }
     
     var body: some View {
@@ -77,7 +78,7 @@ struct OnboardingAlertView: View {
     }
     
     var isPortrait: Bool {
-        horizontalSizeClass == .compact
+        horizontalSizeClass == .compact && verticalSizeClass == .regular
     }
     
     var titleText: some View {

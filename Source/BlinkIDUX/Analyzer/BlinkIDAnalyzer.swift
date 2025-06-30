@@ -57,7 +57,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
     private var scanningDone = false
     private var paused = false
     private var resultContinuation: CheckedContinuation<Result, Never>?
-    private var stepTimeoutDuration: TimeInterval
+    public private(set) var stepTimeoutDuration: TimeInterval
     private var timerTask: Task<Void, Never>?
     private var classFilter: (any BlinkIDClassFilter)?
     
@@ -93,7 +93,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         let frameProcessResult = await session.process(inputImage: inputImage)
         
         if let classInfo = frameProcessResult.processResult?.inputImageAnalysisResult.documentClassInfo,
-            !classInfo.isEmpty(),
+           !classInfo.isEmpty(),
            let filter = classFilter {
             if !filter.classAllowed(classInfo: classInfo) {
                 /// - Note: scanInterrupted returns alert type in continuation which results in presenting an alert.
@@ -105,8 +105,10 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         }
         
         let events = translator.translate(frameProcessResult: frameProcessResult, session: session)
-        if events.contains(.requestDocumentSide(side: .back)) {
+
+        if events.contains(.requestDocumentSide(side: .barcode)) {
             timerTask?.cancel()
+            startTimer(stepTimeoutDuration)
         }
         
         await eventStream.send(events)

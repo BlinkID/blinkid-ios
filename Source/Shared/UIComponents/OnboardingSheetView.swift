@@ -84,6 +84,7 @@ struct OnboardingSheetView: View {
 
 struct TabItemView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     @State private var contentHeight: CGFloat = 40
     
     private let onboardingStep: OnboardingStep
@@ -96,7 +97,7 @@ struct TabItemView: View {
     
     var body: some View {
         Group {
-            if horizontalSizeClass == .compact {
+            if isPortrait {
                 VStack(spacing: 30) { bodyContent }
             } else {
                 HStack(alignment: .center, spacing: 30) { bodyContent }
@@ -135,6 +136,10 @@ struct TabItemView: View {
             }
             Spacer()
         }
+    }
+    
+    var isPortrait: Bool {
+        horizontalSizeClass == .compact && verticalSizeClass == .regular
     }
 }
 

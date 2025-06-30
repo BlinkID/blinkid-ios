@@ -624,6 +624,8 @@ public enum DocumentType : Swift.String, Swift.Decodable, Swift.Sendable, Swift.
   case esaadCard
   case registrationCertificate
   case medicalMarijuanaId
+  case nonCardTribalId
+  case diplomaticId
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BlinkID.DocumentType]
@@ -766,7 +768,8 @@ public struct BlinkIDSdkSettings : Swift.Sendable, BlinkID.SdkSettings {
   public var resourceLocalFolder: Swift.String
   public var bundleURL: Foundation.URL?
   public var resourceRequestTimeout: BlinkID.RequestTimeout
-  public init(licenseKey: Swift.String, licensee: Swift.String? = nil, helloLogEnabled: Swift.Bool = false, downloadResources: Swift.Bool = true, resourceDownloadUrl: Swift.String = "https://models.cdn.microblink.com/resources", resourceLocalFolder: Swift.String = "MLModels", bundleURL: Foundation.URL? = nil, resourceRequestTimeout: BlinkID.RequestTimeout = .default)
+  public var microblinkProxyURL: Swift.String?
+  public init(licenseKey: Swift.String, licensee: Swift.String? = nil, helloLogEnabled: Swift.Bool = false, downloadResources: Swift.Bool = true, resourceDownloadUrl: Swift.String = "https://models.cdn.microblink.com/resources", resourceLocalFolder: Swift.String = "MLModels", bundleURL: Foundation.URL? = nil, resourceRequestTimeout: BlinkID.RequestTimeout = .default, microblinkProxyURL: Swift.String? = nil)
 }
 @_hasMissingDesignatedInitializers final public class BlinkIDSdk : Swift.Sendable {
   @BlinkID.ProcessingActor final public func createScanningSession(sessionSettings: BlinkID.BlinkIDSessionSettings = BlinkIDSessionSettings()) async throws -> BlinkID.BlinkIDSession
@@ -942,7 +945,7 @@ public enum ImageAnalysisLightingStatus : Swift.Sendable {
   }
 }
 public enum ImageExtractionType : Swift.Sendable {
-  case fullDocument
+  case document
   case face
   case signature
   public static func == (a: BlinkID.ImageExtractionType, b: BlinkID.ImageExtractionType) -> Swift.Bool
@@ -1098,6 +1101,9 @@ public enum FieldType : Swift.String, Swift.Decodable, Swift.Sendable, Swift.Cas
   case eligibilityCategory
   case specificDocumentValidity
   case vehicleOwner
+  case nationalInsuranceNumber
+  case countryCode
+  case certificateNumber
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BlinkID.FieldType]
@@ -1178,11 +1184,14 @@ public struct VIZResult : Swift.Sendable {
   public let additionalPersonalIdNumber: BlinkID.BlinkIDSDK.StringResult?
   public let issuingAuthority: BlinkID.BlinkIDSDK.StringResult?
   public let visaType: BlinkID.BlinkIDSDK.StringResult?
+  public let certificateNumber: BlinkID.BlinkIDSDK.StringResult?
+  public let countryCode: BlinkID.BlinkIDSDK.StringResult?
   public let driverLicenseDetailedInfo: BlinkID.DriverLicenseDetailedInfo<BlinkID.BlinkIDSDK.StringResult>?
   public let documentSubtype: BlinkID.BlinkIDSDK.StringResult?
   public let remarks: BlinkID.BlinkIDSDK.StringResult?
   public let residencePermitType: BlinkID.BlinkIDSDK.StringResult?
   public let manufacturingYear: BlinkID.BlinkIDSDK.StringResult?
+  public let nationalInsuranceNumber: BlinkID.BlinkIDSDK.StringResult?
   public let vehicleType: BlinkID.BlinkIDSDK.StringResult?
   public let eligibilityCategory: BlinkID.BlinkIDSDK.StringResult?
   public let specificDocumentValidity: BlinkID.BlinkIDSDK.StringResult?
@@ -1328,6 +1337,10 @@ public struct BlinkIDScanningResult : Swift.Sendable {
   public let eligibilityCategory: BlinkID.BlinkIDSDK.StringResult?
   public let specificDocumentValidity: BlinkID.BlinkIDSDK.StringResult?
   public let visaType: BlinkID.BlinkIDSDK.StringResult?
+  public let vehicleOwner: BlinkID.BlinkIDSDK.StringResult?
+  public let certificateNumber: BlinkID.BlinkIDSDK.StringResult?
+  public let countryCode: BlinkID.BlinkIDSDK.StringResult?
+  public let nationalInsuranceNumber: BlinkID.BlinkIDSDK.StringResult?
   public let dateOfBirth: BlinkID.DateResult<BlinkID.BlinkIDSDK.StringResult>?
   public let dateOfIssue: BlinkID.DateResult<BlinkID.BlinkIDSDK.StringResult>?
   public let dateOfExpiry: BlinkID.DateResult<BlinkID.BlinkIDSDK.StringResult>?
