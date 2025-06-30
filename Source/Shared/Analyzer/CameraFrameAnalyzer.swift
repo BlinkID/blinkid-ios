@@ -2,6 +2,8 @@
 //  Copyright (c) Microblink. All rights reserved.
 //  Modifications are allowed under the terms of the license for files located in the UX/UI lib folder.
 
+import Foundation
+
 public protocol ScanningResultProtocol: Sendable {
     associatedtype Result: Sendable
     nonisolated var scanResult: Result? { get }
@@ -66,6 +68,10 @@ public protocol CameraFrameAnalyzer<Frame, Event> : Sendable {
     
     /// Get stream of UI Events.
     var events: any EventStream<Event> { get }
+    
+    /// Duration in seconds before scanning step times out and is cancelled.
+    /// If less than zero, scanning will not time out.
+    var stepTimeoutDuration: TimeInterval { get async }
 }
 
 /// Represents passport rotation orientation depending on View interface and a document card rotation property.

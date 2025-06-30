@@ -13,18 +13,18 @@ public enum BlinkIDScanningAlertType: Sendable, AlertTypeProtocol {
     public var title: String {
         switch self {
         case .timeout:
-            return "Scan unsuccessful"
+            return "mb_recognition_timeout_dialog_title".localizedString
         case .disallowedClass:
-            return "Document not accepted"
+            return "mb_document_class_filtered_dialog_title".localizedString
         }
     }
     
     public var description: String {
         switch self {
         case .timeout:
-            return "Unable to read the document. Please try again."
+            return "mb_recognition_timeout_dialog_message".localizedString
         case .disallowedClass:
-            return "Try scanning a different document."
+            return "mb_document_class_filtered_dialog_message".localizedString
         }
     }
 }

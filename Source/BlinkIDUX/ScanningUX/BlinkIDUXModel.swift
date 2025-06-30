@@ -52,7 +52,6 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     private var cancellables = Set<AnyCancellable>()
     
     public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true, showHelpButton: Bool = true) {
-        
         self.topImageOpacity = passportBeginAnimationAlpha
         self.bottomImageOpacity = passportEndAnimationAlpha
         self.highlightOffset = 0
@@ -149,6 +148,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                 }
                 else if events.contains(.requestDocumentSide(side: .barcode)) {
                     self.setReticleState(.barcode, force: true)
+                    startTooltipTimer()
                 } else if events.contains(.wrongSide) {
                     self.setReticleState(.error("mb_scanning_wrong_side"))
                 } else if events.contains(.wrongSidePassport(passportOrientation: .none)) {
@@ -182,6 +182,8 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                     self.setReticleState(.error("mb_decrease_lighting_intensity"))
                 } else if events.contains(.facePhotoNotFullyVisible) {
                     self.setReticleState(.error("mb_face_photo_not_fully_visible"))
+                } else {
+                    self.setReticleState(inactiveState)
                 }
             }
         }
@@ -190,10 +192,9 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     private func firstSideScanned() {
         pauseScanning()
 
-        let remainingTime = calculateRemainingTime()
+        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
 
         if remainingTime > 0 {
-            timer?.invalidate()
             Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
                 Task {
                     await self?.animateFirstSideScanned()
@@ -209,10 +210,9 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     private func passportSideScanned(_ orientation: PassportOrientation) {
         pauseScanning()
 
-        let remainingTime = calculateRemainingTime()
+        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
 
         if remainingTime > 0 {
-            timer?.invalidate()
             Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
                 Task {
                     await self?.animateFirstSidePassportScanned(orientation)
@@ -295,7 +295,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     public func finishScan() async {
         pauseScanning()
         
-        let remainingTime = calculateRemainingTime()
+        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
         
         if remainingTime > 0 {
             try? await Task.sleep(for: .seconds(remainingTime))
