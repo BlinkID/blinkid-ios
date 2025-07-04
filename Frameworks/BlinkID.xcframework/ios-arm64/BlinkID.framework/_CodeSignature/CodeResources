@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1+AgRxiTs4IK0VGl19PlOdX5050=
+		YmekHUBcl+G4MzgPHbQm3AYbAmg=
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/BlinkID.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		zEFs+7UsiY2C6iDBN2TwZJRAk0E=
+		0rOJCiY31lxZ98vesAiWE6HNVjw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>conan.xcconfig</key>
 		<data>
-		ytsKP0q+O6xrk3QIw8lm0kia1yo=
+		1iq96y+OtwYfD6th0CdsC+/jF2M=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BEc5lGp+iABPTp6twzWPHMJDL9pa9GkjTKX36FkoaY=
+			Aoq0d0jXHH9Bi27CCcG0gvcU44rwPlSPXLt+rgLyWh0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nWe5XYdJWeeVMB029Sk9WbRxsnxUbPmrV0hTTGB4q3M=
+			bhmRmv0mwCJCQTB54WpsqQlSftZHpJ6S+qXpv+qC3EE=
 			</data>
 		</dict>
 	</dict>
