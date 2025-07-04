@@ -1,5 +1,9 @@
 # Release notes
 
+## 7.3.1
+
+- Bugfixes
+
 ## 7.3.0
 
 ## What's new
