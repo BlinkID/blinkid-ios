@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios16.6-simulator -enable-objc-interop -cxx-interoperability-mode=default -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -module-name BlinkID
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name BlinkID
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 @_exported import BlinkID
 import CoreData
@@ -792,11 +792,11 @@ public enum ScanningMode : Swift.Sendable, Swift.CaseIterable {
   case single
   case automatic
   public static func == (a: BlinkID.ScanningMode, b: BlinkID.ScanningMode) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.ScanningMode]
   nonisolated public static var allCases: [BlinkID.ScanningMode] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -807,11 +807,11 @@ public enum DetectionLevel : Swift.Sendable, Swift.CaseIterable {
   case mid
   case high
   public static func == (a: BlinkID.DetectionLevel, b: BlinkID.DetectionLevel) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.DetectionLevel]
   nonisolated public static var allCases: [BlinkID.DetectionLevel] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1142,11 +1142,11 @@ public enum MRZDocumentType : Swift.Sendable, Swift.CaseIterable {
   case internalTravelDocument
   case borderCrossingCard
   public static func == (a: BlinkID.MRZDocumentType, b: BlinkID.MRZDocumentType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.MRZDocumentType]
   nonisolated public static var allCases: [BlinkID.MRZDocumentType] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1195,7 +1195,7 @@ public struct VIZResult : Swift.Sendable {
   public let vehicleType: BlinkID.BlinkIDSDK.StringResult?
   public let eligibilityCategory: BlinkID.BlinkIDSDK.StringResult?
   public let specificDocumentValidity: BlinkID.BlinkIDSDK.StringResult?
-  public let dependentsInfo: Swift.Array<BlinkID.DependentInfo>
+  public let dependentsInfo: Swift.Array<BlinkID.DependentInfo>?
   public let vehicleOwner: BlinkID.BlinkIDSDK.StringResult?
 }
 public struct MRZResult : Swift.Sendable {
@@ -1242,11 +1242,11 @@ public enum BarcodeType : Swift.Sendable, Swift.CaseIterable {
   case aztec
   case pdf417
   public static func == (a: BlinkID.BarcodeType, b: BlinkID.BarcodeType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.BarcodeType]
   nonisolated public static var allCases: [BlinkID.BarcodeType] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1418,7 +1418,6 @@ public enum AnonymizationMode : Swift.String, Swift.Codable, Swift.CaseIterable,
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BlinkID.AnonymizationMode]
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.String
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [BlinkID.AnonymizationMode] {
@@ -1532,11 +1531,11 @@ public enum DataMatchState : Swift.Sendable, Swift.CaseIterable {
   case failed
   case success
   public static func == (a: BlinkID.DataMatchState, b: BlinkID.DataMatchState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.DataMatchState]
   nonisolated public static var allCases: [BlinkID.DataMatchState] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1549,11 +1548,11 @@ public enum DataMatchFieldType : Swift.Sendable, Swift.CaseIterable {
   case documentOptionalAdditionalNumber
   case personalIdNumber
   public static func == (a: BlinkID.DataMatchFieldType, b: BlinkID.DataMatchFieldType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BlinkID.DataMatchFieldType]
   nonisolated public static var allCases: [BlinkID.DataMatchFieldType] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }

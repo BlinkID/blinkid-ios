@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2DDD1A82E2A50CB0025214C /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = A2DDD1A72E2A50CB0025214C /* BlinkIDUX */; };
 		FF2144112D8D6912006E9A84 /* BlinkIDUX in Frameworks */ = {isa = PBXBuildFile; productRef = FF2144102D8D6912006E9A84 /* BlinkIDUX */; };
 		FF2144122D8D6916006E9A84 /* BlinkIDUX in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FF2144102D8D6912006E9A84 /* BlinkIDUX */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2144112D8D6912006E9A84 /* BlinkIDUX in Frameworks */,
+				A2DDD1A82E2A50CB0025214C /* BlinkIDUX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			name = BlinkIDSample;
 			packageProductDependencies = (
 				FF2144102D8D6912006E9A84 /* BlinkIDUX */,
+				A2DDD1A72E2A50CB0025214C /* BlinkIDUX */,
 			);
 			productName = BlinkIDSample;
 			productReference = FF0977B72D8D67FA004C7219 /* BlinkIDSample.app */;
@@ -117,7 +120,7 @@
 			mainGroup = FF0977AE2D8D67FA004C7219;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				FF21440F2D8D6912006E9A84 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */,
+				A2DDD1A62E2A50CB0025214C /* XCLocalSwiftPackageReference "../../../blinkid-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FF0977B82D8D67FA004C7219 /* Products */;
@@ -353,13 +356,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FF21440F2D8D6912006E9A84 /* XCLocalSwiftPackageReference "../../../blinkid-ios" */ = {
+		A2DDD1A62E2A50CB0025214C /* XCLocalSwiftPackageReference "../../../blinkid-ios" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../../blinkid-ios";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A2DDD1A72E2A50CB0025214C /* BlinkIDUX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BlinkIDUX;
+		};
 		FF2144102D8D6912006E9A84 /* BlinkIDUX */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BlinkIDUX;
