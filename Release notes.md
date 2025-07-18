@@ -1,5 +1,23 @@
 # Release notes
 
+## 7.4.0
+
+#### New Documents Support
+- Canada, Newfoundland And Labrador - Identity Card
+- Canada, Northwest Territories - Driver's License
+- Canada, Northwest Territories - Identity Card
+- Canada, Prince Edward Island - Identity Card
+- Canada, Yukon - Identity Card
+
+#### New Document Versions for Supported Documents
+- Canada, Yukon - Driver's License
+
+### API Changes
+- `dependentsInfo` in `VizResult` is now nullable
+
+#### Bug fixes
+- Fixed core data concurrency crash when using com.apple.CoreData.ConcurrencyDebug flag
+
 ## 7.3.1
 
 - Bugfixes
