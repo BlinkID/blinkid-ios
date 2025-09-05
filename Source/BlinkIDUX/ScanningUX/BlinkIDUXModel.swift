@@ -51,13 +51,15 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     
     private var cancellables = Set<AnyCancellable>()
     
-    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true, showHelpButton: Bool = true) {
+    private var currentErrorMessage: UxEventPinglet.ErrorMessageType?
+    
+    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true, showHelpButton: Bool = true, sessionNumber: Int) {
         self.topImageOpacity = passportBeginAnimationAlpha
         self.bottomImageOpacity = passportEndAnimationAlpha
         self.highlightOffset = 0
         self.passportOrientation = nil
         
-        super.init(analyzer: analyzer, shouldShowIntroductionAlert: shouldShowIntroductionAlert, showHelpButton: showHelpButton)
+        super.init(analyzer: analyzer, shouldShowIntroductionAlert: shouldShowIntroductionAlert, showHelpButton: showHelpButton, sessionNumber: sessionNumber)
         
         startEventHandling()
         camera.$status
@@ -70,6 +72,9 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     // MARK: - Protocol Implementation
     
     public override func analyze() async {
+        
+        await camera.captureService.sendCameraInputInfoPinglet(sessionNumber: sessionNumber)
+        
         Task {
             await processAnalyzerResult()
         }
@@ -119,7 +124,10 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     override func closeButtonTapped() {
+        
         Task {
+            let uxEventPinglet = UxEventPinglet(eventType: .closebuttonclicked)
+            await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
             await self.analyzer.end()
         }
         result = BlinkIDResultState(scanningResult: nil)
@@ -151,41 +159,65 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                     startTooltipTimer()
                 } else if events.contains(.wrongSide) {
                     self.setReticleState(.error("mb_scanning_wrong_side"))
+                    self.trackErrorMessage(.flipside)
                 } else if events.contains(.wrongSidePassport(passportOrientation: .none)) {
                     self.setReticleState(.error("mb_scanning_wrong_page_top"))
+                    self.trackErrorMessage(.flipside)
                 }
                 else if events.contains(.wrongSidePassport(passportOrientation: .left90)) {
                     self.setReticleState(.error("mb_scanning_wrong_page_left"))
+                    self.trackErrorMessage(.flipside)
                 }
                 else if events.contains(.wrongSidePassport(passportOrientation: .right90)) {
                     self.setReticleState(.error("mb_scanning_wrong_page_right"))
+                    self.trackErrorMessage(.flipside)
                 }
                 else if events.contains(.tooClose) {
                     self.setReticleState(.error("mb_move_farther"))
+                    self.trackErrorMessage(.movefarther)
                 } else if events.contains(.tooFar) {
                     self.setReticleState(.error("mb_move_closer"))
+                    self.trackErrorMessage(.movecloser)
                 } else if events.contains(.tooCloseToEdge) {
                     self.setReticleState(.error("mb_document_too_close_to_edge"))
+                    self.trackErrorMessage(.movefromedge)
                 } else if events.contains(.tilt) {
                     self.setReticleState(.error("mb_keep_document_parallel"))
+                    self.trackErrorMessage(.aligndocument)
                 } else if events.contains(.glare) {
                     self.setReticleState(.error("mb_glare_detected"))
+                    self.trackErrorMessage(.eliminateglare)
                 } else if events.contains(.blur) {
                     self.setReticleState(.error("mb_blur_detected"))
+                    self.trackErrorMessage(.eliminateblur)
                 } else if events.contains(.notFullyVisible) {
                     self.setReticleState(.error("mb_document_not_fully_visible"))
+                    self.trackErrorMessage(.keepvisible)
                 } else if events.contains(.occlusion) {
                     self.setReticleState(.error("mb_document_not_fully_visible"))
+                    self.trackErrorMessage(.keepvisible)
                 } else if events.contains(.tooDark) {
                     self.setReticleState(.error("mb_increase_lighting_intensity"))
+                    self.trackErrorMessage(.increaselighting)
                 } else if events.contains(.tooBright) {
                     self.setReticleState(.error("mb_decrease_lighting_intensity"))
+                    self.trackErrorMessage(.decreaselighting)
                 } else if events.contains(.facePhotoNotFullyVisible) {
                     self.setReticleState(.error("mb_face_photo_not_fully_visible"))
+                    self.trackErrorMessage(.keepvisible)
                 } else {
                     self.setReticleState(inactiveState)
                 }
             }
+        }
+    }
+    
+    private func trackErrorMessage(_ messageType: UxEventPinglet.ErrorMessageType) {
+        Task {
+            if currentErrorMessage == messageType { return }
+            currentErrorMessage = messageType
+            let uxEventPinglet = UxEventPinglet(eventType: .errormessage, errorMessageType: messageType)
+            await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
         }
     }
     
@@ -228,6 +260,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     // - MARK: Animations
 
     private func animateFirstSideScanned() async {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
         showSuccessImage = true
         setReticleState(.inactive, force: true)
 
@@ -274,6 +307,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     private func animateSuccess() async {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
         showSuccessImage = true
         self.setReticleState(.inactive, force: true)
 
@@ -296,6 +330,8 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         pauseScanning()
         
         let remainingTime = calculateRemainingTime(stateDuration: 1.0)
+        
+        currentErrorMessage = nil
         
         if remainingTime > 0 {
             try? await Task.sleep(for: .seconds(remainingTime))

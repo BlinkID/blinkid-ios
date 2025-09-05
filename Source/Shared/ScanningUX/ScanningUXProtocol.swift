@@ -5,6 +5,12 @@
 
 import SwiftUI
 
+#if canImport(BlinkIDVerify)
+import BlinkIDVerify
+#elseif canImport(BlinkID)
+import BlinkID
+#endif
+
 @MainActor
 /// Protocol defining the core functionality required for document scanning views
 protocol ScanningUXProtocol {
@@ -198,13 +204,25 @@ extension ScanningUXProtocol where Self: View {
                         }
                     }
                     .sheet(isPresented: showSheet) {
-                        OnboardingSheetView(theme: self.theme)
+                        OnboardingSheetView(theme: self.theme, sessionNumber: viewModel.sessionNumber)
                             .presentationDetents([.height(600)])
                             .onAppear {
                                 viewModel.pauseScanning()
+                                Task {
+                                    let uxEventPinglet = UxEventPinglet(eventType: .helpopened)
+                                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                }
+
                             }
                             .onDisappear {
                                 viewModel.resumeScanning()
+                                viewModel.startTooltipTimer()
+                                
+                                Task {
+                                    let uxEventPinglet = UxEventPinglet(eventType: .helpclosed)
+                                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                }
+
                             }
                     }
                     .alert(isPresented: showScanningAlert) {
@@ -225,6 +243,9 @@ extension ScanningUXProtocol where Self: View {
             }
             .task {
                 // Start the capture pipeline.
+                await viewModel.camera.checkAuthorization(sessionNumber: viewModel.sessionNumber)
+                await viewModel.camera.sendConditionsPinglet(sessionNumber: viewModel.sessionNumber)
+                await viewModel.camera.sendCameraStartPinglet(sessionNumber: viewModel.sessionNumber)
                 await viewModel.camera.start()
                 await viewModel.analyze()
             }
@@ -232,6 +253,7 @@ extension ScanningUXProtocol where Self: View {
                 if viewModel.shouldShowIntroductionAlert {
                     viewModel.presentAlert()
                 } else {
+                    viewModel.startTooltipTimer()
                     UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
                 }
             }

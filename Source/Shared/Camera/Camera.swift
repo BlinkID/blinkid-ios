@@ -12,6 +12,12 @@ import os.log
 import AVFoundation
 @preconcurrency import Combine
 
+#if canImport(BlinkIDVerify)
+import BlinkIDVerify
+#elseif canImport(BlinkID)
+import BlinkID
+#endif
+
 /// An object that provides the interface to the features of the camera.
 public final class Camera: CameraModel {
     
@@ -25,10 +31,18 @@ public final class Camera: CameraModel {
     public private(set) var isSwitchingModes = false
     
     /// An enum of current video orientation.
-    public private(set) var orientation: AVCaptureVideoOrientation = .initialOrientation
+    public private(set) var orientation: AVCaptureVideoOrientation = .initialOrientation {
+        didSet {
+            guard orientation != oldValue else { return }
+            
+            Task {
+                await sendConditionsPinglet(sessionNumber: self.sessionNumber)
+            }
+        }
+    }
     
     /// An object that manages the app's capture functionality.
-    private let captureService: CaptureService = CaptureService()
+    public let captureService: CaptureService = CaptureService()
     
     /// An object that provides the connection between the capture session and the video preview layer.
     public var previewSource: any PreviewSource { captureService.previewSource }
@@ -38,8 +52,15 @@ public final class Camera: CameraModel {
     /// A Boolean that indicates whether the camera supports torch.
     public private(set) var isTorchSupported: Bool = true
     
+    var sessionNumber: Int = 0
+    
     public init() {
         //
+        Task {
+            await captureService.sendCameraHardwareInfoPinglet()
+//            await sendCameraStartPinglet()
+//            await sendConditionsPinglet()
+        }
     }
     
     deinit {
@@ -66,9 +87,31 @@ public final class Camera: CameraModel {
         }
     }
     
+    // ADR 15 Camera permission check
+    public func checkAuthorization(sessionNumber: Int) async {
+        self.sessionNumber = sessionNumber
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        let cameraInputInfoPinglet = CameraPermissionPinglet(eventType: .camerapermissioncheck, cameraPermissionGranted: status == .authorized)
+        await PingManager.shared.addPinglet(pinglet: cameraInputInfoPinglet, sessionNumber: sessionNumber)
+        if status == .notDetermined {
+            let cameraInputInfoPingletRequestt = CameraPermissionPinglet(eventType: .camerapermissionrequest)
+            await PingManager.shared.addPinglet(pinglet: cameraInputInfoPingletRequestt, sessionNumber: sessionNumber)
+            let isAuthorized = await AVCaptureDevice.requestAccess(for: .video)
+            let cameraInputInfoPingletResponse = CameraPermissionPinglet(eventType: .camerapermissionuserresponse, cameraPermissionGranted: isAuthorized)
+            await PingManager.shared.addPinglet(pinglet: cameraInputInfoPingletResponse, sessionNumber: sessionNumber)
+        }
+        
+        Task {
+            await PingManager.shared.sendPinglets()
+        }
+    }
+    
     public func stop() async {
         
         status = .stopped
+        
+        let uxEventPinglet = UxEventPinglet(eventType: .cameraclosed)
+        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
         
         // Verify that the person authorizes the app to use device cameras.
         guard await captureService.isAuthorized else {
@@ -79,6 +122,13 @@ public final class Camera: CameraModel {
             // Stop the capture service to stop the flow of data.
             try await captureService.stop()
             status = .stopped
+            
+            // ADR 15 - Camera screen closed
+            Task {
+                await PingManager.shared.sendPinglets()
+            }
+            
+            
         } catch {
             logger.error("Failed to stop capture service. \(error)")
             status = .failed
@@ -118,6 +168,9 @@ public final class Camera: CameraModel {
         didSet {
             Task {
                 await captureService.setTorchEnabled(isTorchEnabled)
+                let scanningConditionsPinglet = ScanningConditionsPinglet(
+                    updateType: .flashlightstate, flashlightOn: isTorchEnabled)
+                await PingManager.shared.addPinglet(pinglet: scanningConditionsPinglet, sessionNumber: sessionNumber)
             }
         }
     }
@@ -309,5 +362,37 @@ extension UIInterfaceOrientationMask {
     
     var isSupported: Bool {
         return Self.supportedOrientationsFromPlist.contains(self)
+    }
+}
+
+// - MARK: Ping extension
+extension ScanningConditionsPinglet.DeviceOrientation {
+    static func fromAVCaptureVideoOrientation(_ orientation: AVCaptureVideoOrientation) -> Self {
+        switch orientation {
+        case .portrait:
+            return .portrait
+        case .portraitUpsideDown:
+            return .portraitupside
+        case .landscapeRight:
+            return .landscaperight
+        case .landscapeLeft:
+            return .landscapeleft
+        @unknown default:
+            fatalError("Unknown AVCaptureVideoOrientation: \(orientation)")
+        }
+    }
+}
+
+extension Camera {
+    func sendConditionsPinglet(sessionNumber: Int) async {
+        let scanningConditionsPinglet = ScanningConditionsPinglet(
+            updateType: .deviceorientation,
+            deviceOrientation: ScanningConditionsPinglet.DeviceOrientation.fromAVCaptureVideoOrientation(orientation))
+        await PingManager.shared.addPinglet(pinglet: scanningConditionsPinglet, sessionNumber: sessionNumber)
+    }
+    
+    func sendCameraStartPinglet(sessionNumber: Int) async {
+        let uxEventPinglet = UxEventPinglet(eventType: .camerastarted)
+        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
     }
 }

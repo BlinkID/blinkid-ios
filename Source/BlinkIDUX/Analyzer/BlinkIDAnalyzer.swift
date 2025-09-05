@@ -51,7 +51,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
     public typealias Result = ScanningResult<BlinkIDScanningResult, BlinkIDScanningAlertType>
     public typealias Frame = CameraFrame
     
-    private let session: BlinkIDSession
+    private var session: BlinkIDSession?
     private let eventStream: BlinkIDEventStream
     private let translator: BlinkIDUXTranslator = BlinkIDUXTranslator()
     private var scanningDone = false
@@ -74,9 +74,19 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         classFilter: (any BlinkIDClassFilter)? = nil
     ) async throws {
         self.session = try await sdk.createScanningSession(sessionSettings: blinkIdSessionSettings)
+        guard let session = self.session else {
+            fatalError("Session not initialized")
+        }
+        self._sessionNumber = await session.getSessionNumber()
         self.eventStream = eventStream
         self.stepTimeoutDuration = blinkIdSessionSettings.stepTimeoutDuration
         self.classFilter = classFilter
+    }
+    
+    private let _sessionNumber: Int
+        
+    nonisolated public var sessionNumber: Int {
+        return _sessionNumber
     }
         
     /// Processes a camera frame for document analysis.
@@ -90,9 +100,9 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         
         let inputImage = InputImage(cameraFrame: image)
         
-        let frameProcessResult = await session.process(inputImage: inputImage)
+        let frameProcessResult = await session?.process(inputImage: inputImage)
         
-        if let classInfo = frameProcessResult.processResult?.inputImageAnalysisResult.documentClassInfo,
+        if let classInfo = frameProcessResult?.processResult?.inputImageAnalysisResult.documentClassInfo,
            !classInfo.isEmpty(),
            let filter = classFilter {
             if !filter.classAllowed(classInfo: classInfo) {
@@ -104,6 +114,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
             }
         }
         
+        guard let session, let frameProcessResult else { return }
         let events = translator.translate(frameProcessResult: frameProcessResult, session: session)
 
         if events.contains(.requestDocumentSide(side: .barcode)) {
@@ -132,7 +143,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
     
     /// Cancels the current document scanning session.
     public func cancel() {
-        self.session.cancelActiveProcessing()
+        self.session?.cancelActiveProcessing()
     }
     
     /// Returns the final result of the scanning session.
@@ -152,14 +163,14 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
     /// Resumes the document analysis after being paused.
     public func resume() {
         self.paused = false
-        self.session.resumeActiveProcessing()
+        self.session?.resumeActiveProcessing()
         startTimer(stepTimeoutDuration)
     }
     
     /// Restarts the document analysis after being paused.
     public func restart() throws {
         Task { @ProcessingActor in
-            try self.session.reset()
+            try await self.session?.reset()
         }
         translator.resetState()
         resume()
@@ -169,6 +180,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         pause()
         resultContinuation?.resume(returning: .ended)
         resultContinuation = nil
+        session = nil
     }
     
     /// Stream of UI events generated during document analysis.
@@ -194,6 +206,11 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         pause()
         resultContinuation?.resume(returning: .interrupted(alertType))
         resultContinuation = nil
+        
+        // ADR 15 - Platform implemented scan timeout
+        Task {
+            await PingManager.shared.sendPinglets()
+        }
     }
 }
 
