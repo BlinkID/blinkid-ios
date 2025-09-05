@@ -4218,6 +4218,7 @@ SWIFT_EXTERN bool $s7BlinkID11BarcodeDataV9uncertainSbvg(SWIFT_CONTEXT const voi
 SWIFT_EXTERN ptrdiff_t $s7BlinkID17BarcodeElementKeyO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID15BarcodeElementsV8getValue3forSSAA0C10ElementKeyO_tF(const void * _Nonnull barcodeElementKey, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // getValue(for:)
 SWIFT_EXTERN void $s7BlinkID13BarcodeResultV11barcodeDataAA0cF0Vvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN bool $s7BlinkID13BarcodeResultV6parsedSbvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID13BarcodeResultV9firstNameSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID13BarcodeResultV10middleNameSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID13BarcodeResultV8lastNameSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4387,9 +4388,79 @@ SWIFT_EXTERN void $s7BlinkID11CameraFrameV6buffer3roi11orientationACSo21MBSample
 SWIFT_EXTERN ptrdiff_t $s7BlinkID11CameraFrameV5widthSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID11CameraFrameV6heightSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID27CameraFrameVideoOrientationO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25CameraHardwareInfoPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25CameraHardwareInfoPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN ptrdiff_t $s7BlinkID25CameraHardwareInfoPingletV13sessionNumberSivgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25CameraHardwareInfoPingletV16availableCamerasSayAC09AvailableH4ItemVGvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+// Stub struct to be used to pass/return values to/from Swift functions.
+struct swift_interop_passStub_BlinkID_void_ptr_0_8 {
+  void * _Nullable _1;
+};
+
+static SWIFT_C_INLINE_THUNK struct swift_interop_passStub_BlinkID_void_ptr_0_8 swift_interop_passDirect_BlinkID_void_ptr_0_8(const char * _Nonnull value) {
+  struct swift_interop_passStub_BlinkID_void_ptr_0_8 result;
+  memcpy(&result._1, value + 0, 8);
+  return result;
+}
+
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV16availableCamerasACSayAC09AvailableH4ItemVG_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_void_ptr_0_8 availableCameras) SWIFT_NOEXCEPT SWIFT_CALL; // init(availableCameras:)
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacingAC0cK0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV5focusAC5FocusOSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV20availableResolutionsSayAC0gkI0VGvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacing5focus20availableResolutionsAeC0cK0O_AC5FocusOSgSayAC0gnI0VGtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull cameraFacing, const void * _Nonnull focus, struct swift_interop_passStub_BlinkID_void_ptr_0_8 availableResolutions) SWIFT_NOEXCEPT SWIFT_CALL; // init(cameraFacing:focus:availableResolutions:)
+SWIFT_EXTERN int64_t $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5widths5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN int64_t $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV6heights5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5width6heightAEs5Int64V_AItcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, int64_t width, int64_t height) SWIFT_NOEXCEPT SWIFT_CALL; // init(width:height:)
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25CameraHardwareInfoPingletV5FocusO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID22CameraInputInfoPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID22CameraInputInfoPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID22CameraInputInfoPingletV12cameraFacingAC0cH0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN int64_t $s7BlinkID22CameraInputInfoPingletV16cameraFrameWidths5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN int64_t $s7BlinkID22CameraInputInfoPingletV17cameraFrameHeights5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN int64_t $s7BlinkID22CameraInputInfoPingletV8roiWidths5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN int64_t $s7BlinkID22CameraInputInfoPingletV9roiHeights5Int64Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN double $s7BlinkID22CameraInputInfoPingletV19viewPortAspectRatioSdvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID22CameraInputInfoPingletV12cameraFacing0G10FrameWidth0gI6Height03roiJ00lK019viewPortAspectRatioA2C0cH0O_s5Int64VA3MSdtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull cameraFacing, int64_t cameraFrameWidth, int64_t cameraFrameHeight, int64_t roiWidth, int64_t roiHeight, double viewPortAspectRatio) SWIFT_NOEXCEPT SWIFT_CALL; // init(cameraFacing:cameraFrameWidth:cameraFrameHeight:roiWidth:roiHeight:viewPortAspectRatio:)
+SWIFT_EXTERN void $s7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID22CameraInputInfoPingletV0C6FacingO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID23CameraPermissionPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID23CameraPermissionPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID23CameraPermissionPingletV9eventTypeAC05EventG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint8_t_0_1 $s7BlinkID23CameraPermissionPingletV06cameraD7GrantedSbSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+// Stub struct to be used to pass/return values to/from Swift functions.
+struct swift_interop_passStub_BlinkID_uint8_t_0_1 {
+  uint8_t _1;
+};
+
+static SWIFT_C_INLINE_THUNK struct swift_interop_passStub_BlinkID_uint8_t_0_1 swift_interop_passDirect_BlinkID_uint8_t_0_1(const char * _Nonnull value) {
+  struct swift_interop_passStub_BlinkID_uint8_t_0_1 result;
+  memcpy(&result._1, value + 0, 1);
+  return result;
+}
+
+SWIFT_EXTERN void $s7BlinkID23CameraPermissionPingletV9eventType06cameraD7GrantedA2C05EventG0O_SbSgtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull eventType, struct swift_interop_passStub_BlinkID_uint8_t_0_1 cameraPermissionGranted) SWIFT_NOEXCEPT SWIFT_CALL; // init(eventType:cameraPermissionGranted:)
+SWIFT_EXTERN void $s7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID23CameraPermissionPingletV9EventTypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID7CountryO8rawValueACSgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID7CountryO8allCasesSayACGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID7CountryO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void * _Nonnull $s7BlinkID12CrashMonitorC6sharedACvgZ(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC15startMonitoring18enableDebugLoggingySb_tF(bool enableDebugLogging, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // startMonitoring(enableDebugLogging:)
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC14stopMonitoringyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // stopMonitoring()
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC08simulateC04typeyAC04TestC4TypeO_tF(const void * _Nonnull crashType, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // simulateCrash(type:)
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC04testC9Reporting4typeyAC04TestC4TypeO_tF(const void * _Nonnull crashType, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // testCrashReporting(type:)
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC04testC13ReportingSync4typeyAC04TestC4TypeO_tF(const void * _Nonnull crashType, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // testCrashReportingSync(type:)
+SWIFT_EXTERN void $s7BlinkID12CrashMonitorC28verifyPingManagerIntegrationyyF(SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // verifyPingManagerIntegration()
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID12CrashMonitorC04TestC4TypeO11descriptionSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID12CrashMonitorC04TestC4TypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN ptrdiff_t $s7BlinkID12CrashMonitorC04TestC4TypeO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN UIImage *_Nullable $s7BlinkID18CroppedImageResultV02uiD0So7UIImageCSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID20CroppedImageSettingsV11dotsPerInchSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID20CroppedImageSettingsV11dotsPerInchSivs(ptrdiff_t value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4446,17 +4517,6 @@ SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 
 SWIFT_EXTERN void $s7BlinkID29DocumentAnonymizationSettingsV14documentFilterAA0cG0Vvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID29DocumentAnonymizationSettingsV14documentFilterAA0cG0Vvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID29DocumentAnonymizationSettingsV6fieldsSayAA9FieldTypeOGvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
-// Stub struct to be used to pass/return values to/from Swift functions.
-struct swift_interop_passStub_BlinkID_void_ptr_0_8 {
-  void * _Nullable _1;
-};
-
-static SWIFT_C_INLINE_THUNK struct swift_interop_passStub_BlinkID_void_ptr_0_8 swift_interop_passDirect_BlinkID_void_ptr_0_8(const char * _Nonnull value) {
-  struct swift_interop_passStub_BlinkID_void_ptr_0_8 result;
-  memcpy(&result._1, value + 0, 8);
-  return result;
-}
-
 SWIFT_EXTERN void $s7BlinkID29DocumentAnonymizationSettingsV6fieldsSayAA9FieldTypeOGvs(struct swift_interop_passStub_BlinkID_void_ptr_0_8 value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID29DocumentAnonymizationSettingsV014documentNumberdE0AA0cgdE0VSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID29DocumentAnonymizationSettingsV014documentNumberdE0AA0cgdE0VSgvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4492,6 +4552,15 @@ SWIFT_EXTERN void $s7BlinkID25DriverLicenseDetailedInfoV12endorsementsxSgvg(SWIF
 SWIFT_EXTERN void $s7BlinkID25DriverLicenseDetailedInfoV12vehicleClassxSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID25DriverLicenseDetailedInfoV10conditionsxSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8 $s7BlinkID25DriverLicenseDetailedInfoV014vehicleClassesF0SayAA012VehicleClassF0VyxGGSgvg(void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID12ErrorPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID12ErrorPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID12ErrorPingletV9errorTypeAC0cF0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID12ErrorPingletV12errorMessageSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID12ErrorPingletV10stackTraceSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID12ErrorPingletV9errorType0E7Message10stackTraceA2C0cF0O_S2SSgtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull errorType, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 errorMessage, struct swift_interop_passStub_BlinkID_uint64_t_0_8_uint64_t_8_16 stackTrace) SWIFT_NOEXCEPT SWIFT_CALL; // init(errorType:errorMessage:stackTrace:)
+SWIFT_EXTERN void $s7BlinkID12ErrorPingletV0C4TypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID12ErrorPingletV0C4TypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID12ErrorPingletV0C4TypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID10FieldStateV9fieldTypeAA09DataMatchcF0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID10FieldStateV5stateAA09DataMatchD0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID9FieldTypeO8rawValueACSgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
@@ -4531,6 +4600,14 @@ SWIFT_EXTERN void $s7BlinkID24InputImageAnalysisResultV16documentRotationAA08Doc
 SWIFT_EXTERN UIImage *_Nullable $s7BlinkID16InputImageResultV02uiD0So7UIImageCSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID16InputImageSourceO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID22InvalidLicenseKeyErrorV7messageSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID10LogPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID10LogPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID10LogPingletV8logLevelAC0cF0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID10LogPingletV10logMessageSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID10LogPingletV8logLevel0E7MessageA2C0cF0O_SStcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull logLevel, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 logMessage) SWIFT_NOEXCEPT SWIFT_CALL; // init(logLevel:logMessage:)
+SWIFT_EXTERN void $s7BlinkID10LogPingletV0C5LevelO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID10LogPingletV0C5LevelO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID10LogPingletV0C5LevelO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID15MRZDocumentTypeO8allCasesSayACGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID15MRZDocumentTypeO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID9MRZResultV12rawMRZStringSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4560,6 +4637,7 @@ SWIFT_EXTERN void $s7BlinkID18MemoryReserveErrorV011minRequiredC0ACSi_tcfC(SWIFT
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID13MissingBundleV7messageSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID14ModelLoadErrorO16errorDescriptionSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID14ModelLoadErrorO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void * _Nonnull $s7BlinkID11PingManagerC6sharedACvgZ(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN int32_t $s7BlinkID5PointV1xs5Int32Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN int32_t $s7BlinkID5PointV1ys5Int32Vvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void * _Nonnull $s7BlinkID15ProcessingActorC6sharedACvgZ(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4604,6 +4682,18 @@ SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 
 SWIFT_EXTERN void $s7BlinkID17ResourceLoadErrorV5errorAA05ModeldE0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID14ResourcesErrorO16errorDescriptionSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID12SDKInitErrorO16errorDescriptionSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25ScanningConditionsPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25ScanningConditionsPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25ScanningConditionsPingletV10updateTypeAC06UpdateG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25ScanningConditionsPingletV17deviceOrientationAC06DeviceG0OSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint8_t_0_1 $s7BlinkID25ScanningConditionsPingletV12flashlightOnSbSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25ScanningConditionsPingletV10updateType17deviceOrientation12flashlightOnA2C06UpdateG0O_AC06DeviceI0OSgSbSgtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull updateType, const void * _Nonnull deviceOrientation, struct swift_interop_passStub_BlinkID_uint8_t_0_1 flashlightOn) SWIFT_NOEXCEPT SWIFT_CALL; // init(updateType:deviceOrientation:flashlightOn:)
+SWIFT_EXTERN void $s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID12ScanningModeO8allCasesSayACGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID12ScanningModeO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID16ScanningSettingsV18blurDetectionLevelAA0fG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4666,6 +4756,20 @@ SWIFT_EXTERN void $s7BlinkID12ScanningSideO8rawValueACSgSi_tcfC(SWIFT_INDIRECT_R
 SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID12ScanningSideO8allCasesSayACGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID12ScanningSideO8rawValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID14ScanningStatusO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN ptrdiff_t $s7BlinkID19SdkInitStartPingletV13sessionNumberSivgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID19SdkInitStartPingletV7productAC7ProductOvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID19SdkInitStartPingletV8platformAC8PlatformOvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV11packageNameSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV6userIdSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID19SdkInitStartPingletV7product8platform11packageName6userIdA2C7ProductO_AC8PlatformOS2StcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull product, const void * _Nonnull platform, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 packageName, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 userId) SWIFT_NOEXCEPT SWIFT_CALL; // init(product:platform:packageName:userId:)
+SWIFT_EXTERN void $s7BlinkID19SdkInitStartPingletV7ProductO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID19SdkInitStartPingletV7ProductO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV7ProductO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID19SdkInitStartPingletV8PlatformO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID19SdkInitStartPingletV8PlatformO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID19SdkInitStartPingletV8PlatformO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN ptrdiff_t $s7BlinkID12SessionErrorO9hashValueSivg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV3vizAA9VIZResultVSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV3vizAA9VIZResultVSgvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4683,6 +4787,25 @@ SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV9faceImageAA015DetailedCr
 SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV9faceImageAA015DetailedCroppedhF0VSgvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV14signatureImageAA015DetailedCroppedhF0VSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID24SingleSideScanningResultV14signatureImageAA015DetailedCroppedhF0VSgvs(const void * _Nonnull value, SWIFT_CONTEXT void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV9eventTypeAC0dG0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV16errorMessageTypeAC05ErrorgH0OSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV9alertTypeAC05AlertG0OSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV13helpCloseTypeAC04HelpgH0OSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV9eventType012errorMessageG005alertG009helpCloseG0A2C0dG0O_AC05ErroriG0OSgAC05AlertG0OSgAC04HelplG0OSgtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull eventType, const void * _Nonnull errorMessageType, const void * _Nonnull alertType, const void * _Nonnull helpCloseType) SWIFT_NOEXCEPT SWIFT_CALL; // init(eventType:errorMessageType:alertType:helpCloseType:)
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV0D4TypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID14UxEventPingletV0D4TypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV0D4TypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID14UxEventPingletV16ErrorMessageTypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV9AlertTypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID14UxEventPingletV9AlertTypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV9AlertTypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID14UxEventPingletV13HelpCloseTypeO8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID9VIZResultV9firstNameAA0A5IDSDKV12StringResultVSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID9VIZResultV8lastNameAA0A5IDSDKV12StringResultVSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID9VIZResultV8fullNameAA0A5IDSDKV12StringResultVSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
@@ -4732,6 +4855,14 @@ SWIFT_EXTERN void $s7BlinkID16VehicleClassInfoV07vehicleD0xSgvg(SWIFT_INDIRECT_R
 SWIFT_EXTERN void $s7BlinkID16VehicleClassInfoV11licenceTypexSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID16VehicleClassInfoV13effectiveDateAA0G6ResultVyxGSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 SWIFT_EXTERN void $s7BlinkID16VehicleClassInfoV10expiryDateAA0G6ResultVyxGSgvg(SWIFT_INDIRECT_RESULT void * _Nonnull, void * _Nonnull , SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25WrapperProductInfoPingletV10schemaNameSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25WrapperProductInfoPingletV13schemaVersionSSvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25WrapperProductInfoPingletV07wrapperD0AC0cD0Ovg(SWIFT_INDIRECT_RESULT void * _Nonnull, SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_uint64_t_8_16 $s7BlinkID25WrapperProductInfoPingletV13correlationIdSSSgvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN void $s7BlinkID25WrapperProductInfoPingletV07wrapperD013correlationIdA2C0cD0O_SSSgtcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, const void * _Nonnull wrapperProduct, struct swift_interop_passStub_BlinkID_uint64_t_0_8_uint64_t_8_16 correlationId) SWIFT_NOEXCEPT SWIFT_CALL; // init(wrapperProduct:correlationId:)
+SWIFT_EXTERN void $s7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueAESgSS_tcfC(SWIFT_INDIRECT_RESULT void * _Nonnull, struct swift_interop_passStub_BlinkID_uint64_t_0_8_void_ptr_8_16 rawValue) SWIFT_NOEXCEPT SWIFT_CALL; // init(rawValue:)
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_void_ptr_0_8 $s7BlinkID25WrapperProductInfoPingletV0cD0O8allCasesSayAEGvgZ(void) SWIFT_NOEXCEPT SWIFT_CALL; // _
+SWIFT_EXTERN struct swift_interop_returnStub_BlinkID_uint64_t_0_8_void_ptr_8_16 $s7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueSSvg(SWIFT_CONTEXT const void * _Nonnull _self) SWIFT_NOEXCEPT SWIFT_CALL; // _
 
 #ifdef __cplusplus
 }
@@ -6914,6 +7045,7 @@ public:
   abort();
   }
   SWIFT_INLINE_THUNK BarcodeData getBarcodeData() const SWIFT_SYMBOL("s:7BlinkID13BarcodeResultV11barcodeDataAA0cF0Vvp");
+  SWIFT_INLINE_THUNK bool getParsed() const SWIFT_SYMBOL("s:7BlinkID13BarcodeResultV6parsedSbvp");
   SWIFT_INLINE_THUNK swift::String getFirstName() const SWIFT_SYMBOL("s:7BlinkID13BarcodeResultV9firstNameSSvp");
   SWIFT_INLINE_THUNK swift::String getMiddleName() const SWIFT_SYMBOL("s:7BlinkID13BarcodeResultV10middleNameSSvp");
   SWIFT_INLINE_THUNK swift::String getLastName() const SWIFT_SYMBOL("s:7BlinkID13BarcodeResultV8lastNameSSvp");
@@ -9406,6 +9538,1688 @@ template<>
 inline const constexpr bool isOpaqueLayout<BlinkID::CameraFrameVideoOrientation> = true;
 template<>
 struct implClassFor<BlinkID::CameraFrameVideoOrientation> { using type = BlinkID::_impl::_impl_CameraFrameVideoOrientation; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraHardwareInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV") AvailableCamerasItem;
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraHardwareInfoPingletNested::AvailableCamerasItem> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __CameraHardwareInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV") AvailableResolutionsItem;
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraHardwareInfoPingletNested::AvailableResolutionsItem> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __CameraHardwareInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO") CameraFacing;
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraHardwareInfoPingletNested::CameraFacing> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __CameraHardwareInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO") Focus;
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraHardwareInfoPingletNested::Focus> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV") CameraHardwareInfoPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::CameraHardwareInfoPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_CameraHardwareInfoPinglet;
+
+// Type metadata accessor for CameraHardwareInfoPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25CameraHardwareInfoPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV") CameraHardwareInfoPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~CameraHardwareInfoPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraHardwareInfoPinglet(const CameraHardwareInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraHardwareInfoPinglet &operator =(const CameraHardwareInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK CameraHardwareInfoPinglet &operator =(CameraHardwareInfoPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER CameraHardwareInfoPinglet(CameraHardwareInfoPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using AvailableCamerasItem=__CameraHardwareInfoPingletNested::AvailableCamerasItem;
+  using AvailableResolutionsItem=__CameraHardwareInfoPingletNested::AvailableResolutionsItem;
+  using CameraFacing=__CameraHardwareInfoPingletNested::CameraFacing;
+  using Focus=__CameraHardwareInfoPingletNested::Focus;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV13schemaVersionSSvpZ");
+  static SWIFT_INLINE_THUNK swift::Int getSessionNumber() SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV13sessionNumberSivpZ");
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem> getAvailableCameras() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV16availableCamerasSayAC09AvailableH4ItemVGvp");
+  static SWIFT_INLINE_THUNK CameraHardwareInfoPinglet init(const swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>& availableCameras) SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV16availableCamerasACSayAC09AvailableH4ItemVG_tcfc");
+private:
+  SWIFT_INLINE_THUNK CameraHardwareInfoPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK CameraHardwareInfoPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return CameraHardwareInfoPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_CameraHardwareInfoPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25CameraHardwareInfoPingletVD;
+  static inline constexpr $s7BlinkID25CameraHardwareInfoPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CameraHardwareInfoPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(CameraHardwareInfoPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const CameraHardwareInfoPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER CameraHardwareInfoPinglet returnNewValue(T callable) {
+    auto result = CameraHardwareInfoPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::CameraHardwareInfoPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::CameraHardwareInfoPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::CameraHardwareInfoPinglet> = true;
+template<>
+struct implClassFor<BlinkID::CameraHardwareInfoPinglet> { using type = BlinkID::_impl::_impl_CameraHardwareInfoPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraHardwareInfoPingletNested {
+
+namespace _impl {
+
+class _impl_AvailableCamerasItem;
+
+// Type metadata accessor for AvailableCamerasItem
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV") AvailableCamerasItem final {
+public:
+  SWIFT_INLINE_THUNK ~AvailableCamerasItem() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AvailableCamerasItem(const AvailableCamerasItem &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AvailableCamerasItem &operator =(const AvailableCamerasItem &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK AvailableCamerasItem &operator =(AvailableCamerasItem &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER AvailableCamerasItem(AvailableCamerasItem &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing getCameraFacing() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacingAC0cK0Ovp");
+  SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::Focus> getFocus() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV5focusAC5FocusOSgvp");
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem> getAvailableResolutions() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV20availableResolutionsSayAC0gkI0VGvp");
+  static SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::AvailableCamerasItem init(const __CameraHardwareInfoPingletNested::CameraFacing& cameraFacing, const swift::Optional<__CameraHardwareInfoPingletNested::Focus>& focus, const swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>& availableResolutions) SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacing5focus20availableResolutionsAeC0cK0O_AC5FocusOSgSayAC0gnI0VGtcfc");
+private:
+  SWIFT_INLINE_THUNK AvailableCamerasItem(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK AvailableCamerasItem _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return AvailableCamerasItem(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_AvailableCamerasItem;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVD;
+  static inline constexpr $s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_AvailableCamerasItem {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraHardwareInfoPingletNested::AvailableCamerasItem &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraHardwareInfoPingletNested::AvailableCamerasItem &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraHardwareInfoPingletNested::AvailableCamerasItem returnNewValue(T callable) {
+    auto result = __CameraHardwareInfoPingletNested::AvailableCamerasItem::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraHardwareInfoPingletNested::AvailableCamerasItem> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraHardwareInfoPingletNested::_impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraHardwareInfoPingletNested::AvailableCamerasItem> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraHardwareInfoPingletNested::AvailableCamerasItem> = true;
+template<>
+struct implClassFor<BlinkID::__CameraHardwareInfoPingletNested::AvailableCamerasItem> { using type = BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_AvailableCamerasItem; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraHardwareInfoPingletNested {
+
+namespace _impl {
+
+class _impl_AvailableResolutionsItem;
+
+// Type metadata accessor for AvailableResolutionsItem
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV") AvailableResolutionsItem final {
+public:
+  SWIFT_INLINE_THUNK ~AvailableResolutionsItem() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AvailableResolutionsItem(const AvailableResolutionsItem &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AvailableResolutionsItem &operator =(const AvailableResolutionsItem &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK AvailableResolutionsItem &operator =(AvailableResolutionsItem &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER AvailableResolutionsItem(AvailableResolutionsItem &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  SWIFT_INLINE_THUNK int64_t getWidth() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5widths5Int64Vvp");
+  SWIFT_INLINE_THUNK int64_t getHeight() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV6heights5Int64Vvp");
+  static SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::AvailableResolutionsItem init(int64_t width, int64_t height) SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5width6heightAEs5Int64V_AItcfc");
+private:
+  SWIFT_INLINE_THUNK AvailableResolutionsItem(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK AvailableResolutionsItem _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return AvailableResolutionsItem(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_AvailableResolutionsItem;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVD;
+  static inline constexpr $s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_AvailableResolutionsItem {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraHardwareInfoPingletNested::AvailableResolutionsItem &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraHardwareInfoPingletNested::AvailableResolutionsItem &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraHardwareInfoPingletNested::AvailableResolutionsItem returnNewValue(T callable) {
+    auto result = __CameraHardwareInfoPingletNested::AvailableResolutionsItem::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraHardwareInfoPingletNested::AvailableResolutionsItem> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraHardwareInfoPingletNested::_impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraHardwareInfoPingletNested::AvailableResolutionsItem> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraHardwareInfoPingletNested::AvailableResolutionsItem> = true;
+template<>
+struct implClassFor<BlinkID::__CameraHardwareInfoPingletNested::AvailableResolutionsItem> { using type = BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_AvailableResolutionsItem; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraHardwareInfoPingletNested {
+
+namespace _impl {
+
+class _impl_CameraFacing;
+
+// Type metadata accessor for CameraFacing
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum CameraFacing
+extern "C" {
+extern unsigned $s7BlinkID25CameraHardwareInfoPingletV0C6FacingO5frontyA2EmFWC;
+extern unsigned $s7BlinkID25CameraHardwareInfoPingletV0C6FacingO4backyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO") CameraFacing final {
+public:
+  SWIFT_INLINE_THUNK ~CameraFacing() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraFacing(const CameraFacing &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraFacing &operator =(const CameraFacing &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK CameraFacing &operator =(CameraFacing &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER CameraFacing(CameraFacing &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    front SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO5frontyA2EmF"),
+    back SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO4backyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_front {  // impl struct for case front
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::front;
+    }
+    SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing operator()() const;
+  } front SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO5frontyA2EmF");
+  SWIFT_INLINE_THUNK bool isFront() const;
+
+  inline const static struct _impl_back {  // impl struct for case back
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::back;
+    }
+    SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing operator()() const;
+  } back SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO4backyA2EmF");
+  SWIFT_INLINE_THUNK bool isBack() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO5frontyA2EmFWC) return cases::front;
+    if (tag == _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO4backyA2EmFWC) return cases::back;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::CameraFacing> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::CameraFacing> getAllCases() SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK CameraFacing(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK CameraFacing _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return CameraFacing(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_CameraFacing;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25CameraHardwareInfoPingletV0C6FacingOD;
+  static inline constexpr $s7BlinkID25CameraHardwareInfoPingletV0C6FacingOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CameraFacing {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraHardwareInfoPingletNested::CameraFacing &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraHardwareInfoPingletNested::CameraFacing &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraHardwareInfoPingletNested::CameraFacing returnNewValue(T callable) {
+    auto result = __CameraHardwareInfoPingletNested::CameraFacing::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraHardwareInfoPingletNested::CameraFacing> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraHardwareInfoPingletNested::_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraHardwareInfoPingletNested::CameraFacing> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraHardwareInfoPingletNested::CameraFacing> = true;
+template<>
+struct implClassFor<BlinkID::__CameraHardwareInfoPingletNested::CameraFacing> { using type = BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_CameraFacing; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraHardwareInfoPingletNested {
+
+namespace _impl {
+
+class _impl_Focus;
+
+// Type metadata accessor for Focus
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum Focus
+extern "C" {
+extern unsigned $s7BlinkID25CameraHardwareInfoPingletV5FocusO4autoyA2EmFWC;
+extern unsigned $s7BlinkID25CameraHardwareInfoPingletV5FocusO5fixedyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO") Focus final {
+public:
+  SWIFT_INLINE_THUNK ~Focus() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Focus(const Focus &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Focus &operator =(const Focus &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK Focus &operator =(Focus &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER Focus(Focus &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    auto_ SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO4autoyA2EmF"),
+    fixed SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO5fixedyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_auto {  // impl struct for case auto
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::auto_;
+    }
+    SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::Focus operator()() const;
+  } auto_ SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO4autoyA2EmF");
+  SWIFT_INLINE_THUNK bool isAuto_() const;
+
+  inline const static struct _impl_fixed {  // impl struct for case fixed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::fixed;
+    }
+    SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::Focus operator()() const;
+  } fixed SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO5fixedyA2EmF");
+  SWIFT_INLINE_THUNK bool isFixed() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO4autoyA2EmFWC) return cases::auto_;
+    if (tag == _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO5fixedyA2EmFWC) return cases::fixed;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::Focus> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::Focus> getAllCases() SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK Focus(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK Focus _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return Focus(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_Focus;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25CameraHardwareInfoPingletV5FocusOD;
+  static inline constexpr $s7BlinkID25CameraHardwareInfoPingletV5FocusOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_Focus {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraHardwareInfoPingletNested::Focus &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraHardwareInfoPingletNested::Focus &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraHardwareInfoPingletNested::Focus returnNewValue(T callable) {
+    auto result = __CameraHardwareInfoPingletNested::Focus::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraHardwareInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraHardwareInfoPingletNested::Focus> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraHardwareInfoPingletNested::_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraHardwareInfoPingletNested::Focus> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraHardwareInfoPingletNested::Focus> = true;
+template<>
+struct implClassFor<BlinkID::__CameraHardwareInfoPingletNested::Focus> { using type = BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_Focus; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraInputInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO") CameraFacing;
+
+} // namespace __CameraInputInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraInputInfoPingletNested::CameraFacing> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV") CameraInputInfoPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::CameraInputInfoPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_CameraInputInfoPinglet;
+
+// Type metadata accessor for CameraInputInfoPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID22CameraInputInfoPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV") CameraInputInfoPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~CameraInputInfoPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraInputInfoPinglet(const CameraInputInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraInputInfoPinglet &operator =(const CameraInputInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK CameraInputInfoPinglet &operator =(CameraInputInfoPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER CameraInputInfoPinglet(CameraInputInfoPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using CameraFacing=__CameraInputInfoPingletNested::CameraFacing;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing getCameraFacing() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV12cameraFacingAC0cH0Ovp");
+  SWIFT_INLINE_THUNK int64_t getCameraFrameWidth() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV16cameraFrameWidths5Int64Vvp");
+  SWIFT_INLINE_THUNK int64_t getCameraFrameHeight() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV17cameraFrameHeights5Int64Vvp");
+  SWIFT_INLINE_THUNK int64_t getRoiWidth() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV8roiWidths5Int64Vvp");
+  SWIFT_INLINE_THUNK int64_t getRoiHeight() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV9roiHeights5Int64Vvp");
+  SWIFT_INLINE_THUNK double getViewPortAspectRatio() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV19viewPortAspectRatioSdvp");
+  static SWIFT_INLINE_THUNK CameraInputInfoPinglet init(const __CameraInputInfoPingletNested::CameraFacing& cameraFacing, int64_t cameraFrameWidth, int64_t cameraFrameHeight, int64_t roiWidth, int64_t roiHeight, double viewPortAspectRatio) SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV12cameraFacing0G10FrameWidth0gI6Height03roiJ00lK019viewPortAspectRatioA2C0cH0O_s5Int64VA3MSdtcfc");
+private:
+  SWIFT_INLINE_THUNK CameraInputInfoPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK CameraInputInfoPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return CameraInputInfoPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_CameraInputInfoPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID22CameraInputInfoPingletVD;
+  static inline constexpr $s7BlinkID22CameraInputInfoPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CameraInputInfoPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(CameraInputInfoPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const CameraInputInfoPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER CameraInputInfoPinglet returnNewValue(T callable) {
+    auto result = CameraInputInfoPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::CameraInputInfoPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::CameraInputInfoPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::CameraInputInfoPinglet> = true;
+template<>
+struct implClassFor<BlinkID::CameraInputInfoPinglet> { using type = BlinkID::_impl::_impl_CameraInputInfoPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraInputInfoPingletNested {
+
+namespace _impl {
+
+class _impl_CameraFacing;
+
+// Type metadata accessor for CameraFacing
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum CameraFacing
+extern "C" {
+extern unsigned $s7BlinkID22CameraInputInfoPingletV0C6FacingO5frontyA2EmFWC;
+extern unsigned $s7BlinkID22CameraInputInfoPingletV0C6FacingO4backyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO") CameraFacing final {
+public:
+  SWIFT_INLINE_THUNK ~CameraFacing() noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraFacing(const CameraFacing &other) noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraFacing &operator =(const CameraFacing &other) noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK CameraFacing &operator =(CameraFacing &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER CameraFacing(CameraFacing &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    front SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO5frontyA2EmF"),
+    back SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO4backyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_front {  // impl struct for case front
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::front;
+    }
+    SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing operator()() const;
+  } front SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO5frontyA2EmF");
+  SWIFT_INLINE_THUNK bool isFront() const;
+
+  inline const static struct _impl_back {  // impl struct for case back
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::back;
+    }
+    SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing operator()() const;
+  } back SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO4backyA2EmF");
+  SWIFT_INLINE_THUNK bool isBack() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO5frontyA2EmFWC) return cases::front;
+    if (tag == _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO4backyA2EmFWC) return cases::back;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__CameraInputInfoPingletNested::CameraFacing> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__CameraInputInfoPingletNested::CameraFacing> getAllCases() SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK CameraFacing(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK CameraFacing _make() noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return CameraFacing(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_CameraFacing;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID22CameraInputInfoPingletV0C6FacingOD;
+  static inline constexpr $s7BlinkID22CameraInputInfoPingletV0C6FacingOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CameraFacing {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraInputInfoPingletNested::CameraFacing &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraInputInfoPingletNested::CameraFacing &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraInputInfoPingletNested::CameraFacing returnNewValue(T callable) {
+    auto result = __CameraInputInfoPingletNested::CameraFacing::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraInputInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraInputInfoPingletNested::CameraFacing> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraInputInfoPingletNested::_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraInputInfoPingletNested::CameraFacing> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraInputInfoPingletNested::CameraFacing> = true;
+template<>
+struct implClassFor<BlinkID::__CameraInputInfoPingletNested::CameraFacing> { using type = BlinkID::__CameraInputInfoPingletNested::_impl::_impl_CameraFacing; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraPermissionPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO") EventType;
+
+} // namespace __CameraPermissionPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CameraPermissionPingletNested::EventType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV") CameraPermissionPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::CameraPermissionPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_CameraPermissionPinglet;
+
+// Type metadata accessor for CameraPermissionPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID23CameraPermissionPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV") CameraPermissionPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~CameraPermissionPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraPermissionPinglet(const CameraPermissionPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK CameraPermissionPinglet &operator =(const CameraPermissionPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK CameraPermissionPinglet &operator =(CameraPermissionPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER CameraPermissionPinglet(CameraPermissionPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using EventType=__CameraPermissionPingletNested::EventType;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType getEventType() const SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9eventTypeAC05EventG0Ovp");
+  SWIFT_INLINE_THUNK swift::Optional<bool> getCameraPermissionGranted() const SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV06cameraD7GrantedSbSgvp");
+  static SWIFT_INLINE_THUNK CameraPermissionPinglet init(const __CameraPermissionPingletNested::EventType& eventType, const swift::Optional<bool>& cameraPermissionGranted) SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9eventType06cameraD7GrantedA2C05EventG0O_SbSgtcfc");
+private:
+  SWIFT_INLINE_THUNK CameraPermissionPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK CameraPermissionPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return CameraPermissionPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_CameraPermissionPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID23CameraPermissionPingletVD;
+  static inline constexpr $s7BlinkID23CameraPermissionPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CameraPermissionPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(CameraPermissionPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const CameraPermissionPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER CameraPermissionPinglet returnNewValue(T callable) {
+    auto result = CameraPermissionPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::CameraPermissionPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID23CameraPermissionPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::CameraPermissionPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::CameraPermissionPinglet> = true;
+template<>
+struct implClassFor<BlinkID::CameraPermissionPinglet> { using type = BlinkID::_impl::_impl_CameraPermissionPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CameraPermissionPingletNested {
+
+namespace _impl {
+
+class _impl_EventType;
+
+// Type metadata accessor for EventType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID23CameraPermissionPingletV9EventTypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum EventType
+extern "C" {
+extern unsigned $s7BlinkID23CameraPermissionPingletV9EventTypeO21camerapermissioncheckyA2EmFWC;
+extern unsigned $s7BlinkID23CameraPermissionPingletV9EventTypeO23camerapermissionrequestyA2EmFWC;
+extern unsigned $s7BlinkID23CameraPermissionPingletV9EventTypeO28camerapermissionuserresponseyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO") EventType final {
+public:
+  SWIFT_INLINE_THUNK ~EventType() noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK EventType(const EventType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK EventType &operator =(const EventType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK EventType &operator =(EventType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER EventType(EventType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    camerapermissioncheck SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO21camerapermissioncheckyA2EmF"),
+    camerapermissionrequest SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO23camerapermissionrequestyA2EmF"),
+    camerapermissionuserresponse SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO28camerapermissionuserresponseyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_camerapermissioncheck {  // impl struct for case camerapermissioncheck
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::camerapermissioncheck;
+    }
+    SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType operator()() const;
+  } camerapermissioncheck SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO21camerapermissioncheckyA2EmF");
+  SWIFT_INLINE_THUNK bool isCamerapermissioncheck() const;
+
+  inline const static struct _impl_camerapermissionrequest {  // impl struct for case camerapermissionrequest
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::camerapermissionrequest;
+    }
+    SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType operator()() const;
+  } camerapermissionrequest SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO23camerapermissionrequestyA2EmF");
+  SWIFT_INLINE_THUNK bool isCamerapermissionrequest() const;
+
+  inline const static struct _impl_camerapermissionuserresponse {  // impl struct for case camerapermissionuserresponse
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::camerapermissionuserresponse;
+    }
+    SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType operator()() const;
+  } camerapermissionuserresponse SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO28camerapermissionuserresponseyA2EmF");
+  SWIFT_INLINE_THUNK bool isCamerapermissionuserresponse() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO21camerapermissioncheckyA2EmFWC) return cases::camerapermissioncheck;
+    if (tag == _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO23camerapermissionrequestyA2EmFWC) return cases::camerapermissionrequest;
+    if (tag == _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO28camerapermissionuserresponseyA2EmFWC) return cases::camerapermissionuserresponse;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__CameraPermissionPingletNested::EventType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__CameraPermissionPingletNested::EventType> getAllCases() SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK EventType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK EventType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return EventType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_EventType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID23CameraPermissionPingletV9EventTypeOD;
+  static inline constexpr $s7BlinkID23CameraPermissionPingletV9EventTypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_EventType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CameraPermissionPingletNested::EventType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CameraPermissionPingletNested::EventType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CameraPermissionPingletNested::EventType returnNewValue(T callable) {
+    auto result = __CameraPermissionPingletNested::EventType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CameraPermissionPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CameraPermissionPingletNested::EventType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CameraPermissionPingletNested::_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CameraPermissionPingletNested::EventType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CameraPermissionPingletNested::EventType> = true;
+template<>
+struct implClassFor<BlinkID::__CameraPermissionPingletNested::EventType> { using type = BlinkID::__CameraPermissionPingletNested::_impl::_impl_EventType; };
 } // namespace
 #pragma clang diagnostic pop
 } // namespace swift
@@ -12410,6 +14224,346 @@ template<>
 inline const constexpr bool isOpaqueLayout<BlinkID::Country> = true;
 template<>
 struct implClassFor<BlinkID::Country> { using type = BlinkID::_impl::_impl_Country; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CrashMonitorNested {
+
+class SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO") TestCrashType;
+
+} // namespace __CrashMonitorNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__CrashMonitorNested::TestCrashType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC") CrashMonitor;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::CrashMonitor> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_CrashMonitor;
+// Type metadata accessor for CrashMonitor
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID12CrashMonitorCMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC") CrashMonitor final : public swift::_impl::RefCountedClass {
+public:
+  using RefCountedClass::RefCountedClass;
+  using RefCountedClass::operator=;
+  using TestCrashType=__CrashMonitorNested::TestCrashType;
+  static SWIFT_INLINE_THUNK CrashMonitor getShared() SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC6sharedACvpZ");
+  SWIFT_INLINE_THUNK void startMonitoring(bool enableDebugLogging) SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC15startMonitoring18enableDebugLoggingySb_tF");
+  SWIFT_INLINE_THUNK void stopMonitoring() SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC14stopMonitoringyyF");
+  SWIFT_INLINE_THUNK void simulateCrash(const __CrashMonitorNested::TestCrashType& crashType) SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC08simulateC04typeyAC04TestC4TypeO_tF");
+  SWIFT_INLINE_THUNK void testCrashReporting(const __CrashMonitorNested::TestCrashType& crashType) SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04testC9Reporting4typeyAC04TestC4TypeO_tF");
+  SWIFT_INLINE_THUNK void testCrashReportingSync(const __CrashMonitorNested::TestCrashType& crashType) SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04testC13ReportingSync4typeyAC04TestC4TypeO_tF");
+  SWIFT_INLINE_THUNK void verifyPingManagerIntegration() SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC28verifyPingManagerIntegrationyyF");
+protected:
+  SWIFT_INLINE_THUNK CrashMonitor(void * _Nonnull ptr) noexcept : RefCountedClass(ptr) {}
+private:
+  friend class _impl::_impl_CrashMonitor;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID12CrashMonitorCD;
+  static inline constexpr $s7BlinkID12CrashMonitorCD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_CrashMonitor {
+public:
+static SWIFT_INLINE_THUNK CrashMonitor makeRetained(void * _Nonnull ptr) noexcept { return CrashMonitor(ptr); }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::CrashMonitor> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID12CrashMonitorCMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+struct implClassFor<BlinkID::CrashMonitor> { using type = BlinkID::_impl::_impl_CrashMonitor; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __CrashMonitorNested {
+
+namespace _impl {
+
+class _impl_TestCrashType;
+
+// Type metadata accessor for TestCrashType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID12CrashMonitorC04TestC4TypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum TestCrashType
+extern "C" {
+extern unsigned $s7BlinkID12CrashMonitorC04TestC4TypeO9exceptionyA2EmFWC;
+extern unsigned $s7BlinkID12CrashMonitorC04TestC4TypeO17segmentationFaultyA2EmFWC;
+extern unsigned $s7BlinkID12CrashMonitorC04TestC4TypeO16arrayOutOfBoundsyA2EmFWC;
+extern unsigned $s7BlinkID12CrashMonitorC04TestC4TypeO21nilPointerDereferenceyA2EmFWC;
+extern unsigned $s7BlinkID12CrashMonitorC04TestC4TypeO5abortyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO") TestCrashType final {
+public:
+  SWIFT_INLINE_THUNK ~TestCrashType() noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK TestCrashType(const TestCrashType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK TestCrashType &operator =(const TestCrashType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK TestCrashType &operator =(TestCrashType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER TestCrashType(TestCrashType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    exception SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO9exceptionyA2EmF"),
+    segmentationFault SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO17segmentationFaultyA2EmF"),
+    arrayOutOfBounds SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO16arrayOutOfBoundsyA2EmF"),
+    nilPointerDereference SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO21nilPointerDereferenceyA2EmF"),
+    abort SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO5abortyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_exception {  // impl struct for case exception
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::exception;
+    }
+    SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType operator()() const;
+  } exception SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO9exceptionyA2EmF");
+  SWIFT_INLINE_THUNK bool isException() const;
+
+  inline const static struct _impl_segmentationFault {  // impl struct for case segmentationFault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::segmentationFault;
+    }
+    SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType operator()() const;
+  } segmentationFault SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO17segmentationFaultyA2EmF");
+  SWIFT_INLINE_THUNK bool isSegmentationFault() const;
+
+  inline const static struct _impl_arrayOutOfBounds {  // impl struct for case arrayOutOfBounds
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::arrayOutOfBounds;
+    }
+    SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType operator()() const;
+  } arrayOutOfBounds SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO16arrayOutOfBoundsyA2EmF");
+  SWIFT_INLINE_THUNK bool isArrayOutOfBounds() const;
+
+  inline const static struct _impl_nilPointerDereference {  // impl struct for case nilPointerDereference
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nilPointerDereference;
+    }
+    SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType operator()() const;
+  } nilPointerDereference SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO21nilPointerDereferenceyA2EmF");
+  SWIFT_INLINE_THUNK bool isNilPointerDereference() const;
+
+  inline const static struct _impl_abort {  // impl struct for case abort
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::abort;
+    }
+    SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType operator()() const;
+  } abort SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO5abortyA2EmF");
+  SWIFT_INLINE_THUNK bool isAbort() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID12CrashMonitorC04TestC4TypeO9exceptionyA2EmFWC) return cases::exception;
+    if (tag == _impl::$s7BlinkID12CrashMonitorC04TestC4TypeO17segmentationFaultyA2EmFWC) return cases::segmentationFault;
+    if (tag == _impl::$s7BlinkID12CrashMonitorC04TestC4TypeO16arrayOutOfBoundsyA2EmFWC) return cases::arrayOutOfBounds;
+    if (tag == _impl::$s7BlinkID12CrashMonitorC04TestC4TypeO21nilPointerDereferenceyA2EmFWC) return cases::nilPointerDereference;
+    if (tag == _impl::$s7BlinkID12CrashMonitorC04TestC4TypeO5abortyA2EmFWC) return cases::abort;
+    return cases::unknownDefault;
+  }
+
+  SWIFT_INLINE_THUNK swift::String getDescription() const SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO11descriptionSSvp");
+  static SWIFT_INLINE_THUNK swift::Array<__CrashMonitorNested::TestCrashType> getAllCases() SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::Int getHashValue() const SWIFT_SYMBOL("s:7BlinkID12CrashMonitorC04TestC4TypeO9hashValueSivp");
+private:
+  SWIFT_INLINE_THUNK TestCrashType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK TestCrashType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return TestCrashType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_TestCrashType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID12CrashMonitorC04TestC4TypeOD;
+  static inline constexpr $s7BlinkID12CrashMonitorC04TestC4TypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_TestCrashType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__CrashMonitorNested::TestCrashType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __CrashMonitorNested::TestCrashType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __CrashMonitorNested::TestCrashType returnNewValue(T callable) {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __CrashMonitorNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__CrashMonitorNested::TestCrashType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__CrashMonitorNested::_impl::$s7BlinkID12CrashMonitorC04TestC4TypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__CrashMonitorNested::TestCrashType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__CrashMonitorNested::TestCrashType> = true;
+template<>
+struct implClassFor<BlinkID::__CrashMonitorNested::TestCrashType> { using type = BlinkID::__CrashMonitorNested::_impl::_impl_TestCrashType; };
 } // namespace
 #pragma clang diagnostic pop
 } // namespace swift
@@ -17027,6 +19181,383 @@ struct implClassFor<BlinkID::DriverLicenseDetailedInfo<T_0_0>> { using type = Bl
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+namespace __ErrorPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO") ErrorType;
+
+} // namespace __ErrorPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__ErrorPingletNested::ErrorType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV") ErrorPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::ErrorPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_ErrorPinglet;
+
+// Type metadata accessor for ErrorPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID12ErrorPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV") ErrorPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~ErrorPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorPinglet(const ErrorPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorPinglet &operator =(const ErrorPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK ErrorPinglet &operator =(ErrorPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER ErrorPinglet(ErrorPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using ErrorType=__ErrorPingletNested::ErrorType;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType getErrorType() const SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV9errorTypeAC0cF0Ovp");
+  SWIFT_INLINE_THUNK swift::String getErrorMessage() const SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV12errorMessageSSvp");
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> getStackTrace() const SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV10stackTraceSSSgvp");
+  static SWIFT_INLINE_THUNK ErrorPinglet init(const __ErrorPingletNested::ErrorType& errorType, const swift::String& errorMessage, const swift::Optional<swift::String>& stackTrace) SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV9errorType0E7Message10stackTraceA2C0cF0O_S2SSgtcfc");
+private:
+  SWIFT_INLINE_THUNK ErrorPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK ErrorPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return ErrorPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_ErrorPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID12ErrorPingletVD;
+  static inline constexpr $s7BlinkID12ErrorPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_ErrorPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(ErrorPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const ErrorPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER ErrorPinglet returnNewValue(T callable) {
+    auto result = ErrorPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::ErrorPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID12ErrorPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::ErrorPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::ErrorPinglet> = true;
+template<>
+struct implClassFor<BlinkID::ErrorPinglet> { using type = BlinkID::_impl::_impl_ErrorPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __ErrorPingletNested {
+
+namespace _impl {
+
+class _impl_ErrorType;
+
+// Type metadata accessor for ErrorType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID12ErrorPingletV0C4TypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum ErrorType
+extern "C" {
+extern unsigned $s7BlinkID12ErrorPingletV0C4TypeO8nonfatalyA2EmFWC;
+extern unsigned $s7BlinkID12ErrorPingletV0C4TypeO5crashyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO") ErrorType final {
+public:
+  SWIFT_INLINE_THUNK ~ErrorType() noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorType(const ErrorType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorType &operator =(const ErrorType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK ErrorType &operator =(ErrorType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER ErrorType(ErrorType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    nonfatal SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO8nonfatalyA2EmF"),
+    crash SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO5crashyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_nonfatal {  // impl struct for case nonfatal
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::nonfatal;
+    }
+    SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType operator()() const;
+  } nonfatal SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO8nonfatalyA2EmF");
+  SWIFT_INLINE_THUNK bool isNonfatal() const;
+
+  inline const static struct _impl_crash {  // impl struct for case crash
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::crash;
+    }
+    SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType operator()() const;
+  } crash SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO5crashyA2EmF");
+  SWIFT_INLINE_THUNK bool isCrash() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID12ErrorPingletV0C4TypeO8nonfatalyA2EmFWC) return cases::nonfatal;
+    if (tag == _impl::$s7BlinkID12ErrorPingletV0C4TypeO5crashyA2EmFWC) return cases::crash;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__ErrorPingletNested::ErrorType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__ErrorPingletNested::ErrorType> getAllCases() SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID12ErrorPingletV0C4TypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK ErrorType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK ErrorType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return ErrorType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_ErrorType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID12ErrorPingletV0C4TypeOD;
+  static inline constexpr $s7BlinkID12ErrorPingletV0C4TypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_ErrorType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__ErrorPingletNested::ErrorType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __ErrorPingletNested::ErrorType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __ErrorPingletNested::ErrorType returnNewValue(T callable) {
+    auto result = __ErrorPingletNested::ErrorType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __ErrorPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__ErrorPingletNested::ErrorType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__ErrorPingletNested::_impl::$s7BlinkID12ErrorPingletV0C4TypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__ErrorPingletNested::ErrorType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__ErrorPingletNested::ErrorType> = true;
+template<>
+struct implClassFor<BlinkID::__ErrorPingletNested::ErrorType> { using type = BlinkID::__ErrorPingletNested::_impl::_impl_ErrorType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 namespace _impl {
 
 class _impl_FieldState;
@@ -17219,6 +19750,7 @@ extern unsigned $s7BlinkID9FieldTypeO12vehicleOwneryA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO11countryCodeyA2CmFWC;
 extern unsigned $s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC;
+extern unsigned $s7BlinkID9FieldTypeO22publicTransportFreeUseyA2CmFWC;
 }
 
 } // namespace _impl
@@ -17319,6 +19851,7 @@ public:
     nationalInsuranceNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmF"),
     countryCode SWIFT_SYMBOL("s:7BlinkID9FieldTypeO11countryCodeyA2CmF"),
     certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF"),
+    publicTransportFreeUse SWIFT_SYMBOL("s:7BlinkID9FieldTypeO22publicTransportFreeUseyA2CmF"),
     unknownDefault
   };
 
@@ -17756,6 +20289,14 @@ public:
   } certificateNumber SWIFT_SYMBOL("s:7BlinkID9FieldTypeO17certificateNumberyA2CmF");
   SWIFT_INLINE_THUNK bool isCertificateNumber() const;
 
+  inline const static struct _impl_publicTransportFreeUse {  // impl struct for case publicTransportFreeUse
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::publicTransportFreeUse;
+    }
+    SWIFT_INLINE_THUNK FieldType operator()() const;
+  } publicTransportFreeUse SWIFT_SYMBOL("s:7BlinkID9FieldTypeO22publicTransportFreeUseyA2CmF");
+  SWIFT_INLINE_THUNK bool isPublicTransportFreeUse() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -17820,6 +20361,7 @@ public:
     if (tag == _impl::$s7BlinkID9FieldTypeO23nationalInsuranceNumberyA2CmFWC) return cases::nationalInsuranceNumber;
     if (tag == _impl::$s7BlinkID9FieldTypeO11countryCodeyA2CmFWC) return cases::countryCode;
     if (tag == _impl::$s7BlinkID9FieldTypeO17certificateNumberyA2CmFWC) return cases::certificateNumber;
+    if (tag == _impl::$s7BlinkID9FieldTypeO22publicTransportFreeUseyA2CmFWC) return cases::publicTransportFreeUse;
     return cases::unknownDefault;
   }
 
@@ -19828,6 +22370,382 @@ struct implClassFor<BlinkID::InvalidLicenseKeyError> { using type = BlinkID::_im
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+namespace __LogPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO") LogLevel;
+
+} // namespace __LogPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__LogPingletNested::LogLevel> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID10LogPingletV") LogPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::LogPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_LogPinglet;
+
+// Type metadata accessor for LogPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID10LogPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID10LogPingletV") LogPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~LogPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK LogPinglet(const LogPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK LogPinglet &operator =(const LogPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK LogPinglet &operator =(LogPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER LogPinglet(LogPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using LogLevel=__LogPingletNested::LogLevel;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID10LogPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID10LogPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __LogPingletNested::LogLevel getLogLevel() const SWIFT_SYMBOL("s:7BlinkID10LogPingletV8logLevelAC0cF0Ovp");
+  SWIFT_INLINE_THUNK swift::String getLogMessage() const SWIFT_SYMBOL("s:7BlinkID10LogPingletV10logMessageSSvp");
+  static SWIFT_INLINE_THUNK LogPinglet init(const __LogPingletNested::LogLevel& logLevel, const swift::String& logMessage) SWIFT_SYMBOL("s:7BlinkID10LogPingletV8logLevel0E7MessageA2C0cF0O_SStcfc");
+private:
+  SWIFT_INLINE_THUNK LogPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK LogPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return LogPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_LogPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID10LogPingletVD;
+  static inline constexpr $s7BlinkID10LogPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_LogPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(LogPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const LogPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER LogPinglet returnNewValue(T callable) {
+    auto result = LogPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID10LogPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::LogPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID10LogPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::LogPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::LogPinglet> = true;
+template<>
+struct implClassFor<BlinkID::LogPinglet> { using type = BlinkID::_impl::_impl_LogPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __LogPingletNested {
+
+namespace _impl {
+
+class _impl_LogLevel;
+
+// Type metadata accessor for LogLevel
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID10LogPingletV0C5LevelOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum LogLevel
+extern "C" {
+extern unsigned $s7BlinkID10LogPingletV0C5LevelO4infoyA2EmFWC;
+extern unsigned $s7BlinkID10LogPingletV0C5LevelO7warningyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO") LogLevel final {
+public:
+  SWIFT_INLINE_THUNK ~LogLevel() noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK LogLevel(const LogLevel &other) noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK LogLevel &operator =(const LogLevel &other) noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK LogLevel &operator =(LogLevel &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER LogLevel(LogLevel &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    info SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO4infoyA2EmF"),
+    warning SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO7warningyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_info {  // impl struct for case info
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::info;
+    }
+    SWIFT_INLINE_THUNK __LogPingletNested::LogLevel operator()() const;
+  } info SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO4infoyA2EmF");
+  SWIFT_INLINE_THUNK bool isInfo() const;
+
+  inline const static struct _impl_warning {  // impl struct for case warning
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::warning;
+    }
+    SWIFT_INLINE_THUNK __LogPingletNested::LogLevel operator()() const;
+  } warning SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO7warningyA2EmF");
+  SWIFT_INLINE_THUNK bool isWarning() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID10LogPingletV0C5LevelO4infoyA2EmFWC) return cases::info;
+    if (tag == _impl::$s7BlinkID10LogPingletV0C5LevelO7warningyA2EmFWC) return cases::warning;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__LogPingletNested::LogLevel> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__LogPingletNested::LogLevel> getAllCases() SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID10LogPingletV0C5LevelO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK LogLevel(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK LogLevel _make() noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return LogLevel(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_LogLevel;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID10LogPingletV0C5LevelOD;
+  static inline constexpr $s7BlinkID10LogPingletV0C5LevelOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_LogLevel {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__LogPingletNested::LogLevel &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __LogPingletNested::LogLevel &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __LogPingletNested::LogLevel returnNewValue(T callable) {
+    auto result = __LogPingletNested::LogLevel::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID10LogPingletV0C5LevelOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __LogPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__LogPingletNested::LogLevel> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__LogPingletNested::_impl::$s7BlinkID10LogPingletV0C5LevelOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__LogPingletNested::LogLevel> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__LogPingletNested::LogLevel> = true;
+template<>
+struct implClassFor<BlinkID::__LogPingletNested::LogLevel> { using type = BlinkID::__LogPingletNested::_impl::_impl_LogLevel; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 class SWIFT_SYMBOL("s:7BlinkID15MRZDocumentTypeO") MRZDocumentType;
 } // end namespace 
 
@@ -20935,6 +23853,75 @@ template<>
 inline const constexpr bool isOpaqueLayout<BlinkID::ModelLoadError> = true;
 template<>
 struct implClassFor<BlinkID::ModelLoadError> { using type = BlinkID::_impl::_impl_ModelLoadError; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+class SWIFT_SYMBOL("s:7BlinkID11PingManagerC") PingManager;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::PingManager> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_PingManager;
+// Type metadata accessor for PingManager
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID11PingManagerCMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID11PingManagerC") PingManager : public swift::_impl::RefCountedClass {
+public:
+  using RefCountedClass::RefCountedClass;
+  using RefCountedClass::operator=;
+  static SWIFT_INLINE_THUNK PingManager getShared() SWIFT_SYMBOL("s:7BlinkID11PingManagerC6sharedACvpZ");
+protected:
+  SWIFT_INLINE_THUNK PingManager(void * _Nonnull ptr) noexcept : RefCountedClass(ptr) {}
+private:
+  friend class _impl::_impl_PingManager;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID11PingManagerCD;
+  static inline constexpr $s7BlinkID11PingManagerCD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_PingManager {
+public:
+static SWIFT_INLINE_THUNK PingManager makeRetained(void * _Nonnull ptr) noexcept { return PingManager(ptr); }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::PingManager> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID11PingManagerCMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+struct implClassFor<BlinkID::PingManager> { using type = BlinkID::_impl::_impl_PingManager; };
 } // namespace
 #pragma clang diagnostic pop
 } // namespace swift
@@ -24937,6 +27924,637 @@ struct implClassFor<BlinkID::SDKInitError> { using type = BlinkID::_impl::_impl_
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+namespace __ScanningConditionsPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO") UpdateType;
+
+} // namespace __ScanningConditionsPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__ScanningConditionsPingletNested::UpdateType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __ScanningConditionsPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO") DeviceOrientation;
+
+} // namespace __ScanningConditionsPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__ScanningConditionsPingletNested::DeviceOrientation> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV") ScanningConditionsPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::ScanningConditionsPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_ScanningConditionsPinglet;
+
+// Type metadata accessor for ScanningConditionsPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25ScanningConditionsPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV") ScanningConditionsPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~ScanningConditionsPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ScanningConditionsPinglet(const ScanningConditionsPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ScanningConditionsPinglet &operator =(const ScanningConditionsPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK ScanningConditionsPinglet &operator =(ScanningConditionsPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER ScanningConditionsPinglet(ScanningConditionsPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using UpdateType=__ScanningConditionsPingletNested::UpdateType;
+  using DeviceOrientation=__ScanningConditionsPingletNested::DeviceOrientation;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType getUpdateType() const SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10updateTypeAC06UpdateG0Ovp");
+  SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation> getDeviceOrientation() const SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17deviceOrientationAC06DeviceG0OSgvp");
+  SWIFT_INLINE_THUNK swift::Optional<bool> getFlashlightOn() const SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV12flashlightOnSbSgvp");
+  static SWIFT_INLINE_THUNK ScanningConditionsPinglet init(const __ScanningConditionsPingletNested::UpdateType& updateType, const swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>& deviceOrientation, const swift::Optional<bool>& flashlightOn) SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10updateType17deviceOrientation12flashlightOnA2C06UpdateG0O_AC06DeviceI0OSgSbSgtcfc");
+private:
+  SWIFT_INLINE_THUNK ScanningConditionsPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK ScanningConditionsPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return ScanningConditionsPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_ScanningConditionsPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25ScanningConditionsPingletVD;
+  static inline constexpr $s7BlinkID25ScanningConditionsPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_ScanningConditionsPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(ScanningConditionsPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const ScanningConditionsPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER ScanningConditionsPinglet returnNewValue(T callable) {
+    auto result = ScanningConditionsPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::ScanningConditionsPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::ScanningConditionsPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::ScanningConditionsPinglet> = true;
+template<>
+struct implClassFor<BlinkID::ScanningConditionsPinglet> { using type = BlinkID::_impl::_impl_ScanningConditionsPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __ScanningConditionsPingletNested {
+
+namespace _impl {
+
+class _impl_UpdateType;
+
+// Type metadata accessor for UpdateType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum UpdateType
+extern "C" {
+extern unsigned $s7BlinkID25ScanningConditionsPingletV10UpdateTypeO17deviceorientationyA2EmFWC;
+extern unsigned $s7BlinkID25ScanningConditionsPingletV10UpdateTypeO15flashlightstateyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO") UpdateType final {
+public:
+  SWIFT_INLINE_THUNK ~UpdateType() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK UpdateType(const UpdateType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK UpdateType &operator =(const UpdateType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK UpdateType &operator =(UpdateType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER UpdateType(UpdateType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    deviceorientation SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO17deviceorientationyA2EmF"),
+    flashlightstate SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO15flashlightstateyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_deviceorientation {  // impl struct for case deviceorientation
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::deviceorientation;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType operator()() const;
+  } deviceorientation SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO17deviceorientationyA2EmF");
+  SWIFT_INLINE_THUNK bool isDeviceorientation() const;
+
+  inline const static struct _impl_flashlightstate {  // impl struct for case flashlightstate
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::flashlightstate;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType operator()() const;
+  } flashlightstate SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO15flashlightstateyA2EmF");
+  SWIFT_INLINE_THUNK bool isFlashlightstate() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO17deviceorientationyA2EmFWC) return cases::deviceorientation;
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO15flashlightstateyA2EmFWC) return cases::flashlightstate;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::UpdateType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__ScanningConditionsPingletNested::UpdateType> getAllCases() SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK UpdateType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK UpdateType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return UpdateType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_UpdateType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25ScanningConditionsPingletV10UpdateTypeOD;
+  static inline constexpr $s7BlinkID25ScanningConditionsPingletV10UpdateTypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_UpdateType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__ScanningConditionsPingletNested::UpdateType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __ScanningConditionsPingletNested::UpdateType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __ScanningConditionsPingletNested::UpdateType returnNewValue(T callable) {
+    auto result = __ScanningConditionsPingletNested::UpdateType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __ScanningConditionsPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__ScanningConditionsPingletNested::UpdateType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__ScanningConditionsPingletNested::_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__ScanningConditionsPingletNested::UpdateType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__ScanningConditionsPingletNested::UpdateType> = true;
+template<>
+struct implClassFor<BlinkID::__ScanningConditionsPingletNested::UpdateType> { using type = BlinkID::__ScanningConditionsPingletNested::_impl::_impl_UpdateType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __ScanningConditionsPingletNested {
+
+namespace _impl {
+
+class _impl_DeviceOrientation;
+
+// Type metadata accessor for DeviceOrientation
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum DeviceOrientation
+extern "C" {
+extern unsigned $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8portraityA2EmFWC;
+extern unsigned $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14landscaperightyA2EmFWC;
+extern unsigned $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO13landscapeleftyA2EmFWC;
+extern unsigned $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14portraitupsideyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO") DeviceOrientation final {
+public:
+  SWIFT_INLINE_THUNK ~DeviceOrientation() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK DeviceOrientation(const DeviceOrientation &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK DeviceOrientation &operator =(const DeviceOrientation &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK DeviceOrientation &operator =(DeviceOrientation &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER DeviceOrientation(DeviceOrientation &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    portrait SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8portraityA2EmF"),
+    landscaperight SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14landscaperightyA2EmF"),
+    landscapeleft SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO13landscapeleftyA2EmF"),
+    portraitupside SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14portraitupsideyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_portrait {  // impl struct for case portrait
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::portrait;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation operator()() const;
+  } portrait SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8portraityA2EmF");
+  SWIFT_INLINE_THUNK bool isPortrait() const;
+
+  inline const static struct _impl_landscaperight {  // impl struct for case landscaperight
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::landscaperight;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation operator()() const;
+  } landscaperight SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14landscaperightyA2EmF");
+  SWIFT_INLINE_THUNK bool isLandscaperight() const;
+
+  inline const static struct _impl_landscapeleft {  // impl struct for case landscapeleft
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::landscapeleft;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation operator()() const;
+  } landscapeleft SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO13landscapeleftyA2EmF");
+  SWIFT_INLINE_THUNK bool isLandscapeleft() const;
+
+  inline const static struct _impl_portraitupside {  // impl struct for case portraitupside
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::portraitupside;
+    }
+    SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation operator()() const;
+  } portraitupside SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14portraitupsideyA2EmF");
+  SWIFT_INLINE_THUNK bool isPortraitupside() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8portraityA2EmFWC) return cases::portrait;
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14landscaperightyA2EmFWC) return cases::landscaperight;
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO13landscapeleftyA2EmFWC) return cases::landscapeleft;
+    if (tag == _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14portraitupsideyA2EmFWC) return cases::portraitupside;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__ScanningConditionsPingletNested::DeviceOrientation> getAllCases() SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK DeviceOrientation(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK DeviceOrientation _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return DeviceOrientation(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_DeviceOrientation;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOD;
+  static inline constexpr $s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_DeviceOrientation {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__ScanningConditionsPingletNested::DeviceOrientation &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __ScanningConditionsPingletNested::DeviceOrientation &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __ScanningConditionsPingletNested::DeviceOrientation returnNewValue(T callable) {
+    auto result = __ScanningConditionsPingletNested::DeviceOrientation::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __ScanningConditionsPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__ScanningConditionsPingletNested::DeviceOrientation> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__ScanningConditionsPingletNested::_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__ScanningConditionsPingletNested::DeviceOrientation> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__ScanningConditionsPingletNested::DeviceOrientation> = true;
+template<>
+struct implClassFor<BlinkID::__ScanningConditionsPingletNested::DeviceOrientation> { using type = BlinkID::__ScanningConditionsPingletNested::_impl::_impl_DeviceOrientation; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 /// Represents the mode of document scanning.
 /// This enum class defines whether the scanning process is limited to a single
 /// side of the document or includes multiple sides, automatically identifying how many sides need to be scanned.
@@ -25774,6 +29392,716 @@ struct implClassFor<BlinkID::ScanningStatus> { using type = BlinkID::_impl::_imp
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+namespace __SdkInitStartPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO") Product;
+
+} // namespace __SdkInitStartPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__SdkInitStartPingletNested::Product> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __SdkInitStartPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO") Platform;
+
+} // namespace __SdkInitStartPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__SdkInitStartPingletNested::Platform> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV") SdkInitStartPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::SdkInitStartPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_SdkInitStartPinglet;
+
+// Type metadata accessor for SdkInitStartPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID19SdkInitStartPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV") SdkInitStartPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~SdkInitStartPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK SdkInitStartPinglet(const SdkInitStartPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK SdkInitStartPinglet &operator =(const SdkInitStartPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK SdkInitStartPinglet &operator =(SdkInitStartPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER SdkInitStartPinglet(SdkInitStartPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using Product=__SdkInitStartPingletNested::Product;
+  using Platform=__SdkInitStartPingletNested::Platform;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV13schemaVersionSSvpZ");
+  static SWIFT_INLINE_THUNK swift::Int getSessionNumber() SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV13sessionNumberSivpZ");
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product getProduct() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7productAC7ProductOvp");
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform getPlatform() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8platformAC8PlatformOvp");
+  SWIFT_INLINE_THUNK swift::String getPackageName() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV11packageNameSSvp");
+  SWIFT_INLINE_THUNK swift::String getUserId() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV6userIdSSvp");
+  static SWIFT_INLINE_THUNK SdkInitStartPinglet init(const __SdkInitStartPingletNested::Product& product, const __SdkInitStartPingletNested::Platform& platform, const swift::String& packageName, const swift::String& userId) SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7product8platform11packageName6userIdA2C7ProductO_AC8PlatformOS2Stcfc");
+private:
+  SWIFT_INLINE_THUNK SdkInitStartPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK SdkInitStartPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return SdkInitStartPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_SdkInitStartPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID19SdkInitStartPingletVD;
+  static inline constexpr $s7BlinkID19SdkInitStartPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_SdkInitStartPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(SdkInitStartPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const SdkInitStartPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER SdkInitStartPinglet returnNewValue(T callable) {
+    auto result = SdkInitStartPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::SdkInitStartPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID19SdkInitStartPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::SdkInitStartPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::SdkInitStartPinglet> = true;
+template<>
+struct implClassFor<BlinkID::SdkInitStartPinglet> { using type = BlinkID::_impl::_impl_SdkInitStartPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __SdkInitStartPingletNested {
+
+namespace _impl {
+
+class _impl_Product;
+
+// Type metadata accessor for Product
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID19SdkInitStartPingletV7ProductOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum Product
+extern "C" {
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO9blinkcardyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO7blinkidyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO10blinkinputyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO7captureyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO20documentverificationyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO10pdf417mobiyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV7ProductO8photopayyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO") Product final {
+public:
+  SWIFT_INLINE_THUNK ~Product() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Product(const Product &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Product &operator =(const Product &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK Product &operator =(Product &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER Product(Product &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    blinkcard SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO9blinkcardyA2EmF"),
+    blinkid SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO7blinkidyA2EmF"),
+    blinkinput SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO10blinkinputyA2EmF"),
+    capture SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO7captureyA2EmF"),
+    documentverification SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO20documentverificationyA2EmF"),
+    pdf417mobi SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO10pdf417mobiyA2EmF"),
+    photopay SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO8photopayyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_blinkcard {  // impl struct for case blinkcard
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::blinkcard;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } blinkcard SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO9blinkcardyA2EmF");
+  SWIFT_INLINE_THUNK bool isBlinkcard() const;
+
+  inline const static struct _impl_blinkid {  // impl struct for case blinkid
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::blinkid;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } blinkid SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO7blinkidyA2EmF");
+  SWIFT_INLINE_THUNK bool isBlinkid() const;
+
+  inline const static struct _impl_blinkinput {  // impl struct for case blinkinput
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::blinkinput;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } blinkinput SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO10blinkinputyA2EmF");
+  SWIFT_INLINE_THUNK bool isBlinkinput() const;
+
+  inline const static struct _impl_capture {  // impl struct for case capture
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::capture;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } capture SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO7captureyA2EmF");
+  SWIFT_INLINE_THUNK bool isCapture() const;
+
+  inline const static struct _impl_documentverification {  // impl struct for case documentverification
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::documentverification;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } documentverification SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO20documentverificationyA2EmF");
+  SWIFT_INLINE_THUNK bool isDocumentverification() const;
+
+  inline const static struct _impl_pdf417mobi {  // impl struct for case pdf417mobi
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::pdf417mobi;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } pdf417mobi SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO10pdf417mobiyA2EmF");
+  SWIFT_INLINE_THUNK bool isPdf417mobi() const;
+
+  inline const static struct _impl_photopay {  // impl struct for case photopay
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::photopay;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product operator()() const;
+  } photopay SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO8photopayyA2EmF");
+  SWIFT_INLINE_THUNK bool isPhotopay() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO9blinkcardyA2EmFWC) return cases::blinkcard;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO7blinkidyA2EmFWC) return cases::blinkid;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO10blinkinputyA2EmFWC) return cases::blinkinput;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO7captureyA2EmFWC) return cases::capture;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO20documentverificationyA2EmFWC) return cases::documentverification;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO10pdf417mobiyA2EmFWC) return cases::pdf417mobi;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV7ProductO8photopayyA2EmFWC) return cases::photopay;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__SdkInitStartPingletNested::Product> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__SdkInitStartPingletNested::Product> getAllCases() SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV7ProductO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK Product(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK Product _make() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return Product(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_Product;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID19SdkInitStartPingletV7ProductOD;
+  static inline constexpr $s7BlinkID19SdkInitStartPingletV7ProductOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_Product {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__SdkInitStartPingletNested::Product &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __SdkInitStartPingletNested::Product &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __SdkInitStartPingletNested::Product returnNewValue(T callable) {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __SdkInitStartPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__SdkInitStartPingletNested::Product> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__SdkInitStartPingletNested::_impl::$s7BlinkID19SdkInitStartPingletV7ProductOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__SdkInitStartPingletNested::Product> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__SdkInitStartPingletNested::Product> = true;
+template<>
+struct implClassFor<BlinkID::__SdkInitStartPingletNested::Product> { using type = BlinkID::__SdkInitStartPingletNested::_impl::_impl_Product; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __SdkInitStartPingletNested {
+
+namespace _impl {
+
+class _impl_Platform;
+
+// Type metadata accessor for Platform
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID19SdkInitStartPingletV8PlatformOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum Platform
+extern "C" {
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO3iosyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO7androidyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO10emscriptenyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO5macosyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO5linuxyA2EmFWC;
+extern unsigned $s7BlinkID19SdkInitStartPingletV8PlatformO7windowsyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO") Platform final {
+public:
+  SWIFT_INLINE_THUNK ~Platform() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Platform(const Platform &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK Platform &operator =(const Platform &other) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK Platform &operator =(Platform &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER Platform(Platform &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    ios SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO3iosyA2EmF"),
+    android SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO7androidyA2EmF"),
+    emscripten SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO10emscriptenyA2EmF"),
+    macos SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO5macosyA2EmF"),
+    linux SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO5linuxyA2EmF"),
+    windows SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO7windowsyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_ios {  // impl struct for case ios
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::ios;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } ios SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO3iosyA2EmF");
+  SWIFT_INLINE_THUNK bool isIos() const;
+
+  inline const static struct _impl_android {  // impl struct for case android
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::android;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } android SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO7androidyA2EmF");
+  SWIFT_INLINE_THUNK bool isAndroid() const;
+
+  inline const static struct _impl_emscripten {  // impl struct for case emscripten
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::emscripten;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } emscripten SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO10emscriptenyA2EmF");
+  SWIFT_INLINE_THUNK bool isEmscripten() const;
+
+  inline const static struct _impl_macos {  // impl struct for case macos
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::macos;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } macos SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO5macosyA2EmF");
+  SWIFT_INLINE_THUNK bool isMacos() const;
+
+  inline const static struct _impl_linux {  // impl struct for case linux
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::linux;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } linux SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO5linuxyA2EmF");
+  SWIFT_INLINE_THUNK bool isLinux() const;
+
+  inline const static struct _impl_windows {  // impl struct for case windows
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::windows;
+    }
+    SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform operator()() const;
+  } windows SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO7windowsyA2EmF");
+  SWIFT_INLINE_THUNK bool isWindows() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO3iosyA2EmFWC) return cases::ios;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO7androidyA2EmFWC) return cases::android;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO10emscriptenyA2EmFWC) return cases::emscripten;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO5macosyA2EmFWC) return cases::macos;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO5linuxyA2EmFWC) return cases::linux;
+    if (tag == _impl::$s7BlinkID19SdkInitStartPingletV8PlatformO7windowsyA2EmFWC) return cases::windows;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__SdkInitStartPingletNested::Platform> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__SdkInitStartPingletNested::Platform> getAllCases() SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID19SdkInitStartPingletV8PlatformO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK Platform(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK Platform _make() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return Platform(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_Platform;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID19SdkInitStartPingletV8PlatformOD;
+  static inline constexpr $s7BlinkID19SdkInitStartPingletV8PlatformOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_Platform {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__SdkInitStartPingletNested::Platform &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __SdkInitStartPingletNested::Platform &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __SdkInitStartPingletNested::Platform returnNewValue(T callable) {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __SdkInitStartPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__SdkInitStartPingletNested::Platform> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__SdkInitStartPingletNested::_impl::$s7BlinkID19SdkInitStartPingletV8PlatformOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__SdkInitStartPingletNested::Platform> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__SdkInitStartPingletNested::Platform> = true;
+template<>
+struct implClassFor<BlinkID::__SdkInitStartPingletNested::Platform> { using type = BlinkID::__SdkInitStartPingletNested::_impl::_impl_Platform; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 namespace _impl {
 
 class _impl_SessionError;
@@ -26136,6 +30464,1289 @@ struct implClassFor<BlinkID::SingleSideScanningResult> { using type = BlinkID::_
 
 namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
 
+namespace __UxEventPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO") EventType;
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__UxEventPingletNested::EventType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __UxEventPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO") ErrorMessageType;
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__UxEventPingletNested::ErrorMessageType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __UxEventPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO") AlertType;
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__UxEventPingletNested::AlertType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace __UxEventPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO") HelpCloseType;
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__UxEventPingletNested::HelpCloseType> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV") UxEventPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::UxEventPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_UxEventPinglet;
+
+// Type metadata accessor for UxEventPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID14UxEventPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV") UxEventPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~UxEventPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK UxEventPinglet(const UxEventPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK UxEventPinglet &operator =(const UxEventPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK UxEventPinglet &operator =(UxEventPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER UxEventPinglet(UxEventPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using EventType=__UxEventPingletNested::EventType;
+  using ErrorMessageType=__UxEventPingletNested::ErrorMessageType;
+  using AlertType=__UxEventPingletNested::AlertType;
+  using HelpCloseType=__UxEventPingletNested::HelpCloseType;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType getEventType() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9eventTypeAC0dG0Ovp");
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::ErrorMessageType> getErrorMessageType() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16errorMessageTypeAC05ErrorgH0OSgvp");
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::AlertType> getAlertType() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9alertTypeAC05AlertG0OSgvp");
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::HelpCloseType> getHelpCloseType() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13helpCloseTypeAC04HelpgH0OSgvp");
+  static SWIFT_INLINE_THUNK UxEventPinglet init(const __UxEventPingletNested::EventType& eventType, const swift::Optional<__UxEventPingletNested::ErrorMessageType>& errorMessageType, const swift::Optional<__UxEventPingletNested::AlertType>& alertType, const swift::Optional<__UxEventPingletNested::HelpCloseType>& helpCloseType) SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9eventType012errorMessageG005alertG009helpCloseG0A2C0dG0O_AC05ErroriG0OSgAC05AlertG0OSgAC04HelplG0OSgtcfc");
+private:
+  SWIFT_INLINE_THUNK UxEventPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK UxEventPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return UxEventPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_UxEventPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID14UxEventPingletVD;
+  static inline constexpr $s7BlinkID14UxEventPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_UxEventPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(UxEventPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const UxEventPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER UxEventPinglet returnNewValue(T callable) {
+    auto result = UxEventPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::UxEventPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID14UxEventPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::UxEventPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::UxEventPinglet> = true;
+template<>
+struct implClassFor<BlinkID::UxEventPinglet> { using type = BlinkID::_impl::_impl_UxEventPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __UxEventPingletNested {
+
+namespace _impl {
+
+class _impl_EventType;
+
+// Type metadata accessor for EventType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID14UxEventPingletV0D4TypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum EventType
+extern "C" {
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO13camerastartedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO12cameraclosedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO23onboardinginfodisplayedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO18closebuttonclickedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO20helptooltipdisplayedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO10helpopenedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO10helpclosedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO14alertdisplayedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO12errormessageyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO11steptimeoutyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV0D4TypeO20appmovedtobackgroundyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO") EventType final {
+public:
+  SWIFT_INLINE_THUNK ~EventType() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK EventType(const EventType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK EventType &operator =(const EventType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK EventType &operator =(EventType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER EventType(EventType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    camerastarted SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO13camerastartedyA2EmF"),
+    cameraclosed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO12cameraclosedyA2EmF"),
+    onboardinginfodisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO23onboardinginfodisplayedyA2EmF"),
+    closebuttonclicked SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO18closebuttonclickedyA2EmF"),
+    helptooltipdisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO20helptooltipdisplayedyA2EmF"),
+    helpopened SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO10helpopenedyA2EmF"),
+    helpclosed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO10helpclosedyA2EmF"),
+    alertdisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO14alertdisplayedyA2EmF"),
+    errormessage SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO12errormessageyA2EmF"),
+    steptimeout SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO11steptimeoutyA2EmF"),
+    appmovedtobackground SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO20appmovedtobackgroundyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_camerastarted {  // impl struct for case camerastarted
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::camerastarted;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } camerastarted SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO13camerastartedyA2EmF");
+  SWIFT_INLINE_THUNK bool isCamerastarted() const;
+
+  inline const static struct _impl_cameraclosed {  // impl struct for case cameraclosed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::cameraclosed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } cameraclosed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO12cameraclosedyA2EmF");
+  SWIFT_INLINE_THUNK bool isCameraclosed() const;
+
+  inline const static struct _impl_onboardinginfodisplayed {  // impl struct for case onboardinginfodisplayed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::onboardinginfodisplayed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } onboardinginfodisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO23onboardinginfodisplayedyA2EmF");
+  SWIFT_INLINE_THUNK bool isOnboardinginfodisplayed() const;
+
+  inline const static struct _impl_closebuttonclicked {  // impl struct for case closebuttonclicked
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::closebuttonclicked;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } closebuttonclicked SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO18closebuttonclickedyA2EmF");
+  SWIFT_INLINE_THUNK bool isClosebuttonclicked() const;
+
+  inline const static struct _impl_helptooltipdisplayed {  // impl struct for case helptooltipdisplayed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::helptooltipdisplayed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } helptooltipdisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO20helptooltipdisplayedyA2EmF");
+  SWIFT_INLINE_THUNK bool isHelptooltipdisplayed() const;
+
+  inline const static struct _impl_helpopened {  // impl struct for case helpopened
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::helpopened;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } helpopened SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO10helpopenedyA2EmF");
+  SWIFT_INLINE_THUNK bool isHelpopened() const;
+
+  inline const static struct _impl_helpclosed {  // impl struct for case helpclosed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::helpclosed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } helpclosed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO10helpclosedyA2EmF");
+  SWIFT_INLINE_THUNK bool isHelpclosed() const;
+
+  inline const static struct _impl_alertdisplayed {  // impl struct for case alertdisplayed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::alertdisplayed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } alertdisplayed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO14alertdisplayedyA2EmF");
+  SWIFT_INLINE_THUNK bool isAlertdisplayed() const;
+
+  inline const static struct _impl_errormessage {  // impl struct for case errormessage
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::errormessage;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } errormessage SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO12errormessageyA2EmF");
+  SWIFT_INLINE_THUNK bool isErrormessage() const;
+
+  inline const static struct _impl_steptimeout {  // impl struct for case steptimeout
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::steptimeout;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } steptimeout SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO11steptimeoutyA2EmF");
+  SWIFT_INLINE_THUNK bool isSteptimeout() const;
+
+  inline const static struct _impl_appmovedtobackground {  // impl struct for case appmovedtobackground
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::appmovedtobackground;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::EventType operator()() const;
+  } appmovedtobackground SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO20appmovedtobackgroundyA2EmF");
+  SWIFT_INLINE_THUNK bool isAppmovedtobackground() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO13camerastartedyA2EmFWC) return cases::camerastarted;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO12cameraclosedyA2EmFWC) return cases::cameraclosed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO23onboardinginfodisplayedyA2EmFWC) return cases::onboardinginfodisplayed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO18closebuttonclickedyA2EmFWC) return cases::closebuttonclicked;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO20helptooltipdisplayedyA2EmFWC) return cases::helptooltipdisplayed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO10helpopenedyA2EmFWC) return cases::helpopened;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO10helpclosedyA2EmFWC) return cases::helpclosed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO14alertdisplayedyA2EmFWC) return cases::alertdisplayed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO12errormessageyA2EmFWC) return cases::errormessage;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO11steptimeoutyA2EmFWC) return cases::steptimeout;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV0D4TypeO20appmovedtobackgroundyA2EmFWC) return cases::appmovedtobackground;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::EventType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::EventType> getAllCases() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV0D4TypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK EventType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK EventType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return EventType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_EventType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID14UxEventPingletV0D4TypeOD;
+  static inline constexpr $s7BlinkID14UxEventPingletV0D4TypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_EventType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__UxEventPingletNested::EventType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __UxEventPingletNested::EventType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __UxEventPingletNested::EventType returnNewValue(T callable) {
+    auto result = __UxEventPingletNested::EventType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__UxEventPingletNested::EventType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__UxEventPingletNested::_impl::$s7BlinkID14UxEventPingletV0D4TypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__UxEventPingletNested::EventType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__UxEventPingletNested::EventType> = true;
+template<>
+struct implClassFor<BlinkID::__UxEventPingletNested::EventType> { using type = BlinkID::__UxEventPingletNested::_impl::_impl_EventType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __UxEventPingletNested {
+
+namespace _impl {
+
+class _impl_ErrorMessageType;
+
+// Type metadata accessor for ErrorMessageType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum ErrorMessageType
+extern "C" {
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO10movecloseryA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO11movefartheryA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO11keepvisibleyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO8flipsideyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO13aligndocumentyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO12movefromedgeyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO16increaselightingyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO16decreaselightingyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO13eliminatebluryA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV16ErrorMessageTypeO14eliminateglareyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO") ErrorMessageType final {
+public:
+  SWIFT_INLINE_THUNK ~ErrorMessageType() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorMessageType(const ErrorMessageType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK ErrorMessageType &operator =(const ErrorMessageType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK ErrorMessageType &operator =(ErrorMessageType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER ErrorMessageType(ErrorMessageType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    movecloser SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO10movecloseryA2EmF"),
+    movefarther SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO11movefartheryA2EmF"),
+    keepvisible SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO11keepvisibleyA2EmF"),
+    flipside SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO8flipsideyA2EmF"),
+    aligndocument SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO13aligndocumentyA2EmF"),
+    movefromedge SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO12movefromedgeyA2EmF"),
+    increaselighting SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO16increaselightingyA2EmF"),
+    decreaselighting SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO16decreaselightingyA2EmF"),
+    eliminateblur SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO13eliminatebluryA2EmF"),
+    eliminateglare SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO14eliminateglareyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_movecloser {  // impl struct for case movecloser
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::movecloser;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } movecloser SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO10movecloseryA2EmF");
+  SWIFT_INLINE_THUNK bool isMovecloser() const;
+
+  inline const static struct _impl_movefarther {  // impl struct for case movefarther
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::movefarther;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } movefarther SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO11movefartheryA2EmF");
+  SWIFT_INLINE_THUNK bool isMovefarther() const;
+
+  inline const static struct _impl_keepvisible {  // impl struct for case keepvisible
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::keepvisible;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } keepvisible SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO11keepvisibleyA2EmF");
+  SWIFT_INLINE_THUNK bool isKeepvisible() const;
+
+  inline const static struct _impl_flipside {  // impl struct for case flipside
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::flipside;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } flipside SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO8flipsideyA2EmF");
+  SWIFT_INLINE_THUNK bool isFlipside() const;
+
+  inline const static struct _impl_aligndocument {  // impl struct for case aligndocument
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::aligndocument;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } aligndocument SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO13aligndocumentyA2EmF");
+  SWIFT_INLINE_THUNK bool isAligndocument() const;
+
+  inline const static struct _impl_movefromedge {  // impl struct for case movefromedge
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::movefromedge;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } movefromedge SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO12movefromedgeyA2EmF");
+  SWIFT_INLINE_THUNK bool isMovefromedge() const;
+
+  inline const static struct _impl_increaselighting {  // impl struct for case increaselighting
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::increaselighting;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } increaselighting SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO16increaselightingyA2EmF");
+  SWIFT_INLINE_THUNK bool isIncreaselighting() const;
+
+  inline const static struct _impl_decreaselighting {  // impl struct for case decreaselighting
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::decreaselighting;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } decreaselighting SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO16decreaselightingyA2EmF");
+  SWIFT_INLINE_THUNK bool isDecreaselighting() const;
+
+  inline const static struct _impl_eliminateblur {  // impl struct for case eliminateblur
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::eliminateblur;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } eliminateblur SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO13eliminatebluryA2EmF");
+  SWIFT_INLINE_THUNK bool isEliminateblur() const;
+
+  inline const static struct _impl_eliminateglare {  // impl struct for case eliminateglare
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::eliminateglare;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType operator()() const;
+  } eliminateglare SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO14eliminateglareyA2EmF");
+  SWIFT_INLINE_THUNK bool isEliminateglare() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO10movecloseryA2EmFWC) return cases::movecloser;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO11movefartheryA2EmFWC) return cases::movefarther;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO11keepvisibleyA2EmFWC) return cases::keepvisible;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO8flipsideyA2EmFWC) return cases::flipside;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO13aligndocumentyA2EmFWC) return cases::aligndocument;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO12movefromedgeyA2EmFWC) return cases::movefromedge;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO16increaselightingyA2EmFWC) return cases::increaselighting;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO16decreaselightingyA2EmFWC) return cases::decreaselighting;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO13eliminatebluryA2EmFWC) return cases::eliminateblur;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO14eliminateglareyA2EmFWC) return cases::eliminateglare;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::ErrorMessageType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::ErrorMessageType> getAllCases() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK ErrorMessageType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK ErrorMessageType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return ErrorMessageType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_ErrorMessageType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID14UxEventPingletV16ErrorMessageTypeOD;
+  static inline constexpr $s7BlinkID14UxEventPingletV16ErrorMessageTypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_ErrorMessageType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__UxEventPingletNested::ErrorMessageType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __UxEventPingletNested::ErrorMessageType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __UxEventPingletNested::ErrorMessageType returnNewValue(T callable) {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__UxEventPingletNested::ErrorMessageType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__UxEventPingletNested::_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__UxEventPingletNested::ErrorMessageType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__UxEventPingletNested::ErrorMessageType> = true;
+template<>
+struct implClassFor<BlinkID::__UxEventPingletNested::ErrorMessageType> { using type = BlinkID::__UxEventPingletNested::_impl::_impl_ErrorMessageType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __UxEventPingletNested {
+
+namespace _impl {
+
+class _impl_AlertType;
+
+// Type metadata accessor for AlertType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID14UxEventPingletV9AlertTypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum AlertType
+extern "C" {
+extern unsigned $s7BlinkID14UxEventPingletV9AlertTypeO17invalidlicensekeyyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV9AlertTypeO12networkerroryA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV9AlertTypeO23documentclassnotallowedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV9AlertTypeO11steptimeoutyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO") AlertType final {
+public:
+  SWIFT_INLINE_THUNK ~AlertType() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AlertType(const AlertType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK AlertType &operator =(const AlertType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK AlertType &operator =(AlertType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER AlertType(AlertType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    invalidlicensekey SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO17invalidlicensekeyyA2EmF"),
+    networkerror SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO12networkerroryA2EmF"),
+    documentclassnotallowed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO23documentclassnotallowedyA2EmF"),
+    steptimeout SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO11steptimeoutyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_invalidlicensekey {  // impl struct for case invalidlicensekey
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::invalidlicensekey;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType operator()() const;
+  } invalidlicensekey SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO17invalidlicensekeyyA2EmF");
+  SWIFT_INLINE_THUNK bool isInvalidlicensekey() const;
+
+  inline const static struct _impl_networkerror {  // impl struct for case networkerror
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::networkerror;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType operator()() const;
+  } networkerror SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO12networkerroryA2EmF");
+  SWIFT_INLINE_THUNK bool isNetworkerror() const;
+
+  inline const static struct _impl_documentclassnotallowed {  // impl struct for case documentclassnotallowed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::documentclassnotallowed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType operator()() const;
+  } documentclassnotallowed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO23documentclassnotallowedyA2EmF");
+  SWIFT_INLINE_THUNK bool isDocumentclassnotallowed() const;
+
+  inline const static struct _impl_steptimeout {  // impl struct for case steptimeout
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::steptimeout;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType operator()() const;
+  } steptimeout SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO11steptimeoutyA2EmF");
+  SWIFT_INLINE_THUNK bool isSteptimeout() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID14UxEventPingletV9AlertTypeO17invalidlicensekeyyA2EmFWC) return cases::invalidlicensekey;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV9AlertTypeO12networkerroryA2EmFWC) return cases::networkerror;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV9AlertTypeO23documentclassnotallowedyA2EmFWC) return cases::documentclassnotallowed;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV9AlertTypeO11steptimeoutyA2EmFWC) return cases::steptimeout;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::AlertType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::AlertType> getAllCases() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV9AlertTypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK AlertType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK AlertType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return AlertType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_AlertType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID14UxEventPingletV9AlertTypeOD;
+  static inline constexpr $s7BlinkID14UxEventPingletV9AlertTypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_AlertType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__UxEventPingletNested::AlertType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __UxEventPingletNested::AlertType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __UxEventPingletNested::AlertType returnNewValue(T callable) {
+    auto result = __UxEventPingletNested::AlertType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__UxEventPingletNested::AlertType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__UxEventPingletNested::_impl::$s7BlinkID14UxEventPingletV9AlertTypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__UxEventPingletNested::AlertType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__UxEventPingletNested::AlertType> = true;
+template<>
+struct implClassFor<BlinkID::__UxEventPingletNested::AlertType> { using type = BlinkID::__UxEventPingletNested::_impl::_impl_AlertType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __UxEventPingletNested {
+
+namespace _impl {
+
+class _impl_HelpCloseType;
+
+// Type metadata accessor for HelpCloseType
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum HelpCloseType
+extern "C" {
+extern unsigned $s7BlinkID14UxEventPingletV13HelpCloseTypeO14contentskippedyA2EmFWC;
+extern unsigned $s7BlinkID14UxEventPingletV13HelpCloseTypeO18contentfullyviewedyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO") HelpCloseType final {
+public:
+  SWIFT_INLINE_THUNK ~HelpCloseType() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK HelpCloseType(const HelpCloseType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK HelpCloseType &operator =(const HelpCloseType &other) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK HelpCloseType &operator =(HelpCloseType &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER HelpCloseType(HelpCloseType &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    contentskipped SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO14contentskippedyA2EmF"),
+    contentfullyviewed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO18contentfullyviewedyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_contentskipped {  // impl struct for case contentskipped
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::contentskipped;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::HelpCloseType operator()() const;
+  } contentskipped SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO14contentskippedyA2EmF");
+  SWIFT_INLINE_THUNK bool isContentskipped() const;
+
+  inline const static struct _impl_contentfullyviewed {  // impl struct for case contentfullyviewed
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::contentfullyviewed;
+    }
+    SWIFT_INLINE_THUNK __UxEventPingletNested::HelpCloseType operator()() const;
+  } contentfullyviewed SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO18contentfullyviewedyA2EmF");
+  SWIFT_INLINE_THUNK bool isContentfullyviewed() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO14contentskippedyA2EmFWC) return cases::contentskipped;
+    if (tag == _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO18contentfullyviewedyA2EmFWC) return cases::contentfullyviewed;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::HelpCloseType> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::HelpCloseType> getAllCases() SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK HelpCloseType(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK HelpCloseType _make() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return HelpCloseType(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_HelpCloseType;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID14UxEventPingletV13HelpCloseTypeOD;
+  static inline constexpr $s7BlinkID14UxEventPingletV13HelpCloseTypeOD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_HelpCloseType {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__UxEventPingletNested::HelpCloseType &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __UxEventPingletNested::HelpCloseType &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __UxEventPingletNested::HelpCloseType returnNewValue(T callable) {
+    auto result = __UxEventPingletNested::HelpCloseType::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __UxEventPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__UxEventPingletNested::HelpCloseType> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__UxEventPingletNested::_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeOMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__UxEventPingletNested::HelpCloseType> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__UxEventPingletNested::HelpCloseType> = true;
+template<>
+struct implClassFor<BlinkID::__UxEventPingletNested::HelpCloseType> { using type = BlinkID::__UxEventPingletNested::_impl::_impl_HelpCloseType; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
 namespace _impl {
 
 class _impl_VIZResult;
@@ -26464,6 +32075,393 @@ template<class T_0_0>
 requires swift::isUsableInGenericContext<T_0_0>
 #endif // __cpp_concepts
 struct implClassFor<BlinkID::VehicleClassInfo<T_0_0>> { using type = BlinkID::_impl::_impl_VehicleClassInfo<T_0_0>; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __WrapperProductInfoPingletNested {
+
+class SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O") WrapperProduct;
+
+} // namespace __WrapperProductInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::__WrapperProductInfoPingletNested::WrapperProduct> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+class SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV") WrapperProductInfoPinglet;
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+inline const constexpr bool isUsableInGenericContext<BlinkID::WrapperProductInfoPinglet> = true;
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+namespace _impl {
+
+class _impl_WrapperProductInfoPinglet;
+
+// Type metadata accessor for WrapperProductInfoPinglet
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25WrapperProductInfoPingletVMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV") WrapperProductInfoPinglet final {
+public:
+  SWIFT_INLINE_THUNK ~WrapperProductInfoPinglet() noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK WrapperProductInfoPinglet(const WrapperProductInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK WrapperProductInfoPinglet &operator =(const WrapperProductInfoPinglet &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK WrapperProductInfoPinglet &operator =(WrapperProductInfoPinglet &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER WrapperProductInfoPinglet(WrapperProductInfoPinglet &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+  using WrapperProduct=__WrapperProductInfoPingletNested::WrapperProduct;
+  static SWIFT_INLINE_THUNK swift::String getSchemaName() SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV10schemaNameSSvpZ");
+  static SWIFT_INLINE_THUNK swift::String getSchemaVersion() SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV13schemaVersionSSvpZ");
+  SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct getWrapperProduct() const SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV07wrapperD0AC0cD0Ovp");
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> getCorrelationId() const SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV13correlationIdSSSgvp");
+  static SWIFT_INLINE_THUNK WrapperProductInfoPinglet init(const __WrapperProductInfoPingletNested::WrapperProduct& wrapperProduct, const swift::Optional<swift::String>& correlationId) SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV07wrapperD013correlationIdA2C0cD0O_SSSgtcfc");
+private:
+  SWIFT_INLINE_THUNK WrapperProductInfoPinglet(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK WrapperProductInfoPinglet _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return WrapperProductInfoPinglet(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_WrapperProductInfoPinglet;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25WrapperProductInfoPingletVD;
+  static inline constexpr $s7BlinkID25WrapperProductInfoPingletVD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_WrapperProductInfoPinglet {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(WrapperProductInfoPinglet &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const WrapperProductInfoPinglet &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER WrapperProductInfoPinglet returnNewValue(T callable) {
+    auto result = WrapperProductInfoPinglet::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletVMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::WrapperProductInfoPinglet> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletVMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::WrapperProductInfoPinglet> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::WrapperProductInfoPinglet> = true;
+template<>
+struct implClassFor<BlinkID::WrapperProductInfoPinglet> { using type = BlinkID::_impl::_impl_WrapperProductInfoPinglet; };
+} // namespace
+#pragma clang diagnostic pop
+} // namespace swift
+
+namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
+
+namespace __WrapperProductInfoPingletNested {
+
+namespace _impl {
+
+class _impl_WrapperProduct;
+
+// Type metadata accessor for WrapperProduct
+SWIFT_EXTERN swift::_impl::MetadataResponseTy $s7BlinkID25WrapperProductInfoPingletV0cD0OMa(swift::_impl::MetadataRequestTy) SWIFT_NOEXCEPT SWIFT_CALL;
+
+// Tags for resilient enum WrapperProduct
+extern "C" {
+extern unsigned $s7BlinkID25WrapperProductInfoPingletV0cD0O20crossplatformflutteryA2EmFWC;
+extern unsigned $s7BlinkID25WrapperProductInfoPingletV0cD0O24crossplatformreactnativeyA2EmFWC;
+extern unsigned $s7BlinkID25WrapperProductInfoPingletV0cD0O20identityverificationyA2EmFWC;
+}
+
+} // namespace _impl
+
+class SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O") WrapperProduct final {
+public:
+  SWIFT_INLINE_THUNK ~WrapperProduct() noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->destroy(_getOpaquePointer(), metadata._0);
+  }
+  SWIFT_INLINE_THUNK WrapperProduct(const WrapperProduct &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    _storage = swift::_impl::OpaqueStorage(vwTable->size, vwTable->getAlignment());
+    vwTable->initializeWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  }
+  SWIFT_INLINE_THUNK WrapperProduct &operator =(const WrapperProduct &other) noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->assignWithCopy(_getOpaquePointer(), const_cast<char *>(other._getOpaquePointer()), metadata._0);
+  return *this;
+  }
+  SWIFT_INLINE_THUNK WrapperProduct &operator =(WrapperProduct &&other) = delete;
+  [[noreturn]] SWIFT_INLINE_PRIVATE_HELPER WrapperProduct(WrapperProduct &&) noexcept {
+  swift::_impl::_fatalError_Cxx_move_of_Swift_value_type_not_supported_yet();
+  swift::_impl::_swift_stdlib_reportFatalError("swift", 5, "C++ does not support moving a Swift value yet", 45, 0);
+  abort();
+  }
+
+  enum class cases {
+    crossplatformflutter SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O20crossplatformflutteryA2EmF"),
+    crossplatformreactnative SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O24crossplatformreactnativeyA2EmF"),
+    identityverification SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O20identityverificationyA2EmF"),
+    unknownDefault
+  };
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"  // allow use of inline static data member
+  inline const static struct _impl_crossplatformflutter {  // impl struct for case crossplatformflutter
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::crossplatformflutter;
+    }
+    SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct operator()() const;
+  } crossplatformflutter SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O20crossplatformflutteryA2EmF");
+  SWIFT_INLINE_THUNK bool isCrossplatformflutter() const;
+
+  inline const static struct _impl_crossplatformreactnative {  // impl struct for case crossplatformreactnative
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::crossplatformreactnative;
+    }
+    SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct operator()() const;
+  } crossplatformreactnative SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O24crossplatformreactnativeyA2EmF");
+  SWIFT_INLINE_THUNK bool isCrossplatformreactnative() const;
+
+  inline const static struct _impl_identityverification {  // impl struct for case identityverification
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::identityverification;
+    }
+    SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct operator()() const;
+  } identityverification SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O20identityverificationyA2EmF");
+  SWIFT_INLINE_THUNK bool isIdentityverification() const;
+
+  inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::unknownDefault;
+    }
+  } unknownDefault;
+  SWIFT_INLINE_THUNK bool isUnknownDefault() const;
+
+#pragma clang diagnostic pop
+  SWIFT_INLINE_THUNK operator cases() const {
+    auto tag = _getEnumTag();
+    if (tag == _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O20crossplatformflutteryA2EmFWC) return cases::crossplatformflutter;
+    if (tag == _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O24crossplatformreactnativeyA2EmFWC) return cases::crossplatformreactnative;
+    if (tag == _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O20identityverificationyA2EmFWC) return cases::identityverification;
+    return cases::unknownDefault;
+  }
+
+  static SWIFT_INLINE_THUNK swift::Optional<__WrapperProductInfoPingletNested::WrapperProduct> init(const swift::String& rawValue) SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueAESgSS_tcfc");
+  static SWIFT_INLINE_THUNK swift::Array<__WrapperProductInfoPingletNested::WrapperProduct> getAllCases() SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O8allCasesSayAEGvpZ");
+  SWIFT_INLINE_THUNK swift::String getRawValue() const SWIFT_SYMBOL("s:7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueSSvp");
+private:
+  SWIFT_INLINE_THUNK WrapperProduct(swift::_impl::ValueWitnessTable * _Nonnull vwTable) noexcept : _storage(vwTable->size, vwTable->getAlignment()) {}
+  static SWIFT_INLINE_THUNK WrapperProduct _make() noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    return WrapperProduct(vwTable);
+  }
+  SWIFT_INLINE_THUNK const char * _Nonnull _getOpaquePointer() const noexcept { return _storage.getOpaquePointer(); }
+  SWIFT_INLINE_THUNK char * _Nonnull _getOpaquePointer() noexcept { return _storage.getOpaquePointer(); }
+
+  SWIFT_INLINE_THUNK char * _Nonnull _destructiveProjectEnumData() noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveProjectEnumData(_getOpaquePointer(), metadata._0);
+    return _getOpaquePointer();
+  }
+  SWIFT_INLINE_THUNK void _destructiveInjectEnumTag(unsigned tag) noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    enumVWTable->destructiveInjectEnumTag(_getOpaquePointer(), tag, metadata._0);
+  }
+  SWIFT_INLINE_THUNK unsigned _getEnumTag() const noexcept {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    const auto *enumVWTable = reinterpret_cast<swift::_impl::EnumValueWitnessTable *>(vwTable);
+    return enumVWTable->getEnumTag(_getOpaquePointer(), metadata._0);
+  }
+  swift::_impl::OpaqueStorage _storage;
+  friend class _impl::_impl_WrapperProduct;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-identifier"
+  typedef char $s7BlinkID25WrapperProductInfoPingletV0cD0OD;
+  static inline constexpr $s7BlinkID25WrapperProductInfoPingletV0cD0OD __swift_mangled_name = 0;
+#pragma clang diagnostic pop
+#pragma clang diagnostic pop
+};
+
+namespace _impl {
+
+class _impl_WrapperProduct {
+public:
+  static SWIFT_INLINE_THUNK char * _Nonnull getOpaquePointer(__WrapperProductInfoPingletNested::WrapperProduct &object) { return object._getOpaquePointer(); }
+  static SWIFT_INLINE_THUNK const char * _Nonnull getOpaquePointer(const __WrapperProductInfoPingletNested::WrapperProduct &object) { return object._getOpaquePointer(); }
+  template<class T>
+  static SWIFT_INLINE_PRIVATE_HELPER __WrapperProductInfoPingletNested::WrapperProduct returnNewValue(T callable) {
+    auto result = __WrapperProductInfoPingletNested::WrapperProduct::_make();
+    callable(result._getOpaquePointer());
+    return result;
+  }
+  static SWIFT_INLINE_THUNK void initializeWithTake(char * _Nonnull destStorage, char * _Nonnull srcStorage) {
+    auto metadata = _impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0);
+    auto *vwTableAddr = reinterpret_cast<swift::_impl::ValueWitnessTable **>(metadata._0) - 1;
+#ifdef __arm64e__
+    auto *vwTable = reinterpret_cast<swift::_impl::ValueWitnessTable *>(ptrauth_auth_data(reinterpret_cast<void *>(*vwTableAddr), ptrauth_key_process_independent_data, ptrauth_blend_discriminator(vwTableAddr, 11839)));
+#else
+    auto *vwTable = *vwTableAddr;
+#endif
+    vwTable->initializeWithTake(destStorage, srcStorage, metadata._0);
+  }
+};
+
+} // namespace _impl
+
+
+} // namespace __WrapperProductInfoPingletNested
+
+} // end namespace 
+
+namespace swift SWIFT_PRIVATE_ATTR {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+template<>
+struct TypeMetadataTrait<BlinkID::__WrapperProductInfoPingletNested::WrapperProduct> {
+  static SWIFT_INLINE_PRIVATE_HELPER void * _Nonnull getTypeMetadata() {
+    return BlinkID::__WrapperProductInfoPingletNested::_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0OMa(0)._0;
+  }
+};
+namespace _impl{
+template<>
+inline const constexpr bool isValueType<BlinkID::__WrapperProductInfoPingletNested::WrapperProduct> = true;
+template<>
+inline const constexpr bool isOpaqueLayout<BlinkID::__WrapperProductInfoPingletNested::WrapperProduct> = true;
+template<>
+struct implClassFor<BlinkID::__WrapperProductInfoPingletNested::WrapperProduct> { using type = BlinkID::__WrapperProductInfoPingletNested::_impl::_impl_WrapperProduct; };
 } // namespace
 #pragma clang diagnostic pop
 } // namespace swift
@@ -27318,6 +33316,9 @@ namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
     BlinkID::_impl::$s7BlinkID13BarcodeResultV11barcodeDataAA0cF0Vvg(result, _getOpaquePointer());
   });
   }
+  SWIFT_INLINE_THUNK bool BarcodeResult::getParsed() const {
+  return BlinkID::_impl::$s7BlinkID13BarcodeResultV6parsedSbvg(_getOpaquePointer());
+  }
   SWIFT_INLINE_THUNK swift::String BarcodeResult::getFirstName() const {
   return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
     BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID13BarcodeResultV9firstNameSSvg(_getOpaquePointer()));
@@ -28128,6 +34129,294 @@ return (__bridge_transfer MBSampleBufferWrapper *)(__bridge void *)BlinkID::_imp
   }
   SWIFT_INLINE_THUNK swift::Int CameraFrameVideoOrientation::getHashValue() const {
   return BlinkID::_impl::$s7BlinkID27CameraFrameVideoOrientationO9hashValueSivg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK swift::String CameraHardwareInfoPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String CameraHardwareInfoPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Int CameraHardwareInfoPinglet::getSessionNumber() {
+  return BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV13sessionNumberSivgZ();
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem> CameraHardwareInfoPinglet::getAvailableCameras() const {
+  return swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV16availableCamerasSayAC09AvailableH4ItemVGvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK CameraHardwareInfoPinglet CameraHardwareInfoPinglet::init(const swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>& availableCameras) {
+  alignas(alignof(swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>)) char copyBuffer_consumedParamCopy_availableCameras[sizeof(swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>)];
+  auto &consumedParamCopy_availableCameras = *(new(copyBuffer_consumedParamCopy_availableCameras) swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>(availableCameras));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>> storageGuard_consumedParamCopy_availableCameras(consumedParamCopy_availableCameras);
+  return BlinkID::_impl::_impl_CameraHardwareInfoPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV16availableCamerasACSayAC09AvailableH4ItemVG_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_void_ptr_0_8(swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::AvailableCamerasItem>::getOpaquePointer(consumedParamCopy_availableCameras)));
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing __CameraHardwareInfoPingletNested::AvailableCamerasItem::getCameraFacing() const {
+  return BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_CameraFacing::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacingAC0cK0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::Focus> __CameraHardwareInfoPingletNested::AvailableCamerasItem::getFocus() const {
+  return swift::_impl::_impl_Optional<__CameraHardwareInfoPingletNested::Focus>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV5focusAC5FocusOSgvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem> __CameraHardwareInfoPingletNested::AvailableCamerasItem::getAvailableResolutions() const {
+  return swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV20availableResolutionsSayAC0gkI0VGvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::AvailableCamerasItem __CameraHardwareInfoPingletNested::AvailableCamerasItem::init(const __CameraHardwareInfoPingletNested::CameraFacing& cameraFacing, const swift::Optional<__CameraHardwareInfoPingletNested::Focus>& focus, const swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>& availableResolutions) {
+  alignas(alignof(__CameraHardwareInfoPingletNested::CameraFacing)) char copyBuffer_consumedParamCopy_cameraFacing[sizeof(__CameraHardwareInfoPingletNested::CameraFacing)];
+  auto &consumedParamCopy_cameraFacing = *(new(copyBuffer_consumedParamCopy_cameraFacing) __CameraHardwareInfoPingletNested::CameraFacing(cameraFacing));
+  swift::_impl::ConsumedValueStorageDestroyer<__CameraHardwareInfoPingletNested::CameraFacing> storageGuard_consumedParamCopy_cameraFacing(consumedParamCopy_cameraFacing);
+  alignas(alignof(swift::Optional<__CameraHardwareInfoPingletNested::Focus>)) char copyBuffer_consumedParamCopy_focus[sizeof(swift::Optional<__CameraHardwareInfoPingletNested::Focus>)];
+  auto &consumedParamCopy_focus = *(new(copyBuffer_consumedParamCopy_focus) swift::Optional<__CameraHardwareInfoPingletNested::Focus>(focus));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<__CameraHardwareInfoPingletNested::Focus>> storageGuard_consumedParamCopy_focus(consumedParamCopy_focus);
+  alignas(alignof(swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>)) char copyBuffer_consumedParamCopy_availableResolutions[sizeof(swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>)];
+  auto &consumedParamCopy_availableResolutions = *(new(copyBuffer_consumedParamCopy_availableResolutions) swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>(availableResolutions));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>> storageGuard_consumedParamCopy_availableResolutions(consumedParamCopy_availableResolutions);
+  return BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_AvailableCamerasItem::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV20AvailableCamerasItemV12cameraFacing5focus20availableResolutionsAeC0cK0O_AC5FocusOSgSayAC0gnI0VGtcfC(result, BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_CameraFacing::getOpaquePointer(consumedParamCopy_cameraFacing), swift::_impl::_impl_Optional<__CameraHardwareInfoPingletNested::Focus>::getOpaquePointer(consumedParamCopy_focus), BlinkID::_impl::swift_interop_passDirect_BlinkID_void_ptr_0_8(swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::AvailableResolutionsItem>::getOpaquePointer(consumedParamCopy_availableResolutions)));
+  });
+  }
+  SWIFT_INLINE_THUNK int64_t __CameraHardwareInfoPingletNested::AvailableResolutionsItem::getWidth() const {
+  return BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5widths5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK int64_t __CameraHardwareInfoPingletNested::AvailableResolutionsItem::getHeight() const {
+  return BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV6heights5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::AvailableResolutionsItem __CameraHardwareInfoPingletNested::AvailableResolutionsItem::init(int64_t width, int64_t height) {
+  return BlinkID::__CameraHardwareInfoPingletNested::_impl::_impl_AvailableResolutionsItem::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV24AvailableResolutionsItemV5width6heightAEs5Int64V_AItcfC(result, width, height);
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing __CameraHardwareInfoPingletNested::CameraFacing::_impl_front::operator()() const {
+    auto result = __CameraHardwareInfoPingletNested::CameraFacing::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO5frontyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::CameraFacing::isFront() const {
+    return *this == __CameraHardwareInfoPingletNested::CameraFacing::front;
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::CameraFacing __CameraHardwareInfoPingletNested::CameraFacing::_impl_back::operator()() const {
+    auto result = __CameraHardwareInfoPingletNested::CameraFacing::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO4backyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::CameraFacing::isBack() const {
+    return *this == __CameraHardwareInfoPingletNested::CameraFacing::back;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::CameraFacing::isUnknownDefault() const {
+    return *this == __CameraHardwareInfoPingletNested::CameraFacing::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::CameraFacing> __CameraHardwareInfoPingletNested::CameraFacing::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__CameraHardwareInfoPingletNested::CameraFacing>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::CameraFacing> __CameraHardwareInfoPingletNested::CameraFacing::getAllCases() {
+  return swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::CameraFacing>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __CameraHardwareInfoPingletNested::CameraFacing::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV0C6FacingO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::Focus __CameraHardwareInfoPingletNested::Focus::_impl_auto::operator()() const {
+    auto result = __CameraHardwareInfoPingletNested::Focus::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO4autoyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::Focus::isAuto_() const {
+    return *this == __CameraHardwareInfoPingletNested::Focus::auto_;
+  }
+  SWIFT_INLINE_THUNK __CameraHardwareInfoPingletNested::Focus __CameraHardwareInfoPingletNested::Focus::_impl_fixed::operator()() const {
+    auto result = __CameraHardwareInfoPingletNested::Focus::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO5fixedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::Focus::isFixed() const {
+    return *this == __CameraHardwareInfoPingletNested::Focus::fixed;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraHardwareInfoPingletNested::Focus::isUnknownDefault() const {
+    return *this == __CameraHardwareInfoPingletNested::Focus::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__CameraHardwareInfoPingletNested::Focus> __CameraHardwareInfoPingletNested::Focus::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__CameraHardwareInfoPingletNested::Focus>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraHardwareInfoPingletNested::Focus> __CameraHardwareInfoPingletNested::Focus::getAllCases() {
+  return swift::_impl::_impl_Array<__CameraHardwareInfoPingletNested::Focus>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __CameraHardwareInfoPingletNested::Focus::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25CameraHardwareInfoPingletV5FocusO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String CameraInputInfoPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String CameraInputInfoPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing CameraInputInfoPinglet::getCameraFacing() const {
+  return BlinkID::__CameraInputInfoPingletNested::_impl::_impl_CameraFacing::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV12cameraFacingAC0cH0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK int64_t CameraInputInfoPinglet::getCameraFrameWidth() const {
+  return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV16cameraFrameWidths5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK int64_t CameraInputInfoPinglet::getCameraFrameHeight() const {
+  return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV17cameraFrameHeights5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK int64_t CameraInputInfoPinglet::getRoiWidth() const {
+  return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV8roiWidths5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK int64_t CameraInputInfoPinglet::getRoiHeight() const {
+  return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV9roiHeights5Int64Vvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK double CameraInputInfoPinglet::getViewPortAspectRatio() const {
+  return BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV19viewPortAspectRatioSdvg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK CameraInputInfoPinglet CameraInputInfoPinglet::init(const __CameraInputInfoPingletNested::CameraFacing& cameraFacing, int64_t cameraFrameWidth, int64_t cameraFrameHeight, int64_t roiWidth, int64_t roiHeight, double viewPortAspectRatio) {
+  alignas(alignof(__CameraInputInfoPingletNested::CameraFacing)) char copyBuffer_consumedParamCopy_cameraFacing[sizeof(__CameraInputInfoPingletNested::CameraFacing)];
+  auto &consumedParamCopy_cameraFacing = *(new(copyBuffer_consumedParamCopy_cameraFacing) __CameraInputInfoPingletNested::CameraFacing(cameraFacing));
+  swift::_impl::ConsumedValueStorageDestroyer<__CameraInputInfoPingletNested::CameraFacing> storageGuard_consumedParamCopy_cameraFacing(consumedParamCopy_cameraFacing);
+  return BlinkID::_impl::_impl_CameraInputInfoPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV12cameraFacing0G10FrameWidth0gI6Height03roiJ00lK019viewPortAspectRatioA2C0cH0O_s5Int64VA3MSdtcfC(result, BlinkID::__CameraInputInfoPingletNested::_impl::_impl_CameraFacing::getOpaquePointer(consumedParamCopy_cameraFacing), cameraFrameWidth, cameraFrameHeight, roiWidth, roiHeight, viewPortAspectRatio);
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing __CameraInputInfoPingletNested::CameraFacing::_impl_front::operator()() const {
+    auto result = __CameraInputInfoPingletNested::CameraFacing::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO5frontyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraInputInfoPingletNested::CameraFacing::isFront() const {
+    return *this == __CameraInputInfoPingletNested::CameraFacing::front;
+  }
+  SWIFT_INLINE_THUNK __CameraInputInfoPingletNested::CameraFacing __CameraInputInfoPingletNested::CameraFacing::_impl_back::operator()() const {
+    auto result = __CameraInputInfoPingletNested::CameraFacing::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO4backyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraInputInfoPingletNested::CameraFacing::isBack() const {
+    return *this == __CameraInputInfoPingletNested::CameraFacing::back;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraInputInfoPingletNested::CameraFacing::isUnknownDefault() const {
+    return *this == __CameraInputInfoPingletNested::CameraFacing::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__CameraInputInfoPingletNested::CameraFacing> __CameraInputInfoPingletNested::CameraFacing::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__CameraInputInfoPingletNested::CameraFacing>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraInputInfoPingletNested::CameraFacing> __CameraInputInfoPingletNested::CameraFacing::getAllCases() {
+  return swift::_impl::_impl_Array<__CameraInputInfoPingletNested::CameraFacing>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __CameraInputInfoPingletNested::CameraFacing::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID22CameraInputInfoPingletV0C6FacingO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String CameraPermissionPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String CameraPermissionPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType CameraPermissionPinglet::getEventType() const {
+  return BlinkID::__CameraPermissionPingletNested::_impl::_impl_EventType::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV9eventTypeAC05EventG0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<bool> CameraPermissionPinglet::getCameraPermissionGranted() const {
+  return swift::_impl::_impl_Optional<bool>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint8_t_0_1(result, BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV06cameraD7GrantedSbSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK CameraPermissionPinglet CameraPermissionPinglet::init(const __CameraPermissionPingletNested::EventType& eventType, const swift::Optional<bool>& cameraPermissionGranted) {
+  alignas(alignof(__CameraPermissionPingletNested::EventType)) char copyBuffer_consumedParamCopy_eventType[sizeof(__CameraPermissionPingletNested::EventType)];
+  auto &consumedParamCopy_eventType = *(new(copyBuffer_consumedParamCopy_eventType) __CameraPermissionPingletNested::EventType(eventType));
+  swift::_impl::ConsumedValueStorageDestroyer<__CameraPermissionPingletNested::EventType> storageGuard_consumedParamCopy_eventType(consumedParamCopy_eventType);
+  return BlinkID::_impl::_impl_CameraPermissionPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV9eventType06cameraD7GrantedA2C05EventG0O_SbSgtcfC(result, BlinkID::__CameraPermissionPingletNested::_impl::_impl_EventType::getOpaquePointer(consumedParamCopy_eventType), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint8_t_0_1(swift::_impl::_impl_Optional<bool>::getOpaquePointer(cameraPermissionGranted)));
+  });
+  }
+  SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType __CameraPermissionPingletNested::EventType::_impl_camerapermissioncheck::operator()() const {
+    auto result = __CameraPermissionPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO21camerapermissioncheckyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraPermissionPingletNested::EventType::isCamerapermissioncheck() const {
+    return *this == __CameraPermissionPingletNested::EventType::camerapermissioncheck;
+  }
+  SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType __CameraPermissionPingletNested::EventType::_impl_camerapermissionrequest::operator()() const {
+    auto result = __CameraPermissionPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO23camerapermissionrequestyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraPermissionPingletNested::EventType::isCamerapermissionrequest() const {
+    return *this == __CameraPermissionPingletNested::EventType::camerapermissionrequest;
+  }
+  SWIFT_INLINE_THUNK __CameraPermissionPingletNested::EventType __CameraPermissionPingletNested::EventType::_impl_camerapermissionuserresponse::operator()() const {
+    auto result = __CameraPermissionPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO28camerapermissionuserresponseyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraPermissionPingletNested::EventType::isCamerapermissionuserresponse() const {
+    return *this == __CameraPermissionPingletNested::EventType::camerapermissionuserresponse;
+  }
+  SWIFT_INLINE_THUNK  bool __CameraPermissionPingletNested::EventType::isUnknownDefault() const {
+    return *this == __CameraPermissionPingletNested::EventType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__CameraPermissionPingletNested::EventType> __CameraPermissionPingletNested::EventType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__CameraPermissionPingletNested::EventType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CameraPermissionPingletNested::EventType> __CameraPermissionPingletNested::EventType::getAllCases() {
+  return swift::_impl::_impl_Array<__CameraPermissionPingletNested::EventType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __CameraPermissionPingletNested::EventType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID23CameraPermissionPingletV9EventTypeO8rawValueSSvg(_getOpaquePointer()));
+  });
   }
   SWIFT_INLINE_THUNK Country Country::_impl_none::operator()() const {
     auto result = Country::_make();
@@ -30198,6 +36487,83 @@ return (__bridge_transfer MBSampleBufferWrapper *)(__bridge void *)BlinkID::_imp
     BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID7CountryO8rawValueSSvg(_getOpaquePointer()));
   });
   }
+  SWIFT_INLINE_THUNK CrashMonitor CrashMonitor::getShared() {
+  return _impl::_impl_CrashMonitor::makeRetained(BlinkID::_impl::$s7BlinkID12CrashMonitorC6sharedACvgZ(swift::TypeMetadataTrait<CrashMonitor>::getTypeMetadata()));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::startMonitoring(bool enableDebugLogging) {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC15startMonitoring18enableDebugLoggingySb_tF(enableDebugLogging, ::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::stopMonitoring() {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC14stopMonitoringyyF(::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::simulateCrash(const __CrashMonitorNested::TestCrashType& crashType) {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC08simulateC04typeyAC04TestC4TypeO_tF(BlinkID::__CrashMonitorNested::_impl::_impl_TestCrashType::getOpaquePointer(crashType), ::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::testCrashReporting(const __CrashMonitorNested::TestCrashType& crashType) {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC04testC9Reporting4typeyAC04TestC4TypeO_tF(BlinkID::__CrashMonitorNested::_impl::_impl_TestCrashType::getOpaquePointer(crashType), ::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::testCrashReportingSync(const __CrashMonitorNested::TestCrashType& crashType) {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC04testC13ReportingSync4typeyAC04TestC4TypeO_tF(BlinkID::__CrashMonitorNested::_impl::_impl_TestCrashType::getOpaquePointer(crashType), ::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK void CrashMonitor::verifyPingManagerIntegration() {
+  BlinkID::_impl::$s7BlinkID12CrashMonitorC28verifyPingManagerIntegrationyyF(::swift::_impl::_impl_RefCountedClass::getOpaquePointer(*this));
+  }
+  SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType __CrashMonitorNested::TestCrashType::_impl_exception::operator()() const {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO9exceptionyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isException() const {
+    return *this == __CrashMonitorNested::TestCrashType::exception;
+  }
+  SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType __CrashMonitorNested::TestCrashType::_impl_segmentationFault::operator()() const {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO17segmentationFaultyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isSegmentationFault() const {
+    return *this == __CrashMonitorNested::TestCrashType::segmentationFault;
+  }
+  SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType __CrashMonitorNested::TestCrashType::_impl_arrayOutOfBounds::operator()() const {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO16arrayOutOfBoundsyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isArrayOutOfBounds() const {
+    return *this == __CrashMonitorNested::TestCrashType::arrayOutOfBounds;
+  }
+  SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType __CrashMonitorNested::TestCrashType::_impl_nilPointerDereference::operator()() const {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO21nilPointerDereferenceyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isNilPointerDereference() const {
+    return *this == __CrashMonitorNested::TestCrashType::nilPointerDereference;
+  }
+  SWIFT_INLINE_THUNK __CrashMonitorNested::TestCrashType __CrashMonitorNested::TestCrashType::_impl_abort::operator()() const {
+    auto result = __CrashMonitorNested::TestCrashType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO5abortyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isAbort() const {
+    return *this == __CrashMonitorNested::TestCrashType::abort;
+  }
+  SWIFT_INLINE_THUNK  bool __CrashMonitorNested::TestCrashType::isUnknownDefault() const {
+    return *this == __CrashMonitorNested::TestCrashType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::String __CrashMonitorNested::TestCrashType::getDescription() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO11descriptionSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__CrashMonitorNested::TestCrashType> __CrashMonitorNested::TestCrashType::getAllCases() {
+  return swift::_impl::_impl_Array<__CrashMonitorNested::TestCrashType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Int __CrashMonitorNested::TestCrashType::getHashValue() const {
+  return BlinkID::_impl::$s7BlinkID12CrashMonitorC04TestC4TypeO9hashValueSivg(_getOpaquePointer());
+  }
   SWIFT_INLINE_THUNK UIImage *_Nullable CroppedImageResult::getUiImage() const {
 return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID18CroppedImageResultV02uiD0So7UIImageCSgvg(_getOpaquePointer());
   }
@@ -31636,6 +38002,82 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
     BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8(result, BlinkID::_impl::$s7BlinkID25DriverLicenseDetailedInfoV014vehicleClassesF0SayAA012VehicleClassF0VyxGGSgvg(swift::TypeMetadataTrait<DriverLicenseDetailedInfo<T_0_0>>::getTypeMetadata(), _getOpaquePointer()));
   });
   }
+  SWIFT_INLINE_THUNK swift::String ErrorPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String ErrorPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType ErrorPinglet::getErrorType() const {
+  return BlinkID::__ErrorPingletNested::_impl::_impl_ErrorType::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID12ErrorPingletV9errorTypeAC0cF0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String ErrorPinglet::getErrorMessage() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV12errorMessageSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> ErrorPinglet::getStackTrace() const {
+  return swift::_impl::_impl_Optional<swift::String>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV10stackTraceSSSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK ErrorPinglet ErrorPinglet::init(const __ErrorPingletNested::ErrorType& errorType, const swift::String& errorMessage, const swift::Optional<swift::String>& stackTrace) {
+  alignas(alignof(__ErrorPingletNested::ErrorType)) char copyBuffer_consumedParamCopy_errorType[sizeof(__ErrorPingletNested::ErrorType)];
+  auto &consumedParamCopy_errorType = *(new(copyBuffer_consumedParamCopy_errorType) __ErrorPingletNested::ErrorType(errorType));
+  swift::_impl::ConsumedValueStorageDestroyer<__ErrorPingletNested::ErrorType> storageGuard_consumedParamCopy_errorType(consumedParamCopy_errorType);
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_errorMessage[sizeof(swift::String)];
+  auto &consumedParamCopy_errorMessage = *(new(copyBuffer_consumedParamCopy_errorMessage) swift::String(errorMessage));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_errorMessage(consumedParamCopy_errorMessage);
+  alignas(alignof(swift::Optional<swift::String>)) char copyBuffer_consumedParamCopy_stackTrace[sizeof(swift::Optional<swift::String>)];
+  auto &consumedParamCopy_stackTrace = *(new(copyBuffer_consumedParamCopy_stackTrace) swift::Optional<swift::String>(stackTrace));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<swift::String>> storageGuard_consumedParamCopy_stackTrace(consumedParamCopy_stackTrace);
+  return BlinkID::_impl::_impl_ErrorPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID12ErrorPingletV9errorType0E7Message10stackTraceA2C0cF0O_S2SSgtcfC(result, BlinkID::__ErrorPingletNested::_impl::_impl_ErrorType::getOpaquePointer(consumedParamCopy_errorType), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_errorMessage)), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(swift::_impl::_impl_Optional<swift::String>::getOpaquePointer(consumedParamCopy_stackTrace)));
+  });
+  }
+  SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType __ErrorPingletNested::ErrorType::_impl_nonfatal::operator()() const {
+    auto result = __ErrorPingletNested::ErrorType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12ErrorPingletV0C4TypeO8nonfatalyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ErrorPingletNested::ErrorType::isNonfatal() const {
+    return *this == __ErrorPingletNested::ErrorType::nonfatal;
+  }
+  SWIFT_INLINE_THUNK __ErrorPingletNested::ErrorType __ErrorPingletNested::ErrorType::_impl_crash::operator()() const {
+    auto result = __ErrorPingletNested::ErrorType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID12ErrorPingletV0C4TypeO5crashyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ErrorPingletNested::ErrorType::isCrash() const {
+    return *this == __ErrorPingletNested::ErrorType::crash;
+  }
+  SWIFT_INLINE_THUNK  bool __ErrorPingletNested::ErrorType::isUnknownDefault() const {
+    return *this == __ErrorPingletNested::ErrorType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__ErrorPingletNested::ErrorType> __ErrorPingletNested::ErrorType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__ErrorPingletNested::ErrorType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID12ErrorPingletV0C4TypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__ErrorPingletNested::ErrorType> __ErrorPingletNested::ErrorType::getAllCases() {
+  return swift::_impl::_impl_Array<__ErrorPingletNested::ErrorType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV0C4TypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __ErrorPingletNested::ErrorType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID12ErrorPingletV0C4TypeO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
   SWIFT_INLINE_THUNK DataMatchFieldType FieldState::getFieldType() const {
   return BlinkID::_impl::_impl_DataMatchFieldType::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
     BlinkID::_impl::$s7BlinkID10FieldStateV9fieldTypeAA09DataMatchcF0Ovg(result, _getOpaquePointer());
@@ -32078,6 +38520,14 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
   SWIFT_INLINE_THUNK  bool FieldType::isCertificateNumber() const {
     return *this == FieldType::certificateNumber;
   }
+  SWIFT_INLINE_THUNK FieldType FieldType::_impl_publicTransportFreeUse::operator()() const {
+    auto result = FieldType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID9FieldTypeO22publicTransportFreeUseyA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool FieldType::isPublicTransportFreeUse() const {
+    return *this == FieldType::publicTransportFreeUse;
+  }
   SWIFT_INLINE_THUNK  bool FieldType::isUnknownDefault() const {
     return *this == FieldType::unknownDefault;
   }
@@ -32437,6 +38887,74 @@ return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID1
     BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID22InvalidLicenseKeyErrorV7messageSSvg(_getOpaquePointer()));
   });
   }
+  SWIFT_INLINE_THUNK swift::String LogPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID10LogPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String LogPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID10LogPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __LogPingletNested::LogLevel LogPinglet::getLogLevel() const {
+  return BlinkID::__LogPingletNested::_impl::_impl_LogLevel::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID10LogPingletV8logLevelAC0cF0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String LogPinglet::getLogMessage() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID10LogPingletV10logMessageSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK LogPinglet LogPinglet::init(const __LogPingletNested::LogLevel& logLevel, const swift::String& logMessage) {
+  alignas(alignof(__LogPingletNested::LogLevel)) char copyBuffer_consumedParamCopy_logLevel[sizeof(__LogPingletNested::LogLevel)];
+  auto &consumedParamCopy_logLevel = *(new(copyBuffer_consumedParamCopy_logLevel) __LogPingletNested::LogLevel(logLevel));
+  swift::_impl::ConsumedValueStorageDestroyer<__LogPingletNested::LogLevel> storageGuard_consumedParamCopy_logLevel(consumedParamCopy_logLevel);
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_logMessage[sizeof(swift::String)];
+  auto &consumedParamCopy_logMessage = *(new(copyBuffer_consumedParamCopy_logMessage) swift::String(logMessage));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_logMessage(consumedParamCopy_logMessage);
+  return BlinkID::_impl::_impl_LogPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID10LogPingletV8logLevel0E7MessageA2C0cF0O_SStcfC(result, BlinkID::__LogPingletNested::_impl::_impl_LogLevel::getOpaquePointer(consumedParamCopy_logLevel), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_logMessage)));
+  });
+  }
+  SWIFT_INLINE_THUNK __LogPingletNested::LogLevel __LogPingletNested::LogLevel::_impl_info::operator()() const {
+    auto result = __LogPingletNested::LogLevel::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID10LogPingletV0C5LevelO4infoyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __LogPingletNested::LogLevel::isInfo() const {
+    return *this == __LogPingletNested::LogLevel::info;
+  }
+  SWIFT_INLINE_THUNK __LogPingletNested::LogLevel __LogPingletNested::LogLevel::_impl_warning::operator()() const {
+    auto result = __LogPingletNested::LogLevel::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID10LogPingletV0C5LevelO7warningyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __LogPingletNested::LogLevel::isWarning() const {
+    return *this == __LogPingletNested::LogLevel::warning;
+  }
+  SWIFT_INLINE_THUNK  bool __LogPingletNested::LogLevel::isUnknownDefault() const {
+    return *this == __LogPingletNested::LogLevel::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__LogPingletNested::LogLevel> __LogPingletNested::LogLevel::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__LogPingletNested::LogLevel>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID10LogPingletV0C5LevelO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__LogPingletNested::LogLevel> __LogPingletNested::LogLevel::getAllCases() {
+  return swift::_impl::_impl_Array<__LogPingletNested::LogLevel>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID10LogPingletV0C5LevelO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __LogPingletNested::LogLevel::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID10LogPingletV0C5LevelO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
   SWIFT_INLINE_THUNK MRZDocumentType MRZDocumentType::_impl_unknown::operator()() const {
     auto result = MRZDocumentType::_make();
     result._destructiveInjectEnumTag(_impl::$s7BlinkID15MRZDocumentTypeO7unknownyA2CmFWC);
@@ -32675,6 +39193,9 @@ return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID1
   }
   SWIFT_INLINE_THUNK swift::Int ModelLoadError::getHashValue() const {
   return BlinkID::_impl::$s7BlinkID14ModelLoadErrorO9hashValueSivg(_getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK PingManager PingManager::getShared() {
+  return _impl::_impl_PingManager::makeRetained(BlinkID::_impl::$s7BlinkID11PingManagerC6sharedACvgZ(swift::TypeMetadataTrait<PingManager>::getTypeMetadata()));
   }
   SWIFT_INLINE_THUNK int32_t Point::getX() const {
   return BlinkID::_impl::$s7BlinkID5PointV1xs5Int32Vvg(_getOpaquePointer());
@@ -34287,6 +40808,132 @@ return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID1
     BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(result, BlinkID::_impl::$s7BlinkID12SDKInitErrorO16errorDescriptionSSSgvg(_getOpaquePointer()));
   });
   }
+  SWIFT_INLINE_THUNK swift::String ScanningConditionsPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String ScanningConditionsPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType ScanningConditionsPinglet::getUpdateType() const {
+  return BlinkID::__ScanningConditionsPingletNested::_impl::_impl_UpdateType::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10updateTypeAC06UpdateG0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation> ScanningConditionsPinglet::getDeviceOrientation() const {
+  return swift::_impl::_impl_Optional<__ScanningConditionsPingletNested::DeviceOrientation>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV17deviceOrientationAC06DeviceG0OSgvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<bool> ScanningConditionsPinglet::getFlashlightOn() const {
+  return swift::_impl::_impl_Optional<bool>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint8_t_0_1(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV12flashlightOnSbSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK ScanningConditionsPinglet ScanningConditionsPinglet::init(const __ScanningConditionsPingletNested::UpdateType& updateType, const swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>& deviceOrientation, const swift::Optional<bool>& flashlightOn) {
+  alignas(alignof(__ScanningConditionsPingletNested::UpdateType)) char copyBuffer_consumedParamCopy_updateType[sizeof(__ScanningConditionsPingletNested::UpdateType)];
+  auto &consumedParamCopy_updateType = *(new(copyBuffer_consumedParamCopy_updateType) __ScanningConditionsPingletNested::UpdateType(updateType));
+  swift::_impl::ConsumedValueStorageDestroyer<__ScanningConditionsPingletNested::UpdateType> storageGuard_consumedParamCopy_updateType(consumedParamCopy_updateType);
+  alignas(alignof(swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>)) char copyBuffer_consumedParamCopy_deviceOrientation[sizeof(swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>)];
+  auto &consumedParamCopy_deviceOrientation = *(new(copyBuffer_consumedParamCopy_deviceOrientation) swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>(deviceOrientation));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation>> storageGuard_consumedParamCopy_deviceOrientation(consumedParamCopy_deviceOrientation);
+  return BlinkID::_impl::_impl_ScanningConditionsPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10updateType17deviceOrientation12flashlightOnA2C06UpdateG0O_AC06DeviceI0OSgSbSgtcfC(result, BlinkID::__ScanningConditionsPingletNested::_impl::_impl_UpdateType::getOpaquePointer(consumedParamCopy_updateType), swift::_impl::_impl_Optional<__ScanningConditionsPingletNested::DeviceOrientation>::getOpaquePointer(consumedParamCopy_deviceOrientation), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint8_t_0_1(swift::_impl::_impl_Optional<bool>::getOpaquePointer(flashlightOn)));
+  });
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType __ScanningConditionsPingletNested::UpdateType::_impl_deviceorientation::operator()() const {
+    auto result = __ScanningConditionsPingletNested::UpdateType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO17deviceorientationyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::UpdateType::isDeviceorientation() const {
+    return *this == __ScanningConditionsPingletNested::UpdateType::deviceorientation;
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::UpdateType __ScanningConditionsPingletNested::UpdateType::_impl_flashlightstate::operator()() const {
+    auto result = __ScanningConditionsPingletNested::UpdateType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO15flashlightstateyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::UpdateType::isFlashlightstate() const {
+    return *this == __ScanningConditionsPingletNested::UpdateType::flashlightstate;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::UpdateType::isUnknownDefault() const {
+    return *this == __ScanningConditionsPingletNested::UpdateType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::UpdateType> __ScanningConditionsPingletNested::UpdateType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__ScanningConditionsPingletNested::UpdateType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__ScanningConditionsPingletNested::UpdateType> __ScanningConditionsPingletNested::UpdateType::getAllCases() {
+  return swift::_impl::_impl_Array<__ScanningConditionsPingletNested::UpdateType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __ScanningConditionsPingletNested::UpdateType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV10UpdateTypeO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation __ScanningConditionsPingletNested::DeviceOrientation::_impl_portrait::operator()() const {
+    auto result = __ScanningConditionsPingletNested::DeviceOrientation::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8portraityA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::DeviceOrientation::isPortrait() const {
+    return *this == __ScanningConditionsPingletNested::DeviceOrientation::portrait;
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation __ScanningConditionsPingletNested::DeviceOrientation::_impl_landscaperight::operator()() const {
+    auto result = __ScanningConditionsPingletNested::DeviceOrientation::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14landscaperightyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::DeviceOrientation::isLandscaperight() const {
+    return *this == __ScanningConditionsPingletNested::DeviceOrientation::landscaperight;
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation __ScanningConditionsPingletNested::DeviceOrientation::_impl_landscapeleft::operator()() const {
+    auto result = __ScanningConditionsPingletNested::DeviceOrientation::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO13landscapeleftyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::DeviceOrientation::isLandscapeleft() const {
+    return *this == __ScanningConditionsPingletNested::DeviceOrientation::landscapeleft;
+  }
+  SWIFT_INLINE_THUNK __ScanningConditionsPingletNested::DeviceOrientation __ScanningConditionsPingletNested::DeviceOrientation::_impl_portraitupside::operator()() const {
+    auto result = __ScanningConditionsPingletNested::DeviceOrientation::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO14portraitupsideyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::DeviceOrientation::isPortraitupside() const {
+    return *this == __ScanningConditionsPingletNested::DeviceOrientation::portraitupside;
+  }
+  SWIFT_INLINE_THUNK  bool __ScanningConditionsPingletNested::DeviceOrientation::isUnknownDefault() const {
+    return *this == __ScanningConditionsPingletNested::DeviceOrientation::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__ScanningConditionsPingletNested::DeviceOrientation> __ScanningConditionsPingletNested::DeviceOrientation::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__ScanningConditionsPingletNested::DeviceOrientation>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__ScanningConditionsPingletNested::DeviceOrientation> __ScanningConditionsPingletNested::DeviceOrientation::getAllCases() {
+  return swift::_impl::_impl_Array<__ScanningConditionsPingletNested::DeviceOrientation>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __ScanningConditionsPingletNested::DeviceOrientation::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25ScanningConditionsPingletV17DeviceOrientationO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
   SWIFT_INLINE_THUNK ScanningMode ScanningMode::_impl_single::operator()() const {
     auto result = ScanningMode::_make();
     result._destructiveInjectEnumTag(_impl::$s7BlinkID12ScanningModeO6singleyA2CmFWC);
@@ -34593,6 +41240,202 @@ return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID1
   SWIFT_INLINE_THUNK swift::Int ScanningStatus::getHashValue() const {
   return BlinkID::_impl::$s7BlinkID14ScanningStatusO9hashValueSivg(_getOpaquePointer());
   }
+  SWIFT_INLINE_THUNK swift::String SdkInitStartPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String SdkInitStartPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Int SdkInitStartPinglet::getSessionNumber() {
+  return BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV13sessionNumberSivgZ();
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product SdkInitStartPinglet::getProduct() const {
+  return BlinkID::__SdkInitStartPingletNested::_impl::_impl_Product::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV7productAC7ProductOvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform SdkInitStartPinglet::getPlatform() const {
+  return BlinkID::__SdkInitStartPingletNested::_impl::_impl_Platform::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV8platformAC8PlatformOvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String SdkInitStartPinglet::getPackageName() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV11packageNameSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String SdkInitStartPinglet::getUserId() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV6userIdSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK SdkInitStartPinglet SdkInitStartPinglet::init(const __SdkInitStartPingletNested::Product& product, const __SdkInitStartPingletNested::Platform& platform, const swift::String& packageName, const swift::String& userId) {
+  alignas(alignof(__SdkInitStartPingletNested::Product)) char copyBuffer_consumedParamCopy_product[sizeof(__SdkInitStartPingletNested::Product)];
+  auto &consumedParamCopy_product = *(new(copyBuffer_consumedParamCopy_product) __SdkInitStartPingletNested::Product(product));
+  swift::_impl::ConsumedValueStorageDestroyer<__SdkInitStartPingletNested::Product> storageGuard_consumedParamCopy_product(consumedParamCopy_product);
+  alignas(alignof(__SdkInitStartPingletNested::Platform)) char copyBuffer_consumedParamCopy_platform[sizeof(__SdkInitStartPingletNested::Platform)];
+  auto &consumedParamCopy_platform = *(new(copyBuffer_consumedParamCopy_platform) __SdkInitStartPingletNested::Platform(platform));
+  swift::_impl::ConsumedValueStorageDestroyer<__SdkInitStartPingletNested::Platform> storageGuard_consumedParamCopy_platform(consumedParamCopy_platform);
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_packageName[sizeof(swift::String)];
+  auto &consumedParamCopy_packageName = *(new(copyBuffer_consumedParamCopy_packageName) swift::String(packageName));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_packageName(consumedParamCopy_packageName);
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_userId[sizeof(swift::String)];
+  auto &consumedParamCopy_userId = *(new(copyBuffer_consumedParamCopy_userId) swift::String(userId));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_userId(consumedParamCopy_userId);
+  return BlinkID::_impl::_impl_SdkInitStartPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV7product8platform11packageName6userIdA2C7ProductO_AC8PlatformOS2StcfC(result, BlinkID::__SdkInitStartPingletNested::_impl::_impl_Product::getOpaquePointer(consumedParamCopy_product), BlinkID::__SdkInitStartPingletNested::_impl::_impl_Platform::getOpaquePointer(consumedParamCopy_platform), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_packageName)), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_userId)));
+  });
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_blinkcard::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO9blinkcardyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isBlinkcard() const {
+    return *this == __SdkInitStartPingletNested::Product::blinkcard;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_blinkid::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO7blinkidyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isBlinkid() const {
+    return *this == __SdkInitStartPingletNested::Product::blinkid;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_blinkinput::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO10blinkinputyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isBlinkinput() const {
+    return *this == __SdkInitStartPingletNested::Product::blinkinput;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_capture::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO7captureyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isCapture() const {
+    return *this == __SdkInitStartPingletNested::Product::capture;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_documentverification::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO20documentverificationyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isDocumentverification() const {
+    return *this == __SdkInitStartPingletNested::Product::documentverification;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_pdf417mobi::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO10pdf417mobiyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isPdf417mobi() const {
+    return *this == __SdkInitStartPingletNested::Product::pdf417mobi;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Product __SdkInitStartPingletNested::Product::_impl_photopay::operator()() const {
+    auto result = __SdkInitStartPingletNested::Product::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV7ProductO8photopayyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isPhotopay() const {
+    return *this == __SdkInitStartPingletNested::Product::photopay;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Product::isUnknownDefault() const {
+    return *this == __SdkInitStartPingletNested::Product::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__SdkInitStartPingletNested::Product> __SdkInitStartPingletNested::Product::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__SdkInitStartPingletNested::Product>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV7ProductO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__SdkInitStartPingletNested::Product> __SdkInitStartPingletNested::Product::getAllCases() {
+  return swift::_impl::_impl_Array<__SdkInitStartPingletNested::Product>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV7ProductO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __SdkInitStartPingletNested::Product::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV7ProductO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_ios::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO3iosyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isIos() const {
+    return *this == __SdkInitStartPingletNested::Platform::ios;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_android::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO7androidyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isAndroid() const {
+    return *this == __SdkInitStartPingletNested::Platform::android;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_emscripten::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO10emscriptenyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isEmscripten() const {
+    return *this == __SdkInitStartPingletNested::Platform::emscripten;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_macos::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO5macosyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isMacos() const {
+    return *this == __SdkInitStartPingletNested::Platform::macos;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_linux::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO5linuxyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isLinux() const {
+    return *this == __SdkInitStartPingletNested::Platform::linux;
+  }
+  SWIFT_INLINE_THUNK __SdkInitStartPingletNested::Platform __SdkInitStartPingletNested::Platform::_impl_windows::operator()() const {
+    auto result = __SdkInitStartPingletNested::Platform::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO7windowsyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isWindows() const {
+    return *this == __SdkInitStartPingletNested::Platform::windows;
+  }
+  SWIFT_INLINE_THUNK  bool __SdkInitStartPingletNested::Platform::isUnknownDefault() const {
+    return *this == __SdkInitStartPingletNested::Platform::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__SdkInitStartPingletNested::Platform> __SdkInitStartPingletNested::Platform::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__SdkInitStartPingletNested::Platform>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__SdkInitStartPingletNested::Platform> __SdkInitStartPingletNested::Platform::getAllCases() {
+  return swift::_impl::_impl_Array<__SdkInitStartPingletNested::Platform>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __SdkInitStartPingletNested::Platform::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID19SdkInitStartPingletV8PlatformO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
   SWIFT_INLINE_THUNK SessionError SessionError::_impl_processCallAfterDocumentScanned::operator()() const {
     auto result = SessionError::_make();
     result._destructiveInjectEnumTag(_impl::$s7BlinkID12SessionErrorO31processCallAfterDocumentScannedyA2CmFWC);
@@ -34702,6 +41545,353 @@ return (__bridge_transfer UIImage *)(__bridge void *)BlinkID::_impl::$s7BlinkID1
   auto &consumedParamCopy_value = *(new(copyBuffer_consumedParamCopy_value) swift::Optional<DetailedCroppedImageResult>(value));
   swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<DetailedCroppedImageResult>> storageGuard_consumedParamCopy_value(consumedParamCopy_value);
   BlinkID::_impl::$s7BlinkID24SingleSideScanningResultV14signatureImageAA015DetailedCroppedhF0VSgvs(swift::_impl::_impl_Optional<DetailedCroppedImageResult>::getOpaquePointer(consumedParamCopy_value), _getOpaquePointer());
+  }
+  SWIFT_INLINE_THUNK swift::String UxEventPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String UxEventPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType UxEventPinglet::getEventType() const {
+  return BlinkID::__UxEventPingletNested::_impl::_impl_EventType::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV9eventTypeAC0dG0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::ErrorMessageType> UxEventPinglet::getErrorMessageType() const {
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::ErrorMessageType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV16errorMessageTypeAC05ErrorgH0OSgvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::AlertType> UxEventPinglet::getAlertType() const {
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::AlertType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV9alertTypeAC05AlertG0OSgvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::HelpCloseType> UxEventPinglet::getHelpCloseType() const {
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::HelpCloseType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV13helpCloseTypeAC04HelpgH0OSgvg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK UxEventPinglet UxEventPinglet::init(const __UxEventPingletNested::EventType& eventType, const swift::Optional<__UxEventPingletNested::ErrorMessageType>& errorMessageType, const swift::Optional<__UxEventPingletNested::AlertType>& alertType, const swift::Optional<__UxEventPingletNested::HelpCloseType>& helpCloseType) {
+  alignas(alignof(__UxEventPingletNested::EventType)) char copyBuffer_consumedParamCopy_eventType[sizeof(__UxEventPingletNested::EventType)];
+  auto &consumedParamCopy_eventType = *(new(copyBuffer_consumedParamCopy_eventType) __UxEventPingletNested::EventType(eventType));
+  swift::_impl::ConsumedValueStorageDestroyer<__UxEventPingletNested::EventType> storageGuard_consumedParamCopy_eventType(consumedParamCopy_eventType);
+  alignas(alignof(swift::Optional<__UxEventPingletNested::ErrorMessageType>)) char copyBuffer_consumedParamCopy_errorMessageType[sizeof(swift::Optional<__UxEventPingletNested::ErrorMessageType>)];
+  auto &consumedParamCopy_errorMessageType = *(new(copyBuffer_consumedParamCopy_errorMessageType) swift::Optional<__UxEventPingletNested::ErrorMessageType>(errorMessageType));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<__UxEventPingletNested::ErrorMessageType>> storageGuard_consumedParamCopy_errorMessageType(consumedParamCopy_errorMessageType);
+  alignas(alignof(swift::Optional<__UxEventPingletNested::AlertType>)) char copyBuffer_consumedParamCopy_alertType[sizeof(swift::Optional<__UxEventPingletNested::AlertType>)];
+  auto &consumedParamCopy_alertType = *(new(copyBuffer_consumedParamCopy_alertType) swift::Optional<__UxEventPingletNested::AlertType>(alertType));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<__UxEventPingletNested::AlertType>> storageGuard_consumedParamCopy_alertType(consumedParamCopy_alertType);
+  alignas(alignof(swift::Optional<__UxEventPingletNested::HelpCloseType>)) char copyBuffer_consumedParamCopy_helpCloseType[sizeof(swift::Optional<__UxEventPingletNested::HelpCloseType>)];
+  auto &consumedParamCopy_helpCloseType = *(new(copyBuffer_consumedParamCopy_helpCloseType) swift::Optional<__UxEventPingletNested::HelpCloseType>(helpCloseType));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<__UxEventPingletNested::HelpCloseType>> storageGuard_consumedParamCopy_helpCloseType(consumedParamCopy_helpCloseType);
+  return BlinkID::_impl::_impl_UxEventPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV9eventType012errorMessageG005alertG009helpCloseG0A2C0dG0O_AC05ErroriG0OSgAC05AlertG0OSgAC04HelplG0OSgtcfC(result, BlinkID::__UxEventPingletNested::_impl::_impl_EventType::getOpaquePointer(consumedParamCopy_eventType), swift::_impl::_impl_Optional<__UxEventPingletNested::ErrorMessageType>::getOpaquePointer(consumedParamCopy_errorMessageType), swift::_impl::_impl_Optional<__UxEventPingletNested::AlertType>::getOpaquePointer(consumedParamCopy_alertType), swift::_impl::_impl_Optional<__UxEventPingletNested::HelpCloseType>::getOpaquePointer(consumedParamCopy_helpCloseType));
+  });
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_camerastarted::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO13camerastartedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isCamerastarted() const {
+    return *this == __UxEventPingletNested::EventType::camerastarted;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_cameraclosed::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO12cameraclosedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isCameraclosed() const {
+    return *this == __UxEventPingletNested::EventType::cameraclosed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_onboardinginfodisplayed::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO23onboardinginfodisplayedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isOnboardinginfodisplayed() const {
+    return *this == __UxEventPingletNested::EventType::onboardinginfodisplayed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_closebuttonclicked::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO18closebuttonclickedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isClosebuttonclicked() const {
+    return *this == __UxEventPingletNested::EventType::closebuttonclicked;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_helptooltipdisplayed::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO20helptooltipdisplayedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isHelptooltipdisplayed() const {
+    return *this == __UxEventPingletNested::EventType::helptooltipdisplayed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_helpopened::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO10helpopenedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isHelpopened() const {
+    return *this == __UxEventPingletNested::EventType::helpopened;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_helpclosed::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO10helpclosedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isHelpclosed() const {
+    return *this == __UxEventPingletNested::EventType::helpclosed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_alertdisplayed::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO14alertdisplayedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isAlertdisplayed() const {
+    return *this == __UxEventPingletNested::EventType::alertdisplayed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_errormessage::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO12errormessageyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isErrormessage() const {
+    return *this == __UxEventPingletNested::EventType::errormessage;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_steptimeout::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO11steptimeoutyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isSteptimeout() const {
+    return *this == __UxEventPingletNested::EventType::steptimeout;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::EventType __UxEventPingletNested::EventType::_impl_appmovedtobackground::operator()() const {
+    auto result = __UxEventPingletNested::EventType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV0D4TypeO20appmovedtobackgroundyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isAppmovedtobackground() const {
+    return *this == __UxEventPingletNested::EventType::appmovedtobackground;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::EventType::isUnknownDefault() const {
+    return *this == __UxEventPingletNested::EventType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::EventType> __UxEventPingletNested::EventType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::EventType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV0D4TypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::EventType> __UxEventPingletNested::EventType::getAllCases() {
+  return swift::_impl::_impl_Array<__UxEventPingletNested::EventType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV0D4TypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __UxEventPingletNested::EventType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV0D4TypeO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_movecloser::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO10movecloseryA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isMovecloser() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::movecloser;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_movefarther::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO11movefartheryA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isMovefarther() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::movefarther;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_keepvisible::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO11keepvisibleyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isKeepvisible() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::keepvisible;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_flipside::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO8flipsideyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isFlipside() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::flipside;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_aligndocument::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO13aligndocumentyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isAligndocument() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::aligndocument;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_movefromedge::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO12movefromedgeyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isMovefromedge() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::movefromedge;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_increaselighting::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO16increaselightingyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isIncreaselighting() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::increaselighting;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_decreaselighting::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO16decreaselightingyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isDecreaselighting() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::decreaselighting;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_eliminateblur::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO13eliminatebluryA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isEliminateblur() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::eliminateblur;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::ErrorMessageType __UxEventPingletNested::ErrorMessageType::_impl_eliminateglare::operator()() const {
+    auto result = __UxEventPingletNested::ErrorMessageType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO14eliminateglareyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isEliminateglare() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::eliminateglare;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::ErrorMessageType::isUnknownDefault() const {
+    return *this == __UxEventPingletNested::ErrorMessageType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::ErrorMessageType> __UxEventPingletNested::ErrorMessageType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::ErrorMessageType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::ErrorMessageType> __UxEventPingletNested::ErrorMessageType::getAllCases() {
+  return swift::_impl::_impl_Array<__UxEventPingletNested::ErrorMessageType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __UxEventPingletNested::ErrorMessageType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV16ErrorMessageTypeO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType __UxEventPingletNested::AlertType::_impl_invalidlicensekey::operator()() const {
+    auto result = __UxEventPingletNested::AlertType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV9AlertTypeO17invalidlicensekeyyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::AlertType::isInvalidlicensekey() const {
+    return *this == __UxEventPingletNested::AlertType::invalidlicensekey;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType __UxEventPingletNested::AlertType::_impl_networkerror::operator()() const {
+    auto result = __UxEventPingletNested::AlertType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV9AlertTypeO12networkerroryA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::AlertType::isNetworkerror() const {
+    return *this == __UxEventPingletNested::AlertType::networkerror;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType __UxEventPingletNested::AlertType::_impl_documentclassnotallowed::operator()() const {
+    auto result = __UxEventPingletNested::AlertType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV9AlertTypeO23documentclassnotallowedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::AlertType::isDocumentclassnotallowed() const {
+    return *this == __UxEventPingletNested::AlertType::documentclassnotallowed;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::AlertType __UxEventPingletNested::AlertType::_impl_steptimeout::operator()() const {
+    auto result = __UxEventPingletNested::AlertType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV9AlertTypeO11steptimeoutyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::AlertType::isSteptimeout() const {
+    return *this == __UxEventPingletNested::AlertType::steptimeout;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::AlertType::isUnknownDefault() const {
+    return *this == __UxEventPingletNested::AlertType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::AlertType> __UxEventPingletNested::AlertType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::AlertType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV9AlertTypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::AlertType> __UxEventPingletNested::AlertType::getAllCases() {
+  return swift::_impl::_impl_Array<__UxEventPingletNested::AlertType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV9AlertTypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __UxEventPingletNested::AlertType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV9AlertTypeO8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::HelpCloseType __UxEventPingletNested::HelpCloseType::_impl_contentskipped::operator()() const {
+    auto result = __UxEventPingletNested::HelpCloseType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO14contentskippedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::HelpCloseType::isContentskipped() const {
+    return *this == __UxEventPingletNested::HelpCloseType::contentskipped;
+  }
+  SWIFT_INLINE_THUNK __UxEventPingletNested::HelpCloseType __UxEventPingletNested::HelpCloseType::_impl_contentfullyviewed::operator()() const {
+    auto result = __UxEventPingletNested::HelpCloseType::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO18contentfullyviewedyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::HelpCloseType::isContentfullyviewed() const {
+    return *this == __UxEventPingletNested::HelpCloseType::contentfullyviewed;
+  }
+  SWIFT_INLINE_THUNK  bool __UxEventPingletNested::HelpCloseType::isUnknownDefault() const {
+    return *this == __UxEventPingletNested::HelpCloseType::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__UxEventPingletNested::HelpCloseType> __UxEventPingletNested::HelpCloseType::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__UxEventPingletNested::HelpCloseType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__UxEventPingletNested::HelpCloseType> __UxEventPingletNested::HelpCloseType::getAllCases() {
+  return swift::_impl::_impl_Array<__UxEventPingletNested::HelpCloseType>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __UxEventPingletNested::HelpCloseType::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID14UxEventPingletV13HelpCloseTypeO8rawValueSSvg(_getOpaquePointer()));
+  });
   }
   SWIFT_INLINE_THUNK swift::Optional<__BlinkIDSDKNested::StringResult> VIZResult::getFirstName() const {
   return swift::_impl::_impl_Optional<__BlinkIDSDKNested::StringResult>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
@@ -34974,6 +42164,82 @@ static_assert(swift::isUsableInGenericContext<T_0_0>, "type cannot be used in a 
     BlinkID::_impl::$s7BlinkID16VehicleClassInfoV10expiryDateAA0G6ResultVyxGSgvg(result, swift::TypeMetadataTrait<VehicleClassInfo<T_0_0>>::getTypeMetadata(), _getOpaquePointer());
   });
   }
+  SWIFT_INLINE_THUNK swift::String WrapperProductInfoPinglet::getSchemaName() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV10schemaNameSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String WrapperProductInfoPinglet::getSchemaVersion() {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV13schemaVersionSSvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct WrapperProductInfoPinglet::getWrapperProduct() const {
+  return BlinkID::__WrapperProductInfoPingletNested::_impl::_impl_WrapperProduct::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV07wrapperD0AC0cD0Ovg(result, _getOpaquePointer());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Optional<swift::String> WrapperProductInfoPinglet::getCorrelationId() const {
+  return swift::_impl::_impl_Optional<swift::String>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(result, BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV13correlationIdSSSgvg(_getOpaquePointer()));
+  });
+  }
+  SWIFT_INLINE_THUNK WrapperProductInfoPinglet WrapperProductInfoPinglet::init(const __WrapperProductInfoPingletNested::WrapperProduct& wrapperProduct, const swift::Optional<swift::String>& correlationId) {
+  alignas(alignof(__WrapperProductInfoPingletNested::WrapperProduct)) char copyBuffer_consumedParamCopy_wrapperProduct[sizeof(__WrapperProductInfoPingletNested::WrapperProduct)];
+  auto &consumedParamCopy_wrapperProduct = *(new(copyBuffer_consumedParamCopy_wrapperProduct) __WrapperProductInfoPingletNested::WrapperProduct(wrapperProduct));
+  swift::_impl::ConsumedValueStorageDestroyer<__WrapperProductInfoPingletNested::WrapperProduct> storageGuard_consumedParamCopy_wrapperProduct(consumedParamCopy_wrapperProduct);
+  alignas(alignof(swift::Optional<swift::String>)) char copyBuffer_consumedParamCopy_correlationId[sizeof(swift::Optional<swift::String>)];
+  auto &consumedParamCopy_correlationId = *(new(copyBuffer_consumedParamCopy_correlationId) swift::Optional<swift::String>(correlationId));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::Optional<swift::String>> storageGuard_consumedParamCopy_correlationId(consumedParamCopy_correlationId);
+  return BlinkID::_impl::_impl_WrapperProductInfoPinglet::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV07wrapperD013correlationIdA2C0cD0O_SSSgtcfC(result, BlinkID::__WrapperProductInfoPingletNested::_impl::_impl_WrapperProduct::getOpaquePointer(consumedParamCopy_wrapperProduct), BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_uint64_t_8_16(swift::_impl::_impl_Optional<swift::String>::getOpaquePointer(consumedParamCopy_correlationId)));
+  });
+  }
+  SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct __WrapperProductInfoPingletNested::WrapperProduct::_impl_crossplatformflutter::operator()() const {
+    auto result = __WrapperProductInfoPingletNested::WrapperProduct::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O20crossplatformflutteryA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __WrapperProductInfoPingletNested::WrapperProduct::isCrossplatformflutter() const {
+    return *this == __WrapperProductInfoPingletNested::WrapperProduct::crossplatformflutter;
+  }
+  SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct __WrapperProductInfoPingletNested::WrapperProduct::_impl_crossplatformreactnative::operator()() const {
+    auto result = __WrapperProductInfoPingletNested::WrapperProduct::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O24crossplatformreactnativeyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __WrapperProductInfoPingletNested::WrapperProduct::isCrossplatformreactnative() const {
+    return *this == __WrapperProductInfoPingletNested::WrapperProduct::crossplatformreactnative;
+  }
+  SWIFT_INLINE_THUNK __WrapperProductInfoPingletNested::WrapperProduct __WrapperProductInfoPingletNested::WrapperProduct::_impl_identityverification::operator()() const {
+    auto result = __WrapperProductInfoPingletNested::WrapperProduct::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O20identityverificationyA2EmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool __WrapperProductInfoPingletNested::WrapperProduct::isIdentityverification() const {
+    return *this == __WrapperProductInfoPingletNested::WrapperProduct::identityverification;
+  }
+  SWIFT_INLINE_THUNK  bool __WrapperProductInfoPingletNested::WrapperProduct::isUnknownDefault() const {
+    return *this == __WrapperProductInfoPingletNested::WrapperProduct::unknownDefault;
+  }
+  SWIFT_INLINE_THUNK swift::Optional<__WrapperProductInfoPingletNested::WrapperProduct> __WrapperProductInfoPingletNested::WrapperProduct::init(const swift::String& rawValue) {
+  alignas(alignof(swift::String)) char copyBuffer_consumedParamCopy_rawValue[sizeof(swift::String)];
+  auto &consumedParamCopy_rawValue = *(new(copyBuffer_consumedParamCopy_rawValue) swift::String(rawValue));
+  swift::_impl::ConsumedValueStorageDestroyer<swift::String> storageGuard_consumedParamCopy_rawValue(consumedParamCopy_rawValue);
+  return swift::_impl::_impl_Optional<__WrapperProductInfoPingletNested::WrapperProduct>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueAESgSS_tcfC(result, BlinkID::_impl::swift_interop_passDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(swift::_impl::_impl_String::getOpaquePointer(consumedParamCopy_rawValue)));
+  });
+  }
+  SWIFT_INLINE_THUNK swift::Array<__WrapperProductInfoPingletNested::WrapperProduct> __WrapperProductInfoPingletNested::WrapperProduct::getAllCases() {
+  return swift::_impl::_impl_Array<__WrapperProductInfoPingletNested::WrapperProduct>::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_void_ptr_0_8(result, BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O8allCasesSayAEGvgZ());
+  });
+  }
+  SWIFT_INLINE_THUNK swift::String __WrapperProductInfoPingletNested::WrapperProduct::getRawValue() const {
+  return swift::_impl::_impl_String::returnNewValue([&](char * _Nonnull result) SWIFT_INLINE_THUNK_ATTRIBUTES {
+    BlinkID::_impl::swift_interop_returnDirect_BlinkID_uint64_t_0_8_void_ptr_8_16(result, BlinkID::_impl::$s7BlinkID25WrapperProductInfoPingletV0cD0O8rawValueSSvg(_getOpaquePointer()));
+  });
+  }
 
 // Unavailable in C++: Swift type alias 'DPI'.
 
@@ -34982,6 +42248,14 @@ template<class T_0_0>
 requires swift::isUsableInGenericContext<T_0_0>
 #endif // __cpp_concepts
 class InputImageResultProtocol { } SWIFT_UNAVAILABLE_MSG("protocol 'InputImageResultProtocol' can not yet be represented in C++");
+
+class PingStatus { } SWIFT_UNAVAILABLE_MSG("enum 'PingStatus' can not be represented in C++ as one of its cases has an associated value with type that can't be represented in C++");
+
+template<class T_0_0>
+#ifdef __cpp_concepts
+requires swift::isUsableInGenericContext<T_0_0>
+#endif // __cpp_concepts
+class Pinglet { } SWIFT_UNAVAILABLE_MSG("protocol 'Pinglet' can not yet be represented in C++");
 
 class ResourceDownloaderError { } SWIFT_UNAVAILABLE_MSG("enum 'ResourceDownloaderError' can not be represented in C++ as one of its cases has an associated value with type that can't be represented in C++");
 

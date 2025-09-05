@@ -14,3 +14,4 @@
 #import "BlinkID/NativeBlinkIDScanningSession.hpp"
 #import "NativeBlinkId.hpp"
 #import "License/NativeLicenseProvider.hpp"
+#import "Ping/NativePingManagerHelper.hpp"

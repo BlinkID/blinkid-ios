@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Double tap to attempt reconnecting to the internet" : {
-
-    },
     "mb_back_instructions" : {
       "comment" : "",
       "extractionState" : "manual",
@@ -7921,12 +7918,6 @@
           }
         }
       }
-    },
-    "No Internet Connection Screen" : {
-
-    },
-    "Retry connection" : {
-
     }
   },
   "version" : "1.0"

@@ -66,6 +66,7 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     
     let camera: Camera = Camera()
     let analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>
+    let sessionNumber: Int
     
     // MARK: - UI Elements
     // Cancel button
@@ -80,6 +81,7 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     
     @Published public var isTorchOn: Bool = false {
         didSet {
+            UISelectionFeedbackGenerator().selectionChanged()
             camera.isTorchEnabled = isTorchOn
             torchImage = isTorchOn ? Image(systemName: "bolt.fill") : Image(systemName: "bolt.slash.fill")
             torchHint = isTorchOn ? "Turn flashlight on" : "Turn flashlight off"
@@ -108,6 +110,11 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         didSet {
             if showIntroductionAlert {
                 pauseScanning()
+                Task {
+                    let uxEventPinglet = UxEventPinglet(eventType: .onboardinginfodisplayed)
+                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                }
+
             } else {
                 setReticleState(.front, force: true)
                 UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
@@ -120,6 +127,16 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         didSet {
             if showScanningAlert {
                 pauseScanning()
+                Task {
+                    let pingAlertType = self.alertType as? BlinkIDScanningAlertType
+                    if let alertType = pingAlertType {
+                        let type: UxEventPinglet.AlertType = alertType == .timeout ? .steptimeout : .documentclassnotallowed
+                        let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: type)
+                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    }
+
+                }
+                UINotificationFeedbackGenerator().notificationOccurred(.error)
             }
             else {
                 timeoutAlertDismised()
@@ -132,6 +149,12 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         didSet {
             if showLicenseErrorAlert {
                 pauseScanning()
+                Task {
+                    let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: .invalidlicensekey)
+                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                }
+
+                UINotificationFeedbackGenerator().notificationOccurred(.error)
             } else {
                 licenseErrorAlertDismised()
             }
@@ -143,6 +166,11 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         didSet {
             if showTooltip {
                 startHideTooltipTimer()
+                Task {
+                    let uxEventPinglet = UxEventPinglet(eventType: .helptooltipdisplayed)
+                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                }
+
             }
             else {
                 hideTooltipTimer?.invalidate()
@@ -184,12 +212,13 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     /// Initializes a new scanning UX model with the specified document analyzer.
     /// - Parameter analyzer: The analyzer responsible for processing camera frames and detecting documents.
     /// - Parameter shouldShowIntroductionAlert: Whether introduction alert will be shown on appear
-    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false, showHelpButton: Bool = false) {
+    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false, showHelpButton: Bool = false, sessionNumber: Int) {
         self.analyzer = analyzer
         self.shouldShowIntroductionAlert = shouldShowIntroductionAlert
         self.showHelpButton = showHelpButton
         self.showDemoOverlayImage = UXLicenseProviderBridge.shared.showDemoOverlay
         self.showProductionOverlayImage = UXLicenseProviderBridge.shared.showProductionOverlay
+        self.sessionNumber = sessionNumber
     }
     
     deinit {
@@ -328,6 +357,10 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             inactiveState = reticleState
         case .flip, .inactive, .error(_), .detecting:
             break
+        }
+        
+        if case .error = reticleState {
+            UINotificationFeedbackGenerator().notificationOccurred(.warning)
         }
         
         lastReticleStateChange = currentTime

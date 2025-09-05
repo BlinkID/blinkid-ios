@@ -8,6 +8,7 @@ import CoreData
 import CoreMedia
 import CryptoKit
 import Foundation
+import Network
 import Swift
 import UIKit
 import _Concurrency
@@ -107,12 +108,14 @@ public enum BarcodeElementKey {
   }
 }
 @_hasMissingDesignatedInitializers final public class BlinkIDSession : Swift.Sendable {
+  @objc deinit
   final public func cancelActiveProcessing()
   final public func resumeActiveProcessing()
   @BlinkID.ProcessingActor final public func process(inputImage: BlinkID.InputImage) -> BlinkID.FrameProcessResult
   @BlinkID.ProcessingActor final public func reset() throws
   @BlinkID.ProcessingActor final public func getResult() -> BlinkID.BlinkIDScanningResult
-  @objc deinit
+  @BlinkID.ProcessingActor final public func getSessionId() -> Swift.String
+  @BlinkID.ProcessingActor final public func getSessionNumber() -> Swift.Int
 }
 @_hasMissingDesignatedInitializers @globalActor public actor ProcessingActor {
   public static var shared: BlinkID.ProcessingActor
@@ -637,6 +640,369 @@ public enum DocumentType : Swift.String, Swift.Decodable, Swift.Sendable, Swift.
     get
   }
 }
+public struct UxEventPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let eventType: BlinkID.UxEventPinglet.EventType
+  public let errorMessageType: BlinkID.UxEventPinglet.ErrorMessageType?
+  public let alertType: BlinkID.UxEventPinglet.AlertType?
+  public let helpCloseType: BlinkID.UxEventPinglet.HelpCloseType?
+  public init(eventType: BlinkID.UxEventPinglet.EventType, errorMessageType: BlinkID.UxEventPinglet.ErrorMessageType? = nil, alertType: BlinkID.UxEventPinglet.AlertType? = nil, helpCloseType: BlinkID.UxEventPinglet.HelpCloseType? = nil)
+  public enum EventType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case camerastarted
+    case cameraclosed
+    case onboardinginfodisplayed
+    case closebuttonclicked
+    case helptooltipdisplayed
+    case helpopened
+    case helpclosed
+    case alertdisplayed
+    case errormessage
+    case steptimeout
+    case appmovedtobackground
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.UxEventPinglet.EventType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.UxEventPinglet.EventType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ErrorMessageType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case movecloser
+    case movefarther
+    case keepvisible
+    case flipside
+    case aligndocument
+    case movefromedge
+    case increaselighting
+    case decreaselighting
+    case eliminateblur
+    case eliminateglare
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.UxEventPinglet.ErrorMessageType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.UxEventPinglet.ErrorMessageType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AlertType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case invalidlicensekey
+    case networkerror
+    case documentclassnotallowed
+    case steptimeout
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.UxEventPinglet.AlertType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.UxEventPinglet.AlertType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum HelpCloseType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case contentskipped
+    case contentfullyviewed
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.UxEventPinglet.HelpCloseType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.UxEventPinglet.HelpCloseType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CameraInputInfoPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let cameraFacing: BlinkID.CameraInputInfoPinglet.CameraFacing
+  public let cameraFrameWidth: Swift.Int64
+  public let cameraFrameHeight: Swift.Int64
+  public let roiWidth: Swift.Int64
+  public let roiHeight: Swift.Int64
+  public let viewPortAspectRatio: Swift.Double
+  public init(cameraFacing: BlinkID.CameraInputInfoPinglet.CameraFacing, cameraFrameWidth: Swift.Int64, cameraFrameHeight: Swift.Int64, roiWidth: Swift.Int64, roiHeight: Swift.Int64, viewPortAspectRatio: Swift.Double)
+  public enum CameraFacing : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case front
+    case back
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.CameraInputInfoPinglet.CameraFacing]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.CameraInputInfoPinglet.CameraFacing] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CameraHardwareInfoPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public static let sessionNumber: Swift.Int
+  public let availableCameras: [BlinkID.CameraHardwareInfoPinglet.AvailableCamerasItem]
+  public init(availableCameras: [BlinkID.CameraHardwareInfoPinglet.AvailableCamerasItem])
+  public struct AvailableCamerasItem : Swift.Codable {
+    public let cameraFacing: BlinkID.CameraHardwareInfoPinglet.CameraFacing
+    public let focus: BlinkID.CameraHardwareInfoPinglet.Focus?
+    public let availableResolutions: [BlinkID.CameraHardwareInfoPinglet.AvailableResolutionsItem]
+    public init(cameraFacing: BlinkID.CameraHardwareInfoPinglet.CameraFacing, focus: BlinkID.CameraHardwareInfoPinglet.Focus? = nil, availableResolutions: [BlinkID.CameraHardwareInfoPinglet.AvailableResolutionsItem])
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct AvailableResolutionsItem : Swift.Codable {
+    public let width: Swift.Int64
+    public let height: Swift.Int64
+    public init(width: Swift.Int64, height: Swift.Int64)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public enum CameraFacing : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case front
+    case back
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.CameraHardwareInfoPinglet.CameraFacing]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.CameraHardwareInfoPinglet.CameraFacing] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Focus : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case auto
+    case fixed
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.CameraHardwareInfoPinglet.Focus]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.CameraHardwareInfoPinglet.Focus] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ErrorPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let errorType: BlinkID.ErrorPinglet.ErrorType
+  public let errorMessage: Swift.String
+  public let stackTrace: Swift.String?
+  public init(errorType: BlinkID.ErrorPinglet.ErrorType, errorMessage: Swift.String, stackTrace: Swift.String? = nil)
+  public enum ErrorType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case nonfatal
+    case crash
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.ErrorPinglet.ErrorType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.ErrorPinglet.ErrorType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CameraPermissionPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let eventType: BlinkID.CameraPermissionPinglet.EventType
+  public let cameraPermissionGranted: Swift.Bool?
+  public init(eventType: BlinkID.CameraPermissionPinglet.EventType, cameraPermissionGranted: Swift.Bool? = nil)
+  public enum EventType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case camerapermissioncheck
+    case camerapermissionrequest
+    case camerapermissionuserresponse
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.CameraPermissionPinglet.EventType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.CameraPermissionPinglet.EventType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class CrashMonitor : @unchecked Swift.Sendable {
+  public static let shared: BlinkID.CrashMonitor
+  @objc deinit
+  final public func startMonitoring(enableDebugLogging: Swift.Bool = false)
+  final public func stopMonitoring()
+  final public func simulateCrash(type crashType: BlinkID.CrashMonitor.TestCrashType)
+  public enum TestCrashType : Swift.CaseIterable {
+    case exception
+    case segmentationFault
+    case arrayOutOfBounds
+    case nilPointerDereference
+    case abort
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: BlinkID.CrashMonitor.TestCrashType, b: BlinkID.CrashMonitor.TestCrashType) -> Swift.Bool
+    public typealias AllCases = [BlinkID.CrashMonitor.TestCrashType]
+    nonisolated public static var allCases: [BlinkID.CrashMonitor.TestCrashType] {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public func testCrashReporting(type crashType: BlinkID.CrashMonitor.TestCrashType)
+  final public func testCrashReportingSync(type crashType: BlinkID.CrashMonitor.TestCrashType)
+  final public func verifyPingManagerIntegration()
+}
+public struct SdkInitStartPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public static let sessionNumber: Swift.Int
+  public let product: BlinkID.SdkInitStartPinglet.Product
+  public let platform: BlinkID.SdkInitStartPinglet.Platform
+  public let packageName: Swift.String
+  public let userId: Swift.String
+  public init(product: BlinkID.SdkInitStartPinglet.Product, platform: BlinkID.SdkInitStartPinglet.Platform, packageName: Swift.String, userId: Swift.String)
+  public enum Product : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case blinkcard
+    case blinkid
+    case blinkinput
+    case capture
+    case documentverification
+    case pdf417mobi
+    case photopay
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.SdkInitStartPinglet.Product]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.SdkInitStartPinglet.Product] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Platform : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case ios
+    case android
+    case emscripten
+    case macos
+    case linux
+    case windows
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.SdkInitStartPinglet.Platform]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.SdkInitStartPinglet.Platform] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LogPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let logLevel: BlinkID.LogPinglet.LogLevel
+  public let logMessage: Swift.String
+  public init(logLevel: BlinkID.LogPinglet.LogLevel, logMessage: Swift.String)
+  public enum LogLevel : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case info
+    case warning
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.LogPinglet.LogLevel]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.LogPinglet.LogLevel] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WrapperProductInfoPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let wrapperProduct: BlinkID.WrapperProductInfoPinglet.WrapperProduct
+  public let correlationId: Swift.String?
+  public init(wrapperProduct: BlinkID.WrapperProductInfoPinglet.WrapperProduct, correlationId: Swift.String? = nil)
+  public enum WrapperProduct : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case crossplatformflutter
+    case crossplatformreactnative
+    case identityverification
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.WrapperProductInfoPinglet.WrapperProduct]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.WrapperProductInfoPinglet.WrapperProduct] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ScanningConditionsPinglet : BlinkID.Pinglet {
+  public static let schemaName: Swift.String
+  public static let schemaVersion: Swift.String
+  public let updateType: BlinkID.ScanningConditionsPinglet.UpdateType
+  public let deviceOrientation: BlinkID.ScanningConditionsPinglet.DeviceOrientation?
+  public let flashlightOn: Swift.Bool?
+  public init(updateType: BlinkID.ScanningConditionsPinglet.UpdateType, deviceOrientation: BlinkID.ScanningConditionsPinglet.DeviceOrientation? = nil, flashlightOn: Swift.Bool? = nil)
+  public enum UpdateType : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case deviceorientation
+    case flashlightstate
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.ScanningConditionsPinglet.UpdateType]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.ScanningConditionsPinglet.UpdateType] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum DeviceOrientation : Swift.String, Swift.Codable, Swift.CaseIterable {
+    case portrait
+    case landscaperight
+    case landscapeleft
+    case portraitupside
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [BlinkID.ScanningConditionsPinglet.DeviceOrientation]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [BlinkID.ScanningConditionsPinglet.DeviceOrientation] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum DetectionStatus : Swift.String, Swift.Decodable, Swift.Sendable {
   case failed
   case success
@@ -778,6 +1144,17 @@ public struct BlinkIDSdkSettings : Swift.Sendable, BlinkID.SdkSettings {
   @BlinkID.ProcessingActor public static func terminateBlinkIDSdk()
   @BlinkID.ProcessingActor public static func terminateBlinkIDSdkAndDeleteCachedResources()
   @objc deinit
+}
+@_hasMissingDesignatedInitializers public actor PingManager {
+  public static let shared: BlinkID.PingManager
+  public func addPinglet<P>(pinglet: P, sessionNumber: Swift.Int) async where P : BlinkID.Pinglet
+  @discardableResult
+  public func sendPinglets() async -> BlinkID.PingStatus
+  @objc deinit
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
+    get
+  }
 }
 public enum InputImageSource : Swift.Sendable {
   case video
@@ -1104,6 +1481,7 @@ public enum FieldType : Swift.String, Swift.Decodable, Swift.Sendable, Swift.Cas
   case nationalInsuranceNumber
   case countryCode
   case certificateNumber
+  case publicTransportFreeUse
   public init(from decoder: any Swift.Decoder) throws
   public init?(rawValue: Swift.String)
   public typealias AllCases = [BlinkID.FieldType]
@@ -1262,6 +1640,7 @@ public struct BarcodeElements : Swift.Sendable {
 }
 public struct BarcodeResult : Swift.Sendable {
   public let barcodeData: BlinkID.BarcodeData
+  public let parsed: Swift.Bool
   public let firstName: Swift.String
   public let middleName: Swift.String
   public let lastName: Swift.String
@@ -1566,6 +1945,16 @@ public struct DataMatchResult : Swift.Sendable {
   public let overallState: BlinkID.DataMatchState
   public func getState(for fieldType: BlinkID.DataMatchFieldType) -> BlinkID.DataMatchState
 }
+public protocol Pinglet : Swift.Decodable, Swift.Encodable {
+  static var schemaName: Swift.String { get }
+  static var schemaVersion: Swift.String { get }
+}
+public enum PingStatus : Swift.Sendable {
+  case success
+  case failure(any Swift.Error)
+  case networkUnavailable
+  case pingNotEnabled
+}
 extension BlinkID.BarcodeElementKey : Swift.Equatable {}
 extension BlinkID.BarcodeElementKey : Swift.Hashable {}
 extension BlinkID.ProcessingActor : _Concurrency.GlobalActor {}
@@ -1578,6 +1967,53 @@ extension BlinkID.Region : Swift.RawRepresentable {}
 extension BlinkID.DocumentType : Swift.Equatable {}
 extension BlinkID.DocumentType : Swift.Hashable {}
 extension BlinkID.DocumentType : Swift.RawRepresentable {}
+extension BlinkID.UxEventPinglet.EventType : Swift.Equatable {}
+extension BlinkID.UxEventPinglet.EventType : Swift.Hashable {}
+extension BlinkID.UxEventPinglet.EventType : Swift.RawRepresentable {}
+extension BlinkID.UxEventPinglet.ErrorMessageType : Swift.Equatable {}
+extension BlinkID.UxEventPinglet.ErrorMessageType : Swift.Hashable {}
+extension BlinkID.UxEventPinglet.ErrorMessageType : Swift.RawRepresentable {}
+extension BlinkID.UxEventPinglet.AlertType : Swift.Equatable {}
+extension BlinkID.UxEventPinglet.AlertType : Swift.Hashable {}
+extension BlinkID.UxEventPinglet.AlertType : Swift.RawRepresentable {}
+extension BlinkID.UxEventPinglet.HelpCloseType : Swift.Equatable {}
+extension BlinkID.UxEventPinglet.HelpCloseType : Swift.Hashable {}
+extension BlinkID.UxEventPinglet.HelpCloseType : Swift.RawRepresentable {}
+extension BlinkID.CameraInputInfoPinglet.CameraFacing : Swift.Equatable {}
+extension BlinkID.CameraInputInfoPinglet.CameraFacing : Swift.Hashable {}
+extension BlinkID.CameraInputInfoPinglet.CameraFacing : Swift.RawRepresentable {}
+extension BlinkID.CameraHardwareInfoPinglet.CameraFacing : Swift.Equatable {}
+extension BlinkID.CameraHardwareInfoPinglet.CameraFacing : Swift.Hashable {}
+extension BlinkID.CameraHardwareInfoPinglet.CameraFacing : Swift.RawRepresentable {}
+extension BlinkID.CameraHardwareInfoPinglet.Focus : Swift.Equatable {}
+extension BlinkID.CameraHardwareInfoPinglet.Focus : Swift.Hashable {}
+extension BlinkID.CameraHardwareInfoPinglet.Focus : Swift.RawRepresentable {}
+extension BlinkID.ErrorPinglet.ErrorType : Swift.Equatable {}
+extension BlinkID.ErrorPinglet.ErrorType : Swift.Hashable {}
+extension BlinkID.ErrorPinglet.ErrorType : Swift.RawRepresentable {}
+extension BlinkID.CameraPermissionPinglet.EventType : Swift.Equatable {}
+extension BlinkID.CameraPermissionPinglet.EventType : Swift.Hashable {}
+extension BlinkID.CameraPermissionPinglet.EventType : Swift.RawRepresentable {}
+extension BlinkID.CrashMonitor.TestCrashType : Swift.Equatable {}
+extension BlinkID.CrashMonitor.TestCrashType : Swift.Hashable {}
+extension BlinkID.SdkInitStartPinglet.Product : Swift.Equatable {}
+extension BlinkID.SdkInitStartPinglet.Product : Swift.Hashable {}
+extension BlinkID.SdkInitStartPinglet.Product : Swift.RawRepresentable {}
+extension BlinkID.SdkInitStartPinglet.Platform : Swift.Equatable {}
+extension BlinkID.SdkInitStartPinglet.Platform : Swift.Hashable {}
+extension BlinkID.SdkInitStartPinglet.Platform : Swift.RawRepresentable {}
+extension BlinkID.LogPinglet.LogLevel : Swift.Equatable {}
+extension BlinkID.LogPinglet.LogLevel : Swift.Hashable {}
+extension BlinkID.LogPinglet.LogLevel : Swift.RawRepresentable {}
+extension BlinkID.WrapperProductInfoPinglet.WrapperProduct : Swift.Equatable {}
+extension BlinkID.WrapperProductInfoPinglet.WrapperProduct : Swift.Hashable {}
+extension BlinkID.WrapperProductInfoPinglet.WrapperProduct : Swift.RawRepresentable {}
+extension BlinkID.ScanningConditionsPinglet.UpdateType : Swift.Equatable {}
+extension BlinkID.ScanningConditionsPinglet.UpdateType : Swift.Hashable {}
+extension BlinkID.ScanningConditionsPinglet.UpdateType : Swift.RawRepresentable {}
+extension BlinkID.ScanningConditionsPinglet.DeviceOrientation : Swift.Equatable {}
+extension BlinkID.ScanningConditionsPinglet.DeviceOrientation : Swift.Hashable {}
+extension BlinkID.ScanningConditionsPinglet.DeviceOrientation : Swift.RawRepresentable {}
 extension BlinkID.DetectionStatus : Swift.Equatable {}
 extension BlinkID.DetectionStatus : Swift.Hashable {}
 extension BlinkID.DetectionStatus : Swift.RawRepresentable {}

@@ -5,13 +5,21 @@
 
 import SwiftUI
 
+#if canImport(BlinkIDVerify)
+import BlinkIDVerify
+#elseif canImport(BlinkID)
+import BlinkID
+#endif
+
 struct OnboardingSheetView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var selected: Int = 0
     private let theme: any UXThemeProtocol
+    private let sessionNumber: Int
     
-    init(theme: any UXThemeProtocol) {
+    init(theme: any UXThemeProtocol, sessionNumber: Int) {
         self.theme = theme
+        self.sessionNumber = sessionNumber
     }
     
     var body: some View {
@@ -61,6 +69,11 @@ struct OnboardingSheetView: View {
     private func increaseStep() {
         guard selected < OnboardingStep.allCases.count - 1
         else {
+            Task {
+                let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentfullyviewed)
+                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+            }
+
             presentationMode.wrappedValue.dismiss()
             return
         }
@@ -73,6 +86,11 @@ struct OnboardingSheetView: View {
     private func decreaseStep() {
         guard selected > 0
         else {
+            Task {
+                let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentskipped)
+                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+            }
+
             presentationMode.wrappedValue.dismiss()
             return
         }
