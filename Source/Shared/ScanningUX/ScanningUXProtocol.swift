@@ -144,6 +144,7 @@ extension ScanningUXProtocol where Self: View {
                                     Spacer()
                                     Image.demoOverlayImage
                                         .offset(y: -Self.reticleDiameter)
+                                        .accessibilityHidden(true)
                                     Spacer()
                                 }
                                 .frame(maxHeight: .infinity)
@@ -154,6 +155,7 @@ extension ScanningUXProtocol where Self: View {
                                 VStack {
                                     Spacer()
                                     Image.productionOverlayImage
+                                        .accessibilityHidden(true)
                                 }
                                 .zIndex(3)
                             }
@@ -174,7 +176,7 @@ extension ScanningUXProtocol where Self: View {
                                     }
                                 }
                                 Spacer()
-                                if viewModel.showHelpButton {
+                                if viewModel.uxSettings.showHelpButton {
                                     HelpButton(
                                         showTooltip: viewModel.showTooltip,
                                         tooltipText: "mb_need_help_tooltip".localizedString
@@ -189,6 +191,7 @@ extension ScanningUXProtocol where Self: View {
                                 ZStack {
                                     Color.black.opacity(0.5)
                                         .ignoresSafeArea()
+                                        .accessibilityHidden(true)
                                     OnboardingAlertView(theme: self.theme,
                                                         dismiss: viewModel.dismissAlert())
                                 }
@@ -199,18 +202,21 @@ extension ScanningUXProtocol where Self: View {
                         }
                     }
                     .onChange(of: viewModel.reticleState) { newValue in
-                        if let text = newValue.text {
+                        if let text = newValue.text?.localizedString {
                             UIAccessibility.post(notification: .announcement, argument: text)
                         }
                     }
                     .sheet(isPresented: showSheet) {
                         OnboardingSheetView(theme: self.theme, sessionNumber: viewModel.sessionNumber)
                             .presentationDetents([.height(600)])
+                            .interactiveDismissDisabled()
                             .onAppear {
                                 viewModel.pauseScanning()
                                 Task {
-                                    let uxEventPinglet = UxEventPinglet(eventType: .helpopened)
-                                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                    if viewModel.sessionNumber > 0 {
+                                        let uxEventPinglet = UxEventPinglet(eventType: .helpopened)
+                                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                    }
                                 }
 
                             }
@@ -219,8 +225,11 @@ extension ScanningUXProtocol where Self: View {
                                 viewModel.startTooltipTimer()
                                 
                                 Task {
-                                    let uxEventPinglet = UxEventPinglet(eventType: .helpclosed)
-                                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                    if viewModel.sessionNumber > 0 {
+                                        let uxEventPinglet = UxEventPinglet(eventType: .helpclosed)
+                                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: viewModel.sessionNumber)
+                                    }
+
                                 }
 
                             }
@@ -250,11 +259,10 @@ extension ScanningUXProtocol where Self: View {
                 await viewModel.analyze()
             }
             .onAppear {
-                if viewModel.shouldShowIntroductionAlert {
+                if viewModel.uxSettings.showIntroductionAlert {
                     viewModel.presentAlert()
                 } else {
                     viewModel.startTooltipTimer()
-                    UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
                 }
             }
             .onDisappear {
@@ -276,6 +284,7 @@ extension ScanningUXProtocol where Self: View {
                     VStack(spacing: 0) {
                         ToolTipView(message: tooltipText, foregroundColor: self.theme.helpButtonTooltipForegroundColor, backgroundColor: self.theme.helpButtonTooltipBackgroundColor)
                             .offset(x: -8, y: -45) // Adjust this value to control the spacing between tooltip and button
+                            .accessibilityHidden(true)
                     }
                     .animation(.easeInOut(duration: 0.2), value: showTooltip)
                 }
@@ -297,6 +306,7 @@ extension ScanningUXProtocol where Self: View {
                             .frame(height: 60)
                             .rotation3DEffect(.degrees(viewModel.flipCardDegrees), axis: (x: 0, y: 1, z: 0))
                             .scaleEffect(viewModel.flipCardScale)
+                            .accessibilityHidden(true)
                     }
                     if viewModel.showRippleView {
                         Circle()
@@ -304,6 +314,7 @@ extension ScanningUXProtocol where Self: View {
                             .frame(height: Self.reticleDiameter)
                             .scaleEffect(viewModel.rippleViewScale)
                             .opacity(viewModel.rippleViewOpacity)
+                            .accessibilityHidden(true)
                     }
                     if viewModel.showSuccessImage {
                         viewModel.successImage
@@ -313,12 +324,14 @@ extension ScanningUXProtocol where Self: View {
                             .symbolRenderingMode(.palette)
                             .foregroundStyle(.black, .white)
                             .scaleEffect(viewModel.successImageScale)
+                            .accessibilityHidden(true)
                     }
                 }
                 .frame(height: 100)
                 if let text = viewModel.reticleState.text?.localizedString {
                     MessageContainer(theme: self.theme, text: text)
-                        .accessibilityHidden(true)
+                        .accessibilityLabel(text)
+                        .accessibilitySortPriority(4)
                 }
             }
         )

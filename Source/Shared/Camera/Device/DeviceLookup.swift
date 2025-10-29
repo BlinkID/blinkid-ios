@@ -14,6 +14,7 @@ import Combine
 final class DeviceLookup {
     
     private let backCameraDiscoverySession: AVCaptureDevice.DiscoverySession
+    private let frontCameraDiscoverySession: AVCaptureDevice.DiscoverySession
     
     // Default to back camera as preferred
     private var preferredPosition: AVCaptureDevice.Position = .back
@@ -23,6 +24,7 @@ final class DeviceLookup {
     
     init() {
         backCameraDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTripleCamera, .builtInWideAngleCamera], mediaType: .video, position: .back)
+        frontCameraDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .front)
     }
     
     /// Returns the preferred camera for the host system.
@@ -59,13 +61,28 @@ final class DeviceLookup {
         }
     }
     
+    var frontCamera: AVCaptureDevice {
+        get throws {
+            if let frontCamera = frontCameraDiscoverySession.devices.first {
+                return frontCamera
+            }
+            throw CameraError.videoDeviceUnavailable
+        }
+    }
+    
     var cameras: [AVCaptureDevice] {
-        // Populate the cameras array with the available cameras.
         var cameras: [AVCaptureDevice] = []
-        if let backCamera = backCameraDiscoverySession.devices.first {
+        
+        if let tripleCamera = AVCaptureDevice.default(.builtInTripleCamera, for: .video, position: .back) {
+            cameras.append(tripleCamera)
+        } else if let backCamera = backCameraDiscoverySession.devices.first {
             cameras.append(backCamera)
         }
-
+        
+        if let frontCamera = frontCameraDiscoverySession.devices.first {
+            cameras.append(frontCamera)
+        }
+        
 #if !targetEnvironment(simulator)
         if cameras.isEmpty {
             fatalError("No camera devices are found on this system.")

@@ -29,8 +29,12 @@ final class BlinkIDUXTranslator {
             
             if let inputImageAnalysisResult = frameProcessResult.processResult?.inputImageAnalysisResult, inputImageAnalysisResult.documentClassInfo.documentType == .passport {
                 passportDispatched = true
-
-                events.append(.requestDocumentSide(side: .passport(getPassportOrientation(inputImageAnalysisResult.documentRotation))))
+                if [Country.usa, Country.india].contains(inputImageAnalysisResult.documentClassInfo.country) {
+                    events.append(.requestDocumentSide(side: .passportBarcode))
+                } else {
+                    events.append(.requestDocumentSide(side: .passport(getPassportOrientation(inputImageAnalysisResult.documentRotation))))
+                }
+                
             }
             else {
                 backSideDispatched = true
@@ -56,7 +60,11 @@ final class BlinkIDUXTranslator {
         switch frameProcessResult.processResult?.inputImageAnalysisResult.processingStatus {
         case .scanningWrongSide, .awaitingOtherSide:
             if passportDispatched, let inputImageAnalysisResult = frameProcessResult.processResult?.inputImageAnalysisResult {
-                events.append(.wrongSidePassport(passportOrientation: getPassportOrientation(inputImageAnalysisResult.documentRotation)))
+                if [Country.usa, Country.india].contains(inputImageAnalysisResult.documentClassInfo.country) {
+                    events.append(.wrongSidePassportWithBarcode)
+                } else {
+                    events.append(.wrongSidePassport(passportOrientation: getPassportOrientation(inputImageAnalysisResult.documentRotation)))
+                }
             }
             else {
                 events.append(.wrongSide)

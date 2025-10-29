@@ -52,6 +52,7 @@ extension BlinkIDUXView {
                                 .frame(height: 60)
                                 .rotation3DEffect(.degrees(viewModel.flipCardDegrees), axis: (x: 0, y: 1, z: 0))
                                 .scaleEffect(viewModel.flipCardScale)
+                                .accessibilityHidden(true)
                         }
                         if viewModel.showRippleView {
                             Circle()
@@ -59,6 +60,7 @@ extension BlinkIDUXView {
                                 .frame(height: Self.reticleDiameter)
                                 .scaleEffect(viewModel.rippleViewScale)
                                 .opacity(viewModel.rippleViewOpacity)
+                                .accessibilityHidden(true)
                         }
                         if viewModel.showSuccessImage {
                             viewModel.successImage
@@ -68,6 +70,7 @@ extension BlinkIDUXView {
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.black, .white)
                                 .scaleEffect(viewModel.successImageScale)
+                                .accessibilityHidden(true)
                         }
                         if viewModel.showPassportAnimation {
                             if let passportOrientation = viewModel.passportOrientation {
@@ -86,7 +89,9 @@ extension BlinkIDUXView {
                     
                     if let text = viewModel.reticleState.text?.localizedString {
                         MessageContainer(theme: self.theme, text: text)
-                            .accessibilityHidden(true)
+                            .accessibilityLabel(text)
+                            .accessibilitySortPriority(4)
+                            .accessibilityHidden(viewModel.showIntroductionAlert)
                     }
                 }
             }
