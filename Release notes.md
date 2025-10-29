@@ -1,5 +1,125 @@
 # Release notes
 
+## 7.6.0
+
+### What's New
+- Added support for capturing the back of US and India passports that feature a barcode
+- Prevent parsing of two-line MRZ in TD1 format unless it's explicitly allowed. This will prevent false positive MRZ extraction on documents where the last line of the MRZ is covered or not fully visible
+
+### Bugfixes
+- Users are no longer forced to scan back sides of Alien and Refugee passports
+- Fixed the issue with Togo ID where document number from VIZ was overriden by a wrong value from MRZ
+
+### New Documents Support
+- Angola - Paper Passport
+- Bahrain - Polycarbonate Passport
+- Burkina Faso - Polycarbonate Passport
+- Cameroon - Driver's License
+- Canada, Manitoba - Metis Federation Card
+- East Timor - Polycarbonate Passport
+- El Salvador - Paper Passport
+- Eritrea - Paper Passport
+- France - Adr Certificate
+- Germany - Adr Certificate
+- Ghana - Voter ID
+- India, Telangana - Driver's License
+- Ivory Coast - Paper Passport
+- Japan - Polycarbonate Passport
+- Liberia - Paper Passport
+- Liberia - Voter ID
+- Malawi - Identity Card
+- Malawi - Paper Passport
+- Maldives - Polycarbonate Passport
+- Mali - Paper Passport
+- Mauritius - Paper Passport
+- Oman - Vehicle Registration
+- Paraguay - Polycarbonate Passport
+- Rwanda - Driver's License
+- Senegal - Driver's License
+- Sierra Leone - Paper Passport
+- Somalia - Paper Passport
+- Switzerland - Adr Certificate
+- Togo - Driver's License
+- Togo - Paper Passport
+- USA, Maryland - Medical Marijuana ID
+- Vietnam - Paper Passport
+
+#### New Document Versions for Supported Documents
+- Chile - Polycarbonate Passport
+- India - Paper Passport
+- Moldova - Identity Card
+- Pakistan - Identity Card
+- Peru - Identity Card
+- Romania - Identity Card
+- Slovakia - Identity Card
+- USA, California - Driver's License
+- USA, California - Identity Card
+- USA, New Hampshire - Identity Card
+- USA, Georgia - Medical Marijuana ID
+- USA, Pennsylvania - Medical Marijuana ID
+- USA, South Carolina - Driver's License
+- USA, South Carolina - Identity Card
+- USA, Texas - Driver's License
+- USA, Texas - Identity Card
+
+##### New Segments Supported on Documents
+- Switzerland, Residence Permit - 'dateOfEntry'
+- Hungary, Identity Card - 'maidenName', 'nationality', 'sexOrGender', 'documentNumber', 'dateOfBirth'
+- Greece, Identity Card - 'fathersName' (Latin and Greek), 'mothersName' (Latin and Greek), 'personalIdNumber', 'issuingAuthority' (Greek), 'municipalityOfRegistration' (Greek)
+- Mexico, Voter ID - 'sectionCode', 'stateCode', 'municipalityCode', 'localityCode'
+- Mexico, Consular Voter ID - 'stateCode', 'stateName'
+
+##### Renamed segments
+- Hungary - Identity Card - `additionalNameInformation` -> `mothersName`
+
+### SDK updates
+- SDK was built with Xcode 26
+
+### UI/UX updates
+- Added the option to use the front-facing camera for scanning. You can select front-facing camera through `ScanningUXSettings` property of `BlinkIDUXModel`.
+- Added haptics to the scanning process. Haptics can be disabled in `ScanningUXSettings`
+- Improved VoiceOver
+- Changed default `tiltDetectionLevel` from `Off` to `Mid`
+
+### Breaking API Changes
+- Removed `shouldShowIntroductionAlert` and `showHelpButton` from `BlinkIDUXModel` init. They are now included in the `ScanningUXSettings` property.
+- Added `ScanningUXSettings` to `BlinkIDUXModel` init
+
+### New languages
+  - Danish
+  - English (U.K.)
+  - Finnish
+  - Greek
+  - Icelandic
+  - Latvian
+  - Norwegian
+  - Polish
+  - Swedish
+  - Turkish
+  - Ukrainian
+  - Russian
+  - Japanese
+  - Korean
+  - Hindi
+  - Urdu
+  - Bengali
+  - Farsi
+  - Swahili
+  - Amharic
+  - Hausa
+  - Yoruba
+  - Nepali
+  - Kazakh
+  - Uzbek
+  - Pashto
+  - Sinhala
+  - Georgian
+  - Khmer
+  - Akan
+  - Mexican Spanish
+  - Brazilian Portuguese
+  - Canadian French
+
 ## 7.5.0
 
 ### What's New

@@ -24,12 +24,12 @@ struct OnboardingAlertView: View {
                 VStack(alignment: .center) { bodyContent }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 24)
-                    .accessibilitySortPriority(2)
+                    .accessibilitySortPriority(6)
             } else {
                 HStack(alignment: .center) { bodyContent }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 24)
-                    .accessibilitySortPriority(2)
+                    .accessibilitySortPriority(6)
             }
             Divider()
             Button {
@@ -42,7 +42,7 @@ struct OnboardingAlertView: View {
                     .frame(maxWidth: .infinity)
             }
             .padding(.vertical, 10)
-            .accessibilitySortPriority(1)
+            .accessibilitySortPriority(5)
         }
         .background(theme.alertBackgroundColor)
         .clipShape(
@@ -50,6 +50,9 @@ struct OnboardingAlertView: View {
         )
         .padding(50)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear {
+            UIAccessibility.post(notification: .screenChanged, argument: titleText)
+        }
     }
     
     @ViewBuilder
@@ -88,6 +91,7 @@ struct OnboardingAlertView: View {
             .multilineTextAlignment(isPortrait ? .center : .leading)
             .foregroundStyle(theme.alertTitleColor)
             .accessibilitySortPriority(2)
+            .accessibilityHeading(.h1)
     }
     
     var descriptionText: some View {

@@ -95,4 +95,6 @@ public enum DocumentSide: Sendable, Equatable {
     case barcode
     /// Document is passport
     case passport(PassportOrientation)
+    /// Barcode from last page of passports
+    case passportBarcode
 }

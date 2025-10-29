@@ -27,6 +27,10 @@ public actor BlinkIDEventStream: EventStream {
         self.continuation = continuation
     }
     
+    deinit {
+        self.continuation.finish()
+    }
+    
     /// Sends UI events to the stream.
     /// - Parameter events: Array of UI events to be processed
     public func send(_ events: [UIEvent]) {
@@ -176,7 +180,7 @@ public actor BlinkIDAnalyzer: CameraFrameAnalyzer {
         resume()
     }
     
-    public func end() async {
+    public func end() {
         pause()
         resultContinuation?.resume(returning: .ended)
         resultContinuation = nil
