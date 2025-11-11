@@ -10,74 +10,36 @@
 @preconcurrency import AVFoundation
 
 /// An object that provides an asynchronous stream of capture devices when camera availability changes
-final class DeviceObserver: NSObject, Sendable {
-    
-    private let queue = DispatchQueue.main
-    private let notificationCenter: NotificationCenter = NotificationCenter.default
+final class DeviceObserver: NSObject {
+    private let systemPreferredKeyPath = "systemPreferredCamera"
     
     let changes: AsyncStream<AVCaptureDevice?>
-    private let continuation: AsyncStream<AVCaptureDevice?>.Continuation
-
-    private let backCameraDiscoverySession: AVCaptureDevice.DiscoverySession
+    private var continuation: AsyncStream<AVCaptureDevice?>.Continuation?
 
     override init() {
-        
-        backCameraDiscoverySession = AVCaptureDevice.DiscoverySession(
-            deviceTypes: [.builtInTripleCamera, .builtInWideAngleCamera],
-            mediaType: .video,
-            position: .back
-        )
-        
-        var continuation: AsyncStream<AVCaptureDevice?>.Continuation?
-        let stream = AsyncStream<AVCaptureDevice?> { continuation = $0 }
-        guard let continuation else {
-            fatalError("Failed to create AsyncStream continuation")
-        }
-        self.changes = stream
+        let (changes, continuation) = AsyncStream.makeStream(of: AVCaptureDevice?.self)
+        self.changes = changes
         self.continuation = continuation
         
         super.init()
         
-        setupNotifications()
-        // Send initial camera state
-        sendCurrentCameras()
+        AVCaptureDevice.self.addObserver(self, forKeyPath: systemPreferredKeyPath, options: [.new], context: nil)
+    }
+
+    deinit {
+        continuation?.finish()
+        AVCaptureDevice.removeObserver(self, forKeyPath: systemPreferredKeyPath)
     }
     
-    private func setupNotifications() {
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(deviceDidConnect),
-            name: .AVCaptureDeviceWasConnected,
-            object: nil
-        )
-        
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(deviceDidDisconnect),
-            name: .AVCaptureDeviceWasDisconnected,
-            object: nil
-        )
-    }
-    
-    
-    private func sendCurrentCameras() {
-        queue.async { [weak self] in
-            if let backCamera = self?.backCameraDiscoverySession.devices.first {
-                self?.continuation.yield(backCamera)
-            }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+        switch keyPath {
+        case systemPreferredKeyPath:
+            // Update the observer's system-preferred camera value.
+            let newDevice = change?[.newKey] as? AVCaptureDevice
+            continuation?.yield(newDevice)
+        default:
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
-    
-    @objc private func deviceDidConnect(notification: Notification) {
-        sendCurrentCameras()
-    }
-    
-    @objc private func deviceDidDisconnect(notification: Notification) {
-        sendCurrentCameras()
-    }
-    
-    deinit {
-        notificationCenter.removeObserver(self)
-        continuation.finish()
-    }
+
 }

@@ -53,13 +53,13 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     
     private var currentErrorMessage: UxEventPinglet.ErrorMessageType?
     
-    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = true, showHelpButton: Bool = true, sessionNumber: Int) {
+    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, uxSettings: ScanningUXSettings = ScanningUXSettings(), sessionNumber: Int) {
         self.topImageOpacity = passportBeginAnimationAlpha
         self.bottomImageOpacity = passportEndAnimationAlpha
         self.highlightOffset = 0
         self.passportOrientation = nil
         
-        super.init(analyzer: analyzer, shouldShowIntroductionAlert: shouldShowIntroductionAlert, showHelpButton: showHelpButton, sessionNumber: sessionNumber)
+        super.init(analyzer: analyzer, uxSettings: uxSettings, sessionNumber: sessionNumber)
         
         startEventHandling()
         camera.$status
@@ -103,12 +103,9 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     public override func licenseErrorAlertDismised() {
-        result = BlinkIDResultState(scanningResult: nil)
-    }
-    
-    public override func scanningDidCancel() {
-        super.scanningDidCancel()
-        result = BlinkIDResultState(scanningResult: nil)
+        Task {
+            await self.analyzer.end()
+        }
     }
     
     public override func timeoutAlertDismised() {
@@ -124,13 +121,13 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     override func closeButtonTapped() {
-        
         Task {
-            let uxEventPinglet = UxEventPinglet(eventType: .closebuttonclicked)
-            await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+            if sessionNumber > 0 {
+                let uxEventPinglet = UxEventPinglet(eventType: .closebuttonclicked)
+                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+            }
             await self.analyzer.end()
         }
-        result = BlinkIDResultState(scanningResult: nil)
     }
     
     // - MARK: - Handle UIEvents
@@ -154,11 +151,18 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                     passportSideScanned(.left90)
                     cancelTooltipTimer()
                 }
+                else if events.contains(.requestDocumentSide(side: .passportBarcode)) {
+                    passportWithBarcodeSideScanned()
+                    cancelTooltipTimer()
+                }
                 else if events.contains(.requestDocumentSide(side: .barcode)) {
                     self.setReticleState(.barcode, force: true)
                     startTooltipTimer()
                 } else if events.contains(.wrongSide) {
                     self.setReticleState(.error("mb_scanning_wrong_side"))
+                    self.trackErrorMessage(.flipside)
+                } else if events.contains(.wrongSidePassportWithBarcode) {
+                    self.setReticleState(.error("mb_instructions_scan_barcode_last_page"))
                     self.trackErrorMessage(.flipside)
                 } else if events.contains(.wrongSidePassport(passportOrientation: .none)) {
                     self.setReticleState(.error("mb_scanning_wrong_page_top"))
@@ -216,6 +220,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         Task {
             if currentErrorMessage == messageType { return }
             currentErrorMessage = messageType
+            if sessionNumber <= 0 { return }
             let uxEventPinglet = UxEventPinglet(eventType: .errormessage, errorMessageType: messageType)
             await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
         }
@@ -257,10 +262,30 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         }
     }
     
+    private func passportWithBarcodeSideScanned() {
+        pauseScanning()
+
+        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
+
+        if remainingTime > 0 {
+            Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
+                Task {
+                    await self?.animateFirstSidePassportWithBarcodeScanned()
+                }
+            }
+        } else {
+            Task {
+                await animateFirstSidePassportWithBarcodeScanned()
+            }
+        }
+    }
+    
     // - MARK: Animations
 
     private func animateFirstSideScanned() async {
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        if uxSettings.allowHapticFeedback {
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        }
         showSuccessImage = true
         setReticleState(.inactive, force: true)
 
@@ -307,7 +332,9 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     private func animateSuccess() async {
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        if uxSettings.allowHapticFeedback {
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        }
         showSuccessImage = true
         self.setReticleState(.inactive, force: true)
 
@@ -393,5 +420,22 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         case .right90:
             setReticleState(.passport("mb_right_page_instructions".localizedString), force: true)
         }
+    }
+    
+    private func animateFirstSidePassportWithBarcodeScanned() async {
+        showSuccessImage = true
+        
+        withAnimation(.easeOutExpo(duration: successImageAnimationDuration)) {
+            successImageScale = 1.0
+        }
+
+        try? await Task.sleep(for: .seconds(successImageAnimationDuration))
+
+        withAnimation(.linear(duration: 0.2)) {
+            showSuccessImage = false
+        }
+        
+        resumeScanning()
+        setReticleState(.passport("mb_instructions_scan_barcode_last_page".localizedString), force: true)
     }
 }

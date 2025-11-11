@@ -70,8 +70,11 @@ struct OnboardingSheetView: View {
         guard selected < OnboardingStep.allCases.count - 1
         else {
             Task {
-                let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentfullyviewed)
-                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                if sessionNumber > 0 {
+                    let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentfullyviewed)
+                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                }
+
             }
 
             presentationMode.wrappedValue.dismiss()
@@ -87,8 +90,11 @@ struct OnboardingSheetView: View {
         guard selected > 0
         else {
             Task {
-                let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentskipped)
-                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                if sessionNumber > 0 {
+                    let uxEventPinglet = UxEventPinglet(eventType: .helpclosed, helpCloseType: .contentskipped)
+                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                }
+
             }
 
             presentationMode.wrappedValue.dismiss()
@@ -137,6 +143,7 @@ struct TabItemView: View {
                         .bold()
                         .font(theme.onboardingSheetTitleFont)
                         .foregroundStyle(theme.onboardingSheetTitleColor)
+                        .accessibilityHeading(.h1)
                         .accessibilitySortPriority(2)
                     Text(onboardingStep.description.localizedString)
                         .font(theme.onboardingSheetDescriptionFont)

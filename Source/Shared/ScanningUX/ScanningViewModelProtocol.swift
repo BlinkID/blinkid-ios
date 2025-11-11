@@ -47,7 +47,6 @@ protocol ScanningViewModelProtocol: ObservableObject {
     func pauseScanning()
     func resumeScanning()
     func restartScanning()
-    func scanningDidCancel()
     func licenseErrorAlertDismised()
     func presentAlert()
     func dismissAlert()
@@ -67,6 +66,7 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     let camera: Camera = Camera()
     let analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>
     let sessionNumber: Int
+    let uxSettings: ScanningUXSettings
     
     // MARK: - UI Elements
     // Cancel button
@@ -81,7 +81,9 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     
     @Published public var isTorchOn: Bool = false {
         didSet {
-            UISelectionFeedbackGenerator().selectionChanged()
+            if uxSettings.allowHapticFeedback {
+                UISelectionFeedbackGenerator().selectionChanged()
+            }
             camera.isTorchEnabled = isTorchOn
             torchImage = isTorchOn ? Image(systemName: "bolt.fill") : Image(systemName: "bolt.slash.fill")
             torchHint = isTorchOn ? "Turn flashlight on" : "Turn flashlight off"
@@ -99,25 +101,21 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     let helpHint = "Open scanning onboarding help"
     @Published var showSheet = false
     
-    // Introduction alert
-    let shouldShowIntroductionAlert: Bool
-    
-    // Onboarding sheet
-    let showHelpButton: Bool
-    
     // MARK: - Alert States
     @Published public var showIntroductionAlert = false {
         didSet {
             if showIntroductionAlert {
                 pauseScanning()
                 Task {
-                    let uxEventPinglet = UxEventPinglet(eventType: .onboardinginfodisplayed)
-                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    if sessionNumber > 0 {
+                        let uxEventPinglet = UxEventPinglet(eventType: .onboardinginfodisplayed)
+                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    }
+
                 }
 
             } else {
                 setReticleState(.front, force: true)
-                UIAccessibility.post(notification: .screenChanged, argument: ReticleState.front.text)
                 resumeScanning()
             }
         }
@@ -131,12 +129,17 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
                     let pingAlertType = self.alertType as? BlinkIDScanningAlertType
                     if let alertType = pingAlertType {
                         let type: UxEventPinglet.AlertType = alertType == .timeout ? .steptimeout : .documentclassnotallowed
-                        let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: type)
-                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                        if sessionNumber > 0 {
+                            let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: type)
+                            await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                        }
+
                     }
 
                 }
-                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                if uxSettings.allowHapticFeedback {
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                }
             }
             else {
                 timeoutAlertDismised()
@@ -150,11 +153,15 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             if showLicenseErrorAlert {
                 pauseScanning()
                 Task {
-                    let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: .invalidlicensekey)
-                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
-                }
+                    if sessionNumber > 0 {
+                        let uxEventPinglet = UxEventPinglet(eventType: .alertdisplayed, alertType: .invalidlicensekey)
+                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    }
 
-                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                }
+                if uxSettings.allowHapticFeedback {
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                }
             } else {
                 licenseErrorAlertDismised()
             }
@@ -167,8 +174,11 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             if showTooltip {
                 startHideTooltipTimer()
                 Task {
-                    let uxEventPinglet = UxEventPinglet(eventType: .helptooltipdisplayed)
-                    await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    if sessionNumber > 0 {
+                        let uxEventPinglet = UxEventPinglet(eventType: .helptooltipdisplayed)
+                        await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
+                    }
+
                 }
 
             }
@@ -211,17 +221,19 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     
     /// Initializes a new scanning UX model with the specified document analyzer.
     /// - Parameter analyzer: The analyzer responsible for processing camera frames and detecting documents.
-    /// - Parameter shouldShowIntroductionAlert: Whether introduction alert will be shown on appear
-    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, shouldShowIntroductionAlert: Bool = false, showHelpButton: Bool = false, sessionNumber: Int) {
+    /// - Parameter uxSettings: Settings used for scanning.
+    /// - Parameter sessionNumber: Number of current session.
+    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, uxSettings: ScanningUXSettings = ScanningUXSettings(), sessionNumber: Int) {
         self.analyzer = analyzer
-        self.shouldShowIntroductionAlert = shouldShowIntroductionAlert
-        self.showHelpButton = showHelpButton
+        self.uxSettings = uxSettings
         self.showDemoOverlayImage = UXLicenseProviderBridge.shared.showDemoOverlay
         self.showProductionOverlayImage = UXLicenseProviderBridge.shared.showProductionOverlay
         self.sessionNumber = sessionNumber
+        self.camera.preferredCamera = uxSettings.preferredCameraPosition
     }
     
     deinit {
+        showTooltipTimer?.invalidate()
         hideTooltipTimer?.invalidate()
     }
     
@@ -257,6 +269,7 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
     
     public func stopEventHandling() {
         eventHandlingTask?.cancel()
+        eventHandlingTask = nil
     }
     
     public func pauseScanning() {
@@ -279,10 +292,6 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             setReticleState(.front, force: true)
             await camera.start()
         }
-    }
-    
-    public func scanningDidCancel() {
-         scanningResult = nil
     }
     
     // MARK: - Common Methods
@@ -333,14 +342,18 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
                 lastPassportErrorOrientation = .right90
             }
             
-            if case .passport(_) = mostFrequentState {
-                switch lastPassportErrorOrientation {
-                case .none:
-                    newState = .passport("mb_top_page_instructions".localizedString)
-                case .left90:
-                    newState = .passport("mb_left_page_instructions".localizedString)
-                case .right90:
-                    newState = .passport("mb_right_page_instructions".localizedString)
+            if case .passport(let message) = mostFrequentState {
+                if message == "mb_instructions_scan_barcode_last_page".localizedString {
+                    newState = .passport("mb_instructions_scan_barcode_last_page".localizedString)
+                } else {
+                    switch lastPassportErrorOrientation {
+                    case .none:
+                        newState = .passport("mb_top_page_instructions".localizedString)
+                    case .left90:
+                        newState = .passport("mb_left_page_instructions".localizedString)
+                    case .right90:
+                        newState = .passport("mb_right_page_instructions".localizedString)
+                    }
                 }
             } else {
                 newState = mostFrequentState
@@ -360,7 +373,9 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         }
         
         if case .error = reticleState {
-            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+            if uxSettings.allowHapticFeedback {
+                UINotificationFeedbackGenerator().notificationOccurred(.warning)
+            }
         }
         
         lastReticleStateChange = currentTime
@@ -381,15 +396,18 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
             }
             
             await MainActor.run {
-                showTooltipTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(showTooltipInvoked), userInfo: nil, repeats: false)
+                showTooltipTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: false, block: { [weak self] _ in
+                    Task {
+                        await self?.showTooltipInvoked()
+                    }
+                })
                 RunLoop.current.add(showTooltipTimer!, forMode: .common)
             }
         }
-        
     }
     
     @MainActor
-    @objc private func showTooltipInvoked() {
+    private func showTooltipInvoked() {
         showTooltip = true
     }
     
@@ -400,12 +418,18 @@ public class ScanningViewModel<T, U>: ObservableObject, ScanningViewModelProtoco
         showTooltip = false
     }
     
+    @MainActor
     private func startHideTooltipTimer() {
-        hideTooltipTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(hideTooltipInvoked), userInfo: nil, repeats: false)
+        hideTooltipTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { [weak self] _ in
+            Task {
+                await self?.hideTooltipInvoked()
+            }
+        })
         RunLoop.current.add(hideTooltipTimer!, forMode: .common)
     }
     
-    @objc private func hideTooltipInvoked() {
+    @MainActor
+    private func hideTooltipInvoked() {
         showTooltip = false
     }
 }
