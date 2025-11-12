@@ -1,5 +1,9 @@
 # Release notes
 
+## 7.6.1
+
+- Bugfixes
+
 ## 7.6.0
 
 ### What's New
