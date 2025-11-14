@@ -1840,6 +1840,7 @@ public enum BarcodeElementKey {
   case documentExpirationMonth
   case documentNonexpiring
   case securityVersion
+  case subfieldDesignator
   public static func == (a: BlinkID.BarcodeElementKey, b: BlinkID.BarcodeElementKey) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {

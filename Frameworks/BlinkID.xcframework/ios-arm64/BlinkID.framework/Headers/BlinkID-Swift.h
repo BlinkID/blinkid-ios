@@ -5794,6 +5794,7 @@ extern unsigned $s7BlinkID17BarcodeElementKeyO17dataDiscriminatoryA2CmFWC;
 extern unsigned $s7BlinkID17BarcodeElementKeyO23documentExpirationMonthyA2CmFWC;
 extern unsigned $s7BlinkID17BarcodeElementKeyO19documentNonexpiringyA2CmFWC;
 extern unsigned $s7BlinkID17BarcodeElementKeyO15securityVersionyA2CmFWC;
+extern unsigned $s7BlinkID17BarcodeElementKeyO18subfieldDesignatoryA2CmFWC;
 }
 
 } // namespace _impl
@@ -5926,6 +5927,7 @@ public:
     documentExpirationMonth SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO23documentExpirationMonthyA2CmF"),
     documentNonexpiring SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO19documentNonexpiringyA2CmF"),
     securityVersion SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO15securityVersionyA2CmF"),
+    subfieldDesignator SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO18subfieldDesignatoryA2CmF"),
     unknownDefault
   };
 
@@ -6619,6 +6621,14 @@ public:
   } securityVersion SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO15securityVersionyA2CmF");
   SWIFT_INLINE_THUNK bool isSecurityVersion() const;
 
+  inline const static struct _impl_subfieldDesignator {  // impl struct for case subfieldDesignator
+    SWIFT_INLINE_THUNK constexpr operator cases() const {
+      return cases::subfieldDesignator;
+    }
+    SWIFT_INLINE_THUNK BarcodeElementKey operator()() const;
+  } subfieldDesignator SWIFT_SYMBOL("s:7BlinkID17BarcodeElementKeyO18subfieldDesignatoryA2CmF");
+  SWIFT_INLINE_THUNK bool isSubfieldDesignator() const;
+
   inline const static struct _impl_unknownDefault {  // impl struct for case unknownDefault
     SWIFT_INLINE_THUNK constexpr operator cases() const {
       return cases::unknownDefault;
@@ -6715,6 +6725,7 @@ public:
     if (tag == _impl::$s7BlinkID17BarcodeElementKeyO23documentExpirationMonthyA2CmFWC) return cases::documentExpirationMonth;
     if (tag == _impl::$s7BlinkID17BarcodeElementKeyO19documentNonexpiringyA2CmFWC) return cases::documentNonexpiring;
     if (tag == _impl::$s7BlinkID17BarcodeElementKeyO15securityVersionyA2CmFWC) return cases::securityVersion;
+    if (tag == _impl::$s7BlinkID17BarcodeElementKeyO18subfieldDesignatoryA2CmFWC) return cases::subfieldDesignator;
     return cases::unknownDefault;
   }
 
@@ -33573,6 +33584,14 @@ namespace BlinkID SWIFT_PRIVATE_ATTR SWIFT_SYMBOL_MODULE("BlinkID") {
   }
   SWIFT_INLINE_THUNK  bool BarcodeElementKey::isSecurityVersion() const {
     return *this == BarcodeElementKey::securityVersion;
+  }
+  SWIFT_INLINE_THUNK BarcodeElementKey BarcodeElementKey::_impl_subfieldDesignator::operator()() const {
+    auto result = BarcodeElementKey::_make();
+    result._destructiveInjectEnumTag(_impl::$s7BlinkID17BarcodeElementKeyO18subfieldDesignatoryA2CmFWC);
+    return result;
+  }
+  SWIFT_INLINE_THUNK  bool BarcodeElementKey::isSubfieldDesignator() const {
+    return *this == BarcodeElementKey::subfieldDesignator;
   }
   SWIFT_INLINE_THUNK  bool BarcodeElementKey::isUnknownDefault() const {
     return *this == BarcodeElementKey::unknownDefault;
