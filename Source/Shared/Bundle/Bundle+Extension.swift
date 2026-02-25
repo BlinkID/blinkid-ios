@@ -12,7 +12,7 @@ extension Bundle {
 #if SWIFT_PACKAGE
         return .module
 #else
-        return Bundle(for: BlinkIDAnalyzer.self)
+        return Bundle(for: Camera.self)
 #endif
     }
     

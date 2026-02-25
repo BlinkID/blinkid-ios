@@ -16,6 +16,8 @@ import AVFoundation
 import BlinkIDVerify
 #elseif canImport(BlinkID)
 import BlinkID
+#elseif canImport(BlinkCard)
+import BlinkCard
 #endif
 
 /// An object that provides the interface to the features of the camera.
@@ -181,6 +183,9 @@ public final class Camera: CameraModel {
     public var isTorchEnabled: Bool = false {
         didSet {
             Task {
+                if sessionNumber == 0 {
+                    return
+                }
                 await captureService.setTorchEnabled(isTorchEnabled)
                 let scanningConditionsPinglet = ScanningConditionsPinglet(
                     updateType: .flashlightstate, flashlightOn: isTorchEnabled)
@@ -399,6 +404,9 @@ extension ScanningConditionsPinglet.DeviceOrientation {
 
 extension Camera {
     func sendConditionsPinglet(sessionNumber: Int) async {
+        if sessionNumber == 0 {
+            return
+        }
         let scanningConditionsPinglet = ScanningConditionsPinglet(
             updateType: .deviceorientation,
             deviceOrientation: ScanningConditionsPinglet.DeviceOrientation.fromAVCaptureVideoOrientation(orientation))

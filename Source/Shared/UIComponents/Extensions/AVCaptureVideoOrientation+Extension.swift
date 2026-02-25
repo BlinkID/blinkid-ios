@@ -11,6 +11,8 @@ import AVFoundation
 import BlinkIDVerify
 #elseif canImport(BlinkID)
 import BlinkID
+#elseif canImport(BlinkCard)
+import BlinkCard
 #endif
 
 extension AVCaptureVideoOrientation {

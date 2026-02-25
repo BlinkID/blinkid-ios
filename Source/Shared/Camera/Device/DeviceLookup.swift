@@ -27,34 +27,23 @@ final class DeviceLookup {
         frontCameraDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .front)
     }
     
-    /// Returns the preferred camera for the host system.
-    var defaultCamera: AVCaptureDevice {
+    var backCamera: AVCaptureDevice {
         get throws {
             
-            if hasTripleCamera(),
-                let tripleCamera = AVCaptureDevice.default(.builtInTripleCamera, for: .video, position: preferredPosition) {
+            if let tripleCamera = AVCaptureDevice.default(.builtInTripleCamera, for: .video, position: .back) {
                 return tripleCamera
             }
             
-            // Try to get the device for the preferred position
-            if let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
-                                                       for: .video,
-                                                       position: preferredPosition) {
-                
-                // Check for minimum focus distance
-                // We need to ensure if the minimum focus distance is changed for new iphones, we have a solution out of the box
-                if videoDevice.minimumFocusDistance > minimumFocusDistanceInMillimeters {
-                    let percentIncrease: CGFloat = CGFloat(videoDevice.minimumFocusDistance - minimumFocusDistanceInMillimeters) / CGFloat(minimumFocusDistanceInMillimeters)
-                    try videoDevice.lockForConfiguration()
-                    videoDevice.videoZoomFactor = 1.0 + percentIncrease
-                    videoDevice.unlockForConfiguration()
+            if let backCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)  {
+                if backCamera.minimumFocusDistance > minimumFocusDistanceInMillimeters {
+                    if backCamera.deviceType == .builtInWideAngleCamera {
+                        let percentIncrease: CGFloat = CGFloat(backCamera.minimumFocusDistance - minimumFocusDistanceInMillimeters) / CGFloat(minimumFocusDistanceInMillimeters)
+                        try backCamera.lockForConfiguration()
+                        backCamera.videoZoomFactor = 1.0 + percentIncrease
+                        backCamera.unlockForConfiguration()
+                    }
                 }
-                return videoDevice
-            }
-            
-            // Fallback to any available camera if preferred position is not available
-            if let anyCamera = cameras.first {
-                return anyCamera
+                return backCamera
             }
             
             throw CameraError.videoDeviceUnavailable
@@ -73,9 +62,7 @@ final class DeviceLookup {
     var cameras: [AVCaptureDevice] {
         var cameras: [AVCaptureDevice] = []
         
-        if let tripleCamera = AVCaptureDevice.default(.builtInTripleCamera, for: .video, position: .back) {
-            cameras.append(tripleCamera)
-        } else if let backCamera = backCameraDiscoverySession.devices.first {
+        if let backCamera = backCameraDiscoverySession.devices.first {
             cameras.append(backCamera)
         }
         
@@ -94,10 +81,5 @@ final class DeviceLookup {
     /// Updates the preferred camera position
     func setPreferredPosition(_ position: AVCaptureDevice.Position) {
         preferredPosition = position
-    }
-    
-    /// Checks if the current device has a triple camera (Pro iPhone)
-    func hasTripleCamera() -> Bool {
-        return AVCaptureDevice.default(.builtInTripleCamera, for: .video, position: .back) != nil
     }
 }

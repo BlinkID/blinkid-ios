@@ -25,8 +25,8 @@ enum UIState {
 @MainActor
 final class BlinkIDViewModel: ObservableObject {
     
-    // Valid until: 2026-03-04
-    private let licenseKey = "sRwDAAEkY29tLm1pY3JvYmxpbmsuQmxpbmtJRERvd25sb2FkU2FtcGxlAQpNaWNyb2JsaW5rhuaVr+/r/nhTn6q1e2T7v97N05cQi6H9cU5k5BbDR3JlJr7grw+LAsN+Cbhjr1EPpR6N6VFq67RpK0HVtwYo6Q6OLg+mB45JVLyyg83D+pdfndYO6nFtVevjpwnyfKW4aDVBNAoDqiIjIQ8wAAaGz5JHzOFhR+69rzgxmFZrmQ=="
+    // Valid until: 2026-07-25
+    private let licenseKey = "sRwDAAEkY29tLm1pY3JvYmxpbmsuQmxpbmtJRERvd25sb2FkU2FtcGxlASRjb20ubWljcm9ibGluay5CbGlua0lERG93bmxvYWRTYW1wbGUAIlNbNKYu6bl4/feWqEYbYa13v3s5Lf15sC9RtUXtTuWsH4wNFFrxiAUm7ibF38G44LlxAtzjj/t+aYujbFmKhtcCqUE4Epra44k5wWPr9oFBYXAlyVikLKZXppsXcrknuYtUrKKZ5u6COBnOKiASYJBcZo6H0RIld51ns/0="
     private var sdkInstance: BlinkIDSdk?
     private var cancellables = Set<AnyCancellable>()
     @Published var state: UIState = .loading
@@ -69,7 +69,7 @@ final class BlinkIDViewModel: ObservableObject {
                 
                 state = .scanCustom(scanningUxModel)
             } else {
-                let scanningUxModel = BlinkIDUXModel(analyzer: analyzer, sessionNumber: analyzer.sessionNumber)
+                let scanningUxModel = BlinkIDUXModel(analyzer: analyzer)
                 scanningUxModel.$result
                     .sink { [weak self] scanningResultState in
                         if let scanningResultState {

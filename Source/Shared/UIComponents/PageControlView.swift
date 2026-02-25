@@ -29,19 +29,19 @@ struct PageControlView: UIViewRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(currentPage: $currentPage)
+        Coordinator(self)
     }
     
     
     class Coordinator: NSObject {
-        @Binding var currentPage: Int
+        var parent: PageControlView
         
-        init(currentPage: Binding<Int>) {
-            _currentPage = currentPage
+        init(_ parent: PageControlView) {
+            self.parent = parent
         }
-        
-        @objc func pageControlChanged(sender: UIPageControl) {
-            currentPage = sender.currentPage
+
+        @objc func pageControlChanged(_ sender: UIPageControl) {
+            parent.currentPage = sender.currentPage
         }
     }
 }

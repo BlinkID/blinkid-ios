@@ -5,29 +5,32 @@
 
 import SwiftUI
 
-struct MessageContainer: View {
+struct MessageContainer<ReticleStateMachineType: ReticleStateMachineProtocol>: View {
     private let theme: any UXThemeProtocol
-    var text: String
+    @ObservedObject private var stateMachine: ReticleStateMachineType
     
-    init(theme: any UXThemeProtocol, text: String ){
+    init(theme: any UXThemeProtocol, stateMachine: ReticleStateMachineType){
         self.theme = theme
-        self.text = text
+        self.stateMachine = stateMachine
     }
     
     var body: some View {
-        Text(text)
-            .bold()
-            .font(theme.reticleTooltipFont)
-            .dynamicTypeSize(.medium ... .xxxLarge)
-            .multilineTextAlignment(.center)
-            .lineSpacing(4)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .foregroundStyle(Color.white)
-            .background(Color(red: 102.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, opacity: 0.9))
-            .clipShape(
-                RoundedRectangle(cornerRadius: 8.0)
-            )
-            .frame(maxWidth: 192.0)
+        if let text = stateMachine.reticleState.text?.localizedString {
+            Text(text)
+                .bold()
+                .font(theme.reticleTooltipFont)
+                .dynamicTypeSize(.medium ... .xxxLarge)
+                .multilineTextAlignment(.center)
+                .lineSpacing(4)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 8)
+                .foregroundStyle(Color.white)
+                .background(Color(red: 102.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, opacity: 0.3))
+                .clipShape(
+                    RoundedRectangle(cornerRadius: 8.0)
+                )
+                .accessibilityLabel(text)
+                .accessibilitySortPriority(4)
+        }
     }
 }

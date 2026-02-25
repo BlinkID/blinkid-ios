@@ -22,7 +22,7 @@ final class BlinkIDUXTranslator {
     private var reticleLocked: Bool = false
     private var barcodeTimerTask: Task<Void, Never>?
     
-    func translate(frameProcessResult: FrameProcessResult, session: BlinkIDSession) -> [UIEvent] {
+    func translate(frameProcessResult: FrameProcessResult, scanningSettings: ScanningSettings) -> [UIEvent] {
         var events: [UIEvent] = []
         
         if frameProcessResult.processResult?.resultCompleteness.scanningStatus == .sideScanned && (!backSideDispatched && !passportDispatched) {
@@ -97,19 +97,19 @@ final class BlinkIDUXTranslator {
             break
         }
         
-        if frameProcessResult.processResult?.inputImageAnalysisResult.blurDetectionStatus == .detected {
+        if frameProcessResult.processResult?.inputImageAnalysisResult.blurDetectionStatus == .detected && scanningSettings.skipImagesWithBlur {
             events.append(.blur)
         }
-        if frameProcessResult.processResult?.inputImageAnalysisResult.glareDetectionStatus == .detected {
+        if frameProcessResult.processResult?.inputImageAnalysisResult.glareDetectionStatus == .detected && scanningSettings.skipImagesWithGlare {
             events.append(.glare)
         }
-        if frameProcessResult.processResult?.inputImageAnalysisResult.documentHandOcclusionStatus == .detected {
+        if frameProcessResult.processResult?.inputImageAnalysisResult.documentHandOcclusionStatus == .detected && scanningSettings.skipImagesOccludedByHand {
             events.append(.occlusion)
         }
-        if frameProcessResult.processResult?.inputImageAnalysisResult.documentLightingStatus == .tooDark {
+        if frameProcessResult.processResult?.inputImageAnalysisResult.documentLightingStatus == .tooDark && scanningSettings.skipImagesWithInadequateLightingConditions {
             events.append(.tooDark)
         }
-        if frameProcessResult.processResult?.inputImageAnalysisResult.documentLightingStatus == .tooBright {
+        if frameProcessResult.processResult?.inputImageAnalysisResult.documentLightingStatus == .tooBright && scanningSettings.skipImagesWithInadequateLightingConditions {
             events.append(.tooBright)
         }
         

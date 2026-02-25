@@ -75,26 +75,3 @@ public protocol CameraFrameAnalyzer<Frame, Event> : Sendable {
     
     var sessionNumber: Int { get }
 }
-
-/// Represents passport rotation orientation depending on View interface and a document card rotation property.
-///
-/// See ``DocumentRotation``.
-public enum PassportOrientation: Sendable, Equatable {
-    case none
-    case left90
-    case right90
-}
-
-/// Represents different sides of a document during the scanning process.
-public enum DocumentSide: Sendable, Equatable {
-    /// Front side of the document
-    case front
-    /// Back side of the document
-    case back
-    /// Barcode region of the document
-    case barcode
-    /// Document is passport
-    case passport(PassportOrientation)
-    /// Barcode from last page of passports
-    case passportBarcode
-}

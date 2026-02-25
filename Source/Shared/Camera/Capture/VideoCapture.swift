@@ -9,6 +9,7 @@
 
 import AVFoundation
 import CoreImage
+import Combine
 
 /// Wrapped non Sendable `CMSampleBuffer`
 public final class SampleBuffer: @unchecked Sendable {
@@ -72,6 +73,10 @@ final class VideoCapture: OutputService {
     private func updateCapabilities(for device: AVCaptureDevice) {
         capabilities = CaptureCapabilities(isTorchSupported: device.isTorchAvailable)
     }
+    
+    func end() {
+        self.videoCaptureDelegate.end()
+    }
 }
 
 private final class VideoCaptureDelegate: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, @unchecked Sendable {
@@ -79,6 +84,10 @@ private final class VideoCaptureDelegate: NSObject, AVCaptureVideoDataOutputSamp
     private var continuation: AsyncStream<SampleBuffer>.Continuation?
     
     deinit {
+        self.continuation?.finish()
+    }
+    
+    func end() {
         self.continuation?.finish()
     }
     

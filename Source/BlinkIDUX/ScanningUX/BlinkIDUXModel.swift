@@ -20,7 +20,7 @@ import BlinkID
 /// A view model that manages the user experience flow for document scanning.
 /// Handles camera preview, document detection, user guidance, and scanning state transitions.
 @MainActor
-public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, BlinkIDScanningAlertType> {
+public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, UIEvent, ReticleStateMachine, BlinkIDScanningAlertType> {
     
     /// The result of the document verification capture process.
     /// Contains the captured document images and associated data.
@@ -51,15 +51,12 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     
     private var cancellables = Set<AnyCancellable>()
     
-    private var currentErrorMessage: UxEventPinglet.ErrorMessageType?
-    
-    public override init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, uxSettings: ScanningUXSettings = ScanningUXSettings(), sessionNumber: Int) {
+    public init(analyzer: any CameraFrameAnalyzer<CameraFrame, UIEvent>, uxSettings: ScanningUXSettings = ScanningUXSettings()) {
         self.topImageOpacity = passportBeginAnimationAlpha
         self.bottomImageOpacity = passportEndAnimationAlpha
         self.highlightOffset = 0
         self.passportOrientation = nil
-        
-        super.init(analyzer: analyzer, uxSettings: uxSettings, sessionNumber: sessionNumber)
+        super.init(analyzer: analyzer, uxSettings: uxSettings, reticleStateMachine: ReticleStateMachine(), firstSideFinishedText: "mb_accessibility_success_first_side_scanned".localizedString, scanFinishedText: "mb_accessibility_success_document_scanned".localizedString)
         
         startEventHandling()
         camera.$status
@@ -71,19 +68,6 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     
     // MARK: - Protocol Implementation
     
-    public override func analyze() async {
-        
-        await camera.captureService.sendCameraInputInfoPinglet(sessionNumber: sessionNumber)
-        
-        Task {
-            await processAnalyzerResult()
-        }
-
-        for await frame in await camera.sampleBuffer {
-            await analyzer.analyze(image: CameraFrame(buffer: MBSampleBufferWrapper(cmSampleBuffer: frame.buffer), roi: roi, orientation: camera.orientation.toCameraFrameVideoOrientation()))
-        }
-    }
-    
     public override func processAnalyzerResult() async {
         let result = await analyzer.result()
         if let scanningResult = result as? ScanningResult<BlinkIDScanningResult, BlinkIDScanningAlertType> {
@@ -93,7 +77,6 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                 self.result = BlinkIDResultState(scanningResult: scanningResult)
             case .interrupted(let alertType):
                 self.alertType = alertType
-                showScanningAlert = true
             case .cancelled:
                 showLicenseErrorAlert = true
             case .ended:
@@ -102,32 +85,13 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         }
     }
     
-    public override func licenseErrorAlertDismised() {
-        Task {
-            await self.analyzer.end()
-        }
-    }
-    
     public override func timeoutAlertDismised() {
-        reticleState = .front
+        super.timeoutAlertDismised()
+        
         topImageOpacity = passportBeginAnimationAlpha
         bottomImageOpacity = passportEndAnimationAlpha
         highlightOffset = 0
         passportOrientation = nil
-        restartScanning()
-        Task {
-            await self.analyze()
-        }
-    }
-    
-    override func closeButtonTapped() {
-        Task {
-            if sessionNumber > 0 {
-                let uxEventPinglet = UxEventPinglet(eventType: .closebuttonclicked)
-                await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
-            }
-            await self.analyzer.end()
-        }
     }
     
     // - MARK: - Handle UIEvents
@@ -136,7 +100,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
         eventHandlingTask = Task {
             for await events in await analyzer.events.stream {
                 if events.contains(.requestDocumentSide(side: .back)) {
-                    firstSideScanned()
+                    firstSideScanned(frontFlipImage: Image.frontIdImage, backFlipImage: Image.backIdImage, flipState: .flip, nextState: .back)
                     cancelTooltipTimer()
                 }
                 else if events.contains(.requestDocumentSide(side: .passport(.none))) {
@@ -183,7 +147,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                     self.setReticleState(.error("mb_move_closer"))
                     self.trackErrorMessage(.movecloser)
                 } else if events.contains(.tooCloseToEdge) {
-                    self.setReticleState(.error("mb_document_too_close_to_edge"))
+                    self.setReticleState(.error("mb_move_farther"))
                     self.trackErrorMessage(.movefromedge)
                 } else if events.contains(.tilt) {
                     self.setReticleState(.error("mb_keep_document_parallel"))
@@ -210,44 +174,16 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
                     self.setReticleState(.error("mb_face_photo_not_fully_visible"))
                     self.trackErrorMessage(.keepvisible)
                 } else {
-                    self.setReticleState(inactiveState)
+                    self.setReticleState(reticleStateMachine.fallbackState)
                 }
             }
         }
     }
-    
-    private func trackErrorMessage(_ messageType: UxEventPinglet.ErrorMessageType) {
-        Task {
-            if currentErrorMessage == messageType { return }
-            currentErrorMessage = messageType
-            if sessionNumber <= 0 { return }
-            let uxEventPinglet = UxEventPinglet(eventType: .errormessage, errorMessageType: messageType)
-            await PingManager.shared.addPinglet(pinglet: uxEventPinglet, sessionNumber: sessionNumber)
-        }
-    }
-    
-    private func firstSideScanned() {
-        pauseScanning()
-
-        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
-
-        if remainingTime > 0 {
-            Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
-                Task {
-                    await self?.animateFirstSideScanned()
-                }
-            }
-        } else {
-            Task {
-                await animateFirstSideScanned()
-            }
-        }
-    }
-    
+        
     private func passportSideScanned(_ orientation: PassportOrientation) {
         pauseScanning()
 
-        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
+        let remainingTime = reticleStateMachine.calculateRemainingTime(stateDuration: 1.0)
 
         if remainingTime > 0 {
             Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
@@ -265,7 +201,7 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     private func passportWithBarcodeSideScanned() {
         pauseScanning()
 
-        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
+        let remainingTime = reticleStateMachine.calculateRemainingTime(stateDuration: 1.0)
 
         if remainingTime > 0 {
             Timer.scheduledTimer(withTimeInterval: remainingTime, repeats: false) { [weak self] _ in
@@ -281,93 +217,6 @@ public final class BlinkIDUXModel: ScanningViewModel<BlinkIDScanningResult, Blin
     }
     
     // - MARK: Animations
-
-    private func animateFirstSideScanned() async {
-        if uxSettings.allowHapticFeedback {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-        }
-        showSuccessImage = true
-        setReticleState(.inactive, force: true)
-
-        withAnimation(.easeOutExpo(duration: successImageAnimationDuration)) {
-            successImageScale = 1.0
-        }
-
-        try? await Task.sleep(for: .seconds(successImageAnimationDuration))
-
-        withAnimation(.linear(duration: 0.2)) {
-            showSuccessImage = false
-        }
-
-        try? await Task.sleep(for: .seconds(0.2))
-
-        // Reset and prepare for card flip
-        successImageScale = 0.0
-        setReticleState(.flip, force: true)
-        showCardImage = true
-
-        withAnimation(.easeIn(duration: flipCardDuration/2)) {
-            flipCardScale = 0.9
-        }
-
-        withAnimation(.easeInOut(duration: flipCardDuration)) {
-            flipCardDegrees = 0.0
-        }
-
-        try? await Task.sleep(for: .seconds(flipCardDuration/2))
-
-        cardImage = Image.backIdImage
-
-        withAnimation(.easeOut(duration: flipCardDuration/2)) {
-            flipCardScale = 1.0
-        }
-
-        try? await Task.sleep(for: .seconds(flipCardDuration/2 + 0.2))
-
-        showCardImage = false
-        cardImage = Image.frontIdImage
-        flipCardDegrees = 180.0
-        resumeScanning()
-        setReticleState(.back, force: true)
-    }
-    
-    private func animateSuccess() async {
-        if uxSettings.allowHapticFeedback {
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
-        }
-        showSuccessImage = true
-        self.setReticleState(.inactive, force: true)
-
-        withAnimation(.easeOutExpo(duration: successImageAnimationDuration)) {
-            successImageScale = 1.0
-        }
-
-        self.showRippleView = true
-        withAnimation(.easeOut(duration: rippleViewAnimationDuration)) {
-            self.rippleViewScale = 10.0
-            self.rippleViewOpacity = 0.0
-        }
-        
-        try? await Task.sleep(for: .seconds(max(successImageAnimationDuration, rippleViewAnimationDuration)))
-    }
-    
-    /// Completes the scanning process.
-    /// Stops frame analysis and triggers success animations.
-    public func finishScan() async {
-        pauseScanning()
-        
-        let remainingTime = calculateRemainingTime(stateDuration: 1.0)
-        
-        currentErrorMessage = nil
-        
-        if remainingTime > 0 {
-            try? await Task.sleep(for: .seconds(remainingTime))
-            await animateSuccess()
-        } else {
-            await animateSuccess()
-        }
-    }
-    
     // Passport
     
     private func animateFirstSidePassportScanned(_ orientation: PassportOrientation) async {

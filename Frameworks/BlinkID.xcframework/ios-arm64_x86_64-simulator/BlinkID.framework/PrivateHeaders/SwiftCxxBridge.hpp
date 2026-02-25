@@ -15,3 +15,5 @@
 #import "NativeBlinkId.hpp"
 #import "License/NativeLicenseProvider.hpp"
 #import "Ping/NativePingManagerHelper.hpp"
+#import "Shared/NativeSettings.hpp"
+#import "BlinkID/NativeUtils.hpp"
