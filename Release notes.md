@@ -1,5 +1,141 @@
 # Release notes
 
+## 7.7.0
+
+### What's new
+- Barcode extraction is marked as optional on documents where barcode detecton has bad performance (Cuba ID and Passport, Philippines DL, Haiti ID, Sudan ID, Egypt ID, Ecuador Passport, Ghana Passport, Iraq Passport, Nicaragua Passport, Pakistan Passport)
+
+### Bug fixes
+- In situations where some fields on different sides of a document have values in multiple alphabets it could happen that while merging results we overwrite them and keep only one alphabet. With this version this is fixed and both alphabets are returned.
+
+### New documents support
+- Angola - Identity Card
+- Antigua And Barbuda - Paper Passport
+- Barbados - Paper Passport
+- Belize - Paper Passport
+- Benin - Driver's License
+- Benin - Polycarbonate Passport
+- Bermuda - Paper Passport
+- Bermuda - Polycarbonate Passport
+- Bhutan - Paper Passport
+- Botswana - Paper Passport
+- Brazil, Acre - Identity Card
+- Brazil, Espirito Santo - Identity Card
+- Brazil, Mato Grosso Do Sul - Identity Card
+- Brazil, Paraiba - Identity Card
+- Brazil, Piaui - Identity Card
+- Brazil, Rio Grande Do Norte - Identity Card
+- Brazil, Tocantins - Identity Card
+- Central African Republic - Paper Passport
+- Chad - Paper Passport
+- Chad - Polycarbonate Passport
+- Congo - Paper Passport
+- Democratic Republic Of The Congo - Paper Passport
+- Djibouti - Paper Passport
+- Djibouti - Polycarbonate Passport
+- Equatorial Guinea - Paper Passport
+- Equatorial Guinea - Polycarbonate Passport
+- Eswatini - Identity Card
+- Ethiopia - Paper Passport
+- Federated States Of Micronesia - Paper Passport
+- Gabon - Paper Passport
+- Gabon - Polycarbonate Passport
+- Ghana - Polycarbonate Passport
+- Ghana - Social Security Card
+- Guinea - Driver's License
+- Guinea Bissau - Paper Passport
+- Guinea Bissau - Polycarbonate Passport
+- India, Odisha - Driver's License
+- India, Uttarakhand - Driver's License
+- Ireland - Proof Of Age Card
+- Laos - Paper Passport
+- Lesotho - Paper Passport
+- Liberia - Driver's License
+- Liberia - Social Security Card
+- Madagascar - Paper Passport
+- Malawi - Driver's License
+- Mauritania - Identity Card
+- Mauritania - Polycarbonate Passport
+- Mexico - Social Security Card
+- Mongolia - Paper Passport
+- Mongolia - Polycarbonate Passport
+- Namibia - Paper Passport
+- Niger - Paper Passport
+- Nigeria - Nin Card
+- Papua New Guinea - Paper Passport
+- Philippines - eID
+- Philippines - MySSS Card
+- Puerto Rico - Identity Card
+- Saint Thomas And Prince - Paper Passport
+- Saint Vincent And The Grenadines - Paper Passport
+- Seychelles - Paper Passport
+- Seychelles - Polycarbonate Passport
+- South Sudan - Polycarbonate Passport
+- Taiwan - Paper Passport
+- Togo - Gendarmerie ID
+- Togo - Military ID
+- Togo - Police ID
+- Togo - Residence Permit
+- Togo - Voter ID
+- Tonga - Paper Passport
+- Yemen - Paper Passport
+- Ghana - Health Insurance Card
+
+#### New document versions for supported documents
+- Afghanistan - Identity Card
+- Cameroon - Identity Card
+- Chile - Driver's License
+- Colombia - Alien ID
+- Costa Rica - Identity Card
+- Malaysia - Driver's License
+- Moldova - Identity Card
+- Netherlands - Driver's License
+- Panama - Driver's License
+- South Korea - Driver's License
+- South Korea - Identity Card
+- Sweden - Driver's License
+- UK - Polycarbonate Passport
+- USA - Veteran ID
+- USA, Alaska - Identity Card
+- USA, California - Driver's License
+- USA, California - Identity Card
+- USA, North Carolina - Driver's License
+- USA, Texas - Driver's License
+- USA, Texas - Identity Card
+- USA, Texas - Weapon Permit
+- Vietnam - Driver's License
+- Zimbabwe - Identity Card
+
+#### New segments supported on documents
+- Greece, Estonia, Finland, Hungary, Ireland, Latvia, Lithuania, Norway, Romania, Slovenia, Croatia, Slovakia, Poland, Malta, Austria, Luxembourg, Netherlands, Bulgaria, Portugal, Cyprus, Sweden, Czechia, Belgium, Germany, Italy, Spain, Switzerland, Denmark - Residence Permit: remarks, residencePermitType
+- Belgium, Minors ID: added parentsInfo vector
+- Nicaragua, Passport: barcode
+- USA, Social Security Card: workRestriction
+- China, Identity Card: permanentExpiry (Chinese)
+
+### Minor API changes
+- added new items to enums:
+  - new `FieldType` enum values:`EffectiveDate`,`ParentsLastName`,`ParentsLastName2`,`ParentsFirstName2`,`WorkRestriction`,`ParentsFirstName`,`SocialSecurityStatus`,`LegalStatus`,`HusbandName`,`ChinPermanentExpiry`
+  - new `Type` enum values:`NIN_CARD`,`MYSSS_CARD`,`GENDARMERIE_ID`    ,`POLICE_ID`
+  - new `Country` enum value:`SAINT_THOMAS_AND_PRINCE`
+  - new `Region` enum values:`ACRE`,`ESPIRITO_SANTO`,`MATO_GROSSO_DO_SUL`,`PARAIBA`,`PIAUI`,`RIO_GRANDE_DO_NORTE`,`TOCANTINS`,`ODISHA`,`UTTARAKHAND`
+- added member results to `ScanningResult` and `VizResult`
+  -  'effectiveDate'
+  -  'husbandName'
+  -  'legalStatus'
+  -  'socialSecurityStatus'
+  -  'workRestriction'
+  -  'parentsInfo' (new struct)
+  
+### Breaking changes
+- Removed sessionNumber from BlinkIDUXModel init
+
+### Improvements and bug fixes
+- Removed `MoveDocumentFromEdge` scanning UI message
+- UI messages now correctly reflect `skipImagesWithBlur`, `skipImagesWithGlare`, `skipImagesWithInadequateLightingConditions` and `skipImagesOccludedByHand` settings - when enabled, feedback message is provided to the user to adjust the document. These settings should be set to `true` when the goal of the scan is not only to correctly read all the data fields but also to capture the document image.
+- Other miscellaneous improvements
+
+
 ## 7.6.2
 
 ### What's New
@@ -21,7 +157,7 @@
 - Users are no longer forced to scan back sides of Alien and Refugee passports
 - Fixed the issue with Togo ID where document number from VIZ was overriden by a wrong value from MRZ
 
-### New Documents Support
+#### New Documents Support
 - Angola - Paper Passport
 - Bahrain - Polycarbonate Passport
 - Burkina Faso - Polycarbonate Passport

@@ -9,13 +9,16 @@ import SwiftUI
 import BlinkIDVerify
 #elseif canImport(BlinkID)
 import BlinkID
+#elseif canImport(BlinkCard)
+import BlinkCard
 #endif
 
-struct OnboardingSheetView: View {
+struct OnboardingSheetView<E: OnboardingStepProtocol>: View {
     @Environment(\.presentationMode) var presentationMode
     @State var selected: Int = 0
     private let theme: any UXThemeProtocol
     private let sessionNumber: Int
+    private let cases: [E] = Array(E.allCases)
     
     init(theme: any UXThemeProtocol, sessionNumber: Int) {
         self.theme = theme
@@ -37,7 +40,7 @@ struct OnboardingSheetView: View {
                 Button {
                     increaseStep()
                 } label: {
-                    Text(selected == OnboardingStep.allCases.count - 1 ? "mb_dialog_done_button".localizedString : "mb_dialog_next_button".localizedString)
+                    Text(selected == E.allCases.count - 1 ? "mb_dialog_done_button".localizedString : "mb_dialog_next_button".localizedString)
                         .bold()
                         .font(theme.onboardingSheetButtonFont)
                         .foregroundStyle(theme.onboardingSheetButtonColor)
@@ -47,9 +50,9 @@ struct OnboardingSheetView: View {
             Divider()
                 .padding(.horizontal, -20)
             TabView(selection: $selected) {
-                ForEach(OnboardingStep.allCases) { onboardingStep in
-                    TabItemView(theme: self.theme, onboardingStep: onboardingStep)
-                        .tag(onboardingStep.rawValue)
+                ForEach(Array(cases.enumerated()), id: \.1) { index, step in
+                    TabItemView(theme: self.theme, onboardingStep: step)
+                        .tag(index)
                 }
             }
             .accessibilitySortPriority(4)
@@ -57,7 +60,7 @@ struct OnboardingSheetView: View {
             
             Spacer()
             
-            PageControlView(currentPage: $selected, numberOfPages: OnboardingStep.allCases.count, currentPageIndicatorColor: UIColor(theme.onboardingSheetPageIndicatorColor), pageIndicatorColor: UIColor(theme.onboardingSheetPageIndicatorColor).withAlphaComponent(0.5))
+            PageControlView(currentPage: $selected, numberOfPages: E.allCases.count, currentPageIndicatorColor: UIColor(theme.onboardingSheetPageIndicatorColor), pageIndicatorColor: UIColor(theme.onboardingSheetPageIndicatorColor).withAlphaComponent(0.5))
                 .accessibilitySortPriority(1)
         }
         .padding(20)
@@ -67,7 +70,7 @@ struct OnboardingSheetView: View {
     }
     
     private func increaseStep() {
-        guard selected < OnboardingStep.allCases.count - 1
+        guard selected < E.allCases.count - 1
         else {
             Task {
                 if sessionNumber > 0 {
@@ -111,10 +114,10 @@ struct TabItemView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @State private var contentHeight: CGFloat = 40
     
-    private let onboardingStep: OnboardingStep
+    private let onboardingStep: any OnboardingStepProtocol
     private let theme: any UXThemeProtocol
     
-    init(theme: any UXThemeProtocol, onboardingStep: OnboardingStep) {
+    init(theme: any UXThemeProtocol, onboardingStep: any OnboardingStepProtocol) {
         self.theme = theme
         self.onboardingStep = onboardingStep
     }

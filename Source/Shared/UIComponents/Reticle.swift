@@ -53,7 +53,7 @@ extension Animation {
     }
 }
 
-struct Reticle: View {
+struct Reticle<ReticleStateMachineType: ReticleStateMachineProtocol>: View {
     private let blurDiameter: Double
     private let dashDiameter: Double
     private let lineWidth: Double = 3.0
@@ -62,7 +62,7 @@ struct Reticle: View {
     @State private var detectingRotation: Angle = .degrees(0)
     @State private var detectingPercentage: CGFloat = .zero
     @State private var detectingArcPercentage: CGFloat = .zero
-    @Binding private var state: ReticleState
+    @ObservedObject private var stateMachine: ReticleStateMachineType
     
     private let appearAnimation: Animation = .easeOut(duration: 1.0).delay(0.2)
     private let rotationAnimation: Animation = .easeOutExpo(duration: 1.13)
@@ -74,16 +74,16 @@ struct Reticle: View {
         .repeatForever(autoreverses: false)
         .delay(0.55)
     
-    init(diameter: Double, reticleState: Binding<ReticleState>) {
+    init(diameter: Double, reticleStateMachine: ReticleStateMachineType) {
         self.blurDiameter = diameter
         self.dashDiameter = diameter * 0.5
-        self._state = reticleState
+        self.stateMachine = reticleStateMachine
     }
     
     var body: some View {
         ZStack {
-            switch state {
-            case .front, .back, .barcode, .passport(_):
+            switch stateMachine.reticleState.reticleStateAppearance {
+            case .spinning:
                 grayBlurView
                 ArcRing(radius: dashDiameter / 2)
                     .trim(from: 0.0, to: percentage)
@@ -132,13 +132,13 @@ struct Reticle: View {
                         detectingRotation = .degrees(0)
                     }
                 centerDot
-            case .error(_):
+            case .error:
                 redBlurView
                 Circle()
                     .stroke(Color.white.opacity(0.5), lineWidth: lineWidth)
                     .frame(width: dashDiameter, height: dashDiameter)
                 centerDot
-            case .inactive, .flip, .inactiveWithMessage(_):
+            case .empty:
                 EmptyView()
             }
             

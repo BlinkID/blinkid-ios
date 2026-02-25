@@ -13,11 +13,11 @@
 final class DeviceObserver: NSObject {
     private let systemPreferredKeyPath = "systemPreferredCamera"
     
-    let changes: AsyncStream<AVCaptureDevice?>
-    private var continuation: AsyncStream<AVCaptureDevice?>.Continuation?
+    let changes: AsyncStream<AVCaptureDevice>
+    private var continuation: AsyncStream<AVCaptureDevice>.Continuation?
 
     override init() {
-        let (changes, continuation) = AsyncStream.makeStream(of: AVCaptureDevice?.self)
+        let (changes, continuation) = AsyncStream.makeStream(of: AVCaptureDevice.self)
         self.changes = changes
         self.continuation = continuation
         
@@ -35,7 +35,8 @@ final class DeviceObserver: NSObject {
         switch keyPath {
         case systemPreferredKeyPath:
             // Update the observer's system-preferred camera value.
-            let newDevice = change?[.newKey] as? AVCaptureDevice
+            guard let newDevice = change?[.newKey] as? AVCaptureDevice else { return }
+            
             continuation?.yield(newDevice)
         default:
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)

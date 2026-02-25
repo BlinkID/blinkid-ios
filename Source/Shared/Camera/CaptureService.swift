@@ -17,6 +17,8 @@ import os.log
 import BlinkIDVerify
 #elseif canImport(BlinkID)
 import BlinkID
+#elseif canImport(BlinkCard)
+import BlinkCard
 #endif
 
 /// An actor that manages the capture pipeline, which includes the capture session, device inputs, and capture outputs.
@@ -113,6 +115,7 @@ public actor CaptureService {
         captureSession.stopRunning()
         stopTasks()
         isSetUp = false
+        videoCapture.end()
     }
     
     // MARK: - Capture setup
@@ -127,7 +130,7 @@ public actor CaptureService {
         
         do {
             // Retrieve the default camera.
-            let defaultCamera = preferredCamera == .back ? try deviceLookup.defaultCamera : try deviceLookup.frontCamera
+            let defaultCamera = preferredCamera == .back ? try deviceLookup.backCamera : try deviceLookup.frontCamera
 
             // Add inputs for the default camera devices.
             activeVideoInput = try addInput(for: defaultCamera)
@@ -235,7 +238,7 @@ public actor CaptureService {
             // An object monitors changes to camera deivce observer (CDO) value.
             for await camera in systemPreferredCamera.changes {
                 // If the CDO isn't the currently selected camera, attempt to change to that device.
-                if let camera, currentDevice != camera {
+                if currentDevice != camera, camera.position == currentDevice.position {
                     logger.debug("Switching camera selection to the system-preferred camera.")
                     changeCaptureDevice(to: camera)
                 }
@@ -448,6 +451,7 @@ extension CaptureService {
         let roiHeight = Int(roiRect.height * CGFloat(cameraFrameHeight))
         
         return CameraInputInfoPinglet(
+            deviceId: device.localizedName,
             cameraFacing: cameraFacing,
             cameraFrameWidth: Int64(cameraFrameWidth),
             cameraFrameHeight: Int64(cameraFrameHeight),
@@ -510,6 +514,7 @@ extension CaptureService {
             availableResolutions.sort { $0.width * $0.height > $1.width * $1.height }
             
             let cameraItem = CameraHardwareInfoPinglet.AvailableCamerasItem(
+                deviceId: device.localizedName,
                 cameraFacing: cameraFacing,
                 focus: focus,
                 availableResolutions: availableResolutions

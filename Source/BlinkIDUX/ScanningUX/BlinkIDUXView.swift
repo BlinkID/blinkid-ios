@@ -22,6 +22,9 @@ public struct BlinkIDUXView: View, ScanningUXProtocol {
     typealias ScanResult = BlinkIDScanningResult
     typealias AlertType = BlinkIDScanningAlertType
     typealias UXModel = BlinkIDUXModel
+    typealias EventType = UIEvent
+    typealias ReticleStateMachineType = ReticleStateMachine
+    typealias OnboardingStepType = OnboardingStep
 
     @ObservedObject var viewModel: BlinkIDUXModel
             
@@ -32,21 +35,22 @@ public struct BlinkIDUXView: View, ScanningUXProtocol {
     }
 
     public var body: some View {
-        MainView(reticleState: $viewModel.reticleState, isTorchOn: $viewModel.isTorchOn, showToast: $viewModel.isToastVisible, showSheet: $viewModel.showSheet, showScanningAlert: $viewModel.showScanningAlert, showLicenseErrorAlert: $viewModel.showLicenseErrorAlert)
+        MainView(reticleStateMachine: viewModel.reticleStateMachine, isTorchOn: $viewModel.isTorchOn, showToast: $viewModel.isToastVisible, showSheet: $viewModel.showSheet, showLicenseErrorAlert: $viewModel.showLicenseErrorAlert, onboardingAlertTitle: "mb_onboarding_dialog_title", onboardingAlertDescription: "mb_onboarding_dialog_message", onboardingAlertImage: Image.allDetailsVisibleImage, timeoutAlertDescription: "mb_recognition_timeout_dialog_message".localizedString, flashlightWarningMessage: "mb_flashlight_warning_message".localizedString)
     }
 }
 
 // Override the ReticleView implementation in BlinkIDUXView, we have some custom things for BlinkID
 extension BlinkIDUXView {
     @ViewBuilder
-    func ReticleView(reticleState: Binding<ReticleState>) -> GenericContentView {
+    func ReticleView(reticleStateMachine: ReticleStateMachineType) -> GenericContentView {
         AnyView(
             Group {
                 VStack {
                     ZStack {
-                        Reticle(diameter: Self.reticleDiameter, reticleState: reticleState)
-                        if viewModel.showCardImage {
-                            viewModel.cardImage
+                        Reticle<ReticleStateMachineType>(diameter: Self.reticleDiameter, reticleStateMachine: reticleStateMachine)
+                        if viewModel.showCardImage,
+                           let cardImage = viewModel.cardImage {
+                            cardImage
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 60)
@@ -87,12 +91,7 @@ extension BlinkIDUXView {
                     }
                     .frame(height: 100)
                     
-                    if let text = viewModel.reticleState.text?.localizedString {
-                        MessageContainer(theme: self.theme, text: text)
-                            .accessibilityLabel(text)
-                            .accessibilitySortPriority(4)
-                            .accessibilityHidden(viewModel.showIntroductionAlert)
-                    }
+                    MessageContainer<ReticleStateMachineType>(theme: self.theme, stateMachine: viewModel.reticleStateMachine)
                 }
             }
         )
