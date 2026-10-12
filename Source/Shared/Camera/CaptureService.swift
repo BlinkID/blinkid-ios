@@ -78,9 +78,12 @@ public actor CaptureService {
     private var runtimeErrorNotificationTask: Task<Void, Never>?
     
     init() {
+        // iOS 26 SDK API, not visible to compilers older than Swift 6.2 (Xcode 26).
+        #if compiler(>=6.2)
         if #available(iOS 26.0, *) {
             captureSession.automaticallyRunsDeferredStart = true
         }
+        #endif
         // Create a source object to connect the preview view with the capture session.
         previewSource = DefaultPreviewSource(session: captureSession)
     }

@@ -52,9 +52,12 @@ final class VideoCapture: OutputService {
         // Set the delegate to receive frames
         let queue = DispatchQueue(label: "com.camera.videoqueue")
         videoOutput.setSampleBufferDelegate(videoCaptureDelegate, queue: queue)
+        // iOS 26 SDK API, not visible to compilers older than Swift 6.2 (Xcode 26).
+        #if compiler(>=6.2)
         if #available(iOS 26.0, *) {
             videoOutput.isDeferredStartEnabled = true
         }
+        #endif
     }
     
     // MARK: - Update the photo output configuration

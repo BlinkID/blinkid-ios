@@ -58,8 +58,8 @@ SDK package contains `BlinkID` framework, `BlinkIDUX` package and one or more sa
 
 | SDK        | Platform       | Installation                                    | Minimum Swift Version | Type    |
 | ---------- | -------------- | ----------------------------------------------- | --------------------- | ------- |
-| BlinkID    | iOS 15.0+      | [Swift Package Manager](#swift-package-manager) | 5.10 / Xcode 15.3     | Dynamic |
-| BlinkIDUX  | iOS 16.0+      | [Swift Package Manager](#swift-package-manager) | 5.10 / Xcode 15.3     | Dynamic |
+| BlinkID    | iOS 15.0+      | [Swift Package Manager](#swift-package-manager) | 6.1 / Xcode 16.3      | Dynamic |
+| BlinkIDUX  | iOS 16.0+      | [Swift Package Manager](#swift-package-manager) | 6.1 / Xcode 16.3      | Dynamic |
 
 
 # <a name="quick-start"></a> Quick Start

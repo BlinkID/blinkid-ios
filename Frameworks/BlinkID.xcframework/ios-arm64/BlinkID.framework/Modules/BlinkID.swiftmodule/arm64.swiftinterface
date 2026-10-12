@@ -421,7 +421,7 @@ public struct DocumentNumberRedactionSettings : Swift.Sendable {
   public var suffixDigitsVisible: Swift.UInt8
   public init(prefixDigitsVisible: Swift.UInt8 = 0, suffixDigitsVisible: Swift.UInt8 = 0)
 }
-@_expose(!Cxx)
+
 public protocol RedactionSettingsResolver : Swift.Sendable {
   func resolveRedactionSettings(classInfo: BlinkID.BlinkIDSDK.DocumentClassInfo) -> BlinkID.RedactionSettings?
 }
@@ -550,14 +550,14 @@ public struct DependentInfo : Swift.Sendable {
   public let documentNumber: BlinkID.BlinkIDSDK.StringResult?
   public let fullName: BlinkID.BlinkIDSDK.StringResult?
 }
-@_expose(!Cxx)
+
 public struct VehicleClassInfo<StringType> : Swift.Sendable where StringType : Swift.Sendable {
   public let vehicleClass: StringType?
   public let licenceType: StringType?
   public let effectiveDate: BlinkID.DateResult<StringType>?
   public let expiryDate: BlinkID.DateResult<StringType>?
 }
-@_expose(!Cxx)
+
 public struct DriverLicenseDetailedInfo<StringType> : Swift.Sendable where StringType : Swift.Sendable {
   public let restrictions: StringType?
   public let endorsements: StringType?
@@ -589,7 +589,7 @@ public struct RectangleF : Swift.Sendable {
   public let width: Swift.Float
   public let height: Swift.Float
 }
-@_expose(!Cxx)
+
 public struct DateResult<StringType> : Swift.Sendable where StringType : Swift.Sendable {
   public let day: Swift.Int?
   public let month: Swift.Int?
@@ -605,7 +605,7 @@ public struct ParentInfo : Swift.Sendable {
   public var lastName: BlinkID.BlinkIDSDK.StringResult?
   public var fullName: BlinkID.BlinkIDSDK.StringResult?
 }
-@_expose(!Cxx)
+
 public protocol InputImageResultProtocol : Swift.Sendable {
   var rawData: Foundation.Data { get }
   var uiImage: UIKit.UIImage? { get }
@@ -1976,7 +1976,7 @@ final public class InputImage : Swift.Sendable {
   @_Concurrency.MainActor public static let shared: BlinkID.UXLicenseProviderBridge
   @objc deinit
 }
-@_expose(!Cxx)
+
 public protocol OtaSdkSettings : Swift.Sendable {
   var otaResourcesConfiguration: BlinkID.OTAResourcesConfig { get set }
 }
@@ -1993,7 +1993,7 @@ public struct OTAResourcesConfig : Swift.Sendable {
     get
   }
 }
-@_expose(!Cxx)
+
 public protocol Pinglet : Swift.Decodable, Swift.Encodable {
   static var schemaName: Swift.String { get }
   static var schemaVersion: Swift.String { get }
@@ -2074,7 +2074,7 @@ public enum ScanningSide : Swift.Int, Swift.Sendable, Swift.CaseIterable {
     get
   }
 }
-@_expose(!Cxx)
+
 public protocol SdkSettings : Swift.Sendable {
   var licenseKey: Swift.String { get set }
   var licensee: Swift.String? { get set }
