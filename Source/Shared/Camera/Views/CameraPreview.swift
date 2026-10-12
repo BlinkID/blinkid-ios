@@ -38,9 +38,12 @@ public struct CameraPreview: UIViewRepresentable {
         
         init() {
             super.init(frame: .zero)
+            // iOS 26 SDK API, not visible to compilers older than Swift 6.2 (Xcode 26).
+    #if compiler(>=6.2)
             if #available(iOS 26.0, *) {
                 previewLayer.isDeferredStartEnabled = false
             }
+    #endif
     #if targetEnvironment(simulator)
             // The capture APIs require running on a real device. If running
             // in Simulator, display a static image to represent the video feed.
