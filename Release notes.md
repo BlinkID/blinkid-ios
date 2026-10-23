@@ -1,5 +1,8 @@
 # Release notes
 
+## v8002.0.3
+- Bugfixes and improvements
+
 ## v8002.0.2
 
 ### Bug fixes
